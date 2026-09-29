@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(java.util.List,java.util.List)" tabindex="0">AccountWardrobe(List, List)</a></li>
+<li><a href="#%3Cinit%3E(java.util.List,int,int,com.google.gson.JsonObject)" tabindex="0">AccountWardrobe(List, int, int, JsonObject)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -67,7 +67,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
 <li><a href="#slots()" tabindex="0">slots()</a></li>
-<li><a href="#entitlements()" tabindex="0">entitlements()</a></li>
+<li><a href="#activeSlot()" tabindex="0">activeSlot()</a></li>
+<li><a href="#profileVersion()" tabindex="0">profileVersion()</a></li>
+<li><a href="#settingsProfile()" tabindex="0">settingsProfile()</a></li>
 </ol>
 </li>
 </ol>
@@ -89,7 +91,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockCharacterProfiles.AccountWardrobe</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&gt;&nbsp;slots, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Entitlement.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Entitlement</a>&gt;&nbsp;entitlements)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockCharacterProfiles.AccountWardrobe</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&gt;&nbsp;slots, int&nbsp;activeSlot, int&nbsp;profileVersion, com.google.gson.JsonObject&nbsp;settingsProfile)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -103,8 +105,10 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.List,java.util.List)" class="member-name-link">AccountWardrobe</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&gt;&nbsp;slots,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Entitlement.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Entitlement</a>&gt;&nbsp;entitlements)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.List,int,int,com.google.gson.JsonObject)" class="member-name-link">AccountWardrobe</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&gt;&nbsp;slots,
+ int&nbsp;activeSlot,
+ int&nbsp;profileVersion,
+ com.google.gson.JsonObject&nbsp;settingsProfile)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>AccountWardrobe</code> record class.</div>
 </div>
@@ -122,10 +126,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockCharacterProfiles.Entitlement.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Entitlement</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#entitlements()" class="member-name-link">entitlements</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#activeSlot()" class="member-name-link">activeSlot</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>entitlements</code> record component.</div>
+<div class="block">Returns the value of the <code>activeSlot</code> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
@@ -136,6 +140,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#profileVersion()" class="member-name-link">profileVersion</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>profileVersion</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.gson.JsonObject</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#settingsProfile()" class="member-name-link">settingsProfile</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>settingsProfile</code> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slots()" class="member-name-link">slots</a>()</code></div>
@@ -165,16 +179,20 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.List,java.util.List)">
+<section class="detail" id="&lt;init&gt;(java.util.List,int,int,com.google.gson.JsonObject)">
 <h3>AccountWardrobe</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AccountWardrobe</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&gt;&nbsp;slots,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Entitlement.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Entitlement</a>&gt;&nbsp;entitlements)</span></div>
+ int&nbsp;activeSlot,
+ int&nbsp;profileVersion,
+ com.google.gson.JsonObject&nbsp;settingsProfile)</span></div>
 <div class="block">Creates an instance of a <code>AccountWardrobe</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>slots</code> - the value for the <code>slots</code> record component</dd>
-<dd><code>entitlements</code> - the value for the <code>entitlements</code> record component</dd>
+<dd><code>activeSlot</code> - the value for the <code>activeSlot</code> record component</dd>
+<dd><code>profileVersion</code> - the value for the <code>profileVersion</code> record component</dd>
+<dd><code>settingsProfile</code> - the value for the <code>settingsProfile</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -222,7 +240,7 @@ loadScripts(document, 'script');</script>
 <h3>equals</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
-<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>.</div>
+<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. Reference components are compared with <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>; primitive components are compared with the <code>compare</code> method from their corresponding wrapper classes.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
@@ -248,14 +266,40 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="entitlements()">
-<h3>entitlements</h3>
+<section class="detail" id="activeSlot()">
+<h3>activeSlot</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.Entitlement.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Entitlement</a>&gt;</span>&nbsp;<span class="element-name">entitlements</span>()</div>
-<div class="block">Returns the value of the <code>entitlements</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">activeSlot</span>()</div>
+<div class="block">Returns the value of the <code>activeSlot</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>entitlements</code> record component</dd>
+<dd>the value of the <code>activeSlot</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="profileVersion()">
+<h3>profileVersion</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">profileVersion</span>()</div>
+<div class="block">Returns the value of the <code>profileVersion</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>profileVersion</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="settingsProfile()">
+<h3>settingsProfile</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.gson.JsonObject</span>&nbsp;<span class="element-name">settingsProfile</span>()</div>
+<div class="block">Returns the value of the <code>settingsProfile</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>settingsProfile</code> record component</dd>
 </dl>
 </div>
 </section>

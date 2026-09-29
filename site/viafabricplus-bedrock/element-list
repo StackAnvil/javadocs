@@ -24,6 +24,7 @@ com.viaversion.viafabricplus.bedrock.realms
 com.viaversion.viafabricplus.bedrock.render
 com.viaversion.viafabricplus.bedrock.screen
 com.viaversion.viafabricplus.bedrock.screen.settings
+com.viaversion.viafabricplus.bedrock.servers
 com.viaversion.viafabricplus.bedrock.settings
 com.viaversion.viafabricplus.bedrock.visual
 net.minecraft.world.item
