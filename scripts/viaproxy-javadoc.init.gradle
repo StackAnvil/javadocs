@@ -1,0 +1,8 @@
+gradle.afterProject { project ->
+    def annotations = project.configurations.maybeCreate('stackanvilJavadocAnnotations')
+    project.dependencies.add('stackanvilJavadocAnnotations', 'org.jetbrains:annotations:26.0.2')
+    project.tasks.withType(org.gradle.api.tasks.javadoc.Javadoc).configureEach {
+        enabled = true
+        classpath += annotations
+    }
+}
