@@ -65,7 +65,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.api.model.PlayerPosture,boolean,boolean,boolean)" tabindex="0">PlayerPrediction(Position3f, Position3f, PlayerPosture, boolean, boolean, boolean)</a></li>
+<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.api.model.PlayerPosture,boolean,boolean,boolean,boolean,float)" tabindex="0">PlayerPrediction(Position3f, Position3f, PlayerPosture, boolean, boolean, boolean, boolean, float)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -80,6 +80,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#horizontalCollision()" tabindex="0">horizontalCollision()</a></li>
 <li><a href="#verticalCollision()" tabindex="0">verticalCollision()</a></li>
 <li><a href="#groundJump()" tabindex="0">groundJump()</a></li>
+<li><a href="#inWater()" tabindex="0">inWater()</a></li>
+<li><a href="#itemUseScale()" tabindex="0">itemUseScale()</a></li>
 </ol>
 </li>
 </ol>
@@ -97,7 +99,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PlayerPrediction</span>(<a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position, <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;motion, <a href="PlayerPosture.html" title="class in net.raphimc.viabedrock.api.model">PlayerPosture</a>&nbsp;posture, boolean&nbsp;horizontalCollision, boolean&nbsp;verticalCollision, boolean&nbsp;groundJump)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PlayerPrediction</span>(<a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position, <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;motion, <a href="PlayerPosture.html" title="class in net.raphimc.viabedrock.api.model">PlayerPosture</a>&nbsp;posture, boolean&nbsp;horizontalCollision, boolean&nbsp;verticalCollision, boolean&nbsp;groundJump, boolean&nbsp;inWater, float&nbsp;itemUseScale)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Completed local physics for one Java movement frame, never an authoritative position update.</div>
 </div>
@@ -130,12 +132,14 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.api.model.PlayerPosture,boolean,boolean,boolean)" class="member-name-link">PlayerPrediction</a><wbr>(<a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.api.model.PlayerPosture,boolean,boolean,boolean,boolean,float)" class="member-name-link">PlayerPrediction</a><wbr>(<a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
  <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;motion,
  <a href="PlayerPosture.html" title="class in net.raphimc.viabedrock.api.model">PlayerPosture</a>&nbsp;posture,
  boolean&nbsp;horizontalCollision,
  boolean&nbsp;verticalCollision,
- boolean&nbsp;groundJump)</code></div>
+ boolean&nbsp;groundJump,
+ boolean&nbsp;inWater,
+ float&nbsp;itemUseScale)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>PlayerPrediction</code> record class.</div>
 </div>
@@ -172,6 +176,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#horizontalCollision()" class="member-name-link">horizontalCollision</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>horizontalCollision</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inWater()" class="member-name-link">inWater</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>inWater</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemUseScale()" class="member-name-link">itemUseScale</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>itemUseScale</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#matches(net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">matches</a><wbr>(<a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position)</code></div>
@@ -251,7 +265,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.api.model.PlayerPosture,boolean,boolean,boolean)">
+<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.api.model.PlayerPosture,boolean,boolean,boolean,boolean,float)">
 <h3>PlayerPrediction</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PlayerPrediction</span><wbr><span class="parameters">(<a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
@@ -259,7 +273,9 @@ loadScripts(document, 'script');</script>
  <a href="PlayerPosture.html" title="class in net.raphimc.viabedrock.api.model">PlayerPosture</a>&nbsp;posture,
  boolean&nbsp;horizontalCollision,
  boolean&nbsp;verticalCollision,
- boolean&nbsp;groundJump)</span></div>
+ boolean&nbsp;groundJump,
+ boolean&nbsp;inWater,
+ float&nbsp;itemUseScale)</span></div>
 <div class="block">Creates an instance of a <code>PlayerPrediction</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -269,6 +285,8 @@ loadScripts(document, 'script');</script>
 <dd><code>horizontalCollision</code> - the value for the <code>horizontalCollision</code> record component</dd>
 <dd><code>verticalCollision</code> - the value for the <code>verticalCollision</code> record component</dd>
 <dd><code>groundJump</code> - the value for the <code>groundJump</code> record component</dd>
+<dd><code>inWater</code> - the value for the <code>inWater</code> record component</dd>
+<dd><code>itemUseScale</code> - the value for the <code>itemUseScale</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -410,6 +428,32 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>groundJump</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="inWater()">
+<h3>inWater</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">inWater</span>()</div>
+<div class="block">Returns the value of the <code>inWater</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>inWater</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="itemUseScale()">
+<h3>itemUseScale</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">itemUseScale</span>()</div>
+<div class="block">Returns the value of the <code>itemUseScale</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>itemUseScale</code> record component</dd>
 </dl>
 </div>
 </section>

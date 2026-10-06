@@ -65,12 +65,15 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(java.lang.String,int,java.util.List,java.util.List,boolean,int,int)" tabindex="0">CustomBlockProperties(String, int, List, List, boolean, int, int)</a></li>
+<li><a href="#%3Cinit%3E(java.lang.String,int,java.util.List,java.util.List,boolean,int,int,net.raphimc.viabedrock.api.model.CustomBlockOffset)" tabindex="0">CustomBlockProperties(String, int, List, List, boolean, int, int, CustomBlockOffset)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#of(net.raphimc.viabedrock.api.model.CustomBlockVisual)" tabindex="0">of(CustomBlockVisual)</a></li>
+<li><a href="#collisionBoxesAt(int,int,int)" tabindex="0">collisionBoxesAt(int, int, int)</a></li>
+<li><a href="#selectionBoxesAt(int,int,int)" tabindex="0">selectionBoxesAt(int, int, int)</a></li>
+<li><a href="#cameraBoxesAt(int,int,int)" tabindex="0">cameraBoxesAt(int, int, int)</a></li>
 <li><a href="#encode(java.util.Collection)" tabindex="0">encode(Collection)</a></li>
 <li><a href="#decode(com.viaversion.viaversion.libs.gson.JsonElement)" tabindex="0">decode(JsonElement)</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
@@ -83,6 +86,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#occluding()" tabindex="0">occluding()</a></li>
 <li><a href="#lightEmission()" tabindex="0">lightEmission()</a></li>
 <li><a href="#lightDampening()" tabindex="0">lightDampening()</a></li>
+<li><a href="#randomOffset()" tabindex="0">randomOffset()</a></li>
 </ol>
 </li>
 </ol>
@@ -100,7 +104,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">CustomBlockProperties</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockState, int&nbsp;javaState, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;&nbsp;collisionBoxes, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;&nbsp;selectionBoxes, boolean&nbsp;occluding, int&nbsp;lightEmission, int&nbsp;lightDampening)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">CustomBlockProperties</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockState, int&nbsp;javaState, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;&nbsp;collisionBoxes, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;&nbsp;selectionBoxes, boolean&nbsp;occluding, int&nbsp;lightEmission, int&nbsp;lightDampening, <a href="CustomBlockOffset.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockOffset</a>&nbsp;randomOffset)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Physical properties transported with the converted server pack, independently of its connection route.</div>
 </div>
@@ -133,13 +137,14 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,int,java.util.List,java.util.List,boolean,int,int)" class="member-name-link">CustomBlockProperties</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockState,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,int,java.util.List,java.util.List,boolean,int,int,net.raphimc.viabedrock.api.model.CustomBlockOffset)" class="member-name-link">CustomBlockProperties</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockState,
  int&nbsp;javaState,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;&nbsp;collisionBoxes,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;&nbsp;selectionBoxes,
  boolean&nbsp;occluding,
  int&nbsp;lightEmission,
- int&nbsp;lightDampening)</code></div>
+ int&nbsp;lightDampening,
+ <a href="CustomBlockOffset.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockOffset</a>&nbsp;randomOffset)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>CustomBlockProperties</code> record class.</div>
 </div>
@@ -163,9 +168,23 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the value of the <code>bedrockState</code> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#collisionBoxes()" class="member-name-link">collisionBoxes</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cameraBoxesAt(int,int,int)" class="member-name-link">cameraBoxesAt</a><wbr>(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;z)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Camera collision uses the continuous envelope of the component boxes.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#collisionBoxes()" class="member-name-link">collisionBoxes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>collisionBoxes</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#collisionBoxesAt(int,int,int)" class="member-name-link">collisionBoxesAt</a><wbr>(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;z)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">World collision append uses integer offsets, unlike rendering and outline translation.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, <a href="CustomBlockProperties.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockProperties</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#decode(com.viaversion.viaversion.libs.gson.JsonElement)" class="member-name-link">decode</a><wbr>(com.viaversion.viaversion.libs.gson.JsonElement&nbsp;metadata)</code></div>
@@ -206,11 +225,21 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CustomBlockProperties.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockProperties</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(net.raphimc.viabedrock.api.model.CustomBlockVisual)" class="member-name-link">of</a><wbr>(<a href="CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a>&nbsp;visual)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectionBoxes()" class="member-name-link">selectionBoxes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomBlockOffset.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockOffset</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#randomOffset()" class="member-name-link">randomOffset</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>randomOffset</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectionBoxes()" class="member-name-link">selectionBoxes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>selectionBoxes</code> record component.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectionBoxesAt(int,int,int)" class="member-name-link">selectionBoxesAt</a><wbr>(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;z)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -274,7 +303,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,int,java.util.List,java.util.List,boolean,int,int)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,int,java.util.List,java.util.List,boolean,int,int,net.raphimc.viabedrock.api.model.CustomBlockOffset)">
 <h3>CustomBlockProperties</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CustomBlockProperties</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockState,
@@ -283,7 +312,8 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;&nbsp;selectionBoxes,
  boolean&nbsp;occluding,
  int&nbsp;lightEmission,
- int&nbsp;lightDampening)</span></div>
+ int&nbsp;lightDampening,
+ <a href="CustomBlockOffset.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockOffset</a>&nbsp;randomOffset)</span></div>
 <div class="block">Creates an instance of a <code>CustomBlockProperties</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -294,6 +324,7 @@ loadScripts(document, 'script');</script>
 <dd><code>occluding</code> - the value for the <code>occluding</code> record component</dd>
 <dd><code>lightEmission</code> - the value for the <code>lightEmission</code> record component</dd>
 <dd><code>lightDampening</code> - the value for the <code>lightDampening</code> record component</dd>
+<dd><code>randomOffset</code> - the value for the <code>randomOffset</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -311,6 +342,38 @@ loadScripts(document, 'script');</script>
 <h3>of</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomBlockProperties.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockProperties</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a>&nbsp;visual)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="collisionBoxesAt(int,int,int)">
+<h3>collisionBoxesAt</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</span>&nbsp;<span class="element-name">collisionBoxesAt</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;z)</span></div>
+<div class="block">World collision append uses integer offsets, unlike rendering and outline translation.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="selectionBoxesAt(int,int,int)">
+<h3>selectionBoxesAt</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</span>&nbsp;<span class="element-name">selectionBoxesAt</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;z)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="cameraBoxesAt(int,int,int)">
+<h3>cameraBoxesAt</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</span>&nbsp;<span class="element-name">cameraBoxesAt</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;z)</span></div>
+<div class="block">Camera collision uses the continuous envelope of the component boxes.</div>
 </div>
 </section>
 </li>
@@ -464,6 +527,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>lightDampening</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="randomOffset()">
+<h3>randomOffset</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomBlockOffset.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockOffset</a></span>&nbsp;<span class="element-name">randomOffset</span>()</div>
+<div class="block">Returns the value of the <code>randomOffset</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>randomOffset</code> record component</dd>
 </dl>
 </div>
 </section>

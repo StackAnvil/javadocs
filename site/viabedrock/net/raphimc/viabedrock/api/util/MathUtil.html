@@ -69,7 +69,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#roughlyEquals(float,float)" tabindex="0">roughlyEquals(float, float)</a></li>
 <li><a href="#roughlyEquals(float,float,float)" tabindex="0">roughlyEquals(float, float, float)</a></li>
 <li><a href="#randomFloatInclusive(float,float)" tabindex="0">randomFloatInclusive(float, float)</a></li>
-<li><a href="#calculateMovementDirections(java.util.Set,boolean)" tabindex="0">calculateMovementDirections(Set, boolean)</a></li>
+<li><a href="#calculateMovementDirections(java.util.Set,float)" tabindex="0">calculateMovementDirections(Set, float)</a></li>
 <li><a href="#calculateCameraOrientation(float,float)" tabindex="0">calculateCameraOrientation(float, float)</a></li>
 </ol>
 </li>
@@ -111,8 +111,8 @@ loadScripts(document, 'script');</script>
  float&nbsp;pitch)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../../protocol/model/Position2f.html" title="class in net.raphimc.viabedrock.protocol.model">Position2f</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#calculateMovementDirections(java.util.Set,boolean)" class="member-name-link">calculateMovementDirections</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/generated/PlayerAuthInputData.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">PlayerAuthInputData</a>&gt;&nbsp;authInputData,
- boolean&nbsp;sneaking)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#calculateMovementDirections(java.util.Set,float)" class="member-name-link">calculateMovementDirections</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/generated/PlayerAuthInputData.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">PlayerAuthInputData</a>&gt;&nbsp;authInputData,
+ float&nbsp;inputScale)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ceil(float)" class="member-name-link">ceil</a><wbr>(float&nbsp;f)</code></div>
@@ -287,11 +287,11 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="calculateMovementDirections(java.util.Set,boolean)">
+<section class="detail" id="calculateMovementDirections(java.util.Set,float)">
 <h3>calculateMovementDirections</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../protocol/model/Position2f.html" title="class in net.raphimc.viabedrock.protocol.model">Position2f</a></span>&nbsp;<span class="element-name">calculateMovementDirections</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/generated/PlayerAuthInputData.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">PlayerAuthInputData</a>&gt;&nbsp;authInputData,
- boolean&nbsp;sneaking)</span></div>
+ float&nbsp;inputScale)</span></div>
 </div>
 </section>
 </li>

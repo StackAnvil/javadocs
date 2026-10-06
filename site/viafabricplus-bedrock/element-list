@@ -7,6 +7,7 @@ com.viaversion.viafabricplus.bedrock.creative
 com.viaversion.viafabricplus.bedrock.friends
 com.viaversion.viafabricplus.bedrock.hud
 com.viaversion.viafabricplus.bedrock.injection.access
+com.viaversion.viafabricplus.bedrock.injection.mixin.compat.iris
 com.viaversion.viafabricplus.bedrock.injection.mixin.core.access
 com.viaversion.viafabricplus.bedrock.injection.mixin.core.connection
 com.viaversion.viafabricplus.bedrock.injection.mixin.core.integration
