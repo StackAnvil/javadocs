@@ -14,6 +14,7 @@ net.raphimc.viabedrock.api.model
 net.raphimc.viabedrock.api.model.container
 net.raphimc.viabedrock.api.model.container.block
 net.raphimc.viabedrock.api.model.container.dynamic
+net.raphimc.viabedrock.api.model.container.entity
 net.raphimc.viabedrock.api.model.container.player
 net.raphimc.viabedrock.api.model.entity
 net.raphimc.viabedrock.api.model.scoreboard
@@ -25,6 +26,7 @@ net.raphimc.viabedrock.api.resourcepack.definition
 net.raphimc.viabedrock.api.resourcepack.http
 net.raphimc.viabedrock.api.util
 net.raphimc.viabedrock.netty
+net.raphimc.viabedrock.netty.nethernet
 net.raphimc.viabedrock.netty.raknet
 net.raphimc.viabedrock.platform
 net.raphimc.viabedrock.protocol

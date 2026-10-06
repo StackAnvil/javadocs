@@ -65,10 +65,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E()" tabindex="0">BedrockCharacterSlotsScreen()</a></li>
+<li><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category)" tabindex="0">BedrockCharacterSlotsScreen(BedrockCharacterProfiles.Category)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#tick()" tabindex="0">tick()</a></li>
 <li><a href="#init()" tabindex="0">init()</a></li>
 <li><a href="#renderTitle(net.minecraft.client.gui.GuiGraphicsExtractor)" tabindex="0">renderTitle(GuiGraphicsExtractor)</a></li>
 <li><a href="#extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor,int,int,float)" tabindex="0">extractRenderState(GuiGraphicsExtractor, int, int, float)</a></li>
@@ -145,6 +147,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">BedrockCharacterSlotsScreen</a>()</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category)" class="member-name-link">BedrockCharacterSlotsScreen</a><wbr>(<a href="../appearance/BedrockCharacterProfiles.Category.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Category</a>&nbsp;category)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -175,6 +179,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderTitle(net.minecraft.client.gui.GuiGraphicsExtractor)" class="member-name-link">renderTitle</a><wbr>(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -183,7 +190,7 @@ loadScripts(document, 'script');</script>
 <code>addFooter, addSearchBar, get, onClose, open, renderScreenTitle, setScreen, showToast</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.screens.Screen">Methods inherited from class&nbsp;net.minecraft.client.gui.screens.Screen</h3>
-<code>added, addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, canInterruptWithAnotherScreen, changeFocus, children, clearFocus, clearWidgets, clickCommandAction, clickUrlAction, defaultHandleClickEvent, defaultHandleGameClickEvent, extractBackground, extractBlurredBackground, extractMenuBackground, extractMenuBackground, extractMenuBackgroundTexture, extractPanorama, extractRenderStateWithTooltipAndSubtitles, extractTransparentBackground, fadeWidgets, findNarratableWidget, getBackgroundMusic, getFont, getNarrationMessage, getRectangle, getTitle, getTooltipFromItem, getUsageNarration, handleDelayedNarration, init, insertText, isAllowedInPortal, isInGameUi, isInputCaptured, isMouseOver, isPauseScreen, isValidCharacterForName, keyPressed, onFilesDrop, rebuildWidgets, removed, removeWidget, repositionElements, resize, scheduleNarration, setInitialFocus, setInitialFocus, shouldCloseOnEsc, shouldNarrateNavigation, showsActiveEffects, tick, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, updateNarratorStatus</code></div>
+<code>added, addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, canInterruptWithAnotherScreen, changeFocus, children, clearFocus, clearWidgets, clickCommandAction, clickUrlAction, defaultHandleClickEvent, defaultHandleGameClickEvent, extractBackground, extractBlurredBackground, extractMenuBackground, extractMenuBackground, extractMenuBackgroundTexture, extractPanorama, extractRenderStateWithTooltipAndSubtitles, extractTransparentBackground, fadeWidgets, findNarratableWidget, getBackgroundMusic, getFont, getNarrationMessage, getRectangle, getTitle, getTooltipFromItem, getUsageNarration, handleDelayedNarration, init, insertText, isAllowedInPortal, isInGameUi, isInputCaptured, isMouseOver, isPauseScreen, isValidCharacterForName, keyPressed, onFilesDrop, rebuildWidgets, removed, removeWidget, repositionElements, resize, scheduleNarration, setInitialFocus, setInitialFocus, shouldCloseOnEsc, shouldNarrateNavigation, showsActiveEffects, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, updateNarratorStatus</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.components.events.AbstractContainerEventHandler">Methods inherited from class&nbsp;net.minecraft.client.gui.components.events.AbstractContainerEventHandler</h3>
 <code>getFocused, isDragging, setDragging, setFocused</code></div>
@@ -234,6 +241,14 @@ loadScripts(document, 'script');</script>
 </div>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category)">
+<h3>BedrockCharacterSlotsScreen</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BedrockCharacterSlotsScreen</span><wbr><span class="parameters">(<a href="../appearance/BedrockCharacterProfiles.Category.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Category</a>&nbsp;category)</span></div>
+</div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -242,6 +257,18 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="tick()">
+<h3>tick</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">tick</span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>tick</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.Screen</code></dd>
+</dl>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="init()">
 <h3>init</h3>

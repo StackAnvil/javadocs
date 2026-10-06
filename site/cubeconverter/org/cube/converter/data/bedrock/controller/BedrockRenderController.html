@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">BedrockRenderController</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;materialsMap, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;geometryExpression, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;textureExpressions, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;materials, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;textures, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;geometries)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">BedrockRenderController</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;materialsMap, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;geometryExpression, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;textureExpressions, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;materials, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;textures, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;geometries, boolean&nbsp;ignoreLighting, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lightColorMultiplierExpression, <a href="BedrockRenderController.UvAnimation.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a>&nbsp;uvAnimation, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.BoneVisibility.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.BoneVisibility</a>&gt;&nbsp;partVisibility)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </section>
 <section class="summary">
@@ -94,6 +94,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="BedrockRenderController.Array.html" class="type-name-link" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="BedrockRenderController.BoneVisibility.html" class="type-name-link" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.BoneVisibility</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="BedrockRenderController.UvAnimation.html" class="type-name-link" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -105,14 +111,29 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.util.Map,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.List)" class="member-name-link">BedrockRenderController</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.util.Map,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.List,boolean,java.lang.String,org.cube.converter.data.bedrock.controller.BedrockRenderController.UvAnimation)" class="member-name-link">BedrockRenderController</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;materialsMap,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;geometryExpression,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;textureExpressions,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;materials,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;textures,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;geometries)</code></div>
-<div class="col-last even-row-color">
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;geometries,
+ boolean&nbsp;ignoreLighting,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lightColorMultiplierExpression,
+ <a href="BedrockRenderController.UvAnimation.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a>&nbsp;uvAnimation)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.util.Map,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.List,boolean,java.lang.String,org.cube.converter.data.bedrock.controller.BedrockRenderController.UvAnimation,java.util.List)" class="member-name-link">BedrockRenderController</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;materialsMap,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;geometryExpression,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;textureExpressions,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;materials,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;textures,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;geometries,
+ boolean&nbsp;ignoreLighting,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lightColorMultiplierExpression,
+ <a href="BedrockRenderController.UvAnimation.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a>&nbsp;uvAnimation,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.BoneVisibility.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.BoneVisibility</a>&gt;&nbsp;partVisibility)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Creates an instance of a <code>BedrockRenderController</code> record class.</div>
 </div>
 </div>
@@ -154,6 +175,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>identifier</code> record component.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ignoreLighting()" class="member-name-link">ignoreLighting</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>ignoreLighting</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lightColorMultiplierExpression()" class="member-name-link">lightColorMultiplierExpression</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>lightColorMultiplierExpression</code> record component.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#materials()" class="member-name-link">materials</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -164,20 +195,30 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>materialsMap</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textureExpressions()" class="member-name-link">textureExpressions</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.BoneVisibility.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.BoneVisibility</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#partVisibility()" class="member-name-link">partVisibility</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>partVisibility</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textureExpressions()" class="member-name-link">textureExpressions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>textureExpressions</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textures()" class="member-name-link">textures</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textures()" class="member-name-link">textures</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>textures</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockRenderController.UvAnimation.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uvAnimation()" class="member-name-link">uvAnimation</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>uvAnimation</code> record component.</div>
 </div>
 </div>
 </div>
@@ -197,7 +238,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,java.util.Map,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.List)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,java.util.Map,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.List,boolean,java.lang.String,org.cube.converter.data.bedrock.controller.BedrockRenderController.UvAnimation,java.util.List)">
 <h3>BedrockRenderController</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BedrockRenderController</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;materialsMap,
@@ -205,7 +246,11 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;textureExpressions,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;materials,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;textures,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;geometries)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;geometries,
+ boolean&nbsp;ignoreLighting,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lightColorMultiplierExpression,
+ <a href="BedrockRenderController.UvAnimation.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a>&nbsp;uvAnimation,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.BoneVisibility.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.BoneVisibility</a>&gt;&nbsp;partVisibility)</span></div>
 <div class="block">Creates an instance of a <code>BedrockRenderController</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -216,7 +261,26 @@ loadScripts(document, 'script');</script>
 <dd><code>materials</code> - the value for the <code>materials</code> record component</dd>
 <dd><code>textures</code> - the value for the <code>textures</code> record component</dd>
 <dd><code>geometries</code> - the value for the <code>geometries</code> record component</dd>
+<dd><code>ignoreLighting</code> - the value for the <code>ignoreLighting</code> record component</dd>
+<dd><code>lightColorMultiplierExpression</code> - the value for the <code>lightColorMultiplierExpression</code> record component</dd>
+<dd><code>uvAnimation</code> - the value for the <code>uvAnimation</code> record component</dd>
+<dd><code>partVisibility</code> - the value for the <code>partVisibility</code> record component</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.lang.String,java.util.Map,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.List,boolean,java.lang.String,org.cube.converter.data.bedrock.controller.BedrockRenderController.UvAnimation)">
+<h3>BedrockRenderController</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BedrockRenderController</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;materialsMap,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;geometryExpression,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;textureExpressions,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;materials,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;textures,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a>&gt;&nbsp;geometries,
+ boolean&nbsp;ignoreLighting,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lightColorMultiplierExpression,
+ <a href="BedrockRenderController.UvAnimation.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a>&nbsp;uvAnimation)</span></div>
 </section>
 </li>
 </ul>
@@ -257,7 +321,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
-<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>.</div>
+<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. Reference components are compared with <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>; primitive components are compared with '=='.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
@@ -342,6 +406,50 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>geometries</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ignoreLighting()">
+<h3>ignoreLighting</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">ignoreLighting</span>()</div>
+<div class="block">Returns the value of the <code>ignoreLighting</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>ignoreLighting</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="lightColorMultiplierExpression()">
+<h3>lightColorMultiplierExpression</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">lightColorMultiplierExpression</span>()</div>
+<div class="block">Returns the value of the <code>lightColorMultiplierExpression</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>lightColorMultiplierExpression</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="uvAnimation()">
+<h3>uvAnimation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BedrockRenderController.UvAnimation.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a></span>&nbsp;<span class="element-name">uvAnimation</span>()</div>
+<div class="block">Returns the value of the <code>uvAnimation</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>uvAnimation</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="partVisibility()">
+<h3>partVisibility</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockRenderController.BoneVisibility.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.BoneVisibility</a>&gt;</span>&nbsp;<span class="element-name">partVisibility</span>()</div>
+<div class="block">Returns the value of the <code>partVisibility</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>partVisibility</code> record component</dd>
 </dl>
 </section>
 </li>

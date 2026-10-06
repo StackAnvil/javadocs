@@ -58,19 +58,22 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(java.nio.file.Path,java.lang.String,java.util.List)" tabindex="0">BedrockClassicSkinPack(Path, String, List)</a></li>
+<li><a href="#%3Cinit%3E(java.lang.String,java.util.List,java.util.Map)" tabindex="0">BedrockClassicSkinPack(String, List, Map)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#read(java.nio.file.Path)" tabindex="0">read(Path)</a></li>
+<li><a href="#read(java.nio.file.Path,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel.ModelSource)" tabindex="0">read(Path, BedrockClassicModel.ModelSource)</a></li>
+<li><a href="#read(java.lang.String,java.util.Map,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel.ModelSource)" tabindex="0">read(String, Map, BedrockClassicModel.ModelSource)</a></li>
 <li><a href="#image(com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin)" tabindex="0">image(BedrockClassicSkinPack.Skin)</a></li>
+<li><a href="#cape(com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin)" tabindex="0">cape(BedrockClassicSkinPack.Skin)</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
-<li><a href="#path()" tabindex="0">path()</a></li>
 <li><a href="#name()" tabindex="0">name()</a></li>
 <li><a href="#skins()" tabindex="0">skins()</a></li>
+<li><a href="#files()" tabindex="0">files()</a></li>
 </ol>
 </li>
 </ol>
@@ -88,9 +91,9 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">BedrockClassicSkinPack</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&gt;&nbsp;skins)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">BedrockClassicSkinPack</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&gt;&nbsp;skins, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&nbsp;files)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">Reads the standard manifest.json and skins.json format of a local Classic Skin pack.</div>
+<div class="block">Reads local or account-downloaded Classic Skin packs through the same bounded format reader.</div>
 </div>
 </section>
 <section class="summary">
@@ -118,9 +121,9 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.nio.file.Path,java.lang.String,java.util.List)" class="member-name-link">BedrockClassicSkinPack</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&gt;&nbsp;skins)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.util.List,java.util.Map)" class="member-name-link">BedrockClassicSkinPack</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&gt;&nbsp;skins,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&nbsp;files)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>BedrockClassicSkinPack</code> record class.</div>
 </div>
@@ -138,10 +141,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cape(com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin)" class="member-name-link">cape</a><wbr>(<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&nbsp;skin)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#files()" class="member-name-link">files</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>files</code> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
@@ -156,22 +167,26 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>name</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#path()" class="member-name-link">path</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>path</code> record component.</div>
-</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#read(java.lang.String,java.util.Map,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel.ModelSource)" class="member-name-link">read</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fallbackName,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&nbsp;files,
+ <a href="BedrockClassicModel.ModelSource.html" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel.ModelSource</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#read(java.nio.file.Path)" class="member-name-link">read</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#skins()" class="member-name-link">skins</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#read(java.nio.file.Path,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel.ModelSource)" class="member-name-link">read</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
+ <a href="BedrockClassicModel.ModelSource.html" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel.ModelSource</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#skins()" class="member-name-link">skins</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>skins</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -192,18 +207,18 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.nio.file.Path,java.lang.String,java.util.List)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,java.util.List,java.util.Map)">
 <h3>BedrockClassicSkinPack</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BedrockClassicSkinPack</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&gt;&nbsp;skins)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BedrockClassicSkinPack</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&gt;&nbsp;skins,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&nbsp;files)</span></div>
 <div class="block">Creates an instance of a <code>BedrockClassicSkinPack</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>path</code> - the value for the <code>path</code> record component</dd>
 <dd><code>name</code> - the value for the <code>name</code> record component</dd>
 <dd><code>skins</code> - the value for the <code>skins</code> record component</dd>
+<dd><code>files</code> - the value for the <code>files</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -230,11 +245,53 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="read(java.nio.file.Path,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel.ModelSource)">
+<h3>read</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a></span>&nbsp;<span class="element-name">read</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
+ <a href="BedrockClassicModel.ModelSource.html" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel.ModelSource</a>&nbsp;source)</span>
+                                   throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="read(java.lang.String,java.util.Map,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel.ModelSource)">
+<h3>read</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a></span>&nbsp;<span class="element-name">read</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fallbackName,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&nbsp;files,
+ <a href="BedrockClassicModel.ModelSource.html" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel.ModelSource</a>&nbsp;source)</span>
+                                   throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="image(com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin)">
 <h3>image</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a></span>&nbsp;<span class="element-name">image</span><wbr><span class="parameters">(<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&nbsp;skin)</span>
                     throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="cape(com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin)">
+<h3>cape</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a></span>&nbsp;<span class="element-name">cape</span><wbr><span class="parameters">(<a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&nbsp;skin)</span>
+                   throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
@@ -290,19 +347,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="path()">
-<h3>path</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">path</span>()</div>
-<div class="block">Returns the value of the <code>path</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>path</code> record component</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
 <section class="detail" id="name()">
 <h3>name</h3>
 <div class="horizontal-scroll">
@@ -324,6 +368,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>skins</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="files()">
+<h3>files</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;</span>&nbsp;<span class="element-name">files</span>()</div>
+<div class="block">Returns the value of the <code>files</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>files</code> record component</dd>
 </dl>
 </div>
 </section>

@@ -58,11 +58,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Selection,boolean,java.awt.image.BufferedImage,java.awt.image.BufferedImage,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Persona)" tabindex="0">Appearance(BedrockAppearanceStore.Selection, boolean, BufferedImage, BufferedImage, String, String, BedrockAppearanceStore.Persona)</a></li>
+<li><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Selection,boolean,java.awt.image.BufferedImage,java.awt.image.BufferedImage,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicOptions,com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Persona)" tabindex="0">Appearance(BedrockAppearanceStore.Selection, boolean, BufferedImage, BufferedImage, String, String, BedrockClassicModel, BedrockClassicOptions, BedrockAppearanceStore.Persona)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#skinData(java.lang.String)" tabindex="0">skinData(String)</a></li>
 <li><a href="#effectiveSlim()" tabindex="0">effectiveSlim()</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
@@ -73,6 +74,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#cape()" tabindex="0">cape()</a></li>
 <li><a href="#skinId()" tabindex="0">skinId()</a></li>
 <li><a href="#capeId()" tabindex="0">capeId()</a></li>
+<li><a href="#classicModel()" tabindex="0">classicModel()</a></li>
+<li><a href="#classicOptions()" tabindex="0">classicOptions()</a></li>
 <li><a href="#persona()" tabindex="0">persona()</a></li>
 </ol>
 </li>
@@ -95,7 +98,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockAppearanceStore.Appearance</span>(<a href="BedrockAppearanceStore.Selection.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Selection</a>&nbsp;selection, boolean&nbsp;slim, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;skin, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;cape, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;skinId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;capeId, <a href="BedrockAppearanceStore.Persona.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Persona</a>&nbsp;persona)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockAppearanceStore.Appearance</span>(<a href="BedrockAppearanceStore.Selection.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Selection</a>&nbsp;selection, boolean&nbsp;slim, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;skin, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;cape, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;skinId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;capeId, <a href="BedrockClassicModel.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel</a>&nbsp;classicModel, <a href="BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a>&nbsp;classicOptions, <a href="BedrockAppearanceStore.Persona.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Persona</a>&nbsp;persona)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -109,12 +112,14 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Selection,boolean,java.awt.image.BufferedImage,java.awt.image.BufferedImage,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Persona)" class="member-name-link">Appearance</a><wbr>(<a href="BedrockAppearanceStore.Selection.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Selection</a>&nbsp;selection,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Selection,boolean,java.awt.image.BufferedImage,java.awt.image.BufferedImage,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicOptions,com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Persona)" class="member-name-link">Appearance</a><wbr>(<a href="BedrockAppearanceStore.Selection.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Selection</a>&nbsp;selection,
  boolean&nbsp;slim,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;skin,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;cape,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;skinId,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;capeId,
+ <a href="BedrockClassicModel.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel</a>&nbsp;classicModel,
+ <a href="BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a>&nbsp;classicOptions,
  <a href="BedrockAppearanceStore.Persona.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Persona</a>&nbsp;persona)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Appearance</code> record class.</div>
@@ -142,6 +147,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#capeId()" class="member-name-link">capeId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>capeId</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockClassicModel.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#classicModel()" class="member-name-link">classicModel</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>classicModel</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#classicOptions()" class="member-name-link">classicOptions</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>classicOptions</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#effectiveSlim()" class="member-name-link">effectiveSlim</a>()</code></div>
@@ -171,19 +186,22 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>skin</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#skinId()" class="member-name-link">skinId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.raphimc.viabedrock.protocol.model.SkinData</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#skinData(java.lang.String)" class="member-name-link">skinData</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardGeometry)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#skinId()" class="member-name-link">skinId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>skinId</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slim()" class="member-name-link">slim</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slim()" class="member-name-link">slim</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>slim</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -204,7 +222,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Selection,boolean,java.awt.image.BufferedImage,java.awt.image.BufferedImage,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Persona)">
+<section class="detail" id="&lt;init&gt;(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Selection,boolean,java.awt.image.BufferedImage,java.awt.image.BufferedImage,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicOptions,com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Persona)">
 <h3>Appearance</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Appearance</span><wbr><span class="parameters">(<a href="BedrockAppearanceStore.Selection.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Selection</a>&nbsp;selection,
@@ -213,6 +231,8 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;cape,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;skinId,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;capeId,
+ <a href="BedrockClassicModel.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel</a>&nbsp;classicModel,
+ <a href="BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a>&nbsp;classicOptions,
  <a href="BedrockAppearanceStore.Persona.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Persona</a>&nbsp;persona)</span></div>
 <div class="block">Creates an instance of a <code>Appearance</code> record class.</div>
 <dl class="notes">
@@ -223,6 +243,8 @@ loadScripts(document, 'script');</script>
 <dd><code>cape</code> - the value for the <code>cape</code> record component</dd>
 <dd><code>skinId</code> - the value for the <code>skinId</code> record component</dd>
 <dd><code>capeId</code> - the value for the <code>capeId</code> record component</dd>
+<dd><code>classicModel</code> - the value for the <code>classicModel</code> record component</dd>
+<dd><code>classicOptions</code> - the value for the <code>classicOptions</code> record component</dd>
 <dd><code>persona</code> - the value for the <code>persona</code> record component</dd>
 </dl>
 </div>
@@ -236,6 +258,14 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="skinData(java.lang.String)">
+<h3>skinData</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.raphimc.viabedrock.protocol.model.SkinData</span>&nbsp;<span class="element-name">skinData</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardGeometry)</span></div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="effectiveSlim()">
 <h3>effectiveSlim</h3>
@@ -365,6 +395,32 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>capeId</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="classicModel()">
+<h3>classicModel</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BedrockClassicModel.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel</a></span>&nbsp;<span class="element-name">classicModel</span>()</div>
+<div class="block">Returns the value of the <code>classicModel</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>classicModel</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="classicOptions()">
+<h3>classicOptions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a></span>&nbsp;<span class="element-name">classicOptions</span>()</div>
+<div class="block">Returns the value of the <code>classicOptions</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>classicOptions</code> record component</dd>
 </dl>
 </div>
 </section>

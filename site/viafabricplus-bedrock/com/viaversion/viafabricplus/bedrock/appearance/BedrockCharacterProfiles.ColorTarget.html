@@ -61,9 +61,11 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#SKIN" tabindex="0">SKIN</a></li>
 <li><a href="#HAIR" tabindex="0">HAIR</a></li>
+<li><a href="#FACIAL_HAIR" tabindex="0">FACIAL_HAIR</a></li>
 <li><a href="#IRIS" tabindex="0">IRIS</a></li>
 <li><a href="#EYEBROWS" tabindex="0">EYEBROWS</a></li>
 <li><a href="#SCLERA" tabindex="0">SCLERA</a></li>
+<li><a href="#MOUTH" tabindex="0">MOUTH</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -71,6 +73,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#values()" tabindex="0">values()</a></li>
 <li><a href="#valueOf(java.lang.String)" tabindex="0">valueOf(String)</a></li>
 <li><a href="#channel()" tabindex="0">channel()</a></li>
+<li><a href="#pieceType()" tabindex="0">pieceType()</a></li>
+<li><a href="#palette()" tabindex="0">palette()</a></li>
+<li><a href="#paletteIndex(java.lang.String)" tabindex="0">paletteIndex(String)</a></li>
 </ol>
 </li>
 </ol>
@@ -121,9 +126,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#EYEBROWS" class="member-name-link">EYEBROWS</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#HAIR" class="member-name-link">HAIR</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#FACIAL_HAIR" class="member-name-link">FACIAL_HAIR</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#IRIS" class="member-name-link">IRIS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#HAIR" class="member-name-link">HAIR</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#IRIS" class="member-name-link">IRIS</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#MOUTH" class="member-name-link">MOUTH</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code><a href="#SCLERA" class="member-name-link">SCLERA</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
@@ -146,14 +155,23 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#channel()" class="member-name-link">channel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#palette()" class="member-name-link">palette</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#paletteIndex(java.lang.String)" class="member-name-link">paletteIndex</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pieceType()" class="member-name-link">pieceType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a>[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
 </div>
@@ -194,6 +212,14 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="FACIAL_HAIR">
+<h3>FACIAL_HAIR</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a></span>&nbsp;<span class="element-name">FACIAL_HAIR</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="IRIS">
 <h3>IRIS</h3>
 <div class="horizontal-scroll">
@@ -214,6 +240,14 @@ the order they are declared.</div>
 <h3>SCLERA</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a></span>&nbsp;<span class="element-name">SCLERA</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="MOUTH">
+<h3>MOUTH</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a></span>&nbsp;<span class="element-name">MOUTH</span></div>
 </div>
 </section>
 </li>
@@ -265,6 +299,30 @@ not permitted.)</div>
 <h3>channel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">channel</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="pieceType()">
+<h3>pieceType</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">pieceType</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="palette()">
+<h3>palette</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">palette</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="paletteIndex(java.lang.String)">
+<h3>paletteIndex</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">paletteIndex</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 </div>
 </section>
 </li>

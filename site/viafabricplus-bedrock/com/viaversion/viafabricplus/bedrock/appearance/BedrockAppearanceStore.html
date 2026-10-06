@@ -66,13 +66,18 @@ loadScripts(document, 'script');</script>
 <li><a href="#accountId(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" tabindex="0">accountId(BedrockAuthManager)</a></li>
 <li><a href="#load(java.lang.String)" tabindex="0">load(String)</a></li>
 <li><a href="#hasCustomSkin(java.lang.String)" tabindex="0">hasCustomSkin(String)</a></li>
+<li><a href="#hasSavedAppearance(java.lang.String)" tabindex="0">hasSavedAppearance(String)</a></li>
+<li><a href="#initializeAccountCharacter(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.PreparedCharacter)" tabindex="0">initializeAccountCharacter(String, BedrockCharacterProfiles.PreparedCharacter)</a></li>
 <li><a href="#select(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Selection)" tabindex="0">select(String, BedrockAppearanceStore.Selection)</a></li>
 <li><a href="#setSlim(java.lang.String,boolean)" tabindex="0">setSlim(String, boolean)</a></li>
 <li><a href="#importSkin(java.lang.String,java.nio.file.Path)" tabindex="0">importSkin(String, Path)</a></li>
 <li><a href="#importSkinImage(java.lang.String,java.awt.image.BufferedImage,boolean)" tabindex="0">importSkinImage(String, BufferedImage, boolean)</a></li>
+<li><a href="#importSkinImage(java.lang.String,java.awt.image.BufferedImage,boolean,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicOptions)" tabindex="0">importSkinImage(String, BufferedImage, boolean, BedrockClassicModel, BedrockClassicOptions)</a></li>
+<li><a href="#importPackSkin(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin,boolean)" tabindex="0">importPackSkin(String, BedrockClassicSkinPack, BedrockClassicSkinPack.Skin, boolean)</a></li>
+<li><a href="#usesAccountCharacter(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot)" tabindex="0">usesAccountCharacter(String, BedrockCharacterProfiles.Slot)</a></li>
 <li><a href="#importCape(java.lang.String,java.nio.file.Path)" tabindex="0">importCape(String, Path)</a></li>
 <li><a href="#removeCape(java.lang.String)" tabindex="0">removeCape(String)</a></li>
-<li><a href="#importPersona(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaModel.Converted,java.lang.String,java.lang.String,java.lang.String)" tabindex="0">importPersona(String, BedrockPersonaModel.Converted, String, String, String)</a></li>
+<li><a href="#importPersona(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaModel.Converted,java.lang.String,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaProfile)" tabindex="0">importPersona(String, BedrockPersonaModel.Converted, String, String, String, BedrockPersonaProfile)</a></li>
 </ol>
 </li>
 </ol>
@@ -146,16 +151,26 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCustomSkin(java.lang.String)" class="member-name-link">hasCustomSkin</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importCape(java.lang.String,java.nio.file.Path)" class="member-name-link">importCape</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;source)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSavedAppearance(java.lang.String)" class="member-name-link">hasSavedAppearance</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importPersona(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaModel.Converted,java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">importPersona</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importCape(java.lang.String,java.nio.file.Path)" class="member-name-link">importCape</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importPackSkin(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin,boolean)" class="member-name-link">importPackSkin</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a>&nbsp;pack,
+ <a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&nbsp;selected,
+ boolean&nbsp;slim)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importPersona(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaModel.Converted,java.lang.String,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaProfile)" class="member-name-link">importPersona</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
  <a href="BedrockPersonaModel.Converted.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPersonaModel.Converted</a>&nbsp;converted,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;profileHash,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;armSize,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;skinColor)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;skinColor,
+ <a href="BedrockPersonaProfile.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPersonaProfile</a>&nbsp;profile)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importSkin(java.lang.String,java.nio.file.Path)" class="member-name-link">importSkin</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
@@ -165,6 +180,17 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importSkinImage(java.lang.String,java.awt.image.BufferedImage,boolean)" class="member-name-link">importSkinImage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;image,
  boolean&nbsp;slim)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#importSkinImage(java.lang.String,java.awt.image.BufferedImage,boolean,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicOptions)" class="member-name-link">importSkinImage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;image,
+ boolean&nbsp;slim,
+ <a href="BedrockClassicModel.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel</a>&nbsp;model,
+ <a href="BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a>&nbsp;options)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeAccountCharacter(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.PreparedCharacter)" class="member-name-link">initializeAccountCharacter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="BedrockCharacterProfiles.PreparedCharacter.html" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedCharacter</a>&nbsp;character)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(java.lang.String)" class="member-name-link">load</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId)</code></div>
@@ -180,6 +206,10 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSlim(java.lang.String,boolean)" class="member-name-link">setSlim</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
  boolean&nbsp;slim)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#usesAccountCharacter(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot)" class="member-name-link">usesAccountCharacter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -243,6 +273,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="hasSavedAppearance(java.lang.String)">
+<h3>hasSavedAppearance</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSavedAppearance</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="initializeAccountCharacter(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.PreparedCharacter)">
+<h3>initializeAccountCharacter</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a>&gt;</span>&nbsp;<span class="element-name">initializeAccountCharacter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="BedrockCharacterProfiles.PreparedCharacter.html" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedCharacter</a>&nbsp;character)</span>
+                                                                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="select(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Selection)">
 <h3>select</h3>
 <div class="horizontal-scroll">
@@ -300,6 +352,53 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="importSkinImage(java.lang.String,java.awt.image.BufferedImage,boolean,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicModel,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicOptions)">
+<h3>importSkinImage</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></span>&nbsp;<span class="element-name">importSkinImage</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;image,
+ boolean&nbsp;slim,
+ <a href="BedrockClassicModel.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicModel</a>&nbsp;model,
+ <a href="BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a>&nbsp;options)</span>
+                                                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="importPackSkin(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin,boolean)">
+<h3>importPackSkin</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></span>&nbsp;<span class="element-name">importPackSkin</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a>&nbsp;pack,
+ <a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&nbsp;selected,
+ boolean&nbsp;slim)</span>
+                                                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="usesAccountCharacter(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot)">
+<h3>usesAccountCharacter</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">usesAccountCharacter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
+ <a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot)</span>
+                             throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="importCape(java.lang.String,java.nio.file.Path)">
 <h3>importCape</h3>
 <div class="horizontal-scroll">
@@ -327,14 +426,15 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="importPersona(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaModel.Converted,java.lang.String,java.lang.String,java.lang.String)">
+<section class="detail" id="importPersona(java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaModel.Converted,java.lang.String,java.lang.String,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockPersonaProfile)">
 <h3>importPersona</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a></span>&nbsp;<span class="element-name">importPersona</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId,
  <a href="BedrockPersonaModel.Converted.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPersonaModel.Converted</a>&nbsp;converted,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;profileHash,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;armSize,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;skinColor)</span>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;skinColor,
+ <a href="BedrockPersonaProfile.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPersonaProfile</a>&nbsp;profile)</span>
                                                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <dl class="notes">
 <dt>Throws:</dt>

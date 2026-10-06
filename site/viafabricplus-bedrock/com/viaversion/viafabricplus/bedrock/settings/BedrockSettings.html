@@ -63,7 +63,14 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#replaceDefaultPort(java.lang.String,com.viaversion.viaversion.api.protocol.version.ProtocolVersion)" tabindex="0">replaceDefaultPort(String, ProtocolVersion)</a></li>
+<li><a href="#allowCameraShake()" tabindex="0">allowCameraShake()</a></li>
+<li><a href="#captions()" tabindex="0">captions()</a></li>
+<li><a href="#hideOwnCaptions()" tabindex="0">hideOwnCaptions()</a></li>
+<li><a href="#hideAmbientCaptions()" tabindex="0">hideAmbientCaptions()</a></li>
+<li><a href="#captionDuration()" tabindex="0">captionDuration()</a></li>
+<li><a href="#captionPosition()" tabindex="0">captionPosition()</a></li>
 <li><a href="#replaceDefaultPort()" tabindex="0">replaceDefaultPort()</a></li>
+<li><a href="#muteEmoteChat()" tabindex="0">muteEmoteChat()</a></li>
 </ol>
 </li>
 </ol>
@@ -110,12 +117,33 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viafabricplus.api.settings.base.BooleanSetting</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceDefaultPort()" class="member-name-link">replaceDefaultPort</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#allowCameraShake()" class="member-name-link">allowCameraShake</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceDefaultPort(java.lang.String,com.viaversion.viaversion.api.protocol.version.ProtocolVersion)" class="member-name-link">replaceDefaultPort</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;address,
- com.viaversion.viaversion.api.protocol.version.ProtocolVersion&nbsp;version)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viafabricplus.api.settings.base.EnumSetting<wbr>&lt;<a href="CaptionDuration.html" title="enum class in com.viaversion.viafabricplus.bedrock.settings">CaptionDuration</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#captionDuration()" class="member-name-link">captionDuration</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viafabricplus.api.settings.base.EnumSetting<wbr>&lt;<a href="CaptionPosition.html" title="enum class in com.viaversion.viafabricplus.bedrock.settings">CaptionPosition</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#captionPosition()" class="member-name-link">captionPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viafabricplus.api.settings.base.BooleanSetting</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#captions()" class="member-name-link">captions</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viafabricplus.api.settings.base.BooleanSetting</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hideAmbientCaptions()" class="member-name-link">hideAmbientCaptions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viafabricplus.api.settings.base.BooleanSetting</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hideOwnCaptions()" class="member-name-link">hideOwnCaptions</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viafabricplus.api.settings.base.BooleanSetting</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#muteEmoteChat()" class="member-name-link">muteEmoteChat</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viafabricplus.api.settings.base.BooleanSetting</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceDefaultPort()" class="member-name-link">replaceDefaultPort</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceDefaultPort(java.lang.String,com.viaversion.viaversion.api.protocol.version.ProtocolVersion)" class="member-name-link">replaceDefaultPort</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;address,
+ com.viaversion.viaversion.api.protocol.version.ProtocolVersion&nbsp;version)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -159,10 +187,66 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="allowCameraShake()">
+<h3>allowCameraShake</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viafabricplus.api.settings.base.BooleanSetting</span>&nbsp;<span class="element-name">allowCameraShake</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="captions()">
+<h3>captions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viafabricplus.api.settings.base.BooleanSetting</span>&nbsp;<span class="element-name">captions</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hideOwnCaptions()">
+<h3>hideOwnCaptions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viafabricplus.api.settings.base.BooleanSetting</span>&nbsp;<span class="element-name">hideOwnCaptions</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hideAmbientCaptions()">
+<h3>hideAmbientCaptions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viafabricplus.api.settings.base.BooleanSetting</span>&nbsp;<span class="element-name">hideAmbientCaptions</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="captionDuration()">
+<h3>captionDuration</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viafabricplus.api.settings.base.EnumSetting&lt;<a href="CaptionDuration.html" title="enum class in com.viaversion.viafabricplus.bedrock.settings">CaptionDuration</a>&gt;</span>&nbsp;<span class="element-name">captionDuration</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="captionPosition()">
+<h3>captionPosition</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viafabricplus.api.settings.base.EnumSetting&lt;<a href="CaptionPosition.html" title="enum class in com.viaversion.viafabricplus.bedrock.settings">CaptionPosition</a>&gt;</span>&nbsp;<span class="element-name">captionPosition</span>()</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="replaceDefaultPort()">
 <h3>replaceDefaultPort</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viafabricplus.api.settings.base.BooleanSetting</span>&nbsp;<span class="element-name">replaceDefaultPort</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="muteEmoteChat()">
+<h3>muteEmoteChat</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viafabricplus.api.settings.base.BooleanSetting</span>&nbsp;<span class="element-name">muteEmoteChat</span>()</div>
 </div>
 </section>
 </li>

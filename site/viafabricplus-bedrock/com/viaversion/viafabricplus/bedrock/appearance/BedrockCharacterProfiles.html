@@ -62,24 +62,32 @@ loadScripts(document, 'script');</script>
 <li><a href="#HAIR_COLORS" tabindex="0">HAIR_COLORS</a></li>
 <li><a href="#EYE_COLORS" tabindex="0">EYE_COLORS</a></li>
 <li><a href="#SCLERA_COLORS" tabindex="0">SCLERA_COLORS</a></li>
+<li><a href="#MOUTH_COLORS" tabindex="0">MOUTH_COLORS</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#load(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" tabindex="0">load(BedrockAuthManager)</a></li>
 <li><a href="#selectSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int)" tabindex="0">selectSlot(BedrockAuthManager, int)</a></li>
-<li><a href="#changeSavedPiece(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,boolean)" tabindex="0">changeSavedPiece(BedrockAuthManager, int, String, List, BedrockCharacterProfiles.WardrobeItem, boolean)</a></li>
-<li><a href="#changeSavedEmote(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,int,boolean)" tabindex="0">changeSavedEmote(BedrockAuthManager, int, String, List, BedrockCharacterProfiles.WardrobeItem, int, boolean)</a></li>
+<li><a href="#changePiece(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,boolean)" tabindex="0">changePiece(BedrockAuthManager, int, String, List, BedrockCharacterProfiles.WardrobeItem, boolean)</a></li>
+<li><a href="#changeLimb(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide,boolean)" tabindex="0">changeLimb(BedrockAuthManager, int, String, List, BedrockCharacterProfiles.WardrobeItem, BedrockLimbSide, boolean)</a></li>
+<li><a href="#canEditLimbSides(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.AccountWardrobe,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)" tabindex="0">canEditLimbSides(BedrockCharacterProfiles.AccountWardrobe, BedrockCharacterProfiles.Slot, List, BedrockCharacterProfiles.WardrobeItem)</a></li>
+<li><a href="#limbEquipped(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)" tabindex="0">limbEquipped(BedrockCharacterProfiles.Slot, BedrockCharacterProfiles.WardrobeItem, BedrockLimbSide)</a></li>
+<li><a href="#canResetLimb(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)" tabindex="0">canResetLimb(BedrockCharacterProfiles.Slot, BedrockCharacterProfiles.Category, List, BedrockLimbSide)</a></li>
+<li><a href="#resetLimb(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)" tabindex="0">resetLimb(BedrockAuthManager, int, String, BedrockCharacterProfiles.Category, List, BedrockLimbSide)</a></li>
+<li><a href="#changeEmote(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,int,boolean)" tabindex="0">changeEmote(BedrockAuthManager, int, String, List, BedrockCharacterProfiles.WardrobeItem, int, boolean)</a></li>
 <li><a href="#changeCape(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,boolean)" tabindex="0">changeCape(BedrockAuthManager, int, String, List, BedrockCharacterProfiles.WardrobeItem, boolean)</a></li>
 <li><a href="#changeArmSize(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.lang.String)" tabindex="0">changeArmSize(BedrockAuthManager, int, String, String)</a></li>
 <li><a href="#changeHeight(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Height)" tabindex="0">changeHeight(BedrockAuthManager, int, String, BedrockCharacterProfiles.Height)</a></li>
 <li><a href="#changeColor(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.ColorTarget,java.lang.String,java.util.List)" tabindex="0">changeColor(BedrockAuthManager, int, String, BedrockCharacterProfiles.ColorTarget, String, List)</a></li>
+<li><a href="#loadColorTargets(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List,java.util.List)" tabindex="0">loadColorTargets(BedrockAuthManager, BedrockCharacterProfiles.Slot, List, List)</a></li>
 <li><a href="#copyActiveToSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)" tabindex="0">copyActiveToSlot(BedrockAuthManager, int, String)</a></li>
-<li><a href="#createStarterCharacter(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)" tabindex="0">createStarterCharacter(BedrockAuthManager, int, String)</a></li>
+<li><a href="#createStarterCharacter(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Starter)" tabindex="0">createStarterCharacter(BedrockAuthManager, int, String, BedrockCharacterProfiles.Starter)</a></li>
 <li><a href="#deleteSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)" tabindex="0">deleteSlot(BedrockAuthManager, int, String)</a></li>
+<li><a href="#selectClassic(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockOwnedSkinPacks.Item,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin)" tabindex="0">selectClassic(BedrockAuthManager, BedrockOwnedSkinPacks.Item, BedrockClassicSkinPack, BedrockClassicSkinPack.Skin)</a></li>
 <li><a href="#height(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot)" tabindex="0">height(BedrockCharacterProfiles.Slot)</a></li>
 <li><a href="#emoteIds(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List)" tabindex="0">emoteIds(BedrockCharacterProfiles.Slot, List)</a></li>
-<li><a href="#hasStarterEmote(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)" tabindex="0">hasStarterEmote(BedrockCharacterProfiles.WardrobeItem)</a></li>
+<li><a href="#hasPresetPiece(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)" tabindex="0">hasPresetPiece(BedrockCharacterProfiles.WardrobeItem)</a></li>
 <li><a href="#loadItems(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category)" tabindex="0">loadItems(BedrockAuthManager, BedrockCharacterProfiles.Category)</a></li>
 <li><a href="#loadActiveAvatar(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" tabindex="0">loadActiveAvatar(BedrockAuthManager)</a></li>
 <li><a href="#loadActiveModel(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" tabindex="0">loadActiveModel(BedrockAuthManager)</a></li>
@@ -126,15 +134,24 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="BedrockCharacterProfiles.Height.html" class="type-name-link" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Height</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="BedrockCharacterProfiles.PreparedCharacter.html" class="type-name-link" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedCharacter</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="BedrockCharacterProfiles.PreparedClassicCharacter.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedClassicCharacter</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="BedrockCharacterProfiles.PreparedCharacter.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedCharacter</a></code></div>
+<div class="col-second even-row-color"><code><a href="BedrockCharacterProfiles.PreparedPersonaCharacter.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedPersonaCharacter</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="BedrockCharacterProfiles.Slot.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="BedrockCharacterProfiles.WardrobeItem.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a></code></div>
+<div class="col-first even-row-color"><code>static enum&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="BedrockCharacterProfiles.Starter.html" class="type-name-link" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Starter</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="BedrockCharacterProfiles.WardrobeItem.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -154,11 +171,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color"><code><a href="#HAIR_COLORS" class="member-name-link">HAIR_COLORS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#SCLERA_COLORS" class="member-name-link">SCLERA_COLORS</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MOUTH_COLORS" class="member-name-link">MOUTH_COLORS</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color"><code><a href="#SKIN_COLORS" class="member-name-link">SKIN_COLORS</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#SCLERA_COLORS" class="member-name-link">SCLERA_COLORS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="#SKIN_COLORS" class="member-name-link">SKIN_COLORS</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -173,6 +193,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#canEditLimbSides(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.AccountWardrobe,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)" class="member-name-link">canEditLimbSides</a><wbr>(<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&nbsp;wardrobe,
+ <a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems,
+ <a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;item)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#canResetLimb(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)" class="member-name-link">canResetLimb</a><wbr>(<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="BedrockCharacterProfiles.Category.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Category</a>&nbsp;category,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;items,
+ <a href="BedrockLimbSide.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockLimbSide</a>&nbsp;side)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#changeArmSize(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.lang.String)" class="member-name-link">changeArmSize</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
@@ -196,52 +228,67 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#changeHeight(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Height)" class="member-name-link">changeHeight</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
- int&nbsp;slotNumber,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
- <a href="BedrockCharacterProfiles.Height.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Height</a>&nbsp;height)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#changeSavedEmote(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,int,boolean)" class="member-name-link">changeSavedEmote</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#changeEmote(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,int,boolean)" class="member-name-link">changeEmote</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems,
  <a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;selectedItem,
  int&nbsp;wheelSlot,
  boolean&nbsp;remove)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#changeHeight(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Height)" class="member-name-link">changeHeight</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ int&nbsp;slotNumber,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
+ <a href="BedrockCharacterProfiles.Height.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Height</a>&nbsp;height)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#changeSavedPiece(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,boolean)" class="member-name-link">changeSavedPiece</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#changeLimb(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide,boolean)" class="member-name-link">changeLimb</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ int&nbsp;slotNumber,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems,
+ <a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;selectedItem,
+ <a href="BedrockLimbSide.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockLimbSide</a>&nbsp;side,
+ boolean&nbsp;remove)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#changePiece(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,boolean)" class="member-name-link">changePiece</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems,
  <a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;selectedItem,
  boolean&nbsp;remove)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#copyActiveToSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)" class="member-name-link">copyActiveToSlot</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
- int&nbsp;slotNumber,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createStarterCharacter(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)" class="member-name-link">createStarterCharacter</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#copyActiveToSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)" class="member-name-link">copyActiveToSlot</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#deleteSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)" class="member-name-link">deleteSlot</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createStarterCharacter(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Starter)" class="member-name-link">createStarterCharacter</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ int&nbsp;slotNumber,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
+ <a href="BedrockCharacterProfiles.Starter.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Starter</a>&nbsp;starter)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#deleteSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)" class="member-name-link">deleteSlot</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#emoteIds(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List)" class="member-name-link">emoteIds</a><wbr>(<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasStarterEmote(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)" class="member-name-link">hasStarterEmote</a><wbr>(<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;item)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#emoteIds(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List)" class="member-name-link">emoteIds</a><wbr>(<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="BedrockCharacterProfiles.Height.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Height</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#height(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot)" class="member-name-link">height</a><wbr>(<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasPresetPiece(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)" class="member-name-link">hasPresetPiece</a><wbr>(<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;item)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="BedrockCharacterProfiles.Height.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Height</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#height(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot)" class="member-name-link">height</a><wbr>(<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#limbEquipped(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)" class="member-name-link">limbEquipped</a><wbr>(<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;item,
+ <a href="BedrockLimbSide.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockLimbSide</a>&nbsp;side)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#load(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" class="member-name-link">load</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account)</code></div>
@@ -249,17 +296,37 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#loadActiveAvatar(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" class="member-name-link">loadActiveAvatar</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.PreparedCharacter.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedCharacter</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.PreparedCharacter.html" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedCharacter</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#loadActiveModel(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" class="member-name-link">loadActiveModel</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#loadItems(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category)" class="member-name-link">loadItems</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#loadColorTargets(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List,java.util.List)" class="member-name-link">loadColorTargets</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ <a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a>&gt;&nbsp;requested,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#loadItems(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category)" class="member-name-link">loadItems</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  <a href="BedrockCharacterProfiles.Category.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Category</a>&nbsp;category)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#resetLimb(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)" class="member-name-link">resetLimb</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ int&nbsp;slotNumber,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
+ <a href="BedrockCharacterProfiles.Category.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Category</a>&nbsp;category,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;items,
+ <a href="BedrockLimbSide.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockLimbSide</a>&nbsp;side)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#selectSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int)" class="member-name-link">selectSlot</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
- int&nbsp;slotNumber)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#selectClassic(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockOwnedSkinPacks.Item,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin)" class="member-name-link">selectClassic</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ <a href="BedrockOwnedSkinPacks.Item.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockOwnedSkinPacks.Item</a>&nbsp;owned,
+ <a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a>&nbsp;pack,
+ <a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&nbsp;skin)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#selectSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int)" class="member-name-link">selectSlot</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ int&nbsp;slotNumber)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -309,6 +376,14 @@ loadScripts(document, 'script');</script>
 </div>
 </section>
 </li>
+<li>
+<section class="detail" id="MOUTH_COLORS">
+<h3>MOUTH_COLORS</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">MOUTH_COLORS</span></div>
+</div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -335,10 +410,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="changeSavedPiece(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,boolean)">
-<h3>changeSavedPiece</h3>
+<section class="detail" id="changePiece(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,boolean)">
+<h3>changePiece</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">changeSavedPiece</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">changePiece</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems,
@@ -348,10 +423,69 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="changeSavedEmote(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,int,boolean)">
-<h3>changeSavedEmote</h3>
+<section class="detail" id="changeLimb(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide,boolean)">
+<h3>changeLimb</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">changeSavedEmote</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">changeLimb</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ int&nbsp;slotNumber,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems,
+ <a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;selectedItem,
+ <a href="BedrockLimbSide.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockLimbSide</a>&nbsp;side,
+ boolean&nbsp;remove)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="canEditLimbSides(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.AccountWardrobe,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)">
+<h3>canEditLimbSides</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canEditLimbSides</span><wbr><span class="parameters">(<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&nbsp;wardrobe,
+ <a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems,
+ <a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;item)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="limbEquipped(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)">
+<h3>limbEquipped</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">limbEquipped</span><wbr><span class="parameters">(<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;item,
+ <a href="BedrockLimbSide.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockLimbSide</a>&nbsp;side)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="canResetLimb(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)">
+<h3>canResetLimb</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canResetLimb</span><wbr><span class="parameters">(<a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="BedrockCharacterProfiles.Category.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Category</a>&nbsp;category,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;items,
+ <a href="BedrockLimbSide.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockLimbSide</a>&nbsp;side)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="resetLimb(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Category,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockLimbSide)">
+<h3>resetLimb</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">resetLimb</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ int&nbsp;slotNumber,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
+ <a href="BedrockCharacterProfiles.Category.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Category</a>&nbsp;category,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;items,
+ <a href="BedrockLimbSide.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockLimbSide</a>&nbsp;side)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeEmote(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,java.util.List,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem,int,boolean)">
+<h3>changeEmote</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">changeEmote</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems,
@@ -410,6 +544,17 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="loadColorTargets(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Slot,java.util.List,java.util.List)">
+<h3>loadColorTargets</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a>&gt;&gt;</span>&nbsp;<span class="element-name">loadColorTargets</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ <a href="BedrockCharacterProfiles.Slot.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Slot</a>&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.ColorTarget.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.ColorTarget</a>&gt;&nbsp;requested,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&gt;&nbsp;categoryItems)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="copyActiveToSlot(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)">
 <h3>copyActiveToSlot</h3>
 <div class="horizontal-scroll">
@@ -420,12 +565,13 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="createStarterCharacter(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String)">
+<section class="detail" id="createStarterCharacter(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,int,java.lang.String,com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.Starter)">
 <h3>createStarterCharacter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">createStarterCharacter</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash,
+ <a href="BedrockCharacterProfiles.Starter.html" title="enum class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.Starter</a>&nbsp;starter)</span></div>
 </div>
 </section>
 </li>
@@ -436,6 +582,17 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">deleteSlot</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  int&nbsp;slotNumber,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expectedProfileHash)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="selectClassic(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.appearance.BedrockOwnedSkinPacks.Item,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack,com.viaversion.viafabricplus.bedrock.appearance.BedrockClassicSkinPack.Skin)">
+<h3>selectClassic</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.AccountWardrobe.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.AccountWardrobe</a>&gt;</span>&nbsp;<span class="element-name">selectClassic</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ <a href="BedrockOwnedSkinPacks.Item.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockOwnedSkinPacks.Item</a>&nbsp;owned,
+ <a href="BedrockClassicSkinPack.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack</a>&nbsp;pack,
+ <a href="BedrockClassicSkinPack.Skin.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicSkinPack.Skin</a>&nbsp;skin)</span></div>
 </div>
 </section>
 </li>
@@ -457,10 +614,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="hasStarterEmote(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)">
-<h3>hasStarterEmote</h3>
+<section class="detail" id="hasPresetPiece(com.viaversion.viafabricplus.bedrock.appearance.BedrockCharacterProfiles.WardrobeItem)">
+<h3>hasPresetPiece</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasStarterEmote</span><wbr><span class="parameters">(<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;item)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasPresetPiece</span><wbr><span class="parameters">(<a href="BedrockCharacterProfiles.WardrobeItem.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.WardrobeItem</a>&nbsp;item)</span></div>
 </div>
 </section>
 </li>
@@ -485,7 +642,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="loadActiveModel(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)">
 <h3>loadActiveModel</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.PreparedCharacter.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedCharacter</a>&gt;</span>&nbsp;<span class="element-name">loadActiveModel</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockCharacterProfiles.PreparedCharacter.html" title="interface in com.viaversion.viafabricplus.bedrock.appearance">BedrockCharacterProfiles.PreparedCharacter</a>&gt;</span>&nbsp;<span class="element-name">loadActiveModel</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account)</span></div>
 </div>
 </section>
 </li>
