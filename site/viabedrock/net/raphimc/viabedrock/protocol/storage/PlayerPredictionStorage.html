@@ -65,7 +65,12 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#sneakingInput()" tabindex="0">sneakingInput()</a></li>
 <li><a href="#record(net.raphimc.viabedrock.api.model.PlayerPrediction)" tabindex="0">record(PlayerPrediction)</a></li>
+<li><a href="#discardPending()" tabindex="0">discardPending()</a></li>
 <li><a href="#take(net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">take(Position3f)</a></li>
+<li><a href="#remember(long,net.raphimc.viabedrock.api.model.PlayerPrediction)" tabindex="0">remember(long, PlayerPrediction)</a></li>
+<li><a href="#inputTick()" tabindex="0">inputTick()</a></li>
+<li><a href="#inputFrame()" tabindex="0">inputFrame()</a></li>
+<li><a href="#clientFrame(long)" tabindex="0">clientFrame(long)</a></li>
 <li><a href="#posture()" tabindex="0">posture()</a></li>
 <li><a href="#postureTransitions(net.raphimc.viabedrock.api.model.PlayerPosture)" tabindex="0">postureTransitions(PlayerPosture)</a></li>
 </ol>
@@ -118,6 +123,20 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clientFrame(long)" class="member-name-link">clientFrame</a><wbr>(long&nbsp;inputTick)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discardPending()" class="member-name-link">discardPending</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Discard unconsumed physics after an authoritative position change without reusing its frame identity.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputFrame()" class="member-name-link">inputFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputTick()" class="member-name-link">inputTick</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/PlayerPosture.html" title="class in net.raphimc.viabedrock.api.model">PlayerPosture</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#posture()" class="member-name-link">posture</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -127,12 +146,18 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#record(net.raphimc.viabedrock.api.model.PlayerPrediction)" class="member-name-link">record</a><wbr>(<a href="../../api/model/PlayerPrediction.html" title="class in net.raphimc.viabedrock.api.model">PlayerPrediction</a>&nbsp;prediction)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/SneakingInputState.html" title="class in net.raphimc.viabedrock.api.model">SneakingInputState</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sneakingInput()" class="member-name-link">sneakingInput</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/PlayerPrediction.html" title="class in net.raphimc.viabedrock.api.model">PlayerPrediction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#take(net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">take</a><wbr>(<a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remember(long,net.raphimc.viabedrock.api.model.PlayerPrediction)" class="member-name-link">remember</a><wbr>(long&nbsp;inputTick,
+ <a href="../../api/model/PlayerPrediction.html" title="class in net.raphimc.viabedrock.api.model">PlayerPrediction</a>&nbsp;prediction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Record an emitted input tick and invalidate its clock binding when no matching frame exists.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/SneakingInputState.html" title="class in net.raphimc.viabedrock.api.model">SneakingInputState</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sneakingInput()" class="member-name-link">sneakingInput</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/PlayerPrediction.html" title="class in net.raphimc.viabedrock.api.model">PlayerPrediction</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#take(net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">take</a><wbr>(<a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -186,10 +211,53 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="discardPending()">
+<h3>discardPending</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">discardPending</span>()</div>
+<div class="block">Discard unconsumed physics after an authoritative position change without reusing its frame identity.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="take(net.raphimc.viabedrock.protocol.model.Position3f)">
 <h3>take</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/PlayerPrediction.html" title="class in net.raphimc.viabedrock.api.model">PlayerPrediction</a></span>&nbsp;<span class="element-name">take</span><wbr><span class="parameters">(<a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="remember(long,net.raphimc.viabedrock.api.model.PlayerPrediction)">
+<h3>remember</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">remember</span><wbr><span class="parameters">(long&nbsp;inputTick,
+ <a href="../../api/model/PlayerPrediction.html" title="class in net.raphimc.viabedrock.api.model">PlayerPrediction</a>&nbsp;prediction)</span></div>
+<div class="block">Record an emitted input tick and invalidate its clock binding when no matching frame exists.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="inputTick()">
+<h3>inputTick</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">inputTick</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="inputFrame()">
+<h3>inputFrame</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">inputFrame</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="clientFrame(long)">
+<h3>clientFrame</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">clientFrame</span><wbr><span class="parameters">(long&nbsp;inputTick)</span></div>
 </div>
 </section>
 </li>

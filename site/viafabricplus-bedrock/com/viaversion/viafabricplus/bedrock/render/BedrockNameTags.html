@@ -58,7 +58,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#foregroundColor(boolean,boolean,net.minecraft.client.gui.Font.DisplayMode,int)" tabindex="0">foregroundColor(boolean, boolean, Font.DisplayMode, int)</a></li>
-<li><a href="#layout(net.minecraft.network.chat.Component,int,int)" tabindex="0">layout(Component, int, int)</a></li>
+<li><a href="#pixelScale(float)" tabindex="0">pixelScale(float)</a></li>
+<li><a href="#centerX(float)" tabindex="0">centerX(float)</a></li>
+<li><a href="#rowLift(int)" tabindex="0">rowLift(int)</a></li>
+<li><a href="#layout(net.minecraft.network.chat.Component,int)" tabindex="0">layout(Component, int)</a></li>
 </ol>
 </li>
 </ol>
@@ -107,17 +110,25 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#foregroundColor(boolean,boolean,net.minecraft.client.gui.Font.DisplayMode,int)" class="member-name-link">foregroundColor</a><wbr>(boolean&nbsp;nativeContext,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#centerX(float)" class="member-name-link">centerX</a><wbr>(float&nbsp;javaCenter)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#foregroundColor(boolean,boolean,net.minecraft.client.gui.Font.DisplayMode,int)" class="member-name-link">foregroundColor</a><wbr>(boolean&nbsp;nativeContext,
  boolean&nbsp;seeThrough,
  net.minecraft.client.gui.Font.DisplayMode&nbsp;mode,
  int&nbsp;color)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockNameTags.Line.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Line</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#layout(net.minecraft.network.chat.Component,int,int)" class="member-name-link">layout</a><wbr>(net.minecraft.network.chat.Component&nbsp;name,
- int&nbsp;lineHeight,
- int&nbsp;baseline)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockNameTags.Line.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Line</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#layout(net.minecraft.network.chat.Component,int)" class="member-name-link">layout</a><wbr>(net.minecraft.network.chat.Component&nbsp;name,
+ int&nbsp;baseline)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#pixelScale(float)" class="member-name-link">pixelScale</a><wbr>(float&nbsp;recordScale)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rowLift(int)" class="member-name-link">rowLift</a><wbr>(int&nbsp;rows)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -147,11 +158,34 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="layout(net.minecraft.network.chat.Component,int,int)">
+<section class="detail" id="pixelScale(float)">
+<h3>pixelScale</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">pixelScale</span><wbr><span class="parameters">(float&nbsp;recordScale)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="centerX(float)">
+<h3>centerX</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">centerX</span><wbr><span class="parameters">(float&nbsp;javaCenter)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="rowLift(int)">
+<h3>rowLift</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">rowLift</span><wbr><span class="parameters">(int&nbsp;rows)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="layout(net.minecraft.network.chat.Component,int)">
 <h3>layout</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockNameTags.Line.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Line</a>&gt;</span>&nbsp;<span class="element-name">layout</span><wbr><span class="parameters">(net.minecraft.network.chat.Component&nbsp;name,
- int&nbsp;lineHeight,
  int&nbsp;baseline)</span></div>
 </div>
 </section>

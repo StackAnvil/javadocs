@@ -86,6 +86,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#openPlayerInventoryTemporarily()" tabindex="0">openPlayerInventoryTemporarily()</a></li>
 <li><a href="#keepPlayerInventoryOpen()" tabindex="0">keepPlayerInventoryOpen()</a></li>
 <li><a href="#handleInventoryOpen(net.raphimc.viabedrock.api.model.container.Container)" tabindex="0">handleInventoryOpen(Container)</a></li>
+<li><a href="#queueBundleSelection(net.raphimc.viabedrock.api.model.container.Container,short,int)" tabindex="0">queueBundleSelection(Container, short, int)</a></li>
 <li><a href="#queueContainerClose(net.raphimc.viabedrock.api.model.container.InputContainer)" tabindex="0">queueContainerClose(InputContainer)</a></li>
 <li><a href="#queueMerchantResult(net.raphimc.viabedrock.api.model.container.entity.MerchantContainer,int,int)" tabindex="0">queueMerchantResult(MerchantContainer, int, int)</a></li>
 <li><a href="#queueButtonClick(net.raphimc.viabedrock.api.model.container.Container,int)" tabindex="0">queueButtonClick(Container, int)</a></li>
@@ -232,44 +233,49 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#openPlayerInventoryTemporarily()" class="member-name-link">openPlayerInventoryTemporarily</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueButtonClick(net.raphimc.viabedrock.api.model.container.Container,int)" class="member-name-link">queueButtonClick</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
- int&nbsp;button)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueBundleSelection(net.raphimc.viabedrock.api.model.container.Container,short,int)" class="member-name-link">queueBundleSelection</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;screen,
+ short&nbsp;slot,
+ int&nbsp;selectedItem)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueClick(net.raphimc.viabedrock.api.model.container.Container,int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">queueClick</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueButtonClick(net.raphimc.viabedrock.api.model.container.Container,int)" class="member-name-link">queueButtonClick</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+ int&nbsp;button)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueClick(net.raphimc.viabedrock.api.model.container.Container,int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">queueClick</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
  int&nbsp;revision,
  short&nbsp;slot,
  byte&nbsp;button,
  <a href="../data/enums/java/generated/ContainerInput.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">ContainerInput</a>&nbsp;action)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueContainerClose(net.raphimc.viabedrock.api.model.container.InputContainer)" class="member-name-link">queueContainerClose</a><wbr>(<a href="../../api/model/container/InputContainer.html" title="class in net.raphimc.viabedrock.api.model.container">InputContainer</a>&nbsp;container)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueCreativeSlot(net.raphimc.viabedrock.api.model.container.player.InventoryContainer,int,com.viaversion.viaversion.api.minecraft.item.Item)" class="member-name-link">queueCreativeSlot</a><wbr>(<a href="../../api/model/container/player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
- int&nbsp;javaSlot,
- com.viaversion.viaversion.api.minecraft.item.Item&nbsp;item)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueContainerClose(net.raphimc.viabedrock.api.model.container.InputContainer)" class="member-name-link">queueContainerClose</a><wbr>(<a href="../../api/model/container/InputContainer.html" title="class in net.raphimc.viabedrock.api.model.container">InputContainer</a>&nbsp;container)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueInventoryOpenClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">queueInventoryOpenClick</a><wbr>(int&nbsp;revision,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueCreativeSlot(net.raphimc.viabedrock.api.model.container.player.InventoryContainer,int,com.viaversion.viaversion.api.minecraft.item.Item)" class="member-name-link">queueCreativeSlot</a><wbr>(<a href="../../api/model/container/player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
+ int&nbsp;javaSlot,
+ com.viaversion.viaversion.api.minecraft.item.Item&nbsp;item)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueInventoryOpenClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">queueInventoryOpenClick</a><wbr>(int&nbsp;revision,
  short&nbsp;slot,
  byte&nbsp;button,
  <a href="../data/enums/java/generated/ContainerInput.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">ContainerInput</a>&nbsp;action)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueMerchantResult(net.raphimc.viabedrock.api.model.container.entity.MerchantContainer,int,int)" class="member-name-link">queueMerchantResult</a><wbr>(<a href="../../api/model/container/entity/MerchantContainer.html" title="class in net.raphimc.viabedrock.api.model.container.entity">MerchantContainer</a>&nbsp;container,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queueMerchantResult(net.raphimc.viabedrock.api.model.container.entity.MerchantContainer,int,int)" class="member-name-link">queueMerchantResult</a><wbr>(<a href="../../api/model/container/entity/MerchantContainer.html" title="class in net.raphimc.viabedrock.api.model.container.entity">MerchantContainer</a>&nbsp;container,
  int&nbsp;networkId,
  int&nbsp;revision)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeRequest(int)" class="member-name-link">removeRequest</a><wbr>(int&nbsp;requestId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPredictingClick(boolean)" class="member-name-link">setPredictingClick</a><wbr>(boolean&nbsp;predictingClick)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeRequest(int)" class="member-name-link">removeRequest</a><wbr>(int&nbsp;requestId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPredictingClick(boolean)" class="member-name-link">setPredictingClick</a><wbr>(boolean&nbsp;predictingClick)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -500,6 +506,16 @@ loadScripts(document, 'script');</script>
 <h3>handleInventoryOpen</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">handleInventoryOpen</span><wbr><span class="parameters">(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="queueBundleSelection(net.raphimc.viabedrock.api.model.container.Container,short,int)">
+<h3>queueBundleSelection</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">queueBundleSelection</span><wbr><span class="parameters">(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;screen,
+ short&nbsp;slot,
+ int&nbsp;selectedItem)</span></div>
 </div>
 </section>
 </li>

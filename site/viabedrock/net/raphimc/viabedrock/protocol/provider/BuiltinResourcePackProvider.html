@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">BuiltinResourcePackProvider</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements com.viaversion.viaversion.api.platform.providers.Provider</span></div>
-<div class="block">Supplies licensed native images missing from the bundled metadata packs.</div>
+<div class="block">Supplies licensed native images and actor resources missing from the bundled metadata packs.</div>
 </div>
 </section>
 <section class="summary">
@@ -160,8 +160,8 @@ implements com.viaversion.viaversion.api.platform.providers.Provider</span></div
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</span>
                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
 <div class="block">Called on the resource pack executor, where acquisition may block.
-Return image-only packs (plus manifests) in bottom-to-top order, or an empty list.
-The packs supply lower-priority images and is never advertised to the server.</div>
+Return image and actor resource packs (plus manifests) in bottom-to-top order, or an empty list.
+The packs supply lower-priority resources and are never advertised to the server.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code></dd>

@@ -173,6 +173,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Versioned presentation state.</div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CollisionContact.html" title="class in net.raphimc.viabedrock.api.model">CollisionContact</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Native 1.26.51 separated-axis contact clipping.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="CollisionContact.Box.html" title="class in net.raphimc.viabedrock.api.model">CollisionContact.Box</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CustomBlockCulling.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockCulling</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Native culling rules and face slices, independent of collision, Java carriers and connection route.</div>
@@ -187,6 +193,26 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab4"><a href="CustomBlockCulling.Rule.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockCulling.Rule</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CustomBlockFaceLighting.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Native terrain neighborhood selection, independent of the client renderer and world storage.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="CustomBlockFaceLighting.Corner.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Corner</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="CustomBlockFaceLighting.Face.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Face</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">Inner axis is X for horizontal/North/South faces and Z for West/East faces.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="CustomBlockFaceLighting.Neighborhood.html" title="interface in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Neighborhood</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="CustomBlockFaceLighting.Sample.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Sample</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">Opacity controls the diagonal fallback; ambient brightness is a separate native property.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="CustomBlockLighting.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockLighting</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="block">Material lighting retained on each authored face, independently of texture and culling identity.</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab4"><a href="CustomBlockOffset.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockOffset</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Native position-seeded block offsets.</div>
@@ -207,88 +233,167 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Block-local bounds in Java block units, after the Bedrock component transformation.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="HudVisibilityState.html" title="class in net.raphimc.viabedrock.api.model">HudVisibilityState</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="FlightMovement.html" title="class in net.raphimc.viabedrock.api.model">FlightMovement</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Native player flight input and drag, with separate float operations.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="FlightMovementContext.html" title="class in net.raphimc.viabedrock.api.model">FlightMovementContext</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="block">Flight values that the standard Java abilities packet cannot represent.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="FluidCurrent.html" title="class in net.raphimc.viabedrock.api.model">FluidCurrent</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Native 1.26.51 accumulation and motion update for observed liquid flows.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="GeyserMovement.html" title="class in net.raphimc.viabedrock.api.model">GeyserMovement</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Native 1.26.51 geyser movement using the player's current block column.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="GeyserMovement.BlockAccess.html" title="interface in net.raphimc.viabedrock.api.model">GeyserMovement.BlockAccess</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="GeyserMovement.Cell.html" title="class in net.raphimc.viabedrock.api.model">GeyserMovement.Cell</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="GlideMovement.html" title="class in net.raphimc.viabedrock.api.model">GlideMovement</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Native glide travel before collision resolution, with confirmed rocket boosts.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="HudVisibilityState.html" title="class in net.raphimc.viabedrock.api.model">HudVisibilityState</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Server restrictions supplement the player's HUD settings.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MolangVariables.html" title="class in net.raphimc.viabedrock.api.model">MolangVariables</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MolangVariables.html" title="class in net.raphimc.viabedrock.api.model">MolangVariables</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Typed packet variables retain native names, member order and float conversions.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MolangVariables.Member.html" title="class in net.raphimc.viabedrock.api.model">MolangVariables.Member</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MolangVariables.Members.html" title="class in net.raphimc.viabedrock.api.model">MolangVariables.Members</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MolangVariables.Member.html" title="class in net.raphimc.viabedrock.api.model">MolangVariables.Member</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MolangVariables.Scalar.html" title="class in net.raphimc.viabedrock.api.model">MolangVariables.Scalar</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MolangVariables.Members.html" title="class in net.raphimc.viabedrock.api.model">MolangVariables.Members</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MolangVariables.Value.html" title="interface in net.raphimc.viabedrock.api.model">MolangVariables.Value</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="NativeActorMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MolangVariables.Scalar.html" title="class in net.raphimc.viabedrock.api.model">MolangVariables.Scalar</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MolangVariables.Value.html" title="interface in net.raphimc.viabedrock.api.model">MolangVariables.Value</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MovementEffect.html" title="class in net.raphimc.viabedrock.api.model">MovementEffect</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="block">Confirmed effect, exact history binding and the latest paired input clock.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="MovementEffectTimeline.html" title="class in net.raphimc.viabedrock.api.model">MovementEffectTimeline</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Client frame clock, local effect prediction and server confirmations.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="NativeActorHitboxes.html" title="class in net.raphimc.viabedrock.api.model">NativeActorHitboxes</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Native picking boxes, independent of the actor's physical collision dimensions.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeActorHitboxes.Box.html" title="class in net.raphimc.viabedrock.api.model">NativeActorHitboxes.Box</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="NativeActorMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Immutable native inputs, independent of frontend translation objects.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeActorMessage.Remove.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Remove</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeActorMessage.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Snapshot</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeActorMessage.Remove.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Remove</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="NativeActorStates.html" title="class in net.raphimc.viabedrock.api.model">NativeActorStates</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeActorMessage.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Snapshot</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="NativeActorPickingMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeActorPickingMessage</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Separate picking geometry; physical actor dimensions are not changed.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeActorPickingMessage.Part.html" title="class in net.raphimc.viabedrock.api.model">NativeActorPickingMessage.Part</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeActorPickingMessage.Remove.html" title="class in net.raphimc.viabedrock.api.model">NativeActorPickingMessage.Remove</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeActorPickingMessage.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeActorPickingMessage.Snapshot</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="NativeActorStates.html" title="class in net.raphimc.viabedrock.api.model">NativeActorStates</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Client-thread registry with native lifetime checks and local Java identity resolution.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="NativeAnimationControllers.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationControllers</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="NativeAnimationControllers.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationControllers</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Retained command definitions; each rendering context resolves its own animation resources.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeAnimationControllers.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationControllers.Snapshot</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeAnimationControllers.State.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationControllers.State</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeAnimationControllers.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationControllers.Snapshot</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeAnimationControllers.Transition.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationControllers.Transition</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeAnimationControllers.State.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationControllers.State</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeAnimationMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationMessage</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeAnimationControllers.Transition.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationControllers.Transition</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeAnimationMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationMessage</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Animation commands bind to the actor lifetime that received the server packet.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeAnimationMessage.Target.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationMessage.Target</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="NativeBlockIdentifiers.html" title="interface in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeAnimationMessage.Target.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationMessage.Target</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="NativeBlockIdentifiers.html" title="interface in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Ordered authoritative block identity snapshots and changes for native client effects.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Dictionary.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Dictionary</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Forget.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Forget</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Dictionary.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Dictionary</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Name.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Name</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Forget.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Forget</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Reset.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Reset</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Name.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Name</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Section.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Section</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Reset.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Reset</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Update.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Update</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Section.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Section</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="NativeBlockSection.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockSection</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeBlockIdentifiers.Update.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Update</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="NativeBlockSection.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockSection</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Primary-layer identities retain distinctions lost by the Java block mapping.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="NativeBlockView.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockView</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="NativeBlockView.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockView</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">A client mirror of primary block identities, with no reverse Java mapping.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="NativeCustomEntityMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeCustomEntityMessage</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeContainerAction.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">Only a clicked source ordinal is client supplied.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab3"><a href="NativeContainerAction.Mode.html" title="enum class in net.raphimc.viabedrock.api.model">NativeContainerAction.Mode</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab3">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">Presentation for an existing Java menu; ordinary inventory packets retain item authority.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeContainerStatus.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerStatus</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="block">Server acknowledgment of the exact live presentation's action backend and current scoped
+controls.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="NativeCustomEntityMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeCustomEntityMessage</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Core-evaluated render controllers for the actual Java actor identity.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeCustomEntityMessage.Remove.html" title="class in net.raphimc.viabedrock.api.model">NativeCustomEntityMessage.Remove</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeCustomEntityMessage.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeCustomEntityMessage.Snapshot</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeCustomEntityMessage.Remove.html" title="class in net.raphimc.viabedrock.api.model">NativeCustomEntityMessage.Remove</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeHandItemState.html" title="class in net.raphimc.viabedrock.api.model">NativeHandItemState</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeCustomEntityMessage.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeCustomEntityMessage.Snapshot</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeFishingEvent.html" title="class in net.raphimc.viabedrock.api.model">NativeFishingEvent</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="block">Fishing feedback retains the authoritative fish metadata and samples the current client hook.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeFishingEvent.Emission.html" title="class in net.raphimc.viabedrock.api.model">NativeFishingEvent.Emission</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab3"><a href="NativeFishingEvent.Kind.html" title="enum class in net.raphimc.viabedrock.api.model">NativeFishingEvent.Kind</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab3">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeFormMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeFormMessage</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">A resolved resource-pack form uses the ordinary form response identifier and original indices.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeHandItemState.html" title="class in net.raphimc.viabedrock.api.model">NativeHandItemState</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Native equip height and retained-item update for one simulation tick.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab3"><a href="NativeHandItemState.Replacement.html" title="enum class in net.raphimc.viabedrock.api.model">NativeHandItemState.Replacement</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab3">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="NativeHandItemState.Replacement.html" title="enum class in net.raphimc.viabedrock.api.model">NativeHandItemState.Replacement</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab3">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="NativeItemHoverText.html" title="class in net.raphimc.viabedrock.api.model">NativeItemHoverText</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">The executed native custom-name/lore branch, without guessed default item localization.</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeItemStackData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStackData</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Immutable decoded Bedrock stack data before Java conversion.</div>
@@ -299,6 +404,24 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeParticlePlaybackMessage.Actor.html" title="class in net.raphimc.viabedrock.api.model">NativeParticlePlaybackMessage.Actor</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="NativeParticleRange.html" title="class in net.raphimc.viabedrock.api.model">NativeParticleRange</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">The native legacy particle path uses the rendered camera and two independent distance settings.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="NativeProjectileOwnerMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeProjectileOwnerMessage</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Projectile Java UUIDs identify individual spawn lifetimes, including reused native actor IDs.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeProjectileOwnerMessage.Remove.html" title="class in net.raphimc.viabedrock.api.model">NativeProjectileOwnerMessage.Remove</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="NativeProjectileOwnerMessage.SetOwner.html" title="class in net.raphimc.viabedrock.api.model">NativeProjectileOwnerMessage.SetOwner</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeProjectileOwnerMessage.Target.html" title="class in net.raphimc.viabedrock.api.model">NativeProjectileOwnerMessage.Target</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="NativeProjectileOwners.html" title="class in net.raphimc.viabedrock.api.model">NativeProjectileOwners</a>&lt;E&gt;</div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Applies authoritative owners when the source and target exist in the frontend's entity set.</div>
+</div>
 <div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeShieldBlockingState.html" title="class in net.raphimc.viabedrock.api.model">NativeShieldBlockingState</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Player blocking timestamps sampled once per simulation tick.</div>
@@ -310,6 +433,14 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color class-summary class-summary-tab4"><a href="NativeSkinFragment.html" title="class in net.raphimc.viabedrock.api.model">NativeSkinFragment</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">A versioned fragment of the target protocol's complete SkinData, including persona and animation fields.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">Authoritative state absent from Java's player-position packet, paired with that packet's teleport ID.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="PlayerCorrectionTracker.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrectionTracker</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Connection-scoped pairing for a correction payload followed by its standard Java position packet.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab4"><a href="PlayerInput.html" title="class in net.raphimc.viabedrock.api.model">PlayerInput</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">
@@ -331,7 +462,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab4"><a href="PlayerPrediction.html" title="class in net.raphimc.viabedrock.api.model">PlayerPrediction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">
-<div class="block">Completed local physics for one Java movement frame, never an authoritative position update.</div>
+<div class="block">Completed local physics for one Java movement frame, admitted through the Java movement gates.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="SneakingInputState.html" title="class in net.raphimc.viabedrock.api.model">SneakingInputState</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -362,6 +493,24 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="SwiftSneakState.html" title="class in net.raphimc.viabedrock.api.model">SwiftSneakState</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Native SwiftSneakEnchantComponent retains its initial level until unequipped or replaced by an unenchanted item.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="UnderwaterMovementAttribute.html" title="class in net.raphimc.viabedrock.api.model">UnderwaterMovementAttribute</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="block">The authoritative underwater attribute, which has no equivalent Java attribute.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="VehiclePrediction.html" title="class in net.raphimc.viabedrock.api.model">VehiclePrediction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">Completed motion of the controlling local vehicle, paired with a player frame.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="VehiclePredictionContext.html" title="class in net.raphimc.viabedrock.api.model">VehiclePredictionContext</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="block">Connection-owned mount identity for optional completed vehicle physics.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="VehiclePredictionContext.Identity.html" title="class in net.raphimc.viabedrock.api.model">VehiclePredictionContext.Identity</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="WaterMovement.html" title="class in net.raphimc.viabedrock.api.model">WaterMovement</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Native 1.26.51 water acceleration and damping, including confirmed dolphin boosts.</div>
 </div>
 </div>
 </div>

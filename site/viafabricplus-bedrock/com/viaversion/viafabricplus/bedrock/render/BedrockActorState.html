@@ -60,6 +60,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeAnimationMessage)" tabindex="0">accept(Connection, NativeAnimationMessage)</a></li>
 <li><a href="#state(java.util.UUID)" tabindex="0">state(UUID)</a></li>
 <li><a href="#stateByRuntimeId(long)" tabindex="0">stateByRuntimeId(long)</a></li>
+<li><a href="#supportsUniqueIds()" tabindex="0">supportsUniqueIds()</a></li>
+<li><a href="#uuidByUniqueId(long)" tabindex="0">uuidByUniqueId(long)</a></li>
 <li><a href="#lifetime(java.util.UUID)" tabindex="0">lifetime(UUID)</a></li>
 <li><a href="#animations(java.util.UUID)" tabindex="0">animations(UUID)</a></li>
 <li><a href="#isCharging(java.util.UUID)" tabindex="0">isCharging(UUID)</a></li>
@@ -139,8 +141,14 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#stateByRuntimeId(long)" class="member-name-link">stateByRuntimeId</a><wbr>(long&nbsp;runtimeId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#supportsUniqueIds()" class="member-name-link">supportsUniqueIds</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#uuidByUniqueId(long)" class="member-name-link">uuidByUniqueId</a><wbr>(long&nbsp;uniqueId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -190,6 +198,22 @@ loadScripts(document, 'script');</script>
 <h3>stateByRuntimeId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot</span>&nbsp;<span class="element-name">stateByRuntimeId</span><wbr><span class="parameters">(long&nbsp;runtimeId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="supportsUniqueIds()">
+<h3>supportsUniqueIds</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">supportsUniqueIds</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="uuidByUniqueId(long)">
+<h3>uuidByUniqueId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></span>&nbsp;<span class="element-name">uuidByUniqueId</span><wbr><span class="parameters">(long&nbsp;uniqueId)</span></div>
 </div>
 </section>
 </li>

@@ -77,13 +77,22 @@ loadScripts(document, 'script');</script>
 <li><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.ChunkPosition)" tabindex="0">removeItemFrame(ChunkPosition)</a></li>
 <li><a href="#nativeActorsJoined()" tabindex="0">nativeActorsJoined()</a></li>
 <li><a href="#markNativeActorsJoined()" tabindex="0">markNativeActorsJoined()</a></li>
+<li><a href="#sendFlightMovementSnapshot()" tabindex="0">sendFlightMovementSnapshot()</a></li>
 <li><a href="#sendNativeActorSnapshots()" tabindex="0">sendNativeActorSnapshots()</a></li>
+<li><a href="#sendNativePickingSnapshots()" tabindex="0">sendNativePickingSnapshots()</a></li>
+<li><a href="#sendMovementEffectSnapshots()" tabindex="0">sendMovementEffectSnapshots()</a></li>
+<li><a href="#sendUnderwaterMovementSnapshots()" tabindex="0">sendUnderwaterMovementSnapshots()</a></li>
 <li><a href="#sendNativeCustomEntitySnapshot()" tabindex="0">sendNativeCustomEntitySnapshot()</a></li>
 <li><a href="#tick()" tabindex="0">tick()</a></li>
 <li><a href="#prepareForRespawn()" tabindex="0">prepareForRespawn()</a></li>
 <li><a href="#getEntityByRid(long)" tabindex="0">getEntityByRid(long)</a></li>
+<li><a href="#references()" tabindex="0">references()</a></li>
+<li><a href="#entitySpawned(net.raphimc.viabedrock.api.model.entity.Entity)" tabindex="0">entitySpawned(Entity)</a></li>
+<li><a href="#refreshPickingHitboxes(net.raphimc.viabedrock.api.model.entity.Entity)" tabindex="0">refreshPickingHitboxes(Entity)</a></li>
+<li><a href="#removeEntityReferences(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)" tabindex="0">removeEntityReferences(UserConnection, Entity)</a></li>
 <li><a href="#getEntityByUid(long)" tabindex="0">getEntityByUid(long)</a></li>
 <li><a href="#getEntityByJid(int)" tabindex="0">getEntityByJid(int)</a></li>
+<li><a href="#interactionClickPosition(int,com.viaversion.viaversion.api.minecraft.Vector3d)" tabindex="0">interactionClickPosition(int, Vector3d)</a></li>
 <li><a href="#getItemFrameByJid(int)" tabindex="0">getItemFrameByJid(int)</a></li>
 <li><a href="#getClientPlayer()" tabindex="0">getClientPlayer()</a></li>
 <li><a href="#isEmpty()" tabindex="0">isEmpty()</a></li>
@@ -148,7 +157,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -173,27 +182,36 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drainPassengerUpdates()" class="member-name-link">drainPassengerUpdates</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/entity/ClientPlayerEntity.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClientPlayer()" class="member-name-link">getClientPlayer</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#entitySpawned(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">entitySpawned</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntityByJid(int)" class="member-name-link">getEntityByJid</a><wbr>(int&nbsp;javaId)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/entity/ClientPlayerEntity.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClientPlayer()" class="member-name-link">getClientPlayer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntityByRid(long)" class="member-name-link">getEntityByRid</a><wbr>(long&nbsp;runtimeId)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntityByJid(int)" class="member-name-link">getEntityByJid</a><wbr>(int&nbsp;javaId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntityByUid(long)" class="member-name-link">getEntityByUid</a><wbr>(long&nbsp;uniqueId)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntityByRid(long)" class="member-name-link">getEntityByRid</a><wbr>(long&nbsp;runtimeId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EntityTracker.ItemFrame.html" title="class in net.raphimc.viabedrock.protocol.storage">EntityTracker.ItemFrame</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItemFrameByJid(int)" class="member-name-link">getItemFrameByJid</a><wbr>(int&nbsp;javaId)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntityByUid(long)" class="member-name-link">getEntityByUid</a><wbr>(long&nbsp;uniqueId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextJavaEntityId()" class="member-name-link">getNextJavaEntityId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EntityTracker.ItemFrame.html" title="class in net.raphimc.viabedrock.protocol.storage">EntityTracker.ItemFrame</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItemFrameByJid(int)" class="member-name-link">getItemFrameByJid</a><wbr>(int&nbsp;javaId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTrackedPassengers(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">getTrackedPassengers</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;vehicle)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextJavaEntityId()" class="member-name-link">getNextJavaEntityId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTrackedPassengers(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">getTrackedPassengers</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;vehicle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#interactionClickPosition(int,com.viaversion.viaversion.api.minecraft.Vector3d)" class="member-name-link">interactionClickPosition</a><wbr>(int&nbsp;javaId,
+ com.viaversion.viaversion.api.minecraft.Vector3d&nbsp;relative)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Java interaction coordinates are relative to the clicked frontend target.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEmpty()" class="member-name-link">isEmpty</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -206,32 +224,54 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareForRespawn()" class="member-name-link">prepareForRespawn</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EntityReferenceTracker.html" title="class in net.raphimc.viabedrock.protocol.storage">EntityReferenceTracker</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#references()" class="member-name-link">references</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refreshPickingHitboxes(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">refreshPickingHitboxes</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeEntity(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">removeEntity</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">removeItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#removeEntityReferences(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">removeEntityReferences</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.ChunkPosition)" class="member-name-link">removeItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.ChunkPosition&nbsp;chunkPos)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">removeItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeActorSnapshots()" class="member-name-link">sendNativeActorSnapshots</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.ChunkPosition)" class="member-name-link">removeItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.ChunkPosition&nbsp;chunkPos)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeCustomEntitySnapshot()" class="member-name-link">sendNativeCustomEntitySnapshot</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendFlightMovementSnapshot()" class="member-name-link">sendFlightMovementSnapshot</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spawnItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.model.BlockState)" class="member-name-link">spawnItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendMovementEffectSnapshots()" class="member-name-link">sendMovementEffectSnapshots</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeActorSnapshots()" class="member-name-link">sendNativeActorSnapshots</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeCustomEntitySnapshot()" class="member-name-link">sendNativeCustomEntitySnapshot</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativePickingSnapshots()" class="member-name-link">sendNativePickingSnapshots</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendUnderwaterMovementSnapshots()" class="member-name-link">sendUnderwaterMovementSnapshots</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spawnItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.model.BlockState)" class="member-name-link">spawnItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
  <a href="../../api/model/BlockState.html" title="class in net.raphimc.viabedrock.api.model">BlockState</a>&nbsp;blockState)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.chunk.BedrockBlockEntity)" class="member-name-link">updateItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
- <a href="../../api/chunk/BedrockBlockEntity.html" title="class in net.raphimc.viabedrock.api.chunk">BedrockBlockEntity</a>&nbsp;blockEntity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.chunk.BedrockBlockEntity)" class="member-name-link">updateItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
+ <a href="../../api/chunk/BedrockBlockEntity.html" title="class in net.raphimc.viabedrock.api.chunk">BedrockBlockEntity</a>&nbsp;blockEntity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -382,10 +422,42 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="sendFlightMovementSnapshot()">
+<h3>sendFlightMovementSnapshot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendFlightMovementSnapshot</span>()</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="sendNativeActorSnapshots()">
 <h3>sendNativeActorSnapshots</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendNativeActorSnapshots</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendNativePickingSnapshots()">
+<h3>sendNativePickingSnapshots</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendNativePickingSnapshots</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendMovementEffectSnapshots()">
+<h3>sendMovementEffectSnapshots</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendMovementEffectSnapshots</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendUnderwaterMovementSnapshots()">
+<h3>sendUnderwaterMovementSnapshots</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendUnderwaterMovementSnapshots</span>()</div>
 </div>
 </section>
 </li>
@@ -422,6 +494,39 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="references()">
+<h3>references</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EntityReferenceTracker.html" title="class in net.raphimc.viabedrock.protocol.storage">EntityReferenceTracker</a></span>&nbsp;<span class="element-name">references</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="entitySpawned(net.raphimc.viabedrock.api.model.entity.Entity)">
+<h3>entitySpawned</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">entitySpawned</span><wbr><span class="parameters">(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="refreshPickingHitboxes(net.raphimc.viabedrock.api.model.entity.Entity)">
+<h3>refreshPickingHitboxes</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">refreshPickingHitboxes</span><wbr><span class="parameters">(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="removeEntityReferences(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)">
+<h3>removeEntityReferences</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeEntityReferences</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="getEntityByUid(long)">
 <h3>getEntityByUid</h3>
 <div class="horizontal-scroll">
@@ -434,6 +539,16 @@ loadScripts(document, 'script');</script>
 <h3>getEntityByJid</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a></span>&nbsp;<span class="element-name">getEntityByJid</span><wbr><span class="parameters">(int&nbsp;javaId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="interactionClickPosition(int,com.viaversion.viaversion.api.minecraft.Vector3d)">
+<h3>interactionClickPosition</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></span>&nbsp;<span class="element-name">interactionClickPosition</span><wbr><span class="parameters">(int&nbsp;javaId,
+ com.viaversion.viaversion.api.minecraft.Vector3d&nbsp;relative)</span></div>
+<div class="block">Java interaction coordinates are relative to the clicked frontend target.</div>
 </div>
 </section>
 </li>

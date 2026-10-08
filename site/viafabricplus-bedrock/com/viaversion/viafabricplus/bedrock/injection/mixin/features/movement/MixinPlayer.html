@@ -64,6 +64,8 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#viaFabricPlusBedrock$prepareFlightInput(float,float)" tabindex="0">viaFabricPlusBedrock$prepareFlightInput(float, float)</a></li>
+<li><a href="#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)" tabindex="0">viaFabricPlusBedrock$captureFlightMotion(Vec3, float)</a></li>
 <li><a href="#canPlayerFitWithinBlocksAndEntitiesWhen(net.minecraft.world.entity.Pose)" tabindex="0">canPlayerFitWithinBlocksAndEntitiesWhen(Pose)</a></li>
 </ol>
 </li>
@@ -86,12 +88,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>net.fabricmc.fabric.api.event.lifecycle.v1.EntityLoadData, net.minecraft.core.component.DataComponentGetter, net.minecraft.core.TypedInstance&lt;net.minecraft.world.entity.EntityType&lt;?&gt;&gt;, net.minecraft.network.syncher.SyncedDataHolder, net.minecraft.util.debug.DebugValueSource, net.minecraft.world.entity.Attackable, net.minecraft.world.entity.ItemOwner, net.minecraft.world.entity.SlotProvider, net.minecraft.world.level.entity.EntityAccess, net.minecraft.world.level.entity.UniquelyIdentifyable, net.minecraft.world.Nameable, net.minecraft.world.scores.ScoreHolder, net.minecraft.world.waypoints.Waypoint, net.minecraft.world.waypoints.WaypointTransmitter</code></dd>
+<dd><code><a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a>, net.fabricmc.fabric.api.event.lifecycle.v1.EntityLoadData, net.minecraft.core.component.DataComponentGetter, net.minecraft.core.TypedInstance&lt;net.minecraft.world.entity.EntityType&lt;?&gt;&gt;, net.minecraft.network.syncher.SyncedDataHolder, net.minecraft.util.debug.DebugValueSource, net.minecraft.world.entity.Attackable, net.minecraft.world.entity.ItemOwner, net.minecraft.world.entity.SlotProvider, net.minecraft.world.level.entity.EntityAccess, net.minecraft.world.level.entity.UniquelyIdentifyable, net.minecraft.world.Nameable, net.minecraft.world.scores.ScoreHolder, net.minecraft.world.waypoints.Waypoint, net.minecraft.world.waypoints.WaypointTransmitter</code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">MixinPlayer</span>
-<span class="extends-implements">extends net.minecraft.world.entity.Avatar</span></div>
+<span class="extends-implements">extends net.minecraft.world.entity.Avatar
+implements <a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a></span></div>
 </div>
 </section>
 <section class="summary">
@@ -165,7 +168,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -174,6 +177,14 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#canPlayerFitWithinBlocksAndEntitiesWhen(net.minecraft.world.entity.Pose)" class="member-name-link">canPlayerFitWithinBlocksAndEntitiesWhen</a><wbr>(net.minecraft.world.entity.Pose&nbsp;pose)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)" class="member-name-link">viaFabricPlusBedrock$captureFlightMotion</a><wbr>(net.minecraft.world.phys.Vec3&nbsp;motion,
+ float&nbsp;friction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$prepareFlightInput(float,float)" class="member-name-link">viaFabricPlusBedrock$prepareFlightInput</a><wbr>(float&nbsp;inputX,
+ float&nbsp;inputZ)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -235,6 +246,32 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="viaFabricPlusBedrock$prepareFlightInput(float,float)">
+<h3>viaFabricPlusBedrock$prepareFlightInput</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">viaFabricPlusBedrock$prepareFlightInput</span><wbr><span class="parameters">(float&nbsp;inputX,
+ float&nbsp;inputZ)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../access/IBedrockFlightMotion.html#viaFabricPlusBedrock$prepareFlightInput(float,float)">viaFabricPlusBedrock$prepareFlightInput</a></code>&nbsp;in interface&nbsp;<code><a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)">
+<h3>viaFabricPlusBedrock$captureFlightMotion</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">viaFabricPlusBedrock$captureFlightMotion</span><wbr><span class="parameters">(net.minecraft.world.phys.Vec3&nbsp;motion,
+ float&nbsp;friction)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../access/IBedrockFlightMotion.html#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)">viaFabricPlusBedrock$captureFlightMotion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="canPlayerFitWithinBlocksAndEntitiesWhen(net.minecraft.world.entity.Pose)">
 <h3>canPlayerFitWithinBlocksAndEntitiesWhen</h3>

@@ -63,6 +63,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#sendJavaCustomChatCompletions(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.java.generated.CustomChatCompletionsAction,java.lang.String%5B%5D)" tabindex="0">sendJavaCustomChatCompletions(UserConnection, CustomChatCompletionsAction, String[])</a></li>
 <li><a href="#sendJavaContainerProperties(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container,short,short)" tabindex="0">sendJavaContainerProperties(UserConnection, Container, short, short)</a></li>
 <li><a href="#sendJavaContainerSetContent(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)" tabindex="0">sendJavaContainerSetContent(UserConnection, Container)</a></li>
+<li><a href="#sendJavaCursorForHudUpdate(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)" tabindex="0">sendJavaCursorForHudUpdate(UserConnection, Container)</a></li>
 <li><a href="#sendBedrockInventoryRequest(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestInfo%5B%5D)" tabindex="0">sendBedrockInventoryRequest(UserConnection, ItemStackRequestInfo[])</a></li>
 <li><a href="#sendJavaGameEvent(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.java.GameEventType,float)" tabindex="0">sendJavaGameEvent(UserConnection, GameEventType, float)</a></li>
 <li><a href="#sendJavaEntityEvent(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity,net.raphimc.viabedrock.protocol.data.enums.java.EntityEvent)" tabindex="0">sendJavaEntityEvent(UserConnection, Entity, EntityEvent)</a></li>
@@ -163,46 +164,50 @@ loadScripts(document, 'script');</script>
  <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaCustomChatCompletions(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.java.generated.CustomChatCompletionsAction,java.lang.String%5B%5D)" class="member-name-link">sendJavaCustomChatCompletions</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- <a href="../../protocol/data/enums/java/generated/CustomChatCompletionsAction.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">CustomChatCompletionsAction</a>&nbsp;action,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;entries)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaEntityEvent(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity,net.raphimc.viabedrock.protocol.data.enums.java.EntityEvent)" class="member-name-link">sendJavaEntityEvent</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- <a href="../model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity,
- <a href="../../protocol/data/enums/java/EntityEvent.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java">EntityEvent</a>&nbsp;event)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaGameEvent(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.java.GameEventType,float)" class="member-name-link">sendJavaGameEvent</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- <a href="../../protocol/data/enums/java/GameEventType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java">GameEventType</a>&nbsp;event,
- float&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaLevelParticles(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.BedrockMappingData.JavaParticle)" class="member-name-link">sendJavaLevelParticles</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
- <a href="../../protocol/data/BedrockMappingData.JavaParticle.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.JavaParticle</a>&nbsp;particle)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaRotateHead(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">sendJavaRotateHead</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- <a href="../model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaSystemChat(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.nbt.tag.Tag)" class="member-name-link">sendJavaSystemChat</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- com.viaversion.nbt.tag.Tag&nbsp;message)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaContainerSetContent(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">writeJavaContainerSetContent</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaCursorForHudUpdate(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">sendJavaCursorForHudUpdate</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaDisconnect(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.lang.String)" class="member-name-link">writeJavaDisconnect</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reason)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaCustomChatCompletions(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.java.generated.CustomChatCompletionsAction,java.lang.String%5B%5D)" class="member-name-link">sendJavaCustomChatCompletions</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../protocol/data/enums/java/generated/CustomChatCompletionsAction.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">CustomChatCompletionsAction</a>&nbsp;action,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;entries)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaLevelParticles(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.BedrockMappingData.JavaParticle)" class="member-name-link">writeJavaLevelParticles</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaEntityEvent(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity,net.raphimc.viabedrock.protocol.data.enums.java.EntityEvent)" class="member-name-link">sendJavaEntityEvent</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity,
+ <a href="../../protocol/data/enums/java/EntityEvent.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java">EntityEvent</a>&nbsp;event)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaGameEvent(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.java.GameEventType,float)" class="member-name-link">sendJavaGameEvent</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../protocol/data/enums/java/GameEventType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java">GameEventType</a>&nbsp;event,
+ float&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaLevelParticles(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.BedrockMappingData.JavaParticle)" class="member-name-link">sendJavaLevelParticles</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
  <a href="../../protocol/data/BedrockMappingData.JavaParticle.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.JavaParticle</a>&nbsp;particle)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaRotateHead(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">sendJavaRotateHead</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaSystemChat(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.nbt.tag.Tag)" class="member-name-link">sendJavaSystemChat</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ com.viaversion.nbt.tag.Tag&nbsp;message)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaContainerSetContent(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">writeJavaContainerSetContent</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+ <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaDisconnect(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.lang.String)" class="member-name-link">writeJavaDisconnect</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reason)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaLevelParticles(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.BedrockMappingData.JavaParticle)" class="member-name-link">writeJavaLevelParticles</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+ <a href="../../protocol/data/BedrockMappingData.JavaParticle.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.JavaParticle</a>&nbsp;particle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -276,6 +281,15 @@ loadScripts(document, 'script');</script>
 <h3>sendJavaContainerSetContent</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendJavaContainerSetContent</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendJavaCursorForHudUpdate(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)">
+<h3>sendJavaCursorForHudUpdate</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendJavaCursorForHudUpdate</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</span></div>
 </div>
 </section>

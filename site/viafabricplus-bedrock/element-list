@@ -8,11 +8,13 @@ com.viaversion.viafabricplus.bedrock.friends
 com.viaversion.viafabricplus.bedrock.hud
 com.viaversion.viafabricplus.bedrock.injection.access
 com.viaversion.viafabricplus.bedrock.injection.mixin.compat.iris
+com.viaversion.viafabricplus.bedrock.injection.mixin.compat.sodium
 com.viaversion.viafabricplus.bedrock.injection.mixin.core.access
 com.viaversion.viafabricplus.bedrock.injection.mixin.core.connection
 com.viaversion.viafabricplus.bedrock.injection.mixin.core.integration
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.block
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.creative
+com.viaversion.viafabricplus.bedrock.injection.mixin.features.entities
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.input
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.inventory
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.misc
@@ -35,7 +37,10 @@ com.viaversion.viafabricplus.bedrock.render
 com.viaversion.viafabricplus.bedrock.render.hud
 com.viaversion.viafabricplus.bedrock.render.light
 com.viaversion.viafabricplus.bedrock.screen
+com.viaversion.viafabricplus.bedrock.screen.container
+com.viaversion.viafabricplus.bedrock.screen.form
 com.viaversion.viafabricplus.bedrock.screen.settings
+com.viaversion.viafabricplus.bedrock.screen.ui
 com.viaversion.viafabricplus.bedrock.servers
 com.viaversion.viafabricplus.bedrock.settings
 com.viaversion.viafabricplus.bedrock.visual

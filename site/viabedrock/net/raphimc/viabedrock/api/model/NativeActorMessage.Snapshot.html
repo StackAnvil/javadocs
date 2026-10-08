@@ -62,6 +62,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map)" tabindex="0">Snapshot(UUID, UUID, boolean, long, String, String, float, Set, int, int, Integer, Map)</a></li>
+<li><a href="#%3Cinit%3E(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long)" tabindex="0">Snapshot(UUID, UUID, boolean, long, String, String, float, Set, int, int, Integer, Map, Long)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -81,6 +82,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#markVariant()" tabindex="0">markVariant()</a></li>
 <li><a href="#spellColor()" tabindex="0">spellColor()</a></li>
 <li><a href="#properties()" tabindex="0">properties()</a></li>
+<li><a href="#uniqueId()" tabindex="0">uniqueId()</a></li>
 </ol>
 </li>
 </ol>
@@ -106,7 +108,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeActorMessage.Snapshot</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, boolean&nbsp;localPlayer, long&nbsp;runtimeId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, float&nbsp;scale, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;&nbsp;flags, int&nbsp;variant, int&nbsp;markVariant, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeActorMessage.Snapshot</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, boolean&nbsp;localPlayer, long&nbsp;runtimeId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, float&nbsp;scale, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;&nbsp;flags, int&nbsp;variant, int&nbsp;markVariant, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;uniqueId)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="NativeActorMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a></span></div>
 </div>
@@ -128,7 +130,7 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <h2>Field Summary</h2>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.raphimc.viabedrock.api.model.NativeActorMessage">Fields inherited from interface&nbsp;<a href="NativeActorMessage.html#field-summary" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a></h3>
-<code><a href="NativeActorMessage.html#CHANNEL">CHANNEL</a>, <a href="NativeActorMessage.html#MAX_PAYLOAD_BYTES">MAX_PAYLOAD_BYTES</a>, <a href="NativeActorMessage.html#MAX_PROPERTIES">MAX_PROPERTIES</a>, <a href="NativeActorMessage.html#STRING">STRING</a>, <a href="NativeActorMessage.html#TYPE">TYPE</a></code></div>
+<code><a href="NativeActorMessage.html#CHANNEL">CHANNEL</a>, <a href="NativeActorMessage.html#CURRENT_CHANNEL">CURRENT_CHANNEL</a>, <a href="NativeActorMessage.html#CURRENT_TYPE">CURRENT_TYPE</a>, <a href="NativeActorMessage.html#MAX_PAYLOAD_BYTES">MAX_PAYLOAD_BYTES</a>, <a href="NativeActorMessage.html#MAX_PROPERTIES">MAX_PROPERTIES</a>, <a href="NativeActorMessage.html#STRING">STRING</a>, <a href="NativeActorMessage.html#TYPE">TYPE</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -152,6 +154,22 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Legacy snapshots have no native unique ID association.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long)" class="member-name-link">Snapshot</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ boolean&nbsp;localPlayer,
+ long&nbsp;runtimeId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ float&nbsp;scale,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;&nbsp;flags,
+ int&nbsp;variant,
+ int&nbsp;markVariant,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;uniqueId)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Creates an instance of a <code>Snapshot</code> record class.</div>
 </div>
 </div>
@@ -233,14 +251,19 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uuid()" class="member-name-link">uuid</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uniqueId()" class="member-name-link">uniqueId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>uniqueId</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uuid()" class="member-name-link">uuid</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>uuid</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variant()" class="member-name-link">variant</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variant()" class="member-name-link">variant</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>variant</code> record component.</div>
 </div>
 </div>
@@ -276,6 +299,27 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
  int&nbsp;markVariant,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties)</span></div>
+<div class="block">Legacy snapshots have no native unique ID association.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long)">
+<h3>Snapshot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Snapshot</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ boolean&nbsp;localPlayer,
+ long&nbsp;runtimeId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ float&nbsp;scale,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;&nbsp;flags,
+ int&nbsp;variant,
+ int&nbsp;markVariant,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;uniqueId)</span></div>
 <div class="block">Creates an instance of a <code>Snapshot</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -291,6 +335,7 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <dd><code>markVariant</code> - the value for the <code>markVariant</code> record component</dd>
 <dd><code>spellColor</code> - the value for the <code>spellColor</code> record component</dd>
 <dd><code>properties</code> - the value for the <code>properties</code> record component</dd>
+<dd><code>uniqueId</code> - the value for the <code>uniqueId</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -508,6 +553,19 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>properties</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="uniqueId()">
+<h3>uniqueId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">uniqueId</span>()</div>
+<div class="block">Returns the value of the <code>uniqueId</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>uniqueId</code> record component</dd>
 </dl>
 </div>
 </section>

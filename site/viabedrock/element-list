@@ -24,6 +24,7 @@ net.raphimc.viabedrock.api.resourcepack
 net.raphimc.viabedrock.api.resourcepack.content
 net.raphimc.viabedrock.api.resourcepack.definition
 net.raphimc.viabedrock.api.resourcepack.http
+net.raphimc.viabedrock.api.resourcepack.ui
 net.raphimc.viabedrock.api.util
 net.raphimc.viabedrock.netty
 net.raphimc.viabedrock.netty.nethernet

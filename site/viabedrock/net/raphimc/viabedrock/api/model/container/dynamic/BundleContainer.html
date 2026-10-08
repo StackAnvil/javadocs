@@ -68,11 +68,18 @@ loadScripts(document, 'script');</script>
 <li><a href="#getFullContainerName(int)" tabindex="0">getFullContainerName(int)</a></li>
 <li><a href="#getJavaItem(int)" tabindex="0">getJavaItem(int)</a></li>
 <li><a href="#getJavaItems()" tabindex="0">getJavaItems()</a></li>
-<li><a href="#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">setItem(int, BedrockItem)</a></li>
 <li><a href="#setItems(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" tabindex="0">setItems(BedrockItem[])</a></li>
 <li><a href="#javaSlot(int)" tabindex="0">javaSlot(int)</a></li>
 <li><a href="#javaContainerId()" tabindex="0">javaContainerId()</a></li>
+<li><a href="#javaHoldingContainer()" tabindex="0">javaHoldingContainer()</a></li>
 <li><a href="#getJavaBundleItems()" tabindex="0">getJavaBundleItems()</a></li>
+<li><a href="#ownsBedrockSlot(net.raphimc.viabedrock.protocol.model.FullContainerName,int)" tabindex="0">ownsBedrockSlot(FullContainerName, int)</a></li>
+<li><a href="#fromItem(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">fromItem(UserConnection, BedrockItem)</a></li>
+<li><a href="#toggleSelectedItem(int)" tabindex="0">toggleSelectedItem(int)</a></li>
+<li><a href="#selectedItem(boolean)" tabindex="0">selectedItem(boolean)</a></li>
+<li><a href="#insert(net.raphimc.viabedrock.api.model.container.Container,int)" tabindex="0">insert(Container, int)</a></li>
+<li><a href="#extract(net.raphimc.viabedrock.api.model.container.Container,int,boolean)" tabindex="0">extract(Container, int, boolean)</a></li>
+<li><a href="#storageContainerName(net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">storageContainerName(BedrockItem)</a></li>
 </ol>
 </li>
 </ol>
@@ -102,7 +109,7 @@ loadScripts(document, 'script');</script>
 <h2>Nested Class Summary</h2>
 <div class="inherited-list">
 <h3 id="nested-classes-inherited-from-class-net.raphimc.viabedrock.api.model.container.Container">Nested classes/interfaces inherited from class&nbsp;<a href="../Container.html#nested-class-summary" title="class in net.raphimc.viabedrock.api.model.container">Container</a></h3>
-<code><a href="../Container.QuickMoveRange.html" title="class in net.raphimc.viabedrock.api.model.container">Container.QuickMoveRange</a>, <a href="../Container.SlotRef.html" title="class in net.raphimc.viabedrock.api.model.container">Container.SlotRef</a></code></div>
+<code><a href="../Container.BlockBinding.html" title="enum class in net.raphimc.viabedrock.api.model.container">Container.BlockBinding</a>, <a href="../Container.QuickMoveRange.html" title="class in net.raphimc.viabedrock.api.model.container">Container.QuickMoveRange</a>, <a href="../Container.SlotRef.html" title="class in net.raphimc.viabedrock.api.model.container">Container.SlotRef</a></code></div>
 </section>
 </li>
 <!-- =========== FIELD SUMMARY =========== -->
@@ -133,12 +140,21 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../../../protocol/model/inventory/ItemStackRequestAction.html" title="interface in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(net.raphimc.viabedrock.api.model.container.Container,int,boolean)" class="member-name-link">extract</a><wbr>(<a href="../Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;destination,
+ int&nbsp;destinationSlot,
+ boolean&nbsp;useSelection)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BundleContainer.html" title="class in net.raphimc.viabedrock.api.model.container.dynamic">BundleContainer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromItem(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">fromItem</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFullContainerName(int)" class="member-name-link">getFullContainerName</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -151,25 +167,41 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item[]</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItems()" class="member-name-link">getJavaItems</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>byte</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaContainerId()" class="member-name-link">javaContainerId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../../../protocol/model/inventory/ItemStackRequestAction.html" title="interface in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(net.raphimc.viabedrock.api.model.container.Container,int)" class="member-name-link">insert</a><wbr>(<a href="../Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;source,
+ int&nbsp;sourceSlot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>byte</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaContainerId()" class="member-name-link">javaContainerId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaHoldingContainer()" class="member-name-link">javaHoldingContainer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaSlot(int)" class="member-name-link">javaSlot</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">setItem</a><wbr>(int&nbsp;slot,
- <a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ownsBedrockSlot(net.raphimc.viabedrock.protocol.model.FullContainerName,int)" class="member-name-link">ownsBedrockSlot</a><wbr>(<a href="../../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a>&nbsp;name,
+ int&nbsp;slot)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItems(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" class="member-name-link">setItems</a><wbr>(<a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;items)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectedItem(boolean)" class="member-name-link">selectedItem</a><wbr>(boolean&nbsp;useSelection)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItems(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" class="member-name-link">setItems</a><wbr>(<a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;items)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#storageContainerName(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">storageContainerName</a><wbr>(<a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toggleSelectedItem(int)" class="member-name-link">toggleSelectedItem</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.raphimc.viabedrock.api.model.container.Container">Methods inherited from class&nbsp;<a href="../Container.html#method-summary" title="class in net.raphimc.viabedrock.api.model.container">Container</a></h3>
-<code><a href="../Container.html#bedrockSlot(int)" title="bedrockSlot(int)">bedrockSlot</a>, <a href="../Container.html#clearItems()" title="clearItems()">clearItems</a>, <a href="../Container.html#containerId()" title="containerId()">containerId</a>, <a href="../Container.html#copy()" title="copy()">copy</a>, <a href="../Container.html#dropItem(net.raphimc.viabedrock.api.model.container.Container,int,int)" title="dropItem(Container, int, int)">dropItem</a>, <a href="../Container.html#getItem(int)" title="getItem(int)">getItem</a>, <a href="../Container.html#getItems()" title="getItems()">getItems</a>, <a href="../Container.html#handleButtonClick(int)" title="handleButtonClick(int)">handleButtonClick</a>, <a href="../Container.html#handleClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" title="handleClick(int, short, byte, ContainerInput)">handleClick</a>, <a href="../Container.html#isValidBlockTag(java.lang.String)" title="isValidBlockTag(String)">isValidBlockTag</a>, <a href="../Container.html#itemAfterRemovingAmount(net.raphimc.viabedrock.protocol.model.BedrockItem,int)" title="itemAfterRemovingAmount(BedrockItem, int)">itemAfterRemovingAmount</a>, <a href="../Container.html#itemIndex(int)" title="itemIndex(int)">itemIndex</a>, <a href="../Container.html#markServerUpdate()" title="markServerUpdate()">markServerUpdate</a>, <a href="../Container.html#onSlotChanged(int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem)" title="onSlotChanged(int, BedrockItem, BedrockItem)">onSlotChanged</a>, <a href="../Container.html#ownsBedrockSlot(net.raphimc.viabedrock.protocol.model.FullContainerName,int)" title="ownsBedrockSlot(FullContainerName, int)">ownsBedrockSlot</a>, <a href="../Container.html#position()" title="position()">position</a>, <a href="../Container.html#quickMoveRanges(short,net.raphimc.viabedrock.api.model.container.Container.SlotRef)" title="quickMoveRanges(short, Container.SlotRef)">quickMoveRanges</a>, <a href="../Container.html#requestSlot(int)" title="requestSlot(int)">requestSlot</a>, <a href="../Container.html#requestSlotInfo(int,int)" title="requestSlotInfo(int, int)">requestSlotInfo</a>, <a href="../Container.html#serverRevision()" title="serverRevision()">serverRevision</a>, <a href="../Container.html#size()" title="size()">size</a>, <a href="../Container.html#slotFromRequest(int)" title="slotFromRequest(int)">slotFromRequest</a>, <a href="../Container.html#title()" title="title()">title</a>, <a href="../Container.html#translateContainerData(int)" title="translateContainerData(int)">translateContainerData</a>, <a href="../Container.html#type()" title="type()">type</a></code></div>
+<code><a href="../Container.html#bedrockSlot(int)" title="bedrockSlot(int)">bedrockSlot</a>, <a href="../Container.html#blockBinding()" title="blockBinding()">blockBinding</a>, <a href="../Container.html#canPlaceItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" title="canPlaceItem(int, BedrockItem)">canPlaceItem</a>, <a href="../Container.html#clearItems()" title="clearItems()">clearItems</a>, <a href="../Container.html#containerId()" title="containerId()">containerId</a>, <a href="../Container.html#copy()" title="copy()">copy</a>, <a href="../Container.html#dropItem(net.raphimc.viabedrock.api.model.container.Container,int,int)" title="dropItem(Container, int, int)">dropItem</a>, <a href="../Container.html#getItem(int)" title="getItem(int)">getItem</a>, <a href="../Container.html#getItems()" title="getItems()">getItems</a>, <a href="../Container.html#handleButtonClick(int)" title="handleButtonClick(int)">handleButtonClick</a>, <a href="../Container.html#handleClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" title="handleClick(int, short, byte, ContainerInput)">handleClick</a>, <a href="../Container.html#isBlockBound()" title="isBlockBound()">isBlockBound</a>, <a href="../Container.html#isValidBlockTag(java.lang.String)" title="isValidBlockTag(String)">isValidBlockTag</a>, <a href="../Container.html#itemAfterRemovingAmount(net.raphimc.viabedrock.protocol.model.BedrockItem,int)" title="itemAfterRemovingAmount(BedrockItem, int)">itemAfterRemovingAmount</a>, <a href="../Container.html#itemIndex(int)" title="itemIndex(int)">itemIndex</a>, <a href="../Container.html#itemsInJavaOrder(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" title="itemsInJavaOrder(BedrockItem[])">itemsInJavaOrder</a>, <a href="../Container.html#javaSize()" title="javaSize()">javaSize</a>, <a href="../Container.html#markServerUpdate()" title="markServerUpdate()">markServerUpdate</a>, <a href="../Container.html#onSlotChanged(int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem)" title="onSlotChanged(int, BedrockItem, BedrockItem)">onSlotChanged</a>, <a href="../Container.html#position()" title="position()">position</a>, <a href="../Container.html#quickMoveRanges(short,net.raphimc.viabedrock.api.model.container.Container.SlotRef)" title="quickMoveRanges(short, Container.SlotRef)">quickMoveRanges</a>, <a href="../Container.html#requestSlot(int)" title="requestSlot(int)">requestSlot</a>, <a href="../Container.html#requestSlotInfo(int,int)" title="requestSlotInfo(int, int)">requestSlotInfo</a>, <a href="../Container.html#resolveBlockBinding()" title="resolveBlockBinding()">resolveBlockBinding</a>, <a href="../Container.html#selectBundleItem(short,int)" title="selectBundleItem(short, int)">selectBundleItem</a>, <a href="../Container.html#serverRevision()" title="serverRevision()">serverRevision</a>, <a href="../Container.html#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" title="setItem(int, BedrockItem)">setItem</a>, <a href="../Container.html#size()" title="size()">size</a>, <a href="../Container.html#slotFromRequest(int)" title="slotFromRequest(int)">slotFromRequest</a>, <a href="../Container.html#title()" title="title()">title</a>, <a href="../Container.html#translateContainerData(int)" title="translateContainerData(int)">translateContainerData</a>, <a href="../Container.html#type()" title="type()">type</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#method-summary" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -238,19 +270,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)">
-<h3>setItem</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">setItem</span><wbr><span class="parameters">(int&nbsp;slot,
- <a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</span></div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="../Container.html#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)">setItem</a></code>&nbsp;in class&nbsp;<code><a href="../Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a></code></dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
 <section class="detail" id="setItems(net.raphimc.viabedrock.protocol.model.BedrockItem[])">
 <h3>setItems</h3>
 <div class="horizontal-scroll">
@@ -287,10 +306,83 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="javaHoldingContainer()">
+<h3>javaHoldingContainer</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a></span>&nbsp;<span class="element-name">javaHoldingContainer</span>()</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="getJavaBundleItems()">
 <h3>getJavaBundleItems</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.api.minecraft.item.Item[]</span>&nbsp;<span class="element-name">getJavaBundleItems</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ownsBedrockSlot(net.raphimc.viabedrock.protocol.model.FullContainerName,int)">
+<h3>ownsBedrockSlot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">ownsBedrockSlot</span><wbr><span class="parameters">(<a href="../../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a>&nbsp;name,
+ int&nbsp;slot)</span></div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code><a href="../Container.html#ownsBedrockSlot(net.raphimc.viabedrock.protocol.model.FullContainerName,int)">ownsBedrockSlot</a></code>&nbsp;in class&nbsp;<code><a href="../Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="fromItem(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.BedrockItem)">
+<h3>fromItem</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BundleContainer.html" title="class in net.raphimc.viabedrock.api.model.container.dynamic">BundleContainer</a></span>&nbsp;<span class="element-name">fromItem</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="toggleSelectedItem(int)">
+<h3>toggleSelectedItem</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">toggleSelectedItem</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="selectedItem(boolean)">
+<h3>selectedItem</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></span>&nbsp;<span class="element-name">selectedItem</span><wbr><span class="parameters">(boolean&nbsp;useSelection)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="insert(net.raphimc.viabedrock.api.model.container.Container,int)">
+<h3>insert</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../protocol/model/inventory/ItemStackRequestAction.html" title="interface in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction</a>&gt;</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="../Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;source,
+ int&nbsp;sourceSlot)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="extract(net.raphimc.viabedrock.api.model.container.Container,int,boolean)">
+<h3>extract</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../protocol/model/inventory/ItemStackRequestAction.html" title="interface in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction</a>&gt;</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(<a href="../Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;destination,
+ int&nbsp;destinationSlot,
+ boolean&nbsp;useSelection)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="storageContainerName(net.raphimc.viabedrock.protocol.model.BedrockItem)">
+<h3>storageContainerName</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a></span>&nbsp;<span class="element-name">storageContainerName</span><wbr><span class="parameters">(<a href="../../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</span></div>
 </div>
 </section>
 </li>
