@@ -39,6 +39,7 @@ com.viaversion.viafabricplus.bedrock.render.light
 com.viaversion.viafabricplus.bedrock.screen
 com.viaversion.viafabricplus.bedrock.screen.container
 com.viaversion.viafabricplus.bedrock.screen.form
+com.viaversion.viafabricplus.bedrock.screen.npc
 com.viaversion.viafabricplus.bedrock.screen.settings
 com.viaversion.viafabricplus.bedrock.screen.ui
 com.viaversion.viafabricplus.bedrock.servers

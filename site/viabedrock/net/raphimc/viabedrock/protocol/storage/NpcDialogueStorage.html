@@ -65,9 +65,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#open(long,long,java.lang.String,java.lang.String)" tabindex="0">open(long, long, String, String)</a></li>
+<li><a href="#open(long,long,java.lang.String,java.lang.String,boolean)" tabindex="0">open(long, long, String, String, boolean)</a></li>
 <li><a href="#current()" tabindex="0">current()</a></li>
 <li><a href="#close(long)" tabindex="0">close(long)</a></li>
 <li><a href="#respond(java.lang.String,java.lang.Integer)" tabindex="0">respond(String, Integer)</a></li>
+<li><a href="#edit(java.lang.String,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.NpcRequestPacketPayload_RequestType,java.lang.String,int)" tabindex="0">edit(String, NpcRequestPacketPayload_RequestType, String, int)</a></li>
 </ol>
 </li>
 </ol>
@@ -145,11 +147,26 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NpcDialogueStorage.Session.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Session</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#current()" class="member-name-link">current</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NpcDialogueStorage.Session.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Session</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#open(long,long,java.lang.String,java.lang.String)" class="member-name-link">open</a><wbr>(long&nbsp;uniqueId,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NpcDialogueStorage.Request.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Request</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#edit(java.lang.String,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.NpcRequestPacketPayload_RequestType,java.lang.String,int)" class="member-name-link">edit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a>&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;data,
+ int&nbsp;actionIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Editor requests remain bound to the actor and authority established when its screen opened.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NpcDialogueStorage.Session.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Session</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#open(long,long,java.lang.String,java.lang.String)" class="member-name-link">open</a><wbr>(long&nbsp;uniqueId,
  long&nbsp;runtimeId,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;actionJson)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NpcDialogueStorage.Session.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Session</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#open(long,long,java.lang.String,java.lang.String,boolean)" class="member-name-link">open</a><wbr>(long&nbsp;uniqueId,
+ long&nbsp;runtimeId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;actionJson,
+ boolean&nbsp;editor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="NpcDialogueStorage.Request.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Request</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#respond(java.lang.String,java.lang.Integer)" class="member-name-link">respond</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
@@ -203,6 +220,18 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="open(long,long,java.lang.String,java.lang.String,boolean)">
+<h3>open</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NpcDialogueStorage.Session.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Session</a></span>&nbsp;<span class="element-name">open</span><wbr><span class="parameters">(long&nbsp;uniqueId,
+ long&nbsp;runtimeId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;actionJson,
+ boolean&nbsp;editor)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="current()">
 <h3>current</h3>
 <div class="horizontal-scroll">
@@ -224,6 +253,18 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NpcDialogueStorage.Request.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Request</a>&gt;</span>&nbsp;<span class="element-name">respond</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;buttonIndex)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="edit(java.lang.String,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.NpcRequestPacketPayload_RequestType,java.lang.String,int)">
+<h3>edit</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NpcDialogueStorage.Request.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Request</a></span>&nbsp;<span class="element-name">edit</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a>&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;data,
+ int&nbsp;actionIndex)</span></div>
+<div class="block">Editor requests remain bound to the actor and authority established when its screen opened.</div>
 </div>
 </section>
 </li>

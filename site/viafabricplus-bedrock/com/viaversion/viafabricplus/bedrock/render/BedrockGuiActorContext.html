@@ -71,8 +71,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#scoped(java.util.function.Supplier)" tabindex="0">scoped(Supplier)</a></li>
 <li><a href="#camera(float,float)" tabindex="0">camera(float, float)</a></li>
 <li><a href="#extracted(net.minecraft.client.renderer.entity.state.AvatarRenderState)" tabindex="0">extracted(AvatarRenderState)</a></li>
+<li><a href="#extracted(net.minecraft.client.renderer.entity.state.EntityRenderState)" tabindex="0">extracted(EntityRenderState)</a></li>
 <li><a href="#playback(com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Playback)" tabindex="0">playback(BedrockActorAnimation.Playback)</a></li>
-<li><a href="#resource(java.lang.Object,java.util.function.Supplier)" tabindex="0">resource(Object, Supplier)</a></li>
+<li><a href="#resource(java.lang.Object,java.lang.String,java.util.function.Supplier)" tabindex="0">resource(Object, String, Supplier)</a></li>
 <li><a href="#yaw()" tabindex="0">yaw()</a></li>
 <li><a href="#seconds()" tabindex="0">seconds()</a></li>
 <li><a href="#emote()" tabindex="0">emote()</a></li>
@@ -155,50 +156,54 @@ implements <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#extracted(net.minecraft.client.renderer.entity.state.AvatarRenderState)" class="member-name-link">extracted</a><wbr>(net.minecraft.client.renderer.entity.state.AvatarRenderState&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockGuiActorContext.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockGuiActorContext</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frame(net.minecraft.client.renderer.entity.state.EntityRenderState)" class="member-name-link">frame</a><wbr>(net.minecraft.client.renderer.entity.state.EntityRenderState&nbsp;state)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#extracted(net.minecraft.client.renderer.entity.state.EntityRenderState)" class="member-name-link">extracted</a><wbr>(net.minecraft.client.renderer.entity.state.EntityRenderState&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#owns(java.util.UUID,java.util.UUID)" class="member-name-link">owns</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;actor,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockGuiActorContext.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockGuiActorContext</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frame(net.minecraft.client.renderer.entity.state.EntityRenderState)" class="member-name-link">frame</a><wbr>(net.minecraft.client.renderer.entity.state.EntityRenderState&nbsp;state)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#owns(java.util.UUID,java.util.UUID)" class="member-name-link">owns</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;actor,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#particle(com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.ParticleCue)" class="member-name-link">particle</a><wbr>(<a href="../appearance/BedrockActorAnimation.ParticleCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.ParticleCue</a>&nbsp;particle)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../appearance/BedrockActorAnimation.ParticleCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.ParticleCue</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#particles()" class="member-name-link">particles</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../appearance/BedrockActorAnimation.Playback.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Playback</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playback(com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Playback)" class="member-name-link">playback</a><wbr>(<a href="../appearance/BedrockActorAnimation.Playback.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Playback</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requireSupportedEffects()" class="member-name-link">requireSupportedEffects</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#particle(com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.ParticleCue)" class="member-name-link">particle</a><wbr>(<a href="../appearance/BedrockActorAnimation.ParticleCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.ParticleCue</a>&nbsp;particle)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resource(java.lang.Object,java.util.function.Supplier)" class="member-name-link">resource</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;key,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;create)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../appearance/BedrockActorAnimation.ParticleCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.ParticleCue</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#particles()" class="member-name-link">particles</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../appearance/BedrockActorAnimation.Playback.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Playback</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playback(com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Playback)" class="member-name-link">playback</a><wbr>(<a href="../appearance/BedrockActorAnimation.Playback.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Playback</a>&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requireSupportedEffects()" class="member-name-link">requireSupportedEffects</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scoped(java.util.function.Supplier)" class="member-name-link">scoped</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;operation)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resource(java.lang.Object,java.lang.String,java.util.function.Supplier)" class="member-name-link">resource</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;generation,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;create)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#seconds()" class="member-name-link">seconds</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../appearance/BedrockPlayerControllers.Selection.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Selection</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selection()" class="member-name-link">selection</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selection(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Selection)" class="member-name-link">selection</a><wbr>(<a href="../appearance/BedrockPlayerControllers.Selection.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Selection</a>&nbsp;selection)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sound(com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.SoundCue)" class="member-name-link">sound</a><wbr>(<a href="../appearance/BedrockActorAnimation.SoundCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.SoundCue</a>&nbsp;sound)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../appearance/BedrockActorAnimation.SoundCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.SoundCue</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sounds()" class="member-name-link">sounds</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scoped(java.util.function.Supplier)" class="member-name-link">scoped</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;operation)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#yaw()" class="member-name-link">yaw</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#seconds()" class="member-name-link">seconds</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../appearance/BedrockPlayerControllers.Selection.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Selection</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selection()" class="member-name-link">selection</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selection(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Selection)" class="member-name-link">selection</a><wbr>(<a href="../appearance/BedrockPlayerControllers.Selection.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Selection</a>&nbsp;selection)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sound(com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.SoundCue)" class="member-name-link">sound</a><wbr>(<a href="../appearance/BedrockActorAnimation.SoundCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.SoundCue</a>&nbsp;sound)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../appearance/BedrockActorAnimation.SoundCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.SoundCue</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sounds()" class="member-name-link">sounds</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#yaw()" class="member-name-link">yaw</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -314,6 +319,14 @@ implements <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base
 </section>
 </li>
 <li>
+<section class="detail" id="extracted(net.minecraft.client.renderer.entity.state.EntityRenderState)">
+<h3>extracted</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">extracted</span><wbr><span class="parameters">(net.minecraft.client.renderer.entity.state.EntityRenderState&nbsp;state)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="playback(com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Playback)">
 <h3>playback</h3>
 <div class="horizontal-scroll">
@@ -322,10 +335,11 @@ implements <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base
 </section>
 </li>
 <li>
-<section class="detail" id="resource(java.lang.Object,java.util.function.Supplier)">
+<section class="detail" id="resource(java.lang.Object,java.lang.String,java.util.function.Supplier)">
 <h3>resource</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">resource</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;key,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">resource</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;generation,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;create)</span></div>
 </div>
 </section>

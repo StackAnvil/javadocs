@@ -72,7 +72,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#scene()" tabindex="0">scene()</a></li>
 <li><a href="#responseIdentifier()" tabindex="0">responseIdentifier()</a></li>
 <li><a href="#buttons()" tabindex="0">buttons()</a></li>
-<li><a href="#openingCommands()" tabindex="0">openingCommands()</a></li>
+<li><a href="#editor()" tabindex="0">editor()</a></li>
 </ol>
 </li>
 </ol>
@@ -94,7 +94,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NpcDialogueStorage.Session</span>(long&nbsp;uniqueId, long&nbsp;runtimeId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;responseIdentifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NpcDialogueStorage.Button.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Button</a>&gt;&nbsp;buttons, boolean&nbsp;openingCommands)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NpcDialogueStorage.Session</span>(long&nbsp;uniqueId, long&nbsp;runtimeId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;responseIdentifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NpcDialogueStorage.Button.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Button</a>&gt;&nbsp;buttons, boolean&nbsp;editor)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -113,7 +113,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;responseIdentifier,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NpcDialogueStorage.Button.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Button</a>&gt;&nbsp;buttons,
- boolean&nbsp;openingCommands)</code></div>
+ boolean&nbsp;editor)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Session</code> record class.</div>
 </div>
@@ -136,20 +136,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>buttons</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#editor()" class="member-name-link">editor</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>editor</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns a hash code value for this object.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#openingCommands()" class="member-name-link">openingCommands</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>openingCommands</code> record component.</div>
+<div class="block">Returns a hash code value for this object.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#responseIdentifier()" class="member-name-link">responseIdentifier</a>()</code></div>
@@ -202,7 +202,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;responseIdentifier,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NpcDialogueStorage.Button.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Button</a>&gt;&nbsp;buttons,
- boolean&nbsp;openingCommands)</span></div>
+ boolean&nbsp;editor)</span></div>
 <div class="block">Creates an instance of a <code>Session</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -211,7 +211,7 @@ loadScripts(document, 'script');</script>
 <dd><code>scene</code> - the value for the <code>scene</code> record component</dd>
 <dd><code>responseIdentifier</code> - the value for the <code>responseIdentifier</code> record component</dd>
 <dd><code>buttons</code> - the value for the <code>buttons</code> record component</dd>
-<dd><code>openingCommands</code> - the value for the <code>openingCommands</code> record component</dd>
+<dd><code>editor</code> - the value for the <code>editor</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -337,14 +337,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="openingCommands()">
-<h3>openingCommands</h3>
+<section class="detail" id="editor()">
+<h3>editor</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">openingCommands</span>()</div>
-<div class="block">Returns the value of the <code>openingCommands</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">editor</span>()</div>
+<div class="block">Returns the value of the <code>editor</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>openingCommands</code> record component</dd>
+<dd>the value of the <code>editor</code> record component</dd>
 </dl>
 </div>
 </section>

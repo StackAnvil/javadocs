@@ -63,6 +63,10 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#applyLocatorUpdates(net.raphimc.viabedrock.protocol.model.LocatorBarUpdate%5B%5D)" tabindex="0">applyLocatorUpdates(LocatorBarUpdate[])</a></li>
+<li><a href="#snapshot()" tabindex="0">snapshot()</a></li>
+<li><a href="#markJoined()" tabindex="0">markJoined()</a></li>
+<li><a href="#sendSnapshot()" tabindex="0">sendSnapshot()</a></li>
 <li><a href="#update(java.util.UUID,net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">update(UUID, Position3f)</a></li>
 <li><a href="#remove(java.util.UUID)" tabindex="0">remove(UUID)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
@@ -118,10 +122,22 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyLocatorUpdates(net.raphimc.viabedrock.protocol.model.LocatorBarUpdate%5B%5D)" class="member-name-link">applyLocatorUpdates</a><wbr>(<a href="../model/LocatorBarUpdate.html" title="class in net.raphimc.viabedrock.protocol.model">LocatorBarUpdate</a>[]&nbsp;updates)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markJoined()" class="member-name-link">markJoined</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remove(java.util.UUID)" class="member-name-link">remove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendSnapshot()" class="member-name-link">sendSnapshot</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/LocatorBarSnapshot.html" title="class in net.raphimc.viabedrock.api.model">LocatorBarSnapshot</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#snapshot()" class="member-name-link">snapshot</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(java.util.UUID,net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">update</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
@@ -166,6 +182,38 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="applyLocatorUpdates(net.raphimc.viabedrock.protocol.model.LocatorBarUpdate[])">
+<h3>applyLocatorUpdates</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyLocatorUpdates</span><wbr><span class="parameters">(<a href="../model/LocatorBarUpdate.html" title="class in net.raphimc.viabedrock.protocol.model">LocatorBarUpdate</a>[]&nbsp;updates)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="snapshot()">
+<h3>snapshot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/LocatorBarSnapshot.html" title="class in net.raphimc.viabedrock.api.model">LocatorBarSnapshot</a></span>&nbsp;<span class="element-name">snapshot</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="markJoined()">
+<h3>markJoined</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">markJoined</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendSnapshot()">
+<h3>sendSnapshot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendSnapshot</span>()</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="update(java.util.UUID,net.raphimc.viabedrock.protocol.model.Position3f)">
 <h3>update</h3>

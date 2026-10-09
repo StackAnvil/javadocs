@@ -61,6 +61,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#accept(net.minecraft.network.Connection,java.util.UUID,net.raphimc.viabedrock.protocol.model.SkinData)" tabindex="0">accept(Connection, UUID, SkinData)</a></li>
 <li><a href="#preview(net.raphimc.viabedrock.protocol.model.SkinData)" tabindex="0">preview(SkinData)</a></li>
 <li><a href="#skin(java.util.UUID,net.minecraft.world.entity.player.PlayerSkin)" tabindex="0">skin(UUID, PlayerSkin)</a></li>
+<li><a href="#hasInstalledSkins()" tabindex="0">hasInstalledSkins()</a></li>
 <li><a href="#options(net.minecraft.world.entity.player.PlayerSkin)" tabindex="0">options(PlayerSkin)</a></li>
 <li><a href="#renderer(java.util.UUID)" tabindex="0">renderer(UUID)</a></li>
 <li><a href="#serverBodyVisible(net.minecraft.client.renderer.entity.state.AvatarRenderState)" tabindex="0">serverBodyVisible(AvatarRenderState)</a></li>
@@ -169,65 +170,68 @@ loadScripts(document, 'script');</script>
  float&nbsp;fallback)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasNativeFirstPersonAppearance(net.minecraft.client.player.LocalPlayer)" class="member-name-link">hasNativeFirstPersonAppearance</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Uses native hand updates only for the matching, loaded actor appearance.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../appearance/BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#options(net.minecraft.world.entity.player.PlayerSkin)" class="member-name-link">options</a><wbr>(net.minecraft.world.entity.player.PlayerSkin&nbsp;skin)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Returns options belonging to this installed skin, including standard player models.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="../appearance/BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#pose(net.minecraft.world.entity.Avatar,net.minecraft.client.renderer.entity.state.AvatarRenderState,float)" class="member-name-link">pose</a><wbr>(net.minecraft.world.entity.Avatar&nbsp;entity,
- net.minecraft.client.renderer.entity.state.AvatarRenderState&nbsp;state,
- float&nbsp;partialTick)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Samples the native actor graph once for the body and all of its attached surfaces.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockPlayerSkins.Preview.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockPlayerSkins.Preview</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#preview(net.raphimc.viabedrock.protocol.model.SkinData)" class="member-name-link">preview</a><wbr>(net.raphimc.viabedrock.protocol.model.SkinData&nbsp;skin)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a private menu appearance.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.model.Model.Simple</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#previewModel(net.minecraft.resources.Identifier)" class="member-name-link">previewModel</a><wbr>(net.minecraft.resources.Identifier&nbsp;texture)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockPlayerSkins.PreviewSurface.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockPlayerSkins.PreviewSurface</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#previewSurfaces(net.minecraft.resources.Identifier)" class="member-name-link">previewSurfaces</a><wbr>(net.minecraft.resources.Identifier&nbsp;texture)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Supplies the additional animated surfaces in the same pose as a menu's primary skin.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.entity.player.AvatarRenderer<wbr>&lt;?&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#renderer(java.util.UUID)" class="member-name-link">renderer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;playerUuid)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.entity.player.AvatarRenderer<wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#renderer(net.minecraft.world.entity.player.PlayerSkin,float)" class="member-name-link">renderer</a><wbr>(net.minecraft.world.entity.player.PlayerSkin&nbsp;skin,
- float&nbsp;ageInTicks)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rendererContext(net.minecraft.client.renderer.entity.EntityRendererProvider.Context)" class="member-name-link">rendererContext</a><wbr>(net.minecraft.client.renderer.entity.EntityRendererProvider.Context&nbsp;context)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasInstalledSkins()" class="member-name-link">hasInstalledSkins</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#serverBodyVisible(net.minecraft.client.renderer.entity.state.AvatarRenderState)" class="member-name-link">serverBodyVisible</a><wbr>(net.minecraft.client.renderer.entity.state.AvatarRenderState&nbsp;state)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasNativeFirstPersonAppearance(net.minecraft.client.player.LocalPlayer)" class="member-name-link">hasNativeFirstPersonAppearance</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Uses native hand updates only for the matching, loaded actor appearance.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../appearance/BedrockClassicOptions.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockClassicOptions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#options(net.minecraft.world.entity.player.PlayerSkin)" class="member-name-link">options</a><wbr>(net.minecraft.world.entity.player.PlayerSkin&nbsp;skin)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Returns options belonging to this installed skin, including standard player models.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="../appearance/BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#pose(net.minecraft.world.entity.Avatar,net.minecraft.client.renderer.entity.state.AvatarRenderState,float)" class="member-name-link">pose</a><wbr>(net.minecraft.world.entity.Avatar&nbsp;entity,
+ net.minecraft.client.renderer.entity.state.AvatarRenderState&nbsp;state,
+ float&nbsp;partialTick)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Samples the native actor graph once for the body and all of its attached surfaces.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockPlayerSkins.Preview.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockPlayerSkins.Preview</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#preview(net.raphimc.viabedrock.protocol.model.SkinData)" class="member-name-link">preview</a><wbr>(net.raphimc.viabedrock.protocol.model.SkinData&nbsp;skin)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a private menu appearance.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.model.Model.Simple</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#previewModel(net.minecraft.resources.Identifier)" class="member-name-link">previewModel</a><wbr>(net.minecraft.resources.Identifier&nbsp;texture)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.entity.player.PlayerSkin</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#skin(java.util.UUID,net.minecraft.world.entity.player.PlayerSkin)" class="member-name-link">skin</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;playerUuid,
- net.minecraft.world.entity.player.PlayerSkin&nbsp;fallback)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockPlayerSkins.PreviewSurface.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockPlayerSkins.PreviewSurface</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#previewSurfaces(net.minecraft.resources.Identifier)" class="member-name-link">previewSurfaces</a><wbr>(net.minecraft.resources.Identifier&nbsp;texture)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Supplies the additional animated surfaces in the same pose as a menu's primary skin.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.entity.player.AvatarRenderer<wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#renderer(java.util.UUID)" class="member-name-link">renderer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;playerUuid)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.entity.player.AvatarRenderer<wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#renderer(net.minecraft.world.entity.player.PlayerSkin,float)" class="member-name-link">renderer</a><wbr>(net.minecraft.world.entity.player.PlayerSkin&nbsp;skin,
+ float&nbsp;ageInTicks)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#submitFirstPerson(float,net.minecraft.client.renderer.entity.state.AvatarRenderState,net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState,java.lang.Runnable)" class="member-name-link">submitFirstPerson</a><wbr>(float&nbsp;partialTick,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rendererContext(net.minecraft.client.renderer.entity.EntityRendererProvider.Context)" class="member-name-link">rendererContext</a><wbr>(net.minecraft.client.renderer.entity.EntityRendererProvider.Context&nbsp;context)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#serverBodyVisible(net.minecraft.client.renderer.entity.state.AvatarRenderState)" class="member-name-link">serverBodyVisible</a><wbr>(net.minecraft.client.renderer.entity.state.AvatarRenderState&nbsp;state)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.entity.player.PlayerSkin</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#skin(java.util.UUID,net.minecraft.world.entity.player.PlayerSkin)" class="member-name-link">skin</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;playerUuid,
+ net.minecraft.world.entity.player.PlayerSkin&nbsp;fallback)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#submitFirstPerson(float,net.minecraft.client.renderer.entity.state.AvatarRenderState,net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState,java.lang.Runnable)" class="member-name-link">submitFirstPerson</a><wbr>(float&nbsp;partialTick,
  net.minecraft.client.renderer.entity.state.AvatarRenderState&nbsp;state,
  net.minecraft.client.renderer.state.level.FirstPersonHandsAndItemsRenderState&nbsp;items,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;submission)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Keeps native first-person state local to hand submission, including nested submissions and failures.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#submitFirstPersonActor(com.mojang.blaze3d.vertex.PoseStack,net.minecraft.client.renderer.SubmitNodeCollector,int)" class="member-name-link">submitFirstPersonActor</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poses,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#submitFirstPersonActor(com.mojang.blaze3d.vertex.PoseStack,net.minecraft.client.renderer.SubmitNodeCollector,int)" class="member-name-link">submitFirstPersonActor</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poses,
  net.minecraft.client.renderer.SubmitNodeCollector&nbsp;collector,
  int&nbsp;packedLight)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Submits the actor once before Java's per-hand item transforms.</div>
 </div>
 </div>
@@ -288,6 +292,14 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.world.entity.player.PlayerSkin</span>&nbsp;<span class="element-name">skin</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;playerUuid,
  net.minecraft.world.entity.player.PlayerSkin&nbsp;fallback)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasInstalledSkins()">
+<h3>hasInstalledSkins</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasInstalledSkins</span>()</div>
 </div>
 </section>
 </li>

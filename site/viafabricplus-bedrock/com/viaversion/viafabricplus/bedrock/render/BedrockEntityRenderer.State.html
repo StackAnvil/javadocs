@@ -63,6 +63,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#%3Cinit%3E()" tabindex="0">State()</a></li>
 </ol>
 </li>
+<li><a href="#method-detail" tabindex="0">Method Details</a>
+<ol class="toc-list">
+<li><a href="#pose()" tabindex="0">pose()</a></li>
+<li><a href="#visibility()" tabindex="0">visibility()</a></li>
+</ol>
+</li>
 </ol>
 <button class="hide-sidebar"><span>Hide sidebar&nbsp;</span><img src="../../../../../resource-files/left.svg" alt="Hide sidebar"></button><button class="show-sidebar"><img src="../../../../../resource-files/right.svg" alt="Show sidebar"><span>&nbsp;Show sidebar</span></button></nav>
 <main role="main">
@@ -77,13 +83,18 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
+<dt>All Implemented Interfaces:</dt>
+<dd><code><a href="BedrockAnimatedEntityState.html" title="interface in com.viaversion.viafabricplus.bedrock.render">BedrockAnimatedEntityState</a></code></dd>
+</dl>
+<dl class="notes">
 <dt>Enclosing class:</dt>
 <dd><code><a href="BedrockEntityRenderer.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockEntityRenderer</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public static final class </span><span class="element-name type-name-label">BedrockEntityRenderer.State</span>
-<span class="extends-implements">extends net.minecraft.client.renderer.entity.state.EntityRenderState</span></div>
+<span class="extends-implements">extends net.minecraft.client.renderer.entity.state.EntityRenderState
+implements <a href="BedrockAnimatedEntityState.html" title="interface in com.viaversion.viafabricplus.bedrock.render">BedrockAnimatedEntityState</a></span></div>
 </div>
 </section>
 <section class="summary">
@@ -123,6 +134,22 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="../appearance/BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pose()" class="member-name-link">pose</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../appearance/BedrockActorAnimation.Visibility.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Visibility</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#visibility()" class="member-name-link">visibility</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+</div>
+</div>
+</div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.renderer.entity.state.EntityRenderState">Methods inherited from class&nbsp;net.minecraft.client.renderer.entity.state.EntityRenderState</h3>
 <code>appearsGlowing, fillCrashReportCategory</code></div>
@@ -145,6 +172,38 @@ loadScripts(document, 'script');</script>
 <h3>State</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">State</span>()</div>
+</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="pose()">
+<h3>pose</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="../appearance/BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</span>&nbsp;<span class="element-name">pose</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BedrockAnimatedEntityState.html#pose()">pose</a></code>&nbsp;in interface&nbsp;<code><a href="BedrockAnimatedEntityState.html" title="interface in com.viaversion.viafabricplus.bedrock.render">BedrockAnimatedEntityState</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="visibility()">
+<h3>visibility</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../appearance/BedrockActorAnimation.Visibility.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Visibility</a></span>&nbsp;<span class="element-name">visibility</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BedrockAnimatedEntityState.html#visibility()">visibility</a></code>&nbsp;in interface&nbsp;<code><a href="BedrockAnimatedEntityState.html" title="interface in com.viaversion.viafabricplus.bedrock.render">BedrockAnimatedEntityState</a></code></dd>
+</dl>
 </div>
 </section>
 </li>

@@ -59,6 +59,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" tabindex="0">register(BedrockProtocol)</a></li>
 <li><a href="#handleResponse(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.lang.String,com.viaversion.nbt.tag.CompoundTag)" tabindex="0">handleResponse(PacketWrapper, String, CompoundTag)</a></li>
+<li><a href="#closeScreen(com.viaversion.viaversion.api.connection.UserConnection,java.lang.String)" tabindex="0">closeScreen(UserConnection, String)</a></li>
 <li><a href="#writeRequest(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.protocol.storage.NpcDialogueStorage.Request)" tabindex="0">writeRequest(PacketWrapper, NpcDialogueStorage.Request)</a></li>
 </ol>
 </li>
@@ -92,18 +93,22 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#handleResponse(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.lang.String,com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">handleResponse</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#closeScreen(com.viaversion.viaversion.api.connection.UserConnection,java.lang.String)" class="member-name-link">closeScreen</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#handleResponse(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.lang.String,com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">handleResponse</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id,
  com.viaversion.nbt.tag.CompoundTag&nbsp;payload)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" class="member-name-link">register</a><wbr>(<a href="../BedrockProtocol.html" title="class in net.raphimc.viabedrock.protocol">BedrockProtocol</a>&nbsp;protocol)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeRequest(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.protocol.storage.NpcDialogueStorage.Request)" class="member-name-link">writeRequest</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
- <a href="../storage/NpcDialogueStorage.Request.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Request</a>&nbsp;request)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" class="member-name-link">register</a><wbr>(<a href="../BedrockProtocol.html" title="class in net.raphimc.viabedrock.protocol">BedrockProtocol</a>&nbsp;protocol)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeRequest(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.protocol.storage.NpcDialogueStorage.Request)" class="member-name-link">writeRequest</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+ <a href="../storage/NpcDialogueStorage.Request.html" title="class in net.raphimc.viabedrock.protocol.storage">NpcDialogueStorage.Request</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -136,6 +141,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">handleResponse</span><wbr><span class="parameters">(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id,
  com.viaversion.nbt.tag.CompoundTag&nbsp;payload)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="closeScreen(com.viaversion.viaversion.api.connection.UserConnection,java.lang.String)">
+<h3>closeScreen</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">closeScreen</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier)</span></div>
 </div>
 </section>
 </li>

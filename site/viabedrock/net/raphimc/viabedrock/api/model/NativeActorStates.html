@@ -64,6 +64,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#apply(net.raphimc.viabedrock.api.model.NativeActorMessage,java.util.UUID)" tabindex="0">apply(NativeActorMessage, UUID)</a></li>
+<li><a href="#apply(net.raphimc.viabedrock.api.model.NativeActorBoundsMessage,java.util.UUID)" tabindex="0">apply(NativeActorBoundsMessage, UUID)</a></li>
+<li><a href="#bounds(java.util.UUID)" tabindex="0">bounds(UUID)</a></li>
 <li><a href="#uuidByUniqueId(long)" tabindex="0">uuidByUniqueId(long)</a></li>
 <li><a href="#get(java.util.UUID)" tabindex="0">get(UUID)</a></li>
 <li><a href="#apply(net.raphimc.viabedrock.api.model.NativeAnimationMessage,java.util.UUID)" tabindex="0">apply(NativeAnimationMessage, UUID)</a></li>
@@ -122,12 +124,19 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#animations(java.util.UUID)" class="member-name-link">animations</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.api.model.NativeActorMessage,java.util.UUID)" class="member-name-link">apply</a><wbr>(<a href="NativeActorMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a>&nbsp;message,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.api.model.NativeActorBoundsMessage,java.util.UUID)" class="member-name-link">apply</a><wbr>(<a href="NativeActorBoundsMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeActorBoundsMessage</a>&nbsp;message,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;localPlayer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.api.model.NativeAnimationMessage,java.util.UUID)" class="member-name-link">apply</a><wbr>(<a href="NativeAnimationMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationMessage</a>&nbsp;message,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.api.model.NativeActorMessage,java.util.UUID)" class="member-name-link">apply</a><wbr>(<a href="NativeActorMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a>&nbsp;message,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;localPlayer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.api.model.NativeAnimationMessage,java.util.UUID)" class="member-name-link">apply</a><wbr>(<a href="NativeAnimationMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeAnimationMessage</a>&nbsp;message,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;localPlayer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeActorBoundsMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeActorBoundsMessage</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#bounds(java.util.UUID)" class="member-name-link">bounds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
@@ -189,6 +198,23 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">apply</span><wbr><span class="parameters">(<a href="NativeActorMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a>&nbsp;message,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;localPlayer)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="apply(net.raphimc.viabedrock.api.model.NativeActorBoundsMessage,java.util.UUID)">
+<h3>apply</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">apply</span><wbr><span class="parameters">(<a href="NativeActorBoundsMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeActorBoundsMessage</a>&nbsp;message,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;localPlayer)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="bounds(java.util.UUID)">
+<h3>bounds</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeActorBoundsMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeActorBoundsMessage</a></span>&nbsp;<span class="element-name">bounds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</span></div>
 </div>
 </section>
 </li>

@@ -60,6 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#field-detail" tabindex="0">Field Details</a>
 <ol class="toc-list">
 <li><a href="#RENDERER" tabindex="0">RENDERER</a></li>
+<li><a href="#ACTOR_RENDERER" tabindex="0">ACTOR_RENDERER</a></li>
 </ol>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
@@ -77,6 +78,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#viewport(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,int,int)" tabindex="0">viewport(NativeUiLayout.Rect, int, int)</a></li>
 <li><a href="#viewportTranslation(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,org.joml.Quaternionfc,float)" tabindex="0">viewportTranslation(NativeUiLayout.Rect, NativeUiLayout.Rect, Quaternionfc, float)</a></li>
 <li><a href="#draw(net.minecraft.client.gui.GuiGraphicsExtractor,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,float,float,float)" tabindex="0">draw(GuiGraphicsExtractor, NativeUiLayout.Box, float, float, float)</a></li>
+<li><a href="#draw(net.minecraft.client.gui.GuiGraphicsExtractor,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,float,float,float,float)" tabindex="0">draw(GuiGraphicsExtractor, NativeUiLayout.Box, float, float, float, float)</a></li>
 </ol>
 </li>
 </ol>
@@ -94,7 +96,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">NativeUiActorPortraits</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Native UID selection and camera for admitted real player portraits.</div>
+<div class="block">Native UID selection and independent cameras for player and actor portraits.</div>
 </div>
 </section>
 <section class="summary">
@@ -124,8 +126,11 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#RENDERER" class="member-name-link">RENDERER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ACTOR_RENDERER" class="member-name-link">ACTOR_RENDERER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#RENDERER" class="member-name-link">RENDERER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -169,31 +174,39 @@ loadScripts(document, 'script');</script>
  float&nbsp;mouseY,
  float&nbsp;partialTick)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static org.joml.Vector3f</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#playerTranslation(org.joml.Quaternionfc,float)" class="member-name-link">playerTranslation</a><wbr>(org.joml.Quaternionfc&nbsp;rotation,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#draw(net.minecraft.client.gui.GuiGraphicsExtractor,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,float,float,float,float)" class="member-name-link">draw</a><wbr>(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
+ <a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a>&nbsp;box,
+ float&nbsp;mouseX,
+ float&nbsp;mouseY,
+ float&nbsp;partialTick,
+ float&nbsp;opacity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static org.joml.Vector3f</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#playerTranslation(org.joml.Quaternionfc,float)" class="member-name-link">playerTranslation</a><wbr>(org.joml.Quaternionfc&nbsp;rotation,
  float&nbsp;playerScale)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Matches the native player renderer's height offset and converted model origin.</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Cancels Java's model origin for the native GUI player renderer.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" class="member-name-link">prepare</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;root)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#uniqueId(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" class="member-name-link">uniqueId</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiLayout.Rect.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Rect</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#viewport(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,int,int)" class="member-name-link">viewport</a><wbr>(<a href="NativeUiLayout.Rect.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Rect</a>&nbsp;clip,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" class="member-name-link">prepare</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;root)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#uniqueId(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" class="member-name-link">uniqueId</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiLayout.Rect.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Rect</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#viewport(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,int,int)" class="member-name-link">viewport</a><wbr>(<a href="NativeUiLayout.Rect.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Rect</a>&nbsp;clip,
  int&nbsp;width,
  int&nbsp;height)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">The native renderer uses the inherited scissor, not the custom control as a viewport.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static org.joml.Vector3f</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#viewportTranslation(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,org.joml.Quaternionfc,float)" class="member-name-link">viewportTranslation</a><wbr>(<a href="NativeUiLayout.Rect.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Rect</a>&nbsp;control,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static org.joml.Vector3f</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#viewportTranslation(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Rect,org.joml.Quaternionfc,float)" class="member-name-link">viewportTranslation</a><wbr>(<a href="NativeUiLayout.Rect.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Rect</a>&nbsp;control,
  <a href="NativeUiLayout.Rect.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Rect</a>&nbsp;viewport,
  org.joml.Quaternionfc&nbsp;rotation,
  float&nbsp;playerScale)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Keeps the native control center when Java's intermediate texture uses a larger viewport.</div>
 </div>
 </div>
@@ -223,6 +236,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../../../constant-values.html#com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiActorPortraits.RENDERER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ACTOR_RENDERER">
+<h3>ACTOR_RENDERER</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">ACTOR_RENDERER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../../constant-values.html#com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiActorPortraits.ACTOR_RENDERER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -294,7 +323,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">org.joml.Vector3f</span>&nbsp;<span class="element-name">playerTranslation</span><wbr><span class="parameters">(org.joml.Quaternionfc&nbsp;rotation,
  float&nbsp;playerScale)</span></div>
-<div class="block">Matches the native player renderer's height offset and converted model origin.</div>
+<div class="block">Cancels Java's model origin for the native GUI player renderer.</div>
 </div>
 </section>
 </li>
@@ -330,6 +359,19 @@ loadScripts(document, 'script');</script>
  float&nbsp;mouseX,
  float&nbsp;mouseY,
  float&nbsp;partialTick)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="draw(net.minecraft.client.gui.GuiGraphicsExtractor,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,float,float,float,float)">
+<h3>draw</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">draw</span><wbr><span class="parameters">(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
+ <a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a>&nbsp;box,
+ float&nbsp;mouseX,
+ float&nbsp;mouseY,
+ float&nbsp;partialTick,
+ float&nbsp;opacity)</span></div>
 </div>
 </section>
 </li>

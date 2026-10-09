@@ -65,6 +65,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#lightCoords(int,boolean)" tabindex="0">lightCoords(int, boolean)</a></li>
 <li><a href="#usesNetherLighting()" tabindex="0">usesNetherLighting()</a></li>
 <li><a href="#create(net.minecraft.resources.Identifier,boolean,boolean,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform,boolean)" tabindex="0">create(Identifier, boolean, boolean, boolean, float, BedrockActorUvTransform, boolean)</a></li>
+<li><a href="#createGui(net.minecraft.resources.Identifier,boolean,boolean,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform)" tabindex="0">createGui(Identifier, boolean, boolean, boolean, float, BedrockActorUvTransform)</a></li>
 </ol>
 </li>
 </ol>
@@ -121,13 +122,21 @@ loadScripts(document, 'script');</script>
  <a href="BedrockActorUvTransform.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorUvTransform</a>&nbsp;uv,
  boolean&nbsp;netherLighting)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lightCoords(int,boolean)" class="member-name-link">lightCoords</a><wbr>(int&nbsp;light,
- boolean&nbsp;ignoreLighting)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createGui(net.minecraft.resources.Identifier,boolean,boolean,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform)" class="member-name-link">createGui</a><wbr>(net.minecraft.resources.Identifier&nbsp;texture,
+ boolean&nbsp;cull,
+ boolean&nbsp;ignoreLighting,
+ boolean&nbsp;emissive,
+ float&nbsp;multiplier,
+ <a href="BedrockActorUvTransform.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorUvTransform</a>&nbsp;uv)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#usesNetherLighting()" class="member-name-link">usesNetherLighting</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lightCoords(int,boolean)" class="member-name-link">lightCoords</a><wbr>(int&nbsp;light,
+ boolean&nbsp;ignoreLighting)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#usesNetherLighting()" class="member-name-link">usesNetherLighting</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -189,6 +198,19 @@ loadScripts(document, 'script');</script>
  float&nbsp;multiplier,
  <a href="BedrockActorUvTransform.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorUvTransform</a>&nbsp;uv,
  boolean&nbsp;netherLighting)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="createGui(net.minecraft.resources.Identifier,boolean,boolean,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform)">
+<h3>createGui</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.client.renderer.rendertype.RenderType</span>&nbsp;<span class="element-name">createGui</span><wbr><span class="parameters">(net.minecraft.resources.Identifier&nbsp;texture,
+ boolean&nbsp;cull,
+ boolean&nbsp;ignoreLighting,
+ boolean&nbsp;emissive,
+ float&nbsp;multiplier,
+ <a href="BedrockActorUvTransform.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorUvTransform</a>&nbsp;uv)</span></div>
 </div>
 </section>
 </li>

@@ -60,6 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(long,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.NpcRequestPacketPayload_RequestType,int,java.lang.String)" tabindex="0">Request(long, NpcRequestPacketPayload_RequestType, int, String)</a></li>
+<li><a href="#%3Cinit%3E(long,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.NpcRequestPacketPayload_RequestType,int,java.lang.String,java.lang.String)" tabindex="0">Request(long, NpcRequestPacketPayload_RequestType, int, String, String)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -71,6 +72,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#type()" tabindex="0">type()</a></li>
 <li><a href="#actionIndex()" tabindex="0">actionIndex()</a></li>
 <li><a href="#scene()" tabindex="0">scene()</a></li>
+<li><a href="#data()" tabindex="0">data()</a></li>
 </ol>
 </li>
 </ol>
@@ -92,7 +94,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NpcDialogueStorage.Request</span>(long&nbsp;runtimeId, <a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a>&nbsp;type, int&nbsp;actionIndex, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NpcDialogueStorage.Request</span>(long&nbsp;runtimeId, <a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a>&nbsp;type, int&nbsp;actionIndex, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;data)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -110,7 +112,13 @@ loadScripts(document, 'script');</script>
  <a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a>&nbsp;type,
  int&nbsp;actionIndex,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(long,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.NpcRequestPacketPayload_RequestType,int,java.lang.String,java.lang.String)" class="member-name-link">Request</a><wbr>(long&nbsp;runtimeId,
+ <a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a>&nbsp;type,
+ int&nbsp;actionIndex,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;data)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Creates an instance of a <code>Request</code> record class.</div>
 </div>
 </div>
@@ -132,34 +140,39 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>actionIndex</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#data()" class="member-name-link">data</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>data</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runtimeId()" class="member-name-link">runtimeId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runtimeId()" class="member-name-link">runtimeId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>runtimeId</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scene()" class="member-name-link">scene</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scene()" class="member-name-link">scene</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>scene</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>type</code> record component.</div>
 </div>
 </div>
@@ -187,6 +200,18 @@ loadScripts(document, 'script');</script>
  <a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a>&nbsp;type,
  int&nbsp;actionIndex,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(long,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.NpcRequestPacketPayload_RequestType,int,java.lang.String,java.lang.String)">
+<h3>Request</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Request</span><wbr><span class="parameters">(long&nbsp;runtimeId,
+ <a href="../data/enums/bedrock/generated/NpcRequestPacketPayload_RequestType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">NpcRequestPacketPayload_RequestType</a>&nbsp;type,
+ int&nbsp;actionIndex,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scene,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;data)</span></div>
 <div class="block">Creates an instance of a <code>Request</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -194,6 +219,7 @@ loadScripts(document, 'script');</script>
 <dd><code>type</code> - the value for the <code>type</code> record component</dd>
 <dd><code>actionIndex</code> - the value for the <code>actionIndex</code> record component</dd>
 <dd><code>scene</code> - the value for the <code>scene</code> record component</dd>
+<dd><code>data</code> - the value for the <code>data</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -301,6 +327,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>scene</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="data()">
+<h3>data</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">data</span>()</div>
+<div class="block">Returns the value of the <code>data</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>data</code> record component</dd>
 </dl>
 </div>
 </section>
