@@ -71,6 +71,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#parentSetup(java.util.List,java.util.Map)" tabindex="0">parentSetup(List, Map)</a></li>
 <li><a href="#particleCue(com.viaversion.viafabricplus.bedrock.appearance.BedrockAnimationParticle.Cue)" tabindex="0">particleCue(BedrockAnimationParticle.Cue)</a></li>
 <li><a href="#fork()" tabindex="0">fork()</a></li>
+<li><a href="#hasCompleteQueries()" tabindex="0">hasCompleteQueries()</a></li>
 <li><a href="#visibility()" tabindex="0">visibility()</a></li>
 <li><a href="#renderControllers(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers)" tabindex="0">renderControllers(BedrockPlayerControllers)</a></li>
 <li><a href="#scale()" tabindex="0">scale()</a></li>
@@ -140,48 +141,51 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Creates another perspective without sharing animation clocks or variables.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parentSetup(java.util.List,java.util.Map)" class="member-name-link">parentSetup</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;expressions,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCompleteQueries()" class="member-name-link">hasCompleteQueries</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parentSetup(java.util.List,java.util.Map)" class="member-name-link">parentSetup</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;expressions,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;context)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Runs attachable setup in the parent actor's variable scope.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockActorAnimation.ParticleCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.ParticleCue</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#particleCue(com.viaversion.viafabricplus.bedrock.appearance.BedrockAnimationParticle.Cue)" class="member-name-link">particleCue</a><wbr>(<a href="BedrockAnimationParticle.Cue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAnimationParticle.Cue</a>&nbsp;cue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockPlayerControllers.Selection.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Selection</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderControllers(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers)" class="member-name-link">renderControllers</a><wbr>(<a href="BedrockPlayerControllers.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers</a>&nbsp;controllers)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockActorAnimation.ParticleCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.ParticleCue</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#particleCue(com.viaversion.viafabricplus.bedrock.appearance.BedrockAnimationParticle.Cue)" class="member-name-link">particleCue</a><wbr>(<a href="BedrockAnimationParticle.Cue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAnimationParticle.Cue</a>&nbsp;cue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockPlayerControllers.Selection.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Selection</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderControllers(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers)" class="member-name-link">renderControllers</a><wbr>(<a href="BedrockPlayerControllers.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers</a>&nbsp;controllers)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Resolves complete render-controller draws in this perspective's sampled variable scope.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame)" class="member-name-link">sample</a><wbr>(float&nbsp;time,
- <a href="BedrockActorAnimation.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Frame</a>&nbsp;input)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame,boolean,java.util.function.Consumer)" class="member-name-link">sample</a><wbr>(float&nbsp;time,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame)" class="member-name-link">sample</a><wbr>(float&nbsp;time,
+ <a href="BedrockActorAnimation.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Frame</a>&nbsp;input)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame,boolean,java.util.function.Consumer)" class="member-name-link">sample</a><wbr>(float&nbsp;time,
  <a href="BedrockActorAnimation.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Frame</a>&nbsp;input,
  boolean&nbsp;eventsEnabled,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="BedrockActorAnimation.SoundCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.SoundCue</a>&gt;&nbsp;soundOutput)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame,boolean,java.util.function.Consumer,java.util.function.Consumer)" class="member-name-link">sample</a><wbr>(float&nbsp;time,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="BedrockBoneAnimation.Transform.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Transform</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame,boolean,java.util.function.Consumer,java.util.function.Consumer)" class="member-name-link">sample</a><wbr>(float&nbsp;time,
  <a href="BedrockActorAnimation.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Frame</a>&nbsp;input,
  boolean&nbsp;eventsEnabled,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="BedrockActorAnimation.SoundCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.SoundCue</a>&gt;&nbsp;soundOutput,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="BedrockActorAnimation.ParticleCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.ParticleCue</a>&gt;&nbsp;particleOutput)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockBoneAnimation.Vector.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Vector</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scale()" class="member-name-link">scale</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockBoneAnimation.Vector.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockBoneAnimation.Vector</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scale()" class="member-name-link">scale</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Evaluates draw-time scale after the sampled graph, without rerunning animation scripts.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockActorAnimation.SoundCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.SoundCue</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#soundCue(com.viaversion.viafabricplus.bedrock.appearance.BedrockAnimationSound)" class="member-name-link">soundCue</a><wbr>(<a href="BedrockAnimationSound.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAnimationSound</a>&nbsp;sound)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockActorAnimation.Visibility.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Visibility</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#visibility()" class="member-name-link">visibility</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockActorAnimation.SoundCue.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.SoundCue</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#soundCue(com.viaversion.viafabricplus.bedrock.appearance.BedrockAnimationSound)" class="member-name-link">soundCue</a><wbr>(<a href="BedrockAnimationSound.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAnimationSound</a>&nbsp;sound)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockActorAnimation.Visibility.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Visibility</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#visibility()" class="member-name-link">visibility</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Uses the variables left by the sampled graph, without rerunning actor scripts.</div>
 </div>
 </div>
@@ -297,6 +301,14 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BedrockActorAnimation.Playback.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Playback</a></span>&nbsp;<span class="element-name">fork</span>()</div>
 <div class="block">Creates another perspective without sharing animation clocks or variables.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasCompleteQueries()">
+<h3>hasCompleteQueries</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasCompleteQueries</span>()</div>
 </div>
 </section>
 </li>

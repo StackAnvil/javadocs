@@ -78,6 +78,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#fromProgram(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">fromProgram(JsonObject)</a></li>
 <li><a href="#customizes(java.lang.String)" tabindex="0">customizes(String)</a></li>
 <li><a href="#resolve(java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" tabindex="0">resolve(String, UiBindings)</a></li>
+<li><a href="#resolveFactory(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" tabindex="0">resolveFactory(String, String, UiBindings)</a></li>
 <li><a href="#resolveScreen(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" tabindex="0">resolveScreen(String, String, UiBindings)</a></li>
 <li><a href="#export(java.util.Set,com.viaversion.viaversion.libs.gson.JsonElement)" tabindex="0">export(Set, JsonElement)</a></li>
 <li><a href="#builtinIdentity()" tabindex="0">builtinIdentity()</a></li>
@@ -191,16 +192,23 @@ loadScripts(document, 'script');</script>
  <a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="JsonUiProgram.Resolution.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram.Resolution</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveScreen(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" class="member-name-link">resolveScreen</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;host,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveFactory(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" class="member-name-link">resolveFactory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reference,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;factory,
+ <a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Selects authored factory hosts before expansion, so unrelated HUD collections need no controller data.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="JsonUiProgram.Resolution.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram.Resolution</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveScreen(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" class="member-name-link">resolveScreen</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;host,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fallback,
  <a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#textureId(java.lang.String)" class="member-name-link">textureId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textures()" class="member-name-link">textures</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#textureId(java.lang.String)" class="member-name-link">textureId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textures()" class="member-name-link">textures</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -331,6 +339,17 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="JsonUiProgram.Resolution.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram.Resolution</a></span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reference,
  <a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="resolveFactory(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)">
+<h3>resolveFactory</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="JsonUiProgram.Resolution.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram.Resolution</a></span>&nbsp;<span class="element-name">resolveFactory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reference,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;factory,
+ <a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</span></div>
+<div class="block">Selects authored factory hosts before expansion, so unrelated HUD collections need no controller data.</div>
 </div>
 </section>
 </li>
