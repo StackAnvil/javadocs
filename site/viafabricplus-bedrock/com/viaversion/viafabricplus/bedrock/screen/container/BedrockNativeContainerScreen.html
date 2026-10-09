@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">net.minecraft.client.gui.components.events.AbstractContainerEventHandler
 <div class="inheritance">net.minecraft.client.gui.screens.Screen
-<div class="inheritance">net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;
+<div class="inheritance">net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;
 <div class="inheritance">com.viaversion.viafabricplus.bedrock.screen.container.BedrockNativeContainerScreen</div>
 </div>
 </div>
@@ -94,12 +94,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../ui/NativeUiScreen.html" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScreen</a>, net.minecraft.client.gui.components.events.ContainerEventHandler, net.minecraft.client.gui.components.events.GuiEventListener, net.minecraft.client.gui.components.Renderable, net.minecraft.client.gui.components.TabOrderedElement, net.minecraft.client.gui.screens.inventory.MenuAccess&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code><a href="../ui/NativeUiScreen.html" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScreen</a>, net.minecraft.client.gui.components.events.ContainerEventHandler, net.minecraft.client.gui.components.events.GuiEventListener, net.minecraft.client.gui.components.Renderable, net.minecraft.client.gui.components.TabOrderedElement, net.minecraft.client.gui.screens.inventory.MenuAccess&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">BedrockNativeContainerScreen</span>
-<span class="extends-implements">extends net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;
+<span class="extends-implements">extends net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;
 implements <a href="../ui/NativeUiScreen.html" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScreen</a></span></div>
 <div class="block">Real menu presentation; generic menus retain vanilla dispatch, scoped count-one controls use the
 negotiated native request backend.</div>
@@ -253,7 +253,7 @@ negotiated native request backend.</div>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">init</span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code>init</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>init</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -265,7 +265,7 @@ negotiated native request backend.</div>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">containerTick</span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code>containerTick</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>containerTick</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -299,7 +299,7 @@ negotiated native request backend.</div>
  float&nbsp;delta)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code>extractContents</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>extractContents</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -324,7 +324,7 @@ negotiated native request backend.</div>
  net.minecraft.world.inventory.ContainerInput&nbsp;input)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code>slotClicked</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>slotClicked</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -354,7 +354,7 @@ negotiated native request backend.</div>
  int&nbsp;top)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code>hasClickedOutside</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>hasClickedOutside</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -373,7 +373,7 @@ negotiated native request backend.</div>
 <dt>Specified by:</dt>
 <dd><code>mouseScrolled</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
 <dt>Overrides:</dt>
-<dd><code>mouseScrolled</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>mouseScrolled</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -390,7 +390,7 @@ negotiated native request backend.</div>
 <dt>Specified by:</dt>
 <dd><code>mouseClicked</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
 <dt>Overrides:</dt>
-<dd><code>mouseClicked</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>mouseClicked</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -408,7 +408,7 @@ negotiated native request backend.</div>
 <dt>Specified by:</dt>
 <dd><code>mouseDragged</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
 <dt>Overrides:</dt>
-<dd><code>mouseDragged</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>mouseDragged</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -424,7 +424,7 @@ negotiated native request backend.</div>
 <dt>Specified by:</dt>
 <dd><code>mouseReleased</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
 <dt>Overrides:</dt>
-<dd><code>mouseReleased</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>mouseReleased</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -440,7 +440,7 @@ negotiated native request backend.</div>
 <dt>Specified by:</dt>
 <dd><code>keyPressed</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
 <dt>Overrides:</dt>
-<dd><code>keyPressed</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>keyPressed</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>
@@ -452,7 +452,7 @@ negotiated native request backend.</div>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removed</span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code>removed</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.ChestMenu&gt;</code></dd>
+<dd><code>removed</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
 </div>
 </section>

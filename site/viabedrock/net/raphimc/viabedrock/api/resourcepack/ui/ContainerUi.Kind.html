@@ -62,12 +62,22 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#CHEST_3_ROWS" tabindex="0">CHEST_3_ROWS</a></li>
 <li><a href="#CHEST_6_ROWS" tabindex="0">CHEST_6_ROWS</a></li>
+<li><a href="#ENDER_CHEST" tabindex="0">ENDER_CHEST</a></li>
+<li><a href="#SHULKER_BOX" tabindex="0">SHULKER_BOX</a></li>
+<li><a href="#BARREL" tabindex="0">BARREL</a></li>
+<li><a href="#HOPPER" tabindex="0">HOPPER</a></li>
+<li><a href="#DISPENSER" tabindex="0">DISPENSER</a></li>
+<li><a href="#DROPPER" tabindex="0">DROPPER</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#values()" tabindex="0">values()</a></li>
 <li><a href="#valueOf(java.lang.String)" tabindex="0">valueOf(String)</a></li>
+<li><a href="#wireId()" tabindex="0">wireId()</a></li>
+<li><a href="#containerSlots()" tabindex="0">containerSlots()</a></li>
+<li><a href="#legacy()" tabindex="0">legacy()</a></li>
+<li><a href="#fromWireId(int)" tabindex="0">fromWireId(int)</a></li>
 </ol>
 </li>
 </ol>
@@ -116,9 +126,21 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Enum Constant</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="#CHEST_3_ROWS" class="member-name-link">CHEST_3_ROWS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#BARREL" class="member-name-link">BARREL</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#CHEST_6_ROWS" class="member-name-link">CHEST_6_ROWS</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#CHEST_3_ROWS" class="member-name-link">CHEST_3_ROWS</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#CHEST_6_ROWS" class="member-name-link">CHEST_6_ROWS</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#DISPENSER" class="member-name-link">DISPENSER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#DROPPER" class="member-name-link">DROPPER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ENDER_CHEST" class="member-name-link">ENDER_CHEST</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#HOPPER" class="member-name-link">HOPPER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#SHULKER_BOX" class="member-name-link">SHULKER_BOX</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
@@ -128,23 +150,35 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containerSlots()" class="member-name-link">containerSlots</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromWireId(int)" class="member-name-link">fromWireId</a><wbr>(int&nbsp;wireId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#legacy()" class="member-name-link">legacy</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>[]</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#wireId()" class="member-name-link">wireId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -178,6 +212,54 @@ the order they are declared.</div>
 <h3>CHEST_6_ROWS</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">CHEST_6_ROWS</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ENDER_CHEST">
+<h3>ENDER_CHEST</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">ENDER_CHEST</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="SHULKER_BOX">
+<h3>SHULKER_BOX</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">SHULKER_BOX</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="BARREL">
+<h3>BARREL</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">BARREL</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="HOPPER">
+<h3>HOPPER</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">HOPPER</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="DISPENSER">
+<h3>DISPENSER</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">DISPENSER</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="DROPPER">
+<h3>DROPPER</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">DROPPER</span></div>
 </div>
 </section>
 </li>
@@ -221,6 +303,38 @@ not permitted.)</div>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if this enum class has no constant with the specified name</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the argument is null</dd>
 </dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="wireId()">
+<h3>wireId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">wireId</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="containerSlots()">
+<h3>containerSlots</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">containerSlots</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="legacy()">
+<h3>legacy</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">legacy</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="fromWireId(int)">
+<h3>fromWireId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">fromWireId</span><wbr><span class="parameters">(int&nbsp;wireId)</span></div>
 </div>
 </section>
 </li>

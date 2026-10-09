@@ -68,6 +68,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" tabindex="0">JsonUiProgram(ResourcePackStorage)</a></li>
 <li><a href="#%3Cinit%3E(java.util.List)" tabindex="0">JsonUiProgram(List)</a></li>
+<li><a href="#%3Cinit%3E(java.util.Map,java.util.List)" tabindex="0">JsonUiProgram(Map, List)</a></li>
 <li><a href="#%3Cinit%3E(java.util.List,java.util.function.UnaryOperator)" tabindex="0">JsonUiProgram(List, UnaryOperator)</a></li>
 </ol>
 </li>
@@ -78,6 +79,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#fromProgram(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">fromProgram(JsonObject)</a></li>
 <li><a href="#customizes(java.lang.String)" tabindex="0">customizes(String)</a></li>
 <li><a href="#resolve(java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" tabindex="0">resolve(String, UiBindings)</a></li>
+<li><a href="#resolveHudDecorations(net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" tabindex="0">resolveHudDecorations(UiBindings)</a></li>
 <li><a href="#resolveFactory(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" tabindex="0">resolveFactory(String, String, UiBindings)</a></li>
 <li><a href="#resolveScreen(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" tabindex="0">resolveScreen(String, String, UiBindings)</a></li>
 <li><a href="#export(java.util.Set,com.viaversion.viaversion.libs.gson.JsonElement)" tabindex="0">export(Set, JsonElement)</a></li>
@@ -155,8 +157,13 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Resolves the same resource-pack files with their language translations.</div>
 </div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" class="member-name-link">JsonUiProgram</a><wbr>(<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.Map,java.util.List)" class="member-name-link">JsonUiProgram</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&nbsp;nativeFiles,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&gt;&nbsp;acceptedLayers)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Explicit native and accepted layers, preserving decoration provenance for tools and tests.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" class="member-name-link">JsonUiProgram</a><wbr>(<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -199,16 +206,21 @@ loadScripts(document, 'script');</script>
 <div class="block">Selects authored factory hosts before expansion, so unrelated HUD collections need no controller data.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="JsonUiProgram.Resolution.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram.Resolution</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveScreen(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" class="member-name-link">resolveScreen</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;host,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveHudDecorations(net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" class="member-name-link">resolveHudDecorations</a><wbr>(<a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Select accepted-pack visual additions without replaying the native default HUD or its factories.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="JsonUiProgram.Resolution.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram.Resolution</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveScreen(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)" class="member-name-link">resolveScreen</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;host,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fallback,
  <a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#textureId(java.lang.String)" class="member-name-link">textureId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textures()" class="member-name-link">textures</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#textureId(java.lang.String)" class="member-name-link">textureId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textures()" class="member-name-link">textures</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -284,6 +296,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(java.util.Map,java.util.List)">
+<h3>JsonUiProgram</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">JsonUiProgram</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&nbsp;nativeFiles,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&gt;&nbsp;acceptedLayers)</span></div>
+<div class="block">Explicit native and accepted layers, preserving decoration provenance for tools and tests.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(java.util.List,java.util.function.UnaryOperator)">
 <h3>JsonUiProgram</h3>
 <div class="horizontal-scroll">
@@ -339,6 +361,15 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="JsonUiProgram.Resolution.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram.Resolution</a></span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reference,
  <a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="resolveHudDecorations(net.raphimc.viabedrock.api.resourcepack.ui.UiBindings)">
+<h3>resolveHudDecorations</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="JsonUiProgram.Resolution.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram.Resolution</a></span>&nbsp;<span class="element-name">resolveHudDecorations</span><wbr><span class="parameters">(<a href="UiBindings.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings</a>&nbsp;bindings)</span></div>
+<div class="block">Select accepted-pack visual additions without replaying the native default HUD or its factories.</div>
 </div>
 </section>
 </li>

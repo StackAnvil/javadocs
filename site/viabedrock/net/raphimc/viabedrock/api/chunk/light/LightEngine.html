@@ -231,7 +231,8 @@ the region are fully covered by the region, as light travels at most 15 blocks.<
                      <code>[chunkIndex][sectionIndex][blockIndex]</code> where
                      <code>chunkIndex = (chunkZOffset + 1) * 3 + (chunkXOffset + 1)</code> and
                      <code>blockIndex = y * 256 | z * 16 | x</code>. Chunks and sections that have
-                     not been loaded are <code>null</code> and are treated as fully opaque.</dd>
+                     not been loaded are <code>null</code> and are treated as fully opaque.
+                     Uniform sections may contain only their one block state.</dd>
 <dd><code>sectionCount</code> - The amount of chunk sections of a chunk column</dd>
 <dd><code>skyLight</code> - Whether the dimension has sky light</dd>
 <dd><code>emissionTable</code> - Light emission (0-15) per java block state id</dd>
