@@ -64,7 +64,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#plan(net.raphimc.viabedrock.api.model.container.player.InventoryContainer,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,int,int%5B%5D,int)" tabindex="0">plan(InventoryContainer, BedrockItem, Container, int, int[], int)</a></li>
-<li><a href="#apply(net.raphimc.viabedrock.api.model.container.player.InventoryContainer,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">apply(InventoryContainer, BedrockItem)</a></li>
+<li><a href="#pickup(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.BedrockItem,int)" tabindex="0">pickup(Container, BedrockItem, int)</a></li>
+<li><a href="#apply(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">apply(Container, BedrockItem)</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
@@ -91,7 +92,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">CraftingOutputPlan</span>(int&nbsp;destination, int&nbsp;crafts, int&nbsp;outputAmount, int&nbsp;destinationNetId)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">One server-authoritative craft request whose output fits in a single inventory slot.</div>
+<div class="block">One server-authoritative craft request whose output fits in one inventory or cursor slot.</div>
 </div>
 </section>
 <section class="summary">
@@ -126,7 +127,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.api.model.container.player.InventoryContainer,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">apply</a><wbr>(<a href="player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">apply</a><wbr>(<a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;inventory,
  <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;result)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
@@ -160,16 +161,21 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the value of the <code>outputAmount</code> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CraftingOutputPlan.html" title="class in net.raphimc.viabedrock.api.model.container">CraftingOutputPlan</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#plan(net.raphimc.viabedrock.api.model.container.player.InventoryContainer,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,int,int%5B%5D,int)" class="member-name-link">plan</a><wbr>(<a href="player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#pickup(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.BedrockItem,int)" class="member-name-link">pickup</a><wbr>(<a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;hud,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;result,
+ int&nbsp;maxStackSize)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CraftingOutputPlan.html" title="class in net.raphimc.viabedrock.api.model.container">CraftingOutputPlan</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#plan(net.raphimc.viabedrock.api.model.container.player.InventoryContainer,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,int,int%5B%5D,int)" class="member-name-link">plan</a><wbr>(<a href="player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
  <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;result,
  <a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;grid,
  int&nbsp;firstGridSlot,
  int[]&nbsp;amountsPerCraft,
  int&nbsp;maxStackSize)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -230,10 +236,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="apply(net.raphimc.viabedrock.api.model.container.player.InventoryContainer,net.raphimc.viabedrock.protocol.model.BedrockItem)">
+<section class="detail" id="pickup(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.BedrockItem,int)">
+<h3>pickup</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CraftingOutputPlan.html" title="class in net.raphimc.viabedrock.api.model.container">CraftingOutputPlan</a></span>&nbsp;<span class="element-name">pickup</span><wbr><span class="parameters">(<a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;hud,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;result,
+ int&nbsp;maxStackSize)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="apply(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.BedrockItem)">
 <h3>apply</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">apply</span><wbr><span class="parameters">(<a href="player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">apply</span><wbr><span class="parameters">(<a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;inventory,
  <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;result)</span></div>
 </div>
 </section>

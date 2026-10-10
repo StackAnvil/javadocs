@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(net.minecraft.resources.Identifier,net.minecraft.resources.Identifier,int,int,int,int,int,com.viaversion.viafabricplus.bedrock.render.hud.BedrockScoreboardImages.Background)" tabindex="0">Image(Identifier, Identifier, int, int, int, int, int, BedrockScoreboardImages.Background)</a></li>
+<li><a href="#%3Cinit%3E(net.minecraft.resources.Identifier,net.minecraft.resources.Identifier,int,int,int,int,int,com.viaversion.viafabricplus.bedrock.render.hud.BedrockScoreboardImages.Background,int,int,boolean)" tabindex="0">Image(Identifier, Identifier, int, int, int, int, int, BedrockScoreboardImages.Background, int, int, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -74,6 +74,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#offsetY()" tabindex="0">offsetY()</a></li>
 <li><a href="#rowHeight()" tabindex="0">rowHeight()</a></li>
 <li><a href="#background()" tabindex="0">background()</a></li>
+<li><a href="#sourceWidth()" tabindex="0">sourceWidth()</a></li>
+<li><a href="#sourceHeight()" tabindex="0">sourceHeight()</a></li>
+<li><a href="#keepRatio()" tabindex="0">keepRatio()</a></li>
 </ol>
 </li>
 </ol>
@@ -95,7 +98,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockScoreboardImages.Image</span>(net.minecraft.resources.Identifier&nbsp;font, net.minecraft.resources.Identifier&nbsp;texture, int&nbsp;width, int&nbsp;height, int&nbsp;offsetX, int&nbsp;offsetY, int&nbsp;rowHeight, <a href="BedrockScoreboardImages.Background.html" title="class in com.viaversion.viafabricplus.bedrock.render.hud">BedrockScoreboardImages.Background</a>&nbsp;background)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockScoreboardImages.Image</span>(net.minecraft.resources.Identifier&nbsp;font, net.minecraft.resources.Identifier&nbsp;texture, int&nbsp;width, int&nbsp;height, int&nbsp;offsetX, int&nbsp;offsetY, int&nbsp;rowHeight, <a href="BedrockScoreboardImages.Background.html" title="class in com.viaversion.viafabricplus.bedrock.render.hud">BedrockScoreboardImages.Background</a>&nbsp;background, int&nbsp;sourceWidth, int&nbsp;sourceHeight, boolean&nbsp;keepRatio)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -109,14 +112,17 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.resources.Identifier,net.minecraft.resources.Identifier,int,int,int,int,int,com.viaversion.viafabricplus.bedrock.render.hud.BedrockScoreboardImages.Background)" class="member-name-link">Image</a><wbr>(net.minecraft.resources.Identifier&nbsp;font,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.resources.Identifier,net.minecraft.resources.Identifier,int,int,int,int,int,com.viaversion.viafabricplus.bedrock.render.hud.BedrockScoreboardImages.Background,int,int,boolean)" class="member-name-link">Image</a><wbr>(net.minecraft.resources.Identifier&nbsp;font,
  net.minecraft.resources.Identifier&nbsp;texture,
  int&nbsp;width,
  int&nbsp;height,
  int&nbsp;offsetX,
  int&nbsp;offsetY,
  int&nbsp;rowHeight,
- <a href="BedrockScoreboardImages.Background.html" title="class in com.viaversion.viafabricplus.bedrock.render.hud">BedrockScoreboardImages.Background</a>&nbsp;background)</code></div>
+ <a href="BedrockScoreboardImages.Background.html" title="class in com.viaversion.viafabricplus.bedrock.render.hud">BedrockScoreboardImages.Background</a>&nbsp;background,
+ int&nbsp;sourceWidth,
+ int&nbsp;sourceHeight,
+ boolean&nbsp;keepRatio)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Image</code> record class.</div>
 </div>
@@ -159,34 +165,49 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>height</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#offsetX()" class="member-name-link">offsetX</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#keepRatio()" class="member-name-link">keepRatio</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>keepRatio</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#offsetX()" class="member-name-link">offsetX</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>offsetX</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#offsetY()" class="member-name-link">offsetY</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#offsetY()" class="member-name-link">offsetY</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>offsetY</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rowHeight()" class="member-name-link">rowHeight</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rowHeight()" class="member-name-link">rowHeight</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>rowHeight</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.resources.Identifier</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#texture()" class="member-name-link">texture</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>texture</code> record component.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sourceHeight()" class="member-name-link">sourceHeight</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns a string representation of this record class.</div>
+<div class="block">Returns the value of the <code>sourceHeight</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#width()" class="member-name-link">width</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sourceWidth()" class="member-name-link">sourceWidth</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>sourceWidth</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.resources.Identifier</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#texture()" class="member-name-link">texture</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>texture</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a string representation of this record class.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#width()" class="member-name-link">width</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>width</code> record component.</div>
 </div>
 </div>
@@ -207,7 +228,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.minecraft.resources.Identifier,net.minecraft.resources.Identifier,int,int,int,int,int,com.viaversion.viafabricplus.bedrock.render.hud.BedrockScoreboardImages.Background)">
+<section class="detail" id="&lt;init&gt;(net.minecraft.resources.Identifier,net.minecraft.resources.Identifier,int,int,int,int,int,com.viaversion.viafabricplus.bedrock.render.hud.BedrockScoreboardImages.Background,int,int,boolean)">
 <h3>Image</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Image</span><wbr><span class="parameters">(net.minecraft.resources.Identifier&nbsp;font,
@@ -217,7 +238,10 @@ loadScripts(document, 'script');</script>
  int&nbsp;offsetX,
  int&nbsp;offsetY,
  int&nbsp;rowHeight,
- <a href="BedrockScoreboardImages.Background.html" title="class in com.viaversion.viafabricplus.bedrock.render.hud">BedrockScoreboardImages.Background</a>&nbsp;background)</span></div>
+ <a href="BedrockScoreboardImages.Background.html" title="class in com.viaversion.viafabricplus.bedrock.render.hud">BedrockScoreboardImages.Background</a>&nbsp;background,
+ int&nbsp;sourceWidth,
+ int&nbsp;sourceHeight,
+ boolean&nbsp;keepRatio)</span></div>
 <div class="block">Creates an instance of a <code>Image</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -229,6 +253,9 @@ loadScripts(document, 'script');</script>
 <dd><code>offsetY</code> - the value for the <code>offsetY</code> record component</dd>
 <dd><code>rowHeight</code> - the value for the <code>rowHeight</code> record component</dd>
 <dd><code>background</code> - the value for the <code>background</code> record component</dd>
+<dd><code>sourceWidth</code> - the value for the <code>sourceWidth</code> record component</dd>
+<dd><code>sourceHeight</code> - the value for the <code>sourceHeight</code> record component</dd>
+<dd><code>keepRatio</code> - the value for the <code>keepRatio</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -388,6 +415,45 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>background</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sourceWidth()">
+<h3>sourceWidth</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">sourceWidth</span>()</div>
+<div class="block">Returns the value of the <code>sourceWidth</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>sourceWidth</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sourceHeight()">
+<h3>sourceHeight</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">sourceHeight</span>()</div>
+<div class="block">Returns the value of the <code>sourceHeight</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>sourceHeight</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="keepRatio()">
+<h3>keepRatio</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">keepRatio</span>()</div>
+<div class="block">Returns the value of the <code>keepRatio</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>keepRatio</code> record component</dd>
 </dl>
 </div>
 </section>
