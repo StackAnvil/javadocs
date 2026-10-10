@@ -102,6 +102,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#copy()" tabindex="0">copy()</a></li>
 <li><a href="#markServerUpdate()" tabindex="0">markServerUpdate()</a></li>
 <li><a href="#serverRevision()" tabindex="0">serverRevision()</a></li>
+<li><a href="#setData(int,int)" tabindex="0">setData(int, int)</a></li>
+<li><a href="#getData(int)" tabindex="0">getData(int)</a></li>
+<li><a href="#getData()" tabindex="0">getData()</a></li>
+<li><a href="#serverDataRevision()" tabindex="0">serverDataRevision()</a></li>
 <li><a href="#translateContainerData(int)" tabindex="0">translateContainerData(int)</a></li>
 <li><a href="#javaSlot(int)" tabindex="0">javaSlot(int)</a></li>
 <li><a href="#javaContainerId()" tabindex="0">javaContainerId()</a></li>
@@ -260,6 +264,12 @@ loadScripts(document, 'script');</script>
  int&nbsp;bedrockSlot,
  int&nbsp;amountToDrop)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getData()" class="member-name-link">getData</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getData(int)" class="member-name-link">getData</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFullContainerName(int)" class="member-name-link">getFullContainerName</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -343,7 +353,14 @@ loadScripts(document, 'script');</script>
  int&nbsp;selectedItem)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverRevision()" class="member-name-link">serverRevision</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverDataRevision()" class="member-name-link">serverDataRevision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverRevision()" class="member-name-link">serverRevision</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setData(int,int)" class="member-name-link">setData</a><wbr>(int&nbsp;id,
+ int&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">setItem</a><wbr>(int&nbsp;slot,
@@ -693,6 +710,39 @@ loadScripts(document, 'script');</script>
 <h3>serverRevision</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">serverRevision</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setData(int,int)">
+<h3>setData</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">setData</span><wbr><span class="parameters">(int&nbsp;id,
+ int&nbsp;value)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getData(int)">
+<h3>getData</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getData</span><wbr><span class="parameters">(int&nbsp;id)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getData()">
+<h3>getData</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">getData</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="serverDataRevision()">
+<h3>serverDataRevision</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">serverDataRevision</span>()</div>
 </div>
 </section>
 </li>
