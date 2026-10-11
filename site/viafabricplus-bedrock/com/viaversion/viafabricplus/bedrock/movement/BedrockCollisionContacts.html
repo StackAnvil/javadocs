@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#collide(net.minecraft.world.phys.shapes.VoxelShape,net.minecraft.core.Direction.Axis,net.minecraft.world.phys.AABB,double)" tabindex="0">collide(VoxelShape, Direction.Axis, AABB, double)</a></li>
+<li><a href="#canFallAtLeast(net.minecraft.world.entity.player.Player,double,double,double)" tabindex="0">canFallAtLeast(Player, double, double, double)</a></li>
 </ol>
 </li>
 </ol>
@@ -89,12 +90,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#collide(net.minecraft.world.phys.shapes.VoxelShape,net.minecraft.core.Direction.Axis,net.minecraft.world.phys.AABB,double)" class="member-name-link">collide</a><wbr>(net.minecraft.world.phys.shapes.VoxelShape&nbsp;shape,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#canFallAtLeast(net.minecraft.world.entity.player.Player,double,double,double)" class="member-name-link">canFallAtLeast</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;player,
+ double&nbsp;x,
+ double&nbsp;z,
+ double&nbsp;distance)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#collide(net.minecraft.world.phys.shapes.VoxelShape,net.minecraft.core.Direction.Axis,net.minecraft.world.phys.AABB,double)" class="member-name-link">collide</a><wbr>(net.minecraft.world.phys.shapes.VoxelShape&nbsp;shape,
  net.minecraft.core.Direction.Axis&nbsp;axis,
  net.minecraft.world.phys.AABB&nbsp;box,
  double&nbsp;distance)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -119,6 +126,17 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">collide</span><wbr><span class="parameters">(net.minecraft.world.phys.shapes.VoxelShape&nbsp;shape,
  net.minecraft.core.Direction.Axis&nbsp;axis,
  net.minecraft.world.phys.AABB&nbsp;box,
+ double&nbsp;distance)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="canFallAtLeast(net.minecraft.world.entity.player.Player,double,double,double)">
+<h3>canFallAtLeast</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canFallAtLeast</span><wbr><span class="parameters">(net.minecraft.world.entity.player.Player&nbsp;player,
+ double&nbsp;x,
+ double&nbsp;z,
  double&nbsp;distance)</span></div>
 </div>
 </section>

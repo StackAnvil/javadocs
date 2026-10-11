@@ -71,6 +71,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#isLocallyPlayedMiningSound(java.lang.String,net.raphimc.viabedrock.protocol.model.Position3f,long,long)" tabindex="0">isLocallyPlayedMiningSound(String, Position3f, long, long)</a></li>
 <li><a href="#isDuplicateBreakSound(net.raphimc.viabedrock.protocol.model.Position3f,int,net.raphimc.viabedrock.protocol.storage.BlockInteractionSoundTracker.BreakSoundSource)" tabindex="0">isDuplicateBreakSound(Position3f, int, BlockInteractionSoundTracker.BreakSoundSource)</a></li>
 <li><a href="#consumeLocallyPlayed(java.lang.String,net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">consumeLocallyPlayed(String, Position3f)</a></li>
+<li><a href="#consumeLocallyPlayedDoorEvent(net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">consumeLocallyPlayedDoorEvent(Position3f)</a></li>
 </ol>
 </li>
 </ol>
@@ -142,30 +143,33 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
  <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isDuplicateBreakSound(net.raphimc.viabedrock.protocol.model.Position3f,int,net.raphimc.viabedrock.protocol.storage.BlockInteractionSoundTracker.BreakSoundSource)" class="member-name-link">isDuplicateBreakSound</a><wbr>(<a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
- int&nbsp;blockState,
- <a href="BlockInteractionSoundTracker.BreakSoundSource.html" title="enum class in net.raphimc.viabedrock.protocol.storage">BlockInteractionSoundTracker.BreakSoundSource</a>&nbsp;source)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#consumeLocallyPlayedDoorEvent(net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">consumeLocallyPlayedDoorEvent</a><wbr>(<a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isLocallyPlayedMiningSound(java.lang.String,net.raphimc.viabedrock.protocol.model.Position3f,long,long)" class="member-name-link">isLocallyPlayedMiningSound</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;event,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isDuplicateBreakSound(net.raphimc.viabedrock.protocol.model.Position3f,int,net.raphimc.viabedrock.protocol.storage.BlockInteractionSoundTracker.BreakSoundSource)" class="member-name-link">isDuplicateBreakSound</a><wbr>(<a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+ int&nbsp;blockState,
+ <a href="BlockInteractionSoundTracker.BreakSoundSource.html" title="enum class in net.raphimc.viabedrock.protocol.storage">BlockInteractionSoundTracker.BreakSoundSource</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isLocallyPlayedMiningSound(java.lang.String,net.raphimc.viabedrock.protocol.model.Position3f,long,long)" class="member-name-link">isLocallyPlayedMiningSound</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;event,
  <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
  long&nbsp;actorUniqueId,
  long&nbsp;localPlayerUniqueId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recordInteraction(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.model.BlockState)" class="member-name-link">recordInteraction</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recordInteraction(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.model.BlockState)" class="member-name-link">recordInteraction</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
  <a href="../../api/model/BlockState.html" title="class in net.raphimc.viabedrock.api.model">BlockState</a>&nbsp;state)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recordPlacement(com.viaversion.viaversion.api.minecraft.BlockPosition,com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">recordPlacement</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;clickedPosition,
- com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;placedPosition)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startMining(com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">startMining</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recordPlacement(com.viaversion.viaversion.api.minecraft.BlockPosition,com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">recordPlacement</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;clickedPosition,
+ com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;placedPosition)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stopMining(com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">stopMining</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startMining(com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">startMining</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stopMining(com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">stopMining</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -263,6 +267,14 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">consumeLocallyPlayed</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;event,
  <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="consumeLocallyPlayedDoorEvent(net.raphimc.viabedrock.protocol.model.Position3f)">
+<h3>consumeLocallyPlayedDoorEvent</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">consumeLocallyPlayedDoorEvent</span><wbr><span class="parameters">(<a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position)</span></div>
 </div>
 </section>
 </li>
