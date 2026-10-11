@@ -57,9 +57,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#drawRemote(net.minecraft.client.gui.GuiGraphicsExtractor,java.lang.String,int,int,int,int)" tabindex="0">drawRemote(GuiGraphicsExtractor, String, int, int, int, int)</a></li>
+<li><a href="#drawRemote(net.minecraft.client.gui.GuiGraphicsExtractor,java.lang.String,int,int,int,int,boolean)" tabindex="0">drawRemote(GuiGraphicsExtractor, String, int, int, int, int, boolean)</a></li>
 <li><a href="#drawEncoded(net.minecraft.client.gui.GuiGraphicsExtractor,java.lang.String,java.lang.String,int,int,int,int)" tabindex="0">drawEncoded(GuiGraphicsExtractor, String, String, int, int, int, int)</a></li>
 <li><a href="#drawBundled(net.minecraft.client.gui.GuiGraphicsExtractor,java.lang.String,int,int,int,int)" tabindex="0">drawBundled(GuiGraphicsExtractor, String, int, int, int, int)</a></li>
 <li><a href="#drawScreenshot(net.minecraft.client.gui.GuiGraphicsExtractor,java.nio.file.Path,int,int,int,int)" tabindex="0">drawScreenshot(GuiGraphicsExtractor, Path, int, int, int, int)</a></li>
+<li><a href="#drawScreenshot(net.minecraft.client.gui.GuiGraphicsExtractor,java.nio.file.Path,int,int,int,int,boolean)" tabindex="0">drawScreenshot(GuiGraphicsExtractor, Path, int, int, int, int, boolean)</a></li>
 </ol>
 </li>
 </ol>
@@ -119,12 +121,30 @@ loadScripts(document, 'script');</script>
  int&nbsp;height)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#drawScreenshot(net.minecraft.client.gui.GuiGraphicsExtractor,java.nio.file.Path,int,int,int,int)" class="member-name-link">drawScreenshot</a><wbr>(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#drawRemote(net.minecraft.client.gui.GuiGraphicsExtractor,java.lang.String,int,int,int,int,boolean)" class="member-name-link">drawRemote</a><wbr>(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url,
+ int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;width,
+ int&nbsp;height,
+ boolean&nbsp;contain)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#drawScreenshot(net.minecraft.client.gui.GuiGraphicsExtractor,java.nio.file.Path,int,int,int,int)" class="member-name-link">drawScreenshot</a><wbr>(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
  int&nbsp;x,
  int&nbsp;y,
  int&nbsp;width,
  int&nbsp;height)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#drawScreenshot(net.minecraft.client.gui.GuiGraphicsExtractor,java.nio.file.Path,int,int,int,int,boolean)" class="member-name-link">drawScreenshot</a><wbr>(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
+ int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;width,
+ int&nbsp;height,
+ boolean&nbsp;contain)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -153,6 +173,20 @@ loadScripts(document, 'script');</script>
  int&nbsp;y,
  int&nbsp;width,
  int&nbsp;height)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="drawRemote(net.minecraft.client.gui.GuiGraphicsExtractor,java.lang.String,int,int,int,int,boolean)">
+<h3>drawRemote</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">drawRemote</span><wbr><span class="parameters">(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url,
+ int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;width,
+ int&nbsp;height,
+ boolean&nbsp;contain)</span></div>
 </div>
 </section>
 </li>
@@ -193,6 +227,20 @@ loadScripts(document, 'script');</script>
  int&nbsp;y,
  int&nbsp;width,
  int&nbsp;height)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="drawScreenshot(net.minecraft.client.gui.GuiGraphicsExtractor,java.nio.file.Path,int,int,int,int,boolean)">
+<h3>drawScreenshot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">drawScreenshot</span><wbr><span class="parameters">(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
+ int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;width,
+ int&nbsp;height,
+ boolean&nbsp;contain)</span></div>
 </div>
 </section>
 </li>

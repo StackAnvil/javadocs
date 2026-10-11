@@ -58,6 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#worlds(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" tabindex="0">worlds(BedrockAuthManager)</a></li>
+<li><a href="#joinHandle(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,java.lang.String)" tabindex="0">joinHandle(BedrockAuthManager, String)</a></li>
 <li><a href="#join(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.friends.BedrockFriendsService.FriendWorld)" tabindex="0">join(BedrockAuthManager, BedrockFriendsService.FriendWorld)</a></li>
 <li><a href="#nonceFor(java.net.SocketAddress)" tabindex="0">nonceFor(SocketAddress)</a></li>
 <li><a href="#leaveIfCurrent(java.net.SocketAddress)" tabindex="0">leaveIfCurrent(SocketAddress)</a></li>
@@ -117,18 +118,22 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#join(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,com.viaversion.viafabricplus.bedrock.friends.BedrockFriendsService.FriendWorld)" class="member-name-link">join</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
  <a href="BedrockFriendsService.FriendWorld.html" title="class in com.viaversion.viafabricplus.bedrock.friends">BedrockFriendsService.FriendWorld</a>&nbsp;world)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#leaveCurrent()" class="member-name-link">leaveCurrent</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="BedrockFriendsService.JoinedWorld.html" title="class in com.viaversion.viafabricplus.bedrock.friends">BedrockFriendsService.JoinedWorld</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#joinHandle(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,java.lang.String)" class="member-name-link">joinHandle</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;handleId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#leaveIfCurrent(java.net.SocketAddress)" class="member-name-link">leaveIfCurrent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/SocketAddress.html" title="class or interface in java.net" class="external-link">SocketAddress</a>&nbsp;remote)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#leaveCurrent()" class="member-name-link">leaveCurrent</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @Nullable <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#nonceFor(java.net.SocketAddress)" class="member-name-link">nonceFor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/SocketAddress.html" title="class or interface in java.net" class="external-link">SocketAddress</a>&nbsp;remote)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#leaveIfCurrent(java.net.SocketAddress)" class="member-name-link">leaveIfCurrent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/SocketAddress.html" title="class or interface in java.net" class="external-link">SocketAddress</a>&nbsp;remote)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockFriendsService.FriendWorld.html" title="class in com.viaversion.viafabricplus.bedrock.friends">BedrockFriendsService.FriendWorld</a>&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#worlds(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" class="member-name-link">worlds</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @Nullable <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#nonceFor(java.net.SocketAddress)" class="member-name-link">nonceFor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/SocketAddress.html" title="class or interface in java.net" class="external-link">SocketAddress</a>&nbsp;remote)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockFriendsService.FriendWorld.html" title="class in com.viaversion.viafabricplus.bedrock.friends">BedrockFriendsService.FriendWorld</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#worlds(net.raphimc.minecraftauth.bedrock.BedrockAuthManager)" class="member-name-link">worlds</a><wbr>(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -151,6 +156,15 @@ loadScripts(document, 'script');</script>
 <h3>worlds</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockFriendsService.FriendWorld.html" title="class in com.viaversion.viafabricplus.bedrock.friends">BedrockFriendsService.FriendWorld</a>&gt;&gt;</span>&nbsp;<span class="element-name">worlds</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="joinHandle(net.raphimc.minecraftauth.bedrock.BedrockAuthManager,java.lang.String)">
+<h3>joinHandle</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="BedrockFriendsService.JoinedWorld.html" title="class in com.viaversion.viafabricplus.bedrock.friends">BedrockFriendsService.JoinedWorld</a>&gt;</span>&nbsp;<span class="element-name">joinHandle</span><wbr><span class="parameters">(net.raphimc.minecraftauth.bedrock.BedrockAuthManager&nbsp;account,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;handleId)</span></div>
 </div>
 </section>
 </li>

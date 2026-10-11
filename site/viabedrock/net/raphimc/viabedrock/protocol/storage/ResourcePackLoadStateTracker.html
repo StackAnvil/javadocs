@@ -66,14 +66,17 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#getRequest(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key)" tabindex="0">getRequest(ResourcePack.Key)</a></li>
 <li><a href="#addRemoteResourcePack(net.raphimc.viabedrock.api.resourcepack.ResourcePack)" tabindex="0">addRemoteResourcePack(ResourcePack)</a></li>
+<li><a href="#saveRemoteResourcePacks()" tabindex="0">saveRemoteResourcePacks()</a></li>
 <li><a href="#addLocalResourcePack(net.raphimc.viabedrock.api.resourcepack.ResourcePack)" tabindex="0">addLocalResourcePack(ResourcePack)</a></li>
 <li><a href="#getResourcePack(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key)" tabindex="0">getResourcePack(ResourcePack.Key)</a></li>
 <li><a href="#loadRequestedResourcePacks()" tabindex="0">loadRequestedResourcePacks()</a></li>
 <li><a href="#loadUnrequestedResourcePacks(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key%5B%5D)" tabindex="0">loadUnrequestedResourcePacks(ResourcePack.Key[])</a></li>
+<li><a href="#failLoading(java.lang.Throwable)" tabindex="0">failLoading(Throwable)</a></li>
 <li><a href="#loadedFuture()" tabindex="0">loadedFuture()</a></li>
 <li><a href="#getBuiltinResourcePacks()" tabindex="0">getBuiltinResourcePacks()</a></li>
 <li><a href="#markStackReceived()" tabindex="0">markStackReceived()</a></li>
 <li><a href="#hasReceivedStack()" tabindex="0">hasReceivedStack()</a></li>
+<li><a href="#prepareStack(java.util.function.Supplier)" tabindex="0">prepareStack(Supplier)</a></li>
 <li><a href="#onRemove()" tabindex="0">onRemove()</a></li>
 </ol>
 </li>
@@ -148,33 +151,46 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRemoteResourcePack(net.raphimc.viabedrock.api.resourcepack.ResourcePack)" class="member-name-link">addRemoteResourcePack</a><wbr>(<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&nbsp;resourcePack)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBuiltinResourcePacks()" class="member-name-link">getBuiltinResourcePacks</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#failLoading(java.lang.Throwable)" class="member-name-link">failLoading</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;error)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ResourcePackLoadStateTracker.Info.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackLoadStateTracker.Info</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRequest(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key)" class="member-name-link">getRequest</a><wbr>(<a href="../../api/resourcepack/ResourcePack.Key.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack.Key</a>&nbsp;key)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBuiltinResourcePacks()" class="member-name-link">getBuiltinResourcePacks</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcePack(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key)" class="member-name-link">getResourcePack</a><wbr>(<a href="../../api/resourcepack/ResourcePack.Key.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack.Key</a>&nbsp;key)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ResourcePackLoadStateTracker.Info.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackLoadStateTracker.Info</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRequest(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key)" class="member-name-link">getRequest</a><wbr>(<a href="../../api/resourcepack/ResourcePack.Key.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack.Key</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasReceivedStack()" class="member-name-link">hasReceivedStack</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcePack(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key)" class="member-name-link">getResourcePack</a><wbr>(<a href="../../api/resourcepack/ResourcePack.Key.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack.Key</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadedFuture()" class="member-name-link">loadedFuture</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasReceivedStack()" class="member-name-link">hasReceivedStack</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadRequestedResourcePacks()" class="member-name-link">loadRequestedResourcePacks</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadedFuture()" class="member-name-link">loadedFuture</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadUnrequestedResourcePacks(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key%5B%5D)" class="member-name-link">loadUnrequestedResourcePacks</a><wbr>(<a href="../../api/resourcepack/ResourcePack.Key.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack.Key</a>[]&nbsp;keys)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadRequestedResourcePacks()" class="member-name-link">loadRequestedResourcePacks</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markStackReceived()" class="member-name-link">markStackReceived</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadUnrequestedResourcePacks(net.raphimc.viabedrock.api.resourcepack.ResourcePack.Key%5B%5D)" class="member-name-link">loadUnrequestedResourcePacks</a><wbr>(<a href="../../api/resourcepack/ResourcePack.Key.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack.Key</a>[]&nbsp;keys)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onRemove()" class="member-name-link">onRemove</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markStackReceived()" class="member-name-link">markStackReceived</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onRemove()" class="member-name-link">onRemove</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareStack(java.util.function.Supplier)" class="member-name-link">prepareStack</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;work)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Used when resource-pack translation has no HTTP server to own preparation workers.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveRemoteResourcePacks()" class="member-name-link">saveRemoteResourcePacks</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Preserve source-cache coverage for downloaded INFO packs even when STACK does not select them.</div>
+</div>
 </div>
 </div>
 </div>
@@ -229,6 +245,15 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="saveRemoteResourcePacks()">
+<h3>saveRemoteResourcePacks</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveRemoteResourcePacks</span>()</div>
+<div class="block">Preserve source-cache coverage for downloaded INFO packs even when STACK does not select them.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="addLocalResourcePack(net.raphimc.viabedrock.api.resourcepack.ResourcePack)">
 <h3>addLocalResourcePack</h3>
 <div class="horizontal-scroll">
@@ -261,6 +286,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="failLoading(java.lang.Throwable)">
+<h3>failLoading</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">failLoading</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;error)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="loadedFuture()">
 <h3>loadedFuture</h3>
 <div class="horizontal-scroll">
@@ -289,6 +322,15 @@ loadScripts(document, 'script');</script>
 <h3>hasReceivedStack</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasReceivedStack</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="prepareStack(java.util.function.Supplier)">
+<h3>prepareStack</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;T&gt;</span>&nbsp;<span class="element-name">prepareStack</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;work)</span></div>
+<div class="block">Used when resource-pack translation has no HTTP server to own preparation workers.</div>
 </div>
 </section>
 </li>

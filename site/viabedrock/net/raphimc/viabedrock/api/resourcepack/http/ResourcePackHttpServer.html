@@ -65,6 +65,8 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#addConnection(java.util.UUID,com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.http.ConvertedResourcePackCache.Pack)" tabindex="0">addConnection(UUID, UserConnection, ConvertedResourcePackCache.Pack)</a></li>
 <li><a href="#prepare(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" tabindex="0">prepare(ResourcePackStorage)</a></li>
+<li><a href="#prepareResources(java.util.function.Supplier)" tabindex="0">prepareResources(Supplier)</a></li>
+<li><a href="#prepareStorage(java.util.function.Supplier)" tabindex="0">prepareStorage(Supplier)</a></li>
 <li><a href="#stop()" tabindex="0">stop()</a></li>
 <li><a href="#getUrl()" tabindex="0">getUrl()</a></li>
 <li><a href="#getChannel()" tabindex="0">getChannel()</a></li>
@@ -127,6 +129,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="ConvertedResourcePackCache.Pack.html" title="class in net.raphimc.viabedrock.api.resourcepack.http">ConvertedResourcePackCache.Pack</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" class="member-name-link">prepare</a><wbr>(<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareResources(java.util.function.Supplier)" class="member-name-link">prepareResources</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;work)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareStorage(java.util.function.Supplier)" class="member-name-link">prepareStorage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&gt;&nbsp;work)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop()" class="member-name-link">stop</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -178,6 +186,22 @@ loadScripts(document, 'script');</script>
 <h3>prepare</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ConvertedResourcePackCache.Pack.html" title="class in net.raphimc.viabedrock.api.resourcepack.http">ConvertedResourcePackCache.Pack</a>&gt;</span>&nbsp;<span class="element-name">prepare</span><wbr><span class="parameters">(<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="prepareResources(java.util.function.Supplier)">
+<h3>prepareResources</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;T&gt;</span>&nbsp;<span class="element-name">prepareResources</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;work)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="prepareStorage(java.util.function.Supplier)">
+<h3>prepareStorage</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&gt;</span>&nbsp;<span class="element-name">prepareStorage</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&gt;&nbsp;work)</span></div>
 </div>
 </section>
 </li>
