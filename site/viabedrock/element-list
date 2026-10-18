@@ -17,6 +17,7 @@ net.raphimc.viabedrock.api.model.container.dynamic
 net.raphimc.viabedrock.api.model.container.entity
 net.raphimc.viabedrock.api.model.container.player
 net.raphimc.viabedrock.api.model.entity
+net.raphimc.viabedrock.api.model.entity.properties
 net.raphimc.viabedrock.api.model.scoreboard
 net.raphimc.viabedrock.api.modinterface
 net.raphimc.viabedrock.api.protocol
@@ -40,7 +41,6 @@ net.raphimc.viabedrock.protocol.data.enums.java.generated
 net.raphimc.viabedrock.protocol.data.generated.bedrock
 net.raphimc.viabedrock.protocol.data.generated.java
 net.raphimc.viabedrock.protocol.model
-net.raphimc.viabedrock.protocol.model.entity
 net.raphimc.viabedrock.protocol.model.inventory
 net.raphimc.viabedrock.protocol.model.recipe
 net.raphimc.viabedrock.protocol.packet
