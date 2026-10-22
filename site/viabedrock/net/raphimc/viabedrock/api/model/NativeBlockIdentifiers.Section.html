@@ -61,7 +61,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(int,int,int,int,net.raphimc.viabedrock.api.model.NativeBlockSection)" tabindex="0">Section(int, int, int, int, NativeBlockSection)</a></li>
+<li><a href="#%3Cinit%3E(int,int,int,int,int,net.raphimc.viabedrock.api.model.NativeBlockSection)" tabindex="0">Section(int, int, int, int, int, NativeBlockSection)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -73,6 +73,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#chunkX()" tabindex="0">chunkX()</a></li>
 <li><a href="#sectionY()" tabindex="0">sectionY()</a></li>
 <li><a href="#chunkZ()" tabindex="0">chunkZ()</a></li>
+<li><a href="#layer()" tabindex="0">layer()</a></li>
 <li><a href="#blocks()" tabindex="0">blocks()</a></li>
 </ol>
 </li>
@@ -99,7 +100,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeBlockIdentifiers.Section</span>(int&nbsp;dimension, int&nbsp;chunkX, int&nbsp;sectionY, int&nbsp;chunkZ, <a href="NativeBlockSection.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockSection</a>&nbsp;blocks)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeBlockIdentifiers.Section</span>(int&nbsp;dimension, int&nbsp;chunkX, int&nbsp;sectionY, int&nbsp;chunkZ, int&nbsp;layer, <a href="NativeBlockSection.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockSection</a>&nbsp;blocks)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers</a></span></div>
 </div>
@@ -121,7 +122,7 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <h2>Field Summary</h2>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.raphimc.viabedrock.api.model.NativeBlockIdentifiers">Fields inherited from interface&nbsp;<a href="NativeBlockIdentifiers.html#field-summary" title="interface in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers</a></h3>
-<code><a href="NativeBlockIdentifiers.html#CHANNEL">CHANNEL</a>, <a href="NativeBlockIdentifiers.html#TYPE">TYPE</a></code></div>
+<code><a href="NativeBlockIdentifiers.html#CHANNEL">CHANNEL</a>, <a href="NativeBlockIdentifiers.html#MAX_DICTIONARY_BYTES">MAX_DICTIONARY_BYTES</a>, <a href="NativeBlockIdentifiers.html#TYPE">TYPE</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -132,10 +133,11 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,int,net.raphimc.viabedrock.api.model.NativeBlockSection)" class="member-name-link">Section</a><wbr>(int&nbsp;dimension,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,int,int,net.raphimc.viabedrock.api.model.NativeBlockSection)" class="member-name-link">Section</a><wbr>(int&nbsp;dimension,
  int&nbsp;chunkX,
  int&nbsp;sectionY,
  int&nbsp;chunkZ,
+ int&nbsp;layer,
  <a href="NativeBlockSection.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockSection</a>&nbsp;blocks)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Section</code> record class.</div>
@@ -185,13 +187,18 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <div class="block">Returns a hash code value for this object.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sectionY()" class="member-name-link">sectionY</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#layer()" class="member-name-link">layer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>layer</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sectionY()" class="member-name-link">sectionY</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>sectionY</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -212,13 +219,14 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,int,int,int,net.raphimc.viabedrock.api.model.NativeBlockSection)">
+<section class="detail" id="&lt;init&gt;(int,int,int,int,int,net.raphimc.viabedrock.api.model.NativeBlockSection)">
 <h3>Section</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Section</span><wbr><span class="parameters">(int&nbsp;dimension,
  int&nbsp;chunkX,
  int&nbsp;sectionY,
  int&nbsp;chunkZ,
+ int&nbsp;layer,
  <a href="NativeBlockSection.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockSection</a>&nbsp;blocks)</span></div>
 <div class="block">Creates an instance of a <code>Section</code> record class.</div>
 <dl class="notes">
@@ -227,6 +235,7 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <dd><code>chunkX</code> - the value for the <code>chunkX</code> record component</dd>
 <dd><code>sectionY</code> - the value for the <code>sectionY</code> record component</dd>
 <dd><code>chunkZ</code> - the value for the <code>chunkZ</code> record component</dd>
+<dd><code>layer</code> - the value for the <code>layer</code> record component</dd>
 <dd><code>blocks</code> - the value for the <code>blocks</code> record component</dd>
 </dl>
 </div>
@@ -337,6 +346,19 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>chunkZ</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="layer()">
+<h3>layer</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">layer</span>()</div>
+<div class="block">Returns the value of the <code>layer</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>layer</code> record component</dd>
 </dl>
 </div>
 </section>

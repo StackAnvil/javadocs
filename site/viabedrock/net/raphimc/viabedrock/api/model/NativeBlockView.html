@@ -67,6 +67,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#ready()" tabindex="0">ready()</a></li>
 <li><a href="#accept(net.raphimc.viabedrock.api.model.NativeBlockIdentifiers)" tabindex="0">accept(NativeBlockIdentifiers)</a></li>
 <li><a href="#block(int,int,int)" tabindex="0">block(int, int, int)</a></li>
+<li><a href="#state(int,int,int,int)" tabindex="0">state(int, int, int, int)</a></li>
 </ol>
 </li>
 </ol>
@@ -84,7 +85,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">NativeBlockView</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">A client mirror of primary block identities, with no reverse Java mapping.</div>
+<div class="block">A client mirror of both native block layers and state properties, with no reverse Java mapping.</div>
 </div>
 </section>
 <section class="summary">
@@ -127,6 +128,14 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ready()" class="member-name-link">ready</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeBlockIdentifiers.Name.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Name</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(int,int,int,int)" class="member-name-link">state</a><wbr>(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;z,
+ int&nbsp;layer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the authoritative state, native air outside loaded data, or null before reset/for unknown IDs.</div>
+</div>
 </div>
 </div>
 </div>
@@ -191,6 +200,18 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">block</span><wbr><span class="parameters">(int&nbsp;x,
  int&nbsp;y,
  int&nbsp;z)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="state(int,int,int,int)">
+<h3>state</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeBlockIdentifiers.Name.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers.Name</a></span>&nbsp;<span class="element-name">state</span><wbr><span class="parameters">(int&nbsp;x,
+ int&nbsp;y,
+ int&nbsp;z,
+ int&nbsp;layer)</span></div>
+<div class="block">Returns the authoritative state, native air outside loaded data, or null before reset/for unknown IDs.</div>
 </div>
 </section>
 </li>

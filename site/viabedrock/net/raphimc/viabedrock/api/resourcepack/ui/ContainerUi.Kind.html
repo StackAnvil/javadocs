@@ -68,6 +68,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#HOPPER" tabindex="0">HOPPER</a></li>
 <li><a href="#DISPENSER" tabindex="0">DISPENSER</a></li>
 <li><a href="#DROPPER" tabindex="0">DROPPER</a></li>
+<li><a href="#BREWING_STAND" tabindex="0">BREWING_STAND</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -77,6 +78,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#wireId()" tabindex="0">wireId()</a></li>
 <li><a href="#containerSlots()" tabindex="0">containerSlots()</a></li>
 <li><a href="#legacy()" tabindex="0">legacy()</a></li>
+<li><a href="#minimumFormat()" tabindex="0">minimumFormat()</a></li>
+<li><a href="#initialData()" tabindex="0">initialData()</a></li>
+<li><a href="#validateData(java.util.List)" tabindex="0">validateData(List)</a></li>
 <li><a href="#fromWireId(int)" tabindex="0">fromWireId(int)</a></li>
 </ol>
 </li>
@@ -128,20 +132,22 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#BARREL" class="member-name-link">BARREL</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#CHEST_3_ROWS" class="member-name-link">CHEST_3_ROWS</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#BREWING_STAND" class="member-name-link">BREWING_STAND</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#CHEST_6_ROWS" class="member-name-link">CHEST_6_ROWS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#CHEST_3_ROWS" class="member-name-link">CHEST_3_ROWS</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#DISPENSER" class="member-name-link">DISPENSER</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#CHEST_6_ROWS" class="member-name-link">CHEST_6_ROWS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#DROPPER" class="member-name-link">DROPPER</a></code></div>
+<div class="col-first even-row-color"><code><a href="#DISPENSER" class="member-name-link">DISPENSER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ENDER_CHEST" class="member-name-link">ENDER_CHEST</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#DROPPER" class="member-name-link">DROPPER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#HOPPER" class="member-name-link">HOPPER</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ENDER_CHEST" class="member-name-link">ENDER_CHEST</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SHULKER_BOX" class="member-name-link">SHULKER_BOX</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#HOPPER" class="member-name-link">HOPPER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#SHULKER_BOX" class="member-name-link">SHULKER_BOX</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -162,23 +168,32 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromWireId(int)" class="member-name-link">fromWireId</a><wbr>(int&nbsp;wireId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#legacy()" class="member-name-link">legacy</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialData()" class="member-name-link">initialData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#legacy()" class="member-name-link">legacy</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#minimumFormat()" class="member-name-link">minimumFormat</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#validateData(java.util.List)" class="member-name-link">validateData</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;data)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#wireId()" class="member-name-link">wireId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#wireId()" class="member-name-link">wireId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -263,6 +278,14 @@ the order they are declared.</div>
 </div>
 </section>
 </li>
+<li>
+<section class="detail" id="BREWING_STAND">
+<h3>BREWING_STAND</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a></span>&nbsp;<span class="element-name">BREWING_STAND</span></div>
+</div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -327,6 +350,30 @@ not permitted.)</div>
 <h3>legacy</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">legacy</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="minimumFormat()">
+<h3>minimumFormat</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">minimumFormat</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="initialData()">
+<h3>initialData</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">initialData</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="validateData(java.util.List)">
+<h3>validateData</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">validateData</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;data)</span></div>
 </div>
 </section>
 </li>

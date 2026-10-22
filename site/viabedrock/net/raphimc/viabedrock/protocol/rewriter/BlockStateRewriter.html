@@ -63,9 +63,16 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#registeredBlockIdentifier(java.lang.String)" tabindex="0">registeredBlockIdentifier(String)</a></li>
+<li><a href="#restrictionBlocks(java.lang.String%5B%5D)" tabindex="0">restrictionBlocks(String[])</a></li>
 <li><a href="#bedrockId(com.viaversion.nbt.tag.CompoundTag)" tabindex="0">bedrockId(CompoundTag)</a></li>
 <li><a href="#bedrockId(net.raphimc.viabedrock.api.model.BlockState)" tabindex="0">bedrockId(BlockState)</a></li>
 <li><a href="#blockState(int)" tabindex="0">blockState(int)</a></li>
+<li><a href="#blockItemRecipeDescriptor(int)" tabindex="0">blockItemRecipeDescriptor(int)</a></li>
+<li><a href="#blockItemNumericId(int)" tabindex="0">blockItemNumericId(int)</a></li>
+<li><a href="#blockItemState(java.lang.String,short)" tabindex="0">blockItemState(String, short)</a></li>
+<li><a href="#blockItemRecipeDescriptor(java.lang.String,short)" tabindex="0">blockItemRecipeDescriptor(String, short)</a></li>
+<li><a href="#registeredRuntimeId(net.raphimc.viabedrock.api.model.BedrockBlockState)" tabindex="0">registeredRuntimeId(BedrockBlockState)</a></li>
 <li><a href="#bedrockId(int)" tabindex="0">bedrockId(int)</a></li>
 <li><a href="#javaId(int)" tabindex="0">javaId(int)</a></li>
 <li><a href="#disableCustomBlocks(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" tabindex="0">disableCustomBlocks(ResourcePackStorage)</a></li>
@@ -133,6 +140,22 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#bedrockId(net.raphimc.viabedrock.api.model.BlockState)" class="member-name-link">bedrockId</a><wbr>(<a href="../../api/model/BlockState.html" title="class in net.raphimc.viabedrock.api.model">BlockState</a>&nbsp;bedrockBlockState)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockItemNumericId(int)" class="member-name-link">blockItemNumericId</a><wbr>(int&nbsp;runtimeId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Runtime ownership remains known even when an archetype's descriptor is unverified.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/chunk/blockstate/BlockItemDescriptor.html" title="class in net.raphimc.viabedrock.api.chunk.blockstate">BlockItemDescriptor</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockItemRecipeDescriptor(int)" class="member-name-link">blockItemRecipeDescriptor</a><wbr>(int&nbsp;runtimeId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/chunk/blockstate/BlockItemDescriptor.html" title="class in net.raphimc.viabedrock.api.chunk.blockstate">BlockItemDescriptor</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockItemRecipeDescriptor(java.lang.String,short)" class="member-name-link">blockItemRecipeDescriptor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ short&nbsp;metadata)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/BedrockBlockState.html" title="class in net.raphimc.viabedrock.api.model">BedrockBlockState</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockItemState(java.lang.String,short)" class="member-name-link">blockItemState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ short&nbsp;metadata)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/BlockState.html" title="class in net.raphimc.viabedrock.api.model">BlockState</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockState(int)" class="member-name-link">blockState</a><wbr>(int&nbsp;bedrockBlockStateId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -143,14 +166,23 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaId(int)" class="member-name-link">javaId</a><wbr>(int&nbsp;bedrockBlockStateId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tag(int)" class="member-name-link">tag</a><wbr>(int&nbsp;bedrockBlockStateId)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#registeredBlockIdentifier(java.lang.String)" class="member-name-link">registeredBlockIdentifier</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.fastutil.ints.IntSortedSet</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#validBlockStates(java.lang.String)" class="member-name-link">validBlockStates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockBlockIdentifier)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#registeredRuntimeId(net.raphimc.viabedrock.api.model.BedrockBlockState)" class="member-name-link">registeredRuntimeId</a><wbr>(<a href="../../api/model/BedrockBlockState.html" title="class in net.raphimc.viabedrock.api.model">BedrockBlockState</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#waterlog(int)" class="member-name-link">waterlog</a><wbr>(int&nbsp;javaBlockStateId)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restrictionBlocks(java.lang.String%5B%5D)" class="member-name-link">restrictionBlocks</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;identifiers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tag(int)" class="member-name-link">tag</a><wbr>(int&nbsp;bedrockBlockStateId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.fastutil.ints.IntSortedSet</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#validBlockStates(java.lang.String)" class="member-name-link">validBlockStates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockBlockIdentifier)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#waterlog(int)" class="member-name-link">waterlog</a><wbr>(int&nbsp;javaBlockStateId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -190,6 +222,22 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="registeredBlockIdentifier(java.lang.String)">
+<h3>registeredBlockIdentifier</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">registeredBlockIdentifier</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="restrictionBlocks(java.lang.String[])">
+<h3>restrictionBlocks</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">restrictionBlocks</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;identifiers)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="bedrockId(com.viaversion.nbt.tag.CompoundTag)">
 <h3>bedrockId</h3>
 <div class="horizontal-scroll">
@@ -210,6 +258,49 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h3>blockState</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/BlockState.html" title="class in net.raphimc.viabedrock.api.model">BlockState</a></span>&nbsp;<span class="element-name">blockState</span><wbr><span class="parameters">(int&nbsp;bedrockBlockStateId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="blockItemRecipeDescriptor(int)">
+<h3>blockItemRecipeDescriptor</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/chunk/blockstate/BlockItemDescriptor.html" title="class in net.raphimc.viabedrock.api.chunk.blockstate">BlockItemDescriptor</a></span>&nbsp;<span class="element-name">blockItemRecipeDescriptor</span><wbr><span class="parameters">(int&nbsp;runtimeId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="blockItemNumericId(int)">
+<h3>blockItemNumericId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">blockItemNumericId</span><wbr><span class="parameters">(int&nbsp;runtimeId)</span></div>
+<div class="block">Runtime ownership remains known even when an archetype's descriptor is unverified.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="blockItemState(java.lang.String,short)">
+<h3>blockItemState</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/BedrockBlockState.html" title="class in net.raphimc.viabedrock.api.model">BedrockBlockState</a></span>&nbsp;<span class="element-name">blockItemState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ short&nbsp;metadata)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="blockItemRecipeDescriptor(java.lang.String,short)">
+<h3>blockItemRecipeDescriptor</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/chunk/blockstate/BlockItemDescriptor.html" title="class in net.raphimc.viabedrock.api.chunk.blockstate">BlockItemDescriptor</a></span>&nbsp;<span class="element-name">blockItemRecipeDescriptor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ short&nbsp;metadata)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="registeredRuntimeId(net.raphimc.viabedrock.api.model.BedrockBlockState)">
+<h3>registeredRuntimeId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">registeredRuntimeId</span><wbr><span class="parameters">(<a href="../../api/model/BedrockBlockState.html" title="class in net.raphimc.viabedrock.api.model">BedrockBlockState</a>&nbsp;state)</span></div>
 </div>
 </section>
 </li>

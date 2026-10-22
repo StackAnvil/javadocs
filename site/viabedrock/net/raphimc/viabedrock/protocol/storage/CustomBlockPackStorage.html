@@ -64,11 +64,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#expect(java.util.UUID)" tabindex="0">expect(UUID)</a></li>
-<li><a href="#queue(net.raphimc.viabedrock.protocol.ClientboundBedrockPackets,byte%5B%5D)" tabindex="0">queue(ClientboundBedrockPackets, byte[])</a></li>
 <li><a href="#complete(java.util.UUID,boolean)" tabindex="0">complete(UUID, boolean)</a></li>
-<li><a href="#drain(com.viaversion.viaversion.api.connection.UserConnection)" tabindex="0">drain(UserConnection)</a></li>
-<li><a href="#drain(java.util.function.BiConsumer)" tabindex="0">drain(BiConsumer)</a></li>
-<li><a href="#packetCount()" tabindex="0">packetCount()</a></li>
 </ol>
 </li>
 </ol>
@@ -91,7 +87,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">CustomBlockPackStorage</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
-<div class="block">Holds ordered world packets while the configuration client loads state-specific block models.</div>
+<div class="block">Tracks acknowledgement of the supplemental block-model pack during configuration.</div>
 </div>
 </section>
 <section class="summary">
@@ -125,20 +121,7 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
  boolean&nbsp;loaded)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drain(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">drain</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drain(java.util.function.BiConsumer)" class="member-name-link">drain</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="../ClientboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ClientboundBedrockPackets</a>, byte[]&gt;&nbsp;receiver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#expect(java.util.UUID)" class="member-name-link">expect</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;id)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#packetCount()" class="member-name-link">packetCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queue(net.raphimc.viabedrock.protocol.ClientboundBedrockPackets,byte%5B%5D)" class="member-name-link">queue</a><wbr>(<a href="../ClientboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ClientboundBedrockPackets</a>&nbsp;type,
- byte[]&nbsp;payload)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -185,44 +168,11 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="queue(net.raphimc.viabedrock.protocol.ClientboundBedrockPackets,byte[])">
-<h3>queue</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">queue</span><wbr><span class="parameters">(<a href="../ClientboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ClientboundBedrockPackets</a>&nbsp;type,
- byte[]&nbsp;payload)</span></div>
-</div>
-</section>
-</li>
-<li>
 <section class="detail" id="complete(java.util.UUID,boolean)">
 <h3>complete</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">complete</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;id,
  boolean&nbsp;loaded)</span></div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="drain(com.viaversion.viaversion.api.connection.UserConnection)">
-<h3>drain</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drain</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</span></div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="drain(java.util.function.BiConsumer)">
-<h3>drain</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drain</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="../ClientboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ClientboundBedrockPackets</a>, byte[]&gt;&nbsp;receiver)</span></div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="packetCount()">
-<h3>packetCount</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">packetCount</span>()</div>
 </div>
 </section>
 </li>

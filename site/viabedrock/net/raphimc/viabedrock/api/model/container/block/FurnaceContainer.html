@@ -68,6 +68,9 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#acceptsRecipe(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage)" tabindex="0">acceptsRecipe(CraftingDataStorage)</a></li>
 <li><a href="#handleRecipePlacement(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,boolean)" tabindex="0">handleRecipePlacement(CraftingDataStorage, boolean)</a></li>
+<li><a href="#recipeCatalog()" tabindex="0">recipeCatalog()</a></li>
+<li><a href="#recipeAvailability(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,boolean,boolean)" tabindex="0">recipeAvailability(CraftingDataStorage, boolean, boolean)</a></li>
+<li><a href="#recipeAvailability(net.raphimc.viabedrock.api.model.container.CookingRecipeCatalog,net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,boolean,boolean)" tabindex="0">recipeAvailability(CookingRecipeCatalog, CraftingDataStorage, boolean, boolean)</a></li>
 <li><a href="#getFullContainerName(int)" tabindex="0">getFullContainerName(int)</a></li>
 <li><a href="#translateContainerData(int)" tabindex="0">translateContainerData(int)</a></li>
 </ol>
@@ -159,9 +162,25 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleRecipePlacement(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,boolean)" class="member-name-link">handleRecipePlacement</a><wbr>(<a href="../../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
  boolean&nbsp;maxItems)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateContainerData(int)" class="member-name-link">translateContainerData</a><wbr>(int&nbsp;containerData)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeAvailability(net.raphimc.viabedrock.api.model.container.CookingRecipeCatalog,net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,boolean,boolean)" class="member-name-link">recipeAvailability</a><wbr>(<a href="../CookingRecipeCatalog.html" title="class in net.raphimc.viabedrock.api.model.container">CookingRecipeCatalog</a>&nbsp;catalog,
+ <a href="../../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeAvailability(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,boolean,boolean)" class="member-name-link">recipeAvailability</a><wbr>(<a href="../../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native output availability includes all matching unlocked alternatives at this station.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../CookingRecipeCatalog.html" title="class in net.raphimc.viabedrock.api.model.container">CookingRecipeCatalog</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeCatalog()" class="member-name-link">recipeCatalog</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateContainerData(int)" class="member-name-link">translateContainerData</a><wbr>(int&nbsp;containerData)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -228,6 +247,36 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">handleRecipePlacement</span><wbr><span class="parameters">(<a href="../../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
  boolean&nbsp;maxItems)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="recipeCatalog()">
+<h3>recipeCatalog</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../CookingRecipeCatalog.html" title="class in net.raphimc.viabedrock.api.model.container">CookingRecipeCatalog</a></span>&nbsp;<span class="element-name">recipeCatalog</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="recipeAvailability(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,boolean,boolean)">
+<h3>recipeAvailability</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">recipeAvailability</span><wbr><span class="parameters">(<a href="../../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor)</span></div>
+<div class="block">Native output availability includes all matching unlocked alternatives at this station.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="recipeAvailability(net.raphimc.viabedrock.api.model.container.CookingRecipeCatalog,net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,boolean,boolean)">
+<h3>recipeAvailability</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">recipeAvailability</span><wbr><span class="parameters">(<a href="../CookingRecipeCatalog.html" title="class in net.raphimc.viabedrock.api.model.container">CookingRecipeCatalog</a>&nbsp;catalog,
+ <a href="../../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor)</span></div>
 </div>
 </section>
 </li>

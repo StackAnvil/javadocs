@@ -63,8 +63,12 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#tracking()" tabindex="0">tracking()</a></li>
+<li><a href="#follow(float)" tabindex="0">follow(float)</a></li>
+<li><a href="#epoch()" tabindex="0">epoch()</a></li>
+<li><a href="#aimAssistContext()" tabindex="0">aimAssistContext()</a></li>
 <li><a href="#state()" tabindex="0">state()</a></li>
-<li><a href="#resetPresets()" tabindex="0">resetPresets()</a></li>
+<li><a href="#resetPresets(net.raphimc.viabedrock.protocol.model.CameraPresetRegistry)" tabindex="0">resetPresets(CameraPresetRegistry)</a></li>
 <li><a href="#apply(net.raphimc.viabedrock.protocol.model.CameraInstruction,net.raphimc.viabedrock.protocol.model.CameraPresetRegistry)" tabindex="0">apply(CameraInstruction, CameraPresetRegistry)</a></li>
 </ol>
 </li>
@@ -112,15 +116,27 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.protocol.model.CameraInstruction,net.raphimc.viabedrock.protocol.model.CameraPresetRegistry)" class="member-name-link">apply</a><wbr>(<a href="CameraInstruction.html" title="class in net.raphimc.viabedrock.protocol.model">CameraInstruction</a>&nbsp;instruction,
- <a href="CameraPresetRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraPresetRegistry</a>&nbsp;registry)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/CameraAimAssistView.Context.html" title="class in net.raphimc.viabedrock.api.model">CameraAimAssistView.Context</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#aimAssistContext()" class="member-name-link">aimAssistContext</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetPresets()" class="member-name-link">resetPresets</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.protocol.model.CameraInstruction,net.raphimc.viabedrock.protocol.model.CameraPresetRegistry)" class="member-name-link">apply</a><wbr>(<a href="CameraInstruction.html" title="class in net.raphimc.viabedrock.protocol.model">CameraInstruction</a>&nbsp;instruction,
+ <a href="CameraPresetRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraPresetRegistry</a>&nbsp;registry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/CameraPositionState.html" title="class in net.raphimc.viabedrock.api.model">CameraPositionState</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state()" class="member-name-link">state</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#epoch()" class="member-name-link">epoch</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/CameraFollowState.html" title="class in net.raphimc.viabedrock.api.model">CameraFollowState</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#follow(float)" class="member-name-link">follow</a><wbr>(float&nbsp;playerOriginOffset)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetPresets(net.raphimc.viabedrock.protocol.model.CameraPresetRegistry)" class="member-name-link">resetPresets</a><wbr>(<a href="CameraPresetRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraPresetRegistry</a>&nbsp;registry)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/CameraPositionState.html" title="class in net.raphimc.viabedrock.api.model">CameraPositionState</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state()" class="member-name-link">state</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/CameraTrackingState.html" title="class in net.raphimc.viabedrock.api.model">CameraTrackingState</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tracking()" class="member-name-link">tracking</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -156,6 +172,38 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="tracking()">
+<h3>tracking</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/CameraTrackingState.html" title="class in net.raphimc.viabedrock.api.model">CameraTrackingState</a></span>&nbsp;<span class="element-name">tracking</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="follow(float)">
+<h3>follow</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/CameraFollowState.html" title="class in net.raphimc.viabedrock.api.model">CameraFollowState</a></span>&nbsp;<span class="element-name">follow</span><wbr><span class="parameters">(float&nbsp;playerOriginOffset)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="epoch()">
+<h3>epoch</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">epoch</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="aimAssistContext()">
+<h3>aimAssistContext</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/CameraAimAssistView.Context.html" title="class in net.raphimc.viabedrock.api.model">CameraAimAssistView.Context</a></span>&nbsp;<span class="element-name">aimAssistContext</span>()</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="state()">
 <h3>state</h3>
 <div class="horizontal-scroll">
@@ -164,10 +212,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="resetPresets()">
+<section class="detail" id="resetPresets(net.raphimc.viabedrock.protocol.model.CameraPresetRegistry)">
 <h3>resetPresets</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetPresets</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetPresets</span><wbr><span class="parameters">(<a href="CameraPresetRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraPresetRegistry</a>&nbsp;registry)</span></div>
 </div>
 </section>
 </li>

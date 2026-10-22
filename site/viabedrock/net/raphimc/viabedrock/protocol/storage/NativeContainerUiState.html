@@ -64,10 +64,11 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi)" tabindex="0">prepare(int, ContainerUi.Kind, ContainerUi.Title, ContainerUi)</a></li>
+<li><a href="#prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)" tabindex="0">prepare(int, ContainerUi.Kind, ContainerUi.Title, ContainerUi, List)</a></li>
 <li><a href="#prepareActions(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)" tabindex="0">prepareActions(int, ContainerUi.Kind, ContainerUi.Title, ContainerUi, Function)</a></li>
 <li><a href="#handleAction(net.raphimc.viabedrock.api.model.NativeContainerAction)" tabindex="0">handleAction(NativeContainerAction)</a></li>
 <li><a href="#blocksVanillaClicks()" tabindex="0">blocksVanillaClicks()</a></li>
+<li><a href="#updateData(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,java.util.List)" tabindex="0">updateData(int, ContainerUi.Kind, List)</a></li>
 <li><a href="#clearActions()" tabindex="0">clearActions()</a></li>
 </ol>
 </li>
@@ -147,10 +148,11 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleAction(net.raphimc.viabedrock.api.model.NativeContainerAction)" class="member-name-link">handleAction</a><wbr>(<a href="../../api/model/NativeContainerAction.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerAction</a>&nbsp;action)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi)" class="member-name-link">prepare</a><wbr>(int&nbsp;menuId,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)" class="member-name-link">prepare</a><wbr>(int&nbsp;menuId,
  <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
  <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
- <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui)</code></div>
+ <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareActions(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)" class="member-name-link">prepareActions</a><wbr>(int&nbsp;menuId,
@@ -159,6 +161,11 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
  <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a>, <a href="NativeContainerUiState.Actions.html" title="interface in net.raphimc.viabedrock.protocol.storage">NativeContainerUiState.Actions</a>&gt;&nbsp;backend)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeContainerData.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerData</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateData(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,java.util.List)" class="member-name-link">updateData</a><wbr>(int&nbsp;menuId,
+ <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;data)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -196,13 +203,14 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi)">
+<section class="detail" id="prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)">
 <h3>prepare</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></span>&nbsp;<span class="element-name">prepare</span><wbr><span class="parameters">(int&nbsp;menuId,
  <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
  <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
- <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui)</span></div>
+ <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;data)</span></div>
 </div>
 </section>
 </li>
@@ -231,6 +239,16 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h3>blocksVanillaClicks</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">blocksVanillaClicks</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="updateData(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,java.util.List)">
+<h3>updateData</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeContainerData.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerData</a></span>&nbsp;<span class="element-name">updateData</span><wbr><span class="parameters">(int&nbsp;menuId,
+ <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;data)</span></div>
 </div>
 </section>
 </li>

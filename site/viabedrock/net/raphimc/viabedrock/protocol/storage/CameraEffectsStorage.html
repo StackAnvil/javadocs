@@ -63,15 +63,21 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#aimAssist()" tabindex="0">aimAssist()</a></li>
+<li><a href="#activateAimAssist(net.raphimc.viabedrock.api.model.CameraAimAssistActivation.Control)" tabindex="0">activateAimAssist(CameraAimAssistActivation.Control)</a></li>
+<li><a href="#controlScheme()" tabindex="0">controlScheme()</a></li>
+<li><a href="#setControlScheme(int)" tabindex="0">setControlScheme(int)</a></li>
+<li><a href="#tickAimAssist()" tabindex="0">tickAimAssist()</a></li>
 <li><a href="#lastInstruction()" tabindex="0">lastInstruction()</a></li>
 <li><a href="#presets()" tabindex="0">presets()</a></li>
+<li><a href="#setSplines(net.raphimc.viabedrock.protocol.model.CameraSplineRegistry)" tabindex="0">setSplines(CameraSplineRegistry)</a></li>
 <li><a href="#setPresets(net.raphimc.viabedrock.protocol.model.CameraPresetRegistry)" tabindex="0">setPresets(CameraPresetRegistry)</a></li>
 <li><a href="#position()" tabindex="0">position()</a></li>
 <li><a href="#apply(net.raphimc.viabedrock.protocol.model.CameraInstruction)" tabindex="0">apply(CameraInstruction)</a></li>
 <li><a href="#markJoined()" tabindex="0">markJoined()</a></li>
 <li><a href="#sendSnapshot()" tabindex="0">sendSnapshot()</a></li>
 <li><a href="#applyShake(net.raphimc.viabedrock.api.model.CameraShakeState.Command)" tabindex="0">applyShake(CameraShakeState.Command)</a></li>
-<li><a href="#tickShake()" tabindex="0">tickShake()</a></li>
+<li><a href="#tick()" tabindex="0">tick()</a></li>
 </ol>
 </li>
 </ol>
@@ -124,32 +130,52 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#activateAimAssist(net.raphimc.viabedrock.api.model.CameraAimAssistActivation.Control)" class="member-name-link">activateAimAssist</a><wbr>(<a href="../../api/model/CameraAimAssistActivation.Control.html" title="class in net.raphimc.viabedrock.api.model">CameraAimAssistActivation.Control</a>&nbsp;control)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/CameraAimAssistRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraAimAssistRegistry</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#aimAssist()" class="member-name-link">aimAssist</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#apply(net.raphimc.viabedrock.protocol.model.CameraInstruction)" class="member-name-link">apply</a><wbr>(<a href="../model/CameraInstruction.html" title="class in net.raphimc.viabedrock.protocol.model">CameraInstruction</a>&nbsp;instruction)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyShake(net.raphimc.viabedrock.api.model.CameraShakeState.Command)" class="member-name-link">applyShake</a><wbr>(<a href="../../api/model/CameraShakeState.Command.html" title="class in net.raphimc.viabedrock.api.model">CameraShakeState.Command</a>&nbsp;command)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/CameraInstruction.html" title="class in net.raphimc.viabedrock.protocol.model">CameraInstruction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastInstruction()" class="member-name-link">lastInstruction</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#controlScheme()" class="member-name-link">controlScheme</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markJoined()" class="member-name-link">markJoined</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/CameraPositionState.html" title="class in net.raphimc.viabedrock.api.model">CameraPositionState</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#position()" class="member-name-link">position</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/CameraPresetRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraPresetRegistry</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#presets()" class="member-name-link">presets</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/CameraInstruction.html" title="class in net.raphimc.viabedrock.protocol.model">CameraInstruction</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastInstruction()" class="member-name-link">lastInstruction</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendSnapshot()" class="member-name-link">sendSnapshot</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markJoined()" class="member-name-link">markJoined</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/CameraPositionState.html" title="class in net.raphimc.viabedrock.api.model">CameraPositionState</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#position()" class="member-name-link">position</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/CameraPresetRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraPresetRegistry</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#presets()" class="member-name-link">presets</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendSnapshot()" class="member-name-link">sendSnapshot</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setControlScheme(int)" class="member-name-link">setControlScheme</a><wbr>(int&nbsp;scheme)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPresets(net.raphimc.viabedrock.protocol.model.CameraPresetRegistry)" class="member-name-link">setPresets</a><wbr>(<a href="../model/CameraPresetRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraPresetRegistry</a>&nbsp;presets)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tickShake()" class="member-name-link">tickShake</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSplines(net.raphimc.viabedrock.protocol.model.CameraSplineRegistry)" class="member-name-link">setSplines</a><wbr>(<a href="../model/CameraSplineRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraSplineRegistry</a>&nbsp;splines)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tickAimAssist()" class="member-name-link">tickAimAssist</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Called once per connection tick, separately from camera effects advanced by packet handlers.</div>
+</div>
 </div>
 </div>
 </div>
@@ -190,6 +216,47 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="aimAssist()">
+<h3>aimAssist</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/CameraAimAssistRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraAimAssistRegistry</a></span>&nbsp;<span class="element-name">aimAssist</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="activateAimAssist(net.raphimc.viabedrock.api.model.CameraAimAssistActivation.Control)">
+<h3>activateAimAssist</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">activateAimAssist</span><wbr><span class="parameters">(<a href="../../api/model/CameraAimAssistActivation.Control.html" title="class in net.raphimc.viabedrock.api.model">CameraAimAssistActivation.Control</a>&nbsp;control)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="controlScheme()">
+<h3>controlScheme</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">controlScheme</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setControlScheme(int)">
+<h3>setControlScheme</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setControlScheme</span><wbr><span class="parameters">(int&nbsp;scheme)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="tickAimAssist()">
+<h3>tickAimAssist</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">tickAimAssist</span>()</div>
+<div class="block">Called once per connection tick, separately from camera effects advanced by packet handlers.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="lastInstruction()">
 <h3>lastInstruction</h3>
 <div class="horizontal-scroll">
@@ -202,6 +269,14 @@ loadScripts(document, 'script');</script>
 <h3>presets</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/CameraPresetRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraPresetRegistry</a></span>&nbsp;<span class="element-name">presets</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setSplines(net.raphimc.viabedrock.protocol.model.CameraSplineRegistry)">
+<h3>setSplines</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSplines</span><wbr><span class="parameters">(<a href="../model/CameraSplineRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">CameraSplineRegistry</a>&nbsp;splines)</span></div>
 </div>
 </section>
 </li>
@@ -254,10 +329,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="tickShake()">
-<h3>tickShake</h3>
+<section class="detail" id="tick()">
+<h3>tick</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">tickShake</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">tick</span>()</div>
 </div>
 </section>
 </li>
