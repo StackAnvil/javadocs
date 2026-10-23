@@ -59,11 +59,13 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" tabindex="0">TextDefinitions(ResourcePackStorage)</a></li>
+<li><a href="#%3Cinit%3E(java.lang.Iterable)" tabindex="0">TextDefinitions(Iterable)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#translate(java.lang.String,java.lang.Object...)" tabindex="0">translate(String, Object...)</a></li>
+<li><a href="#translate(byte%5B%5D,java.util.List)" tabindex="0">translate(byte[], List)</a></li>
 <li><a href="#get(java.lang.String)" tabindex="0">get(String)</a></li>
 <li><a href="#lookup()" tabindex="0">lookup()</a></li>
 </ol>
@@ -95,8 +97,12 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" class="member-name-link">TextDefinitions</a><wbr>(<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;resourcePackStorage)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.Iterable)" class="member-name-link">TextDefinitions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="../ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;&nbsp;packs)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Uses already accepted layers in their resolved bottom-to-top order.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" class="member-name-link">TextDefinitions</a><wbr>(<a href="../../../protocol/storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;resourcePackStorage)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -117,10 +123,16 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lookup()" class="member-name-link">lookup</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translate(java.lang.String,java.lang.Object...)" class="member-name-link">translate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>byte[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translate(byte%5B%5D,java.util.List)" class="member-name-link">translate</a><wbr>(byte[]&nbsp;text,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;byte[]&gt;&nbsp;arguments)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native bytes from the current English table, before conversion to Java display text.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translate(java.lang.String,java.lang.Object...)" class="member-name-link">translate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -146,6 +158,15 @@ loadScripts(document, 'script');</script>
 </div>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.lang.Iterable)">
+<h3>TextDefinitions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TextDefinitions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="../ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;&nbsp;packs)</span></div>
+<div class="block">Uses already accepted layers in their resolved bottom-to-top order.</div>
+</div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -160,6 +181,16 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">translate</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="translate(byte[],java.util.List)">
+<h3>translate</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">byte[]</span>&nbsp;<span class="element-name">translate</span><wbr><span class="parameters">(byte[]&nbsp;text,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;byte[]&gt;&nbsp;arguments)</span></div>
+<div class="block">Native bytes from the current English table, before conversion to Java display text.</div>
 </div>
 </section>
 </li>

@@ -27,6 +27,7 @@ com.viaversion.viafabricplus.bedrock.input
 com.viaversion.viafabricplus.bedrock.inventory
 com.viaversion.viafabricplus.bedrock.lan
 com.viaversion.viafabricplus.bedrock.movement
+com.viaversion.viafabricplus.bedrock.movement.replay
 com.viaversion.viafabricplus.bedrock.party
 com.viaversion.viafabricplus.bedrock.profile
 com.viaversion.viafabricplus.bedrock.protocoltranslator.netty
@@ -34,6 +35,7 @@ com.viaversion.viafabricplus.bedrock.protocoltranslator.network
 com.viaversion.viafabricplus.bedrock.protocoltranslator.platform
 com.viaversion.viafabricplus.bedrock.realms
 com.viaversion.viafabricplus.bedrock.render
+com.viaversion.viafabricplus.bedrock.render.compat.iris
 com.viaversion.viafabricplus.bedrock.render.hud
 com.viaversion.viafabricplus.bedrock.render.light
 com.viaversion.viafabricplus.bedrock.screen

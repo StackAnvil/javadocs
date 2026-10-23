@@ -72,6 +72,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#putBedrockDimensionDefinition(java.lang.String,com.viaversion.viaversion.libs.fastutil.ints.IntIntPair)" tabindex="0">putBedrockDimensionDefinition(String, IntIntPair)</a></li>
 <li><a href="#getAvailableEntityIdentifiers()" tabindex="0">getAvailableEntityIdentifiers()</a></li>
 <li><a href="#addEntityIdentifier(java.lang.String)" tabindex="0">addEntityIdentifier(String)</a></li>
+<li><a href="#getBedrockBaseGameVersion()" tabindex="0">getBedrockBaseGameVersion()</a></li>
+<li><a href="#setBedrockBaseGameVersion(net.raphimc.viabedrock.protocol.model.BaseGameVersion)" tabindex="0">setBedrockBaseGameVersion(BaseGameVersion)</a></li>
 <li><a href="#getBedrockVanillaVersion()" tabindex="0">getBedrockVanillaVersion()</a></li>
 <li><a href="#setBedrockVanillaVersion(com.vdurmont.semver4j.Semver)" tabindex="0">setBedrockVanillaVersion(Semver)</a></li>
 <li><a href="#isFlatGenerator()" tabindex="0">isFlatGenerator()</a></li>
@@ -156,54 +158,60 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAvailableEntityIdentifiers()" class="member-name-link">getAvailableEntityIdentifiers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.nbt.tag.CompoundTag</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockBiomeDefinitions()" class="member-name-link">getBedrockBiomeDefinitions</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockDimensionDefinitions()" class="member-name-link">getBedrockDimensionDefinitions</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.vdurmont.semver4j.Semver</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockVanillaVersion()" class="member-name-link">getBedrockVanillaVersion</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/ChatRestrictionLevel.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ChatRestrictionLevel</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChatRestrictionLevel()" class="member-name-link">getChatRestrictionLevel</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDeathMessage()" class="member-name-link">getDeathMessage</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/BaseGameVersion.html" title="class in net.raphimc.viabedrock.protocol.model">BaseGameVersion</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockBaseGameVersion()" class="member-name-link">getBedrockBaseGameVersion</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.nbt.tag.CompoundTag</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaRegistries()" class="member-name-link">getJavaRegistries</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockBiomeDefinitions()" class="member-name-link">getBedrockBiomeDefinitions</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLevelGameType()" class="member-name-link">getLevelGameType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockDimensionDefinitions()" class="member-name-link">getBedrockDimensionDefinitions</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLevelTime()" class="member-name-link">getLevelTime</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.vdurmont.semver4j.Semver</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockVanillaVersion()" class="member-name-link">getBedrockVanillaVersion</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMovementRewindHistorySize()" class="member-name-link">getMovementRewindHistorySize</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/ChatRestrictionLevel.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ChatRestrictionLevel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChatRestrictionLevel()" class="member-name-link">getChatRestrictionLevel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBlockBreakingServerAuthoritative()" class="member-name-link">isBlockBreakingServerAuthoritative</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDeathMessage()" class="member-name-link">getDeathMessage</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.nbt.tag.CompoundTag</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaRegistries()" class="member-name-link">getJavaRegistries</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLevelGameType()" class="member-name-link">getLevelGameType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLevelTime()" class="member-name-link">getLevelTime</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMovementRewindHistorySize()" class="member-name-link">getMovementRewindHistorySize</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEmoteChatMuted()" class="member-name-link">isEmoteChatMuted</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBlockBreakingServerAuthoritative()" class="member-name-link">isBlockBreakingServerAuthoritative</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isFlatGenerator()" class="member-name-link">isFlatGenerator</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEmoteChatMuted()" class="member-name-link">isEmoteChatMuted</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isHardcoreMode()" class="member-name-link">isHardcoreMode</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isFlatGenerator()" class="member-name-link">isFlatGenerator</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isImmutableWorld()" class="member-name-link">isImmutableWorld</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isHardcoreMode()" class="member-name-link">isHardcoreMode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInventoryServerAuthoritative()" class="member-name-link">isInventoryServerAuthoritative</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isImmutableWorld()" class="member-name-link">isImmutableWorld</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInventoryServerAuthoritative()" class="member-name-link">isInventoryServerAuthoritative</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putBedrockDimensionDefinition(java.lang.String,com.viaversion.viaversion.libs.fastutil.ints.IntIntPair)" class="member-name-link">putBedrockDimensionDefinition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;dimensionIdentifier,
+ com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&nbsp;dimensionDefinition)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putBedrockDimensionDefinition(java.lang.String,com.viaversion.viaversion.libs.fastutil.ints.IntIntPair)" class="member-name-link">putBedrockDimensionDefinition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;dimensionIdentifier,
- com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&nbsp;dimensionDefinition)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockBaseGameVersion(net.raphimc.viabedrock.protocol.model.BaseGameVersion)" class="member-name-link">setBedrockBaseGameVersion</a><wbr>(<a href="../model/BaseGameVersion.html" title="class in net.raphimc.viabedrock.protocol.model">BaseGameVersion</a>&nbsp;bedrockBaseGameVersion)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockBiomeDefinitions(com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">setBedrockBiomeDefinitions</a><wbr>(com.viaversion.nbt.tag.CompoundTag&nbsp;bedrockBiomeDefinitions)</code></div>
@@ -356,6 +364,22 @@ loadScripts(document, 'script');</script>
 <h3>addEntityIdentifier</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addEntityIdentifier</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;entityIdentifier)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getBedrockBaseGameVersion()">
+<h3>getBedrockBaseGameVersion</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/BaseGameVersion.html" title="class in net.raphimc.viabedrock.protocol.model">BaseGameVersion</a></span>&nbsp;<span class="element-name">getBedrockBaseGameVersion</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setBedrockBaseGameVersion(net.raphimc.viabedrock.protocol.model.BaseGameVersion)">
+<h3>setBedrockBaseGameVersion</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBedrockBaseGameVersion</span><wbr><span class="parameters">(<a href="../model/BaseGameVersion.html" title="class in net.raphimc.viabedrock.protocol.model">BaseGameVersion</a>&nbsp;bedrockBaseGameVersion)</span></div>
 </div>
 </section>
 </li>

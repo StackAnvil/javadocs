@@ -66,7 +66,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(int,long,long,long,long,long,int,net.raphimc.viabedrock.api.model.NativeCookingAction.Mode,long)" tabindex="0">NativeCookingAction(int, long, long, long, long, long, int, NativeCookingAction.Mode, long)</a></li>
+<li><a href="#%3Cinit%3E(int,long,long,long,long,long,int,net.raphimc.viabedrock.api.model.NativeCookingAction.Mode,int,int,long)" tabindex="0">NativeCookingAction(int, long, long, long, long, long, int, NativeCookingAction.Mode, int, int, long)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -82,6 +82,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#cursorRevision()" tabindex="0">cursorRevision()</a></li>
 <li><a href="#recipeId()" tabindex="0">recipeId()</a></li>
 <li><a href="#mode()" tabindex="0">mode()</a></li>
+<li><a href="#controllerInputMode()" tabindex="0">controllerInputMode()</a></li>
+<li><a href="#eventPhase()" tabindex="0">eventPhase()</a></li>
 <li><a href="#requestSequence()" tabindex="0">requestSequence()</a></li>
 </ol>
 </li>
@@ -100,9 +102,11 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">NativeCookingAction</span>(int&nbsp;menuId, long&nbsp;sequence, long&nbsp;updateSequence, long&nbsp;menuRevision, long&nbsp;inventoryRevision, long&nbsp;cursorRevision, int&nbsp;recipeId, <a href="NativeCookingAction.Mode.html" title="enum class in net.raphimc.viabedrock.api.model">NativeCookingAction.Mode</a>&nbsp;mode, long&nbsp;requestSequence)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">NativeCookingAction</span>(int&nbsp;menuId, long&nbsp;sequence, long&nbsp;updateSequence, long&nbsp;menuRevision, long&nbsp;inventoryRevision, long&nbsp;cursorRevision, int&nbsp;recipeId, <a href="NativeCookingAction.Mode.html" title="enum class in net.raphimc.viabedrock.api.model">NativeCookingAction.Mode</a>&nbsp;mode, int&nbsp;controllerInputMode, int&nbsp;eventPhase, long&nbsp;requestSequence)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">A recipe selection refers to one exact server-owned presentation and inventory snapshot.</div>
+<div class="block">A native command and event phase refer to one exact server-owned presentation and inventory snapshot.
+The controller mode is its native active-device lookup result, separate from the command and phase.
+Neither field establishes a physical event mapping or transfer quantity.</div>
 </div>
 </section>
 <section class="summary">
@@ -150,7 +154,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,long,long,long,long,long,int,net.raphimc.viabedrock.api.model.NativeCookingAction.Mode,long)" class="member-name-link">NativeCookingAction</a><wbr>(int&nbsp;menuId,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,long,long,long,long,long,int,net.raphimc.viabedrock.api.model.NativeCookingAction.Mode,int,int,long)" class="member-name-link">NativeCookingAction</a><wbr>(int&nbsp;menuId,
  long&nbsp;sequence,
  long&nbsp;updateSequence,
  long&nbsp;menuRevision,
@@ -158,6 +162,8 @@ loadScripts(document, 'script');</script>
  long&nbsp;cursorRevision,
  int&nbsp;recipeId,
  <a href="NativeCookingAction.Mode.html" title="enum class in net.raphimc.viabedrock.api.model">NativeCookingAction.Mode</a>&nbsp;mode,
+ int&nbsp;controllerInputMode,
+ int&nbsp;eventPhase,
  long&nbsp;requestSequence)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>NativeCookingAction</code> record class.</div>
@@ -176,15 +182,25 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursorRevision()" class="member-name-link">cursorRevision</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#controllerInputMode()" class="member-name-link">controllerInputMode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>controllerInputMode</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursorRevision()" class="member-name-link">cursorRevision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>cursorRevision</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#eventPhase()" class="member-name-link">eventPhase</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>eventPhase</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
@@ -286,7 +302,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,long,long,long,long,long,int,net.raphimc.viabedrock.api.model.NativeCookingAction.Mode,long)">
+<section class="detail" id="&lt;init&gt;(int,long,long,long,long,long,int,net.raphimc.viabedrock.api.model.NativeCookingAction.Mode,int,int,long)">
 <h3>NativeCookingAction</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NativeCookingAction</span><wbr><span class="parameters">(int&nbsp;menuId,
@@ -297,6 +313,8 @@ loadScripts(document, 'script');</script>
  long&nbsp;cursorRevision,
  int&nbsp;recipeId,
  <a href="NativeCookingAction.Mode.html" title="enum class in net.raphimc.viabedrock.api.model">NativeCookingAction.Mode</a>&nbsp;mode,
+ int&nbsp;controllerInputMode,
+ int&nbsp;eventPhase,
  long&nbsp;requestSequence)</span></div>
 <div class="block">Creates an instance of a <code>NativeCookingAction</code> record class.</div>
 <dl class="notes">
@@ -309,6 +327,8 @@ loadScripts(document, 'script');</script>
 <dd><code>cursorRevision</code> - the value for the <code>cursorRevision</code> record component</dd>
 <dd><code>recipeId</code> - the value for the <code>recipeId</code> record component</dd>
 <dd><code>mode</code> - the value for the <code>mode</code> record component</dd>
+<dd><code>controllerInputMode</code> - the value for the <code>controllerInputMode</code> record component</dd>
+<dd><code>eventPhase</code> - the value for the <code>eventPhase</code> record component</dd>
 <dd><code>requestSequence</code> - the value for the <code>requestSequence</code> record component</dd>
 </dl>
 </div>
@@ -469,6 +489,32 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>mode</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="controllerInputMode()">
+<h3>controllerInputMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">controllerInputMode</span>()</div>
+<div class="block">Returns the value of the <code>controllerInputMode</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>controllerInputMode</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="eventPhase()">
+<h3>eventPhase</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">eventPhase</span>()</div>
+<div class="block">Returns the value of the <code>eventPhase</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>eventPhase</code> record component</dd>
 </dl>
 </div>
 </section>

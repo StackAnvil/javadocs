@@ -57,7 +57,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#register(com.mojang.renderpearl.api.pipeline.RenderPipeline,com.mojang.renderpearl.api.pipeline.RenderPipeline)" tabindex="0">register(RenderPipeline, RenderPipeline)</a></li>
+<li><a href="#register(com.mojang.renderpearl.api.pipeline.RenderPipeline,com.mojang.renderpearl.api.pipeline.RenderPipeline,float)" tabindex="0">register(RenderPipeline, RenderPipeline, float)</a></li>
 <li><a href="#equivalent(com.mojang.renderpearl.api.pipeline.RenderPipeline)" tabindex="0">equivalent(RenderPipeline)</a></li>
+<li><a href="#alphaReference(com.mojang.renderpearl.api.pipeline.RenderPipeline)" tabindex="0">alphaReference(RenderPipeline)</a></li>
 </ol>
 </li>
 </ol>
@@ -91,12 +93,20 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.mojang.renderpearl.api.pipeline.RenderPipeline</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#equivalent(com.mojang.renderpearl.api.pipeline.RenderPipeline)" class="member-name-link">equivalent</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#alphaReference(com.mojang.renderpearl.api.pipeline.RenderPipeline)" class="member-name-link">alphaReference</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.mojang.renderpearl.api.pipeline.RenderPipeline</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(com.mojang.renderpearl.api.pipeline.RenderPipeline,com.mojang.renderpearl.api.pipeline.RenderPipeline)" class="member-name-link">register</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;nativePipeline,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#equivalent(com.mojang.renderpearl.api.pipeline.RenderPipeline)" class="member-name-link">equivalent</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.mojang.renderpearl.api.pipeline.RenderPipeline</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(com.mojang.renderpearl.api.pipeline.RenderPipeline,com.mojang.renderpearl.api.pipeline.RenderPipeline)" class="member-name-link">register</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;nativePipeline,
  com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;shaderPipeline)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.mojang.renderpearl.api.pipeline.RenderPipeline</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(com.mojang.renderpearl.api.pipeline.RenderPipeline,com.mojang.renderpearl.api.pipeline.RenderPipeline,float)" class="member-name-link">register</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;nativePipeline,
+ com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;shaderPipeline,
+ float&nbsp;alphaReference)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -125,10 +135,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="register(com.mojang.renderpearl.api.pipeline.RenderPipeline,com.mojang.renderpearl.api.pipeline.RenderPipeline,float)">
+<h3>register</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">com.mojang.renderpearl.api.pipeline.RenderPipeline</span>&nbsp;<span class="element-name">register</span><wbr><span class="parameters">(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;nativePipeline,
+ com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;shaderPipeline,
+ float&nbsp;alphaReference)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="equivalent(com.mojang.renderpearl.api.pipeline.RenderPipeline)">
 <h3>equivalent</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">com.mojang.renderpearl.api.pipeline.RenderPipeline</span>&nbsp;<span class="element-name">equivalent</span><wbr><span class="parameters">(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="alphaReference(com.mojang.renderpearl.api.pipeline.RenderPipeline)">
+<h3>alphaReference</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">alphaReference</span><wbr><span class="parameters">(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline)</span></div>
 </div>
 </section>
 </li>

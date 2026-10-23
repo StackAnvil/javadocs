@@ -58,6 +58,9 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeActorMessage)" tabindex="0">accept(Connection, NativeActorMessage)</a></li>
 <li><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeActorBoundsMessage)" tabindex="0">accept(Connection, NativeActorBoundsMessage)</a></li>
+<li><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.ActorSpatialCommand)" tabindex="0">accept(Connection, ActorSpatialCommand)</a></li>
+<li><a href="#movement(java.util.UUID)" tabindex="0">movement(UUID)</a></li>
+<li><a href="#beforePhysics(net.minecraft.client.multiplayer.ClientLevel)" tabindex="0">beforePhysics(ClientLevel)</a></li>
 <li><a href="#bounds(java.util.UUID)" tabindex="0">bounds(UUID)</a></li>
 <li><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeAnimationMessage)" tabindex="0">accept(Connection, NativeAnimationMessage)</a></li>
 <li><a href="#state(java.util.UUID)" tabindex="0">state(UUID)</a></li>
@@ -65,6 +68,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#supportsUniqueIds()" tabindex="0">supportsUniqueIds()</a></li>
 <li><a href="#uuidByUniqueId(long)" tabindex="0">uuidByUniqueId(long)</a></li>
 <li><a href="#lifetime(java.util.UUID)" tabindex="0">lifetime(UUID)</a></li>
+<li><a href="#liveLifetime(java.util.UUID)" tabindex="0">liveLifetime(UUID)</a></li>
 <li><a href="#animations(java.util.UUID)" tabindex="0">animations(UUID)</a></li>
 <li><a href="#isCharging(java.util.UUID)" tabindex="0">isCharging(UUID)</a></li>
 <li><a href="#isBlocking(java.util.UUID,boolean)" tabindex="0">isBlocking(UUID, boolean)</a></li>
@@ -106,19 +110,26 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeActorBoundsMessage)" class="member-name-link">accept</a><wbr>(net.minecraft.network.Connection&nbsp;connection,
- net.raphimc.viabedrock.api.model.NativeActorBoundsMessage&nbsp;message)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.ActorSpatialCommand)" class="member-name-link">accept</a><wbr>(net.minecraft.network.Connection&nbsp;connection,
+ net.raphimc.viabedrock.api.model.ActorSpatialCommand&nbsp;message)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeActorMessage)" class="member-name-link">accept</a><wbr>(net.minecraft.network.Connection&nbsp;connection,
- net.raphimc.viabedrock.api.model.NativeActorMessage&nbsp;message)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeActorBoundsMessage)" class="member-name-link">accept</a><wbr>(net.minecraft.network.Connection&nbsp;connection,
+ net.raphimc.viabedrock.api.model.NativeActorBoundsMessage&nbsp;message)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeAnimationMessage)" class="member-name-link">accept</a><wbr>(net.minecraft.network.Connection&nbsp;connection,
- net.raphimc.viabedrock.api.model.NativeAnimationMessage&nbsp;message)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeActorMessage)" class="member-name-link">accept</a><wbr>(net.minecraft.network.Connection&nbsp;connection,
+ net.raphimc.viabedrock.api.model.NativeActorMessage&nbsp;message)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.NativeAnimationControllers</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#animations(java.util.UUID)" class="member-name-link">animations</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeAnimationMessage)" class="member-name-link">accept</a><wbr>(net.minecraft.network.Connection&nbsp;connection,
+ net.raphimc.viabedrock.api.model.NativeAnimationMessage&nbsp;message)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.NativeAnimationControllers</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#animations(java.util.UUID)" class="member-name-link">animations</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#beforePhysics(net.minecraft.client.multiplayer.ClientLevel)" class="member-name-link">beforePhysics</a><wbr>(net.minecraft.client.multiplayer.ClientLevel&nbsp;level)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.NativeActorBoundsMessage</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bounds(java.util.UUID)" class="member-name-link">bounds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
@@ -135,6 +146,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lifetime(java.util.UUID)" class="member-name-link">lifetime</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#liveLifetime(java.util.UUID)" class="member-name-link">liveLifetime</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Ownership checks use the current registry even while physics reads restored metadata.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.NativeMovementSources</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#movement(java.util.UUID)" class="member-name-link">movement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#shieldBlockingBob(java.util.UUID,float)" class="member-name-link">shieldBlockingBob</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
@@ -195,6 +214,31 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.ActorSpatialCommand)">
+<h3>accept</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">accept</span><wbr><span class="parameters">(net.minecraft.network.Connection&nbsp;connection,
+ net.raphimc.viabedrock.api.model.ActorSpatialCommand&nbsp;message)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="movement(java.util.UUID)">
+<h3>movement</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.raphimc.viabedrock.api.model.NativeMovementSources</span>&nbsp;<span class="element-name">movement</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="beforePhysics(net.minecraft.client.multiplayer.ClientLevel)">
+<h3>beforePhysics</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">beforePhysics</span><wbr><span class="parameters">(net.minecraft.client.multiplayer.ClientLevel&nbsp;level)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="bounds(java.util.UUID)">
 <h3>bounds</h3>
 <div class="horizontal-scroll">
@@ -248,6 +292,15 @@ loadScripts(document, 'script');</script>
 <h3>lifetime</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></span>&nbsp;<span class="element-name">lifetime</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="liveLifetime(java.util.UUID)">
+<h3>liveLifetime</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></span>&nbsp;<span class="element-name">liveLifetime</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</span></div>
+<div class="block">Ownership checks use the current registry even while physics reads restored metadata.</div>
 </div>
 </section>
 </li>

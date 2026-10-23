@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(long,long,float,float,float,float,float,net.raphimc.viabedrock.api.model.CameraPose.Vector,float,float)" tabindex="0">Preset(long, long, float, float, float, float, float, CameraPose.Vector, float, float)</a></li>
+<li><a href="#%3Cinit%3E(long,long,float,float,float,float,float,net.raphimc.viabedrock.api.model.CameraPose.Vector,float,float,boolean)" tabindex="0">Preset(long, long, float, float, float, float, float, CameraPose.Vector, float, float, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -77,6 +77,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#entityOffset()" tabindex="0">entityOffset()</a></li>
 <li><a href="#minYaw()" tabindex="0">minYaw()</a></li>
 <li><a href="#maxYaw()" tabindex="0">maxYaw()</a></li>
+<li><a href="#fixed()" tabindex="0">fixed()</a></li>
 </ol>
 </li>
 </ol>
@@ -98,7 +99,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">CameraFollowState.Preset</span>(long&nbsp;id, long&nbsp;rotationSequence, float&nbsp;radius, float&nbsp;pitch, float&nbsp;yaw, float&nbsp;viewX, float&nbsp;viewY, <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;entityOffset, float&nbsp;minYaw, float&nbsp;maxYaw)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">CameraFollowState.Preset</span>(long&nbsp;id, long&nbsp;rotationSequence, float&nbsp;radius, float&nbsp;pitch, float&nbsp;yaw, float&nbsp;viewX, float&nbsp;viewY, <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;entityOffset, float&nbsp;minYaw, float&nbsp;maxYaw, boolean&nbsp;fixed)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -112,7 +113,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,long,float,float,float,float,float,net.raphimc.viabedrock.api.model.CameraPose.Vector,float,float)" class="member-name-link">Preset</a><wbr>(long&nbsp;id,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,long,float,float,float,float,float,net.raphimc.viabedrock.api.model.CameraPose.Vector,float,float,boolean)" class="member-name-link">Preset</a><wbr>(long&nbsp;id,
  long&nbsp;rotationSequence,
  float&nbsp;radius,
  float&nbsp;pitch,
@@ -121,7 +122,8 @@ loadScripts(document, 'script');</script>
  float&nbsp;viewY,
  <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;entityOffset,
  float&nbsp;minYaw,
- float&nbsp;maxYaw)</code></div>
+ float&nbsp;maxYaw,
+ boolean&nbsp;fixed)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Preset</code> record class.</div>
 </div>
@@ -149,59 +151,64 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fixed()" class="member-name-link">fixed</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>fixed</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id()" class="member-name-link">id</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id()" class="member-name-link">id</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>id</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#maxYaw()" class="member-name-link">maxYaw</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#maxYaw()" class="member-name-link">maxYaw</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>maxYaw</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#minYaw()" class="member-name-link">minYaw</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#minYaw()" class="member-name-link">minYaw</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>minYaw</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pitch()" class="member-name-link">pitch</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pitch()" class="member-name-link">pitch</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>pitch</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#radius()" class="member-name-link">radius</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#radius()" class="member-name-link">radius</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>radius</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rotationSequence()" class="member-name-link">rotationSequence</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rotationSequence()" class="member-name-link">rotationSequence</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>rotationSequence</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viewX()" class="member-name-link">viewX</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viewX()" class="member-name-link">viewX</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>viewX</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viewY()" class="member-name-link">viewY</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viewY()" class="member-name-link">viewY</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>viewY</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#yaw()" class="member-name-link">yaw</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#yaw()" class="member-name-link">yaw</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>yaw</code> record component.</div>
 </div>
 </div>
@@ -222,7 +229,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(long,long,float,float,float,float,float,net.raphimc.viabedrock.api.model.CameraPose.Vector,float,float)">
+<section class="detail" id="&lt;init&gt;(long,long,float,float,float,float,float,net.raphimc.viabedrock.api.model.CameraPose.Vector,float,float,boolean)">
 <h3>Preset</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Preset</span><wbr><span class="parameters">(long&nbsp;id,
@@ -234,7 +241,8 @@ loadScripts(document, 'script');</script>
  float&nbsp;viewY,
  <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;entityOffset,
  float&nbsp;minYaw,
- float&nbsp;maxYaw)</span></div>
+ float&nbsp;maxYaw,
+ boolean&nbsp;fixed)</span></div>
 <div class="block">Creates an instance of a <code>Preset</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -248,6 +256,7 @@ loadScripts(document, 'script');</script>
 <dd><code>entityOffset</code> - the value for the <code>entityOffset</code> record component</dd>
 <dd><code>minYaw</code> - the value for the <code>minYaw</code> record component</dd>
 <dd><code>maxYaw</code> - the value for the <code>maxYaw</code> record component</dd>
+<dd><code>fixed</code> - the value for the <code>fixed</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -433,6 +442,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>maxYaw</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="fixed()">
+<h3>fixed</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">fixed</span>()</div>
+<div class="block">Returns the value of the <code>fixed</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>fixed</code> record component</dd>
 </dl>
 </div>
 </section>

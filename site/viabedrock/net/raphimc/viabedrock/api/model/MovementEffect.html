@@ -65,7 +65,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(int,int,int,long,long,long,long)" tabindex="0">MovementEffect(int, int, int, long, long, long, long)</a></li>
+<li><a href="#%3Cinit%3E(int,int,int,long,long,long,long,long)" tabindex="0">MovementEffect(int, int, int, long, long, long, long, long)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -85,6 +85,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#clientFrame()" tabindex="0">clientFrame()</a></li>
 <li><a href="#inputTick()" tabindex="0">inputTick()</a></li>
 <li><a href="#inputFrame()" tabindex="0">inputFrame()</a></li>
+<li><a href="#historyStartTick()" tabindex="0">historyStartTick()</a></li>
 </ol>
 </li>
 </ol>
@@ -102,7 +103,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">MovementEffect</span>(int&nbsp;entityId, int&nbsp;type, int&nbsp;duration, long&nbsp;serverTick, long&nbsp;clientFrame, long&nbsp;inputTick, long&nbsp;inputFrame)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">MovementEffect</span>(int&nbsp;entityId, int&nbsp;type, int&nbsp;duration, long&nbsp;serverTick, long&nbsp;clientFrame, long&nbsp;inputTick, long&nbsp;inputFrame, long&nbsp;historyStartTick)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Confirmed effect, exact history binding and the latest paired input clock.</div>
 </div>
@@ -135,13 +136,14 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,long,long,long,long)" class="member-name-link">MovementEffect</a><wbr>(int&nbsp;entityId,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,long,long,long,long,long)" class="member-name-link">MovementEffect</a><wbr>(int&nbsp;entityId,
  int&nbsp;type,
  int&nbsp;duration,
  long&nbsp;serverTick,
  long&nbsp;clientFrame,
  long&nbsp;inputTick,
- long&nbsp;inputFrame)</code></div>
+ long&nbsp;inputFrame,
+ long&nbsp;historyStartTick)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>MovementEffect</code> record class.</div>
 </div>
@@ -196,36 +198,41 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasTiming()" class="member-name-link">hasTiming</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputFrame()" class="member-name-link">inputFrame</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#historyStartTick()" class="member-name-link">historyStartTick</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>inputFrame</code> record component.</div>
+<div class="block">Returns the value of the <code>historyStartTick</code> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputTick()" class="member-name-link">inputTick</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputFrame()" class="member-name-link">inputFrame</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>inputTick</code> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isGlideBoost()" class="member-name-link">isGlideBoost</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remainingAt(long)" class="member-name-link">remainingAt</a><wbr>(long&nbsp;frame)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Age a confirmed snapshot from its paired frame without inventing an evicted frame identity.</div>
+<div class="block">Returns the value of the <code>inputFrame</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverTick()" class="member-name-link">serverTick</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputTick()" class="member-name-link">inputTick</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>inputTick</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isGlideBoost()" class="member-name-link">isGlideBoost</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remainingAt(long)" class="member-name-link">remainingAt</a><wbr>(long&nbsp;frame)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Age a confirmed snapshot from its paired frame without inventing an evicted frame identity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverTick()" class="member-name-link">serverTick</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>serverTick</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>type</code> record component.</div>
 </div>
 </div>
@@ -278,7 +285,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,int,int,long,long,long,long)">
+<section class="detail" id="&lt;init&gt;(int,int,int,long,long,long,long,long)">
 <h3>MovementEffect</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MovementEffect</span><wbr><span class="parameters">(int&nbsp;entityId,
@@ -287,7 +294,8 @@ loadScripts(document, 'script');</script>
  long&nbsp;serverTick,
  long&nbsp;clientFrame,
  long&nbsp;inputTick,
- long&nbsp;inputFrame)</span></div>
+ long&nbsp;inputFrame,
+ long&nbsp;historyStartTick)</span></div>
 <div class="block">Creates an instance of a <code>MovementEffect</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -298,6 +306,7 @@ loadScripts(document, 'script');</script>
 <dd><code>clientFrame</code> - the value for the <code>clientFrame</code> record component</dd>
 <dd><code>inputTick</code> - the value for the <code>inputTick</code> record component</dd>
 <dd><code>inputFrame</code> - the value for the <code>inputFrame</code> record component</dd>
+<dd><code>historyStartTick</code> - the value for the <code>historyStartTick</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -486,6 +495,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>inputFrame</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="historyStartTick()">
+<h3>historyStartTick</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">historyStartTick</span>()</div>
+<div class="block">Returns the value of the <code>historyStartTick</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>historyStartTick</code> record component</dd>
 </dl>
 </div>
 </section>

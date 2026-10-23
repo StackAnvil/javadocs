@@ -72,6 +72,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#recipeKey(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.chunk.blockstate.BlockItemDescriptor)" tabindex="0">recipeKey(BedrockItem, BlockItemDescriptor)</a></li>
 <li><a href="#createNetworkItem(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.Supplier)" tabindex="0">createNetworkItem(int, short, byte, ItemStackHeader.Block, Supplier)</a></li>
 <li><a href="#cookingProperties(java.util.function.Function)" tabindex="0">cookingProperties(Function)</a></li>
+<li><a href="#customName(java.lang.String,com.viaversion.nbt.tag.CompoundTag)" tabindex="0">customName(String, CompoundTag)</a></li>
+<li><a href="#componentDescription(java.lang.String)" tabindex="0">componentDescription(String)</a></li>
+<li><a href="#ordinaryNameKey(java.lang.String,java.lang.Short,com.viaversion.nbt.tag.CompoundTag,net.raphimc.viabedrock.protocol.model.ItemNameContext)" tabindex="0">ordinaryNameKey(String, Short, CompoundTag, ItemNameContext)</a></li>
+<li><a href="#foodProperties()" tabindex="0">foodProperties()</a></li>
 <li><a href="#componentItems()" tabindex="0">componentItems()</a></li>
 <li><a href="#stackingProperties()" tabindex="0">stackingProperties()</a></li>
 </ol>
@@ -120,22 +124,33 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#componentItems()" class="member-name-link">componentItems</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="ItemCookingProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemCookingProperties</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cookingProperties(java.util.function.Function)" class="member-name-link">cookingProperties</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;resolveBlock)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#componentDescription(java.lang.String)" class="member-name-link">componentDescription</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Null selects a different native key method; component descriptions are already complete keys.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#componentItems()" class="member-name-link">componentItems</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="ItemCookingProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemCookingProperties</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cookingProperties(java.util.function.Function)" class="member-name-link">cookingProperties</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;resolveBlock)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Construction precedes all component updates; runtime-ID fallback construction follows them.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createNetworkItem(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.Supplier)" class="member-name-link">createNetworkItem</a><wbr>(int&nbsp;identifier,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createNetworkItem(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.Supplier)" class="member-name-link">createNetworkItem</a><wbr>(int&nbsp;identifier,
  short&nbsp;metadata,
  byte&nbsp;amount,
  <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&nbsp;runtimeBlock,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;associatedBlock)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Raw metadata reaches associated-block resolution before the native constructor normalizes it.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customName(java.lang.String,com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">customName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ com.viaversion.nbt.tag.CompoundTag&nbsp;data)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The constructed item class owns custom-name dispatch, independently of its final network flags.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ItemEntry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemEntry</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#definition(int)" class="member-name-link">definition</a><wbr>(int&nbsp;id)</code></div>
@@ -146,14 +161,27 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="ItemEntry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemEntry</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#entries()" class="member-name-link">entries</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.collect.BiMap<wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ids()" class="member-name-link">ids</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="recipe/ItemRecipeKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeKey</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#namedRecipeKey(java.lang.String,int)" class="member-name-link">namedRecipeKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="ItemFoodProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemFoodProperties</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#foodProperties()" class="member-name-link">foodProperties</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Food component updates retain omitted components and resolve through the current registry identity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.collect.BiMap<wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ids()" class="member-name-link">ids</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="recipe/ItemRecipeKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeKey</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#namedRecipeKey(java.lang.String,int)" class="member-name-link">namedRecipeKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
  int&nbsp;metadata)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Named descriptors narrow to signed-short metadata before resolving concrete identity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ordinaryNameKey(java.lang.String,java.lang.Short,com.viaversion.nbt.tag.CompoundTag,net.raphimc.viabedrock.protocol.model.ItemNameContext)" class="member-name-link">ordinaryNameKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>&nbsp;auxiliaryData,
+ com.viaversion.nbt.tag.CompoundTag&nbsp;data,
+ <a href="ItemNameContext.html" title="class in net.raphimc.viabedrock.protocol.model">ItemNameContext</a>&nbsp;context)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Component construction replaces builtin dispatch; other names retain their native receiver's key.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="recipe/ItemRecipeKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeKey</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeKey(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.chunk.blockstate.BlockItemDescriptor)" class="member-name-link">recipeKey</a><wbr>(<a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item,
@@ -284,6 +312,46 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="ItemCookingProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemCookingProperties</a>&gt;</span>&nbsp;<span class="element-name">cookingProperties</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;resolveBlock)</span></div>
 <div class="block">Construction precedes all component updates; runtime-ID fallback construction follows them.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customName(java.lang.String,com.viaversion.nbt.tag.CompoundTag)">
+<h3>customName</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">customName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ com.viaversion.nbt.tag.CompoundTag&nbsp;data)</span></div>
+<div class="block">The constructed item class owns custom-name dispatch, independently of its final network flags.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="componentDescription(java.lang.String)">
+<h3>componentDescription</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">componentDescription</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier)</span></div>
+<div class="block">Null selects a different native key method; component descriptions are already complete keys.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ordinaryNameKey(java.lang.String,java.lang.Short,com.viaversion.nbt.tag.CompoundTag,net.raphimc.viabedrock.protocol.model.ItemNameContext)">
+<h3>ordinaryNameKey</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">ordinaryNameKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>&nbsp;auxiliaryData,
+ com.viaversion.nbt.tag.CompoundTag&nbsp;data,
+ <a href="ItemNameContext.html" title="class in net.raphimc.viabedrock.protocol.model">ItemNameContext</a>&nbsp;context)</span></div>
+<div class="block">Component construction replaces builtin dispatch; other names retain their native receiver's key.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="foodProperties()">
+<h3>foodProperties</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="ItemFoodProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemFoodProperties</a>&gt;</span>&nbsp;<span class="element-name">foodProperties</span>()</div>
+<div class="block">Food component updates retain omitted components and resolve through the current registry identity.</div>
 </div>
 </section>
 </li>

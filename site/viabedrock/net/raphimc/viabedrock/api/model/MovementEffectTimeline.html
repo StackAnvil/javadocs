@@ -54,6 +54,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#constructor-summary" tabindex="0">Constructor Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
@@ -63,14 +64,27 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#beginFrame()" tabindex="0">beginFrame()</a></li>
+<li><a href="#frameId()" tabindex="0">frameId()</a></li>
+<li><a href="#captureValues(int)" tabindex="0">captureValues(int)</a></li>
+<li><a href="#restoreValues(int,net.raphimc.viabedrock.api.model.MovementEffectTimeline.EffectValues)" tabindex="0">restoreValues(int, MovementEffectTimeline.EffectValues)</a></li>
+<li><a href="#pendingPhysicalFrame(java.util.function.IntPredicate)" tabindex="0">pendingPhysicalFrame(IntPredicate)</a></li>
+<li><a href="#applyPhysicalCommands(long,java.util.function.IntPredicate)" tabindex="0">applyPhysicalCommands(long, IntPredicate)</a></li>
+<li><a href="#finishPhysicalReplay(java.util.function.IntPredicate)" tabindex="0">finishPhysicalReplay(IntPredicate)</a></li>
 <li><a href="#completeFrame()" tabindex="0">completeFrame()</a></li>
 <li><a href="#accept(net.raphimc.viabedrock.api.model.MovementEffect)" tabindex="0">accept(MovementEffect)</a></li>
 <li><a href="#hasGlideBoost(int)" tabindex="0">hasGlideBoost(int)</a></li>
+<li><a href="#hasGlideBoost(int,long)" tabindex="0">hasGlideBoost(int, long)</a></li>
 <li><a href="#hasDolphinBoost(int)" tabindex="0">hasDolphinBoost(int)</a></li>
+<li><a href="#hasDolphinBoost(int,long)" tabindex="0">hasDolphinBoost(int, long)</a></li>
 <li><a href="#hasGeyserBoost(int)" tabindex="0">hasGeyserBoost(int)</a></li>
+<li><a href="#hasGeyserBoost(int,long)" tabindex="0">hasGeyserBoost(int, long)</a></li>
 <li><a href="#predictGeyserBoost(int)" tabindex="0">predictGeyserBoost(int)</a></li>
+<li><a href="#predictGeyserBoost(int,long)" tabindex="0">predictGeyserBoost(int, long)</a></li>
+<li><a href="#replayCorrections()" tabindex="0">replayCorrections()</a></li>
 <li><a href="#retainEntities(java.util.function.IntPredicate)" tabindex="0">retainEntities(IntPredicate)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
+<li><a href="#resetHistory()" tabindex="0">resetHistory()</a></li>
 </ol>
 </li>
 </ol>
@@ -93,6 +107,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final class&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="MovementEffectTimeline.EffectValues.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model">MovementEffectTimeline.EffectValues</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -121,28 +150,83 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#accept(net.raphimc.viabedrock.api.model.MovementEffect)" class="member-name-link">accept</a><wbr>(<a href="MovementEffect.html" title="class in net.raphimc.viabedrock.api.model">MovementEffect</a>&nbsp;effect)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPhysicalCommands(long,java.util.function.IntPredicate)" class="member-name-link">applyPhysicalCommands</a><wbr>(long&nbsp;frameId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;predictedActor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Called after restored snapshots and between-frame writes, before the recorded physical input.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#beginFrame()" class="member-name-link">beginFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Open the input record before local world and player simulation.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MovementEffectTimeline.EffectValues.html" title="class in net.raphimc.viabedrock.api.model">MovementEffectTimeline.EffectValues</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#captureValues(int)" class="member-name-link">captureValues</a><wbr>(int&nbsp;entityId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Immutable values for one actor; command and frame ownership remain in this timeline.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#completeFrame()" class="member-name-link">completeFrame</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#completeFrame()" class="member-name-link">completeFrame</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#finishPhysicalReplay(java.util.function.IntPredicate)" class="member-name-link">finishPhysicalReplay</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;predictedActor)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#frameId()" class="member-name-link">frameId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDolphinBoost(int)" class="member-name-link">hasDolphinBoost</a><wbr>(int&nbsp;entityId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDolphinBoost(int)" class="member-name-link">hasDolphinBoost</a><wbr>(int&nbsp;entityId)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDolphinBoost(int,long)" class="member-name-link">hasDolphinBoost</a><wbr>(int&nbsp;entityId,
+ long&nbsp;completedFrame)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasGeyserBoost(int)" class="member-name-link">hasGeyserBoost</a><wbr>(int&nbsp;entityId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasGlideBoost(int)" class="member-name-link">hasGlideBoost</a><wbr>(int&nbsp;entityId)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasGeyserBoost(int,long)" class="member-name-link">hasGeyserBoost</a><wbr>(int&nbsp;entityId,
+ long&nbsp;completedFrame)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#predictGeyserBoost(int)" class="member-name-link">predictGeyserBoost</a><wbr>(int&nbsp;entityId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasGlideBoost(int)" class="member-name-link">hasGlideBoost</a><wbr>(int&nbsp;entityId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasGlideBoost(int,long)" class="member-name-link">hasGlideBoost</a><wbr>(int&nbsp;entityId,
+ long&nbsp;completedFrame)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingPhysicalFrame(java.util.function.IntPredicate)" class="member-name-link">pendingPhysicalFrame</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;predictedActor)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#predictGeyserBoost(int)" class="member-name-link">predictGeyserBoost</a><wbr>(int&nbsp;entityId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The native sulfur ticker refreshes a 100-tick effect without shortening a longer active effect.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#predictGeyserBoost(int,long)" class="member-name-link">predictGeyserBoost</a><wbr>(int&nbsp;entityId,
+ long&nbsp;frame)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainEntities(java.util.function.IntPredicate)" class="member-name-link">retainEntities</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;present)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replayCorrections()" class="member-name-link">replayCorrections</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replay mutable effect values in native command/input/countdown order, before current physics.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetHistory()" class="member-name-link">resetHistory</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">A replacement play listener discards actor state without reusing the connection's completed frame IDs.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restoreValues(int,net.raphimc.viabedrock.api.model.MovementEffectTimeline.EffectValues)" class="member-name-link">restoreValues</a><wbr>(int&nbsp;entityId,
+ <a href="MovementEffectTimeline.EffectValues.html" title="class in net.raphimc.viabedrock.api.model">MovementEffectTimeline.EffectValues</a>&nbsp;snapshot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainEntities(java.util.function.IntPredicate)" class="member-name-link">retainEntities</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;present)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -177,6 +261,67 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="beginFrame()">
+<h3>beginFrame</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">beginFrame</span>()</div>
+<div class="block">Open the input record before local world and player simulation. Repeated calls do not replace it.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="frameId()">
+<h3>frameId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">frameId</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="captureValues(int)">
+<h3>captureValues</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MovementEffectTimeline.EffectValues.html" title="class in net.raphimc.viabedrock.api.model">MovementEffectTimeline.EffectValues</a></span>&nbsp;<span class="element-name">captureValues</span><wbr><span class="parameters">(int&nbsp;entityId)</span></div>
+<div class="block">Immutable values for one actor; command and frame ownership remain in this timeline.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="restoreValues(int,net.raphimc.viabedrock.api.model.MovementEffectTimeline.EffectValues)">
+<h3>restoreValues</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restoreValues</span><wbr><span class="parameters">(int&nbsp;entityId,
+ <a href="MovementEffectTimeline.EffectValues.html" title="class in net.raphimc.viabedrock.api.model">MovementEffectTimeline.EffectValues</a>&nbsp;snapshot)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="pendingPhysicalFrame(java.util.function.IntPredicate)">
+<h3>pendingPhysicalFrame</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">pendingPhysicalFrame</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;predictedActor)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="applyPhysicalCommands(long,java.util.function.IntPredicate)">
+<h3>applyPhysicalCommands</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyPhysicalCommands</span><wbr><span class="parameters">(long&nbsp;frameId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;predictedActor)</span></div>
+<div class="block">Called after restored snapshots and between-frame writes, before the recorded physical input.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="finishPhysicalReplay(java.util.function.IntPredicate)">
+<h3>finishPhysicalReplay</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">finishPhysicalReplay</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;predictedActor)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="completeFrame()">
 <h3>completeFrame</h3>
 <div class="horizontal-scroll">
@@ -201,10 +346,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="hasGlideBoost(int,long)">
+<h3>hasGlideBoost</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasGlideBoost</span><wbr><span class="parameters">(int&nbsp;entityId,
+ long&nbsp;completedFrame)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="hasDolphinBoost(int)">
 <h3>hasDolphinBoost</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDolphinBoost</span><wbr><span class="parameters">(int&nbsp;entityId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasDolphinBoost(int,long)">
+<h3>hasDolphinBoost</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDolphinBoost</span><wbr><span class="parameters">(int&nbsp;entityId,
+ long&nbsp;completedFrame)</span></div>
 </div>
 </section>
 </li>
@@ -217,11 +380,38 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="hasGeyserBoost(int,long)">
+<h3>hasGeyserBoost</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasGeyserBoost</span><wbr><span class="parameters">(int&nbsp;entityId,
+ long&nbsp;completedFrame)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="predictGeyserBoost(int)">
 <h3>predictGeyserBoost</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">predictGeyserBoost</span><wbr><span class="parameters">(int&nbsp;entityId)</span></div>
 <div class="block">The native sulfur ticker refreshes a 100-tick effect without shortening a longer active effect.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="predictGeyserBoost(int,long)">
+<h3>predictGeyserBoost</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">predictGeyserBoost</span><wbr><span class="parameters">(int&nbsp;entityId,
+ long&nbsp;frame)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="replayCorrections()">
+<h3>replayCorrections</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">replayCorrections</span>()</div>
+<div class="block">Replay mutable effect values in native command/input/countdown order, before current physics.</div>
 </div>
 </section>
 </li>
@@ -238,6 +428,15 @@ loadScripts(document, 'script');</script>
 <h3>clear</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clear</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="resetHistory()">
+<h3>resetHistory</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetHistory</span>()</div>
+<div class="block">A replacement play listener discards actor state without reusing the connection's completed frame IDs.</div>
 </div>
 </section>
 </li>

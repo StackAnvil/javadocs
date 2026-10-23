@@ -64,7 +64,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#accept(net.raphimc.viabedrock.api.model.PlayerCorrection)" tabindex="0">accept(PlayerCorrection)</a></li>
-<li><a href="#consume(int,int)" tabindex="0">consume(int, int)</a></li>
+<li><a href="#consumePlayer(int)" tabindex="0">consumePlayer(int)</a></li>
+<li><a href="#consumeVehicle(net.raphimc.viabedrock.protocol.model.Position3f,float,float)" tabindex="0">consumeVehicle(Position3f, float, float)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
 </ol>
 </li>
@@ -119,9 +120,13 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#consume(int,int)" class="member-name-link">consume</a><wbr>(int&nbsp;entityId,
- int&nbsp;teleportId)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#consumePlayer(int)" class="member-name-link">consumePlayer</a><wbr>(int&nbsp;teleportId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#consumeVehicle(net.raphimc.viabedrock.protocol.model.Position3f,float,float)" class="member-name-link">consumeVehicle</a><wbr>(<a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+ float&nbsp;yaw,
+ float&nbsp;pitch)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -164,11 +169,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="consume(int,int)">
-<h3>consume</h3>
+<section class="detail" id="consumePlayer(int)">
+<h3>consumePlayer</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></span>&nbsp;<span class="element-name">consume</span><wbr><span class="parameters">(int&nbsp;entityId,
- int&nbsp;teleportId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></span>&nbsp;<span class="element-name">consumePlayer</span><wbr><span class="parameters">(int&nbsp;teleportId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="consumeVehicle(net.raphimc.viabedrock.protocol.model.Position3f,float,float)">
+<h3>consumeVehicle</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></span>&nbsp;<span class="element-name">consumeVehicle</span><wbr><span class="parameters">(<a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+ float&nbsp;yaw,
+ float&nbsp;pitch)</span></div>
 </div>
 </section>
 </li>

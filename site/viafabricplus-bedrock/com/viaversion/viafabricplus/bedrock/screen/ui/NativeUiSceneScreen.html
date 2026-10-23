@@ -72,6 +72,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#mouseClicked(net.minecraft.client.input.MouseButtonEvent,boolean)" tabindex="0">mouseClicked(MouseButtonEvent, boolean)</a></li>
 <li><a href="#mouseDragged(net.minecraft.client.input.MouseButtonEvent,double,double)" tabindex="0">mouseDragged(MouseButtonEvent, double, double)</a></li>
 <li><a href="#mouseReleased(net.minecraft.client.input.MouseButtonEvent)" tabindex="0">mouseReleased(MouseButtonEvent)</a></li>
+<li><a href="#nextFocusPath(net.minecraft.client.gui.navigation.FocusNavigationEvent)" tabindex="0">nextFocusPath(FocusNavigationEvent)</a></li>
+<li><a href="#setFocused(net.minecraft.client.gui.components.events.GuiEventListener)" tabindex="0">setFocused(GuiEventListener)</a></li>
 <li><a href="#keyPressed(net.minecraft.client.input.KeyEvent)" tabindex="0">keyPressed(KeyEvent)</a></li>
 <li><a href="#charTyped(net.minecraft.client.input.CharacterEvent)" tabindex="0">charTyped(CharacterEvent)</a></li>
 <li><a href="#onClose()" tabindex="0">onClose()</a></li>
@@ -104,7 +106,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">NativeUiSceneScreen</span>
 <span class="extends-implements">extends net.minecraft.client.gui.screens.Screen
 implements <a href="NativeUiScreen.html" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScreen</a></span></div>
-<div class="block">Draws the authored scene, with ordinary Java event, focus, narration and response handling.</div>
+<div class="block">Draws authored scenes with native directional focus geometry and Java input, narration and domain responses.</div>
 </div>
 </section>
 <section class="summary">
@@ -196,11 +198,17 @@ implements <a href="NativeUiScreen.html" title="interface in com.viaversion.viaf
  double&nbsp;horizontal,
  double&nbsp;vertical)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onClose()" class="member-name-link">onClose</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.client.gui.ComponentPath</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextFocusPath(net.minecraft.client.gui.navigation.FocusNavigationEvent)" class="member-name-link">nextFocusPath</a><wbr>(net.minecraft.client.gui.navigation.FocusNavigationEvent&nbsp;event)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removed()" class="member-name-link">removed</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onClose()" class="member-name-link">onClose</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removed()" class="member-name-link">removed</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFocused(net.minecraft.client.gui.components.events.GuiEventListener)" class="member-name-link">setFocused</a><wbr>(net.minecraft.client.gui.components.events.GuiEventListener&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
@@ -213,13 +221,13 @@ implements <a href="NativeUiScreen.html" title="interface in com.viaversion.viaf
 <code>added, addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, canInterruptWithAnotherScreen, changeFocus, children, clearFocus, clearWidgets, clickCommandAction, clickUrlAction, defaultHandleClickEvent, defaultHandleGameClickEvent, extractBlurredBackground, extractMenuBackground, extractMenuBackground, extractMenuBackgroundTexture, extractPanorama, extractRenderStateWithTooltipAndSubtitles, extractTransparentBackground, fadeWidgets, findNarratableWidget, getBackgroundMusic, getFont, getNarrationMessage, getRectangle, getTitle, getTooltipFromItem, getUsageNarration, handleDelayedNarration, init, insertText, isAllowedInPortal, isInGameUi, isInputCaptured, isMouseOver, isValidCharacterForName, onFilesDrop, rebuildWidgets, removeWidget, repositionElements, resize, scheduleNarration, setInitialFocus, setInitialFocus, shouldCloseOnEsc, shouldNarrateNavigation, showsActiveEffects, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, updateNarratorStatus</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.components.events.AbstractContainerEventHandler">Methods inherited from class&nbsp;net.minecraft.client.gui.components.events.AbstractContainerEventHandler</h3>
-<code>getFocused, isDragging, setDragging, setFocused</code></div>
+<code>getFocused, isDragging, setDragging</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#method-summary" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.components.events.ContainerEventHandler">Methods inherited from interface&nbsp;net.minecraft.client.gui.components.events.ContainerEventHandler</h3>
-<code>getBorderForArrowNavigation, getChildAt, getCurrentFocusPath, isFocused, keyReleased, nextFocusPath, preeditUpdated, setFocused</code></div>
+<code>getBorderForArrowNavigation, getChildAt, getCurrentFocusPath, isFocused, keyReleased, preeditUpdated, setFocused</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.components.events.GuiEventListener">Methods inherited from interface&nbsp;net.minecraft.client.gui.components.events.GuiEventListener</h3>
 <code>capturesInput, mouseMoved, shouldTakeFocusAfterInteraction</code></div>
@@ -366,6 +374,34 @@ implements <a href="NativeUiScreen.html" title="interface in com.viaversion.viaf
 <dd><code>mouseReleased</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.ContainerEventHandler</code></dd>
 <dt>Specified by:</dt>
 <dd><code>mouseReleased</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="nextFocusPath(net.minecraft.client.gui.navigation.FocusNavigationEvent)">
+<h3>nextFocusPath</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.client.gui.ComponentPath</span>&nbsp;<span class="element-name">nextFocusPath</span><wbr><span class="parameters">(net.minecraft.client.gui.navigation.FocusNavigationEvent&nbsp;event)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>nextFocusPath</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.ContainerEventHandler</code></dd>
+<dt>Specified by:</dt>
+<dd><code>nextFocusPath</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setFocused(net.minecraft.client.gui.components.events.GuiEventListener)">
+<h3>setFocused</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFocused</span><wbr><span class="parameters">(net.minecraft.client.gui.components.events.GuiEventListener&nbsp;listener)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>setFocused</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.ContainerEventHandler</code></dd>
+<dt>Overrides:</dt>
+<dd><code>setFocused</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.components.events.AbstractContainerEventHandler</code></dd>
 </dl>
 </div>
 </section>

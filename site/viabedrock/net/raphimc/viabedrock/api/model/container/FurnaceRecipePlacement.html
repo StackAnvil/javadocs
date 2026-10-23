@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#plan(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,net.raphimc.viabedrock.api.model.container.block.FurnaceContainer,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,boolean,java.util.function.ToIntFunction,java.util.function.Function,java.util.function.Predicate)" tabindex="0">plan(CraftingDataStorage, FurnaceContainer, InventoryContainer, boolean, ToIntFunction, Function, Predicate)</a></li>
+<li><a href="#plan(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,net.raphimc.viabedrock.api.model.container.block.FurnaceContainer,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,boolean,java.util.function.ToIntFunction,java.util.function.Function,java.util.function.BiPredicate,java.util.function.Predicate)" tabindex="0">plan(CraftingDataStorage, FurnaceContainer, InventoryContainer, boolean, ToIntFunction, Function, BiPredicate, Predicate)</a></li>
 </ol>
 </li>
 </ol>
@@ -108,12 +108,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="FurnaceRecipePlacement.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">FurnaceRecipePlacement.Plan</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#plan(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,net.raphimc.viabedrock.api.model.container.block.FurnaceContainer,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,boolean,java.util.function.ToIntFunction,java.util.function.Function,java.util.function.Predicate)" class="member-name-link">plan</a><wbr>(<a href="../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#plan(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,net.raphimc.viabedrock.api.model.container.block.FurnaceContainer,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,boolean,java.util.function.ToIntFunction,java.util.function.Function,java.util.function.BiPredicate,java.util.function.Predicate)" class="member-name-link">plan</a><wbr>(<a href="../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
  <a href="block/FurnaceContainer.html" title="class in net.raphimc.viabedrock.api.model.container.block">FurnaceContainer</a>&nbsp;furnace,
  <a href="player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
  boolean&nbsp;maxItems,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;maximum,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/recipe/ItemRecipeKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeKey</a>&gt;&nbsp;identity,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiPredicate.html" title="class or interface in java.util.function" class="external-link">BiPredicate</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;canMerge,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;matches)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
@@ -134,7 +135,7 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="plan(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,net.raphimc.viabedrock.api.model.container.block.FurnaceContainer,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,boolean,java.util.function.ToIntFunction,java.util.function.Function,java.util.function.Predicate)">
+<section class="detail" id="plan(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage,net.raphimc.viabedrock.api.model.container.block.FurnaceContainer,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,boolean,java.util.function.ToIntFunction,java.util.function.Function,java.util.function.BiPredicate,java.util.function.Predicate)">
 <h3>plan</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="FurnaceRecipePlacement.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">FurnaceRecipePlacement.Plan</a></span>&nbsp;<span class="element-name">plan</span><wbr><span class="parameters">(<a href="../../../protocol/storage/CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&nbsp;data,
@@ -143,6 +144,7 @@ loadScripts(document, 'script');</script>
  boolean&nbsp;maxItems,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;maximum,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/recipe/ItemRecipeKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeKey</a>&gt;&nbsp;identity,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiPredicate.html" title="class or interface in java.util.function" class="external-link">BiPredicate</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;canMerge,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;matches)</span></div>
 </div>
 </section>

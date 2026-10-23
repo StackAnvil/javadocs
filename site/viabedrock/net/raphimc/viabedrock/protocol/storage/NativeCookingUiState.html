@@ -65,12 +65,16 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#enabled(com.viaversion.viaversion.api.connection.UserConnection)" tabindex="0">enabled(UserConnection)</a></li>
+<li><a href="#actionsEnabled(com.viaversion.viaversion.api.connection.UserConnection)" tabindex="0">actionsEnabled(UserConnection)</a></li>
+<li><a href="#refreshActionCapability()" tabindex="0">refreshActionCapability()</a></li>
 <li><a href="#sendOpening(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)" tabindex="0">sendOpening(UserConnection, ContainerUi.Title)</a></li>
 <li><a href="#sendUpdate(com.viaversion.viaversion.api.connection.UserConnection)" tabindex="0">sendUpdate(UserConnection)</a></li>
 <li><a href="#after(com.viaversion.viaversion.api.protocol.packet.PacketWrapper)" tabindex="0">after(PacketWrapper)</a></li>
 <li><a href="#begin(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)" tabindex="0">begin(ContainerUi.Title)</a></li>
 <li><a href="#update()" tabindex="0">update()</a></li>
 <li><a href="#current(net.raphimc.viabedrock.api.model.NativeCookingControl)" tabindex="0">current(NativeCookingControl)</a></li>
+<li><a href="#current(net.raphimc.viabedrock.api.model.NativeCookingAction)" tabindex="0">current(NativeCookingAction)</a></li>
+<li><a href="#handleAction(net.raphimc.viabedrock.api.model.NativeCookingAction)" tabindex="0">handleAction(NativeCookingAction)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
 </ol>
 </li>
@@ -139,18 +143,26 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#after(com.viaversion.viaversion.api.protocol.packet.PacketWrapper)" class="member-name-link">after</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#actionsEnabled(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">actionsEnabled</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The client receives results; the core receives actions on a separate channel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#after(com.viaversion.viaversion.api.protocol.packet.PacketWrapper)" class="member-name-link">after</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Flush the genuine Java update before publishing the state derived from it.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeCookingUiState.Publication.html" title="class in net.raphimc.viabedrock.protocol.storage">NativeCookingUiState.Publication</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#begin(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)" class="member-name-link">begin</a><wbr>(<a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeCookingUiState.Publication.html" title="class in net.raphimc.viabedrock.protocol.storage">NativeCookingUiState.Publication</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#begin(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)" class="member-name-link">begin</a><wbr>(<a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Begin only for the currently opened menu, then wait for its first authoritative contents.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#current(net.raphimc.viabedrock.api.model.NativeCookingAction)" class="member-name-link">current</a><wbr>(<a href="../../api/model/NativeCookingAction.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingAction</a>&nbsp;action)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#current(net.raphimc.viabedrock.api.model.NativeCookingControl)" class="member-name-link">current</a><wbr>(<a href="../../api/model/NativeCookingControl.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingControl</a>&nbsp;control)</code></div>
@@ -158,6 +170,14 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#enabled(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">enabled</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleAction(net.raphimc.viabedrock.api.model.NativeCookingAction)" class="member-name-link">handleAction</a><wbr>(<a href="../../api/model/NativeCookingAction.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingAction</a>&nbsp;action)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Admit one exact authored cell.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refreshActionCapability()" class="member-name-link">refreshActionCapability</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendOpening(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)" class="member-name-link">sendOpening</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title)</code></div>
@@ -216,6 +236,23 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="actionsEnabled(com.viaversion.viaversion.api.connection.UserConnection)">
+<h3>actionsEnabled</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">actionsEnabled</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</span></div>
+<div class="block">The client receives results; the core receives actions on a separate channel.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="refreshActionCapability()">
+<h3>refreshActionCapability</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">refreshActionCapability</span>()</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="sendOpening(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)">
 <h3>sendOpening</h3>
 <div class="horizontal-scroll">
@@ -263,6 +300,23 @@ loadScripts(document, 'script');</script>
 <h3>current</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">current</span><wbr><span class="parameters">(<a href="../../api/model/NativeCookingControl.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingControl</a>&nbsp;control)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="current(net.raphimc.viabedrock.api.model.NativeCookingAction)">
+<h3>current</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">current</span><wbr><span class="parameters">(<a href="../../api/model/NativeCookingAction.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingAction</a>&nbsp;action)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="handleAction(net.raphimc.viabedrock.api.model.NativeCookingAction)">
+<h3>handleAction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">handleAction</span><wbr><span class="parameters">(<a href="../../api/model/NativeCookingAction.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingAction</a>&nbsp;action)</span></div>
+<div class="block">Admit one exact authored cell. Follow-up phases retire the original gesture without transferring again.</div>
 </div>
 </section>
 </li>

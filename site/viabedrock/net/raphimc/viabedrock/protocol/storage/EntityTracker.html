@@ -95,6 +95,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#getEntityByJid(int)" tabindex="0">getEntityByJid(int)</a></li>
 <li><a href="#interactionClickPosition(int,com.viaversion.viaversion.api.minecraft.Vector3d)" tabindex="0">interactionClickPosition(int, Vector3d)</a></li>
 <li><a href="#getItemFrameByJid(int)" tabindex="0">getItemFrameByJid(int)</a></li>
+<li><a href="#isLocallyControlledVehicle(net.raphimc.viabedrock.api.model.entity.Entity)" tabindex="0">isLocallyControlledVehicle(Entity)</a></li>
 <li><a href="#getClientPlayer()" tabindex="0">getClientPlayer()</a></li>
 <li><a href="#isEmpty()" tabindex="0">isEmpty()</a></li>
 <li><a href="#getNextJavaEntityId()" tabindex="0">getNextJavaEntityId()</a></li>
@@ -219,63 +220,68 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEmpty()" class="member-name-link">isEmpty</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markNativeActorsJoined()" class="member-name-link">markNativeActorsJoined</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeActorsJoined()" class="member-name-link">nativeActorsJoined</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isLocallyControlledVehicle(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">isLocallyControlledVehicle</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;vehicle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native vehicle control follows the first passenger, with saddle and tame gates for horses.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markNativeActorsJoined()" class="member-name-link">markNativeActorsJoined</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareForRespawn()" class="member-name-link">prepareForRespawn</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EntityReferenceTracker.html" title="class in net.raphimc.viabedrock.protocol.storage">EntityReferenceTracker</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#references()" class="member-name-link">references</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refreshPickingHitboxes(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">refreshPickingHitboxes</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeActorsJoined()" class="member-name-link">nativeActorsJoined</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeEntity(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">removeEntity</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareForRespawn()" class="member-name-link">prepareForRespawn</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#removeEntityReferences(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">removeEntityReferences</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EntityReferenceTracker.html" title="class in net.raphimc.viabedrock.protocol.storage">EntityReferenceTracker</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#references()" class="member-name-link">references</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refreshPickingHitboxes(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">refreshPickingHitboxes</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeEntity(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">removeEntity</a><wbr>(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#removeEntityReferences(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">removeEntityReferences</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">removeItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.ChunkPosition)" class="member-name-link">removeItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.ChunkPosition&nbsp;chunkPos)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">removeItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendFlightMovementSnapshot()" class="member-name-link">sendFlightMovementSnapshot</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeItemFrame(com.viaversion.viaversion.api.minecraft.ChunkPosition)" class="member-name-link">removeItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.ChunkPosition&nbsp;chunkPos)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendMovementEffectSnapshots()" class="member-name-link">sendMovementEffectSnapshots</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendFlightMovementSnapshot()" class="member-name-link">sendFlightMovementSnapshot</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeActorSnapshots()" class="member-name-link">sendNativeActorSnapshots</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendMovementEffectSnapshots()" class="member-name-link">sendMovementEffectSnapshots</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeCustomEntitySnapshot()" class="member-name-link">sendNativeCustomEntitySnapshot</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeActorSnapshots()" class="member-name-link">sendNativeActorSnapshots</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativePickingSnapshots()" class="member-name-link">sendNativePickingSnapshots</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeCustomEntitySnapshot()" class="member-name-link">sendNativeCustomEntitySnapshot</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendUnderwaterMovementSnapshots()" class="member-name-link">sendUnderwaterMovementSnapshots</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativePickingSnapshots()" class="member-name-link">sendNativePickingSnapshots</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spawnItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.model.BlockState)" class="member-name-link">spawnItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendUnderwaterMovementSnapshots()" class="member-name-link">sendUnderwaterMovementSnapshots</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spawnItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.model.BlockState)" class="member-name-link">spawnItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
  <a href="../../api/model/BlockState.html" title="class in net.raphimc.viabedrock.api.model">BlockState</a>&nbsp;blockState)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.chunk.BedrockBlockEntity)" class="member-name-link">updateItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
- <a href="../../api/chunk/BedrockBlockEntity.html" title="class in net.raphimc.viabedrock.api.chunk">BedrockBlockEntity</a>&nbsp;blockEntity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateItemFrame(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.api.chunk.BedrockBlockEntity)" class="member-name-link">updateItemFrame</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
+ <a href="../../api/chunk/BedrockBlockEntity.html" title="class in net.raphimc.viabedrock.api.chunk">BedrockBlockEntity</a>&nbsp;blockEntity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -569,6 +575,15 @@ loadScripts(document, 'script');</script>
 <h3>getItemFrameByJid</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EntityTracker.ItemFrame.html" title="class in net.raphimc.viabedrock.protocol.storage">EntityTracker.ItemFrame</a></span>&nbsp;<span class="element-name">getItemFrameByJid</span><wbr><span class="parameters">(int&nbsp;javaId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isLocallyControlledVehicle(net.raphimc.viabedrock.api.model.entity.Entity)">
+<h3>isLocallyControlledVehicle</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isLocallyControlledVehicle</span><wbr><span class="parameters">(<a href="../../api/model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;vehicle)</span></div>
+<div class="block">Native vehicle control follows the first passenger, with saddle and tame gates for horses.</div>
 </div>
 </section>
 </li>

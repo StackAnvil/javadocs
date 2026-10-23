@@ -57,6 +57,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#field-summary" tabindex="0">Field Summary</a></li>
 <li><a href="#constructor-summary" tabindex="0">Constructor Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
+<li><a href="#field-detail" tabindex="0">Field Details</a>
+<ol class="toc-list">
+<li><a href="#jumpTriggerTime" tabindex="0">jumpTriggerTime</a></li>
+<li><a href="#wasUnderwater" tabindex="0">wasUnderwater</a></li>
+</ol>
+</li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(net.minecraft.world.entity.EntityType,net.minecraft.world.level.Level)" tabindex="0">MixinPlayer(EntityType, Level)</a></li>
@@ -67,6 +73,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#viaFabricPlusBedrock$prepareFlightInput(float,float)" tabindex="0">viaFabricPlusBedrock$prepareFlightInput(float, float)</a></li>
 <li><a href="#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)" tabindex="0">viaFabricPlusBedrock$captureFlightMotion(Vec3, float)</a></li>
 <li><a href="#canPlayerFitWithinBlocksAndEntitiesWhen(net.minecraft.world.entity.Pose)" tabindex="0">canPlayerFitWithinBlocksAndEntitiesWhen(Pose)</a></li>
+<li><a href="#updateIsUnderwater()" tabindex="0">updateIsUnderwater()</a></li>
+<li><a href="#updatePlayerPose()" tabindex="0">updatePlayerPose()</a></li>
+<li><a href="#replayPlayerTick()" tabindex="0">replayPlayerTick()</a></li>
+<li><a href="#replayPlayerAiStep()" tabindex="0">replayPlayerAiStep()</a></li>
+<li><a href="#capturePlayerPhysics(com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState.Builder)" tabindex="0">capturePlayerPhysics(PhysicalState.Builder)</a></li>
 </ol>
 </li>
 </ol>
@@ -88,13 +99,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a>, net.fabricmc.fabric.api.event.lifecycle.v1.EntityLoadData, net.minecraft.core.component.DataComponentGetter, net.minecraft.core.TypedInstance&lt;net.minecraft.world.entity.EntityType&lt;?&gt;&gt;, net.minecraft.network.syncher.SyncedDataHolder, net.minecraft.util.debug.DebugValueSource, net.minecraft.world.entity.Attackable, net.minecraft.world.entity.ItemOwner, net.minecraft.world.entity.SlotProvider, net.minecraft.world.level.entity.EntityAccess, net.minecraft.world.level.entity.UniquelyIdentifyable, net.minecraft.world.Nameable, net.minecraft.world.scores.ScoreHolder, net.minecraft.world.waypoints.Waypoint, net.minecraft.world.waypoints.WaypointTransmitter</code></dd>
+<dd><code><a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a>, <a href="../../../../movement/replay/PhysicalStateAccess.Player.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Player</a>, net.fabricmc.fabric.api.event.lifecycle.v1.EntityLoadData, net.minecraft.core.component.DataComponentGetter, net.minecraft.core.TypedInstance&lt;net.minecraft.world.entity.EntityType&lt;?&gt;&gt;, net.minecraft.network.syncher.SyncedDataHolder, net.minecraft.util.debug.DebugValueSource, net.minecraft.world.entity.Attackable, net.minecraft.world.entity.ItemOwner, net.minecraft.world.entity.SlotProvider, net.minecraft.world.level.entity.EntityAccess, net.minecraft.world.level.entity.UniquelyIdentifyable, net.minecraft.world.Nameable, net.minecraft.world.scores.ScoreHolder, net.minecraft.world.waypoints.Waypoint, net.minecraft.world.waypoints.WaypointTransmitter</code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">MixinPlayer</span>
 <span class="extends-implements">extends net.minecraft.world.entity.Avatar
-implements <a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a></span></div>
+implements <a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a>, <a href="../../../../movement/replay/PhysicalStateAccess.Player.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Player</a></span></div>
 </div>
 </section>
 <section class="summary">
@@ -108,7 +119,7 @@ implements <a href="../../../access/IBedrockFlightMotion.html" title="interface 
 <code>net.minecraft.world.entity.LivingEntity.Fallsounds, net.minecraft.world.entity.LivingEntity.SwingDescription, net.minecraft.world.entity.LivingEntity.SwingState</code></div>
 <div class="inherited-list">
 <h3 id="nested-classes-inherited-from-class-net.minecraft.world.entity.Entity">Nested classes/interfaces inherited from class&nbsp;net.minecraft.world.entity.Entity</h3>
-<code>net.minecraft.world.entity.Entity.Flags, net.minecraft.world.entity.Entity.MoveFunction, net.minecraft.world.entity.Entity.MovementEmission, net.minecraft.world.entity.Entity.RemovalReason</code></div>
+<code>net.minecraft.world.entity.Entity.Flags, net.minecraft.world.entity.Entity.MoveFunction, net.minecraft.world.entity.Entity.Movement, net.minecraft.world.entity.Entity.MovementEmission, net.minecraft.world.entity.Entity.RemovalReason</code></div>
 <div class="inherited-list">
 <h3 id="nested-classes-inherited-from-class-net.minecraft.util.debug.DebugValueSource">Nested classes/interfaces inherited from interface&nbsp;net.minecraft.util.debug.DebugValueSource</h3>
 <code>net.minecraft.util.debug.DebugValueSource.Registration, net.minecraft.util.debug.DebugValueSource.ValueGetter&lt;T&gt;</code></div>
@@ -127,6 +138,18 @@ implements <a href="../../../access/IBedrockFlightMotion.html" title="interface 
 <li>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>protected int</code></div>
+<div class="col-second even-row-color"><code><a href="#jumpTriggerTime" class="member-name-link">jumpTriggerTime</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>protected boolean</code></div>
+<div class="col-second odd-row-color"><code><a href="#wasUnderwater" class="member-name-link">wasUnderwater</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+</div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.entity.Avatar">Fields inherited from class&nbsp;net.minecraft.world.entity.Avatar</h3>
 <code>DATA_PLAYER_MAIN_HAND, DATA_PLAYER_MODE_CUSTOMISATION, DEFAULT_EYE_HEIGHT, DEFAULT_MAIN_HAND, DEFAULT_MODEL_CUSTOMIZATION, DEFAULT_VEHICLE_ATTACHMENT, POSES, STANDING_DIMENSIONS, SWIMMING_BB_HEIGHT</code></div>
@@ -178,13 +201,28 @@ implements <a href="../../../access/IBedrockFlightMotion.html" title="interface 
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#canPlayerFitWithinBlocksAndEntitiesWhen(net.minecraft.world.entity.Pose)" class="member-name-link">canPlayerFitWithinBlocksAndEntitiesWhen</a><wbr>(net.minecraft.world.entity.Pose&nbsp;pose)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)" class="member-name-link">viaFabricPlusBedrock$captureFlightMotion</a><wbr>(net.minecraft.world.phys.Vec3&nbsp;motion,
- float&nbsp;friction)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#capturePlayerPhysics(com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState.Builder)" class="member-name-link">capturePlayerPhysics</a><wbr>(<a href="../../../../movement/replay/PhysicalState.Builder.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState.Builder</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$prepareFlightInput(float,float)" class="member-name-link">viaFabricPlusBedrock$prepareFlightInput</a><wbr>(float&nbsp;inputX,
- float&nbsp;inputZ)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replayPlayerAiStep()" class="member-name-link">replayPlayerAiStep</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replayPlayerTick()" class="member-name-link">replayPlayerTick</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updateIsUnderwater()" class="member-name-link">updateIsUnderwater</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updatePlayerPose()" class="member-name-link">updatePlayerPose</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)" class="member-name-link">viaFabricPlusBedrock$captureFlightMotion</a><wbr>(net.minecraft.world.phys.Vec3&nbsp;motion,
+ float&nbsp;friction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$prepareFlightInput(float,float)" class="member-name-link">viaFabricPlusBedrock$prepareFlightInput</a><wbr>(float&nbsp;inputX,
+ float&nbsp;inputZ)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -224,6 +262,30 @@ implements <a href="../../../access/IBedrockFlightMotion.html" title="interface 
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ============ FIELD DETAIL =========== -->
+<li>
+<section class="field-details" id="field-detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="jumpTriggerTime">
+<h3>jumpTriggerTime</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">jumpTriggerTime</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="wasUnderwater">
+<h3>wasUnderwater</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">wasUnderwater</span></div>
+</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
@@ -277,6 +339,58 @@ implements <a href="../../../access/IBedrockFlightMotion.html" title="interface 
 <h3>canPlayerFitWithinBlocksAndEntitiesWhen</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canPlayerFitWithinBlocksAndEntitiesWhen</span><wbr><span class="parameters">(net.minecraft.world.entity.Pose&nbsp;pose)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="updateIsUnderwater()">
+<h3>updateIsUnderwater</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">updateIsUnderwater</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="updatePlayerPose()">
+<h3>updatePlayerPose</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updatePlayerPose</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="replayPlayerTick()">
+<h3>replayPlayerTick</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">replayPlayerTick</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../movement/replay/PhysicalStateAccess.Player.html#replayPlayerTick()">replayPlayerTick</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../movement/replay/PhysicalStateAccess.Player.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Player</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="replayPlayerAiStep()">
+<h3>replayPlayerAiStep</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">replayPlayerAiStep</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../movement/replay/PhysicalStateAccess.Player.html#replayPlayerAiStep()">replayPlayerAiStep</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../movement/replay/PhysicalStateAccess.Player.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Player</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="capturePlayerPhysics(com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState.Builder)">
+<h3>capturePlayerPhysics</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">capturePlayerPhysics</span><wbr><span class="parameters">(<a href="../../../../movement/replay/PhysicalState.Builder.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState.Builder</a>&nbsp;state)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../movement/replay/PhysicalStateAccess.Player.html#capturePlayerPhysics(com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState.Builder)">capturePlayerPhysics</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../movement/replay/PhysicalStateAccess.Player.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Player</a></code></dd>
+</dl>
 </div>
 </section>
 </li>

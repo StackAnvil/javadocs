@@ -59,20 +59,16 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(int,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestAction.PlaceAction)" tabindex="0">Plan(int, int, BedrockItem, BedrockItem, ItemStackRequestAction.PlaceAction)</a></li>
+<li><a href="#%3Cinit%3E(int,net.raphimc.viabedrock.api.model.container.NativeContainerTransfer.Plan,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestAction.PlaceAction)" tabindex="0">Plan(int, NativeContainerTransfer.Plan, ItemStackRequestAction.PlaceAction)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#sourceAfter()" tabindex="0">sourceAfter()</a></li>
-<li><a href="#destinationAfter()" tabindex="0">destinationAfter()</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
 <li><a href="#sourceSlot()" tabindex="0">sourceSlot()</a></li>
-<li><a href="#destinationSlot()" tabindex="0">destinationSlot()</a></li>
-<li><a href="#sourceBefore()" tabindex="0">sourceBefore()</a></li>
-<li><a href="#destinationBefore()" tabindex="0">destinationBefore()</a></li>
+<li><a href="#transfer()" tabindex="0">transfer()</a></li>
 <li><a href="#action()" tabindex="0">action()</a></li>
 </ol>
 </li>
@@ -95,7 +91,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeContainerAutoPlacement.Plan</span>(int&nbsp;sourceSlot, int&nbsp;destinationSlot, <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;sourceBefore, <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;destinationBefore, <a href="../../../protocol/model/inventory/ItemStackRequestAction.PlaceAction.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction.PlaceAction</a>&nbsp;action)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeContainerAutoPlacement.Plan</span>(int&nbsp;sourceSlot, <a href="NativeContainerTransfer.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerTransfer.Plan</a>&nbsp;transfer, <a href="../../../protocol/model/inventory/ItemStackRequestAction.PlaceAction.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction.PlaceAction</a>&nbsp;action)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -109,10 +105,8 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestAction.PlaceAction)" class="member-name-link">Plan</a><wbr>(int&nbsp;sourceSlot,
- int&nbsp;destinationSlot,
- <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;sourceBefore,
- <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;destinationBefore,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,net.raphimc.viabedrock.api.model.container.NativeContainerTransfer.Plan,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestAction.PlaceAction)" class="member-name-link">Plan</a><wbr>(int&nbsp;sourceSlot,
+ <a href="NativeContainerTransfer.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerTransfer.Plan</a>&nbsp;transfer,
  <a href="../../../protocol/model/inventory/ItemStackRequestAction.PlaceAction.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction.PlaceAction</a>&nbsp;action)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Plan</code> record class.</div>
@@ -136,46 +130,30 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>action</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destinationAfter()" class="member-name-link">destinationAfter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destinationBefore()" class="member-name-link">destinationBefore</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>destinationBefore</code> record component.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destinationSlot()" class="member-name-link">destinationSlot</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>destinationSlot</code> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sourceAfter()" class="member-name-link">sourceAfter</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sourceBefore()" class="member-name-link">sourceBefore</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sourceSlot()" class="member-name-link">sourceSlot</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>sourceBefore</code> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sourceSlot()" class="member-name-link">sourceSlot</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>sourceSlot</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeContainerTransfer.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerTransfer.Plan</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#transfer()" class="member-name-link">transfer</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>transfer</code> record component.</div>
 </div>
 </div>
 </div>
@@ -195,21 +173,17 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestAction.PlaceAction)">
+<section class="detail" id="&lt;init&gt;(int,net.raphimc.viabedrock.api.model.container.NativeContainerTransfer.Plan,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestAction.PlaceAction)">
 <h3>Plan</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Plan</span><wbr><span class="parameters">(int&nbsp;sourceSlot,
- int&nbsp;destinationSlot,
- <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;sourceBefore,
- <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;destinationBefore,
+ <a href="NativeContainerTransfer.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerTransfer.Plan</a>&nbsp;transfer,
  <a href="../../../protocol/model/inventory/ItemStackRequestAction.PlaceAction.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction.PlaceAction</a>&nbsp;action)</span></div>
 <div class="block">Creates an instance of a <code>Plan</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>sourceSlot</code> - the value for the <code>sourceSlot</code> record component</dd>
-<dd><code>destinationSlot</code> - the value for the <code>destinationSlot</code> record component</dd>
-<dd><code>sourceBefore</code> - the value for the <code>sourceBefore</code> record component</dd>
-<dd><code>destinationBefore</code> - the value for the <code>destinationBefore</code> record component</dd>
+<dd><code>transfer</code> - the value for the <code>transfer</code> record component</dd>
 <dd><code>action</code> - the value for the <code>action</code> record component</dd>
 </dl>
 </div>
@@ -223,22 +197,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="sourceAfter()">
-<h3>sourceAfter</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></span>&nbsp;<span class="element-name">sourceAfter</span>()</div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="destinationAfter()">
-<h3>destinationAfter</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></span>&nbsp;<span class="element-name">destinationAfter</span>()</div>
-</div>
-</section>
-</li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
@@ -300,40 +258,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="destinationSlot()">
-<h3>destinationSlot</h3>
+<section class="detail" id="transfer()">
+<h3>transfer</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">destinationSlot</span>()</div>
-<div class="block">Returns the value of the <code>destinationSlot</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeContainerTransfer.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerTransfer.Plan</a></span>&nbsp;<span class="element-name">transfer</span>()</div>
+<div class="block">Returns the value of the <code>transfer</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>destinationSlot</code> record component</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="sourceBefore()">
-<h3>sourceBefore</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></span>&nbsp;<span class="element-name">sourceBefore</span>()</div>
-<div class="block">Returns the value of the <code>sourceBefore</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>sourceBefore</code> record component</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="destinationBefore()">
-<h3>destinationBefore</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></span>&nbsp;<span class="element-name">destinationBefore</span>()</div>
-<div class="block">Returns the value of the <code>destinationBefore</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>destinationBefore</code> record component</dd>
+<dd>the value of the <code>transfer</code> record component</dd>
 </dl>
 </div>
 </section>

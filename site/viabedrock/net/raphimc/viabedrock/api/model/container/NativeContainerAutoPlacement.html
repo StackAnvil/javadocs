@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#plan(net.raphimc.viabedrock.api.model.container.NativeContainerAutoPlacement.Binding,net.raphimc.viabedrock.api.model.container.Container,long,long,int,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,int)" tabindex="0">plan(NativeContainerAutoPlacement.Binding, Container, long, long, int, InventoryContainer, int)</a></li>
+<li><a href="#plan(net.raphimc.viabedrock.api.model.container.NativeContainerAutoPlacement.Binding,net.raphimc.viabedrock.api.model.container.Container,long,long,int,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,int,java.util.function.BiPredicate)" tabindex="0">plan(NativeContainerAutoPlacement.Binding, Container, long, long, int, InventoryContainer, int, BiPredicate)</a></li>
 </ol>
 </li>
 </ol>
@@ -111,13 +111,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeContainerAutoPlacement.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerAutoPlacement.Plan</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#plan(net.raphimc.viabedrock.api.model.container.NativeContainerAutoPlacement.Binding,net.raphimc.viabedrock.api.model.container.Container,long,long,int,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,int)" class="member-name-link">plan</a><wbr>(<a href="NativeContainerAutoPlacement.Binding.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerAutoPlacement.Binding</a>&nbsp;binding,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#plan(net.raphimc.viabedrock.api.model.container.NativeContainerAutoPlacement.Binding,net.raphimc.viabedrock.api.model.container.Container,long,long,int,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,int,java.util.function.BiPredicate)" class="member-name-link">plan</a><wbr>(<a href="NativeContainerAutoPlacement.Binding.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerAutoPlacement.Binding</a>&nbsp;binding,
  <a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;current,
  long&nbsp;generation,
  long&nbsp;presentationSequence,
  int&nbsp;sourceSlot,
  <a href="player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
- int&nbsp;maximumStackSize)</code></div>
+ int&nbsp;maximumStackSize,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiPredicate.html" title="class or interface in java.util.function" class="external-link">BiPredicate</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;canMerge)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -137,7 +138,7 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="plan(net.raphimc.viabedrock.api.model.container.NativeContainerAutoPlacement.Binding,net.raphimc.viabedrock.api.model.container.Container,long,long,int,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,int)">
+<section class="detail" id="plan(net.raphimc.viabedrock.api.model.container.NativeContainerAutoPlacement.Binding,net.raphimc.viabedrock.api.model.container.Container,long,long,int,net.raphimc.viabedrock.api.model.container.player.InventoryContainer,int,java.util.function.BiPredicate)">
 <h3>plan</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeContainerAutoPlacement.Plan.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerAutoPlacement.Plan</a></span>&nbsp;<span class="element-name">plan</span><wbr><span class="parameters">(<a href="NativeContainerAutoPlacement.Binding.html" title="class in net.raphimc.viabedrock.api.model.container">NativeContainerAutoPlacement.Binding</a>&nbsp;binding,
@@ -146,7 +147,8 @@ loadScripts(document, 'script');</script>
  long&nbsp;presentationSequence,
  int&nbsp;sourceSlot,
  <a href="player/InventoryContainer.html" title="class in net.raphimc.viabedrock.api.model.container.player">InventoryContainer</a>&nbsp;inventory,
- int&nbsp;maximumStackSize)</span></div>
+ int&nbsp;maximumStackSize,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiPredicate.html" title="class or interface in java.util.function" class="external-link">BiPredicate</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;canMerge)</span></div>
 </div>
 </section>
 </li>

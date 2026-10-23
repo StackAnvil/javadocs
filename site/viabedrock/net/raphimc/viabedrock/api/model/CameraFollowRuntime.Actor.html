@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(java.util.UUID,net.raphimc.viabedrock.api.model.CameraPose.Vector,net.raphimc.viabedrock.api.model.CameraPose.Vector,float)" tabindex="0">Actor(UUID, CameraPose.Vector, CameraPose.Vector, float)</a></li>
+<li><a href="#%3Cinit%3E(java.util.UUID,net.raphimc.viabedrock.api.model.CameraFollowRuntime.Sample)" tabindex="0">Actor(UUID, CameraFollowRuntime.Sample)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -68,9 +68,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
 <li><a href="#lifetime()" tabindex="0">lifetime()</a></li>
-<li><a href="#origin()" tabindex="0">origin()</a></li>
-<li><a href="#center()" tabindex="0">center()</a></li>
-<li><a href="#yaw()" tabindex="0">yaw()</a></li>
+<li><a href="#sample()" tabindex="0">sample()</a></li>
 </ol>
 </li>
 </ol>
@@ -92,9 +90,9 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">CameraFollowRuntime.Actor</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;origin, <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;center, float&nbsp;yaw)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">CameraFollowRuntime.Actor</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, <a href="CameraFollowRuntime.Sample.html" title="class in net.raphimc.viabedrock.api.model">CameraFollowRuntime.Sample</a>&nbsp;sample)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">Translated entity position and native physical center, sampled at the same render time.</div>
+<div class="block">Native actor identity stays available while its render entity or physical bounds are pending.</div>
 </div>
 </section>
 <section class="summary">
@@ -107,10 +105,8 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.UUID,net.raphimc.viabedrock.api.model.CameraPose.Vector,net.raphimc.viabedrock.api.model.CameraPose.Vector,float)" class="member-name-link">Actor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
- <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;origin,
- <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;center,
- float&nbsp;yaw)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.UUID,net.raphimc.viabedrock.api.model.CameraFollowRuntime.Sample)" class="member-name-link">Actor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ <a href="CameraFollowRuntime.Sample.html" title="class in net.raphimc.viabedrock.api.model">CameraFollowRuntime.Sample</a>&nbsp;sample)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Actor</code> record class.</div>
 </div>
@@ -128,40 +124,30 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#center()" class="member-name-link">center</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>center</code> record component.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lifetime()" class="member-name-link">lifetime</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lifetime()" class="member-name-link">lifetime</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>lifetime</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#origin()" class="member-name-link">origin</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>origin</code> record component.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CameraFollowRuntime.Sample.html" title="class in net.raphimc.viabedrock.api.model">CameraFollowRuntime.Sample</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sample()" class="member-name-link">sample</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns a string representation of this record class.</div>
+<div class="block">Returns the value of the <code>sample</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#yaw()" class="member-name-link">yaw</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>yaw</code> record component.</div>
+<div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
 </div>
@@ -181,20 +167,16 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.UUID,net.raphimc.viabedrock.api.model.CameraPose.Vector,net.raphimc.viabedrock.api.model.CameraPose.Vector,float)">
+<section class="detail" id="&lt;init&gt;(java.util.UUID,net.raphimc.viabedrock.api.model.CameraFollowRuntime.Sample)">
 <h3>Actor</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Actor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
- <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;origin,
- <a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a>&nbsp;center,
- float&nbsp;yaw)</span></div>
+ <a href="CameraFollowRuntime.Sample.html" title="class in net.raphimc.viabedrock.api.model">CameraFollowRuntime.Sample</a>&nbsp;sample)</span></div>
 <div class="block">Creates an instance of a <code>Actor</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>lifetime</code> - the value for the <code>lifetime</code> record component</dd>
-<dd><code>origin</code> - the value for the <code>origin</code> record component</dd>
-<dd><code>center</code> - the value for the <code>center</code> record component</dd>
-<dd><code>yaw</code> - the value for the <code>yaw</code> record component</dd>
+<dd><code>sample</code> - the value for the <code>sample</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -242,7 +224,7 @@ loadScripts(document, 'script');</script>
 <h3>equals</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
-<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. Reference components are compared with <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>; primitive components are compared with the <code>compare</code> method from their corresponding wrapper classes.</div>
+<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
@@ -268,40 +250,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="origin()">
-<h3>origin</h3>
+<section class="detail" id="sample()">
+<h3>sample</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a></span>&nbsp;<span class="element-name">origin</span>()</div>
-<div class="block">Returns the value of the <code>origin</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CameraFollowRuntime.Sample.html" title="class in net.raphimc.viabedrock.api.model">CameraFollowRuntime.Sample</a></span>&nbsp;<span class="element-name">sample</span>()</div>
+<div class="block">Returns the value of the <code>sample</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>origin</code> record component</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="center()">
-<h3>center</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CameraPose.Vector.html" title="class in net.raphimc.viabedrock.api.model">CameraPose.Vector</a></span>&nbsp;<span class="element-name">center</span>()</div>
-<div class="block">Returns the value of the <code>center</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>center</code> record component</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="yaw()">
-<h3>yaw</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">yaw</span>()</div>
-<div class="block">Returns the value of the <code>yaw</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>yaw</code> record component</dd>
+<dd>the value of the <code>sample</code> record component</dd>
 </dl>
 </div>
 </section>
