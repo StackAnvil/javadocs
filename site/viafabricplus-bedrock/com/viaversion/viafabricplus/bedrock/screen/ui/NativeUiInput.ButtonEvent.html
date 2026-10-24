@@ -58,18 +58,19 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(int,int,int,boolean,boolean,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Scope,boolean,boolean)" tabindex="0">ButtonEvent(int, int, int, boolean, boolean, int, NativeUiInput.Scope, boolean, boolean)</a></li>
+<li><a href="#%3Cinit%3E(int,int,int,int,boolean,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Scope,boolean,boolean)" tabindex="0">ButtonEvent(int, int, int, int, boolean, int, NativeUiInput.Scope, boolean, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#pressed()" tabindex="0">pressed()</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
 <li><a href="#source()" tabindex="0">source()</a></li>
 <li><a href="#target()" tabindex="0">target()</a></li>
 <li><a href="#previous()" tabindex="0">previous()</a></li>
-<li><a href="#pressed()" tabindex="0">pressed()</a></li>
+<li><a href="#phase()" tabindex="0">phase()</a></li>
 <li><a href="#transition()" tabindex="0">transition()</a></li>
 <li><a href="#mode()" tabindex="0">mode()</a></li>
 <li><a href="#scope()" tabindex="0">scope()</a></li>
@@ -96,8 +97,9 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeUiInput.ButtonEvent</span>(int&nbsp;source, int&nbsp;target, int&nbsp;previous, boolean&nbsp;pressed, boolean&nbsp;transition, int&nbsp;mode, <a href="NativeUiInput.Scope.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Scope</a>&nbsp;scope, boolean&nbsp;handleSelect, boolean&nbsp;handleDeselect)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeUiInput.ButtonEvent</span>(int&nbsp;source, int&nbsp;target, int&nbsp;previous, int&nbsp;phase, boolean&nbsp;transition, int&nbsp;mode, <a href="NativeUiInput.Scope.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Scope</a>&nbsp;scope, boolean&nbsp;handleSelect, boolean&nbsp;handleDeselect)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Retains the native raw phase; only phase one is a pressed controller event.</div>
 </div>
 </section>
 <section class="summary">
@@ -110,10 +112,10 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,boolean,boolean,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Scope,boolean,boolean)" class="member-name-link">ButtonEvent</a><wbr>(int&nbsp;source,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,int,boolean,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Scope,boolean,boolean)" class="member-name-link">ButtonEvent</a><wbr>(int&nbsp;source,
  int&nbsp;target,
  int&nbsp;previous,
- boolean&nbsp;pressed,
+ int&nbsp;phase,
  boolean&nbsp;transition,
  int&nbsp;mode,
  <a href="NativeUiInput.Scope.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Scope</a>&nbsp;scope,
@@ -161,39 +163,42 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>mode</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pressed()" class="member-name-link">pressed</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#phase()" class="member-name-link">phase</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>pressed</code> record component.</div>
+<div class="block">Returns the value of the <code>phase</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previous()" class="member-name-link">previous</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pressed()" class="member-name-link">pressed</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previous()" class="member-name-link">previous</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>previous</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInput.Scope.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Scope</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scope()" class="member-name-link">scope</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInput.Scope.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Scope</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scope()" class="member-name-link">scope</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>scope</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#source()" class="member-name-link">source</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#source()" class="member-name-link">source</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>source</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#target()" class="member-name-link">target</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#target()" class="member-name-link">target</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>target</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#transition()" class="member-name-link">transition</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#transition()" class="member-name-link">transition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>transition</code> record component.</div>
 </div>
 </div>
@@ -214,13 +219,13 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,int,int,boolean,boolean,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Scope,boolean,boolean)">
+<section class="detail" id="&lt;init&gt;(int,int,int,int,boolean,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Scope,boolean,boolean)">
 <h3>ButtonEvent</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ButtonEvent</span><wbr><span class="parameters">(int&nbsp;source,
  int&nbsp;target,
  int&nbsp;previous,
- boolean&nbsp;pressed,
+ int&nbsp;phase,
  boolean&nbsp;transition,
  int&nbsp;mode,
  <a href="NativeUiInput.Scope.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Scope</a>&nbsp;scope,
@@ -232,7 +237,7 @@ loadScripts(document, 'script');</script>
 <dd><code>source</code> - the value for the <code>source</code> record component</dd>
 <dd><code>target</code> - the value for the <code>target</code> record component</dd>
 <dd><code>previous</code> - the value for the <code>previous</code> record component</dd>
-<dd><code>pressed</code> - the value for the <code>pressed</code> record component</dd>
+<dd><code>phase</code> - the value for the <code>phase</code> record component</dd>
 <dd><code>transition</code> - the value for the <code>transition</code> record component</dd>
 <dd><code>mode</code> - the value for the <code>mode</code> record component</dd>
 <dd><code>scope</code> - the value for the <code>scope</code> record component</dd>
@@ -250,6 +255,14 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="pressed()">
+<h3>pressed</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">pressed</span>()</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
@@ -337,14 +350,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="pressed()">
-<h3>pressed</h3>
+<section class="detail" id="phase()">
+<h3>phase</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">pressed</span>()</div>
-<div class="block">Returns the value of the <code>pressed</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">phase</span>()</div>
+<div class="block">Returns the value of the <code>phase</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>pressed</code> record component</dd>
+<dd>the value of the <code>phase</code> record component</dd>
 </dl>
 </div>
 </section>

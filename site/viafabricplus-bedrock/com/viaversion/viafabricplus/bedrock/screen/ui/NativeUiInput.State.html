@@ -64,10 +64,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#phase(int)" tabindex="0">phase(int)</a></li>
-<li><a href="#dispatch(int,boolean,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" tabindex="0">dispatch(int, boolean, NativeUiInput.Context)</a></li>
+<li><a href="#invalidateMappings()" tabindex="0">invalidateMappings()</a></li>
+<li><a href="#dispatch(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" tabindex="0">dispatch(int, int, NativeUiInput.Context)</a></li>
+<li><a href="#dispatch(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context,java.util.function.Consumer)" tabindex="0">dispatch(int, int, NativeUiInput.Context, Consumer)</a></li>
 <li><a href="#hover(boolean,boolean,boolean,int)" tabindex="0">hover(boolean, boolean, boolean, int)</a></li>
 <li><a href="#pointer(boolean,boolean,boolean,int)" tabindex="0">pointer(boolean, boolean, boolean, int)</a></li>
-<li><a href="#suppress(int,boolean,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" tabindex="0">suppress(int, boolean, NativeUiInput.Context)</a></li>
+<li><a href="#suppress(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" tabindex="0">suppress(int, int, NativeUiInput.Context)</a></li>
 </ol>
 </li>
 </ol>
@@ -118,17 +120,32 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInput.Dispatch.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Dispatch</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dispatch(int,boolean,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" class="member-name-link">dispatch</a><wbr>(int&nbsp;source,
- boolean&nbsp;pressed,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dispatch(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" class="member-name-link">dispatch</a><wbr>(int&nbsp;source,
+ int&nbsp;phase,
  <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInput.Hover.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Hover</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hover(boolean,boolean,boolean,int)" class="member-name-link">hover</a><wbr>(boolean&nbsp;previous,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Dispatches an Input component without sibling event handlers.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInput.Dispatch.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Dispatch</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dispatch(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context,java.util.function.Consumer)" class="member-name-link">dispatch</a><wbr>(int&nbsp;source,
+ int&nbsp;phase,
+ <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="NativeUiInput.ButtonEvent.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.ButtonEvent</a>&gt;&nbsp;handler)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sibling components run before the sender commits its accepted mapping phase.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInput.Hover.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Hover</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hover(boolean,boolean,boolean,int)" class="member-name-link">hover</a><wbr>(boolean&nbsp;previous,
  boolean&nbsp;inside,
  boolean&nbsp;forcedOut,
  int&nbsp;handlerMask)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The caller supplies geometry/control admission; hover_enabled is checked by the native pointer entry, not this handler.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#invalidateMappings()" class="member-name-link">invalidateMappings</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Visibility callbacks and input-order removal preserve double-press history.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#phase(int)" class="member-name-link">phase</a><wbr>(int&nbsp;index)</code></div>
@@ -140,8 +157,8 @@ loadScripts(document, 'script');</script>
  int&nbsp;handlerMask)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#suppress(int,boolean,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" class="member-name-link">suppress</a><wbr>(int&nbsp;source,
- boolean&nbsp;pressed,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#suppress(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" class="member-name-link">suppress</a><wbr>(int&nbsp;source,
+ int&nbsp;phase,
  <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
@@ -186,12 +203,34 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="dispatch(int,boolean,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)">
+<section class="detail" id="invalidateMappings()">
+<h3>invalidateMappings</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">invalidateMappings</span>()</div>
+<div class="block">Visibility callbacks and input-order removal preserve double-press history.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="dispatch(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)">
 <h3>dispatch</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeUiInput.Dispatch.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Dispatch</a></span>&nbsp;<span class="element-name">dispatch</span><wbr><span class="parameters">(int&nbsp;source,
- boolean&nbsp;pressed,
+ int&nbsp;phase,
  <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context)</span></div>
+<div class="block">Dispatches an Input component without sibling event handlers.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="dispatch(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context,java.util.function.Consumer)">
+<h3>dispatch</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeUiInput.Dispatch.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Dispatch</a></span>&nbsp;<span class="element-name">dispatch</span><wbr><span class="parameters">(int&nbsp;source,
+ int&nbsp;phase,
+ <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="NativeUiInput.ButtonEvent.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.ButtonEvent</a>&gt;&nbsp;handler)</span></div>
+<div class="block">Sibling components run before the sender commits its accepted mapping phase.</div>
 </div>
 </section>
 </li>
@@ -219,11 +258,11 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="suppress(int,boolean,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)">
+<section class="detail" id="suppress(int,int,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)">
 <h3>suppress</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">suppress</span><wbr><span class="parameters">(int&nbsp;source,
- boolean&nbsp;pressed,
+ int&nbsp;phase,
  <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context)</span></div>
 </div>
 </section>

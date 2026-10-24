@@ -63,7 +63,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#dispatch(int,boolean,java.util.List)" tabindex="0">dispatch(int, boolean, List)</a></li>
+<li><a href="#dispatch(int,int,java.util.List)" tabindex="0">dispatch(int, int, List)</a></li>
 <li><a href="#retain(java.util.Set)" tabindex="0">retain(Set)</a></li>
 <li><a href="#captures(int)" tabindex="0">captures(int)</a></li>
 </ol>
@@ -99,7 +99,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="NativeUiInputRouter.Control.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInputRouter.Control</a>&lt;<a href="NativeUiInputRouter.Control.html#type-param-K" title="type parameter in NativeUiInputRouter.Control">K</a>&gt;</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Captured controls remain addressable after they leave the normal input order.</div>
+</div>
 <div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="NativeUiInputRouter.Event.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInputRouter.Event</a>&lt;<a href="NativeUiInputRouter.Event.html#type-param-K" title="type parameter in NativeUiInputRouter.Event">K</a>&gt;</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
@@ -137,8 +139,8 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#captures(int)" class="member-name-link">captures</a><wbr>(int&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInputRouter.Result.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInputRouter.Result</a><wbr>&lt;<a href="#type-param-K" title="type parameter in NativeUiInputRouter">K</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dispatch(int,boolean,java.util.List)" class="member-name-link">dispatch</a><wbr>(int&nbsp;source,
- boolean&nbsp;pressed,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dispatch(int,int,java.util.List)" class="member-name-link">dispatch</a><wbr>(int&nbsp;source,
+ int&nbsp;phase,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeUiInputRouter.Control.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInputRouter.Control</a>&lt;<a href="#type-param-K" title="type parameter in NativeUiInputRouter">K</a>&gt;&gt;&nbsp;controls)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
@@ -178,11 +180,11 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="dispatch(int,boolean,java.util.List)">
+<section class="detail" id="dispatch(int,int,java.util.List)">
 <h3>dispatch</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeUiInputRouter.Result.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInputRouter.Result</a>&lt;<a href="#type-param-K" title="type parameter in NativeUiInputRouter">K</a>&gt;</span>&nbsp;<span class="element-name">dispatch</span><wbr><span class="parameters">(int&nbsp;source,
- boolean&nbsp;pressed,
+ int&nbsp;phase,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeUiInputRouter.Control.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInputRouter.Control</a>&lt;<a href="#type-param-K" title="type parameter in NativeUiInputRouter">K</a>&gt;&gt;&nbsp;controls)</span></div>
 </div>
 </section>

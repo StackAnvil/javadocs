@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(K,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.State,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" tabindex="0">Control(K, NativeUiInput.State, NativeUiInput.Context)</a></li>
+<li><a href="#%3Cinit%3E(K,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.State,java.util.function.Supplier,java.util.function.Consumer,boolean)" tabindex="0">Control(K, NativeUiInput.State, Supplier, Consumer, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -69,6 +69,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#key()" tabindex="0">key()</a></li>
 <li><a href="#state()" tabindex="0">state()</a></li>
 <li><a href="#context()" tabindex="0">context()</a></li>
+<li><a href="#handler()" tabindex="0">handler()</a></li>
+<li><a href="#registered()" tabindex="0">registered()</a></li>
 </ol>
 </li>
 </ol>
@@ -90,8 +92,9 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeUiInputRouter.Control&lt;K&gt;</span>(<a href="#type-param-K" title="type parameter in NativeUiInputRouter.Control">K</a>&nbsp;key, <a href="NativeUiInput.State.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.State</a>&nbsp;state, <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeUiInputRouter.Control&lt;K&gt;</span>(<a href="#type-param-K" title="type parameter in NativeUiInputRouter.Control">K</a>&nbsp;key, <a href="NativeUiInput.State.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.State</a>&nbsp;state, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&gt;&nbsp;context, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="NativeUiInput.ButtonEvent.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.ButtonEvent</a>&gt;&nbsp;handler, boolean&nbsp;registered)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Captured controls remain addressable after they leave the normal input order.</div>
 </div>
 </section>
 <section class="summary">
@@ -104,9 +107,11 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(K,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.State,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)" class="member-name-link">Control</a><wbr>(<a href="#type-param-K" title="type parameter in NativeUiInputRouter.Control">K</a>&nbsp;key,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(K,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.State,java.util.function.Supplier,java.util.function.Consumer,boolean)" class="member-name-link">Control</a><wbr>(<a href="#type-param-K" title="type parameter in NativeUiInputRouter.Control">K</a>&nbsp;key,
  <a href="NativeUiInput.State.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.State</a>&nbsp;state,
- <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&gt;&nbsp;context,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="NativeUiInput.ButtonEvent.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.ButtonEvent</a>&gt;&nbsp;handler,
+ boolean&nbsp;registered)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Control</code> record class.</div>
 </div>
@@ -124,7 +129,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a><wbr>&lt;<a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#context()" class="member-name-link">context</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>context</code> record component.</div>
@@ -134,15 +139,25 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a><wbr>&lt;<a href="NativeUiInput.ButtonEvent.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.ButtonEvent</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handler()" class="member-name-link">handler</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>handler</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type-param-K" title="type parameter in NativeUiInputRouter.Control">K</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key()" class="member-name-link">key</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type-param-K" title="type parameter in NativeUiInputRouter.Control">K</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key()" class="member-name-link">key</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>key</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#registered()" class="member-name-link">registered</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>registered</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiInput.State.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.State</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state()" class="member-name-link">state</a>()</code></div>
@@ -172,18 +187,22 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(K,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.State,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)">
-<h3 id="&lt;init&gt;(java.lang.Object,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.State,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.Context)">Control</h3>
+<section class="detail" id="&lt;init&gt;(K,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.State,java.util.function.Supplier,java.util.function.Consumer,boolean)">
+<h3 id="&lt;init&gt;(java.lang.Object,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiInput.State,java.util.function.Supplier,java.util.function.Consumer,boolean)">Control</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Control</span><wbr><span class="parameters">(<a href="#type-param-K" title="type parameter in NativeUiInputRouter.Control">K</a>&nbsp;key,
  <a href="NativeUiInput.State.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.State</a>&nbsp;state,
- <a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&nbsp;context)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&gt;&nbsp;context,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="NativeUiInput.ButtonEvent.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.ButtonEvent</a>&gt;&nbsp;handler,
+ boolean&nbsp;registered)</span></div>
 <div class="block">Creates an instance of a <code>Control</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - the value for the <code>key</code> record component</dd>
 <dd><code>state</code> - the value for the <code>state</code> record component</dd>
 <dd><code>context</code> - the value for the <code>context</code> record component</dd>
+<dd><code>handler</code> - the value for the <code>handler</code> record component</dd>
+<dd><code>registered</code> - the value for the <code>registered</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -231,7 +250,7 @@ loadScripts(document, 'script');</script>
 <h3>equals</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
-<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>.</div>
+<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. Reference components are compared with <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>; primitive components are compared with the <code>compare</code> method from their corresponding wrapper classes.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
@@ -273,11 +292,37 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="context()">
 <h3>context</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a></span>&nbsp;<span class="element-name">context</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="NativeUiInput.Context.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.Context</a>&gt;</span>&nbsp;<span class="element-name">context</span>()</div>
 <div class="block">Returns the value of the <code>context</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>context</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="handler()">
+<h3>handler</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="NativeUiInput.ButtonEvent.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiInput.ButtonEvent</a>&gt;</span>&nbsp;<span class="element-name">handler</span>()</div>
+<div class="block">Returns the value of the <code>handler</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>handler</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="registered()">
+<h3>registered</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">registered</span>()</div>
+<div class="block">Returns the value of the <code>registered</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>registered</code> record component</dd>
 </dl>
 </div>
 </section>
