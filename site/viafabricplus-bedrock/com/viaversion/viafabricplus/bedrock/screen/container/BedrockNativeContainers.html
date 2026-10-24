@@ -58,6 +58,8 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#register()" tabindex="0">register()</a></li>
 <li><a href="#contents(net.minecraft.client.multiplayer.ClientPacketListener,int)" tabindex="0">contents(ClientPacketListener, int)</a></li>
+<li><a href="#playerScreenInstalled()" tabindex="0">playerScreenInstalled()</a></li>
+<li><a href="#screenInstalled(net.minecraft.client.gui.screens.Screen)" tabindex="0">screenInstalled(Screen)</a></li>
 <li><a href="#replacing(net.minecraft.world.inventory.AbstractContainerMenu)" tabindex="0">replacing(AbstractContainerMenu)</a></li>
 </ol>
 </li>
@@ -99,12 +101,20 @@ loadScripts(document, 'script');</script>
 <div class="block">Called after vanilla applied a real content packet on the client thread.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#playerScreenInstalled()" class="member-name-link">playerScreenInstalled</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#replacing(net.minecraft.world.inventory.AbstractContainerMenu)" class="member-name-link">replacing</a><wbr>(net.minecraft.world.inventory.AbstractContainerMenu&nbsp;menu)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#replacing(net.minecraft.world.inventory.AbstractContainerMenu)" class="member-name-link">replacing</a><wbr>(net.minecraft.world.inventory.AbstractContainerMenu&nbsp;menu)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Suppress menu teardown only during a presentation swap of the same live menu object.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#screenInstalled(net.minecraft.client.gui.screens.Screen)" class="member-name-link">screenInstalled</a><wbr>(net.minecraft.client.gui.screens.Screen&nbsp;screen)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Called after Java resynchronizes the pointer and before the first frame.</div>
 </div>
 </div>
 </div>
@@ -138,6 +148,23 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">contents</span><wbr><span class="parameters">(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;owner,
  int&nbsp;menuId)</span></div>
 <div class="block">Called after vanilla applied a real content packet on the client thread.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerScreenInstalled()">
+<h3>playerScreenInstalled</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">playerScreenInstalled</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="screenInstalled(net.minecraft.client.gui.screens.Screen)">
+<h3>screenInstalled</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">screenInstalled</span><wbr><span class="parameters">(net.minecraft.client.gui.screens.Screen&nbsp;screen)</span></div>
+<div class="block">Called after Java resynchronizes the pointer and before the first frame.</div>
 </div>
 </section>
 </li>
