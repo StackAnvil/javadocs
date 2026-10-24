@@ -67,6 +67,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#getCraftingDataList()" tabindex="0">getCraftingDataList()</a></li>
 <li><a href="#recipeCatalog(java.util.function.Predicate)" tabindex="0">recipeCatalog(Predicate)</a></li>
 <li><a href="#getDisplayedRecipe(int)" tabindex="0">getDisplayedRecipe(int)</a></li>
+<li><a href="#isOutputUnlocked(net.raphimc.viabedrock.protocol.model.BedrockItem,java.util.List)" tabindex="0">isOutputUnlocked(BedrockItem, List)</a></li>
 <li><a href="#sendJavaGhostRecipe(com.viaversion.viaversion.api.connection.UserConnection,int,int)" tabindex="0">sendJavaGhostRecipe(UserConnection, int, int)</a></li>
 <li><a href="#updateCraftingDataList(java.util.List,boolean)" tabindex="0">updateCraftingDataList(List, boolean)</a></li>
 <li><a href="#updateUnlockedRecipes(int,java.util.List)" tabindex="0">updateUnlockedRecipes(int, List)</a></li>
@@ -161,25 +162,31 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRecipeMatch(net.raphimc.viabedrock.api.model.container.Container,java.lang.String)" class="member-name-link">getRecipeMatch</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CraftingDataTracker.RecipeCatalog.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.RecipeCatalog</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeCatalog(java.util.function.Predicate)" class="member-name-link">recipeCatalog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&gt;&nbsp;supported)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendJavaGhostRecipe(com.viaversion.viaversion.api.connection.UserConnection,int,int)" class="member-name-link">sendJavaGhostRecipe</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isOutputUnlocked(net.raphimc.viabedrock.protocol.model.BedrockItem,java.util.List)" class="member-name-link">isOutputUnlocked</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;query,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;contexts)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Query the current native output index without depending on displayed recipes or placement capacity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CraftingDataTracker.RecipeCatalog.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.RecipeCatalog</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeCatalog(java.util.function.Predicate)" class="member-name-link">recipeCatalog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&gt;&nbsp;supported)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendJavaGhostRecipe(com.viaversion.viaversion.api.connection.UserConnection,int,int)" class="member-name-link">sendJavaGhostRecipe</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  int&nbsp;containerId,
  int&nbsp;displayId)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendJavaUpdateRecipes(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">sendJavaUpdateRecipes</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateCraftingDataList(java.util.List,boolean)" class="member-name-link">updateCraftingDataList</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&gt;&nbsp;recipes,
- boolean&nbsp;clear)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendJavaUpdateRecipes(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">sendJavaUpdateRecipes</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUnlockedRecipes(int,java.util.List)" class="member-name-link">updateUnlockedRecipes</a><wbr>(int&nbsp;type,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;ids)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateCraftingDataList(java.util.List,boolean)" class="member-name-link">updateCraftingDataList</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&gt;&nbsp;recipes,
+ boolean&nbsp;clear)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUnlockedRecipes(int,java.util.List)" class="member-name-link">updateUnlockedRecipes</a><wbr>(int&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;ids)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -240,6 +247,16 @@ loadScripts(document, 'script');</script>
 <h3>getDisplayedRecipe</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a></span>&nbsp;<span class="element-name">getDisplayedRecipe</span><wbr><span class="parameters">(int&nbsp;displayId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isOutputUnlocked(net.raphimc.viabedrock.protocol.model.BedrockItem,java.util.List)">
+<h3>isOutputUnlocked</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isOutputUnlocked</span><wbr><span class="parameters">(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;query,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;contexts)</span></div>
+<div class="block">Query the current native output index without depending on displayed recipes or placement capacity.</div>
 </div>
 </section>
 </li>

@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(java.util.List,java.util.List)" tabindex="0">CreativeCatalog(List, List)</a></li>
+<li><a href="#%3Cinit%3E(java.util.List,java.util.List,net.raphimc.viabedrock.protocol.model.ItemRegistry)" tabindex="0">CreativeCatalog(List, List, ItemRegistry)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -67,6 +67,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#empty()" tabindex="0">empty()</a></li>
 <li><a href="#groups()" tabindex="0">groups()</a></li>
 <li><a href="#entries()" tabindex="0">entries()</a></li>
+<li><a href="#searchEntries()" tabindex="0">searchEntries()</a></li>
+<li><a href="#groupEntries(int)" tabindex="0">groupEntries(int)</a></li>
+<li><a href="#categoryEntries(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.CreativeItemCategory)" tabindex="0">categoryEntries(CreativeItemCategory)</a></li>
+<li><a href="#collectionSource(java.util.function.ToIntFunction,java.util.function.BiPredicate)" tabindex="0">collectionSource(ToIntFunction, BiPredicate)</a></li>
 <li><a href="#containsJavaItem(int)" tabindex="0">containsJavaItem(int)</a></li>
 <li><a href="#creativeEntry(com.viaversion.viaversion.api.minecraft.item.Item)" tabindex="0">creativeEntry(Item)</a></li>
 </ol>
@@ -101,6 +105,12 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="CreativeCatalog.CollectionEntry.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.CollectionEntry</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>final class&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="CreativeCatalog.CollectionSource.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.CollectionSource</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="CreativeCatalog.Entry.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
@@ -117,8 +127,9 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.List,java.util.List)" class="member-name-link">CreativeCatalog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Group.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Group</a>&gt;&nbsp;groups,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;&nbsp;entries)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.List,java.util.List,net.raphimc.viabedrock.protocol.model.ItemRegistry)" class="member-name-link">CreativeCatalog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Group.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Group</a>&gt;&nbsp;groups,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;&nbsp;entries,
+ <a href="ItemRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemRegistry</a>&nbsp;registry)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -134,6 +145,17 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categoryEntries(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.CreativeItemCategory)" class="member-name-link">categoryEntries</a><wbr>(<a href="../data/enums/bedrock/generated/CreativeItemCategory.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">CreativeItemCategory</a>&nbsp;category)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native category group order followed by each group's member order, before availability evaluation.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CreativeCatalog.CollectionSource.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.CollectionSource</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#collectionSource(java.util.function.ToIntFunction,java.util.function.BiPredicate)" class="member-name-link">collectionSource</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;evaluation,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiPredicate.html" title="class or interface in java.util.function" class="external-link">BiPredicate</a>&lt;<a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;identity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Bind native row population to this catalog without substituting an availability policy.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containsJavaItem(int)" class="member-name-link">containsJavaItem</a><wbr>(int&nbsp;identifier)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -146,9 +168,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#entries()" class="member-name-link">entries</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CreativeCatalog.Group.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Group</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#groups()" class="member-name-link">groups</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#groupEntries(int)" class="member-name-link">groupEntries</a><wbr>(int&nbsp;groupIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CreativeCatalog.Group.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Group</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#groups()" class="member-name-link">groups</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#searchEntries()" class="member-name-link">searchEntries</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Complete player search source before text, unlock and craftability evaluation.</div>
+</div>
 </div>
 </div>
 </div>
@@ -167,11 +197,12 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.List,java.util.List)">
+<section class="detail" id="&lt;init&gt;(java.util.List,java.util.List,net.raphimc.viabedrock.protocol.model.ItemRegistry)">
 <h3>CreativeCatalog</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CreativeCatalog</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Group.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Group</a>&gt;&nbsp;groups,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;&nbsp;entries)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;&nbsp;entries,
+ <a href="ItemRegistry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemRegistry</a>&nbsp;registry)</span></div>
 </div>
 </section>
 </li>
@@ -204,6 +235,42 @@ loadScripts(document, 'script');</script>
 <h3>entries</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;</span>&nbsp;<span class="element-name">entries</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="searchEntries()">
+<h3>searchEntries</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;</span>&nbsp;<span class="element-name">searchEntries</span>()</div>
+<div class="block">Complete player search source before text, unlock and craftability evaluation.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="groupEntries(int)">
+<h3>groupEntries</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;</span>&nbsp;<span class="element-name">groupEntries</span><wbr><span class="parameters">(int&nbsp;groupIndex)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="categoryEntries(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.CreativeItemCategory)">
+<h3>categoryEntries</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;</span>&nbsp;<span class="element-name">categoryEntries</span><wbr><span class="parameters">(<a href="../data/enums/bedrock/generated/CreativeItemCategory.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">CreativeItemCategory</a>&nbsp;category)</span></div>
+<div class="block">Native category group order followed by each group's member order, before availability evaluation.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="collectionSource(java.util.function.ToIntFunction,java.util.function.BiPredicate)">
+<h3>collectionSource</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CreativeCatalog.CollectionSource.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.CollectionSource</a></span>&nbsp;<span class="element-name">collectionSource</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;evaluation,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiPredicate.html" title="class or interface in java.util.function" class="external-link">BiPredicate</a>&lt;<a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;identity)</span></div>
+<div class="block">Bind native row population to this catalog without substituting an availability policy.</div>
 </div>
 </section>
 </li>

@@ -66,6 +66,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#refresh(java.util.List,boolean,boolean,boolean)" tabindex="0">refresh(List, boolean, boolean, boolean)</a></li>
 <li><a href="#toggleHeader(G)" tabindex="0">toggleHeader(G)</a></li>
+<li><a href="#disabled(int,net.raphimc.viabedrock.api.resourcepack.ui.RecipeCollection.Eligibility)" tabindex="0">disabled(int, RecipeCollection.Eligibility)</a></li>
 <li><a href="#snapshot()" tabindex="0">snapshot()</a></li>
 <li><a href="#visibleOrder(java.util.List,java.util.function.ToIntFunction,boolean)" tabindex="0">visibleOrder(List, ToIntFunction, boolean)</a></li>
 </ol>
@@ -99,27 +100,32 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="RecipeCollection.Eligibility.html" class="type-name-link" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Eligibility</a>&lt;<a href="RecipeCollection.Eligibility.html#type-param-T" title="type parameter in RecipeCollection.Eligibility">T</a>,<wbr><a href="RecipeCollection.Eligibility.html#type-param-G" title="type parameter in RecipeCollection.Eligibility">G</a>&gt;</code></div>
+<div class="col-last even-row-color">
+<div class="block">Current evaluator results and native icon/count comparisons for an admitted view.</div>
+</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="RecipeCollection.Header.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Header</a>&lt;<a href="RecipeCollection.Header.html#type-param-T" title="type parameter in RecipeCollection.Header">T</a>,<wbr><a href="RecipeCollection.Header.html#type-param-G" title="type parameter in RecipeCollection.Header">G</a>&gt;</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="RecipeCollection.Header.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Header</a>&lt;<a href="RecipeCollection.Header.html#type-param-T" title="type parameter in RecipeCollection.Header">T</a>,<wbr><a href="RecipeCollection.Header.html#type-param-G" title="type parameter in RecipeCollection.Header">G</a>&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="RecipeCollection.Item.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Item</a>&lt;<a href="RecipeCollection.Item.html#type-param-T" title="type parameter in RecipeCollection.Item">T</a>,<wbr><a href="RecipeCollection.Item.html#type-param-G" title="type parameter in RecipeCollection.Item">G</a>&gt;</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="RecipeCollection.Item.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Item</a>&lt;<a href="RecipeCollection.Item.html#type-param-T" title="type parameter in RecipeCollection.Item">T</a>,<wbr><a href="RecipeCollection.Item.html#type-param-G" title="type parameter in RecipeCollection.Item">G</a>&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="RecipeCollection.Member.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Member</a>&lt;<a href="RecipeCollection.Member.html#type-param-T" title="type parameter in RecipeCollection.Member">T</a>,<wbr><a href="RecipeCollection.Member.html#type-param-G" title="type parameter in RecipeCollection.Member">G</a>&gt;</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="RecipeCollection.Member.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Member</a>&lt;<a href="RecipeCollection.Member.html#type-param-T" title="type parameter in RecipeCollection.Member">T</a>,<wbr><a href="RecipeCollection.Member.html#type-param-G" title="type parameter in RecipeCollection.Member">G</a>&gt;</code></div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="RecipeCollection.Row.html" class="type-name-link" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Row</a>&lt;<a href="RecipeCollection.Row.html#type-param-T" title="type parameter in RecipeCollection.Row">T</a>,<wbr><a href="RecipeCollection.Row.html#type-param-G" title="type parameter in RecipeCollection.Row">G</a>&gt;</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="RecipeCollection.Row.html" class="type-name-link" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Row</a>&lt;<a href="RecipeCollection.Row.html#type-param-T" title="type parameter in RecipeCollection.Row">T</a>,<wbr><a href="RecipeCollection.Row.html#type-param-G" title="type parameter in RecipeCollection.Row">G</a>&gt;</code></div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="RecipeCollection.Snapshot.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Snapshot</a>&lt;<a href="RecipeCollection.Snapshot.html#type-param-T" title="type parameter in RecipeCollection.Snapshot">T</a>,<wbr><a href="RecipeCollection.Snapshot.html#type-param-G" title="type parameter in RecipeCollection.Snapshot">G</a>&gt;</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="RecipeCollection.Snapshot.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Snapshot</a>&lt;<a href="RecipeCollection.Snapshot.html#type-param-T" title="type parameter in RecipeCollection.Snapshot">T</a>,<wbr><a href="RecipeCollection.Snapshot.html#type-param-G" title="type parameter in RecipeCollection.Snapshot">G</a>&gt;</code></div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="RecipeCollection.Source.html" class="type-name-link" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Source</a>&lt;<a href="RecipeCollection.Source.html#type-param-T" title="type parameter in RecipeCollection.Source">T</a>,<wbr><a href="RecipeCollection.Source.html#type-param-G" title="type parameter in RecipeCollection.Source">G</a>&gt;</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="RecipeCollection.Source.html" class="type-name-link" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Source</a>&lt;<a href="RecipeCollection.Source.html#type-param-T" title="type parameter in RecipeCollection.Source">T</a>,<wbr><a href="RecipeCollection.Source.html#type-param-G" title="type parameter in RecipeCollection.Source">G</a>&gt;</code></div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="RecipeCollection.Toggle.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Toggle</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="RecipeCollection.Toggle.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Toggle</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -147,25 +153,31 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RecipeCollection.Snapshot.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Snapshot</a><wbr>&lt;<a href="#type-param-T" title="type parameter in RecipeCollection">T</a>,<wbr><a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refresh(java.util.List,boolean,boolean,boolean)" class="member-name-link">refresh</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="#type-param-T" title="type parameter in RecipeCollection">T</a>&gt;&nbsp;entries,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#disabled(int,net.raphimc.viabedrock.api.resourcepack.ui.RecipeCollection.Eligibility)" class="member-name-link">disabled</a><wbr>(int&nbsp;index,
+ <a href="RecipeCollection.Eligibility.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Eligibility</a>&lt;<a href="#type-param-T" title="type parameter in RecipeCollection">T</a>,<wbr><a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&gt;&nbsp;eligibility)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Query current availability without replacing the retained collection snapshot.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RecipeCollection.Snapshot.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Snapshot</a><wbr>&lt;<a href="#type-param-T" title="type parameter in RecipeCollection">T</a>,<wbr><a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refresh(java.util.List,boolean,boolean,boolean)" class="member-name-link">refresh</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="#type-param-T" title="type parameter in RecipeCollection">T</a>&gt;&nbsp;entries,
  boolean&nbsp;grouping,
  boolean&nbsp;filtering,
  boolean&nbsp;resetExpansion)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RecipeCollection.Snapshot.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Snapshot</a><wbr>&lt;<a href="#type-param-T" title="type parameter in RecipeCollection">T</a>,<wbr><a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#snapshot()" class="member-name-link">snapshot</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RecipeCollection.Toggle.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Toggle</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toggleHeader(G)" class="member-name-link">toggleHeader</a><wbr>(<a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&nbsp;selected)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RecipeCollection.Snapshot.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Snapshot</a><wbr>&lt;<a href="#type-param-T" title="type parameter in RecipeCollection">T</a>,<wbr><a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#snapshot()" class="member-name-link">snapshot</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RecipeCollection.Toggle.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Toggle</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toggleHeader(G)" class="member-name-link">toggleHeader</a><wbr>(<a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&nbsp;selected)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Header matching includes the native icon and count, independently of group identity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#visibleOrder(java.util.List,java.util.function.ToIntFunction,boolean)" class="member-name-link">visibleOrder</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;&nbsp;entries,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#visibleOrder(java.util.List,java.util.function.ToIntFunction,boolean)" class="member-name-link">visibleOrder</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;&nbsp;entries,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;T&gt;&nbsp;evaluation,
  boolean&nbsp;filtering)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -216,6 +228,16 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RecipeCollection.Toggle.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Toggle</a></span>&nbsp;<span class="element-name">toggleHeader</span><wbr><span class="parameters">(<a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&nbsp;selected)</span></div>
 <div class="block">Header matching includes the native icon and count, independently of group identity.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="disabled(int,net.raphimc.viabedrock.api.resourcepack.ui.RecipeCollection.Eligibility)">
+<h3>disabled</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">disabled</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="RecipeCollection.Eligibility.html" title="interface in net.raphimc.viabedrock.api.resourcepack.ui">RecipeCollection.Eligibility</a>&lt;<a href="#type-param-T" title="type parameter in RecipeCollection">T</a>,<wbr><a href="#type-param-G" title="type parameter in RecipeCollection">G</a>&gt;&nbsp;eligibility)</span></div>
+<div class="block">Query current availability without replacing the retained collection snapshot.</div>
 </div>
 </section>
 </li>
