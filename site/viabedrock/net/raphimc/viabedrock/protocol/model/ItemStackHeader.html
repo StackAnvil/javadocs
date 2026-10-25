@@ -59,16 +59,19 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block)" tabindex="0">ItemStackHeader(int, short, byte, ItemStackHeader.Block)</a></li>
+<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block)" tabindex="0">ItemStackHeader(NativeItemDefinitions.Definition, short, byte, ItemStackHeader.Block)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#fromNetwork(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.Supplier,java.util.function.IntFunction)" tabindex="0">fromNetwork(int, short, byte, ItemStackHeader.Block, Supplier, IntFunction)</a></li>
+<li><a href="#identifier()" tabindex="0">identifier()</a></li>
+<li><a href="#fromNetwork(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)" tabindex="0">fromNetwork(int, short, byte, ItemStackHeader.Block, BiFunction, IntFunction, BiFunction)</a></li>
+<li><a href="#fromDefinition(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,int,int,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)" tabindex="0">fromDefinition(NativeItemDefinitions.Definition, int, int, BiFunction, IntFunction, BiFunction)</a></li>
+<li><a href="#fromNamed(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Lookup,int,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)" tabindex="0">fromNamed(NativeItemDefinitions.Lookup, int, BiFunction, IntFunction, BiFunction)</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
-<li><a href="#identifier()" tabindex="0">identifier()</a></li>
+<li><a href="#definition()" tabindex="0">definition()</a></li>
 <li><a href="#metadata()" tabindex="0">metadata()</a></li>
 <li><a href="#amount()" tabindex="0">amount()</a></li>
 <li><a href="#block()" tabindex="0">block()</a></li>
@@ -89,7 +92,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ItemStackHeader</span>(int&nbsp;identifier, short&nbsp;metadata, byte&nbsp;amount, <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&nbsp;block)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ItemStackHeader</span>(<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&nbsp;definition, short&nbsp;metadata, byte&nbsp;amount, <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&nbsp;block)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Constructed native Item ownership, auxiliary metadata and optional Block identity.</div>
 </div>
@@ -108,7 +111,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="ItemStackHeader.Block.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Runtime IDs identify exact palette slots; missing numeric ownership cannot validate a runtime candidate.</div>
+<div class="block">Runtime IDs identify exact palette slots.</div>
 </div>
 </div>
 </section>
@@ -121,7 +124,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block)" class="member-name-link">ItemStackHeader</a><wbr>(int&nbsp;identifier,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block)" class="member-name-link">ItemStackHeader</a><wbr>(<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&nbsp;definition,
  short&nbsp;metadata,
  byte&nbsp;amount,
  <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&nbsp;block)</code></div>
@@ -152,37 +155,60 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>block</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#definition()" class="member-name-link">definition</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>definition</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ItemStackHeader.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromDefinition(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,int,int,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)" class="member-name-link">fromDefinition</a><wbr>(<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&nbsp;definition,
+ int&nbsp;metadata,
+ int&nbsp;amount,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;associatedBlock,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;lookup,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;canonical)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The definition-pointer constructor enables canonical upgrade for an ordinary Item.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ItemStackHeader.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromNetwork(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.Supplier,java.util.function.IntFunction)" class="member-name-link">fromNetwork</a><wbr>(int&nbsp;identifier,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromNamed(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Lookup,int,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)" class="member-name-link">fromNamed</a><wbr>(<a href="NativeItemDefinitions.Lookup.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Lookup</a>&lt;?&gt;&nbsp;named,
+ int&nbsp;amount,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;associatedBlock,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;lookup,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;canonical)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Named lookup preserves its wide auxiliary until the class-specific constructor selects its branch.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ItemStackHeader.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromNetwork(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)" class="member-name-link">fromNetwork</a><wbr>(int&nbsp;identifier,
  short&nbsp;metadata,
  byte&nbsp;amount,
  <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&nbsp;runtimeBlock,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;resolveAssociatedBlock,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;lookup)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;associatedBlock,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;lookup,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;canonical)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#identifier()" class="member-name-link">identifier</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#identifier()" class="member-name-link">identifier</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metadata()" class="member-name-link">metadata</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>identifier</code> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metadata()" class="member-name-link">metadata</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>metadata</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -203,17 +229,17 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block)">
+<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block)">
 <h3>ItemStackHeader</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ItemStackHeader</span><wbr><span class="parameters">(int&nbsp;identifier,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ItemStackHeader</span><wbr><span class="parameters">(<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&nbsp;definition,
  short&nbsp;metadata,
  byte&nbsp;amount,
  <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&nbsp;block)</span></div>
 <div class="block">Creates an instance of a <code>ItemStackHeader</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>identifier</code> - the value for the <code>identifier</code> record component</dd>
+<dd><code>definition</code> - the value for the <code>definition</code> record component</dd>
 <dd><code>metadata</code> - the value for the <code>metadata</code> record component</dd>
 <dd><code>amount</code> - the value for the <code>amount</code> record component</dd>
 <dd><code>block</code> - the value for the <code>block</code> record component</dd>
@@ -230,15 +256,51 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="fromNetwork(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.Supplier,java.util.function.IntFunction)">
+<section class="detail" id="identifier()">
+<h3>identifier</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">identifier</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="fromNetwork(int,short,byte,net.raphimc.viabedrock.protocol.model.ItemStackHeader.Block,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)">
 <h3>fromNetwork</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemStackHeader.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader</a></span>&nbsp;<span class="element-name">fromNetwork</span><wbr><span class="parameters">(int&nbsp;identifier,
  short&nbsp;metadata,
  byte&nbsp;amount,
  <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&nbsp;runtimeBlock,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;resolveAssociatedBlock,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;lookup)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;associatedBlock,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;lookup,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;canonical)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="fromDefinition(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,int,int,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)">
+<h3>fromDefinition</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemStackHeader.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader</a></span>&nbsp;<span class="element-name">fromDefinition</span><wbr><span class="parameters">(<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&nbsp;definition,
+ int&nbsp;metadata,
+ int&nbsp;amount,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;associatedBlock,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;lookup,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;canonical)</span></div>
+<div class="block">The definition-pointer constructor enables canonical upgrade for an ordinary Item.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="fromNamed(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Lookup,int,java.util.function.BiFunction,java.util.function.IntFunction,java.util.function.BiFunction)">
+<h3>fromNamed</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemStackHeader.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader</a></span>&nbsp;<span class="element-name">fromNamed</span><wbr><span class="parameters">(<a href="NativeItemDefinitions.Lookup.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Lookup</a>&lt;?&gt;&nbsp;named,
+ int&nbsp;amount,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="ItemStackHeader.Block.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStackHeader.Block</a>&gt;&nbsp;associatedBlock,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;lookup,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>, <a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&gt;&nbsp;canonical)</span></div>
+<div class="block">Named lookup preserves its wide auxiliary until the class-specific constructor selects its branch.</div>
 </div>
 </section>
 </li>
@@ -290,14 +352,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="identifier()">
-<h3>identifier</h3>
+<section class="detail" id="definition()">
+<h3>definition</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">identifier</span>()</div>
-<div class="block">Returns the value of the <code>identifier</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;</span>&nbsp;<span class="element-name">definition</span>()</div>
+<div class="block">Returns the value of the <code>definition</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>identifier</code> record component</dd>
+<dd>the value of the <code>definition</code> record component</dd>
 </dl>
 </div>
 </section>

@@ -60,7 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.ItemEntry,short)" tabindex="0">Ordinary(ItemEntry, short)</a></li>
+<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,short)" tabindex="0">Ordinary(NativeItemDefinitions.Definition, short)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -97,7 +97,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeRecipeDescriptor.Ordinary</span>(<a href="../../../protocol/model/ItemEntry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemEntry</a>&nbsp;item, short&nbsp;auxiliary)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeRecipeDescriptor.Ordinary</span>(<a href="../../../protocol/model/NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&nbsp;item, short&nbsp;auxiliary)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></span></div>
 </div>
@@ -110,7 +110,7 @@ implements <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc
 <h2>Nested Class Summary</h2>
 <div class="inherited-list">
 <h3 id="nested-classes-inherited-from-class-net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor">Nested classes/interfaces inherited from interface&nbsp;<a href="NativeRecipeDescriptor.html#nested-class-summary" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></h3>
-<code><a href="NativeRecipeDescriptor.ComplexAlias.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.ComplexAlias</a>, <a href="NativeRecipeDescriptor.Deferred.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Deferred</a>, <a href="NativeRecipeDescriptor.Empty.html" title="enum class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Empty</a>, <a href="NativeRecipeDescriptor.Lookup.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Lookup</a>, <a href="NativeRecipeDescriptor.Ordinary.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Ordinary</a>, <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a></code></div>
+<code><a href="NativeRecipeDescriptor.ComplexAlias.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.ComplexAlias</a>, <a href="NativeRecipeDescriptor.Deferred.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Deferred</a>, <a href="NativeRecipeDescriptor.Empty.html" title="enum class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Empty</a>, <a href="NativeRecipeDescriptor.Lookup.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Lookup</a>, <a href="NativeRecipeDescriptor.Molang.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Molang</a>, <a href="NativeRecipeDescriptor.Ordinary.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Ordinary</a>, <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>, <a href="NativeRecipeDescriptor.Tag.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Tag</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -121,7 +121,7 @@ implements <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.ItemEntry,short)" class="member-name-link">Ordinary</a><wbr>(<a href="../../../protocol/model/ItemEntry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemEntry</a>&nbsp;item,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,short)" class="member-name-link">Ordinary</a><wbr>(<a href="../../../protocol/model/NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&nbsp;item,
  short&nbsp;auxiliary)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Ordinary</code> record class.</div>
@@ -158,7 +158,7 @@ implements <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEmpty(net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" class="member-name-link">isEmpty</a><wbr>(<a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/ItemEntry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemEntry</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a><wbr>&lt;?&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#item()" class="member-name-link">item</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>item</code> record component.</div>
@@ -179,7 +179,7 @@ implements <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc
 <code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor">Methods inherited from interface&nbsp;<a href="NativeRecipeDescriptor.html#method-summary" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></h3>
-<code><a href="NativeRecipeDescriptor.html#matchesSource(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" title="matchesSource(BedrockItem, NativeRecipeDescriptor.Registry, Function)">matchesSource</a></code></div>
+<code><a href="NativeRecipeDescriptor.html#matchesSource(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" title="matchesSource(BedrockItem, NativeRecipeDescriptor.Registry, Function)">matchesSource</a>, <a href="NativeRecipeDescriptor.html#matchesStack(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" title="matchesStack(BedrockItem, NativeRecipeDescriptor.Registry, Function)">matchesStack</a></code></div>
 </section>
 </li>
 </ul>
@@ -192,10 +192,10 @@ implements <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.model.ItemEntry,short)">
+<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.model.NativeItemDefinitions.Definition,short)">
 <h3>Ordinary</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Ordinary</span><wbr><span class="parameters">(<a href="../../../protocol/model/ItemEntry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemEntry</a>&nbsp;item,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Ordinary</span><wbr><span class="parameters">(<a href="../../../protocol/model/NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;&nbsp;item,
  short&nbsp;auxiliary)</span></div>
 <div class="block">Creates an instance of a <code>Ordinary</code> record class.</div>
 <dl class="notes">
@@ -285,7 +285,7 @@ implements <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc
 <section class="detail" id="item()">
 <h3>item</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/ItemEntry.html" title="class in net.raphimc.viabedrock.protocol.model">ItemEntry</a></span>&nbsp;<span class="element-name">item</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;</span>&nbsp;<span class="element-name">item</span>()</div>
 <div class="block">Returns the value of the <code>item</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>

@@ -66,6 +66,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#definition()" tabindex="0">definition()</a></li>
 <li><a href="#empty()" tabindex="0">empty()</a></li>
 <li><a href="#emptyArray(int)" tabindex="0">emptyArray(int)</a></li>
 <li><a href="#identifier()" tabindex="0">identifier()</a></li>
@@ -77,6 +78,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#setAmount(int)" tabindex="0">setAmount(int)</a></li>
 <li><a href="#tag()" tabindex="0">tag()</a></li>
 <li><a href="#setTag(com.viaversion.nbt.tag.CompoundTag)" tabindex="0">setTag(CompoundTag)</a></li>
+<li><a href="#itemLockMode()" tabindex="0">itemLockMode()</a></li>
 <li><a href="#enchantmentLevel(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.Enchant_Type)" tabindex="0">enchantmentLevel(Enchant_Type)</a></li>
 <li><a href="#dataContainer()" tabindex="0">dataContainer()</a></li>
 <li><a href="#canPlace()" tabindex="0">canPlace()</a></li>
@@ -88,6 +90,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#blockRuntimeId()" tabindex="0">blockRuntimeId()</a></li>
 <li><a href="#hasBlockState()" tabindex="0">hasBlockState()</a></li>
 <li><a href="#setBlockRuntimeId(java.lang.Integer)" tabindex="0">setBlockRuntimeId(Integer)</a></li>
+<li><a href="#wasPickedUp()" tabindex="0">wasPickedUp()</a></li>
+<li><a href="#setWasPickedUp(boolean)" tabindex="0">setWasPickedUp(boolean)</a></li>
 <li><a href="#netId()" tabindex="0">netId()</a></li>
 <li><a href="#setNetId(java.lang.Integer)" tabindex="0">setNetId(Integer)</a></li>
 <li><a href="#isEmpty()" tabindex="0">isEmpty()</a></li>
@@ -191,33 +195,43 @@ implements com.viaversion.viaversion.api.minecraft.item.Item</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.data.StructuredDataContainer</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dataContainer()" class="member-name-link">dataContainer</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#empty()" class="member-name-link">empty</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#emptyArray(int)" class="member-name-link">emptyArray</a><wbr>(int&nbsp;size)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#definition()" class="member-name-link">definition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Constructed ownership is independent of the numeric ID carried by the wire representation.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#empty()" class="member-name-link">empty</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enchantmentLevel(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.Enchant_Type)" class="member-name-link">enchantmentLevel</a><wbr>(<a href="../data/enums/bedrock/generated/Enchant_Type.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">Enchant_Type</a>&nbsp;enchantment)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#emptyArray(int)" class="member-name-link">emptyArray</a><wbr>(int&nbsp;size)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enchantmentLevel(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.Enchant_Type)" class="member-name-link">enchantmentLevel</a><wbr>(<a href="../data/enums/bedrock/generated/Enchant_Type.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">Enchant_Type</a>&nbsp;enchantment)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBlockState()" class="member-name-link">hasBlockState</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBlockState()" class="member-name-link">hasBlockState</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#identifier()" class="member-name-link">identifier</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isDifferent(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">isDifferent</a><wbr>(<a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;o)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#identifier()" class="member-name-link">identifier</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEmpty()" class="member-name-link">isEmpty</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isDifferent(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">isDifferent</a><wbr>(<a href="BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;o)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEmpty()" class="member-name-link">isEmpty</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemLockMode()" class="member-name-link">itemLockMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The native lock getter preserves every unsigned byte value and ignores other tag types.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#netId()" class="member-name-link">netId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -251,11 +265,17 @@ implements com.viaversion.viaversion.api.minecraft.item.Item</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTag(com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">setTag</a><wbr>(com.viaversion.nbt.tag.CompoundTag&nbsp;tag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.nbt.tag.CompoundTag</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tag()" class="member-name-link">tag</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWasPickedUp(boolean)" class="member-name-link">setWasPickedUp</a><wbr>(boolean&nbsp;wasPickedUp)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.nbt.tag.CompoundTag</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tag()" class="member-name-link">tag</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#wasPickedUp()" class="member-name-link">wasPickedUp</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -330,6 +350,15 @@ implements com.viaversion.viaversion.api.minecraft.item.Item</span></div>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="definition()">
+<h3>definition</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeItemDefinitions.Definition.html" title="class in net.raphimc.viabedrock.protocol.model">NativeItemDefinitions.Definition</a>&lt;?&gt;</span>&nbsp;<span class="element-name">definition</span>()</div>
+<div class="block">Constructed ownership is independent of the numeric ID carried by the wire representation.</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="empty()">
 <h3>empty</h3>
@@ -451,6 +480,15 @@ implements com.viaversion.viaversion.api.minecraft.item.Item</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="itemLockMode()">
+<h3>itemLockMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">itemLockMode</span>()</div>
+<div class="block">The native lock getter preserves every unsigned byte value and ignores other tag types.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="enchantmentLevel(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.Enchant_Type)">
 <h3>enchantmentLevel</h3>
 <div class="horizontal-scroll">
@@ -540,6 +578,22 @@ implements com.viaversion.viaversion.api.minecraft.item.Item</span></div>
 <h3>setBlockRuntimeId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBlockRuntimeId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;blockRuntimeId)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="wasPickedUp()">
+<h3>wasPickedUp</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">wasPickedUp</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setWasPickedUp(boolean)">
+<h3>setWasPickedUp</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setWasPickedUp</span><wbr><span class="parameters">(boolean&nbsp;wasPickedUp)</span></div>
 </div>
 </section>
 </li>

@@ -90,6 +90,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#setChatRestrictionLevel(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ChatRestrictionLevel)" tabindex="0">setChatRestrictionLevel(ChatRestrictionLevel)</a></li>
 <li><a href="#areCommandsEnabled()" tabindex="0">areCommandsEnabled()</a></li>
 <li><a href="#setCommandsEnabled(boolean)" tabindex="0">setCommandsEnabled(boolean)</a></li>
+<li><a href="#isItemRegistryReceived()" tabindex="0">isItemRegistryReceived()</a></li>
+<li><a href="#setItemRegistryReceived(boolean)" tabindex="0">setItemRegistryReceived(boolean)</a></li>
 <li><a href="#isInventoryServerAuthoritative()" tabindex="0">isInventoryServerAuthoritative()</a></li>
 <li><a href="#setInventoryServerAuthoritative(boolean)" tabindex="0">setInventoryServerAuthoritative(boolean)</a></li>
 <li><a href="#isBlockBreakingServerAuthoritative()" tabindex="0">isBlockBreakingServerAuthoritative()</a></li>
@@ -206,45 +208,51 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInventoryServerAuthoritative()" class="member-name-link">isInventoryServerAuthoritative</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putBedrockDimensionDefinition(java.lang.String,com.viaversion.viaversion.libs.fastutil.ints.IntIntPair)" class="member-name-link">putBedrockDimensionDefinition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;dimensionIdentifier,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isItemRegistryReceived()" class="member-name-link">isItemRegistryReceived</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putBedrockDimensionDefinition(java.lang.String,com.viaversion.viaversion.libs.fastutil.ints.IntIntPair)" class="member-name-link">putBedrockDimensionDefinition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;dimensionIdentifier,
  com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&nbsp;dimensionDefinition)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockBaseGameVersion(net.raphimc.viabedrock.protocol.model.BaseGameVersion)" class="member-name-link">setBedrockBaseGameVersion</a><wbr>(<a href="../model/BaseGameVersion.html" title="class in net.raphimc.viabedrock.protocol.model">BaseGameVersion</a>&nbsp;bedrockBaseGameVersion)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockBiomeDefinitions(com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">setBedrockBiomeDefinitions</a><wbr>(com.viaversion.nbt.tag.CompoundTag&nbsp;bedrockBiomeDefinitions)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockBaseGameVersion(net.raphimc.viabedrock.protocol.model.BaseGameVersion)" class="member-name-link">setBedrockBaseGameVersion</a><wbr>(<a href="../model/BaseGameVersion.html" title="class in net.raphimc.viabedrock.protocol.model">BaseGameVersion</a>&nbsp;bedrockBaseGameVersion)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockVanillaVersion(com.vdurmont.semver4j.Semver)" class="member-name-link">setBedrockVanillaVersion</a><wbr>(com.vdurmont.semver4j.Semver&nbsp;bedrockVanillaVersion)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockBiomeDefinitions(com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">setBedrockBiomeDefinitions</a><wbr>(com.viaversion.nbt.tag.CompoundTag&nbsp;bedrockBiomeDefinitions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBlockBreakingServerAuthoritative(boolean)" class="member-name-link">setBlockBreakingServerAuthoritative</a><wbr>(boolean&nbsp;blockBreakingServerAuthoritative)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockVanillaVersion(com.vdurmont.semver4j.Semver)" class="member-name-link">setBedrockVanillaVersion</a><wbr>(com.vdurmont.semver4j.Semver&nbsp;bedrockVanillaVersion)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setChatRestrictionLevel(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ChatRestrictionLevel)" class="member-name-link">setChatRestrictionLevel</a><wbr>(<a href="../data/enums/bedrock/generated/ChatRestrictionLevel.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ChatRestrictionLevel</a>&nbsp;chatRestrictionLevel)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBlockBreakingServerAuthoritative(boolean)" class="member-name-link">setBlockBreakingServerAuthoritative</a><wbr>(boolean&nbsp;blockBreakingServerAuthoritative)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCommandsEnabled(boolean)" class="member-name-link">setCommandsEnabled</a><wbr>(boolean&nbsp;commandsEnabled)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setChatRestrictionLevel(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ChatRestrictionLevel)" class="member-name-link">setChatRestrictionLevel</a><wbr>(<a href="../data/enums/bedrock/generated/ChatRestrictionLevel.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ChatRestrictionLevel</a>&nbsp;chatRestrictionLevel)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDeathMessage(com.viaversion.viaversion.libs.mcstructs.text.TextComponent)" class="member-name-link">setDeathMessage</a><wbr>(com.viaversion.viaversion.libs.mcstructs.text.TextComponent&nbsp;deathMessage)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCommandsEnabled(boolean)" class="member-name-link">setCommandsEnabled</a><wbr>(boolean&nbsp;commandsEnabled)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmoteChatMuted(boolean)" class="member-name-link">setEmoteChatMuted</a><wbr>(boolean&nbsp;emoteChatMuted)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDeathMessage(com.viaversion.viaversion.libs.mcstructs.text.TextComponent)" class="member-name-link">setDeathMessage</a><wbr>(com.viaversion.viaversion.libs.mcstructs.text.TextComponent&nbsp;deathMessage)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFlatGenerator(boolean)" class="member-name-link">setFlatGenerator</a><wbr>(boolean&nbsp;flatGenerator)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmoteChatMuted(boolean)" class="member-name-link">setEmoteChatMuted</a><wbr>(boolean&nbsp;emoteChatMuted)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHardcoreMode(boolean)" class="member-name-link">setHardcoreMode</a><wbr>(boolean&nbsp;hardcoreMode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFlatGenerator(boolean)" class="member-name-link">setFlatGenerator</a><wbr>(boolean&nbsp;flatGenerator)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setImmutableWorld(boolean)" class="member-name-link">setImmutableWorld</a><wbr>(boolean&nbsp;immutableWorld)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHardcoreMode(boolean)" class="member-name-link">setHardcoreMode</a><wbr>(boolean&nbsp;hardcoreMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInventoryServerAuthoritative(boolean)" class="member-name-link">setInventoryServerAuthoritative</a><wbr>(boolean&nbsp;inventoryServerAuthoritative)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setImmutableWorld(boolean)" class="member-name-link">setImmutableWorld</a><wbr>(boolean&nbsp;immutableWorld)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInventoryServerAuthoritative(boolean)" class="member-name-link">setInventoryServerAuthoritative</a><wbr>(boolean&nbsp;inventoryServerAuthoritative)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItemRegistryReceived(boolean)" class="member-name-link">setItemRegistryReceived</a><wbr>(boolean&nbsp;itemRegistryReceived)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLevelGameType(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)" class="member-name-link">setLevelGameType</a><wbr>(<a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;levelGameType)</code></div>
@@ -508,6 +516,22 @@ loadScripts(document, 'script');</script>
 <h3>setCommandsEnabled</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCommandsEnabled</span><wbr><span class="parameters">(boolean&nbsp;commandsEnabled)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isItemRegistryReceived()">
+<h3>isItemRegistryReceived</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isItemRegistryReceived</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setItemRegistryReceived(boolean)">
+<h3>setItemRegistryReceived</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setItemRegistryReceived</span><wbr><span class="parameters">(boolean&nbsp;itemRegistryReceived)</span></div>
 </div>
 </section>
 </li>

@@ -59,6 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#count(net.raphimc.viabedrock.api.model.container.NativeRecipeCounter.Recipe,java.util.List,java.util.function.ToIntFunction)" tabindex="0">count(NativeRecipeCounter.Recipe, List, ToIntFunction)</a></li>
+<li><a href="#availability(boolean,boolean,boolean,java.util.List,java.util.List,java.util.function.ToIntFunction,java.util.function.BooleanSupplier)" tabindex="0">availability(boolean, boolean, boolean, List, List, ToIntFunction, BooleanSupplier)</a></li>
 </ol>
 </li>
 </ol>
@@ -91,22 +92,27 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="NativeRecipeCounter.IngredientCount.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.IngredientCount</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="NativeRecipeCounter.Location.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Location</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="NativeRecipeCounter.Recipe.html" class="type-name-link" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Recipe</a></code></div>
+<div class="col-second even-row-color"><code><a href="NativeRecipeCounter.Candidate.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Candidate</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The concrete recipe owns descriptor emptiness and ingredient matching.</div>
+<div class="block">Output lookup owns candidate admission, concrete grid requirements and priority.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="NativeRecipeCounter.Result.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Result</a></code></div>
+<div class="col-second odd-row-color"><code><a href="NativeRecipeCounter.IngredientCount.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.IngredientCount</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="NativeRecipeCounter.Source.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Source</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-second even-row-color"><code><a href="NativeRecipeCounter.Location.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Location</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="NativeRecipeCounter.Recipe.html" class="type-name-link" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Recipe</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">The concrete recipe owns descriptor emptiness and ingredient matching.</div>
+</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="NativeRecipeCounter.Result.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Result</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="NativeRecipeCounter.Source.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Source</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">A captured native collection.</div>
 </div>
 </div>
@@ -123,11 +129,22 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeRecipeCounter.Result.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Result</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#count(net.raphimc.viabedrock.api.model.container.NativeRecipeCounter.Recipe,java.util.List,java.util.function.ToIntFunction)" class="member-name-link">count</a><wbr>(<a href="NativeRecipeCounter.Recipe.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Recipe</a>&nbsp;recipe,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#availability(boolean,boolean,boolean,java.util.List,java.util.List,java.util.function.ToIntFunction,java.util.function.BooleanSupplier)" class="member-name-link">availability</a><wbr>(boolean&nbsp;validOutput,
+ boolean&nbsp;workbench,
+ boolean&nbsp;filtering,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeRecipeCounter.Candidate.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Candidate</a>&gt;&nbsp;candidates,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeRecipeCounter.Source.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Source</a>&gt;&nbsp;sources,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;descriptorHash,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;selectedOutput)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Evaluate already admitted output candidates, independently of placement capacity and authority.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeRecipeCounter.Result.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Result</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#count(net.raphimc.viabedrock.api.model.container.NativeRecipeCounter.Recipe,java.util.List,java.util.function.ToIntFunction)" class="member-name-link">count</a><wbr>(<a href="NativeRecipeCounter.Recipe.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Recipe</a>&nbsp;recipe,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeRecipeCounter.Source.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Source</a>&gt;&nbsp;sources,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;descriptorHash)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Recipes must have at least one nonempty ingredient.</div>
 </div>
 </div>
@@ -156,6 +173,21 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;descriptorHash)</span></div>
 <div class="block">Recipes must have at least one nonempty ingredient. The original counter does not
 terminate for an empty recipe; admission belongs to the concrete recipe owner.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="availability(boolean,boolean,boolean,java.util.List,java.util.List,java.util.function.ToIntFunction,java.util.function.BooleanSupplier)">
+<h3>availability</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">availability</span><wbr><span class="parameters">(boolean&nbsp;validOutput,
+ boolean&nbsp;workbench,
+ boolean&nbsp;filtering,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeRecipeCounter.Candidate.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Candidate</a>&gt;&nbsp;candidates,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeRecipeCounter.Source.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Source</a>&gt;&nbsp;sources,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;descriptorHash,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;selectedOutput)</span></div>
+<div class="block">Evaluate already admitted output candidates, independently of placement capacity and authority.</div>
 </div>
 </section>
 </li>
