@@ -56,8 +56,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#register()" tabindex="0">register()</a></li>
 <li><a href="#request(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Appearance)" tabindex="0">request(BedrockAppearanceStore.Appearance)</a></li>
-<li><a href="#acknowledge(com.viaversion.viaversion.api.connection.UserConnection,java.util.UUID,net.raphimc.viabedrock.protocol.model.SkinData)" tabindex="0">acknowledge(UserConnection, UUID, SkinData)</a></li>
 </ol>
 </li>
 </ol>
@@ -75,7 +75,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">BedrockSkinChange</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Requests a selected-skin change in an already connected Bedrock world.</div>
+<div class="block">Uses the same negotiated Java transport for direct translation and ViaProxy.</div>
 </div>
 </section>
 <section class="summary">
@@ -92,14 +92,12 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#acknowledge(com.viaversion.viaversion.api.connection.UserConnection,java.util.UUID,net.raphimc.viabedrock.protocol.model.SkinData)" class="member-name-link">acknowledge</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;connection,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;playerUuid,
- net.raphimc.viabedrock.protocol.model.SkinData&nbsp;skin)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#request(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Appearance)" class="member-name-link">request</a><wbr>(<a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a>&nbsp;appearance)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Returns a future for the server's matching skin packet, or null when no world is connected.</div>
+<div class="block">A local preview is immediate.</div>
 </div>
 </div>
 </div>
@@ -119,21 +117,19 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="request(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Appearance)">
-<h3>request</h3>
+<section class="detail" id="register()">
+<h3>register</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span>&nbsp;<span class="element-name">request</span><wbr><span class="parameters">(<a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a>&nbsp;appearance)</span></div>
-<div class="block">Returns a future for the server's matching skin packet, or null when no world is connected.</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">register</span>()</div>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="acknowledge(com.viaversion.viaversion.api.connection.UserConnection,java.util.UUID,net.raphimc.viabedrock.protocol.model.SkinData)">
-<h3>acknowledge</h3>
+<section class="detail" id="request(com.viaversion.viafabricplus.bedrock.appearance.BedrockAppearanceStore.Appearance)">
+<h3>request</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">acknowledge</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;connection,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;playerUuid,
- net.raphimc.viabedrock.protocol.model.SkinData&nbsp;skin)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span>&nbsp;<span class="element-name">request</span><wbr><span class="parameters">(<a href="BedrockAppearanceStore.Appearance.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockAppearanceStore.Appearance</a>&nbsp;appearance)</span></div>
+<div class="block">A local preview is immediate. Only a matching native server echo confirms synchronization.</div>
 </div>
 </section>
 </li>

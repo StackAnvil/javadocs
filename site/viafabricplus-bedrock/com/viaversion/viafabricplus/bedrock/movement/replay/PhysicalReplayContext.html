@@ -66,6 +66,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#restorePermissions(net.raphimc.viabedrock.api.model.PlayerInputPermissions)" tabindex="0">restorePermissions(PlayerInputPermissions)</a></li>
 <li><a href="#gameMode(net.minecraft.world.level.GameType)" tabindex="0">gameMode(GameType)</a></li>
 <li><a href="#restoreGameMode(net.minecraft.world.level.GameType)" tabindex="0">restoreGameMode(GameType)</a></li>
+<li><a href="#playerMode(net.raphimc.viabedrock.api.model.PlayerModeMessage.State)" tabindex="0">playerMode(PlayerModeMessage.State)</a></li>
+<li><a href="#restorePlayerMode(net.raphimc.viabedrock.api.model.PlayerModeMessage.State)" tabindex="0">restorePlayerMode(PlayerModeMessage.State)</a></li>
 <li><a href="#camera(net.minecraft.world.entity.Entity)" tabindex="0">camera(Entity)</a></li>
 <li><a href="#recordItemUse(net.minecraft.world.entity.Entity,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalItemUse)" tabindex="0">recordItemUse(Entity, PhysicalItemUse)</a></li>
 <li><a href="#itemUse(net.minecraft.world.entity.Entity)" tabindex="0">itemUse(Entity)</a></li>
@@ -169,28 +171,34 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.PlayerInputPermissions</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#permissions(net.raphimc.viabedrock.api.model.PlayerInputPermissions)" class="member-name-link">permissions</a><wbr>(net.raphimc.viabedrock.api.model.PlayerInputPermissions&nbsp;live)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#poll(net.minecraft.client.player.ClientInput,java.lang.Runnable)" class="member-name-link">poll</a><wbr>(net.minecraft.client.player.ClientInput&nbsp;input,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.PlayerModeMessage.State</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#playerMode(net.raphimc.viabedrock.api.model.PlayerModeMessage.State)" class="member-name-link">playerMode</a><wbr>(net.raphimc.viabedrock.api.model.PlayerModeMessage.State&nbsp;live)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#poll(net.minecraft.client.player.ClientInput,java.lang.Runnable)" class="member-name-link">poll</a><wbr>(net.minecraft.client.player.ClientInput&nbsp;input,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;livePoll)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#predicts(net.minecraft.world.entity.Entity)" class="member-name-link">predicts</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#predicts(net.minecraft.world.entity.Entity)" class="member-name-link">predicts</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#recording()" class="member-name-link">recording</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#recordItemUse(net.minecraft.world.entity.Entity,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalItemUse)" class="member-name-link">recordItemUse</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
- <a href="PhysicalItemUse.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalItemUse</a>&nbsp;use)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#replaying()" class="member-name-link">replaying</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#restoreGameMode(net.minecraft.world.level.GameType)" class="member-name-link">restoreGameMode</a><wbr>(net.minecraft.world.level.GameType&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#recording()" class="member-name-link">recording</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#restorePermissions(net.raphimc.viabedrock.api.model.PlayerInputPermissions)" class="member-name-link">restorePermissions</a><wbr>(net.raphimc.viabedrock.api.model.PlayerInputPermissions&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#recordItemUse(net.minecraft.world.entity.Entity,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalItemUse)" class="member-name-link">recordItemUse</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
+ <a href="PhysicalItemUse.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalItemUse</a>&nbsp;use)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#replaying()" class="member-name-link">replaying</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#restoreGameMode(net.minecraft.world.level.GameType)" class="member-name-link">restoreGameMode</a><wbr>(net.minecraft.world.level.GameType&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#restorePermissions(net.raphimc.viabedrock.api.model.PlayerInputPermissions)" class="member-name-link">restorePermissions</a><wbr>(net.raphimc.viabedrock.api.model.PlayerInputPermissions&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#restorePlayerMode(net.raphimc.viabedrock.api.model.PlayerModeMessage.State)" class="member-name-link">restorePlayerMode</a><wbr>(net.raphimc.viabedrock.api.model.PlayerModeMessage.State&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#suppressesNetwork(net.minecraft.network.Connection)" class="member-name-link">suppressesNetwork</a><wbr>(net.minecraft.network.Connection&nbsp;connection)</code></div>
@@ -283,6 +291,22 @@ loadScripts(document, 'script');</script>
 <h3>restoreGameMode</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restoreGameMode</span><wbr><span class="parameters">(net.minecraft.world.level.GameType&nbsp;value)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerMode(net.raphimc.viabedrock.api.model.PlayerModeMessage.State)">
+<h3>playerMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.raphimc.viabedrock.api.model.PlayerModeMessage.State</span>&nbsp;<span class="element-name">playerMode</span><wbr><span class="parameters">(net.raphimc.viabedrock.api.model.PlayerModeMessage.State&nbsp;live)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="restorePlayerMode(net.raphimc.viabedrock.api.model.PlayerModeMessage.State)">
+<h3>restorePlayerMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restorePlayerMode</span><wbr><span class="parameters">(net.raphimc.viabedrock.api.model.PlayerModeMessage.State&nbsp;value)</span></div>
 </div>
 </section>
 </li>

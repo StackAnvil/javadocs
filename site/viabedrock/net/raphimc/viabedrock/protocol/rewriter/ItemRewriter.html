@@ -72,11 +72,15 @@ loadScripts(document, 'script');</script>
 <li><a href="#javaItemStack(com.viaversion.nbt.tag.CompoundTag)" tabindex="0">javaItemStack(CompoundTag)</a></li>
 <li><a href="#bedrockItemStack(com.viaversion.nbt.tag.CompoundTag)" tabindex="0">bedrockItemStack(CompoundTag)</a></li>
 <li><a href="#bedrockItemInstance(com.viaversion.nbt.tag.CompoundTag)" tabindex="0">bedrockItemInstance(CompoundTag)</a></li>
+<li><a href="#itemPrimaryName(net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">itemPrimaryName(BedrockItem)</a></li>
+<li><a href="#itemSecondaryDescription(net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">itemSecondaryDescription(BedrockItem)</a></li>
+<li><a href="#itemSecondaryDescription(net.raphimc.viabedrock.protocol.model.BedrockItem,boolean)" tabindex="0">itemSecondaryDescription(BedrockItem, boolean)</a></li>
 <li><a href="#javaItems(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" tabindex="0">javaItems(BedrockItem[])</a></li>
 <li><a href="#bedrockItem(com.viaversion.viaversion.api.minecraft.item.Item)" tabindex="0">bedrockItem(Item)</a></li>
 <li><a href="#creativeCatalog()" tabindex="0">creativeCatalog()</a></li>
 <li><a href="#creativeCollectionSource(java.util.function.ToIntFunction)" tabindex="0">creativeCollectionSource(ToIntFunction)</a></li>
 <li><a href="#creativeInventoryModel(java.util.function.ToIntBiFunction)" tabindex="0">creativeInventoryModel(ToIntBiFunction)</a></li>
+<li><a href="#playerRecipeModel(net.raphimc.viabedrock.api.model.container.Container,boolean,boolean,byte%5B%5D)" tabindex="0">playerRecipeModel(Container, boolean, boolean, byte[])</a></li>
 <li><a href="#setCreativeCatalog(java.util.List,java.util.List)" tabindex="0">setCreativeCatalog(List, List)</a></li>
 <li><a href="#bedrockItems(com.viaversion.viaversion.api.minecraft.item.Item%5B%5D)" tabindex="0">bedrockItems(Item[])</a></li>
 <li><a href="#getItems()" tabindex="0">getItems()</a></li>
@@ -90,7 +94,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#recipeKey(net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">recipeKey(BedrockItem)</a></li>
 <li><a href="#recipeDescriptor(net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">recipeDescriptor(BedrockItem)</a></li>
 <li><a href="#countRecipeInputs(net.raphimc.viabedrock.api.model.container.NativeRecipeCounter.Recipe,net.raphimc.viabedrock.api.model.container.Container,boolean)" tabindex="0">countRecipeInputs(NativeRecipeCounter.Recipe, Container, boolean)</a></li>
-<li><a href="#playerRecipeAvailability(java.util.List,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)" tabindex="0">playerRecipeAvailability(List, BedrockItem, BedrockItem, Container, boolean, boolean)</a></li>
+<li><a href="#playerRecipeAvailability(java.util.function.Supplier,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)" tabindex="0">playerRecipeAvailability(Supplier, BedrockItem, BedrockItem, Container, boolean, boolean)</a></li>
+<li><a href="#isValidRecipeOutput(net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">isValidRecipeOutput(BedrockItem)</a></li>
 <li><a href="#countResolvedRecipeInputs(java.util.List,net.raphimc.viabedrock.api.model.container.Container,boolean)" tabindex="0">countResolvedRecipeInputs(List, Container, boolean)</a></li>
 <li><a href="#matchesResolvedRecipeIngredient(net.raphimc.viabedrock.protocol.model.recipe.ItemRecipeKey,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">matchesResolvedRecipeIngredient(ItemRecipeKey, BedrockItem)</a></li>
 <li><a href="#countResolvedRecipeInputs(java.util.List,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,net.raphimc.viabedrock.api.model.container.Container,boolean)" tabindex="0">countResolvedRecipeInputs(List, NativeRecipeDescriptor.Registry, Container, boolean)</a></li>
@@ -272,14 +277,31 @@ implements <a href="../types/item/NetworkItemStackContext.html" title="interface
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBundle(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">isBundle</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemArrayType()" class="member-name-link">itemArrayType</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValidRecipeOutput(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">isValidRecipeOutput</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemIdentifier(int)" class="member-name-link">itemIdentifier</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemArrayType()" class="member-name-link">itemArrayType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemIdentifier(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">itemIdentifier</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemIdentifier(int)" class="member-name-link">itemIdentifier</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemIdentifier(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">itemIdentifier</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemPrimaryName(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">itemPrimaryName</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Resolve primary text through the selected definition and current language sources.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemSecondaryDescription(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">itemSecondaryDescription</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The native label flag follows raw game type and level default, independently of Instabuild.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemSecondaryDescription(net.raphimc.viabedrock.protocol.model.BedrockItem,boolean)" class="member-name-link">itemSecondaryDescription</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item,
+ boolean&nbsp;creative)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemType()" class="member-name-link">itemType</a>()</code></div>
@@ -347,47 +369,53 @@ implements <a href="../types/item/NetworkItemStackContext.html" title="interface
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#optionalNewItemType()" class="member-name-link">optionalNewItemType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerRecipeAvailability(java.util.List,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)" class="member-name-link">playerRecipeAvailability</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/model/container/NativeRecipeCounter.Candidate.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Candidate</a>&gt;&nbsp;candidates,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerRecipeAvailability(java.util.function.Supplier,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)" class="member-name-link">playerRecipeAvailability</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/model/container/NativeRecipeCounter.Candidate.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Candidate</a>&gt;&gt;&nbsp;candidates,
  <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output,
  <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;selectedOutput,
  <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;owner,
  boolean&nbsp;filtering,
  boolean&nbsp;includeCursor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The owning recipe model supplies its admitted output candidates and retained selected stack.</div>
+<div class="block">The recipe owner supplies a lazy output lookup and its retained selected stack.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeDescriptor(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">recipeDescriptor</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/PlayerRecipeModel.html" title="class in net.raphimc.viabedrock.protocol.model">PlayerRecipeModel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerRecipeModel(net.raphimc.viabedrock.api.model.container.Container,boolean,boolean,byte%5B%5D)" class="member-name-link">playerRecipeModel</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;owner,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor,
+ byte[]&nbsp;query)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/recipe/ItemRecipeKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeKey</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeKey(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">recipeKey</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeDescriptor(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">recipeDescriptor</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/recipe/RecipeOutputKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">RecipeOutputKey</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeOutputKey(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">recipeOutputKey</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/recipe/ItemRecipeKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeKey</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeKey(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">recipeKey</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/recipe/RecipeOutputKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">RecipeOutputKey</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeOutputKey(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">recipeOutputKey</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Output lookup compares the exact defined Item and selected auxiliary before stack identity.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/recipe/RecipeOutputKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">RecipeOutputKey</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeOutputRegistrationKey(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">recipeOutputRegistrationKey</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/recipe/RecipeOutputKey.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">RecipeOutputKey</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeOutputRegistrationKey(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">recipeOutputRegistrationKey</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Registration reconstructs a count-one key, including associated-block resolution and metadata normalization.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeResultArrayType()" class="member-name-link">recipeResultArrayType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeResultType()" class="member-name-link">recipeResultType</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeResultArrayType()" class="member-name-link">recipeResultArrayType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCreativeCatalog(java.util.List,java.util.List)" class="member-name-link">setCreativeCatalog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/CreativeCatalog.Group.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Group</a>&gt;&nbsp;groups,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeResultType()" class="member-name-link">recipeResultType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCreativeCatalog(java.util.List,java.util.List)" class="member-name-link">setCreativeCatalog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/CreativeCatalog.Group.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Group</a>&gt;&nbsp;groups,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/CreativeCatalog.Entry.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeCatalog.Entry</a>&gt;&nbsp;entries)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stackRequestResultType()" class="member-name-link">stackRequestResultType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/ItemUseModifiers.html" title="class in net.raphimc.viabedrock.protocol.model">ItemUseModifiers</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#useModifiers(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">useModifiers</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.type.Type<wbr>&lt;<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stackRequestResultType()" class="member-name-link">stackRequestResultType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/ItemUseModifiers.html" title="class in net.raphimc.viabedrock.protocol.model">ItemUseModifiers</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#useModifiers(net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">useModifiers</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -493,6 +521,33 @@ implements <a href="../types/item/NetworkItemStackContext.html" title="interface
 </section>
 </li>
 <li>
+<section class="detail" id="itemPrimaryName(net.raphimc.viabedrock.protocol.model.BedrockItem)">
+<h3>itemPrimaryName</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">itemPrimaryName</span><wbr><span class="parameters">(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</span></div>
+<div class="block">Resolve primary text through the selected definition and current language sources.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="itemSecondaryDescription(net.raphimc.viabedrock.protocol.model.BedrockItem)">
+<h3>itemSecondaryDescription</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">itemSecondaryDescription</span><wbr><span class="parameters">(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</span></div>
+<div class="block">The native label flag follows raw game type and level default, independently of Instabuild.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="itemSecondaryDescription(net.raphimc.viabedrock.protocol.model.BedrockItem,boolean)">
+<h3>itemSecondaryDescription</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">itemSecondaryDescription</span><wbr><span class="parameters">(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item,
+ boolean&nbsp;creative)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="javaItems(net.raphimc.viabedrock.protocol.model.BedrockItem[])">
 <h3>javaItems</h3>
 <div class="horizontal-scroll">
@@ -529,6 +584,17 @@ implements <a href="../types/item/NetworkItemStackContext.html" title="interface
 <h3>creativeInventoryModel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/CreativeInventoryModel.html" title="class in net.raphimc.viabedrock.protocol.model">CreativeInventoryModel</a></span>&nbsp;<span class="element-name">creativeInventoryModel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntBiFunction.html" title="class or interface in java.util.function" class="external-link">ToIntBiFunction</a>&lt;<a href="../model/CreativeInventoryModel.View.html" title="enum class in net.raphimc.viabedrock.protocol.model">CreativeInventoryModel.View</a>, <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&gt;&nbsp;evaluation)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerRecipeModel(net.raphimc.viabedrock.api.model.container.Container,boolean,boolean,byte[])">
+<h3>playerRecipeModel</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/PlayerRecipeModel.html" title="class in net.raphimc.viabedrock.protocol.model">PlayerRecipeModel</a></span>&nbsp;<span class="element-name">playerRecipeModel</span><wbr><span class="parameters">(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;owner,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor,
+ byte[]&nbsp;query)</span></div>
 </div>
 </section>
 </li>
@@ -658,16 +724,24 @@ implements <a href="../types/item/NetworkItemStackContext.html" title="interface
 </section>
 </li>
 <li>
-<section class="detail" id="playerRecipeAvailability(java.util.List,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)">
+<section class="detail" id="playerRecipeAvailability(java.util.function.Supplier,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)">
 <h3>playerRecipeAvailability</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">playerRecipeAvailability</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/model/container/NativeRecipeCounter.Candidate.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Candidate</a>&gt;&nbsp;candidates,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">playerRecipeAvailability</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/model/container/NativeRecipeCounter.Candidate.html" title="class in net.raphimc.viabedrock.api.model.container">NativeRecipeCounter.Candidate</a>&gt;&gt;&nbsp;candidates,
  <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output,
  <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;selectedOutput,
  <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;owner,
  boolean&nbsp;filtering,
  boolean&nbsp;includeCursor)</span></div>
-<div class="block">The owning recipe model supplies its admitted output candidates and retained selected stack.</div>
+<div class="block">The recipe owner supplies a lazy output lookup and its retained selected stack.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isValidRecipeOutput(net.raphimc.viabedrock.protocol.model.BedrockItem)">
+<h3>isValidRecipeOutput</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isValidRecipeOutput</span><wbr><span class="parameters">(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output)</span></div>
 </div>
 </section>
 </li>

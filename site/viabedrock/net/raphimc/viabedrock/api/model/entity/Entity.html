@@ -156,6 +156,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#sendNativeSpatialCommand(boolean)" tabindex="0">sendNativeSpatialCommand(boolean)</a></li>
 <li><a href="#nativeSpatialCommand()" tabindex="0">nativeSpatialCommand()</a></li>
 <li><a href="#nativeActorBounds()" tabindex="0">nativeActorBounds()</a></li>
+<li><a href="#nativeTargetId()" tabindex="0">nativeTargetId()</a></li>
+<li><a href="#nativeIntegerMetadata()" tabindex="0">nativeIntegerMetadata()</a></li>
 </ol>
 </li>
 </ol>
@@ -397,12 +399,22 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="../NativeActorMessage.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Snapshot</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeActorSnapshot()" class="member-name-link">nativeActorSnapshot</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeLifetime()" class="member-name-link">nativeLifetime</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="../ActorSpatialCommand.html" title="class in net.raphimc.viabedrock.api.model">ActorSpatialCommand</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeSpatialCommand()" class="member-name-link">nativeSpatialCommand</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="../../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeIntegerMetadata()" class="member-name-link">nativeIntegerMetadata</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retain raw signed values only when the native metadata entry is actually an INT.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeLifetime()" class="member-name-link">nativeLifetime</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="../ActorSpatialCommand.html" title="class in net.raphimc.viabedrock.api.model">ActorSpatialCommand</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeSpatialCommand()" class="member-name-link">nativeSpatialCommand</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeTargetId()" class="member-name-link">nativeTargetId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Molang has_target reads a typed LONG slot, independently of target actor availability.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onEntityDataChanged()" class="member-name-link">onEntityDataChanged</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -1295,6 +1307,24 @@ loadScripts(document, 'script');</script>
 <h3>nativeActorBounds</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="../NativeActorBoundsMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeActorBoundsMessage</a></span>&nbsp;<span class="element-name">nativeActorBounds</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="nativeTargetId()">
+<h3>nativeTargetId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">nativeTargetId</span>()</div>
+<div class="block">Molang has_target reads a typed LONG slot, independently of target actor availability.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="nativeIntegerMetadata()">
+<h3>nativeIntegerMetadata</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">nativeIntegerMetadata</span>()</div>
+<div class="block">Retain raw signed values only when the native metadata entry is actually an INT.</div>
 </div>
 </section>
 </li>

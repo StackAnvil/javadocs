@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.awt.image.BufferedImage,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.AlphaTest)" tabindex="0">Draw(BedrockPlayerControllers.Surface, BedrockGeometryModel, BufferedImage, BedrockActorMaterialDefinitions.AlphaTest)</a></li>
+<li><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set)" tabindex="0">Draw(BedrockPlayerControllers.Surface, BedrockGeometryModel, List, BedrockActorMaterialDefinitions.Material, Set)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -68,8 +68,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
 <li><a href="#surface()" tabindex="0">surface()</a></li>
 <li><a href="#geometry()" tabindex="0">geometry()</a></li>
-<li><a href="#image()" tabindex="0">image()</a></li>
+<li><a href="#images()" tabindex="0">images()</a></li>
 <li><a href="#material()" tabindex="0">material()</a></li>
+<li><a href="#bones()" tabindex="0">bones()</a></li>
 </ol>
 </li>
 </ol>
@@ -91,7 +92,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockWorldActorAppearance.Draw</span>(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface, org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;image, <a href="../render/BedrockActorMaterialDefinitions.AlphaTest.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.AlphaTest</a>&nbsp;material)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockWorldActorAppearance.Draw</span>(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface, org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;&nbsp;images, <a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -105,10 +106,11 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.awt.image.BufferedImage,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.AlphaTest)" class="member-name-link">Draw</a><wbr>(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set)" class="member-name-link">Draw</a><wbr>(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface,
  org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;image,
- <a href="../render/BedrockActorMaterialDefinitions.AlphaTest.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.AlphaTest</a>&nbsp;material)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;&nbsp;images,
+ <a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Draw</code> record class.</div>
 </div>
@@ -126,39 +128,44 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#bones()" class="member-name-link">bones</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>bones</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.cube.converter.model.impl.bedrock.BedrockGeometryModel</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#geometry()" class="member-name-link">geometry</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.cube.converter.model.impl.bedrock.BedrockGeometryModel</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#geometry()" class="member-name-link">geometry</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>geometry</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#image()" class="member-name-link">image</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>image</code> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../render/BedrockActorMaterialDefinitions.AlphaTest.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.AlphaTest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#material()" class="member-name-link">material</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#images()" class="member-name-link">images</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>images</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#material()" class="member-name-link">material</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>material</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#surface()" class="member-name-link">surface</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#surface()" class="member-name-link">surface</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>surface</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -179,20 +186,22 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.awt.image.BufferedImage,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.AlphaTest)">
+<section class="detail" id="&lt;init&gt;(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set)">
 <h3>Draw</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Draw</span><wbr><span class="parameters">(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface,
  org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&nbsp;image,
- <a href="../render/BedrockActorMaterialDefinitions.AlphaTest.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.AlphaTest</a>&nbsp;material)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;&nbsp;images,
+ <a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</span></div>
 <div class="block">Creates an instance of a <code>Draw</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>surface</code> - the value for the <code>surface</code> record component</dd>
 <dd><code>geometry</code> - the value for the <code>geometry</code> record component</dd>
-<dd><code>image</code> - the value for the <code>image</code> record component</dd>
+<dd><code>images</code> - the value for the <code>images</code> record component</dd>
 <dd><code>material</code> - the value for the <code>material</code> record component</dd>
+<dd><code>bones</code> - the value for the <code>bones</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -279,14 +288,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="image()">
-<h3>image</h3>
+<section class="detail" id="images()">
+<h3>images</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a></span>&nbsp;<span class="element-name">image</span>()</div>
-<div class="block">Returns the value of the <code>image</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;</span>&nbsp;<span class="element-name">images</span>()</div>
+<div class="block">Returns the value of the <code>images</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>image</code> record component</dd>
+<dd>the value of the <code>images</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -295,11 +304,24 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="material()">
 <h3>material</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../render/BedrockActorMaterialDefinitions.AlphaTest.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.AlphaTest</a></span>&nbsp;<span class="element-name">material</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a></span>&nbsp;<span class="element-name">material</span>()</div>
 <div class="block">Returns the value of the <code>material</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>material</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="bones()">
+<h3>bones</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">bones</span>()</div>
+<div class="block">Returns the value of the <code>bones</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>bones</code> record component</dd>
 </dl>
 </div>
 </section>

@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(net.minecraft.world.entity.Entity,net.minecraft.client.multiplayer.ClientLevel,int,java.util.UUID,java.util.UUID,net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot,boolean,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalActorState.CorrectionValues,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState)" tabindex="0">PhysicalActorState(Entity, ClientLevel, int, UUID, UUID, NativeActorMessage.Snapshot, boolean, PhysicalActorState.CorrectionValues, PhysicalState)</a></li>
+<li><a href="#%3Cinit%3E(net.minecraft.world.entity.Entity,net.minecraft.client.multiplayer.ClientLevel,int,java.util.UUID,java.util.UUID,net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot,boolean,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalActorState.CorrectionValues,net.raphimc.viabedrock.api.model.PlayerModeMessage.State,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState)" tabindex="0">PhysicalActorState(Entity, ClientLevel, int, UUID, UUID, NativeActorMessage.Snapshot, boolean, PhysicalActorState.CorrectionValues, PlayerModeMessage.State, PhysicalState)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -80,6 +80,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#metadata()" tabindex="0">metadata()</a></li>
 <li><a href="#physical()" tabindex="0">physical()</a></li>
 <li><a href="#correction()" tabindex="0">correction()</a></li>
+<li><a href="#mode()" tabindex="0">mode()</a></li>
 <li><a href="#state()" tabindex="0">state()</a></li>
 </ol>
 </li>
@@ -98,7 +99,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PhysicalActorState</span>(net.minecraft.world.entity.Entity&nbsp;actor, net.minecraft.client.multiplayer.ClientLevel&nbsp;level, int&nbsp;id, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;nativeLifetime, net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot&nbsp;metadata, boolean&nbsp;physical, <a href="PhysicalActorState.CorrectionValues.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalActorState.CorrectionValues</a>&nbsp;correction, <a href="PhysicalState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState</a>&nbsp;state)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PhysicalActorState</span>(net.minecraft.world.entity.Entity&nbsp;actor, net.minecraft.client.multiplayer.ClientLevel&nbsp;level, int&nbsp;id, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;nativeLifetime, net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot&nbsp;metadata, boolean&nbsp;physical, <a href="PhysicalActorState.CorrectionValues.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalActorState.CorrectionValues</a>&nbsp;correction, net.raphimc.viabedrock.api.model.PlayerModeMessage.State&nbsp;mode, <a href="PhysicalState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState</a>&nbsp;state)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -127,7 +128,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.world.entity.Entity,net.minecraft.client.multiplayer.ClientLevel,int,java.util.UUID,java.util.UUID,net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot,boolean,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalActorState.CorrectionValues,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState)" class="member-name-link">PhysicalActorState</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.world.entity.Entity,net.minecraft.client.multiplayer.ClientLevel,int,java.util.UUID,java.util.UUID,net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot,boolean,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalActorState.CorrectionValues,net.raphimc.viabedrock.api.model.PlayerModeMessage.State,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState)" class="member-name-link">PhysicalActorState</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
  net.minecraft.client.multiplayer.ClientLevel&nbsp;level,
  int&nbsp;id,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
@@ -135,6 +136,7 @@ loadScripts(document, 'script');</script>
  net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot&nbsp;metadata,
  boolean&nbsp;physical,
  <a href="PhysicalActorState.CorrectionValues.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalActorState.CorrectionValues</a>&nbsp;correction,
+ net.raphimc.viabedrock.api.model.PlayerModeMessage.State&nbsp;mode,
  <a href="PhysicalState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState</a>&nbsp;state)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>PhysicalActorState</code> record class.</div>
@@ -199,40 +201,45 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>metadata</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeLifetime()" class="member-name-link">nativeLifetime</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.raphimc.viabedrock.api.model.PlayerModeMessage.State</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mode()" class="member-name-link">mode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>mode</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nativeLifetime()" class="member-name-link">nativeLifetime</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>nativeLifetime</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#physical()" class="member-name-link">physical</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#physical()" class="member-name-link">physical</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>physical</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PhysicalActorState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalActorState</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#relationships(net.minecraft.world.entity.Entity)" class="member-name-link">relationships</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restore()" class="member-name-link">restore</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicalState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state()" class="member-name-link">state</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PhysicalActorState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalActorState</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#relationships(net.minecraft.world.entity.Entity)" class="member-name-link">relationships</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restore()" class="member-name-link">restore</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicalState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state()" class="member-name-link">state</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>state</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uuid()" class="member-name-link">uuid</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uuid()" class="member-name-link">uuid</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>uuid</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#valid(net.minecraft.client.player.LocalPlayer)" class="member-name-link">valid</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#valid(net.minecraft.client.player.LocalPlayer)" class="member-name-link">valid</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -251,7 +258,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.minecraft.world.entity.Entity,net.minecraft.client.multiplayer.ClientLevel,int,java.util.UUID,java.util.UUID,net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot,boolean,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalActorState.CorrectionValues,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState)">
+<section class="detail" id="&lt;init&gt;(net.minecraft.world.entity.Entity,net.minecraft.client.multiplayer.ClientLevel,int,java.util.UUID,java.util.UUID,net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot,boolean,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalActorState.CorrectionValues,net.raphimc.viabedrock.api.model.PlayerModeMessage.State,com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState)">
 <h3>PhysicalActorState</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PhysicalActorState</span><wbr><span class="parameters">(net.minecraft.world.entity.Entity&nbsp;actor,
@@ -262,6 +269,7 @@ loadScripts(document, 'script');</script>
  net.raphimc.viabedrock.api.model.NativeActorMessage.Snapshot&nbsp;metadata,
  boolean&nbsp;physical,
  <a href="PhysicalActorState.CorrectionValues.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalActorState.CorrectionValues</a>&nbsp;correction,
+ net.raphimc.viabedrock.api.model.PlayerModeMessage.State&nbsp;mode,
  <a href="PhysicalState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState</a>&nbsp;state)</span></div>
 <div class="block">Creates an instance of a <code>PhysicalActorState</code> record class.</div>
 <dl class="notes">
@@ -274,6 +282,7 @@ loadScripts(document, 'script');</script>
 <dd><code>metadata</code> - the value for the <code>metadata</code> record component</dd>
 <dd><code>physical</code> - the value for the <code>physical</code> record component</dd>
 <dd><code>correction</code> - the value for the <code>correction</code> record component</dd>
+<dd><code>mode</code> - the value for the <code>mode</code> record component</dd>
 <dd><code>state</code> - the value for the <code>state</code> record component</dd>
 </dl>
 </div>
@@ -484,6 +493,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>correction</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="mode()">
+<h3>mode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.raphimc.viabedrock.api.model.PlayerModeMessage.State</span>&nbsp;<span class="element-name">mode</span>()</div>
+<div class="block">Returns the value of the <code>mode</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>mode</code> record component</dd>
 </dl>
 </div>
 </section>

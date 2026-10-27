@@ -66,6 +66,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#tick(int,boolean,boolean)" tabindex="0">tick(int, boolean, boolean)</a></li>
 <li><a href="#ready()" tabindex="0">ready()</a></li>
+<li><a href="#refresh(net.raphimc.viabedrock.protocol.model.CreativeInventoryModel.View,boolean,boolean,boolean)" tabindex="0">refresh(CreativeInventoryModel.View, boolean, boolean, boolean)</a></li>
 <li><a href="#invalidate(net.raphimc.viabedrock.protocol.model.CreativeInventoryModel.View)" tabindex="0">invalidate(CreativeInventoryModel.View)</a></li>
 <li><a href="#invalidateAll()" tabindex="0">invalidateAll()</a></li>
 <li><a href="#entries(net.raphimc.viabedrock.protocol.model.CreativeInventoryModel.View)" tabindex="0">entries(CreativeInventoryModel.View)</a></li>
@@ -148,11 +149,19 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ready()" class="member-name-link">ready</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick(int,boolean,boolean)" class="member-name-link">tick</a><wbr>(int&nbsp;leftTab,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refresh(net.raphimc.viabedrock.protocol.model.CreativeInventoryModel.View,boolean,boolean,boolean)" class="member-name-link">refresh</a><wbr>(<a href="CreativeInventoryModel.View.html" title="enum class in net.raphimc.viabedrock.protocol.model">CreativeInventoryModel.View</a>&nbsp;view,
+ boolean&nbsp;grouping,
+ boolean&nbsp;filtering,
+ boolean&nbsp;resetExpansion)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">A direct model notification refreshes a collection without advancing population or consuming dirty tabs.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick(int,boolean,boolean)" class="member-name-link">tick</a><wbr>(int&nbsp;leftTab,
  boolean&nbsp;grouping,
  boolean&nbsp;filtering)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Population completion dirties the active tab once, on the call after the final write phase.</div>
 </div>
 </div>
@@ -206,6 +215,18 @@ loadScripts(document, 'script');</script>
 <h3>ready</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">ready</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="refresh(net.raphimc.viabedrock.protocol.model.CreativeInventoryModel.View,boolean,boolean,boolean)">
+<h3>refresh</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">refresh</span><wbr><span class="parameters">(<a href="CreativeInventoryModel.View.html" title="enum class in net.raphimc.viabedrock.protocol.model">CreativeInventoryModel.View</a>&nbsp;view,
+ boolean&nbsp;grouping,
+ boolean&nbsp;filtering,
+ boolean&nbsp;resetExpansion)</span></div>
+<div class="block">A direct model notification refreshes a collection without advancing population or consuming dirty tabs.</div>
 </div>
 </section>
 </li>

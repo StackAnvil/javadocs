@@ -65,6 +65,9 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#addPlayer(java.util.UUID,long,java.lang.String)" tabindex="0">addPlayer(UUID, long, String)</a></li>
 <li><a href="#removePlayer(java.util.UUID)" tabindex="0">removePlayer(UUID)</a></li>
+<li><a href="#setGameType(java.util.UUID,long,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)" tabindex="0">setGameType(UUID, long, GameType)</a></li>
+<li><a href="#getJavaGameMode(java.util.UUID,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)" tabindex="0">getJavaGameMode(UUID, GameType)</a></li>
+<li><a href="#getGameModeUpdates(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)" tabindex="0">getGameModeUpdates(GameType, GameType)</a></li>
 <li><a href="#containsPlayer(java.util.UUID)" tabindex="0">containsPlayer(UUID)</a></li>
 <li><a href="#getPlayer(java.util.UUID)" tabindex="0">getPlayer(UUID)</a></li>
 <li><a href="#getPlayer(long)" tabindex="0">getPlayer(long)</a></li>
@@ -126,6 +129,14 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containsPlayer(java.util.UUID)" class="member-name-link">containsPlayer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>,<wbr><a href="../data/enums/java/generated/GameMode.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">GameMode</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGameModeUpdates(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)" class="member-name-link">getGameModeUpdates</a><wbr>(<a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;previousDefault,
+ <a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;nextDefault)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/java/generated/GameMode.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">GameMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaGameMode(java.util.UUID,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)" class="member-name-link">getJavaGameMode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;levelGameType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.util.Pair<wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlayer(long)" class="member-name-link">getPlayer</a><wbr>(long&nbsp;entityUniqueId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -135,6 +146,11 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.util.Pair<wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removePlayer(java.util.UUID)" class="member-name-link">removePlayer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setGameType(java.util.UUID,long,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)" class="member-name-link">setGameType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ long&nbsp;entityUniqueId,
+ <a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;gameType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -186,6 +202,34 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h3>removePlayer</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.util.Pair&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">removePlayer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setGameType(java.util.UUID,long,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)">
+<h3>setGameType</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setGameType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ long&nbsp;entityUniqueId,
+ <a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;gameType)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getJavaGameMode(java.util.UUID,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)">
+<h3>getJavaGameMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../data/enums/java/generated/GameMode.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">GameMode</a></span>&nbsp;<span class="element-name">getJavaGameMode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;levelGameType)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getGameModeUpdates(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.GameType)">
+<h3>getGameModeUpdates</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>,<wbr><a href="../data/enums/java/generated/GameMode.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">GameMode</a>&gt;</span>&nbsp;<span class="element-name">getGameModeUpdates</span><wbr><span class="parameters">(<a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;previousDefault,
+ <a href="../data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a>&nbsp;nextDefault)</span></div>
 </div>
 </section>
 </li>

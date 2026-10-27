@@ -60,6 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#capture(java.lang.Iterable,java.lang.Iterable,long)" tabindex="0">capture(Iterable, Iterable, long)</a></li>
 <li><a href="#correctionTarget(net.minecraft.world.entity.Entity,net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.PlayerCorrection,long)" tabindex="0">correctionTarget(Entity, LocalPlayer, PlayerCorrection, long)</a></li>
 <li><a href="#acceptsMotion(net.minecraft.world.entity.Entity,net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.ActorMotionCommand,long)" tabindex="0">acceptsMotion(Entity, LocalPlayer, ActorMotionCommand, long)</a></li>
+<li><a href="#acceptsMode(net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.PlayerModeMessage)" tabindex="0">acceptsMode(LocalPlayer, PlayerModeMessage)</a></li>
 <li><a href="#valid(net.minecraft.client.player.LocalPlayer)" tabindex="0">valid(LocalPlayer)</a></li>
 <li><a href="#restore()" tabindex="0">restore()</a></li>
 <li><a href="#recapture()" tabindex="0">recapture()</a></li>
@@ -113,36 +114,40 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#acceptsMotion(net.minecraft.world.entity.Entity,net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.ActorMotionCommand,long)" class="member-name-link">acceptsMotion</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#acceptsMode(net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.PlayerModeMessage)" class="member-name-link">acceptsMode</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player,
+ net.raphimc.viabedrock.api.model.PlayerModeMessage&nbsp;message)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#acceptsMotion(net.minecraft.world.entity.Entity,net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.ActorMotionCommand,long)" class="member-name-link">acceptsMotion</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
  net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.raphimc.viabedrock.api.model.ActorMotionCommand&nbsp;command,
  long&nbsp;currentLease)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PhysicalGraphState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalGraphState</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#capture(java.lang.Iterable,java.lang.Iterable,long)" class="member-name-link">capture</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;actors,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PhysicalGraphState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalGraphState</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#capture(java.lang.Iterable,java.lang.Iterable,long)" class="member-name-link">capture</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;actors,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;members,
  long&nbsp;controlLease)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicalGraphState.Changes.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalGraphState.Changes</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changesSince(com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalGraphState)" class="member-name-link">changesSince</a><wbr>(<a href="PhysicalGraphState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalGraphState</a>&nbsp;previous)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicalActorState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalActorState</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#correctionTarget(net.minecraft.world.entity.Entity,net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.PlayerCorrection,long)" class="member-name-link">correctionTarget</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicalGraphState.Changes.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalGraphState.Changes</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changesSince(com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalGraphState)" class="member-name-link">changesSince</a><wbr>(<a href="PhysicalGraphState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalGraphState</a>&nbsp;previous)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicalActorState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalActorState</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#correctionTarget(net.minecraft.world.entity.Entity,net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.PlayerCorrection,long)" class="member-name-link">correctionTarget</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
  net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.raphimc.viabedrock.api.model.PlayerCorrection&nbsp;command,
  long&nbsp;currentLease)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicalGraphState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalGraphState</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recapture()" class="member-name-link">recapture</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PhysicalGraphState.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalGraphState</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recapture()" class="member-name-link">recapture</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Refresh the historical graph's participants, independently of today's mount and seat layout.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restore()" class="member-name-link">restore</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#valid(net.minecraft.client.player.LocalPlayer)" class="member-name-link">valid</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#restore()" class="member-name-link">restore</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#valid(net.minecraft.client.player.LocalPlayer)" class="member-name-link">valid</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -189,6 +194,15 @@ loadScripts(document, 'script');</script>
  net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.raphimc.viabedrock.api.model.ActorMotionCommand&nbsp;command,
  long&nbsp;currentLease)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="acceptsMode(net.minecraft.client.player.LocalPlayer,net.raphimc.viabedrock.api.model.PlayerModeMessage)">
+<h3>acceptsMode</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">acceptsMode</span><wbr><span class="parameters">(net.minecraft.client.player.LocalPlayer&nbsp;player,
+ net.raphimc.viabedrock.api.model.PlayerModeMessage&nbsp;message)</span></div>
 </div>
 </section>
 </li>

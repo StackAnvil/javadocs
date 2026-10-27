@@ -58,6 +58,8 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#register(com.mojang.renderpearl.api.pipeline.RenderPipeline,com.mojang.renderpearl.api.pipeline.RenderPipeline)" tabindex="0">register(RenderPipeline, RenderPipeline)</a></li>
 <li><a href="#register(com.mojang.renderpearl.api.pipeline.RenderPipeline,com.mojang.renderpearl.api.pipeline.RenderPipeline,float)" tabindex="0">register(RenderPipeline, RenderPipeline, float)</a></li>
+<li><a href="#compiling(com.mojang.renderpearl.api.pipeline.RenderPipeline,java.util.function.Supplier)" tabindex="0">compiling(RenderPipeline, Supplier)</a></li>
+<li><a href="#compiling()" tabindex="0">compiling()</a></li>
 <li><a href="#equivalent(com.mojang.renderpearl.api.pipeline.RenderPipeline)" tabindex="0">equivalent(RenderPipeline)</a></li>
 <li><a href="#alphaReference(com.mojang.renderpearl.api.pipeline.RenderPipeline)" tabindex="0">alphaReference(RenderPipeline)</a></li>
 </ol>
@@ -96,6 +98,15 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#alphaReference(com.mojang.renderpearl.api.pipeline.RenderPipeline)" class="member-name-link">alphaReference</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.mojang.renderpearl.api.pipeline.RenderPipeline</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#compiling()" class="member-name-link">compiling</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#compiling(com.mojang.renderpearl.api.pipeline.RenderPipeline,java.util.function.Supplier)" class="member-name-link">compiling</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;action)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Scope nested program lookups to their actual native pipeline, including cached Iris overrides.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.mojang.renderpearl.api.pipeline.RenderPipeline</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#equivalent(com.mojang.renderpearl.api.pipeline.RenderPipeline)" class="member-name-link">equivalent</a><wbr>(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -141,6 +152,24 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">com.mojang.renderpearl.api.pipeline.RenderPipeline</span>&nbsp;<span class="element-name">register</span><wbr><span class="parameters">(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;nativePipeline,
  com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;shaderPipeline,
  float&nbsp;alphaReference)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="compiling(com.mojang.renderpearl.api.pipeline.RenderPipeline,java.util.function.Supplier)">
+<h3>compiling</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">compiling</span><wbr><span class="parameters">(com.mojang.renderpearl.api.pipeline.RenderPipeline&nbsp;pipeline,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;&nbsp;action)</span></div>
+<div class="block">Scope nested program lookups to their actual native pipeline, including cached Iris overrides.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="compiling()">
+<h3>compiling</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">com.mojang.renderpearl.api.pipeline.RenderPipeline</span>&nbsp;<span class="element-name">compiling</span>()</div>
 </div>
 </section>
 </li>

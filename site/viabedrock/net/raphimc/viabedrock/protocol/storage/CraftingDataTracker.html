@@ -69,6 +69,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#getDisplayedRecipe(int)" tabindex="0">getDisplayedRecipe(int)</a></li>
 <li><a href="#isOutputUnlocked(net.raphimc.viabedrock.protocol.model.BedrockItem,java.util.List)" tabindex="0">isOutputUnlocked(BedrockItem, List)</a></li>
 <li><a href="#outputCandidates(net.raphimc.viabedrock.protocol.model.BedrockItem,java.util.List)" tabindex="0">outputCandidates(BedrockItem, List)</a></li>
+<li><a href="#playerRecipeAvailability(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)" tabindex="0">playerRecipeAvailability(BedrockItem, BedrockItem, Container, boolean, boolean)</a></li>
+<li><a href="#playerRecipeCategoryAvailability(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)" tabindex="0">playerRecipeCategoryAvailability(BedrockItem, BedrockItem, Container, boolean, boolean)</a></li>
+<li><a href="#playerRecipeSearch(java.lang.String)" tabindex="0">playerRecipeSearch(String)</a></li>
+<li><a href="#playerRecipeSearch(byte%5B%5D)" tabindex="0">playerRecipeSearch(byte[])</a></li>
 <li><a href="#sendJavaGhostRecipe(com.viaversion.viaversion.api.connection.UserConnection,int,int)" tabindex="0">sendJavaGhostRecipe(UserConnection, int, int)</a></li>
 <li><a href="#updateCraftingDataList(java.util.List,boolean)" tabindex="0">updateCraftingDataList(List, boolean)</a></li>
 <li><a href="#recipeIngredients(net.raphimc.viabedrock.protocol.storage.CraftingDataStorage)" tabindex="0">recipeIngredients(CraftingDataStorage)</a></li>
@@ -116,14 +120,19 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="CraftingDataTracker.CatalogEntry.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.CatalogEntry</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final class&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="CraftingDataTracker.RecipeCatalog.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.RecipeCatalog</a></code></div>
+<div class="col-first odd-row-color"><code>final class&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="CraftingDataTracker.PlayerRecipeSearch.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.PlayerRecipeSearch</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Retain the installed search mode while reading current rules, recipes and ingredients at evaluation.</div>
+</div>
+<div class="col-first even-row-color"><code>static final class&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="CraftingDataTracker.RecipeCatalog.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.RecipeCatalog</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An action can use this snapshot only on its original connection and catalog revision.</div>
 </div>
-<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="CraftingDataTracker.RecipeMatch.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.RecipeMatch</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="CraftingDataTracker.RecipeMatch.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.RecipeMatch</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -175,6 +184,32 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;contexts)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Retain native output-index order, context order and recipe-ID deduplication before caller filtering.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerRecipeAvailability(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)" class="member-name-link">playerRecipeAvailability</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output,
+ <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;selectedOutput,
+ <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;owner,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Count retained output recipes against the current native source collections.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerRecipeCategoryAvailability(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)" class="member-name-link">playerRecipeCategoryAvailability</a><wbr>(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output,
+ <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;selectedOutput,
+ <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;owner,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Evaluate a player category using current abilities, unlocks and every output candidate's grid requirement.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CraftingDataTracker.PlayerRecipeSearch.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.PlayerRecipeSearch</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerRecipeSearch(byte%5B%5D)" class="member-name-link">playerRecipeSearch</a><wbr>(byte[]&nbsp;query)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CraftingDataTracker.PlayerRecipeSearch.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.PlayerRecipeSearch</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playerRecipeSearch(java.lang.String)" class="member-name-link">playerRecipeSearch</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;query)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Install the search policy with the player's current Instabuild ability.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CraftingDataTracker.RecipeCatalog.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.RecipeCatalog</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeCatalog(java.util.function.Predicate)" class="member-name-link">recipeCatalog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&gt;&nbsp;supported)</code></div>
@@ -285,6 +320,50 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CraftingDataStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataStorage</a>&gt;</span>&nbsp;<span class="element-name">outputCandidates</span><wbr><span class="parameters">(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;query,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;contexts)</span></div>
 <div class="block">Retain native output-index order, context order and recipe-ID deduplication before caller filtering.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerRecipeAvailability(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)">
+<h3>playerRecipeAvailability</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">playerRecipeAvailability</span><wbr><span class="parameters">(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output,
+ <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;selectedOutput,
+ <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;owner,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor)</span></div>
+<div class="block">Count retained output recipes against the current native source collections.
+Search, unlock and Instabuild policies belong to the owning player collection.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerRecipeCategoryAvailability(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.Container,boolean,boolean)">
+<h3>playerRecipeCategoryAvailability</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">playerRecipeCategoryAvailability</span><wbr><span class="parameters">(<a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;output,
+ <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;selectedOutput,
+ <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;owner,
+ boolean&nbsp;filtering,
+ boolean&nbsp;includeCursor)</span></div>
+<div class="block">Evaluate a player category using current abilities, unlocks and every output candidate's grid requirement.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerRecipeSearch(java.lang.String)">
+<h3>playerRecipeSearch</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CraftingDataTracker.PlayerRecipeSearch.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.PlayerRecipeSearch</a></span>&nbsp;<span class="element-name">playerRecipeSearch</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;query)</span></div>
+<div class="block">Install the search policy with the player's current Instabuild ability.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="playerRecipeSearch(byte[])">
+<h3>playerRecipeSearch</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CraftingDataTracker.PlayerRecipeSearch.html" title="class in net.raphimc.viabedrock.protocol.storage">CraftingDataTracker.PlayerRecipeSearch</a></span>&nbsp;<span class="element-name">playerRecipeSearch</span><wbr><span class="parameters">(byte[]&nbsp;query)</span></div>
 </div>
 </section>
 </li>

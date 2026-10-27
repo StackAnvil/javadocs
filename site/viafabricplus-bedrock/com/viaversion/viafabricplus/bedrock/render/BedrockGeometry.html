@@ -60,7 +60,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#entityModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Set)" tabindex="0">entityModel(BedrockGeometryModel, Set)</a></li>
 <li><a href="#playerModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,boolean)" tabindex="0">playerModel(BedrockGeometryModel, boolean)</a></li>
 <li><a href="#playerModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,boolean,java.util.Map)" tabindex="0">playerModel(BedrockGeometryModel, boolean, Map)</a></li>
+<li><a href="#playerModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,boolean,java.util.Map,java.util.Set)" tabindex="0">playerModel(BedrockGeometryModel, boolean, Map, Set)</a></li>
 <li><a href="#animatedModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map)" tabindex="0">animatedModel(BedrockGeometryModel, Map)</a></li>
+<li><a href="#animatedModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map,java.util.Set)" tabindex="0">animatedModel(BedrockGeometryModel, Map, Set)</a></li>
+<li><a href="#partitionMaterials(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map,java.util.Map)" tabindex="0">partitionMaterials(BedrockGeometryModel, Map, Map)</a></li>
 </ol>
 </li>
 </ol>
@@ -98,13 +101,25 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#animatedModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map)" class="member-name-link">animatedModel</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.model.Model<wbr>&lt;net.minecraft.client.renderer.entity.state.EntityRenderState&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#entityModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel)" class="member-name-link">entityModel</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockAnimatedModel.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockAnimatedModel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#animatedModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map,java.util.Set)" class="member-name-link">animatedModel</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.model.Model<wbr>&lt;net.minecraft.client.renderer.entity.state.EntityRenderState&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#entityModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Set)" class="member-name-link">entityModel</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#entityModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel)" class="member-name-link">entityModel</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.model.Model<wbr>&lt;net.minecraft.client.renderer.entity.state.EntityRenderState&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#entityModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Set)" class="member-name-link">entityModel</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#partitionMaterials(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map,java.util.Map)" class="member-name-link">partitionMaterials</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;materials)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Only surfaces need materials; empty ancestors remain in every model for transforms and bindings.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.model.player.PlayerModel</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#playerModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,boolean)" class="member-name-link">playerModel</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
  boolean&nbsp;slim)</code></div>
@@ -114,6 +129,12 @@ loadScripts(document, 'script');</script>
  boolean&nbsp;slim,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.model.player.PlayerModel</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#playerModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,boolean,java.util.Map,java.util.Set)" class="member-name-link">playerModel</a><wbr>(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
+ boolean&nbsp;slim,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -168,11 +189,43 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="playerModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,boolean,java.util.Map,java.util.Set)">
+<h3>playerModel</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.client.model.player.PlayerModel</span>&nbsp;<span class="element-name">playerModel</span><wbr><span class="parameters">(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
+ boolean&nbsp;slim,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="animatedModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map)">
 <h3>animatedModel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BedrockAnimatedModel.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockAnimatedModel</a></span>&nbsp;<span class="element-name">animatedModel</span><wbr><span class="parameters">(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="animatedModel(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map,java.util.Set)">
+<h3>animatedModel</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BedrockAnimatedModel.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockAnimatedModel</a></span>&nbsp;<span class="element-name">animatedModel</span><wbr><span class="parameters">(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="partitionMaterials(org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.Map,java.util.Map)">
+<h3>partitionMaterials</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</span>&nbsp;<span class="element-name">partitionMaterials</span><wbr><span class="parameters">(org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;meshes,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;materials)</span></div>
+<div class="block">Only surfaces need materials; empty ancestors remain in every model for transforms and bindings.</div>
 </div>
 </section>
 </li>
