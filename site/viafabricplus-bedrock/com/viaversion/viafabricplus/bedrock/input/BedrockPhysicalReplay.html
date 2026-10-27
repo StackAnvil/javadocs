@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#begin(net.minecraft.client.player.LocalPlayer,long)" tabindex="0">begin(LocalPlayer, long)</a></li>
+<li><a href="#teleport(int)" tabindex="0">teleport(int)</a></li>
 <li><a href="#preparePhysics(net.minecraft.client.multiplayer.ClientLevel)" tabindex="0">preparePhysics(ClientLevel)</a></li>
 <li><a href="#complete(long)" tabindex="0">complete(long)</a></li>
 <li><a href="#controlChanged()" tabindex="0">controlChanged()</a></li>
@@ -166,9 +167,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#synchronizeCorrectedPosition(net.minecraft.client.player.LocalPlayer)" class="member-name-link">synchronizeCorrectedPosition</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#worldPhysics(net.minecraft.world.level.Level,java.lang.Runnable)" class="member-name-link">worldPhysics</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#teleport(int)" class="member-name-link">teleport</a><wbr>(int&nbsp;teleportId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Unpaired positive position IDs represent native teleports; negative IDs are local synchronization.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#worldPhysics(net.minecraft.world.level.Level,java.lang.Runnable)" class="member-name-link">worldPhysics</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;action)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -192,6 +198,15 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">begin</span><wbr><span class="parameters">(net.minecraft.client.player.LocalPlayer&nbsp;player,
  long&nbsp;frame)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="teleport(int)">
+<h3>teleport</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">teleport</span><wbr><span class="parameters">(int&nbsp;teleportId)</span></div>
+<div class="block">Unpaired positive position IDs represent native teleports; negative IDs are local synchronization.</div>
 </div>
 </section>
 </li>

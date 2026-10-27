@@ -69,6 +69,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#viaFabricPlusBedrock$teleportTravel()" tabindex="0">viaFabricPlusBedrock$teleportTravel()</a></li>
 <li><a href="#viaFabricPlusBedrock$posture()" tabindex="0">viaFabricPlusBedrock$posture()</a></li>
 <li><a href="#updateSwimming()" tabindex="0">updateSwimming()</a></li>
 <li><a href="#jumpFromGround()" tabindex="0">jumpFromGround()</a></li>
@@ -99,13 +100,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../access/IBedrockPlayerPosture.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockPlayerPosture</a>, <a href="../../../../movement/replay/PhysicalStateAccess.Local.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Local</a>, net.fabricmc.fabric.api.event.lifecycle.v1.EntityLoadData, net.minecraft.client.entity.ClientAvatarEntity, net.minecraft.core.component.DataComponentGetter, net.minecraft.core.TypedInstance&lt;net.minecraft.world.entity.EntityType&lt;?&gt;&gt;, net.minecraft.network.syncher.SyncedDataHolder, net.minecraft.util.debug.DebugValueSource, net.minecraft.world.entity.Attackable, net.minecraft.world.entity.ContainerUser, net.minecraft.world.entity.ItemOwner, net.minecraft.world.entity.SlotProvider, net.minecraft.world.level.entity.EntityAccess, net.minecraft.world.level.entity.UniquelyIdentifyable, net.minecraft.world.Nameable, net.minecraft.world.scores.ScoreHolder, net.minecraft.world.waypoints.Waypoint, net.minecraft.world.waypoints.WaypointTransmitter</code></dd>
+<dd><code><a href="../../../access/IBedrockPlayerPosture.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockPlayerPosture</a>, <a href="../../../access/IBedrockTeleportTravel.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockTeleportTravel</a>, <a href="../../../../movement/replay/PhysicalStateAccess.Local.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Local</a>, net.fabricmc.fabric.api.event.lifecycle.v1.EntityLoadData, net.minecraft.client.entity.ClientAvatarEntity, net.minecraft.core.component.DataComponentGetter, net.minecraft.core.TypedInstance&lt;net.minecraft.world.entity.EntityType&lt;?&gt;&gt;, net.minecraft.network.syncher.SyncedDataHolder, net.minecraft.util.debug.DebugValueSource, net.minecraft.world.entity.Attackable, net.minecraft.world.entity.ContainerUser, net.minecraft.world.entity.ItemOwner, net.minecraft.world.entity.SlotProvider, net.minecraft.world.level.entity.EntityAccess, net.minecraft.world.level.entity.UniquelyIdentifyable, net.minecraft.world.Nameable, net.minecraft.world.scores.ScoreHolder, net.minecraft.world.waypoints.Waypoint, net.minecraft.world.waypoints.WaypointTransmitter</code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">MixinLocalPlayer</span>
 <span class="extends-implements">extends net.minecraft.client.player.AbstractClientPlayer
-implements <a href="../../../access/IBedrockPlayerPosture.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockPlayerPosture</a>, <a href="../../../../movement/replay/PhysicalStateAccess.Local.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Local</a></span></div>
+implements <a href="../../../access/IBedrockPlayerPosture.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockPlayerPosture</a>, <a href="../../../access/IBedrockTeleportTravel.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockTeleportTravel</a>, <a href="../../../../movement/replay/PhysicalStateAccess.Local.html" title="interface in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalStateAccess.Local</a></span></div>
 </div>
 </section>
 <section class="summary">
@@ -215,6 +216,9 @@ implements <a href="../../../access/IBedrockPlayerPosture.html" title="interface
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.raphimc.viabedrock.api.model.PlayerPosture</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$posture()" class="member-name-link">viaFabricPlusBedrock$posture</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../movement/BedrockTeleportTravel.html" title="class in com.viaversion.viafabricplus.bedrock.movement">BedrockTeleportTravel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$teleportTravel()" class="member-name-link">viaFabricPlusBedrock$teleportTravel</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -298,6 +302,18 @@ implements <a href="../../../access/IBedrockPlayerPosture.html" title="interface
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="viaFabricPlusBedrock$teleportTravel()">
+<h3>viaFabricPlusBedrock$teleportTravel</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../movement/BedrockTeleportTravel.html" title="class in com.viaversion.viafabricplus.bedrock.movement">BedrockTeleportTravel</a></span>&nbsp;<span class="element-name">viaFabricPlusBedrock$teleportTravel</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../access/IBedrockTeleportTravel.html#viaFabricPlusBedrock$teleportTravel()">viaFabricPlusBedrock$teleportTravel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../access/IBedrockTeleportTravel.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockTeleportTravel</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="viaFabricPlusBedrock$posture()">
 <h3>viaFabricPlusBedrock$posture</h3>
