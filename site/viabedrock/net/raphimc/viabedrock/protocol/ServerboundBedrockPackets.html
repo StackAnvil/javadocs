@@ -141,6 +141,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#UPDATE_CLIENT_OPTIONS" tabindex="0">UPDATE_CLIENT_OPTIONS</a></li>
 <li><a href="#PLAYER_LOCATION" tabindex="0">PLAYER_LOCATION</a></li>
 <li><a href="#STONECUTTER_SET_RECIPE" tabindex="0">STONECUTTER_SET_RECIPE</a></li>
+<li><a href="#CURSOR_ITEM_DRAG" tabindex="0">CURSOR_ITEM_DRAG</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -225,140 +226,142 @@ implements com.viaversion.viaversion.api.protocol.packet.ServerboundPacketType</
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#CREATE_PHOTO" class="member-name-link">CREATE_PHOTO</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#DEBUG_DIAGNOSTICS" class="member-name-link">DEBUG_DIAGNOSTICS</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#CURSOR_ITEM_DRAG" class="member-name-link">CURSOR_ITEM_DRAG</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#DEBUG_INFO" class="member-name-link">DEBUG_INFO</a></code></div>
+<div class="col-first even-row-color"><code><a href="#DEBUG_DIAGNOSTICS" class="member-name-link">DEBUG_DIAGNOSTICS</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#DISCONNECT" class="member-name-link">DISCONNECT</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#DEBUG_INFO" class="member-name-link">DEBUG_INFO</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#EDITOR_NETWORK" class="member-name-link">EDITOR_NETWORK</a></code></div>
+<div class="col-first even-row-color"><code><a href="#DISCONNECT" class="member-name-link">DISCONNECT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#EMOTE" class="member-name-link">EMOTE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#EDITOR_NETWORK" class="member-name-link">EDITOR_NETWORK</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#EMOTE_LIST" class="member-name-link">EMOTE_LIST</a></code></div>
+<div class="col-first even-row-color"><code><a href="#EMOTE" class="member-name-link">EMOTE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ENTITY_EVENT" class="member-name-link">ENTITY_EVENT</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#EMOTE_LIST" class="member-name-link">EMOTE_LIST</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ENTITY_PICK_REQUEST" class="member-name-link">ENTITY_PICK_REQUEST</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ENTITY_EVENT" class="member-name-link">ENTITY_EVENT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#GAME_TEST_REQUEST" class="member-name-link">GAME_TEST_REQUEST</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ENTITY_PICK_REQUEST" class="member-name-link">ENTITY_PICK_REQUEST</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#INTERACT" class="member-name-link">INTERACT</a></code></div>
+<div class="col-first even-row-color"><code><a href="#GAME_TEST_REQUEST" class="member-name-link">GAME_TEST_REQUEST</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#INVENTORY_TRANSACTION" class="member-name-link">INVENTORY_TRANSACTION</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#INTERACT" class="member-name-link">INTERACT</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ITEM_STACK_REQUEST" class="member-name-link">ITEM_STACK_REQUEST</a></code></div>
+<div class="col-first even-row-color"><code><a href="#INVENTORY_TRANSACTION" class="member-name-link">INVENTORY_TRANSACTION</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#LAB_TABLE" class="member-name-link">LAB_TABLE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ITEM_STACK_REQUEST" class="member-name-link">ITEM_STACK_REQUEST</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#LECTERN_UPDATE" class="member-name-link">LECTERN_UPDATE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#LAB_TABLE" class="member-name-link">LAB_TABLE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#LEVEL_SOUND_EVENT" class="member-name-link">LEVEL_SOUND_EVENT</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#LECTERN_UPDATE" class="member-name-link">LECTERN_UPDATE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#LOADING_SCREEN" class="member-name-link">LOADING_SCREEN</a></code></div>
+<div class="col-first even-row-color"><code><a href="#LEVEL_SOUND_EVENT" class="member-name-link">LEVEL_SOUND_EVENT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#LOGIN" class="member-name-link">LOGIN</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#LOADING_SCREEN" class="member-name-link">LOADING_SCREEN</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MAP_CREATE_LOCKED_COPY" class="member-name-link">MAP_CREATE_LOCKED_COPY</a></code></div>
+<div class="col-first even-row-color"><code><a href="#LOGIN" class="member-name-link">LOGIN</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MAP_INFO_REQUEST" class="member-name-link">MAP_INFO_REQUEST</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MAP_CREATE_LOCKED_COPY" class="member-name-link">MAP_CREATE_LOCKED_COPY</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MOB_ARMOR_EQUIPMENT" class="member-name-link">MOB_ARMOR_EQUIPMENT</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MAP_INFO_REQUEST" class="member-name-link">MAP_INFO_REQUEST</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MOB_EQUIPMENT" class="member-name-link">MOB_EQUIPMENT</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MOB_ARMOR_EQUIPMENT" class="member-name-link">MOB_ARMOR_EQUIPMENT</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MODAL_FORM_RESPONSE" class="member-name-link">MODAL_FORM_RESPONSE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MOB_EQUIPMENT" class="member-name-link">MOB_EQUIPMENT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MOVE_ENTITY_ABSOLUTE" class="member-name-link">MOVE_ENTITY_ABSOLUTE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MODAL_FORM_RESPONSE" class="member-name-link">MODAL_FORM_RESPONSE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MOVE_PLAYER" class="member-name-link">MOVE_PLAYER</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MOVE_ENTITY_ABSOLUTE" class="member-name-link">MOVE_ENTITY_ABSOLUTE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MOVEMENT_PREDICTION_SYNC" class="member-name-link">MOVEMENT_PREDICTION_SYNC</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MOVE_PLAYER" class="member-name-link">MOVE_PLAYER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MULTIPLAYER_SETTINGS" class="member-name-link">MULTIPLAYER_SETTINGS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MOVEMENT_PREDICTION_SYNC" class="member-name-link">MOVEMENT_PREDICTION_SYNC</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#NETWORK_STACK_LATENCY" class="member-name-link">NETWORK_STACK_LATENCY</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MULTIPLAYER_SETTINGS" class="member-name-link">MULTIPLAYER_SETTINGS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#NPC_REQUEST" class="member-name-link">NPC_REQUEST</a></code></div>
+<div class="col-first even-row-color"><code><a href="#NETWORK_STACK_LATENCY" class="member-name-link">NETWORK_STACK_LATENCY</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PACKET_VIOLATION_WARNING" class="member-name-link">PACKET_VIOLATION_WARNING</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#NPC_REQUEST" class="member-name-link">NPC_REQUEST</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PHOTO_TRANSFER" class="member-name-link">PHOTO_TRANSFER</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PACKET_VIOLATION_WARNING" class="member-name-link">PACKET_VIOLATION_WARNING</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAYER_ACTION" class="member-name-link">PLAYER_ACTION</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PHOTO_TRANSFER" class="member-name-link">PHOTO_TRANSFER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAYER_AUTH_INPUT" class="member-name-link">PLAYER_AUTH_INPUT</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAYER_ACTION" class="member-name-link">PLAYER_ACTION</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAYER_HOTBAR" class="member-name-link">PLAYER_HOTBAR</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAYER_AUTH_INPUT" class="member-name-link">PLAYER_AUTH_INPUT</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAYER_LOCATION" class="member-name-link">PLAYER_LOCATION</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAYER_HOTBAR" class="member-name-link">PLAYER_HOTBAR</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAYER_SKIN" class="member-name-link">PLAYER_SKIN</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAYER_LOCATION" class="member-name-link">PLAYER_LOCATION</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#POSITION_TRACKING_DB_CLIENT_REQUEST" class="member-name-link">POSITION_TRACKING_DB_CLIENT_REQUEST</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAYER_SKIN" class="member-name-link">PLAYER_SKIN</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PURCHASE_RECEIPT" class="member-name-link">PURCHASE_RECEIPT</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#POSITION_TRACKING_DB_CLIENT_REQUEST" class="member-name-link">POSITION_TRACKING_DB_CLIENT_REQUEST</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#REFRESH_ENTITLEMENTS" class="member-name-link">REFRESH_ENTITLEMENTS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PURCHASE_RECEIPT" class="member-name-link">PURCHASE_RECEIPT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#REQUEST_ABILITY" class="member-name-link">REQUEST_ABILITY</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#REFRESH_ENTITLEMENTS" class="member-name-link">REFRESH_ENTITLEMENTS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#REQUEST_CHUNK_RADIUS" class="member-name-link">REQUEST_CHUNK_RADIUS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#REQUEST_ABILITY" class="member-name-link">REQUEST_ABILITY</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#REQUEST_NETWORK_SETTINGS" class="member-name-link">REQUEST_NETWORK_SETTINGS</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#REQUEST_CHUNK_RADIUS" class="member-name-link">REQUEST_CHUNK_RADIUS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#REQUEST_PERMISSIONS" class="member-name-link">REQUEST_PERMISSIONS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#REQUEST_NETWORK_SETTINGS" class="member-name-link">REQUEST_NETWORK_SETTINGS</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#RESOURCE_PACK_CHUNK_REQUEST" class="member-name-link">RESOURCE_PACK_CHUNK_REQUEST</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#REQUEST_PERMISSIONS" class="member-name-link">REQUEST_PERMISSIONS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RESOURCE_PACK_CLIENT_RESPONSE" class="member-name-link">RESOURCE_PACK_CLIENT_RESPONSE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#RESOURCE_PACK_CHUNK_REQUEST" class="member-name-link">RESOURCE_PACK_CHUNK_REQUEST</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#RESPAWN" class="member-name-link">RESPAWN</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RESOURCE_PACK_CLIENT_RESPONSE" class="member-name-link">RESOURCE_PACK_CLIENT_RESPONSE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SCRIPT_MESSAGE" class="member-name-link">SCRIPT_MESSAGE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#RESPAWN" class="member-name-link">RESPAWN</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SERVER_SETTINGS_REQUEST" class="member-name-link">SERVER_SETTINGS_REQUEST</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SCRIPT_MESSAGE" class="member-name-link">SCRIPT_MESSAGE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_DEFAULT_GAME_TYPE" class="member-name-link">SET_DEFAULT_GAME_TYPE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SERVER_SETTINGS_REQUEST" class="member-name-link">SERVER_SETTINGS_REQUEST</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_DIFFICULTY" class="member-name-link">SET_DIFFICULTY</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_DEFAULT_GAME_TYPE" class="member-name-link">SET_DEFAULT_GAME_TYPE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_ENTITY_DATA" class="member-name-link">SET_ENTITY_DATA</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SET_DIFFICULTY" class="member-name-link">SET_DIFFICULTY</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_ENTITY_LINK" class="member-name-link">SET_ENTITY_LINK</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_ENTITY_DATA" class="member-name-link">SET_ENTITY_DATA</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_ENTITY_MOTION" class="member-name-link">SET_ENTITY_MOTION</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SET_ENTITY_LINK" class="member-name-link">SET_ENTITY_LINK</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_LOCAL_PLAYER_AS_INITIALIZED" class="member-name-link">SET_LOCAL_PLAYER_AS_INITIALIZED</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_ENTITY_MOTION" class="member-name-link">SET_ENTITY_MOTION</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_PLAYER_FURNACE_OPTIONS" class="member-name-link">SET_PLAYER_FURNACE_OPTIONS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SET_LOCAL_PLAYER_AS_INITIALIZED" class="member-name-link">SET_LOCAL_PLAYER_AS_INITIALIZED</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_PLAYER_GAME_TYPE" class="member-name-link">SET_PLAYER_GAME_TYPE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_PLAYER_FURNACE_OPTIONS" class="member-name-link">SET_PLAYER_FURNACE_OPTIONS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_PLAYER_INVENTORY_OPTIONS" class="member-name-link">SET_PLAYER_INVENTORY_OPTIONS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SET_PLAYER_GAME_TYPE" class="member-name-link">SET_PLAYER_GAME_TYPE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SETTINGS_COMMAND" class="member-name-link">SETTINGS_COMMAND</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_PLAYER_INVENTORY_OPTIONS" class="member-name-link">SET_PLAYER_INVENTORY_OPTIONS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SHOW_CREDITS" class="member-name-link">SHOW_CREDITS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SETTINGS_COMMAND" class="member-name-link">SETTINGS_COMMAND</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SIMPLE_EVENT" class="member-name-link">SIMPLE_EVENT</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SHOW_CREDITS" class="member-name-link">SHOW_CREDITS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#STONECUTTER_SET_RECIPE" class="member-name-link">STONECUTTER_SET_RECIPE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SIMPLE_EVENT" class="member-name-link">SIMPLE_EVENT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#STRUCTURE_BLOCK_UPDATE" class="member-name-link">STRUCTURE_BLOCK_UPDATE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#STONECUTTER_SET_RECIPE" class="member-name-link">STONECUTTER_SET_RECIPE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#STRUCTURE_TEMPLATE_DATA_REQUEST" class="member-name-link">STRUCTURE_TEMPLATE_DATA_REQUEST</a></code></div>
+<div class="col-first even-row-color"><code><a href="#STRUCTURE_BLOCK_UPDATE" class="member-name-link">STRUCTURE_BLOCK_UPDATE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SUB_CHUNK_REQUEST" class="member-name-link">SUB_CHUNK_REQUEST</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#STRUCTURE_TEMPLATE_DATA_REQUEST" class="member-name-link">STRUCTURE_TEMPLATE_DATA_REQUEST</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SUB_CLIENT_LOGIN" class="member-name-link">SUB_CLIENT_LOGIN</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SUB_CHUNK_REQUEST" class="member-name-link">SUB_CHUNK_REQUEST</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#TEXT" class="member-name-link">TEXT</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SUB_CLIENT_LOGIN" class="member-name-link">SUB_CLIENT_LOGIN</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#TOGGLE_CRAFTER_SLOT_REQUEST" class="member-name-link">TOGGLE_CRAFTER_SLOT_REQUEST</a></code></div>
+<div class="col-first even-row-color"><code><a href="#TEXT" class="member-name-link">TEXT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#UPDATE_CLIENT_OPTIONS" class="member-name-link">UPDATE_CLIENT_OPTIONS</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#TOGGLE_CRAFTER_SLOT_REQUEST" class="member-name-link">TOGGLE_CRAFTER_SLOT_REQUEST</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#UPDATE_CLIENT_OPTIONS" class="member-name-link">UPDATE_CLIENT_OPTIONS</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -1072,6 +1075,14 @@ the order they are declared.</div>
 <h3>STONECUTTER_SET_RECIPE</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ServerboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ServerboundBedrockPackets</a></span>&nbsp;<span class="element-name">STONECUTTER_SET_RECIPE</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="CURSOR_ITEM_DRAG">
+<h3>CURSOR_ITEM_DRAG</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ServerboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ServerboundBedrockPackets</a></span>&nbsp;<span class="element-name">CURSOR_ITEM_DRAG</span></div>
 </div>
 </section>
 </li>

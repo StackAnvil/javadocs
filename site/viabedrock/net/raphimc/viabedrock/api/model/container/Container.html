@@ -78,6 +78,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#handleClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" tabindex="0">handleClick(int, short, byte, ContainerInput)</a></li>
+<li><a href="#cancelQuickCraft()" tabindex="0">cancelQuickCraft()</a></li>
 <li><a href="#dropItem(net.raphimc.viabedrock.api.model.container.Container,int,int)" tabindex="0">dropItem(Container, int, int)</a></li>
 <li><a href="#quickMoveRanges(short,net.raphimc.viabedrock.api.model.container.Container.SlotRef)" tabindex="0">quickMoveRanges(short, Container.SlotRef)</a></li>
 <li><a href="#itemAfterRemovingAmount(net.raphimc.viabedrock.protocol.model.BedrockItem,int)" tabindex="0">itemAfterRemovingAmount(BedrockItem, int)</a></li>
@@ -249,159 +250,162 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Container.BlockBinding.html" title="enum class in net.raphimc.viabedrock.api.model.container">Container.BlockBinding</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockBinding()" class="member-name-link">blockBinding</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canDiscardItem(int,int)" class="member-name-link">canDiscardItem</a><wbr>(int&nbsp;slot,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cancelQuickCraft()" class="member-name-link">cancelQuickCraft</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canDiscardItem(int,int)" class="member-name-link">canDiscardItem</a><wbr>(int&nbsp;slot,
  int&nbsp;amount)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Native Drop, Destroy and explicit Consume admission, after transfer-source permission.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canPlaceItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem,int)" class="member-name-link">canPlaceItem</a><wbr>(int&nbsp;slot,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canPlaceItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem,int)" class="member-name-link">canPlaceItem</a><wbr>(int&nbsp;slot,
  <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item,
  int&nbsp;amount)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canTakeItem(int,int)" class="member-name-link">canTakeItem</a><wbr>(int&nbsp;slot,
- int&nbsp;amount)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearItems()" class="member-name-link">clearItems</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>byte</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containerId()" class="member-name-link">containerId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copy()" class="member-name-link">copy</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../../protocol/model/inventory/ItemStackRequestAction.html" title="interface in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dropItem(net.raphimc.viabedrock.api.model.container.Container,int,int)" class="member-name-link">dropItem</a><wbr>(<a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
- int&nbsp;bedrockSlot,
- int&nbsp;amountToDrop)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getData()" class="member-name-link">getData</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getData(int)" class="member-name-link">getData</a><wbr>(int&nbsp;id)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFullContainerName(int)" class="member-name-link">getFullContainerName</a><wbr>(int&nbsp;slot)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItem(int)" class="member-name-link">getItem</a><wbr>(int&nbsp;slot)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItem(int)" class="member-name-link">getJavaItem</a><wbr>(int&nbsp;slot)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item[]</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItems()" class="member-name-link">getJavaItems</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleButtonClick(int)" class="member-name-link">handleButtonClick</a><wbr>(int&nbsp;button)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">handleClick</a><wbr>(int&nbsp;revision,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canTakeItem(int,int)" class="member-name-link">canTakeItem</a><wbr>(int&nbsp;slot,
+ int&nbsp;amount)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearItems()" class="member-name-link">clearItems</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>byte</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containerId()" class="member-name-link">containerId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copy()" class="member-name-link">copy</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../../protocol/model/inventory/ItemStackRequestAction.html" title="interface in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestAction</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dropItem(net.raphimc.viabedrock.api.model.container.Container,int,int)" class="member-name-link">dropItem</a><wbr>(<a href="Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+ int&nbsp;bedrockSlot,
+ int&nbsp;amountToDrop)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getData()" class="member-name-link">getData</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getData(int)" class="member-name-link">getData</a><wbr>(int&nbsp;id)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFullContainerName(int)" class="member-name-link">getFullContainerName</a><wbr>(int&nbsp;slot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItem(int)" class="member-name-link">getItem</a><wbr>(int&nbsp;slot)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItem(int)" class="member-name-link">getJavaItem</a><wbr>(int&nbsp;slot)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItems()" class="member-name-link">getJavaItems</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleButtonClick(int)" class="member-name-link">handleButtonClick</a><wbr>(int&nbsp;button)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">handleClick</a><wbr>(int&nbsp;revision,
  short&nbsp;javaSlot,
  byte&nbsp;button,
  <a href="../../../protocol/data/enums/java/generated/ContainerInput.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">ContainerInput</a>&nbsp;action)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBlockBound()" class="member-name-link">isBlockBound</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBlockBound()" class="member-name-link">isBlockBound</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValidBlockTag(java.lang.String)" class="member-name-link">isValidBlockTag</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValidBlockTag(java.lang.String)" class="member-name-link">isValidBlockTag</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;tag)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemAfterRemovingAmount(net.raphimc.viabedrock.protocol.model.BedrockItem,int)" class="member-name-link">itemAfterRemovingAmount</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemAfterRemovingAmount(net.raphimc.viabedrock.protocol.model.BedrockItem,int)" class="member-name-link">itemAfterRemovingAmount</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item,
  int&nbsp;amountToRemove)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemIndex(int)" class="member-name-link">itemIndex</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemsInJavaOrder(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" class="member-name-link">itemsInJavaOrder</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;items)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemIndex(int)" class="member-name-link">itemIndex</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>byte</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaContainerId()" class="member-name-link">javaContainerId</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemsInJavaOrder(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" class="member-name-link">itemsInJavaOrder</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;items)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaSize()" class="member-name-link">javaSize</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>byte</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaContainerId()" class="member-name-link">javaContainerId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaSlot(int)" class="member-name-link">javaSlot</a><wbr>(int&nbsp;slot)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markServerUpdate()" class="member-name-link">markServerUpdate</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#maxStackSize(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">maxStackSize</a><wbr>(int&nbsp;slot,
- <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onSlotChanged(int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">onSlotChanged</a><wbr>(int&nbsp;slot,
- <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;oldItem,
- <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;newItem)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ownsBedrockSlot(net.raphimc.viabedrock.protocol.model.FullContainerName,int)" class="member-name-link">ownsBedrockSlot</a><wbr>(<a href="../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a>&nbsp;name,
- int&nbsp;slot)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.BlockPosition</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#position()" class="member-name-link">position</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Container.QuickMoveRange.html" title="class in net.raphimc.viabedrock.api.model.container">Container.QuickMoveRange</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quickMoveRanges(short,net.raphimc.viabedrock.api.model.container.Container.SlotRef)" class="member-name-link">quickMoveRanges</a><wbr>(short&nbsp;javaSlot,
- <a href="Container.SlotRef.html" title="class in net.raphimc.viabedrock.api.model.container">Container.SlotRef</a>&nbsp;source)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaSize()" class="member-name-link">javaSize</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestSlot(int)" class="member-name-link">requestSlot</a><wbr>(int&nbsp;slot)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/inventory/ItemStackRequestSlotInfo.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestSlotInfo</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestSlotInfo(int,int)" class="member-name-link">requestSlotInfo</a><wbr>(int&nbsp;slot,
- int&nbsp;stackNetworkId)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveBlockBinding()" class="member-name-link">resolveBlockBinding</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaSlot(int)" class="member-name-link">javaSlot</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectBundleItem(short,int)" class="member-name-link">selectBundleItem</a><wbr>(short&nbsp;javaSlot,
- int&nbsp;selectedItem)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markServerUpdate()" class="member-name-link">markServerUpdate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverDataRevision()" class="member-name-link">serverDataRevision</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverRevision()" class="member-name-link">serverRevision</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setData(int,int)" class="member-name-link">setData</a><wbr>(int&nbsp;id,
- int&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">setItem</a><wbr>(int&nbsp;slot,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#maxStackSize(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">maxStackSize</a><wbr>(int&nbsp;slot,
  <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onSlotChanged(int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">onSlotChanged</a><wbr>(int&nbsp;slot,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;oldItem,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;newItem)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItems(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" class="member-name-link">setItems</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;items)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ownsBedrockSlot(net.raphimc.viabedrock.protocol.model.FullContainerName,int)" class="member-name-link">ownsBedrockSlot</a><wbr>(<a href="../../../protocol/model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a>&nbsp;name,
+ int&nbsp;slot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.BlockPosition</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#position()" class="member-name-link">position</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Container.QuickMoveRange.html" title="class in net.raphimc.viabedrock.api.model.container">Container.QuickMoveRange</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quickMoveRanges(short,net.raphimc.viabedrock.api.model.container.Container.SlotRef)" class="member-name-link">quickMoveRanges</a><wbr>(short&nbsp;javaSlot,
+ <a href="Container.SlotRef.html" title="class in net.raphimc.viabedrock.api.model.container">Container.SlotRef</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#size()" class="member-name-link">size</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestSlot(int)" class="member-name-link">requestSlot</a><wbr>(int&nbsp;slot)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/inventory/ItemStackRequestSlotInfo.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestSlotInfo</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestSlotInfo(int,int)" class="member-name-link">requestSlotInfo</a><wbr>(int&nbsp;slot,
+ int&nbsp;stackNetworkId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveBlockBinding()" class="member-name-link">resolveBlockBinding</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectBundleItem(short,int)" class="member-name-link">selectBundleItem</a><wbr>(short&nbsp;javaSlot,
+ int&nbsp;selectedItem)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverDataRevision()" class="member-name-link">serverDataRevision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#serverRevision()" class="member-name-link">serverRevision</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setData(int,int)" class="member-name-link">setData</a><wbr>(int&nbsp;id,
+ int&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">setItem</a><wbr>(int&nbsp;slot,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;item)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItems(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" class="member-name-link">setItems</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;items)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slotFromRequest(int)" class="member-name-link">slotFromRequest</a><wbr>(int&nbsp;slot)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#size()" class="member-name-link">size</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#title()" class="member-name-link">title</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slotFromRequest(int)" class="member-name-link">slotFromRequest</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateContainerData(int)" class="member-name-link">translateContainerData</a><wbr>(int&nbsp;containerData)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#title()" class="member-name-link">title</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateContainerData(int)" class="member-name-link">translateContainerData</a><wbr>(int&nbsp;containerData)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -527,6 +531,14 @@ loadScripts(document, 'script');</script>
  short&nbsp;javaSlot,
  byte&nbsp;button,
  <a href="../../../protocol/data/enums/java/generated/ContainerInput.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">ContainerInput</a>&nbsp;action)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="cancelQuickCraft()">
+<h3>cancelQuickCraft</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">cancelQuickCraft</span>()</div>
 </div>
 </section>
 </li>

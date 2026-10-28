@@ -228,6 +228,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#SET_PLAYER_FURNACE_OPTIONS" tabindex="0">SET_PLAYER_FURNACE_OPTIONS</a></li>
 <li><a href="#RECORD_STARTED" tabindex="0">RECORD_STARTED</a></li>
 <li><a href="#STONECUTTER_SET_RECIPE" tabindex="0">STONECUTTER_SET_RECIPE</a></li>
+<li><a href="#SET_PASSENGER_OF_BLOCK" tabindex="0">SET_PASSENGER_OF_BLOCK</a></li>
+<li><a href="#PLAY_AUDIO_CONTENT" tabindex="0">PLAY_AUDIO_CONTENT</a></li>
 <li><a href="#UPDATE_SOUND_DATA" tabindex="0">UPDATE_SOUND_DATA</a></li>
 <li><a href="#CAMERA_AIM_ASSIST_ACTOR_PRIORITY" tabindex="0">CAMERA_AIM_ASSIST_ACTOR_PRIORITY</a></li>
 <li><a href="#CONTROL_SCHEME_SET" tabindex="0">CONTROL_SCHEME_SET</a></li>
@@ -469,81 +471,85 @@ implements com.viaversion.viaversion.api.protocol.packet.ClientboundPacketType</
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code><a href="#PHOTO_TRANSFER" class="member-name-link">PHOTO_TRANSFER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAY_SOUND" class="member-name-link">PLAY_SOUND</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAY_AUDIO_CONTENT" class="member-name-link">PLAY_AUDIO_CONTENT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAY_STATUS" class="member-name-link">PLAY_STATUS</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAY_SOUND" class="member-name-link">PLAY_SOUND</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAYER_ACTION" class="member-name-link">PLAYER_ACTION</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAY_STATUS" class="member-name-link">PLAY_STATUS</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAYER_ARMOR_DAMAGE" class="member-name-link">PLAYER_ARMOR_DAMAGE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAYER_ACTION" class="member-name-link">PLAYER_ACTION</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAYER_ENCHANT_OPTIONS" class="member-name-link">PLAYER_ENCHANT_OPTIONS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAYER_ARMOR_DAMAGE" class="member-name-link">PLAYER_ARMOR_DAMAGE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAYER_FOG" class="member-name-link">PLAYER_FOG</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAYER_ENCHANT_OPTIONS" class="member-name-link">PLAYER_ENCHANT_OPTIONS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAYER_HOTBAR" class="member-name-link">PLAYER_HOTBAR</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAYER_FOG" class="member-name-link">PLAYER_FOG</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAYER_LIST" class="member-name-link">PLAYER_LIST</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAYER_HOTBAR" class="member-name-link">PLAYER_HOTBAR</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAYER_LOCATION" class="member-name-link">PLAYER_LOCATION</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAYER_LIST" class="member-name-link">PLAYER_LIST</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAYER_SKIN" class="member-name-link">PLAYER_SKIN</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAYER_LOCATION" class="member-name-link">PLAYER_LOCATION</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAYER_START_ITEM_COOLDOWN" class="member-name-link">PLAYER_START_ITEM_COOLDOWN</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAYER_SKIN" class="member-name-link">PLAYER_SKIN</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PLAYER_UPDATE_ENTITY_OVERRIDES" class="member-name-link">PLAYER_UPDATE_ENTITY_OVERRIDES</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAYER_START_ITEM_COOLDOWN" class="member-name-link">PLAYER_START_ITEM_COOLDOWN</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PLAYER_VIDEO_CAPTURE" class="member-name-link">PLAYER_VIDEO_CAPTURE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PLAYER_UPDATE_ENTITY_OVERRIDES" class="member-name-link">PLAYER_UPDATE_ENTITY_OVERRIDES</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#POSITION_TRACKING_DB_SERVER_BROADCAST" class="member-name-link">POSITION_TRACKING_DB_SERVER_BROADCAST</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PLAYER_VIDEO_CAPTURE" class="member-name-link">PLAYER_VIDEO_CAPTURE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RECORD_STARTED" class="member-name-link">RECORD_STARTED</a></code></div>
+<div class="col-first even-row-color"><code><a href="#POSITION_TRACKING_DB_SERVER_BROADCAST" class="member-name-link">POSITION_TRACKING_DB_SERVER_BROADCAST</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#REMOVE_ENTITY" class="member-name-link">REMOVE_ENTITY</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RECORD_STARTED" class="member-name-link">RECORD_STARTED</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#REMOVE_OBJECTIVE" class="member-name-link">REMOVE_OBJECTIVE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#REMOVE_ENTITY" class="member-name-link">REMOVE_ENTITY</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#REMOVE_VOLUME_ENTITY" class="member-name-link">REMOVE_VOLUME_ENTITY</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#REMOVE_OBJECTIVE" class="member-name-link">REMOVE_OBJECTIVE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RESOURCE_PACK_CHUNK_DATA" class="member-name-link">RESOURCE_PACK_CHUNK_DATA</a></code></div>
+<div class="col-first even-row-color"><code><a href="#REMOVE_VOLUME_ENTITY" class="member-name-link">REMOVE_VOLUME_ENTITY</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#RESOURCE_PACK_DATA_INFO" class="member-name-link">RESOURCE_PACK_DATA_INFO</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RESOURCE_PACK_CHUNK_DATA" class="member-name-link">RESOURCE_PACK_CHUNK_DATA</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RESOURCE_PACK_STACK" class="member-name-link">RESOURCE_PACK_STACK</a></code></div>
+<div class="col-first even-row-color"><code><a href="#RESOURCE_PACK_DATA_INFO" class="member-name-link">RESOURCE_PACK_DATA_INFO</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#RESOURCE_PACKS_INFO" class="member-name-link">RESOURCE_PACKS_INFO</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RESOURCE_PACK_STACK" class="member-name-link">RESOURCE_PACK_STACK</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RESPAWN" class="member-name-link">RESPAWN</a></code></div>
+<div class="col-first even-row-color"><code><a href="#RESOURCE_PACKS_INFO" class="member-name-link">RESOURCE_PACKS_INFO</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SCRIPT_MESSAGE" class="member-name-link">SCRIPT_MESSAGE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RESPAWN" class="member-name-link">RESPAWN</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SERVER_PLAYER_POST_MOVE_POSITION" class="member-name-link">SERVER_PLAYER_POST_MOVE_POSITION</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SCRIPT_MESSAGE" class="member-name-link">SCRIPT_MESSAGE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SERVER_SETTINGS_RESPONSE" class="member-name-link">SERVER_SETTINGS_RESPONSE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SERVER_PLAYER_POST_MOVE_POSITION" class="member-name-link">SERVER_PLAYER_POST_MOVE_POSITION</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SERVER_STATS" class="member-name-link">SERVER_STATS</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SERVER_SETTINGS_RESPONSE" class="member-name-link">SERVER_SETTINGS_RESPONSE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SERVER_TO_CLIENT_HANDSHAKE" class="member-name-link">SERVER_TO_CLIENT_HANDSHAKE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SERVER_STATS" class="member-name-link">SERVER_STATS</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_COMMANDS_ENABLED" class="member-name-link">SET_COMMANDS_ENABLED</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SERVER_TO_CLIENT_HANDSHAKE" class="member-name-link">SERVER_TO_CLIENT_HANDSHAKE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_DEFAULT_GAME_TYPE" class="member-name-link">SET_DEFAULT_GAME_TYPE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_COMMANDS_ENABLED" class="member-name-link">SET_COMMANDS_ENABLED</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_DIFFICULTY" class="member-name-link">SET_DIFFICULTY</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SET_DEFAULT_GAME_TYPE" class="member-name-link">SET_DEFAULT_GAME_TYPE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_DISPLAY_OBJECTIVE" class="member-name-link">SET_DISPLAY_OBJECTIVE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_DIFFICULTY" class="member-name-link">SET_DIFFICULTY</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_ENTITY_DATA" class="member-name-link">SET_ENTITY_DATA</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SET_DISPLAY_OBJECTIVE" class="member-name-link">SET_DISPLAY_OBJECTIVE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_ENTITY_LINK" class="member-name-link">SET_ENTITY_LINK</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_ENTITY_DATA" class="member-name-link">SET_ENTITY_DATA</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_ENTITY_MOTION" class="member-name-link">SET_ENTITY_MOTION</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SET_ENTITY_LINK" class="member-name-link">SET_ENTITY_LINK</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_HEALTH" class="member-name-link">SET_HEALTH</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_ENTITY_MOTION" class="member-name-link">SET_ENTITY_MOTION</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SET_HUD" class="member-name-link">SET_HUD</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SET_HEALTH" class="member-name-link">SET_HEALTH</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SET_LAST_HURT_BY" class="member-name-link">SET_LAST_HURT_BY</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SET_HUD" class="member-name-link">SET_HUD</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#SET_LAST_HURT_BY" class="member-name-link">SET_LAST_HURT_BY</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#SET_PASSENGER_OF_BLOCK" class="member-name-link">SET_PASSENGER_OF_BLOCK</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#SET_PLAYER_FURNACE_OPTIONS" class="member-name-link">SET_PLAYER_FURNACE_OPTIONS</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -2038,6 +2044,22 @@ the order they are declared.</div>
 <h3>STONECUTTER_SET_RECIPE</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ClientboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ClientboundBedrockPackets</a></span>&nbsp;<span class="element-name">STONECUTTER_SET_RECIPE</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="SET_PASSENGER_OF_BLOCK">
+<h3>SET_PASSENGER_OF_BLOCK</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ClientboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ClientboundBedrockPackets</a></span>&nbsp;<span class="element-name">SET_PASSENGER_OF_BLOCK</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="PLAY_AUDIO_CONTENT">
+<h3>PLAY_AUDIO_CONTENT</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ClientboundBedrockPackets.html" title="enum class in net.raphimc.viabedrock.protocol">ClientboundBedrockPackets</a></span>&nbsp;<span class="element-name">PLAY_AUDIO_CONTENT</span></div>
 </div>
 </section>
 </li>

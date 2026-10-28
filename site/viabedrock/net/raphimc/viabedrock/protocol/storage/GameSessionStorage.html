@@ -69,7 +69,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#getBedrockBiomeDefinitions()" tabindex="0">getBedrockBiomeDefinitions()</a></li>
 <li><a href="#setBedrockBiomeDefinitions(com.viaversion.nbt.tag.CompoundTag)" tabindex="0">setBedrockBiomeDefinitions(CompoundTag)</a></li>
 <li><a href="#getBedrockDimensionDefinitions()" tabindex="0">getBedrockDimensionDefinitions()</a></li>
-<li><a href="#putBedrockDimensionDefinition(java.lang.String,com.viaversion.viaversion.libs.fastutil.ints.IntIntPair)" tabindex="0">putBedrockDimensionDefinition(String, IntIntPair)</a></li>
+<li><a href="#putBedrockDimensionDefinition(java.lang.String,net.raphimc.viabedrock.protocol.model.DimensionDefinition)" tabindex="0">putBedrockDimensionDefinition(String, DimensionDefinition)</a></li>
 <li><a href="#getAvailableEntityIdentifiers()" tabindex="0">getAvailableEntityIdentifiers()</a></li>
 <li><a href="#addEntityIdentifier(java.lang.String)" tabindex="0">addEntityIdentifier(String)</a></li>
 <li><a href="#getBedrockBaseGameVersion()" tabindex="0">getBedrockBaseGameVersion()</a></li>
@@ -166,7 +166,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.nbt.tag.CompoundTag</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockBiomeDefinitions()" class="member-name-link">getBedrockBiomeDefinitions</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&gt;</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="../model/DimensionDefinition.html" title="class in net.raphimc.viabedrock.protocol.model">DimensionDefinition</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBedrockDimensionDefinitions()" class="member-name-link">getBedrockDimensionDefinitions</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.vdurmont.semver4j.Semver</code></div>
@@ -212,8 +212,8 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isItemRegistryReceived()" class="member-name-link">isItemRegistryReceived</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putBedrockDimensionDefinition(java.lang.String,com.viaversion.viaversion.libs.fastutil.ints.IntIntPair)" class="member-name-link">putBedrockDimensionDefinition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;dimensionIdentifier,
- com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&nbsp;dimensionDefinition)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putBedrockDimensionDefinition(java.lang.String,net.raphimc.viabedrock.protocol.model.DimensionDefinition)" class="member-name-link">putBedrockDimensionDefinition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;dimensionIdentifier,
+ <a href="../model/DimensionDefinition.html" title="class in net.raphimc.viabedrock.protocol.model">DimensionDefinition</a>&nbsp;dimensionDefinition)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBedrockBaseGameVersion(net.raphimc.viabedrock.protocol.model.BaseGameVersion)" class="member-name-link">setBedrockBaseGameVersion</a><wbr>(<a href="../model/BaseGameVersion.html" title="class in net.raphimc.viabedrock.protocol.model">BaseGameVersion</a>&nbsp;bedrockBaseGameVersion)</code></div>
@@ -346,16 +346,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getBedrockDimensionDefinitions()">
 <h3>getBedrockDimensionDefinitions</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&gt;</span>&nbsp;<span class="element-name">getBedrockDimensionDefinitions</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="../model/DimensionDefinition.html" title="class in net.raphimc.viabedrock.protocol.model">DimensionDefinition</a>&gt;</span>&nbsp;<span class="element-name">getBedrockDimensionDefinitions</span>()</div>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="putBedrockDimensionDefinition(java.lang.String,com.viaversion.viaversion.libs.fastutil.ints.IntIntPair)">
+<section class="detail" id="putBedrockDimensionDefinition(java.lang.String,net.raphimc.viabedrock.protocol.model.DimensionDefinition)">
 <h3>putBedrockDimensionDefinition</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">putBedrockDimensionDefinition</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;dimensionIdentifier,
- com.viaversion.viaversion.libs.fastutil.ints.IntIntPair&nbsp;dimensionDefinition)</span></div>
+ <a href="../model/DimensionDefinition.html" title="class in net.raphimc.viabedrock.protocol.model">DimensionDefinition</a>&nbsp;dimensionDefinition)</span></div>
 </div>
 </section>
 </li>

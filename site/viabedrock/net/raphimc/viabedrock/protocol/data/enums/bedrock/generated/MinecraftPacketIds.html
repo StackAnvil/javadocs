@@ -188,6 +188,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#SettingsCommandPacket" tabindex="0">SettingsCommandPacket</a></li>
 <li><a href="#AnvilDamage" tabindex="0">AnvilDamage</a></li>
 <li><a href="#CompletedUsingItem" tabindex="0">CompletedUsingItem</a></li>
+<li><a href="#ServerboundCursorItemDrag" tabindex="0">ServerboundCursorItemDrag</a></li>
 <li><a href="#NetworkSettings" tabindex="0">NetworkSettings</a></li>
 <li><a href="#PlayerAuthInputPacket" tabindex="0">PlayerAuthInputPacket</a></li>
 <li><a href="#CreativeContent" tabindex="0">CreativeContent</a></li>
@@ -269,19 +270,38 @@ loadScripts(document, 'script');</script>
 <li><a href="#PlayerVideoCapturePacket" tabindex="0">PlayerVideoCapturePacket</a></li>
 <li><a href="#PlayerUpdateEntityOverridesPacket" tabindex="0">PlayerUpdateEntityOverridesPacket</a></li>
 <li><a href="#PlayerLocation" tabindex="0">PlayerLocation</a></li>
-<li><a href="#VoxelShapesPacket" tabindex="0">VoxelShapesPacket</a></li>
-<li><a href="#CameraSplinePacket" tabindex="0">CameraSplinePacket</a></li>
-<li><a href="#LocatorBarPacket" tabindex="0">LocatorBarPacket</a></li>
 <li><a href="#SyncWorldClocks" tabindex="0">SyncWorldClocks</a></li>
 <li><a href="#SendPartyDestinationCookie" tabindex="0">SendPartyDestinationCookie</a></li>
 <li><a href="#PartyDestinationCookieResponse" tabindex="0">PartyDestinationCookieResponse</a></li>
 <li><a href="#SetPlayerFurnaceOptions" tabindex="0">SetPlayerFurnaceOptions</a></li>
 <li><a href="#RecordStarted" tabindex="0">RecordStarted</a></li>
 <li><a href="#ClientboundMatchmakingState" tabindex="0">ClientboundMatchmakingState</a></li>
-<li><a href="#ServerboundStonecutterSetRecipePacket" tabindex="0">ServerboundStonecutterSetRecipePacket</a></li>
-<li><a href="#ClientboundUpdateSoundDataPacket" tabindex="0">ClientboundUpdateSoundDataPacket</a></li>
-<li><a href="#ClientboundStonecutterSetRecipePacket" tabindex="0">ClientboundStonecutterSetRecipePacket</a></li>
 <li><a href="#ServerboundMatchmakingCancel" tabindex="0">ServerboundMatchmakingCancel</a></li>
+<li><a href="#ClientboundPlayAudioContent" tabindex="0">ClientboundPlayAudioContent</a></li>
+<li><a href="#ServerboundRegisterAudioContent" tabindex="0">ServerboundRegisterAudioContent</a></li>
+<li><a href="#ClientboundControlSchemeSetPacket" tabindex="0">ClientboundControlSchemeSetPacket</a></li>
+<li><a href="#PrimitiveShapesPacket" tabindex="0">PrimitiveShapesPacket</a></li>
+<li><a href="#ServerboundPackSettingChangePacket" tabindex="0">ServerboundPackSettingChangePacket</a></li>
+<li><a href="#ClientboundDataStorePacket" tabindex="0">ClientboundDataStorePacket</a></li>
+<li><a href="#GraphicsOverrideParameterPacket" tabindex="0">GraphicsOverrideParameterPacket</a></li>
+<li><a href="#ServerboundDataStorePacket" tabindex="0">ServerboundDataStorePacket</a></li>
+<li><a href="#ClientboundDataDrivenUIShowScreenPacket" tabindex="0">ClientboundDataDrivenUIShowScreenPacket</a></li>
+<li><a href="#ClientboundDataDrivenUICloseScreenPacket" tabindex="0">ClientboundDataDrivenUICloseScreenPacket</a></li>
+<li><a href="#ClientboundDataDrivenUIReloadPacket" tabindex="0">ClientboundDataDrivenUIReloadPacket</a></li>
+<li><a href="#ClientboundTextureShiftPacket" tabindex="0">ClientboundTextureShiftPacket</a></li>
+<li><a href="#VoxelShapesPacket" tabindex="0">VoxelShapesPacket</a></li>
+<li><a href="#CameraSplinePacket" tabindex="0">CameraSplinePacket</a></li>
+<li><a href="#ResourcePacksReadyForValidationPacket" tabindex="0">ResourcePacksReadyForValidationPacket</a></li>
+<li><a href="#LocatorBarPacket" tabindex="0">LocatorBarPacket</a></li>
+<li><a href="#PartyChangedPacket" tabindex="0">PartyChangedPacket</a></li>
+<li><a href="#ServerboundDataDrivenScreenClosedPacket" tabindex="0">ServerboundDataDrivenScreenClosedPacket</a></li>
+<li><a href="#ClientboundAttributeLayerSyncPacket" tabindex="0">ClientboundAttributeLayerSyncPacket</a></li>
+<li><a href="#ServerStoreInfoPacket" tabindex="0">ServerStoreInfoPacket</a></li>
+<li><a href="#ServerPresenceInfoPacket" tabindex="0">ServerPresenceInfoPacket</a></li>
+<li><a href="#ClientboundUpdateSoundDataPacket" tabindex="0">ClientboundUpdateSoundDataPacket</a></li>
+<li><a href="#ServerboundStonecutterSetRecipePacket" tabindex="0">ServerboundStonecutterSetRecipePacket</a></li>
+<li><a href="#ClientboundStonecutterSetRecipePacket" tabindex="0">ClientboundStonecutterSetRecipePacket</a></li>
+<li><a href="#SetPassengerOfBlockPacket" tabindex="0">SetPassengerOfBlockPacket</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -401,13 +421,29 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code><a href="#ChunkRadiusUpdated" class="member-name-link">ChunkRadiusUpdated</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ClientboundCloseScreen" class="member-name-link">ClientboundCloseScreen</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ClientboundAttributeLayerSyncPacket" class="member-name-link">ClientboundAttributeLayerSyncPacket</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ClientboundCloseScreen" class="member-name-link">ClientboundCloseScreen</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#ClientboundControlSchemeSetPacket" class="member-name-link">ClientboundControlSchemeSetPacket</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ClientboundDataDrivenUICloseScreenPacket" class="member-name-link">ClientboundDataDrivenUICloseScreenPacket</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#ClientboundDataDrivenUIReloadPacket" class="member-name-link">ClientboundDataDrivenUIReloadPacket</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ClientboundDataDrivenUIShowScreenPacket" class="member-name-link">ClientboundDataDrivenUIShowScreenPacket</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#ClientboundDataStorePacket" class="member-name-link">ClientboundDataStorePacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code><a href="#ClientBoundDebugRendererPacket" class="member-name-link">ClientBoundDebugRendererPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#ClientboundMatchmakingState" class="member-name-link">ClientboundMatchmakingState</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ClientboundStonecutterSetRecipePacket" class="member-name-link">ClientboundStonecutterSetRecipePacket</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ClientboundPlayAudioContent" class="member-name-link">ClientboundPlayAudioContent</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#ClientboundStonecutterSetRecipePacket" class="member-name-link">ClientboundStonecutterSetRecipePacket</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ClientboundTextureShiftPacket" class="member-name-link">ClientboundTextureShiftPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#ClientboundUpdateSoundDataPacket" class="member-name-link">ClientboundUpdateSoundDataPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -481,83 +517,87 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code><a href="#GameTestResultsPacket" class="member-name-link">GameTestResultsPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#GuiDataPickItem" class="member-name-link">GuiDataPickItem</a></code></div>
+<div class="col-first even-row-color"><code><a href="#GraphicsOverrideParameterPacket" class="member-name-link">GraphicsOverrideParameterPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#HurtArmor" class="member-name-link">HurtArmor</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#GuiDataPickItem" class="member-name-link">GuiDataPickItem</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#Interact" class="member-name-link">Interact</a></code></div>
+<div class="col-first even-row-color"><code><a href="#HurtArmor" class="member-name-link">HurtArmor</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#InventoryContent" class="member-name-link">InventoryContent</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#Interact" class="member-name-link">Interact</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#InventorySlot" class="member-name-link">InventorySlot</a></code></div>
+<div class="col-first even-row-color"><code><a href="#InventoryContent" class="member-name-link">InventoryContent</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#InventoryTransaction" class="member-name-link">InventoryTransaction</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#InventorySlot" class="member-name-link">InventorySlot</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ItemRegistryPacket" class="member-name-link">ItemRegistryPacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#InventoryTransaction" class="member-name-link">InventoryTransaction</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ItemStackRequest" class="member-name-link">ItemStackRequest</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ItemRegistryPacket" class="member-name-link">ItemRegistryPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ItemStackResponse" class="member-name-link">ItemStackResponse</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ItemStackRequest" class="member-name-link">ItemStackRequest</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#JigsawStructureDataPacket" class="member-name-link">JigsawStructureDataPacket</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ItemStackResponse" class="member-name-link">ItemStackResponse</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#KeepAlive" class="member-name-link">KeepAlive</a></code></div>
+<div class="col-first even-row-color"><code><a href="#JigsawStructureDataPacket" class="member-name-link">JigsawStructureDataPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#LabTable" class="member-name-link">LabTable</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#KeepAlive" class="member-name-link">KeepAlive</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#LecternUpdate" class="member-name-link">LecternUpdate</a></code></div>
+<div class="col-first even-row-color"><code><a href="#LabTable" class="member-name-link">LabTable</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#LegacyTelemetryEvent" class="member-name-link">LegacyTelemetryEvent</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#LecternUpdate" class="member-name-link">LecternUpdate</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#LessonProgressPacket" class="member-name-link">LessonProgressPacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#LegacyTelemetryEvent" class="member-name-link">LegacyTelemetryEvent</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#LevelEvent" class="member-name-link">LevelEvent</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#LessonProgressPacket" class="member-name-link">LessonProgressPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#LevelEventGeneric" class="member-name-link">LevelEventGeneric</a></code></div>
+<div class="col-first even-row-color"><code><a href="#LevelEvent" class="member-name-link">LevelEvent</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#LevelSoundEvent" class="member-name-link">LevelSoundEvent</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#LevelEventGeneric" class="member-name-link">LevelEventGeneric</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#LocatorBarPacket" class="member-name-link">LocatorBarPacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#LevelSoundEvent" class="member-name-link">LevelSoundEvent</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#Login" class="member-name-link">Login</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#LocatorBarPacket" class="member-name-link">LocatorBarPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MapCreateLockedCopy" class="member-name-link">MapCreateLockedCopy</a></code></div>
+<div class="col-first even-row-color"><code><a href="#Login" class="member-name-link">Login</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MapData" class="member-name-link">MapData</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MapCreateLockedCopy" class="member-name-link">MapCreateLockedCopy</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MapInfoRequest" class="member-name-link">MapInfoRequest</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MapData" class="member-name-link">MapData</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MobArmorEquipment" class="member-name-link">MobArmorEquipment</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MapInfoRequest" class="member-name-link">MapInfoRequest</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MobEffect" class="member-name-link">MobEffect</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MobArmorEquipment" class="member-name-link">MobArmorEquipment</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ModalFormResponse" class="member-name-link">ModalFormResponse</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MobEffect" class="member-name-link">MobEffect</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MotionPredictionHints" class="member-name-link">MotionPredictionHints</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ModalFormResponse" class="member-name-link">ModalFormResponse</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MoveAbsoluteActor" class="member-name-link">MoveAbsoluteActor</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MotionPredictionHints" class="member-name-link">MotionPredictionHints</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MoveDeltaActor" class="member-name-link">MoveDeltaActor</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MoveAbsoluteActor" class="member-name-link">MoveAbsoluteActor</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MovementEffect" class="member-name-link">MovementEffect</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MoveDeltaActor" class="member-name-link">MoveDeltaActor</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#MovePlayer" class="member-name-link">MovePlayer</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MovementEffect" class="member-name-link">MovementEffect</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MultiplayerSettingsPacket" class="member-name-link">MultiplayerSettingsPacket</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MovePlayer" class="member-name-link">MovePlayer</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#NetworkChunkPublisherUpdate" class="member-name-link">NetworkChunkPublisherUpdate</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MultiplayerSettingsPacket" class="member-name-link">MultiplayerSettingsPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#NetworkSettings" class="member-name-link">NetworkSettings</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#NetworkChunkPublisherUpdate" class="member-name-link">NetworkChunkPublisherUpdate</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#NpcDialoguePacket" class="member-name-link">NpcDialoguePacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#NetworkSettings" class="member-name-link">NetworkSettings</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#NPCRequest" class="member-name-link">NPCRequest</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#NpcDialoguePacket" class="member-name-link">NpcDialoguePacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#OnScreenTextureAnimation" class="member-name-link">OnScreenTextureAnimation</a></code></div>
+<div class="col-first even-row-color"><code><a href="#NPCRequest" class="member-name-link">NPCRequest</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#OpenSign" class="member-name-link">OpenSign</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#OnScreenTextureAnimation" class="member-name-link">OnScreenTextureAnimation</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#PacketViolationWarning" class="member-name-link">PacketViolationWarning</a></code></div>
+<div class="col-first even-row-color"><code><a href="#OpenSign" class="member-name-link">OpenSign</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#PacketViolationWarning" class="member-name-link">PacketViolationWarning</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#PartyChangedPacket" class="member-name-link">PartyChangedPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code><a href="#PartyDestinationCookieResponse" class="member-name-link">PartyDestinationCookieResponse</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
@@ -603,35 +643,39 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#PositionTrackingDBServerBroadcast" class="member-name-link">PositionTrackingDBServerBroadcast</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#PurchaseReceipt" class="member-name-link">PurchaseReceipt</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#PrimitiveShapesPacket" class="member-name-link">PrimitiveShapesPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RecordStarted" class="member-name-link">RecordStarted</a></code></div>
+<div class="col-first even-row-color"><code><a href="#PurchaseReceipt" class="member-name-link">PurchaseReceipt</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#RefreshEntitlementsPacket" class="member-name-link">RefreshEntitlementsPacket</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RecordStarted" class="member-name-link">RecordStarted</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RemoveActor" class="member-name-link">RemoveActor</a></code></div>
+<div class="col-first even-row-color"><code><a href="#RefreshEntitlementsPacket" class="member-name-link">RefreshEntitlementsPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#RemoveObjective" class="member-name-link">RemoveObjective</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RemoveActor" class="member-name-link">RemoveActor</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RemoveVolumeEntityPacket" class="member-name-link">RemoveVolumeEntityPacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#RemoveObjective" class="member-name-link">RemoveObjective</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#RequestAbilityPacket" class="member-name-link">RequestAbilityPacket</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RemoveVolumeEntityPacket" class="member-name-link">RemoveVolumeEntityPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RequestChunkRadius" class="member-name-link">RequestChunkRadius</a></code></div>
+<div class="col-first even-row-color"><code><a href="#RequestAbilityPacket" class="member-name-link">RequestAbilityPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#RequestNetworkSettings" class="member-name-link">RequestNetworkSettings</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RequestChunkRadius" class="member-name-link">RequestChunkRadius</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#RequestPermissionsPacket" class="member-name-link">RequestPermissionsPacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#RequestNetworkSettings" class="member-name-link">RequestNetworkSettings</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ResourcePackChunkData" class="member-name-link">ResourcePackChunkData</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#RequestPermissionsPacket" class="member-name-link">RequestPermissionsPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ResourcePackChunkRequest" class="member-name-link">ResourcePackChunkRequest</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ResourcePackChunkData" class="member-name-link">ResourcePackChunkData</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ResourcePackClientResponse" class="member-name-link">ResourcePackClientResponse</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ResourcePackChunkRequest" class="member-name-link">ResourcePackChunkRequest</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ResourcePackDataInfo" class="member-name-link">ResourcePackDataInfo</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ResourcePackClientResponse" class="member-name-link">ResourcePackClientResponse</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ResourcePacksInfo" class="member-name-link">ResourcePacksInfo</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ResourcePackDataInfo" class="member-name-link">ResourcePackDataInfo</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#ResourcePacksInfo" class="member-name-link">ResourcePacksInfo</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ResourcePacksReadyForValidationPacket" class="member-name-link">ResourcePacksReadyForValidationPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#ResourcePackStack" class="member-name-link">ResourcePackStack</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -643,15 +687,27 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#SendPartyDestinationCookie" class="member-name-link">SendPartyDestinationCookie</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ServerboundDiagnosticsPacket" class="member-name-link">ServerboundDiagnosticsPacket</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ServerboundCursorItemDrag" class="member-name-link">ServerboundCursorItemDrag</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ServerboundLoadingScreenPacket" class="member-name-link">ServerboundLoadingScreenPacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ServerboundDataDrivenScreenClosedPacket" class="member-name-link">ServerboundDataDrivenScreenClosedPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ServerboundMatchmakingCancel" class="member-name-link">ServerboundMatchmakingCancel</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ServerboundDataStorePacket" class="member-name-link">ServerboundDataStorePacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ServerboundStonecutterSetRecipePacket" class="member-name-link">ServerboundStonecutterSetRecipePacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ServerboundDiagnosticsPacket" class="member-name-link">ServerboundDiagnosticsPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ServerPlayerPostMovePosition" class="member-name-link">ServerPlayerPostMovePosition</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ServerboundLoadingScreenPacket" class="member-name-link">ServerboundLoadingScreenPacket</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#ServerboundMatchmakingCancel" class="member-name-link">ServerboundMatchmakingCancel</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ServerboundPackSettingChangePacket" class="member-name-link">ServerboundPackSettingChangePacket</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#ServerboundRegisterAudioContent" class="member-name-link">ServerboundRegisterAudioContent</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ServerboundStonecutterSetRecipePacket" class="member-name-link">ServerboundStonecutterSetRecipePacket</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#ServerPlayerPostMovePosition" class="member-name-link">ServerPlayerPostMovePosition</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ServerPresenceInfoPacket" class="member-name-link">ServerPresenceInfoPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#ServerSettingsRequest" class="member-name-link">ServerSettingsRequest</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -659,29 +715,33 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#ServerStats" class="member-name-link">ServerStats</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ServerToClientHandshake" class="member-name-link">ServerToClientHandshake</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ServerStoreInfoPacket" class="member-name-link">ServerStoreInfoPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SetActorData" class="member-name-link">SetActorData</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ServerToClientHandshake" class="member-name-link">ServerToClientHandshake</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SetActorLink" class="member-name-link">SetActorLink</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SetActorData" class="member-name-link">SetActorData</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SetActorMotion" class="member-name-link">SetActorMotion</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SetActorLink" class="member-name-link">SetActorLink</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SetCommandsEnabled" class="member-name-link">SetCommandsEnabled</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SetActorMotion" class="member-name-link">SetActorMotion</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SetDefaultGameType" class="member-name-link">SetDefaultGameType</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SetCommandsEnabled" class="member-name-link">SetCommandsEnabled</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SetDifficulty" class="member-name-link">SetDifficulty</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SetDefaultGameType" class="member-name-link">SetDefaultGameType</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SetDisplayObjective" class="member-name-link">SetDisplayObjective</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SetDifficulty" class="member-name-link">SetDifficulty</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SetHealth" class="member-name-link">SetHealth</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SetDisplayObjective" class="member-name-link">SetDisplayObjective</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SetHudPacket" class="member-name-link">SetHudPacket</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SetHealth" class="member-name-link">SetHealth</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SetLastHurtBy" class="member-name-link">SetLastHurtBy</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SetHudPacket" class="member-name-link">SetHudPacket</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SetLocalPlayerAsInit" class="member-name-link">SetLocalPlayerAsInit</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SetLastHurtBy" class="member-name-link">SetLastHurtBy</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#SetLocalPlayerAsInit" class="member-name-link">SetLocalPlayerAsInit</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#SetPassengerOfBlockPacket" class="member-name-link">SetPassengerOfBlockPacket</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code><a href="#SetPlayerFurnaceOptions" class="member-name-link">SetPlayerFurnaceOptions</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
@@ -1878,6 +1938,14 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="ServerboundCursorItemDrag">
+<h3>ServerboundCursorItemDrag</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundCursorItemDrag</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="NetworkSettings">
 <h3>NetworkSettings</h3>
 <div class="horizontal-scroll">
@@ -2526,30 +2594,6 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="VoxelShapesPacket">
-<h3>VoxelShapesPacket</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">VoxelShapesPacket</span></div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="CameraSplinePacket">
-<h3>CameraSplinePacket</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">CameraSplinePacket</span></div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="LocatorBarPacket">
-<h3>LocatorBarPacket</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">LocatorBarPacket</span></div>
-</div>
-</section>
-</li>
-<li>
 <section class="detail" id="SyncWorldClocks">
 <h3>SyncWorldClocks</h3>
 <div class="horizontal-scroll">
@@ -2598,10 +2642,178 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="ServerboundStonecutterSetRecipePacket">
-<h3>ServerboundStonecutterSetRecipePacket</h3>
+<section class="detail" id="ServerboundMatchmakingCancel">
+<h3>ServerboundMatchmakingCancel</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundStonecutterSetRecipePacket</span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundMatchmakingCancel</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ClientboundPlayAudioContent">
+<h3>ClientboundPlayAudioContent</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ClientboundPlayAudioContent</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ServerboundRegisterAudioContent">
+<h3>ServerboundRegisterAudioContent</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundRegisterAudioContent</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ClientboundControlSchemeSetPacket">
+<h3>ClientboundControlSchemeSetPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ClientboundControlSchemeSetPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="PrimitiveShapesPacket">
+<h3>PrimitiveShapesPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">PrimitiveShapesPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ServerboundPackSettingChangePacket">
+<h3>ServerboundPackSettingChangePacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundPackSettingChangePacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ClientboundDataStorePacket">
+<h3>ClientboundDataStorePacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ClientboundDataStorePacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="GraphicsOverrideParameterPacket">
+<h3>GraphicsOverrideParameterPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">GraphicsOverrideParameterPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ServerboundDataStorePacket">
+<h3>ServerboundDataStorePacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundDataStorePacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ClientboundDataDrivenUIShowScreenPacket">
+<h3>ClientboundDataDrivenUIShowScreenPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ClientboundDataDrivenUIShowScreenPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ClientboundDataDrivenUICloseScreenPacket">
+<h3>ClientboundDataDrivenUICloseScreenPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ClientboundDataDrivenUICloseScreenPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ClientboundDataDrivenUIReloadPacket">
+<h3>ClientboundDataDrivenUIReloadPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ClientboundDataDrivenUIReloadPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ClientboundTextureShiftPacket">
+<h3>ClientboundTextureShiftPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ClientboundTextureShiftPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="VoxelShapesPacket">
+<h3>VoxelShapesPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">VoxelShapesPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="CameraSplinePacket">
+<h3>CameraSplinePacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">CameraSplinePacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ResourcePacksReadyForValidationPacket">
+<h3>ResourcePacksReadyForValidationPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ResourcePacksReadyForValidationPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="LocatorBarPacket">
+<h3>LocatorBarPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">LocatorBarPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="PartyChangedPacket">
+<h3>PartyChangedPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">PartyChangedPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ServerboundDataDrivenScreenClosedPacket">
+<h3>ServerboundDataDrivenScreenClosedPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundDataDrivenScreenClosedPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ClientboundAttributeLayerSyncPacket">
+<h3>ClientboundAttributeLayerSyncPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ClientboundAttributeLayerSyncPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ServerStoreInfoPacket">
+<h3>ServerStoreInfoPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerStoreInfoPacket</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ServerPresenceInfoPacket">
+<h3>ServerPresenceInfoPacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerPresenceInfoPacket</span></div>
 </div>
 </section>
 </li>
@@ -2614,6 +2826,14 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="ServerboundStonecutterSetRecipePacket">
+<h3>ServerboundStonecutterSetRecipePacket</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundStonecutterSetRecipePacket</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="ClientboundStonecutterSetRecipePacket">
 <h3>ClientboundStonecutterSetRecipePacket</h3>
 <div class="horizontal-scroll">
@@ -2622,10 +2842,10 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="ServerboundMatchmakingCancel">
-<h3>ServerboundMatchmakingCancel</h3>
+<section class="detail" id="SetPassengerOfBlockPacket">
+<h3>SetPassengerOfBlockPacket</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">ServerboundMatchmakingCancel</span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MinecraftPacketIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MinecraftPacketIds</a></span>&nbsp;<span class="element-name">SetPassengerOfBlockPacket</span></div>
 </div>
 </section>
 </li>

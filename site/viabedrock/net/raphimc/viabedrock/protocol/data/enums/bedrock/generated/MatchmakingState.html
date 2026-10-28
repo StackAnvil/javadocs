@@ -62,6 +62,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#Idle" tabindex="0">Idle</a></li>
 <li><a href="#Matchmaking" tabindex="0">Matchmaking</a></li>
 <li><a href="#MatchFound" tabindex="0">MatchFound</a></li>
+<li><a href="#Canceled" tabindex="0">Canceled</a></li>
+<li><a href="#PlayerLeftParty" tabindex="0">PlayerLeftParty</a></li>
+<li><a href="#PlayerLeftServer" tabindex="0">PlayerLeftServer</a></li>
+<li><a href="#ServerShutdown" tabindex="0">ServerShutdown</a></li>
+<li><a href="#TimedOut" tabindex="0">TimedOut</a></li>
+<li><a href="#RequeueAsParty" tabindex="0">RequeueAsParty</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -117,11 +123,23 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Enum Constant</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="#Idle" class="member-name-link">Idle</a></code></div>
+<div class="col-first even-row-color"><code><a href="#Canceled" class="member-name-link">Canceled</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#MatchFound" class="member-name-link">MatchFound</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#Idle" class="member-name-link">Idle</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#Matchmaking" class="member-name-link">Matchmaking</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MatchFound" class="member-name-link">MatchFound</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#Matchmaking" class="member-name-link">Matchmaking</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#PlayerLeftParty" class="member-name-link">PlayerLeftParty</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#PlayerLeftServer" class="member-name-link">PlayerLeftServer</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#RequeueAsParty" class="member-name-link">RequeueAsParty</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#ServerShutdown" class="member-name-link">ServerShutdown</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#TimedOut" class="member-name-link">TimedOut</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -206,6 +224,54 @@ the order they are declared.</div>
 <h3>MatchFound</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MatchmakingState.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MatchmakingState</a></span>&nbsp;<span class="element-name">MatchFound</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="Canceled">
+<h3>Canceled</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MatchmakingState.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MatchmakingState</a></span>&nbsp;<span class="element-name">Canceled</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="PlayerLeftParty">
+<h3>PlayerLeftParty</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MatchmakingState.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MatchmakingState</a></span>&nbsp;<span class="element-name">PlayerLeftParty</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="PlayerLeftServer">
+<h3>PlayerLeftServer</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MatchmakingState.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MatchmakingState</a></span>&nbsp;<span class="element-name">PlayerLeftServer</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ServerShutdown">
+<h3>ServerShutdown</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MatchmakingState.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MatchmakingState</a></span>&nbsp;<span class="element-name">ServerShutdown</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="TimedOut">
+<h3>TimedOut</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MatchmakingState.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MatchmakingState</a></span>&nbsp;<span class="element-name">TimedOut</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="RequeueAsParty">
+<h3>RequeueAsParty</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MatchmakingState.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">MatchmakingState</a></span>&nbsp;<span class="element-name">RequeueAsParty</span></div>
 </div>
 </section>
 </li>

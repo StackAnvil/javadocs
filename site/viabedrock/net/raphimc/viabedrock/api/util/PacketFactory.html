@@ -72,6 +72,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#sendJavaBlockChangedAck(com.viaversion.viaversion.api.connection.UserConnection,int)" tabindex="0">sendJavaBlockChangedAck(UserConnection, int)</a></li>
 <li><a href="#sendJavaBlockUpdate(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.viaversion.api.minecraft.BlockPosition,int)" tabindex="0">sendJavaBlockUpdate(UserConnection, BlockPosition, int)</a></li>
 <li><a href="#sendJavaLevelParticles(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.BedrockMappingData.JavaParticle)" tabindex="0">sendJavaLevelParticles(UserConnection, Position3f, BedrockMappingData.JavaParticle)</a></li>
+<li><a href="#sendBedrockCursorItemDrag(com.viaversion.viaversion.api.connection.UserConnection,boolean)" tabindex="0">sendBedrockCursorItemDrag(UserConnection, boolean)</a></li>
+<li><a href="#sendBedrockStonecutterSelection(com.viaversion.viaversion.api.connection.UserConnection,byte,int)" tabindex="0">sendBedrockStonecutterSelection(UserConnection, byte, int)</a></li>
 <li><a href="#sendBedrockContainerClose(com.viaversion.viaversion.api.connection.UserConnection,byte,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ContainerType)" tabindex="0">sendBedrockContainerClose(UserConnection, byte, ContainerType)</a></li>
 <li><a href="#sendBedrockLoadingScreen(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ServerboundLoadingScreenPacketType,java.lang.Long)" tabindex="0">sendBedrockLoadingScreen(UserConnection, ServerboundLoadingScreenPacketType, Long)</a></li>
 <li><a href="#writeJavaDisconnect(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.lang.String)" tabindex="0">writeJavaDisconnect(PacketWrapper, String)</a></li>
@@ -121,13 +123,22 @@ loadScripts(document, 'script');</script>
  <a href="../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a>&nbsp;containerType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendBedrockInventoryRequest(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestInfo%5B%5D)" class="member-name-link">sendBedrockInventoryRequest</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- <a href="../../protocol/model/inventory/ItemStackRequestInfo.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestInfo</a>[]&nbsp;requests)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendBedrockCursorItemDrag(com.viaversion.viaversion.api.connection.UserConnection,boolean)" class="member-name-link">sendBedrockCursorItemDrag</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ boolean&nbsp;dragging)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendBedrockLoadingScreen(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ServerboundLoadingScreenPacketType,java.lang.Long)" class="member-name-link">sendBedrockLoadingScreen</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendBedrockInventoryRequest(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.model.inventory.ItemStackRequestInfo%5B%5D)" class="member-name-link">sendBedrockInventoryRequest</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../protocol/model/inventory/ItemStackRequestInfo.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestInfo</a>[]&nbsp;requests)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendBedrockLoadingScreen(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ServerboundLoadingScreenPacketType,java.lang.Long)" class="member-name-link">sendBedrockLoadingScreen</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="../../protocol/data/enums/bedrock/generated/ServerboundLoadingScreenPacketType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ServerboundLoadingScreenPacketType</a>&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;loadingScreenId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendBedrockStonecutterSelection(com.viaversion.viaversion.api.connection.UserConnection,byte,int)" class="member-name-link">sendBedrockStonecutterSelection</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ byte&nbsp;containerId,
+ int&nbsp;recipeIndex)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaBlockChangedAck(com.viaversion.viaversion.api.connection.UserConnection,int)" class="member-name-link">sendJavaBlockChangedAck</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
@@ -367,6 +378,25 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendJavaLevelParticles</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
  <a href="../../protocol/data/BedrockMappingData.JavaParticle.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.JavaParticle</a>&nbsp;particle)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendBedrockCursorItemDrag(com.viaversion.viaversion.api.connection.UserConnection,boolean)">
+<h3>sendBedrockCursorItemDrag</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendBedrockCursorItemDrag</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ boolean&nbsp;dragging)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendBedrockStonecutterSelection(com.viaversion.viaversion.api.connection.UserConnection,byte,int)">
+<h3>sendBedrockStonecutterSelection</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendBedrockStonecutterSelection</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ byte&nbsp;containerId,
+ int&nbsp;recipeIndex)</span></div>
 </div>
 </section>
 </li>

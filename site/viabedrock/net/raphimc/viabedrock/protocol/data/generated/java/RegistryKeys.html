@@ -60,6 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#field-detail" tabindex="0">Field Details</a>
 <ol class="toc-list">
 <li><a href="#BANNER_PATTERN" tabindex="0">BANNER_PATTERN</a></li>
+<li><a href="#BLOCK_TRANSFORMER" tabindex="0">BLOCK_TRANSFORMER</a></li>
 <li><a href="#CAT_SOUND_VARIANT" tabindex="0">CAT_SOUND_VARIANT</a></li>
 <li><a href="#CAT_VARIANT" tabindex="0">CAT_VARIANT</a></li>
 <li><a href="#CHAT_TYPE" tabindex="0">CHAT_TYPE</a></li>
@@ -68,6 +69,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#COW_SOUND_VARIANT" tabindex="0">COW_SOUND_VARIANT</a></li>
 <li><a href="#COW_VARIANT" tabindex="0">COW_VARIANT</a></li>
 <li><a href="#DAMAGE_TYPE" tabindex="0">DAMAGE_TYPE</a></li>
+<li><a href="#DECORATED_POT_PATTERN" tabindex="0">DECORATED_POT_PATTERN</a></li>
 <li><a href="#DIALOG" tabindex="0">DIALOG</a></li>
 <li><a href="#DIMENSION_TYPE" tabindex="0">DIMENSION_TYPE</a></li>
 <li><a href="#ENCHANTMENT" tabindex="0">ENCHANTMENT</a></li>
@@ -87,6 +89,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#WOLF_VARIANT" tabindex="0">WOLF_VARIANT</a></li>
 <li><a href="#WORLD_CLOCK" tabindex="0">WORLD_CLOCK</a></li>
 <li><a href="#WORLDGEN_BIOME" tabindex="0">WORLDGEN_BIOME</a></li>
+<li><a href="#WORLDGEN_BLOCK_STATE_PROVIDER" tabindex="0">WORLDGEN_BLOCK_STATE_PROVIDER</a></li>
 <li><a href="#ZOMBIE_NAUTILUS_VARIANT" tabindex="0">ZOMBIE_NAUTILUS_VARIANT</a></li>
 </ol>
 </li>
@@ -127,28 +130,34 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color"><code><a href="#BANNER_PATTERN" class="member-name-link">BANNER_PATTERN</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#CAT_SOUND_VARIANT" class="member-name-link">CAT_SOUND_VARIANT</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#BLOCK_TRANSFORMER" class="member-name-link">BLOCK_TRANSFORMER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#CAT_VARIANT" class="member-name-link">CAT_VARIANT</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CAT_SOUND_VARIANT" class="member-name-link">CAT_SOUND_VARIANT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAT_TYPE" class="member-name-link">CHAT_TYPE</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#CAT_VARIANT" class="member-name-link">CAT_VARIANT</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#CHICKEN_SOUND_VARIANT" class="member-name-link">CHICKEN_SOUND_VARIANT</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CHAT_TYPE" class="member-name-link">CHAT_TYPE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#CHICKEN_VARIANT" class="member-name-link">CHICKEN_VARIANT</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#CHICKEN_SOUND_VARIANT" class="member-name-link">CHICKEN_SOUND_VARIANT</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#COW_SOUND_VARIANT" class="member-name-link">COW_SOUND_VARIANT</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CHICKEN_VARIANT" class="member-name-link">CHICKEN_VARIANT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#COW_VARIANT" class="member-name-link">COW_VARIANT</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#COW_SOUND_VARIANT" class="member-name-link">COW_SOUND_VARIANT</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#DAMAGE_TYPE" class="member-name-link">DAMAGE_TYPE</a></code></div>
+<div class="col-second even-row-color"><code><a href="#COW_VARIANT" class="member-name-link">COW_VARIANT</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#DAMAGE_TYPE" class="member-name-link">DAMAGE_TYPE</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#DECORATED_POT_PATTERN" class="member-name-link">DECORATED_POT_PATTERN</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#DIALOG" class="member-name-link">DIALOG</a></code></div>
@@ -208,8 +217,11 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color"><code><a href="#WORLDGEN_BIOME" class="member-name-link">WORLDGEN_BIOME</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#ZOMBIE_NAUTILUS_VARIANT" class="member-name-link">ZOMBIE_NAUTILUS_VARIANT</a></code></div>
+<div class="col-second even-row-color"><code><a href="#WORLDGEN_BLOCK_STATE_PROVIDER" class="member-name-link">WORLDGEN_BLOCK_STATE_PROVIDER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ZOMBIE_NAUTILUS_VARIANT" class="member-name-link">ZOMBIE_NAUTILUS_VARIANT</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -254,6 +266,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../../../../constant-values.html#net.raphimc.viabedrock.protocol.data.generated.java.RegistryKeys.BANNER_PATTERN">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="BLOCK_TRANSFORMER">
+<h3>BLOCK_TRANSFORMER</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">BLOCK_TRANSFORMER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../../../constant-values.html#net.raphimc.viabedrock.protocol.data.generated.java.RegistryKeys.BLOCK_TRANSFORMER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -382,6 +410,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../../../../constant-values.html#net.raphimc.viabedrock.protocol.data.generated.java.RegistryKeys.DAMAGE_TYPE">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="DECORATED_POT_PATTERN">
+<h3>DECORATED_POT_PATTERN</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">DECORATED_POT_PATTERN</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../../../constant-values.html#net.raphimc.viabedrock.protocol.data.generated.java.RegistryKeys.DECORATED_POT_PATTERN">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -686,6 +730,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../../../../constant-values.html#net.raphimc.viabedrock.protocol.data.generated.java.RegistryKeys.WORLDGEN_BIOME">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="WORLDGEN_BLOCK_STATE_PROVIDER">
+<h3>WORLDGEN_BLOCK_STATE_PROVIDER</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">WORLDGEN_BLOCK_STATE_PROVIDER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../../../constant-values.html#net.raphimc.viabedrock.protocol.data.generated.java.RegistryKeys.WORLDGEN_BLOCK_STATE_PROVIDER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>

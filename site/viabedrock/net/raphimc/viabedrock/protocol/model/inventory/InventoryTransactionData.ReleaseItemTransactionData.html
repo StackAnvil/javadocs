@@ -60,7 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemReleaseActionType,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">ReleaseItemTransactionData(ItemReleaseActionType, int, BedrockItem, Position3f)</a></li>
+<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemReleaseActionType,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.HandSlot)" tabindex="0">ReleaseItemTransactionData(ItemReleaseActionType, int, BedrockItem, Position3f, HandSlot)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -72,6 +72,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#hotbarSlot()" tabindex="0">hotbarSlot()</a></li>
 <li><a href="#itemInHand()" tabindex="0">itemInHand()</a></li>
 <li><a href="#headPosition()" tabindex="0">headPosition()</a></li>
+<li><a href="#handSlot()" tabindex="0">handSlot()</a></li>
 </ol>
 </li>
 </ol>
@@ -97,7 +98,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">InventoryTransactionData.ReleaseItemTransactionData</span>(<a href="../../data/enums/bedrock/generated/ItemReleaseActionType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemReleaseActionType</a>&nbsp;actionType, int&nbsp;hotbarSlot, <a href="../BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;itemInHand, <a href="../Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;headPosition)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">InventoryTransactionData.ReleaseItemTransactionData</span>(<a href="../../data/enums/bedrock/generated/ItemReleaseActionType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemReleaseActionType</a>&nbsp;actionType, int&nbsp;hotbarSlot, <a href="../BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;itemInHand, <a href="../Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;headPosition, <a href="../../data/enums/bedrock/generated/HandSlot.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">HandSlot</a>&nbsp;handSlot)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="InventoryTransactionData.html" title="interface in net.raphimc.viabedrock.protocol.model.inventory">InventoryTransactionData</a></span></div>
 </div>
@@ -121,10 +122,11 @@ implements <a href="InventoryTransactionData.html" title="interface in net.raphi
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemReleaseActionType,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">ReleaseItemTransactionData</a><wbr>(<a href="../../data/enums/bedrock/generated/ItemReleaseActionType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemReleaseActionType</a>&nbsp;actionType,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemReleaseActionType,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.HandSlot)" class="member-name-link">ReleaseItemTransactionData</a><wbr>(<a href="../../data/enums/bedrock/generated/ItemReleaseActionType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemReleaseActionType</a>&nbsp;actionType,
  int&nbsp;hotbarSlot,
  <a href="../BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;itemInHand,
- <a href="../Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;headPosition)</code></div>
+ <a href="../Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;headPosition,
+ <a href="../../data/enums/bedrock/generated/HandSlot.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">HandSlot</a>&nbsp;handSlot)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>ReleaseItemTransactionData</code> record class.</div>
 </div>
@@ -152,29 +154,34 @@ implements <a href="InventoryTransactionData.html" title="interface in net.raphi
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../data/enums/bedrock/generated/HandSlot.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">HandSlot</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handSlot()" class="member-name-link">handSlot</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>handSlot</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#headPosition()" class="member-name-link">headPosition</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#headPosition()" class="member-name-link">headPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>headPosition</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hotbarSlot()" class="member-name-link">hotbarSlot</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hotbarSlot()" class="member-name-link">hotbarSlot</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>hotbarSlot</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemInHand()" class="member-name-link">itemInHand</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemInHand()" class="member-name-link">itemInHand</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>itemInHand</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -195,13 +202,14 @@ implements <a href="InventoryTransactionData.html" title="interface in net.raphi
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemReleaseActionType,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.Position3f)">
+<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemReleaseActionType,int,net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.HandSlot)">
 <h3>ReleaseItemTransactionData</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ReleaseItemTransactionData</span><wbr><span class="parameters">(<a href="../../data/enums/bedrock/generated/ItemReleaseActionType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemReleaseActionType</a>&nbsp;actionType,
  int&nbsp;hotbarSlot,
  <a href="../BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;itemInHand,
- <a href="../Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;headPosition)</span></div>
+ <a href="../Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;headPosition,
+ <a href="../../data/enums/bedrock/generated/HandSlot.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">HandSlot</a>&nbsp;handSlot)</span></div>
 <div class="block">Creates an instance of a <code>ReleaseItemTransactionData</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -209,6 +217,7 @@ implements <a href="InventoryTransactionData.html" title="interface in net.raphi
 <dd><code>hotbarSlot</code> - the value for the <code>hotbarSlot</code> record component</dd>
 <dd><code>itemInHand</code> - the value for the <code>itemInHand</code> record component</dd>
 <dd><code>headPosition</code> - the value for the <code>headPosition</code> record component</dd>
+<dd><code>handSlot</code> - the value for the <code>handSlot</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -316,6 +325,19 @@ implements <a href="InventoryTransactionData.html" title="interface in net.raphi
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>headPosition</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="handSlot()">
+<h3>handSlot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../data/enums/bedrock/generated/HandSlot.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">HandSlot</a></span>&nbsp;<span class="element-name">handSlot</span>()</div>
+<div class="block">Returns the value of the <code>handSlot</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>handSlot</code> record component</dd>
 </dl>
 </div>
 </section>
