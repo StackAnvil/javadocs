@@ -86,6 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GlyphSheetResourceRewriter</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../ResourcePackRewriter.Rewriter.html" title="interface in net.raphimc.viabedrock.protocol.rewriter">ResourcePackRewriter.Rewriter</a></span></div>
+<div class="block">Convert the resolved bitmap family and its Unicode fallbacks as one font.</div>
 </div>
 </section>
 <section class="summary">
@@ -115,7 +116,7 @@ implements <a href="../ResourcePackRewriter.Rewriter.html" title="interface in n
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#submitTasks(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,java.util.function.Consumer)" class="member-name-link">submitTasks</a><wbr>(<a href="../../storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;resourcePackStorage,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#submitTasks(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,java.util.function.Consumer)" class="member-name-link">submitTasks</a><wbr>(<a href="../../storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../api/resourcepack/content/Content.html" title="class in net.raphimc.viabedrock.api.resourcepack.content">Content</a>&gt;&gt;&nbsp;submitter)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
@@ -155,7 +156,7 @@ implements <a href="../ResourcePackRewriter.Rewriter.html" title="interface in n
 <section class="detail" id="submitTasks(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,java.util.function.Consumer)">
 <h3>submitTasks</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">submitTasks</span><wbr><span class="parameters">(<a href="../../storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;resourcePackStorage,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">submitTasks</span><wbr><span class="parameters">(<a href="../../storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../api/resourcepack/content/Content.html" title="class in net.raphimc.viabedrock.api.resourcepack.content">Content</a>&gt;&gt;&nbsp;submitter)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>

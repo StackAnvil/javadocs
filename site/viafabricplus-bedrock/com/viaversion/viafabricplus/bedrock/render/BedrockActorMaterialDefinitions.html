@@ -61,6 +61,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#read(java.util.List)" tabindex="0">read(List)</a></li>
 <li><a href="#nativeDefinitions(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">nativeDefinitions(JsonObject)</a></li>
 <li><a href="#material(java.lang.String)" tabindex="0">material(String)</a></li>
+<li><a href="#material(java.lang.String,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)" tabindex="0">material(String, BedrockActorTint)</a></li>
 <li><a href="#heldItemMaterial(java.lang.String)" tabindex="0">heldItemMaterial(String)</a></li>
 </ol>
 </li>
@@ -123,14 +124,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Ordinary actors do not supply the verified held-item glint scale and frame inputs.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.viaversion.viaversion.libs.gson.JsonObject</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#nativeDefinitions(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">nativeDefinitions</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;document)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#material(java.lang.String,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)" class="member-name-link">material</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a>&nbsp;tint)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Color-mask families require a native per-draw tint instead of an assumed white value.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.viaversion.viaversion.libs.gson.JsonObject</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#nativeDefinitions(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">nativeDefinitions</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;document)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Fixed native buffers and CPU bone poses replace the package's GPU layout and skinning variants.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockActorMaterialDefinitions.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#read(java.util.List)" class="member-name-link">read</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;documents)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockActorMaterialDefinitions.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#read(java.util.List)" class="member-name-link">read</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.viaversion.viaversion.libs.gson.JsonObject&gt;&nbsp;documents)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -179,6 +186,16 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&gt;</span>&nbsp;<span class="element-name">material</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">Ordinary actors do not supply the verified held-item glint scale and frame inputs.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="material(java.lang.String,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)">
+<h3>material</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&gt;</span>&nbsp;<span class="element-name">material</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a>&nbsp;tint)</span></div>
+<div class="block">Color-mask families require a native per-draw tint instead of an assumed white value.</div>
 </div>
 </section>
 </li>

@@ -63,7 +63,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#load(com.viaversion.viaversion.api.connection.UserConnection)" tabindex="0">load(UserConnection)</a></li>
+<li><a href="#load(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.BaseGameVersion)" tabindex="0">load(UserConnection, BaseGameVersion)</a></li>
 </ol>
 </li>
 </ol>
@@ -116,7 +116,8 @@ implements com.viaversion.viaversion.api.platform.providers.Provider</span></div
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">load</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.BaseGameVersion)" class="member-name-link">load</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../api/resourcepack/BaseGameVersion.html" title="class in net.raphimc.viabedrock.api.resourcepack">BaseGameVersion</a>&nbsp;version)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called on the resource pack executor, where acquisition may block.</div>
 </div>
@@ -154,10 +155,11 @@ implements com.viaversion.viaversion.api.platform.providers.Provider</span></div
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="load(com.viaversion.viaversion.api.connection.UserConnection)">
+<section class="detail" id="load(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.BaseGameVersion)">
 <h3>load</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</span>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../api/resourcepack/BaseGameVersion.html" title="class in net.raphimc.viabedrock.api.resourcepack">BaseGameVersion</a>&nbsp;version)</span>
                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
 <div class="block">Called on the resource pack executor, where acquisition may block.
 Return image and actor resource packs (plus manifests) in bottom-to-top order, or an empty list.

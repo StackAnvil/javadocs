@@ -65,6 +65,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth)" tabindex="0">Material(boolean, boolean, boolean, boolean, boolean, boolean, BedrockActorDepth)</a></li>
+<li><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean)" tabindex="0">Material(boolean, boolean, boolean, boolean, boolean, boolean, BedrockActorDepth, boolean)</a></li>
+<li><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean)" tabindex="0">Material(boolean, boolean, boolean, boolean, boolean, boolean, BedrockActorDepth, boolean, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -81,6 +83,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#masked()" tabindex="0">masked()</a></li>
 <li><a href="#glint()" tabindex="0">glint()</a></li>
 <li><a href="#depth()" tabindex="0">depth()</a></li>
+<li><a href="#colorMask()" tabindex="0">colorMask()</a></li>
+<li><a href="#alphaWrite()" tabindex="0">alphaWrite()</a></li>
 </ol>
 </li>
 </ol>
@@ -102,7 +106,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockActorMaterialDefinitions.Material</span>(boolean&nbsp;alphaTest, boolean&nbsp;cull, boolean&nbsp;emissive, boolean&nbsp;uvAnimation, boolean&nbsp;masked, boolean&nbsp;glint, <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockActorMaterialDefinitions.Material</span>(boolean&nbsp;alphaTest, boolean&nbsp;cull, boolean&nbsp;emissive, boolean&nbsp;uvAnimation, boolean&nbsp;masked, boolean&nbsp;glint, <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth, boolean&nbsp;colorMask, boolean&nbsp;alphaWrite)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -138,6 +142,25 @@ loadScripts(document, 'script');</script>
  boolean&nbsp;masked,
  boolean&nbsp;glint,
  <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean)" class="member-name-link">Material</a><wbr>(boolean&nbsp;alphaTest,
+ boolean&nbsp;cull,
+ boolean&nbsp;emissive,
+ boolean&nbsp;uvAnimation,
+ boolean&nbsp;masked,
+ boolean&nbsp;glint,
+ <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
+ boolean&nbsp;colorMask)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean)" class="member-name-link">Material</a><wbr>(boolean&nbsp;alphaTest,
+ boolean&nbsp;cull,
+ boolean&nbsp;emissive,
+ boolean&nbsp;uvAnimation,
+ boolean&nbsp;masked,
+ boolean&nbsp;glint,
+ <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
+ boolean&nbsp;colorMask,
+ boolean&nbsp;alphaWrite)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Material</code> record class.</div>
 </div>
@@ -159,6 +182,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alphaTest()" class="member-name-link">alphaTest</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>alphaTest</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alphaWrite()" class="member-name-link">alphaWrite</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>alphaWrite</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#colorMask()" class="member-name-link">colorMask</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>colorMask</code> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cull()" class="member-name-link">cull</a>()</code></div>
@@ -255,6 +288,37 @@ loadScripts(document, 'script');</script>
  boolean&nbsp;masked,
  boolean&nbsp;glint,
  <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean)">
+<h3>Material</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Material</span><wbr><span class="parameters">(boolean&nbsp;alphaTest,
+ boolean&nbsp;cull,
+ boolean&nbsp;emissive,
+ boolean&nbsp;uvAnimation,
+ boolean&nbsp;masked,
+ boolean&nbsp;glint,
+ <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
+ boolean&nbsp;colorMask)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean)">
+<h3>Material</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Material</span><wbr><span class="parameters">(boolean&nbsp;alphaTest,
+ boolean&nbsp;cull,
+ boolean&nbsp;emissive,
+ boolean&nbsp;uvAnimation,
+ boolean&nbsp;masked,
+ boolean&nbsp;glint,
+ <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
+ boolean&nbsp;colorMask,
+ boolean&nbsp;alphaWrite)</span></div>
 <div class="block">Creates an instance of a <code>Material</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -265,6 +329,8 @@ loadScripts(document, 'script');</script>
 <dd><code>masked</code> - the value for the <code>masked</code> record component</dd>
 <dd><code>glint</code> - the value for the <code>glint</code> record component</dd>
 <dd><code>depth</code> - the value for the <code>depth</code> record component</dd>
+<dd><code>colorMask</code> - the value for the <code>colorMask</code> record component</dd>
+<dd><code>alphaWrite</code> - the value for the <code>alphaWrite</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -427,6 +493,32 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>depth</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="colorMask()">
+<h3>colorMask</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">colorMask</span>()</div>
+<div class="block">Returns the value of the <code>colorMask</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>colorMask</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="alphaWrite()">
+<h3>alphaWrite</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">alphaWrite</span>()</div>
+<div class="block">Returns the value of the <code>alphaWrite</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>alphaWrite</code> record component</dd>
 </dl>
 </div>
 </section>

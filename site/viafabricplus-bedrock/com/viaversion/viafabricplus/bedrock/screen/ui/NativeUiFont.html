@@ -53,14 +53,16 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#scale(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" tabindex="0">scale(NativeUiScene.Node)</a></li>
+<li><a href="#origin(float,float,float,int)" tabindex="0">origin(float, float, float, int)</a></li>
 <li><a href="#wrapWidth(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float)" tabindex="0">wrapWidth(NativeUiScene.Node, float)</a></li>
-<li><a href="#lineHeight(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,int)" tabindex="0">lineHeight(NativeUiScene.Node, int)</a></li>
-<li><a href="#intrinsic(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int,int)" tabindex="0">intrinsic(NativeUiScene.Node, float, int, int)</a></li>
-<li><a href="#constrained(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int,int)" tabindex="0">constrained(NativeUiScene.Node, float, int, int)</a></li>
+<li><a href="#lineHeight(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" tabindex="0">lineHeight(NativeUiScene.Node)</a></li>
+<li><a href="#intrinsic(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int)" tabindex="0">intrinsic(NativeUiScene.Node, float, int)</a></li>
+<li><a href="#constrained(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int)" tabindex="0">constrained(NativeUiScene.Node, float, int)</a></li>
 </ol>
 </li>
 </ol>
@@ -83,6 +85,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="NativeUiFont.Origin.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFont.Origin</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
@@ -95,28 +112,33 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiLayout.Size.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Size</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#constrained(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int,int)" class="member-name-link">constrained</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#constrained(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int)" class="member-name-link">constrained</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
  float&nbsp;width,
- int&nbsp;lines,
- int&nbsp;lineHeight)</code></div>
+ int&nbsp;lines)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiLayout.Size.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Size</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#intrinsic(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int,int)" class="member-name-link">intrinsic</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#intrinsic(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int)" class="member-name-link">intrinsic</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
  float&nbsp;width,
- int&nbsp;lines,
- int&nbsp;lineHeight)</code></div>
+ int&nbsp;lines)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lineHeight(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,int)" class="member-name-link">lineHeight</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
- int&nbsp;fallback)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lineHeight(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" class="member-name-link">lineHeight</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#scale(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" class="member-name-link">scale</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#wrapWidth(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float)" class="member-name-link">wrapWidth</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiFont.Origin.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFont.Origin</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#origin(float,float,float,int)" class="member-name-link">origin</a><wbr>(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;fontScale,
+ int&nbsp;uiScale)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Snap the label origin in physical pixels before applying its font-size transform.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#scale(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)" class="member-name-link">scale</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#wrapWidth(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float)" class="member-name-link">wrapWidth</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
  float&nbsp;width)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -143,6 +165,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="origin(float,float,float,int)">
+<h3>origin</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeUiFont.Origin.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFont.Origin</a></span>&nbsp;<span class="element-name">origin</span><wbr><span class="parameters">(float&nbsp;x,
+ float&nbsp;y,
+ float&nbsp;fontScale,
+ int&nbsp;uiScale)</span></div>
+<div class="block">Snap the label origin in physical pixels before applying its font-size transform.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="wrapWidth(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float)">
 <h3>wrapWidth</h3>
 <div class="horizontal-scroll">
@@ -152,33 +186,30 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="lineHeight(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,int)">
+<section class="detail" id="lineHeight(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node)">
 <h3>lineHeight</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">lineHeight</span><wbr><span class="parameters">(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
- int&nbsp;fallback)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">lineHeight</span><wbr><span class="parameters">(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node)</span></div>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="intrinsic(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int,int)">
+<section class="detail" id="intrinsic(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int)">
 <h3>intrinsic</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeUiLayout.Size.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Size</a></span>&nbsp;<span class="element-name">intrinsic</span><wbr><span class="parameters">(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
  float&nbsp;width,
- int&nbsp;lines,
- int&nbsp;lineHeight)</span></div>
+ int&nbsp;lines)</span></div>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="constrained(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int,int)">
+<section class="detail" id="constrained(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,float,int)">
 <h3>constrained</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeUiLayout.Size.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Size</a></span>&nbsp;<span class="element-name">constrained</span><wbr><span class="parameters">(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
  float&nbsp;width,
- int&nbsp;lines,
- int&nbsp;lineHeight)</span></div>
+ int&nbsp;lines)</span></div>
 </div>
 </section>
 </li>

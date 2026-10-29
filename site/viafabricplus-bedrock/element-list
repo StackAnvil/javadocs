@@ -39,6 +39,8 @@ com.viaversion.viafabricplus.bedrock.realms
 com.viaversion.viafabricplus.bedrock.render
 com.viaversion.viafabricplus.bedrock.render.compat.entityculling
 com.viaversion.viafabricplus.bedrock.render.compat.iris
+com.viaversion.viafabricplus.bedrock.render.fog
+com.viaversion.viafabricplus.bedrock.render.font
 com.viaversion.viafabricplus.bedrock.render.hud
 com.viaversion.viafabricplus.bedrock.render.light
 com.viaversion.viafabricplus.bedrock.screen

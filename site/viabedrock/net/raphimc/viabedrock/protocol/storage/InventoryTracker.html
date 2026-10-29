@@ -63,6 +63,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#nextLegacyRequestId()" tabindex="0">nextLegacyRequestId()</a></li>
 <li><a href="#getContainerClientbound(byte,net.raphimc.viabedrock.protocol.model.FullContainerName,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">getContainerClientbound(byte, FullContainerName, BedrockItem)</a></li>
 <li><a href="#getContainerClientboundSlot(byte,int,net.raphimc.viabedrock.protocol.model.FullContainerName,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">getContainerClientboundSlot(byte, int, FullContainerName, BedrockItem)</a></li>
 <li><a href="#getContainerServerbound(byte)" tabindex="0">getContainerServerbound(byte)</a></li>
@@ -231,40 +232,43 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markPendingClose(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">markPendingClose</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingCloseContainerGeneration()" class="member-name-link">pendingCloseContainerGeneration</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextLegacyRequestId()" class="member-name-link">nextLegacyRequestId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/container/ContainerOpenContext.html" title="class in net.raphimc.viabedrock.api.model.container">ContainerOpenContext</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingCloseContainerOpenContext()" class="member-name-link">pendingCloseContainerOpenContext</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingCloseContainerGeneration()" class="member-name-link">pendingCloseContainerGeneration</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeDynamicContainer(net.raphimc.viabedrock.protocol.model.FullContainerName)" class="member-name-link">removeDynamicContainer</a><wbr>(<a href="../model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a>&nbsp;containerName)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/container/ContainerOpenContext.html" title="class in net.raphimc.viabedrock.api.model.container">ContainerOpenContext</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingCloseContainerOpenContext()" class="member-name-link">pendingCloseContainerOpenContext</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainCurrentContainerOpenContext(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.api.model.container.ContainerOpenContext)" class="member-name-link">retainCurrentContainerOpenContext</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeDynamicContainer(net.raphimc.viabedrock.protocol.model.FullContainerName)" class="member-name-link">removeDynamicContainer</a><wbr>(<a href="../model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a>&nbsp;containerName)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainCurrentContainerOpenContext(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.api.model.container.ContainerOpenContext)" class="member-name-link">retainCurrentContainerOpenContext</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
  <a href="../../api/model/container/ContainerOpenContext.html" title="class in net.raphimc.viabedrock.api.model.container">ContainerOpenContext</a>&nbsp;openContext)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Adds a later CONTAINER_OPEN to the same mount opened by UPDATE_EQUIP.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentContainer(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">setCurrentContainer</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentContainer(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.api.model.container.ContainerOpenContext)" class="member-name-link">setCurrentContainer</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentContainer(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">setCurrentContainer</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentContainer(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.api.model.container.ContainerOpenContext)" class="member-name-link">setCurrentContainer</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
  <a href="../../api/model/container/ContainerOpenContext.html" title="class in net.raphimc.viabedrock.api.model.container">ContainerOpenContext</a>&nbsp;openContext)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentContainerClosed(boolean)" class="member-name-link">setCurrentContainerClosed</a><wbr>(boolean&nbsp;serverInitiated)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentForm(com.viaversion.viaversion.libs.fastutil.ints.IntObjectPair)" class="member-name-link">setCurrentForm</a><wbr>(com.viaversion.viaversion.libs.fastutil.ints.IntObjectPair&lt;net.lenni0451.mcstructs_bedrock.forms.Form&gt;&nbsp;currentForm)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentContainerClosed(boolean)" class="member-name-link">setCurrentContainerClosed</a><wbr>(boolean&nbsp;serverInitiated)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCursorItemDrag(boolean)" class="member-name-link">setCursorItemDrag</a><wbr>(boolean&nbsp;dragging)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentForm(com.viaversion.viaversion.libs.fastutil.ints.IntObjectPair)" class="member-name-link">setCurrentForm</a><wbr>(com.viaversion.viaversion.libs.fastutil.ints.IntObjectPair&lt;net.lenni0451.mcstructs_bedrock.forms.Form&gt;&nbsp;currentForm)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCursorItemDrag(boolean)" class="member-name-link">setCursorItemDrag</a><wbr>(boolean&nbsp;dragging)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -304,6 +308,14 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="nextLegacyRequestId()">
+<h3>nextLegacyRequestId</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">nextLegacyRequestId</span>()</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="getContainerClientbound(byte,net.raphimc.viabedrock.protocol.model.FullContainerName,net.raphimc.viabedrock.protocol.model.BedrockItem)">
 <h3>getContainerClientbound</h3>

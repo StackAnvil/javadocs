@@ -64,7 +64,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#encode(java.util.Collection,java.util.function.Predicate)" tabindex="0">encode(Collection, Predicate)</a></li>
+<li><a href="#encode(net.raphimc.viabedrock.api.resourcepack.BaseGameVersion,java.util.Collection,java.util.function.Predicate)" tabindex="0">encode(BaseGameVersion, Collection, Predicate)</a></li>
 <li><a href="#resources(java.util.Collection,java.util.function.Predicate)" tabindex="0">resources(Collection, Predicate)</a></li>
 <li><a href="#effects(java.util.List)" tabindex="0">effects(List)</a></li>
 <li><a href="#decode(java.io.InputStream)" tabindex="0">decode(InputStream)</a></li>
@@ -100,8 +100,11 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="NativeActorLibrary.Layer.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Layer</a></code></div>
+<div class="col-second even-row-color"><code><a href="NativeActorLibrary.Archive.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Archive</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="NativeActorLibrary.Layer.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Layer</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -131,7 +134,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="NativeActorLibrary.Layer.html" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Layer</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeActorLibrary.Archive.html" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Archive</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#decode(java.io.InputStream)" class="member-name-link">decode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>byte[]&gt;&gt;</code></div>
@@ -140,7 +143,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Shares effect dependencies while preserving empty layers and excluding actor-only definitions.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static byte[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#encode(java.util.Collection,java.util.function.Predicate)" class="member-name-link">encode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;&nbsp;bottomToTop,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#encode(net.raphimc.viabedrock.api.resourcepack.BaseGameVersion,java.util.Collection,java.util.function.Predicate)" class="member-name-link">encode</a><wbr>(<a href="BaseGameVersion.html" title="class in net.raphimc.viabedrock.api.resourcepack">BaseGameVersion</a>&nbsp;version,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;&nbsp;bottomToTop,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;&nbsp;server)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="NativeActorLibrary.Layer.html" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Layer</a>&gt;</code></div>
@@ -191,10 +195,11 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="encode(java.util.Collection,java.util.function.Predicate)">
+<section class="detail" id="encode(net.raphimc.viabedrock.api.resourcepack.BaseGameVersion,java.util.Collection,java.util.function.Predicate)">
 <h3>encode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">byte[]</span>&nbsp;<span class="element-name">encode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;&nbsp;bottomToTop,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">byte[]</span>&nbsp;<span class="element-name">encode</span><wbr><span class="parameters">(<a href="BaseGameVersion.html" title="class in net.raphimc.viabedrock.api.resourcepack">BaseGameVersion</a>&nbsp;version,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;&nbsp;bottomToTop,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;&nbsp;server)</span>
                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <dl class="notes">
@@ -237,8 +242,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="decode(java.io.InputStream)">
 <h3>decode</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeActorLibrary.Layer.html" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Layer</a>&gt;</span>&nbsp;<span class="element-name">decode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</span>
-                                             throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeActorLibrary.Archive.html" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Archive</a></span>&nbsp;<span class="element-name">decode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</span>
+                                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>

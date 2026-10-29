@@ -65,6 +65,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#lightCoords(int,boolean)" tabindex="0">lightCoords(int, boolean)</a></li>
 <li><a href="#usesNetherLighting()" tabindex="0">usesNetherLighting()</a></li>
 <li><a href="#create(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform,boolean)" tabindex="0">create(List, BedrockActorMaterialDefinitions.Material, boolean, float, BedrockActorUvTransform, boolean)</a></li>
+<li><a href="#create(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)" tabindex="0">create(List, BedrockActorMaterialDefinitions.Material, boolean, float, BedrockActorUvTransform, boolean, BedrockActorTint)</a></li>
 <li><a href="#createGlint(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorGlint,boolean)" tabindex="0">createGlint(List, BedrockActorMaterialDefinitions.Material, boolean, float, BedrockActorGlint, boolean)</a></li>
 <li><a href="#createFrameGlint(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorGlintFrames.Frame,float,float,boolean)" tabindex="0">createFrameGlint(List, BedrockActorMaterialDefinitions.Material, boolean, float, BedrockActorGlintFrames.Frame, float, float, boolean)</a></li>
 <li><a href="#forGui(net.minecraft.client.renderer.rendertype.RenderType)" tabindex="0">forGui(RenderType)</a></li>
@@ -125,7 +126,16 @@ loadScripts(document, 'script');</script>
  boolean&nbsp;netherLighting)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createFrameGlint(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorGlintFrames.Frame,float,float,boolean)" class="member-name-link">createFrameGlint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.resources.Identifier&gt;&nbsp;textures,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#create(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)" class="member-name-link">create</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.resources.Identifier&gt;&nbsp;textures,
+ <a href="BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
+ boolean&nbsp;ignoreLighting,
+ float&nbsp;multiplier,
+ <a href="BedrockActorUvTransform.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorUvTransform</a>&nbsp;uv,
+ boolean&nbsp;netherLighting,
+ <a href="BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a>&nbsp;tint)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createFrameGlint(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorGlintFrames.Frame,float,float,boolean)" class="member-name-link">createFrameGlint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.resources.Identifier&gt;&nbsp;textures,
  <a href="BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
  boolean&nbsp;ignoreLighting,
  float&nbsp;multiplier,
@@ -133,38 +143,38 @@ loadScripts(document, 'script');</script>
  float&nbsp;scaleU,
  float&nbsp;scaleV,
  boolean&nbsp;netherLighting)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Uses one captured clock/options frame and each submitted vertex's own lightmap input.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createGlint(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorGlint,boolean)" class="member-name-link">createGlint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.resources.Identifier&gt;&nbsp;textures,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createGlint(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorGlint,boolean)" class="member-name-link">createGlint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.resources.Identifier&gt;&nbsp;textures,
  <a href="BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
  boolean&nbsp;ignoreLighting,
  float&nbsp;multiplier,
  <a href="BedrockActorGlint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorGlint</a>&nbsp;glint,
  boolean&nbsp;netherLighting)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Draws the verified glint family with explicit native inputs; callers own clock and lighting production.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createGui(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform)" class="member-name-link">createGui</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.resources.Identifier&gt;&nbsp;textures,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createGui(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform)" class="member-name-link">createGui</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.resources.Identifier&gt;&nbsp;textures,
  <a href="BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
  boolean&nbsp;ignoreLighting,
  float&nbsp;multiplier,
  <a href="BedrockActorUvTransform.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorUvTransform</a>&nbsp;uv)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#forGui(net.minecraft.client.renderer.rendertype.RenderType)" class="member-name-link">forGui</a><wbr>(net.minecraft.client.renderer.rendertype.RenderType&nbsp;type)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.client.renderer.rendertype.RenderType</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#forGui(net.minecraft.client.renderer.rendertype.RenderType)" class="member-name-link">forGui</a><wbr>(net.minecraft.client.renderer.rendertype.RenderType&nbsp;type)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">A queued GUI draw must retain its own pipeline without changing the cached world material.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lightCoords(int,boolean)" class="member-name-link">lightCoords</a><wbr>(int&nbsp;light,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lightCoords(int,boolean)" class="member-name-link">lightCoords</a><wbr>(int&nbsp;light,
  boolean&nbsp;ignoreLighting)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#usesNetherLighting()" class="member-name-link">usesNetherLighting</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#usesNetherLighting()" class="member-name-link">usesNetherLighting</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -225,6 +235,20 @@ loadScripts(document, 'script');</script>
  float&nbsp;multiplier,
  <a href="BedrockActorUvTransform.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorUvTransform</a>&nbsp;uv,
  boolean&nbsp;netherLighting)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="create(java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,boolean,float,com.viaversion.viafabricplus.bedrock.render.BedrockActorUvTransform,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)">
+<h3>create</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.client.renderer.rendertype.RenderType</span>&nbsp;<span class="element-name">create</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.resources.Identifier&gt;&nbsp;textures,
+ <a href="BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
+ boolean&nbsp;ignoreLighting,
+ float&nbsp;multiplier,
+ <a href="BedrockActorUvTransform.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorUvTransform</a>&nbsp;uv,
+ boolean&nbsp;netherLighting,
+ <a href="BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a>&nbsp;tint)</span></div>
 </div>
 </section>
 </li>

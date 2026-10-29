@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#layers(net.minecraft.server.packs.resources.ResourceManager)" tabindex="0">layers(ResourceManager)</a></li>
+<li><a href="#archive(net.minecraft.server.packs.resources.ResourceManager)" tabindex="0">archive(ResourceManager)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
 </ol>
 </li>
@@ -91,12 +92,15 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;net.raphimc.viabedrock.api.resourcepack.NativeActorLibrary.Archive&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#archive(net.minecraft.server.packs.resources.ResourceManager)" class="member-name-link">archive</a><wbr>(net.minecraft.server.packs.resources.ResourceManager&nbsp;resources)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;net.raphimc.viabedrock.api.resourcepack.NativeActorLibrary.Layer&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#layers(net.minecraft.server.packs.resources.ResourceManager)" class="member-name-link">layers</a><wbr>(net.minecraft.server.packs.resources.ResourceManager&nbsp;resources)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;net.raphimc.viabedrock.api.resourcepack.NativeActorLibrary.Layer&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#layers(net.minecraft.server.packs.resources.ResourceManager)" class="member-name-link">layers</a><wbr>(net.minecraft.server.packs.resources.ResourceManager&nbsp;resources)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Decoding accepted assets never requests authentication or a direct Bedrock connection.</div>
 </div>
 </div>
@@ -123,6 +127,19 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.raphimc.viabedrock.api.resourcepack.NativeActorLibrary.Layer&gt;</span>&nbsp;<span class="element-name">layers</span><wbr><span class="parameters">(net.minecraft.server.packs.resources.ResourceManager&nbsp;resources)</span>
                                                                                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <div class="block">Decoding accepted assets never requests authentication or a direct Bedrock connection.</div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="archive(net.minecraft.server.packs.resources.ResourceManager)">
+<h3>archive</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;net.raphimc.viabedrock.api.resourcepack.NativeActorLibrary.Archive&gt;</span>&nbsp;<span class="element-name">archive</span><wbr><span class="parameters">(net.minecraft.server.packs.resources.ResourceManager&nbsp;resources)</span>
+                                                                                            throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>

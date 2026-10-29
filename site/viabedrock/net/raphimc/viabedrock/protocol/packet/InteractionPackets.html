@@ -58,7 +58,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#handlePlayerAction(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.protocol.data.enums.java.generated.PlayerActionAction)" tabindex="0">handlePlayerAction(PacketWrapper, PlayerActionAction)</a></li>
-<li><a href="#sendUseItemOnBlock(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.viaversion.api.minecraft.BlockPosition,int,net.raphimc.viabedrock.protocol.model.Position3f,boolean)" tabindex="0">sendUseItemOnBlock(UserConnection, BlockPosition, int, Position3f, boolean)</a></li>
+<li><a href="#sendUseItemOnBlock(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.viaversion.api.minecraft.BlockPosition,int,net.raphimc.viabedrock.protocol.model.Position3f,boolean,int)" tabindex="0">sendUseItemOnBlock(UserConnection, BlockPosition, int, Position3f, boolean, int)</a></li>
+<li><a href="#stopBlockUse(com.viaversion.viaversion.api.connection.UserConnection)" tabindex="0">stopBlockUse(UserConnection)</a></li>
 <li><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" tabindex="0">register(BedrockProtocol)</a></li>
 </ol>
 </li>
@@ -100,12 +101,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" class="member-name-link">register</a><wbr>(<a href="../BedrockProtocol.html" title="class in net.raphimc.viabedrock.protocol">BedrockProtocol</a>&nbsp;protocol)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendUseItemOnBlock(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.viaversion.api.minecraft.BlockPosition,int,net.raphimc.viabedrock.protocol.model.Position3f,boolean)" class="member-name-link">sendUseItemOnBlock</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendUseItemOnBlock(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.viaversion.api.minecraft.BlockPosition,int,net.raphimc.viabedrock.protocol.model.Position3f,boolean,int)" class="member-name-link">sendUseItemOnBlock</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
  int&nbsp;faceInt,
  <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;clickPosition,
- boolean&nbsp;insideBlock)</code></div>
+ boolean&nbsp;insideBlock,
+ int&nbsp;sequence)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#stopBlockUse(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">stopBlockUse</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -133,14 +138,23 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="sendUseItemOnBlock(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.viaversion.api.minecraft.BlockPosition,int,net.raphimc.viabedrock.protocol.model.Position3f,boolean)">
+<section class="detail" id="sendUseItemOnBlock(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.viaversion.api.minecraft.BlockPosition,int,net.raphimc.viabedrock.protocol.model.Position3f,boolean,int)">
 <h3>sendUseItemOnBlock</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendUseItemOnBlock</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
  int&nbsp;faceInt,
  <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;clickPosition,
- boolean&nbsp;insideBlock)</span></div>
+ boolean&nbsp;insideBlock,
+ int&nbsp;sequence)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="stopBlockUse(com.viaversion.viaversion.api.connection.UserConnection)">
+<h3>stopBlockUse</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">stopBlockUse</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</span></div>
 </div>
 </section>
 </li>

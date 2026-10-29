@@ -65,6 +65,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#%3Cinit%3E(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long)" tabindex="0">Snapshot(UUID, UUID, boolean, long, String, String, float, Set, int, int, Integer, Map, Long)</a></li>
 <li><a href="#%3Cinit%3E(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long,java.lang.Long)" tabindex="0">Snapshot(UUID, UUID, boolean, long, String, String, float, Set, int, int, Integer, Map, Long, Long)</a></li>
 <li><a href="#%3Cinit%3E(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long,java.lang.Long,java.util.Map)" tabindex="0">Snapshot(UUID, UUID, boolean, long, String, String, float, Set, int, int, Integer, Map, Long, Long, Map)</a></li>
+<li><a href="#%3Cinit%3E(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long,java.lang.Long,java.util.Map,net.raphimc.viabedrock.api.model.NativeActorMessage.Colors)" tabindex="0">Snapshot(UUID, UUID, boolean, long, String, String, float, Set, int, int, Integer, Map, Long, Long, Map, NativeActorMessage.Colors)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -87,6 +88,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#uniqueId()" tabindex="0">uniqueId()</a></li>
 <li><a href="#targetId()" tabindex="0">targetId()</a></li>
 <li><a href="#integerMetadata()" tabindex="0">integerMetadata()</a></li>
+<li><a href="#colors()" tabindex="0">colors()</a></li>
 </ol>
 </li>
 </ol>
@@ -112,7 +114,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeActorMessage.Snapshot</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, boolean&nbsp;localPlayer, long&nbsp;runtimeId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, float&nbsp;scale, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;&nbsp;flags, int&nbsp;variant, int&nbsp;markVariant, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;uniqueId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;targetId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;integerMetadata)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeActorMessage.Snapshot</span>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, boolean&nbsp;localPlayer, long&nbsp;runtimeId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, float&nbsp;scale, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;&nbsp;flags, int&nbsp;variant, int&nbsp;markVariant, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;uniqueId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;targetId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;integerMetadata, <a href="NativeActorMessage.Colors.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Colors</a>&nbsp;colors)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="NativeActorMessage.html" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a></span></div>
 </div>
@@ -125,7 +127,7 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <h2>Nested Class Summary</h2>
 <div class="inherited-list">
 <h3 id="nested-classes-inherited-from-class-net.raphimc.viabedrock.api.model.NativeActorMessage">Nested classes/interfaces inherited from interface&nbsp;<a href="NativeActorMessage.html#nested-class-summary" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a></h3>
-<code><a href="NativeActorMessage.Remove.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Remove</a>, <a href="NativeActorMessage.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Snapshot</a></code></div>
+<code><a href="NativeActorMessage.Colors.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Colors</a>, <a href="NativeActorMessage.Remove.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Remove</a>, <a href="NativeActorMessage.Snapshot.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Snapshot</a></code></div>
 </section>
 </li>
 <!-- =========== FIELD SUMMARY =========== -->
@@ -134,7 +136,7 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <h2>Field Summary</h2>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.raphimc.viabedrock.api.model.NativeActorMessage">Fields inherited from interface&nbsp;<a href="NativeActorMessage.html#field-summary" title="interface in net.raphimc.viabedrock.api.model">NativeActorMessage</a></h3>
-<code><a href="NativeActorMessage.html#CHANNEL">CHANNEL</a>, <a href="NativeActorMessage.html#CHANNELS">CHANNELS</a>, <a href="NativeActorMessage.html#CURRENT_CHANNEL">CURRENT_CHANNEL</a>, <a href="NativeActorMessage.html#CURRENT_TYPE">CURRENT_TYPE</a>, <a href="NativeActorMessage.html#MAX_PAYLOAD_BYTES">MAX_PAYLOAD_BYTES</a>, <a href="NativeActorMessage.html#MAX_PROPERTIES">MAX_PROPERTIES</a>, <a href="NativeActorMessage.html#METADATA_CHANNEL">METADATA_CHANNEL</a>, <a href="NativeActorMessage.html#METADATA_TYPE">METADATA_TYPE</a>, <a href="NativeActorMessage.html#QUERY_CHANNEL">QUERY_CHANNEL</a>, <a href="NativeActorMessage.html#QUERY_TYPE">QUERY_TYPE</a>, <a href="NativeActorMessage.html#STRING">STRING</a>, <a href="NativeActorMessage.html#TYPE">TYPE</a></code></div>
+<code><a href="NativeActorMessage.html#CHANNEL">CHANNEL</a>, <a href="NativeActorMessage.html#CHANNELS">CHANNELS</a>, <a href="NativeActorMessage.html#COLOR_CHANNEL">COLOR_CHANNEL</a>, <a href="NativeActorMessage.html#COLOR_TYPE">COLOR_TYPE</a>, <a href="NativeActorMessage.html#CURRENT_CHANNEL">CURRENT_CHANNEL</a>, <a href="NativeActorMessage.html#CURRENT_TYPE">CURRENT_TYPE</a>, <a href="NativeActorMessage.html#MAX_PAYLOAD_BYTES">MAX_PAYLOAD_BYTES</a>, <a href="NativeActorMessage.html#MAX_PROPERTIES">MAX_PROPERTIES</a>, <a href="NativeActorMessage.html#METADATA_CHANNEL">METADATA_CHANNEL</a>, <a href="NativeActorMessage.html#METADATA_TYPE">METADATA_TYPE</a>, <a href="NativeActorMessage.html#QUERY_CHANNEL">QUERY_CHANNEL</a>, <a href="NativeActorMessage.html#QUERY_TYPE">QUERY_TYPE</a>, <a href="NativeActorMessage.html#STRING">STRING</a>, <a href="NativeActorMessage.html#TYPE">TYPE</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -209,6 +211,25 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;targetId,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;integerMetadata)</code></div>
 <div class="col-last odd-row-color">
+<div class="block">Integer-metadata snapshots predate native byte-sized palette indices.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long,java.lang.Long,java.util.Map,net.raphimc.viabedrock.api.model.NativeActorMessage.Colors)" class="member-name-link">Snapshot</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ boolean&nbsp;localPlayer,
+ long&nbsp;runtimeId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ float&nbsp;scale,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;&nbsp;flags,
+ int&nbsp;variant,
+ int&nbsp;markVariant,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;uniqueId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;targetId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;integerMetadata,
+ <a href="NativeActorMessage.Colors.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Colors</a>&nbsp;colors)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Snapshot</code> record class.</div>
 </div>
 </div>
@@ -225,94 +246,99 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeActorMessage.Colors.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Colors</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#colors()" class="member-name-link">colors</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>colors</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#flags()" class="member-name-link">flags</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#flags()" class="member-name-link">flags</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>flags</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#identifier()" class="member-name-link">identifier</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#identifier()" class="member-name-link">identifier</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>identifier</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#integerMetadata()" class="member-name-link">integerMetadata</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#integerMetadata()" class="member-name-link">integerMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>integerMetadata</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lifetime()" class="member-name-link">lifetime</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lifetime()" class="member-name-link">lifetime</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>lifetime</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#localPlayer()" class="member-name-link">localPlayer</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#localPlayer()" class="member-name-link">localPlayer</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>localPlayer</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markVariant()" class="member-name-link">markVariant</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markVariant()" class="member-name-link">markVariant</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>markVariant</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name()" class="member-name-link">name</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name()" class="member-name-link">name</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>name</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#properties()" class="member-name-link">properties</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#properties()" class="member-name-link">properties</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>properties</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runtimeId()" class="member-name-link">runtimeId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runtimeId()" class="member-name-link">runtimeId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>runtimeId</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scale()" class="member-name-link">scale</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scale()" class="member-name-link">scale</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>scale</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spellColor()" class="member-name-link">spellColor</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spellColor()" class="member-name-link">spellColor</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>spellColor</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetId()" class="member-name-link">targetId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetId()" class="member-name-link">targetId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>targetId</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uniqueId()" class="member-name-link">uniqueId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uniqueId()" class="member-name-link">uniqueId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>uniqueId</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uuid()" class="member-name-link">uuid</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uuid()" class="member-name-link">uuid</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>uuid</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variant()" class="member-name-link">variant</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variant()" class="member-name-link">variant</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>variant</code> record component.</div>
 </div>
 </div>
@@ -414,6 +440,30 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;uniqueId,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;targetId,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;integerMetadata)</span></div>
+<div class="block">Integer-metadata snapshots predate native byte-sized palette indices.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.util.UUID,java.util.UUID,boolean,long,java.lang.String,java.lang.String,float,java.util.Set,int,int,java.lang.Integer,java.util.Map,java.lang.Long,java.lang.Long,java.util.Map,net.raphimc.viabedrock.api.model.NativeActorMessage.Colors)">
+<h3>Snapshot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Snapshot</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ boolean&nbsp;localPlayer,
+ long&nbsp;runtimeId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ float&nbsp;scale,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorFlags.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorFlags</a>&gt;&nbsp;flags,
+ int&nbsp;variant,
+ int&nbsp;markVariant,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;spellColor,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;properties,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;uniqueId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;targetId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../protocol/data/enums/bedrock/ActorDataIds.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock">ActorDataIds</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;integerMetadata,
+ <a href="NativeActorMessage.Colors.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Colors</a>&nbsp;colors)</span></div>
 <div class="block">Creates an instance of a <code>Snapshot</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -432,6 +482,7 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <dd><code>uniqueId</code> - the value for the <code>uniqueId</code> record component</dd>
 <dd><code>targetId</code> - the value for the <code>targetId</code> record component</dd>
 <dd><code>integerMetadata</code> - the value for the <code>integerMetadata</code> record component</dd>
+<dd><code>colors</code> - the value for the <code>colors</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -688,6 +739,19 @@ implements <a href="NativeActorMessage.html" title="interface in net.raphimc.via
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>integerMetadata</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="colors()">
+<h3>colors</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeActorMessage.Colors.html" title="class in net.raphimc.viabedrock.api.model">NativeActorMessage.Colors</a></span>&nbsp;<span class="element-name">colors</span>()</div>
+<div class="block">Returns the value of the <code>colors</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>colors</code> record component</dd>
 </dl>
 </div>
 </section>

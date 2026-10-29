@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set)" tabindex="0">Draw(BedrockPlayerControllers.Surface, BedrockGeometryModel, List, BedrockActorMaterialDefinitions.Material, Set)</a></li>
+<li><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)" tabindex="0">Draw(BedrockPlayerControllers.Surface, BedrockGeometryModel, List, BedrockActorMaterialDefinitions.Material, Set, BedrockActorTint)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -71,6 +71,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#images()" tabindex="0">images()</a></li>
 <li><a href="#material()" tabindex="0">material()</a></li>
 <li><a href="#bones()" tabindex="0">bones()</a></li>
+<li><a href="#tint()" tabindex="0">tint()</a></li>
 </ol>
 </li>
 </ol>
@@ -92,7 +93,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockWorldActorAppearance.Draw</span>(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface, org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;&nbsp;images, <a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockWorldActorAppearance.Draw</span>(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface, org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;&nbsp;images, <a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones, <a href="../render/BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a>&nbsp;tint)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -106,11 +107,12 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set)" class="member-name-link">Draw</a><wbr>(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)" class="member-name-link">Draw</a><wbr>(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface,
  org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;&nbsp;images,
  <a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones,
+ <a href="../render/BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a>&nbsp;tint)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Draw</code> record class.</div>
 </div>
@@ -163,9 +165,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>surface</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../render/BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tint()" class="member-name-link">tint</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>tint</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -186,14 +193,15 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set)">
+<section class="detail" id="&lt;init&gt;(com.viaversion.viafabricplus.bedrock.appearance.BedrockPlayerControllers.Surface,org.cube.converter.model.impl.bedrock.BedrockGeometryModel,java.util.List,com.viaversion.viafabricplus.bedrock.render.BedrockActorMaterialDefinitions.Material,java.util.Set,com.viaversion.viafabricplus.bedrock.render.BedrockActorTint)">
 <h3>Draw</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Draw</span><wbr><span class="parameters">(<a href="BedrockPlayerControllers.Surface.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockPlayerControllers.Surface</a>&nbsp;surface,
  org.cube.converter.model.impl.bedrock.BedrockGeometryModel&nbsp;geometry,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/image/BufferedImage.html" title="class or interface in java.awt.image" class="external-link">BufferedImage</a>&gt;&nbsp;images,
  <a href="../render/BedrockActorMaterialDefinitions.Material.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorMaterialDefinitions.Material</a>&nbsp;material,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;bones,
+ <a href="../render/BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a>&nbsp;tint)</span></div>
 <div class="block">Creates an instance of a <code>Draw</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -202,6 +210,7 @@ loadScripts(document, 'script');</script>
 <dd><code>images</code> - the value for the <code>images</code> record component</dd>
 <dd><code>material</code> - the value for the <code>material</code> record component</dd>
 <dd><code>bones</code> - the value for the <code>bones</code> record component</dd>
+<dd><code>tint</code> - the value for the <code>tint</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -322,6 +331,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>bones</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="tint()">
+<h3>tint</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../render/BedrockActorTint.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorTint</a></span>&nbsp;<span class="element-name">tint</span>()</div>
+<div class="block">Returns the value of the <code>tint</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>tint</code> record component</dd>
 </dl>
 </div>
 </section>

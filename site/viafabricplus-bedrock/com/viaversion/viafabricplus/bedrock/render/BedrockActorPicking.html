@@ -60,6 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#bounds(net.minecraft.world.entity.Entity)" tabindex="0">bounds(Entity)</a></li>
 <li><a href="#owner(net.minecraft.world.entity.Entity)" tabindex="0">owner(Entity)</a></li>
 <li><a href="#filter(java.util.function.Predicate,net.minecraft.world.entity.Entity)" tabindex="0">filter(Predicate, Entity)</a></li>
+<li><a href="#attack(net.minecraft.world.entity.Entity)" tabindex="0">attack(Entity)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
 </ol>
 </li>
@@ -98,19 +99,24 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeActorPickingMessage)" class="member-name-link">accept</a><wbr>(net.minecraft.network.Connection&nbsp;connection,
  net.raphimc.viabedrock.api.model.NativeActorPickingMessage&nbsp;message)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.AABB</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bounds(net.minecraft.world.entity.Entity)" class="member-name-link">bounds</a><wbr>(net.minecraft.world.entity.Entity&nbsp;proxy)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#attack(net.minecraft.world.entity.Entity)" class="member-name-link">attack</a><wbr>(net.minecraft.world.entity.Entity&nbsp;target)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Replace the coordinate-free Java attack with one atomic, negotiated native attack.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.AABB</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bounds(net.minecraft.world.entity.Entity)" class="member-name-link">bounds</a><wbr>(net.minecraft.world.entity.Entity&nbsp;proxy)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a><wbr>&lt;net.minecraft.world.entity.Entity&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#filter(java.util.function.Predicate,net.minecraft.world.entity.Entity)" class="member-name-link">filter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;vanilla,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a><wbr>&lt;net.minecraft.world.entity.Entity&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#filter(java.util.function.Predicate,net.minecraft.world.entity.Entity)" class="member-name-link">filter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;vanilla,
  net.minecraft.world.entity.Entity&nbsp;camera)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.entity.Entity</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#owner(net.minecraft.world.entity.Entity)" class="member-name-link">owner</a><wbr>(net.minecraft.world.entity.Entity&nbsp;proxy)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.entity.Entity</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#owner(net.minecraft.world.entity.Entity)" class="member-name-link">owner</a><wbr>(net.minecraft.world.entity.Entity&nbsp;proxy)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -159,6 +165,15 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;net.minecraft.world.entity.Entity&gt;</span>&nbsp;<span class="element-name">filter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;vanilla,
  net.minecraft.world.entity.Entity&nbsp;camera)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="attack(net.minecraft.world.entity.Entity)">
+<h3>attack</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">attack</span><wbr><span class="parameters">(net.minecraft.world.entity.Entity&nbsp;target)</span></div>
+<div class="block">Replace the coordinate-free Java attack with one atomic, negotiated native attack.</div>
 </div>
 </section>
 </li>
