@@ -66,6 +66,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#requireSupportedEffects()" tabindex="0">requireSupportedEffects()</a></li>
 <li><a href="#close()" tabindex="0">close()</a></li>
 <li><a href="#owns(java.util.UUID,java.util.UUID)" tabindex="0">owns(UUID, UUID)</a></li>
+<li><a href="#opacity(float)" tabindex="0">opacity(float)</a></li>
+<li><a href="#compositeColor(int)" tabindex="0">compositeColor(int)</a></li>
 <li><a href="#picture(java.util.function.Supplier)" tabindex="0">picture(Supplier)</a></li>
 <li><a href="#inPicture()" tabindex="0">inPicture()</a></li>
 <li><a href="#current()" tabindex="0">current()</a></li>
@@ -146,29 +148,37 @@ implements <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#correctPose(com.mojang.blaze3d.vertex.PoseStack,float,int)" class="member-name-link">correctPose</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;pose,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#compositeColor(int)" class="member-name-link">compositeColor</a><wbr>(int&nbsp;color)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Java composites the finished GUI texture with premultiplied alpha.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#correctPose(com.mojang.blaze3d.vertex.PoseStack,float,int)" class="member-name-link">correctPose</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;pose,
  float&nbsp;width,
  int&nbsp;guiScale)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockGuiActorContext.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockGuiActorContext</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#current()" class="member-name-link">current</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockGuiActorContext.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockGuiActorContext</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#current()" class="member-name-link">current</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../appearance/BedrockEmotePlayback.GuiPlayback.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockEmotePlayback.GuiPlayback</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#emote()" class="member-name-link">emote</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#extracted(net.minecraft.client.renderer.entity.state.AvatarRenderState)" class="member-name-link">extracted</a><wbr>(net.minecraft.client.renderer.entity.state.AvatarRenderState&nbsp;state)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../appearance/BedrockEmotePlayback.GuiPlayback.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockEmotePlayback.GuiPlayback</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#emote()" class="member-name-link">emote</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#extracted(net.minecraft.client.renderer.entity.state.EntityRenderState)" class="member-name-link">extracted</a><wbr>(net.minecraft.client.renderer.entity.state.EntityRenderState&nbsp;state)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#extracted(net.minecraft.client.renderer.entity.state.AvatarRenderState)" class="member-name-link">extracted</a><wbr>(net.minecraft.client.renderer.entity.state.AvatarRenderState&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockGuiActorContext.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockGuiActorContext</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frame(net.minecraft.client.renderer.entity.state.EntityRenderState)" class="member-name-link">frame</a><wbr>(net.minecraft.client.renderer.entity.state.EntityRenderState&nbsp;state)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#extracted(net.minecraft.client.renderer.entity.state.EntityRenderState)" class="member-name-link">extracted</a><wbr>(net.minecraft.client.renderer.entity.state.EntityRenderState&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#inPicture()" class="member-name-link">inPicture</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockGuiActorContext.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockGuiActorContext</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frame(net.minecraft.client.renderer.entity.state.EntityRenderState)" class="member-name-link">frame</a><wbr>(net.minecraft.client.renderer.entity.state.EntityRenderState&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#inPicture()" class="member-name-link">inPicture</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#opacity(float)" class="member-name-link">opacity</a><wbr>(float&nbsp;opacity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#owns(java.util.UUID,java.util.UUID)" class="member-name-link">owns</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;actor,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime)</code></div>
@@ -296,6 +306,23 @@ implements <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">owns</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;actor,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="opacity(float)">
+<h3>opacity</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">opacity</span><wbr><span class="parameters">(float&nbsp;opacity)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="compositeColor(int)">
+<h3>compositeColor</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">compositeColor</span><wbr><span class="parameters">(int&nbsp;color)</span></div>
+<div class="block">Java composites the finished GUI texture with premultiplied alpha.</div>
 </div>
 </section>
 </li>

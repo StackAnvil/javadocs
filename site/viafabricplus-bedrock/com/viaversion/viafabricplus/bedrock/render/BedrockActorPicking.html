@@ -59,8 +59,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.NativeActorPickingMessage)" tabindex="0">accept(Connection, NativeActorPickingMessage)</a></li>
 <li><a href="#bounds(net.minecraft.world.entity.Entity)" tabindex="0">bounds(Entity)</a></li>
 <li><a href="#owner(net.minecraft.world.entity.Entity)" tabindex="0">owner(Entity)</a></li>
-<li><a href="#filter(java.util.function.Predicate,net.minecraft.world.entity.Entity)" tabindex="0">filter(Predicate, Entity)</a></li>
+<li><a href="#filter(java.util.function.Predicate,net.minecraft.world.entity.Entity,net.minecraft.world.phys.Vec3,net.minecraft.world.phys.Vec3)" tabindex="0">filter(Predicate, Entity, Vec3, Vec3)</a></li>
+<li><a href="#filterBlockHit(net.minecraft.world.phys.HitResult,net.minecraft.world.phys.Vec3,double)" tabindex="0">filterBlockHit(HitResult, Vec3, double)</a></li>
 <li><a href="#attack(net.minecraft.world.entity.Entity)" tabindex="0">attack(Entity)</a></li>
+<li><a href="#nativeCamera(net.minecraft.world.entity.Entity)" tabindex="0">nativeCamera(Entity)</a></li>
+<li><a href="#viewDirection(float,float)" tabindex="0">viewDirection(float, float)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
 </ol>
 </li>
@@ -111,12 +114,26 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a><wbr>&lt;net.minecraft.world.entity.Entity&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#filter(java.util.function.Predicate,net.minecraft.world.entity.Entity)" class="member-name-link">filter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;vanilla,
- net.minecraft.world.entity.Entity&nbsp;camera)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#filter(java.util.function.Predicate,net.minecraft.world.entity.Entity,net.minecraft.world.phys.Vec3,net.minecraft.world.phys.Vec3)" class="member-name-link">filter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;vanilla,
+ net.minecraft.world.entity.Entity&nbsp;camera,
+ net.minecraft.world.phys.Vec3&nbsp;start,
+ net.minecraft.world.phys.Vec3&nbsp;end)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.HitResult</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#filterBlockHit(net.minecraft.world.phys.HitResult,net.minecraft.world.phys.Vec3,double)" class="member-name-link">filterBlockHit</a><wbr>(net.minecraft.world.phys.HitResult&nbsp;hit,
+ net.minecraft.world.phys.Vec3&nbsp;eye,
+ double&nbsp;reach)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#nativeCamera(net.minecraft.world.entity.Entity)" class="member-name-link">nativeCamera</a><wbr>(net.minecraft.world.entity.Entity&nbsp;entity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.entity.Entity</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#owner(net.minecraft.world.entity.Entity)" class="member-name-link">owner</a><wbr>(net.minecraft.world.entity.Entity&nbsp;proxy)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.Vec3</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#viewDirection(float,float)" class="member-name-link">viewDirection</a><wbr>(float&nbsp;pitch,
+ float&nbsp;yaw)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -160,11 +177,23 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="filter(java.util.function.Predicate,net.minecraft.world.entity.Entity)">
+<section class="detail" id="filter(java.util.function.Predicate,net.minecraft.world.entity.Entity,net.minecraft.world.phys.Vec3,net.minecraft.world.phys.Vec3)">
 <h3>filter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;net.minecraft.world.entity.Entity&gt;</span>&nbsp;<span class="element-name">filter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;net.minecraft.world.entity.Entity&gt;&nbsp;vanilla,
- net.minecraft.world.entity.Entity&nbsp;camera)</span></div>
+ net.minecraft.world.entity.Entity&nbsp;camera,
+ net.minecraft.world.phys.Vec3&nbsp;start,
+ net.minecraft.world.phys.Vec3&nbsp;end)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="filterBlockHit(net.minecraft.world.phys.HitResult,net.minecraft.world.phys.Vec3,double)">
+<h3>filterBlockHit</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.world.phys.HitResult</span>&nbsp;<span class="element-name">filterBlockHit</span><wbr><span class="parameters">(net.minecraft.world.phys.HitResult&nbsp;hit,
+ net.minecraft.world.phys.Vec3&nbsp;eye,
+ double&nbsp;reach)</span></div>
 </div>
 </section>
 </li>
@@ -174,6 +203,23 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">attack</span><wbr><span class="parameters">(net.minecraft.world.entity.Entity&nbsp;target)</span></div>
 <div class="block">Replace the coordinate-free Java attack with one atomic, negotiated native attack.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="nativeCamera(net.minecraft.world.entity.Entity)">
+<h3>nativeCamera</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">nativeCamera</span><wbr><span class="parameters">(net.minecraft.world.entity.Entity&nbsp;entity)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="viewDirection(float,float)">
+<h3>viewDirection</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.world.phys.Vec3</span>&nbsp;<span class="element-name">viewDirection</span><wbr><span class="parameters">(float&nbsp;pitch,
+ float&nbsp;yaw)</span></div>
 </div>
 </section>
 </li>
