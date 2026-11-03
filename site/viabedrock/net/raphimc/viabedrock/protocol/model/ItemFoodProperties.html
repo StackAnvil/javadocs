@@ -64,18 +64,24 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(boolean,boolean)" tabindex="0">ItemFoodProperties(boolean, boolean)</a></li>
+<li><a href="#%3Cinit%3E(boolean,boolean,boolean,int,float,java.lang.String)" tabindex="0">ItemFoodProperties(boolean, boolean, boolean, int, float, String)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#withComponentData(com.viaversion.nbt.tag.CompoundTag)" tabindex="0">withComponentData(CompoundTag)</a></li>
+<li><a href="#withComponentData(com.viaversion.nbt.tag.CompoundTag,boolean)" tabindex="0">withComponentData(CompoundTag, boolean)</a></li>
 <li><a href="#allowsUse(float,float,boolean)" tabindex="0">allowsUse(float, float, boolean)</a></li>
+<li><a href="#javaComponent()" tabindex="0">javaComponent()</a></li>
+<li><a href="#javaConsumable(java.lang.Integer)" tabindex="0">javaConsumable(Integer)</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
 <li><a href="#food()" tabindex="0">food()</a></li>
 <li><a href="#canAlwaysEat()" tabindex="0">canAlwaysEat()</a></li>
+<li><a href="#useModifiers()" tabindex="0">useModifiers()</a></li>
+<li><a href="#nutrition()" tabindex="0">nutrition()</a></li>
+<li><a href="#saturationModifier()" tabindex="0">saturationModifier()</a></li>
+<li><a href="#useAnimation()" tabindex="0">useAnimation()</a></li>
 </ol>
 </li>
 </ol>
@@ -93,9 +99,9 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ItemFoodProperties</span>(boolean&nbsp;food, boolean&nbsp;canAlwaysEat)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ItemFoodProperties</span>(boolean&nbsp;food, boolean&nbsp;canAlwaysEat, boolean&nbsp;useModifiers, int&nbsp;nutrition, float&nbsp;saturationModifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;useAnimation)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">Advertised native food eligibility, independent of the mapped Java item.</div>
+<div class="block">Native food admission includes other installed components that can start use.</div>
 </div>
 </section>
 <section class="summary">
@@ -123,8 +129,12 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(boolean,boolean)" class="member-name-link">ItemFoodProperties</a><wbr>(boolean&nbsp;food,
- boolean&nbsp;canAlwaysEat)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(boolean,boolean,boolean,int,float,java.lang.String)" class="member-name-link">ItemFoodProperties</a><wbr>(boolean&nbsp;food,
+ boolean&nbsp;canAlwaysEat,
+ boolean&nbsp;useModifiers,
+ int&nbsp;nutrition,
+ float&nbsp;saturationModifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;useAnimation)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>ItemFoodProperties</code> record class.</div>
 </div>
@@ -145,7 +155,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#allowsUse(float,float,boolean)" class="member-name-link">allowsUse</a><wbr>(float&nbsp;hunger,
  float&nbsp;maximumHunger,
- boolean&nbsp;creative)</code></div>
+ boolean&nbsp;ignoresHunger)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canAlwaysEat()" class="member-name-link">canAlwaysEat</a>()</code></div>
@@ -167,13 +177,40 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.data.FoodProperties1_21_2</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaComponent()" class="member-name-link">javaComponent</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.data.consumable.Consumable1_21_2</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaConsumable(java.lang.Integer)" class="member-name-link">javaConsumable</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;useDurationTicks)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nutrition()" class="member-name-link">nutrition</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>nutrition</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saturationModifier()" class="member-name-link">saturationModifier</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>saturationModifier</code> record component.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#useAnimation()" class="member-name-link">useAnimation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>useAnimation</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#useModifiers()" class="member-name-link">useModifiers</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>useModifiers</code> record component.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ItemFoodProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemFoodProperties</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withComponentData(com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">withComponentData</a><wbr>(com.viaversion.nbt.tag.CompoundTag&nbsp;components)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withComponentData(com.viaversion.nbt.tag.CompoundTag,boolean)" class="member-name-link">withComponentData</a><wbr>(com.viaversion.nbt.tag.CompoundTag&nbsp;components,
+ boolean&nbsp;componentItem)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -209,16 +246,24 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(boolean,boolean)">
+<section class="detail" id="&lt;init&gt;(boolean,boolean,boolean,int,float,java.lang.String)">
 <h3>ItemFoodProperties</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ItemFoodProperties</span><wbr><span class="parameters">(boolean&nbsp;food,
- boolean&nbsp;canAlwaysEat)</span></div>
+ boolean&nbsp;canAlwaysEat,
+ boolean&nbsp;useModifiers,
+ int&nbsp;nutrition,
+ float&nbsp;saturationModifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;useAnimation)</span></div>
 <div class="block">Creates an instance of a <code>ItemFoodProperties</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>food</code> - the value for the <code>food</code> record component</dd>
 <dd><code>canAlwaysEat</code> - the value for the <code>canAlwaysEat</code> record component</dd>
+<dd><code>useModifiers</code> - the value for the <code>useModifiers</code> record component</dd>
+<dd><code>nutrition</code> - the value for the <code>nutrition</code> record component</dd>
+<dd><code>saturationModifier</code> - the value for the <code>saturationModifier</code> record component</dd>
+<dd><code>useAnimation</code> - the value for the <code>useAnimation</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -232,10 +277,11 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="withComponentData(com.viaversion.nbt.tag.CompoundTag)">
+<section class="detail" id="withComponentData(com.viaversion.nbt.tag.CompoundTag,boolean)">
 <h3>withComponentData</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemFoodProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemFoodProperties</a></span>&nbsp;<span class="element-name">withComponentData</span><wbr><span class="parameters">(com.viaversion.nbt.tag.CompoundTag&nbsp;components)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemFoodProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemFoodProperties</a></span>&nbsp;<span class="element-name">withComponentData</span><wbr><span class="parameters">(com.viaversion.nbt.tag.CompoundTag&nbsp;components,
+ boolean&nbsp;componentItem)</span></div>
 </div>
 </section>
 </li>
@@ -245,7 +291,23 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">allowsUse</span><wbr><span class="parameters">(float&nbsp;hunger,
  float&nbsp;maximumHunger,
- boolean&nbsp;creative)</span></div>
+ boolean&nbsp;ignoresHunger)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="javaComponent()">
+<h3>javaComponent</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.api.minecraft.item.data.FoodProperties1_21_2</span>&nbsp;<span class="element-name">javaComponent</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="javaConsumable(java.lang.Integer)">
+<h3>javaConsumable</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.api.minecraft.item.data.consumable.Consumable1_21_2</span>&nbsp;<span class="element-name">javaConsumable</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;useDurationTicks)</span></div>
 </div>
 </section>
 </li>
@@ -284,7 +346,7 @@ loadScripts(document, 'script');</script>
 <h3>equals</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
-<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with the <code>compare</code> method from their corresponding wrapper classes.</div>
+<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. Reference components are compared with <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>; primitive components are compared with the <code>compare</code> method from their corresponding wrapper classes.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
@@ -318,6 +380,58 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>canAlwaysEat</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="useModifiers()">
+<h3>useModifiers</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">useModifiers</span>()</div>
+<div class="block">Returns the value of the <code>useModifiers</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>useModifiers</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="nutrition()">
+<h3>nutrition</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">nutrition</span>()</div>
+<div class="block">Returns the value of the <code>nutrition</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>nutrition</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="saturationModifier()">
+<h3>saturationModifier</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">saturationModifier</span>()</div>
+<div class="block">Returns the value of the <code>saturationModifier</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>saturationModifier</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="useAnimation()">
+<h3>useAnimation</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">useAnimation</span>()</div>
+<div class="block">Returns the value of the <code>useAnimation</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>useAnimation</code> record component</dd>
 </dl>
 </div>
 </section>

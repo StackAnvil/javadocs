@@ -11,6 +11,7 @@ com.viaversion.viafabricplus.bedrock.injection
 com.viaversion.viafabricplus.bedrock.injection.access
 com.viaversion.viafabricplus.bedrock.injection.mixin.compat.emf
 com.viaversion.viafabricplus.bedrock.injection.mixin.compat.iris
+com.viaversion.viafabricplus.bedrock.injection.mixin.compat.moreculling
 com.viaversion.viafabricplus.bedrock.injection.mixin.compat.sodium
 com.viaversion.viafabricplus.bedrock.injection.mixin.core.access
 com.viaversion.viafabricplus.bedrock.injection.mixin.core.connection
@@ -20,6 +21,7 @@ com.viaversion.viafabricplus.bedrock.injection.mixin.features.creative
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.entities
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.input
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.inventory
+com.viaversion.viafabricplus.bedrock.injection.mixin.features.item
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.misc
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.movement
 com.viaversion.viafabricplus.bedrock.injection.mixin.features.particle

@@ -66,6 +66,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#enabled()" tabindex="0">enabled()</a></li>
 <li><a href="#refreshCapability()" tabindex="0">refreshCapability()</a></li>
 <li><a href="#request(net.raphimc.viabedrock.api.model.PlayerInventoryScreenRequest)" tabindex="0">request(PlayerInventoryScreenRequest)</a></li>
+<li><a href="#deferredEnabled()" tabindex="0">deferredEnabled()</a></li>
+<li><a href="#request(net.raphimc.viabedrock.api.model.PlayerInventoryScreenRequest,boolean)" tabindex="0">request(PlayerInventoryScreenRequest, boolean)</a></li>
 <li><a href="#ownsClose()" tabindex="0">ownsClose()</a></li>
 <li><a href="#hasPendingOpen()" tabindex="0">hasPendingOpen()</a></li>
 <li><a href="#acceptsClicks()" tabindex="0">acceptsClicks()</a></li>
@@ -140,34 +142,41 @@ loadScripts(document, 'script');</script>
 <div class="block">The next request starts only after the previous native close acknowledgment.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enabled()" class="member-name-link">enabled</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deferredEnabled()" class="member-name-link">deferredEnabled</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPendingOpen()" class="member-name-link">hasPendingOpen</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enabled()" class="member-name-link">enabled</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#opened()" class="member-name-link">opened</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPendingOpen()" class="member-name-link">hasPendingOpen</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#opened()" class="member-name-link">opened</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called after the native container is installed, before any queued Java clicks are replayed.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ownsClose()" class="member-name-link">ownsClose</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ownsClose()" class="member-name-link">ownsClose</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Ordinary close-zero packets cannot identify which of two player openings they belong to.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ownsPresentation(long)" class="member-name-link">ownsPresentation</a><wbr>(long&nbsp;opening)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ownsPresentation(long)" class="member-name-link">ownsPresentation</a><wbr>(long&nbsp;opening)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Presentation reads do not imply permission to submit an item request.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recovering()" class="member-name-link">recovering</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refreshCapability()" class="member-name-link">refreshCapability</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recovering()" class="member-name-link">recovering</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#request(net.raphimc.viabedrock.api.model.PlayerInventoryScreenRequest)" class="member-name-link">request</a><wbr>(<a href="../../api/model/PlayerInventoryScreenRequest.html" title="class in net.raphimc.viabedrock.api.model">PlayerInventoryScreenRequest</a>&nbsp;request)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refreshCapability()" class="member-name-link">refreshCapability</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#request(net.raphimc.viabedrock.api.model.PlayerInventoryScreenRequest)" class="member-name-link">request</a><wbr>(<a href="../../api/model/PlayerInventoryScreenRequest.html" title="class in net.raphimc.viabedrock.api.model">PlayerInventoryScreenRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#request(net.raphimc.viabedrock.api.model.PlayerInventoryScreenRequest,boolean)" class="member-name-link">request</a><wbr>(<a href="../../api/model/PlayerInventoryScreenRequest.html" title="class in net.raphimc.viabedrock.api.model">PlayerInventoryScreenRequest</a>&nbsp;request,
+ boolean&nbsp;deferred)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retire()" class="member-name-link">retire</a>()</code></div>
@@ -235,6 +244,23 @@ loadScripts(document, 'script');</script>
 <h3>request</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">request</span><wbr><span class="parameters">(<a href="../../api/model/PlayerInventoryScreenRequest.html" title="class in net.raphimc.viabedrock.api.model">PlayerInventoryScreenRequest</a>&nbsp;request)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="deferredEnabled()">
+<h3>deferredEnabled</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">deferredEnabled</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="request(net.raphimc.viabedrock.api.model.PlayerInventoryScreenRequest,boolean)">
+<h3>request</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">request</span><wbr><span class="parameters">(<a href="../../api/model/PlayerInventoryScreenRequest.html" title="class in net.raphimc.viabedrock.api.model">PlayerInventoryScreenRequest</a>&nbsp;request,
+ boolean&nbsp;deferred)</span></div>
 </div>
 </section>
 </li>

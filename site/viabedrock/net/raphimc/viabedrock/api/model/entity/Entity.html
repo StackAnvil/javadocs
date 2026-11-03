@@ -154,6 +154,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#sendNativeActorSnapshot()" tabindex="0">sendNativeActorSnapshot()</a></li>
 <li><a href="#sendNativeActorSnapshot(boolean)" tabindex="0">sendNativeActorSnapshot(boolean)</a></li>
 <li><a href="#sendNativeSpatialCommand(boolean)" tabindex="0">sendNativeSpatialCommand(boolean)</a></li>
+<li><a href="#sendRemotePlayerMovement(int,boolean,short,long)" tabindex="0">sendRemotePlayerMovement(int, boolean, short, long)</a></li>
+<li><a href="#sendRemotePlayerMovement(int,boolean,short,long,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">sendRemotePlayerMovement(int, boolean, short, long, Position3f, Position3f)</a></li>
 <li><a href="#nativeSpatialCommand()" tabindex="0">nativeSpatialCommand()</a></li>
 <li><a href="#nativeActorBounds()" tabindex="0">nativeActorBounds()</a></li>
 <li><a href="#nativeTargetId()" tabindex="0">nativeTargetId()</a></li>
@@ -481,6 +483,22 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeSpatialCommand(boolean)" class="member-name-link">sendNativeSpatialCommand</a><wbr>(boolean&nbsp;force)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendRemotePlayerMovement(int,boolean,short,long)" class="member-name-link">sendRemotePlayerMovement</a><wbr>(int&nbsp;mode,
+ boolean&nbsp;riding,
+ short&nbsp;flags,
+ long&nbsp;duration)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Preserve the source mode without changing the legacy Java translation or actor receive cache.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendRemotePlayerMovement(int,boolean,short,long,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">sendRemotePlayerMovement</a><wbr>(int&nbsp;mode,
+ boolean&nbsp;riding,
+ short&nbsp;flags,
+ long&nbsp;duration,
+ <a href="../../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;sourcePosition,
+ <a href="../../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;sourceRotation)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHasBossBar(boolean)" class="member-name-link">setHasBossBar</a><wbr>(boolean&nbsp;hasBossBar)</code></div>
@@ -1295,6 +1313,31 @@ loadScripts(document, 'script');</script>
 <h3>sendNativeSpatialCommand</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendNativeSpatialCommand</span><wbr><span class="parameters">(boolean&nbsp;force)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendRemotePlayerMovement(int,boolean,short,long)">
+<h3>sendRemotePlayerMovement</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendRemotePlayerMovement</span><wbr><span class="parameters">(int&nbsp;mode,
+ boolean&nbsp;riding,
+ short&nbsp;flags,
+ long&nbsp;duration)</span></div>
+<div class="block">Preserve the source mode without changing the legacy Java translation or actor receive cache.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendRemotePlayerMovement(int,boolean,short,long,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f)">
+<h3>sendRemotePlayerMovement</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendRemotePlayerMovement</span><wbr><span class="parameters">(int&nbsp;mode,
+ boolean&nbsp;riding,
+ short&nbsp;flags,
+ long&nbsp;duration,
+ <a href="../../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;sourcePosition,
+ <a href="../../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;sourceRotation)</span></div>
 </div>
 </section>
 </li>

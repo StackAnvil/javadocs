@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemUseTriggerType,boolean,net.raphimc.viabedrock.api.model.BlockUsePrediction.Result,net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">Use(ItemUseTriggerType, boolean, BlockUsePrediction.Result, Position3f)</a></li>
+<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemUseTriggerType,boolean,net.raphimc.viabedrock.api.model.BlockUsePrediction.Result,net.raphimc.viabedrock.protocol.model.Position3f,boolean)" tabindex="0">Use(ItemUseTriggerType, boolean, BlockUsePrediction.Result, Position3f, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -73,6 +73,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#start()" tabindex="0">start()</a></li>
 <li><a href="#result()" tabindex="0">result()</a></li>
 <li><a href="#cursor()" tabindex="0">cursor()</a></li>
+<li><a href="#airAllowed()" tabindex="0">airAllowed()</a></li>
 </ol>
 </li>
 </ol>
@@ -94,7 +95,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BlockUseStorage.Use</span>(<a href="../data/enums/bedrock/generated/ItemUseTriggerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemUseTriggerType</a>&nbsp;trigger, boolean&nbsp;start, <a href="../../api/model/BlockUsePrediction.Result.html" title="enum class in net.raphimc.viabedrock.api.model">BlockUsePrediction.Result</a>&nbsp;result, <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;cursor)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BlockUseStorage.Use</span>(<a href="../data/enums/bedrock/generated/ItemUseTriggerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemUseTriggerType</a>&nbsp;trigger, boolean&nbsp;start, <a href="../../api/model/BlockUsePrediction.Result.html" title="enum class in net.raphimc.viabedrock.api.model">BlockUsePrediction.Result</a>&nbsp;result, <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;cursor, boolean&nbsp;airAllowed)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -108,10 +109,11 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemUseTriggerType,boolean,net.raphimc.viabedrock.api.model.BlockUsePrediction.Result,net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">Use</a><wbr>(<a href="../data/enums/bedrock/generated/ItemUseTriggerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemUseTriggerType</a>&nbsp;trigger,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemUseTriggerType,boolean,net.raphimc.viabedrock.api.model.BlockUsePrediction.Result,net.raphimc.viabedrock.protocol.model.Position3f,boolean)" class="member-name-link">Use</a><wbr>(<a href="../data/enums/bedrock/generated/ItemUseTriggerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemUseTriggerType</a>&nbsp;trigger,
  boolean&nbsp;start,
  <a href="../../api/model/BlockUsePrediction.Result.html" title="enum class in net.raphimc.viabedrock.api.model">BlockUsePrediction.Result</a>&nbsp;result,
- <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;cursor)</code></div>
+ <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;cursor,
+ boolean&nbsp;airAllowed)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Use</code> record class.</div>
 </div>
@@ -129,45 +131,50 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursor()" class="member-name-link">cursor</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#airAllowed()" class="member-name-link">airAllowed</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>airAllowed</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursor()" class="member-name-link">cursor</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>cursor</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/BlockUsePrediction.Result.html" title="enum class in net.raphimc.viabedrock.api.model">BlockUsePrediction.Result</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#result()" class="member-name-link">result</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/BlockUsePrediction.Result.html" title="enum class in net.raphimc.viabedrock.api.model">BlockUsePrediction.Result</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#result()" class="member-name-link">result</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>result</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#start()" class="member-name-link">start</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#start()" class="member-name-link">start</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>start</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#successful()" class="member-name-link">successful</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/ActorSwingSource.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ActorSwingSource</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#swingSource()" class="member-name-link">swingSource</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#successful()" class="member-name-link">successful</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/ActorSwingSource.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ActorSwingSource</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#swingSource()" class="member-name-link">swingSource</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/ItemUseTriggerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemUseTriggerType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#trigger()" class="member-name-link">trigger</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../data/enums/bedrock/generated/ItemUseTriggerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemUseTriggerType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#trigger()" class="member-name-link">trigger</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>trigger</code> record component.</div>
 </div>
 </div>
@@ -188,13 +195,14 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemUseTriggerType,boolean,net.raphimc.viabedrock.api.model.BlockUsePrediction.Result,net.raphimc.viabedrock.protocol.model.Position3f)">
+<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.ItemUseTriggerType,boolean,net.raphimc.viabedrock.api.model.BlockUsePrediction.Result,net.raphimc.viabedrock.protocol.model.Position3f,boolean)">
 <h3>Use</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Use</span><wbr><span class="parameters">(<a href="../data/enums/bedrock/generated/ItemUseTriggerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ItemUseTriggerType</a>&nbsp;trigger,
  boolean&nbsp;start,
  <a href="../../api/model/BlockUsePrediction.Result.html" title="enum class in net.raphimc.viabedrock.api.model">BlockUsePrediction.Result</a>&nbsp;result,
- <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;cursor)</span></div>
+ <a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;cursor,
+ boolean&nbsp;airAllowed)</span></div>
 <div class="block">Creates an instance of a <code>Use</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -202,6 +210,7 @@ loadScripts(document, 'script');</script>
 <dd><code>start</code> - the value for the <code>start</code> record component</dd>
 <dd><code>result</code> - the value for the <code>result</code> record component</dd>
 <dd><code>cursor</code> - the value for the <code>cursor</code> record component</dd>
+<dd><code>airAllowed</code> - the value for the <code>airAllowed</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -325,6 +334,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>cursor</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="airAllowed()">
+<h3>airAllowed</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">airAllowed</span>()</div>
+<div class="block">Returns the value of the <code>airAllowed</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>airAllowed</code> record component</dd>
 </dl>
 </div>
 </section>

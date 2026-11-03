@@ -63,6 +63,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#resolveName(java.lang.String,int,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" tabindex="0">resolveName(String, int, NativeRecipeDescriptor.Registry)</a></li>
 <li><a href="#resolveMolang(java.lang.String)" tabindex="0">resolveMolang(String)</a></li>
 <li><a href="#isEmpty(net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" tabindex="0">isEmpty(NativeRecipeDescriptor.Registry)</a></li>
+<li><a href="#craftDescriptor(net.raphimc.viabedrock.protocol.model.recipe.ItemRecipeDescriptor,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" tabindex="0">craftDescriptor(ItemRecipeDescriptor, NativeRecipeDescriptor.Registry)</a></li>
 <li><a href="#matchesSource(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" tabindex="0">matchesSource(BedrockItem, NativeRecipeDescriptor.Registry, Function)</a></li>
 <li><a href="#matchesStack(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" tabindex="0">matchesStack(BedrockItem, NativeRecipeDescriptor.Registry, Function)</a></li>
 </ol>
@@ -145,41 +146,47 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isEmpty(net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" class="member-name-link">isEmpty</a><wbr>(<a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#matchesSource(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" class="member-name-link">matchesSource</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;source,
- <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a>&gt;&nbsp;descriptor)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">Match the default concrete descriptor produced from a source stack after native source guards.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../../../protocol/model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#craftDescriptor(net.raphimc.viabedrock.protocol.model.recipe.ItemRecipeDescriptor,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" class="member-name-link">craftDescriptor</a><wbr>(<a href="../../../protocol/model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a>&nbsp;source,
+ <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Ordinary descriptors retain recipe metadata; predicates choose a concrete source.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isEmpty(net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" class="member-name-link">isEmpty</a><wbr>(<a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#matchesStack(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" class="member-name-link">matchesStack</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;source,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#matchesSource(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" class="member-name-link">matchesSource</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;source,
  <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a>&gt;&nbsp;descriptor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Match the default concrete descriptor produced from a source stack after native source guards.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#matchesStack(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry,java.util.function.Function)" class="member-name-link">matchesStack</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;source,
+ <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>, <a href="../../../protocol/model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a>&gt;&nbsp;descriptor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Compare constructed descriptors independently of the caller's recipe-source admission.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#resolve(net.raphimc.viabedrock.protocol.model.recipe.ItemDescriptor,java.util.function.Supplier)" class="member-name-link">resolve</a><wbr>(<a href="../../../protocol/model/recipe/ItemDescriptor.html" title="interface in net.raphimc.viabedrock.protocol.model.recipe">ItemDescriptor</a>&nbsp;input,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#resolve(net.raphimc.viabedrock.protocol.model.recipe.ItemDescriptor,java.util.function.Supplier)" class="member-name-link">resolve</a><wbr>(<a href="../../../protocol/model/recipe/ItemDescriptor.html" title="interface in net.raphimc.viabedrock.protocol.model.recipe">ItemDescriptor</a>&nbsp;input,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;? extends <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&gt;&nbsp;registry)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">Each decoded ingredient position owns its lazy name or admitted concrete payload.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#resolveMolang(java.lang.String)" class="member-name-link">resolveMolang</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expression)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#resolveName(java.lang.String,int,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" class="member-name-link">resolveName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- int&nbsp;auxiliary,
- <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#resolveMolang(java.lang.String)" class="member-name-link">resolveMolang</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expression)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#resolveTag(java.lang.String,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" class="member-name-link">resolveTag</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#resolveName(java.lang.String,int,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" class="member-name-link">resolveName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ int&nbsp;auxiliary,
  <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="NativeRecipeDescriptor.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#resolveTag(java.lang.String,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)" class="member-name-link">resolveTag</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -236,6 +243,16 @@ loadScripts(document, 'script');</script>
 <h3>isEmpty</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isEmpty</span><wbr><span class="parameters">(<a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="craftDescriptor(net.raphimc.viabedrock.protocol.model.recipe.ItemRecipeDescriptor,net.raphimc.viabedrock.api.model.container.NativeRecipeDescriptor.Registry)">
+<h3>craftDescriptor</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a></span>&nbsp;<span class="element-name">craftDescriptor</span><wbr><span class="parameters">(<a href="../../../protocol/model/recipe/ItemRecipeDescriptor.html" title="class in net.raphimc.viabedrock.protocol.model.recipe">ItemRecipeDescriptor</a>&nbsp;source,
+ <a href="NativeRecipeDescriptor.Registry.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeRecipeDescriptor.Registry</a>&nbsp;registry)</span></div>
+<div class="block">Ordinary descriptors retain recipe metadata; predicates choose a concrete source.</div>
 </div>
 </section>
 </li>
