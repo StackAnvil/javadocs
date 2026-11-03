@@ -65,7 +65,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#reference(float)" tabindex="0">reference(float)</a></li>
 <li><a href="#bind(float,java.lang.Runnable)" tabindex="0">bind(float, Runnable)</a></li>
 <li><a href="#masked()" tabindex="0">masked()</a></li>
+<li><a href="#playerFade()" tabindex="0">playerFade()</a></li>
 <li><a href="#bind(float,boolean,java.lang.Runnable)" tabindex="0">bind(float, boolean, Runnable)</a></li>
+<li><a href="#bind(float,boolean,boolean,java.lang.Runnable)" tabindex="0">bind(float, boolean, boolean, Runnable)</a></li>
 </ol>
 </li>
 </ol>
@@ -115,16 +117,25 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bind(float,boolean,java.lang.Runnable)" class="member-name-link">bind</a><wbr>(float&nbsp;reference,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bind(float,boolean,boolean,java.lang.Runnable)" class="member-name-link">bind</a><wbr>(float&nbsp;reference,
  boolean&nbsp;masked,
+ boolean&nbsp;playerFade,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;action)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bind(float,java.lang.Runnable)" class="member-name-link">bind</a><wbr>(float&nbsp;reference,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bind(float,boolean,java.lang.Runnable)" class="member-name-link">bind</a><wbr>(float&nbsp;reference,
+ boolean&nbsp;masked,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;action)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bind(float,java.lang.Runnable)" class="member-name-link">bind</a><wbr>(float&nbsp;reference,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;action)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#masked()" class="member-name-link">masked</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#masked()" class="member-name-link">masked</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#playerFade()" class="member-name-link">playerFade</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#reference(float)" class="member-name-link">reference</a><wbr>(float&nbsp;fallback)</code></div>
@@ -196,11 +207,30 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="playerFade()">
+<h3>playerFade</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">playerFade</span>()</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="bind(float,boolean,java.lang.Runnable)">
 <h3>bind</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">bind</span><wbr><span class="parameters">(float&nbsp;reference,
  boolean&nbsp;masked,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;action)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="bind(float,boolean,boolean,java.lang.Runnable)">
+<h3>bind</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">bind</span><wbr><span class="parameters">(float&nbsp;reference,
+ boolean&nbsp;masked,
+ boolean&nbsp;playerFade,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;action)</span></div>
 </div>
 </section>
