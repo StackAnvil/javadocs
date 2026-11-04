@@ -65,6 +65,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(boolean,java.lang.Integer,java.lang.Integer)" tabindex="0">ItemStorageProperties(boolean, Integer, Integer)</a></li>
+<li><a href="#%3Cinit%3E(boolean,java.lang.Integer,java.lang.Integer,java.lang.Integer)" tabindex="0">ItemStorageProperties(boolean, Integer, Integer, Integer)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -77,6 +78,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#storage()" tabindex="0">storage()</a></li>
 <li><a href="#modifier()" tabindex="0">modifier()</a></li>
 <li><a href="#capacity()" tabindex="0">capacity()</a></li>
+<li><a href="#viewableSlots()" tabindex="0">viewableSlots()</a></li>
 </ol>
 </li>
 </ol>
@@ -94,7 +96,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ItemStorageProperties</span>(boolean&nbsp;storage, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;modifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;capacity)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ItemStorageProperties</span>(boolean&nbsp;storage, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;modifier, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;capacity, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;viewableSlots)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Storage components belong to the selected native Item definition.</div>
 </div>
@@ -127,7 +129,12 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(boolean,java.lang.Integer,java.lang.Integer)" class="member-name-link">ItemStorageProperties</a><wbr>(boolean&nbsp;storage,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;modifier,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;capacity)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(boolean,java.lang.Integer,java.lang.Integer,java.lang.Integer)" class="member-name-link">ItemStorageProperties</a><wbr>(boolean&nbsp;storage,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;modifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;capacity,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;viewableSlots)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Creates an instance of a <code>ItemStorageProperties</code> record class.</div>
 </div>
 </div>
@@ -177,9 +184,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ItemStorageProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStorageProperties</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withComponentData(com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">withComponentData</a><wbr>(com.viaversion.nbt.tag.CompoundTag&nbsp;components)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viewableSlots()" class="member-name-link">viewableSlots</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>viewableSlots</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ItemStorageProperties.html" title="class in net.raphimc.viabedrock.protocol.model">ItemStorageProperties</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withComponentData(com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">withComponentData</a><wbr>(com.viaversion.nbt.tag.CompoundTag&nbsp;components)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -220,12 +232,24 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ItemStorageProperties</span><wbr><span class="parameters">(boolean&nbsp;storage,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;modifier,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;capacity)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(boolean,java.lang.Integer,java.lang.Integer,java.lang.Integer)">
+<h3>ItemStorageProperties</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ItemStorageProperties</span><wbr><span class="parameters">(boolean&nbsp;storage,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;modifier,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;capacity,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;viewableSlots)</span></div>
 <div class="block">Creates an instance of a <code>ItemStorageProperties</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storage</code> - the value for the <code>storage</code> record component</dd>
 <dd><code>modifier</code> - the value for the <code>modifier</code> record component</dd>
 <dd><code>capacity</code> - the value for the <code>capacity</code> record component</dd>
+<dd><code>viewableSlots</code> - the value for the <code>viewableSlots</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -336,6 +360,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>capacity</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="viewableSlots()">
+<h3>viewableSlots</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">viewableSlots</span>()</div>
+<div class="block">Returns the value of the <code>viewableSlots</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>viewableSlots</code> record component</dd>
 </dl>
 </div>
 </section>
