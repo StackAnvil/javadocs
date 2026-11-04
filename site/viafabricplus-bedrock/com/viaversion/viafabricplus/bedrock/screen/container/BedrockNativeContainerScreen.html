@@ -59,6 +59,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#init()" tabindex="0">init()</a></li>
+<li><a href="#setInitialFocus()" tabindex="0">setInitialFocus()</a></li>
+<li><a href="#repositionElements()" tabindex="0">repositionElements()</a></li>
 <li><a href="#closeOnPlayerHurt()" tabindex="0">closeOnPlayerHurt()</a></li>
 <li><a href="#closing()" tabindex="0">closing()</a></li>
 <li><a href="#onClose()" tabindex="0">onClose()</a></li>
@@ -234,6 +236,12 @@ negotiated native request backend.</div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removed()" class="member-name-link">removed</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#repositionElements()" class="member-name-link">repositionElements</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInitialFocus()" class="member-name-link">setInitialFocus</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slotClicked(net.minecraft.world.inventory.Slot,int,int,net.minecraft.world.inventory.ContainerInput)" class="member-name-link">slotClicked</a><wbr>(net.minecraft.world.inventory.Slot&nbsp;slot,
  int&nbsp;index,
  int&nbsp;button,
@@ -247,7 +255,7 @@ negotiated native request backend.</div>
 <code>addItemSlotMouseAction, checkHotbarKeyPressed, extractLabels, extractRenderState, extractSlot, extractSlots, extractTooltip, getMenu, getTooltipFromContainerItem, handleSlotStateChanged, isHovering, isInGameUi, isPauseScreen, onMouseClickAction, tick</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.screens.Screen">Methods inherited from class&nbsp;net.minecraft.client.gui.screens.Screen</h3>
-<code>added, addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, canInterruptWithAnotherScreen, changeFocus, children, clearFocus, clearWidgets, clickCommandAction, clickUrlAction, defaultHandleClickEvent, defaultHandleGameClickEvent, extractBlurredBackground, extractMenuBackground, extractMenuBackground, extractMenuBackgroundTexture, extractPanorama, extractRenderStateWithTooltipAndSubtitles, extractTransparentBackground, fadeWidgets, findNarratableWidget, getBackgroundMusic, getFont, getNarrationMessage, getRectangle, getTitle, getTooltipFromItem, getUsageNarration, handleDelayedNarration, init, insertText, isAllowedInPortal, isInputCaptured, isMouseOver, isValidCharacterForName, onFilesDrop, rebuildWidgets, removeWidget, repositionElements, resize, scheduleNarration, setInitialFocus, setInitialFocus, shouldCloseOnEsc, shouldNarrateNavigation, showsActiveEffects, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, updateNarratorStatus</code></div>
+<code>added, addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, canInterruptWithAnotherScreen, changeFocus, children, clearFocus, clearWidgets, clickCommandAction, clickUrlAction, defaultHandleClickEvent, defaultHandleGameClickEvent, extractBlurredBackground, extractMenuBackground, extractMenuBackground, extractMenuBackgroundTexture, extractPanorama, extractRenderStateWithTooltipAndSubtitles, extractTransparentBackground, fadeWidgets, findNarratableWidget, getBackgroundMusic, getFont, getNarrationMessage, getRectangle, getTitle, getTooltipFromItem, getUsageNarration, handleDelayedNarration, init, insertText, isAllowedInPortal, isInputCaptured, isMouseOver, isValidCharacterForName, onFilesDrop, rebuildWidgets, removeWidget, resize, scheduleNarration, setInitialFocus, shouldCloseOnEsc, shouldNarrateNavigation, showsActiveEffects, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, updateNarratorStatus</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.components.events.AbstractContainerEventHandler">Methods inherited from class&nbsp;net.minecraft.client.gui.components.events.AbstractContainerEventHandler</h3>
 <code>getFocused, isDragging, setDragging, setFocused</code></div>
@@ -285,6 +293,30 @@ negotiated native request backend.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code>init</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setInitialFocus()">
+<h3>setInitialFocus</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInitialFocus</span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>setInitialFocus</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.Screen</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="repositionElements()">
+<h3>repositionElements</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">repositionElements</span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>repositionElements</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.Screen</code></dd>
 </dl>
 </div>
 </section>
