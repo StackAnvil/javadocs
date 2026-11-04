@@ -64,6 +64,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#advance(long)" tabindex="0">advance(long)</a></li>
 <li><a href="#animations()" tabindex="0">animations()</a></li>
+<li><a href="#drainRetiredFactories()" tabindex="0">drainRetiredFactories()</a></li>
 <li><a href="#requestExit(long)" tabindex="0">requestExit(long)</a></li>
 <li><a href="#exiting()" tabindex="0">exiting()</a></li>
 <li><a href="#exitComplete()" tabindex="0">exitComplete()</a></li>
@@ -120,21 +121,26 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiAnimations.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiAnimations</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#animations()" class="member-name-link">animations</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exitComplete()" class="member-name-link">exitComplete</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exiting()" class="member-name-link">exiting</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceRoot(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,long)" class="member-name-link">replaceRoot</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;root,
- long&nbsp;elapsedNanos)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drainRetiredFactories()" class="member-name-link">drainRetiredFactories</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Binding refreshes retain control clocks; new controls start at the refresh time.</div>
+<div class="block">Hosts retire only these completed creations, after animation traversal has finished.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestExit(long)" class="member-name-link">requestExit</a><wbr>(long&nbsp;elapsedNanos)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exitComplete()" class="member-name-link">exitComplete</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exiting()" class="member-name-link">exiting</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceRoot(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,long)" class="member-name-link">replaceRoot</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;root,
+ long&nbsp;elapsedNanos)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Binding refreshes retain control clocks; new controls start at the refresh time.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestExit(long)" class="member-name-link">requestExit</a><wbr>(long&nbsp;elapsedNanos)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns whether an authored pop exit must finish before its host removes the scene.</div>
 </div>
 </div>
@@ -183,6 +189,15 @@ loadScripts(document, 'script');</script>
 <h3>animations</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeUiAnimations.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiAnimations</a></span>&nbsp;<span class="element-name">animations</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="drainRetiredFactories()">
+<h3>drainRetiredFactories</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;</span>&nbsp;<span class="element-name">drainRetiredFactories</span>()</div>
+<div class="block">Hosts retire only these completed creations, after animation traversal has finished.</div>
 </div>
 </section>
 </li>

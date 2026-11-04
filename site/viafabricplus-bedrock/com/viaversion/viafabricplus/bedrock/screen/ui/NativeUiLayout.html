@@ -65,6 +65,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#layout(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,int,int,java.util.Map)" tabindex="0">layout(NativeUiScene.Node, int, int, Map)</a></li>
+<li><a href="#layout(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,int,int,java.util.Map,java.util.function.Function)" tabindex="0">layout(NativeUiScene.Node, int, int, Map, Function)</a></li>
 <li><a href="#dimension(com.google.gson.JsonElement,float,float,float)" tabindex="0">dimension(JsonElement, float, float, float)</a></li>
 <li><a href="#vector(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.lang.String,int,float)" tabindex="0">vector(NativeUiScene.Node, String, int, float)</a></li>
 </ol>
@@ -152,12 +153,19 @@ loadScripts(document, 'script');</script>
  int&nbsp;height,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&gt;&nbsp;scroll)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#vector(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.lang.String,int,float)" class="member-name-link">vector</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#layout(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,int,int,java.util.Map,java.util.function.Function)" class="member-name-link">layout</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
+ int&nbsp;width,
+ int&nbsp;height,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&gt;&nbsp;scroll,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>, <a href="NativeUiCursorPlacement.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiCursorPlacement</a>&gt;&nbsp;placements)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#vector(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.lang.String,int,float)" class="member-name-link">vector</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  int&nbsp;axis,
  float&nbsp;fallback)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -208,6 +216,18 @@ loadScripts(document, 'script');</script>
  int&nbsp;width,
  int&nbsp;height,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&gt;&nbsp;scroll)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="layout(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,int,int,java.util.Map,java.util.function.Function)">
+<h3>layout</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a></span>&nbsp;<span class="element-name">layout</span><wbr><span class="parameters">(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;node,
+ int&nbsp;width,
+ int&nbsp;height,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&gt;&nbsp;scroll,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>, <a href="NativeUiCursorPlacement.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiCursorPlacement</a>&gt;&nbsp;placements)</span></div>
 </div>
 </section>
 </li>
