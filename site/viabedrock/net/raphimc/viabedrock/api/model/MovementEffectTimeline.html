@@ -77,6 +77,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#hasGlideBoost(int,long)" tabindex="0">hasGlideBoost(int, long)</a></li>
 <li><a href="#hasDolphinBoost(int)" tabindex="0">hasDolphinBoost(int)</a></li>
 <li><a href="#hasDolphinBoost(int,long)" tabindex="0">hasDolphinBoost(int, long)</a></li>
+<li><a href="#swimSpeedMultiplier(int,boolean,long)" tabindex="0">swimSpeedMultiplier(int, boolean, long)</a></li>
 <li><a href="#hasGeyserBoost(int)" tabindex="0">hasGeyserBoost(int)</a></li>
 <li><a href="#hasGeyserBoost(int,long)" tabindex="0">hasGeyserBoost(int, long)</a></li>
 <li><a href="#predictGeyserBoost(int)" tabindex="0">predictGeyserBoost(int)</a></li>
@@ -227,6 +228,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainEntities(java.util.function.IntPredicate)" class="member-name-link">retainEntities</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;present)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#swimSpeedMultiplier(int,boolean,long)" class="member-name-link">swimSpeedMultiplier</a><wbr>(int&nbsp;entityId,
+ boolean&nbsp;swimming,
+ long&nbsp;completedFrame)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native SwimSpeedMultiplier uses marker presence, including the final zero-duration frame.</div>
+</div>
 </div>
 </div>
 </div>
@@ -368,6 +376,17 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDolphinBoost</span><wbr><span class="parameters">(int&nbsp;entityId,
  long&nbsp;completedFrame)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="swimSpeedMultiplier(int,boolean,long)">
+<h3>swimSpeedMultiplier</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">swimSpeedMultiplier</span><wbr><span class="parameters">(int&nbsp;entityId,
+ boolean&nbsp;swimming,
+ long&nbsp;completedFrame)</span></div>
+<div class="block">Native SwimSpeedMultiplier uses marker presence, including the final zero-duration frame.</div>
 </div>
 </section>
 </li>

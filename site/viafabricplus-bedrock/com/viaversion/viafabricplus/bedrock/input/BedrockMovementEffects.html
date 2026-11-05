@@ -65,7 +65,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#completeFrame()" tabindex="0">completeFrame()</a></li>
 <li><a href="#replayCorrections()" tabindex="0">replayCorrections()</a></li>
 <li><a href="#hasGlideBoost(int)" tabindex="0">hasGlideBoost(int)</a></li>
-<li><a href="#hasDolphinBoost(int)" tabindex="0">hasDolphinBoost(int)</a></li>
+<li><a href="#swimSpeedMultiplier(int,boolean)" tabindex="0">swimSpeedMultiplier(int, boolean)</a></li>
 <li><a href="#hasGeyserBoost(int)" tabindex="0">hasGeyserBoost(int)</a></li>
 <li><a href="#predictGeyserBoost(int)" tabindex="0">predictGeyserBoost(int)</a></li>
 <li><a href="#underwaterSpeed(int)" tabindex="0">underwaterSpeed(int)</a></li>
@@ -123,25 +123,26 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frameId()" class="member-name-link">frameId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasDolphinBoost(int)" class="member-name-link">hasDolphinBoost</a><wbr>(int&nbsp;entityId)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasGeyserBoost(int)" class="member-name-link">hasGeyserBoost</a><wbr>(int&nbsp;entityId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasGeyserBoost(int)" class="member-name-link">hasGeyserBoost</a><wbr>(int&nbsp;entityId)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasGlideBoost(int)" class="member-name-link">hasGlideBoost</a><wbr>(int&nbsp;entityId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasGlideBoost(int)" class="member-name-link">hasGlideBoost</a><wbr>(int&nbsp;entityId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#pendingPhysicalFrame(java.util.function.IntPredicate)" class="member-name-link">pendingPhysicalFrame</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;predictedActor)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#predictGeyserBoost(int)" class="member-name-link">predictGeyserBoost</a><wbr>(int&nbsp;entityId)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#pendingPhysicalFrame(java.util.function.IntPredicate)" class="member-name-link">pendingPhysicalFrame</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntPredicate.html" title="class or interface in java.util.function" class="external-link">IntPredicate</a>&nbsp;predictedActor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#predictGeyserBoost(int)" class="member-name-link">predictGeyserBoost</a><wbr>(int&nbsp;entityId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#replayCorrections()" class="member-name-link">replayCorrections</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#replayCorrections()" class="member-name-link">replayCorrections</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#swimSpeedMultiplier(int,boolean)" class="member-name-link">swimSpeedMultiplier</a><wbr>(int&nbsp;entityId,
+ boolean&nbsp;swimming)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @Nullable <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#underwaterSpeed(int)" class="member-name-link">underwaterSpeed</a><wbr>(int&nbsp;entityId)</code></div>
@@ -238,10 +239,11 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="hasDolphinBoost(int)">
-<h3>hasDolphinBoost</h3>
+<section class="detail" id="swimSpeedMultiplier(int,boolean)">
+<h3>swimSpeedMultiplier</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDolphinBoost</span><wbr><span class="parameters">(int&nbsp;entityId)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">swimSpeedMultiplier</span><wbr><span class="parameters">(int&nbsp;entityId,
+ boolean&nbsp;swimming)</span></div>
 </div>
 </section>
 </li>
