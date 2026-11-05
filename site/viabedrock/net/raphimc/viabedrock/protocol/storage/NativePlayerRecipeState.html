@@ -71,6 +71,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#tick()" tabindex="0">tick()</a></li>
 <li><a href="#actionsEnabled()" tabindex="0">actionsEnabled()</a></li>
 <li><a href="#publication()" tabindex="0">publication()</a></li>
+<li><a href="#handleBundleAction(net.raphimc.viabedrock.api.model.NativeBundleAction)" tabindex="0">handleBundleAction(NativeBundleAction)</a></li>
 <li><a href="#handleAction(net.raphimc.viabedrock.api.model.NativePlayerInventoryAction)" tabindex="0">handleAction(NativePlayerInventoryAction)</a></li>
 </ol>
 </li>
@@ -138,23 +139,28 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Refresh before admitting a command: an older preview cannot authorize a changed source or opening.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/PlayerRecipeModel.html" title="class in net.raphimc.viabedrock.protocol.model">PlayerRecipeModel</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#model()" class="member-name-link">model</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleBundleAction(net.raphimc.viabedrock.api.model.NativeBundleAction)" class="member-name-link">handleBundleAction</a><wbr>(<a href="../../api/model/NativeBundleAction.html" title="class in net.raphimc.viabedrock.api.model">NativeBundleAction</a>&nbsp;action)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Refresh before admitting a command: an older preview cannot authorize a changed source or opening.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/PlayerRecipeModel.html" title="class in net.raphimc.viabedrock.protocol.model">PlayerRecipeModel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#model()" class="member-name-link">model</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Null means the presentation retired; it never means that an empty catalog was substituted.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#openPlayer(long)" class="member-name-link">openPlayer</a><wbr>(long&nbsp;opening)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/InventoryOptions.html" title="class in net.raphimc.viabedrock.protocol.model">InventoryOptions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#preferences()" class="member-name-link">preferences</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativePlayerInventoryMessage.html" title="class in net.raphimc.viabedrock.api.model">NativePlayerInventoryMessage</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#publication()" class="member-name-link">publication</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#openPlayer(long)" class="member-name-link">openPlayer</a><wbr>(long&nbsp;opening)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/InventoryOptions.html" title="class in net.raphimc.viabedrock.protocol.model">InventoryOptions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#preferences()" class="member-name-link">preferences</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativePlayerInventoryMessage.html" title="class in net.raphimc.viabedrock.api.model">NativePlayerInventoryMessage</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#publication()" class="member-name-link">publication</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -256,6 +262,15 @@ loadScripts(document, 'script');</script>
 <h3>publication</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativePlayerInventoryMessage.html" title="class in net.raphimc.viabedrock.api.model">NativePlayerInventoryMessage</a></span>&nbsp;<span class="element-name">publication</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="handleBundleAction(net.raphimc.viabedrock.api.model.NativeBundleAction)">
+<h3>handleBundleAction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">handleBundleAction</span><wbr><span class="parameters">(<a href="../../api/model/NativeBundleAction.html" title="class in net.raphimc.viabedrock.api.model">NativeBundleAction</a>&nbsp;action)</span></div>
+<div class="block">Refresh before admitting a command: an older preview cannot authorize a changed source or opening.</div>
 </div>
 </section>
 </li>

@@ -58,6 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#extractLast(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D,net.raphimc.viabedrock.protocol.model.BedrockItem,int,net.raphimc.viabedrock.api.model.container.NativeBundleTransferPlan.Source)" tabindex="0">extractLast(BedrockItem, BedrockItem[], BedrockItem, int, NativeBundleTransferPlan.Source)</a></li>
 <li><a href="#extract(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D,net.raphimc.viabedrock.protocol.model.BedrockItem,int,int,net.raphimc.viabedrock.api.model.container.NativeBundleTransferPlan.Source)" tabindex="0">extract(BedrockItem, BedrockItem[], BedrockItem, int, int, NativeBundleTransferPlan.Source)</a></li>
 <li><a href="#insert(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D,net.raphimc.viabedrock.protocol.model.BedrockItem,int,java.lang.Integer,net.raphimc.viabedrock.api.model.container.NativeBundleTransferPlan.Source)" tabindex="0">insert(BedrockItem, BedrockItem[], BedrockItem, int, Integer, NativeBundleTransferPlan.Source)</a></li>
 </ol>
@@ -133,13 +134,22 @@ loadScripts(document, 'script');</script>
  <a href="NativeBundleTransferPlan.Source.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeBundleTransferPlan.Source</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeBundleTransferPlan.Result.html" title="class in net.raphimc.viabedrock.api.model.container">NativeBundleTransferPlan.Result</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#insert(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D,net.raphimc.viabedrock.protocol.model.BedrockItem,int,java.lang.Integer,net.raphimc.viabedrock.api.model.container.NativeBundleTransferPlan.Source)" class="member-name-link">insert</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;bundle,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#extractLast(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D,net.raphimc.viabedrock.protocol.model.BedrockItem,int,net.raphimc.viabedrock.api.model.container.NativeBundleTransferPlan.Source)" class="member-name-link">extractLast</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;bundle,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;contents,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;destination,
+ int&nbsp;destinationSlot,
+ <a href="NativeBundleTransferPlan.Source.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeBundleTransferPlan.Source</a>&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Desktop default extraction uses one Take and returns its admission result.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeBundleTransferPlan.Result.html" title="class in net.raphimc.viabedrock.api.model.container">NativeBundleTransferPlan.Result</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#insert(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D,net.raphimc.viabedrock.protocol.model.BedrockItem,int,java.lang.Integer,net.raphimc.viabedrock.api.model.container.NativeBundleTransferPlan.Source)" class="member-name-link">insert</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;bundle,
  <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;contents,
  <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;incoming,
  int&nbsp;incomingSlot,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity,
  <a href="NativeBundleTransferPlan.Source.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeBundleTransferPlan.Source</a>&nbsp;source)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -157,6 +167,19 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="extractLast(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem[],net.raphimc.viabedrock.protocol.model.BedrockItem,int,net.raphimc.viabedrock.api.model.container.NativeBundleTransferPlan.Source)">
+<h3>extractLast</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeBundleTransferPlan.Result.html" title="class in net.raphimc.viabedrock.api.model.container">NativeBundleTransferPlan.Result</a></span>&nbsp;<span class="element-name">extractLast</span><wbr><span class="parameters">(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;bundle,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;contents,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;destination,
+ int&nbsp;destinationSlot,
+ <a href="NativeBundleTransferPlan.Source.html" title="interface in net.raphimc.viabedrock.api.model.container">NativeBundleTransferPlan.Source</a>&nbsp;source)</span></div>
+<div class="block">Desktop default extraction uses one Take and returns its admission result.</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="extract(net.raphimc.viabedrock.protocol.model.BedrockItem,net.raphimc.viabedrock.protocol.model.BedrockItem[],net.raphimc.viabedrock.protocol.model.BedrockItem,int,int,net.raphimc.viabedrock.api.model.container.NativeBundleTransferPlan.Source)">
 <h3>extract</h3>
