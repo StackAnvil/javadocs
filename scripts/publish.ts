@@ -1,6 +1,6 @@
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
-import { copyFile, cp, mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { copyFile, cp, mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const root = join(import.meta.dir, "..");
@@ -41,6 +41,37 @@ function javaHome(version: string): string {
     throw new Error(`Java ${version} is missing. Set JAVA_HOME_${version}_X64 or STACKANVIL_JAVA_${version}.`);
   }
   return path;
+}
+
+async function installOreUiShaperResources(tag: string): Promise<void> {
+  const download = join(source, ".stackanvil", "javadoc-release-assets");
+  const resources = join(source, ".stackanvil", "tools", "oreui-shaper-resources");
+  await rm(download, { recursive: true, force: true });
+  await mkdir(download, { recursive: true });
+  await run("gh", [
+    "release",
+    "download",
+    tag,
+    "--repo",
+    sourceRepository,
+    "--pattern",
+    "viafabricplus-bedrock-*-StackAnvil.jar",
+    "--dir",
+    download,
+  ]);
+  const assets = (await readdir(download)).filter((name) =>
+    /^viafabricplus-bedrock-.+-StackAnvil\.jar$/.test(name)
+  );
+  if (assets.length !== 1) {
+    throw new Error(`Expected one ViaFabricPlus Bedrock release JAR, found ${assets.length}`);
+  }
+  await run("unzip", [
+    "-q",
+    join(download, assets[0]!),
+    "assets/viafabricplus-bedrock/oreui-shaper/*",
+    "-d",
+    resources,
+  ]);
 }
 
 function indexHtml(tag: string): string {
@@ -113,6 +144,7 @@ async function publish(): Promise<void> {
     await run("git", ["clone", "--depth", "1", "--branch", tag, "--single-branch",
       `https://github.com/${sourceRepository}.git`, source]);
     await run("bun", ["install", "--frozen-lockfile"], source);
+    await installOreUiShaperResources(tag);
     await run("bun", ["run", "build", "all"], source);
     const viaFabricPlus = JSON.parse(await readFile(join(source, "viafabricplus.json"), "utf8")) as { version: string };
     await mkdir(stage, { recursive: true });

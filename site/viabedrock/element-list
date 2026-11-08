@@ -14,8 +14,10 @@ net.raphimc.viabedrock.api.model
 net.raphimc.viabedrock.api.model.container
 net.raphimc.viabedrock.api.model.container.block
 net.raphimc.viabedrock.api.model.container.dynamic
+net.raphimc.viabedrock.api.model.container.entity
 net.raphimc.viabedrock.api.model.container.player
 net.raphimc.viabedrock.api.model.entity
+net.raphimc.viabedrock.api.model.entity.properties
 net.raphimc.viabedrock.api.model.scoreboard
 net.raphimc.viabedrock.api.modinterface
 net.raphimc.viabedrock.api.protocol
@@ -23,8 +25,10 @@ net.raphimc.viabedrock.api.resourcepack
 net.raphimc.viabedrock.api.resourcepack.content
 net.raphimc.viabedrock.api.resourcepack.definition
 net.raphimc.viabedrock.api.resourcepack.http
+net.raphimc.viabedrock.api.resourcepack.ui
 net.raphimc.viabedrock.api.util
 net.raphimc.viabedrock.netty
+net.raphimc.viabedrock.netty.nethernet
 net.raphimc.viabedrock.netty.raknet
 net.raphimc.viabedrock.platform
 net.raphimc.viabedrock.protocol
@@ -37,7 +41,6 @@ net.raphimc.viabedrock.protocol.data.enums.java.generated
 net.raphimc.viabedrock.protocol.data.generated.bedrock
 net.raphimc.viabedrock.protocol.data.generated.java
 net.raphimc.viabedrock.protocol.model
-net.raphimc.viabedrock.protocol.model.entity
 net.raphimc.viabedrock.protocol.model.inventory
 net.raphimc.viabedrock.protocol.model.recipe
 net.raphimc.viabedrock.protocol.packet
