@@ -1,6 +1,6 @@
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
-import { copyFile, cp, mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { copyFile, cp, mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const root = join(import.meta.dir, "..");
@@ -33,6 +33,20 @@ async function capture(program: string, args: string[]): Promise<string> {
     child.once("exit", (code) => code === 0 ? resolve() : reject(new Error(`${program} exited with code ${code}`)));
   });
   return Buffer.concat(output).toString("utf8").trim();
+}
+
+// Release builds embed the native OreUI shaping libraries, which only the patches release
+// workflow can compile for every platform. Reuse the copies shipped in the release JAR.
+async function prepareOreUiShaper(tag: string): Promise<void> {
+  const downloads = join(source, ".stackanvil", "release-assets");
+  await run("gh", ["release", "download", tag, "--repo", sourceRepository,
+    "--pattern", "viafabricplus-bedrock-*-StackAnvil.jar", "--dir", downloads]);
+  const [jar] = (await readdir(downloads)).filter((name) => name.endsWith(".jar"));
+  if (!jar) throw new Error(`No ViaFabricPlus Bedrock add-on JAR in ${tag}`);
+  const resources = join(source, ".stackanvil", "tools", "oreui-shaper-resources");
+  await mkdir(resources, { recursive: true });
+  await run("unzip", ["-q", join(downloads, jar), "assets/viafabricplus-bedrock/oreui-shaper/*", "-d", resources]);
+  await rm(downloads, { recursive: true, force: true });
 }
 
 function javaHome(version: string): string {
@@ -113,6 +127,7 @@ async function publish(): Promise<void> {
     await run("git", ["clone", "--depth", "1", "--branch", tag, "--single-branch",
       `https://github.com/${sourceRepository}.git`, source]);
     await run("bun", ["install", "--frozen-lockfile"], source);
+    await prepareOreUiShaper(tag);
     await run("bun", ["run", "build", "all"], source);
     const viaFabricPlus = JSON.parse(await readFile(join(source, "viafabricplus.json"), "utf8")) as { version: string };
     await mkdir(stage, { recursive: true });
