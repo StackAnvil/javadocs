@@ -87,7 +87,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">JsonUiResourceRewriter</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../ResourcePackRewriter.Rewriter.html" title="interface in net.raphimc.viabedrock.protocol.rewriter">ResourcePackRewriter.Rewriter</a></span></div>
-<div class="block">Native UI images retain their pixels; UI controls receive isolated Java resource identifiers.</div>
+<div class="block">Java font definitions for native UI fonts. UI images are not copied: clients resolve them from the accepted Bedrock
+packs nested in the same Java pack through <a href="../../../api/resourcepack/ui/UiTextureSources.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui"><code>UiTextureSources</code></a>.</div>
 </div>
 </section>
 <section class="summary">

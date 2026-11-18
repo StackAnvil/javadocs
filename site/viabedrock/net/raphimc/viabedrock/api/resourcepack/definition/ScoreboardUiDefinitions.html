@@ -70,6 +70,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#showsNumbers()" tabindex="0">showsNumbers()</a></li>
 <li><a href="#images()" tabindex="0">images()</a></li>
 <li><a href="#image(java.lang.String)" tabindex="0">image(String)</a></li>
 <li><a href="#titleComponent(java.lang.String,java.lang.String)" tabindex="0">titleComponent(String, String)</a></li>
@@ -164,10 +165,15 @@ loadScripts(document, 'script');</script>
  int&nbsp;min,
  int&nbsp;max)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.nbt.tag.Tag</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#titleComponent(java.lang.String,java.lang.String)" class="member-name-link">titleComponent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;rawTitle,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showsNumbers()" class="member-name-link">showsNumbers</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native vanilla sidebars show each score in red.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.nbt.tag.Tag</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#titleComponent(java.lang.String,java.lang.String)" class="member-name-link">titleComponent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;rawTitle,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fallbackText)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -217,6 +223,16 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="showsNumbers()">
+<h3>showsNumbers</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">showsNumbers</span>()</div>
+<div class="block">Native vanilla sidebars show each score in red. A server pack that defines scoreboard_sidebar decides its own
+rows, and CubeCraft's shows no numbers, so the translated sidebar shows numbers only without such a pack.</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="images()">
 <h3>images</h3>

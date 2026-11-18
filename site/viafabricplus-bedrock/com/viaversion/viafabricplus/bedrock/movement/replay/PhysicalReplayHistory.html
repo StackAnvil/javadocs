@@ -70,7 +70,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#oldestFrame()" tabindex="0">oldestFrame()</a></li>
 <li><a href="#completedFrame()" tabindex="0">completedFrame()</a></li>
 <li><a href="#before(long)" tabindex="0">before(long)</a></li>
+<li><a href="#hasHistoricalCommands(java.lang.Object)" tabindex="0">hasHistoricalCommands(Object)</a></li>
 <li><a href="#schedule(long,java.util.function.Predicate,java.lang.Runnable,boolean)" tabindex="0">schedule(long, Predicate, Runnable, boolean)</a></li>
+<li><a href="#schedule(long,java.util.function.Predicate,java.lang.Runnable,boolean,java.lang.Object)" tabindex="0">schedule(long, Predicate, Runnable, boolean, Object)</a></li>
 <li><a href="#scheduleMotion(net.raphimc.viabedrock.api.model.MovementCorrectionTiming,java.util.function.Predicate,java.lang.Runnable)" tabindex="0">scheduleMotion(MovementCorrectionTiming, Predicate, Runnable)</a></li>
 <li><a href="#needsReplay()" tabindex="0">needsReplay()</a></li>
 <li><a href="#replay()" tabindex="0">replay()</a></li>
@@ -133,7 +135,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type-param-S" title="type parameter in PhysicalReplayHistory">S</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#before(long)" class="member-name-link">before</a><wbr>(long&nbsp;frame)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Compare new commands with the latest pre-physics state, while retaining the separate rewind baseline.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#begin(long)" class="member-name-link">begin</a><wbr>(long&nbsp;frame)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -147,27 +151,39 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#completedFrame()" class="member-name-link">completedFrame</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markDirty(long)" class="member-name-link">markDirty</a><wbr>(long&nbsp;frame)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#needsReplay()" class="member-name-link">needsReplay</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#oldestFrame()" class="member-name-link">oldestFrame</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#record(java.lang.Runnable)" class="member-name-link">record</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;physicalStep)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replay()" class="member-name-link">replay</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasHistoricalCommands(java.lang.Object)" class="member-name-link">hasHistoricalCommands</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;group)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Refresh each later snapshot after external writes and before that frame's authoritative commands.</div>
+<div class="block">Native history command masks bypass comparisons until a replay or history reset.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#schedule(long,java.util.function.Predicate,java.lang.Runnable,boolean)" class="member-name-link">schedule</a><wbr>(long&nbsp;frame,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markDirty(long)" class="member-name-link">markDirty</a><wbr>(long&nbsp;frame)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#needsReplay()" class="member-name-link">needsReplay</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#oldestFrame()" class="member-name-link">oldestFrame</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#record(java.lang.Runnable)" class="member-name-link">record</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;physicalStep)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replay()" class="member-name-link">replay</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Refresh each later snapshot after external writes and before that frame's authoritative commands.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#schedule(long,java.util.function.Predicate,java.lang.Runnable,boolean)" class="member-name-link">schedule</a><wbr>(long&nbsp;frame,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="#type-param-S" title="type parameter in PhysicalReplayHistory">S</a>&gt;&nbsp;applicable,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
  boolean&nbsp;dirty)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#schedule(long,java.util.function.Predicate,java.lang.Runnable,boolean,java.lang.Object)" class="member-name-link">schedule</a><wbr>(long&nbsp;frame,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="#type-param-S" title="type parameter in PhysicalReplayHistory">S</a>&gt;&nbsp;applicable,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
+ boolean&nbsp;dirty,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;group)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scheduleMotion(net.raphimc.viabedrock.api.model.MovementCorrectionTiming,java.util.function.Predicate,java.lang.Runnable)" class="member-name-link">scheduleMotion</a><wbr>(net.raphimc.viabedrock.api.model.MovementCorrectionTiming&nbsp;timing,
@@ -277,6 +293,16 @@ loadScripts(document, 'script');</script>
 <h3>before</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="#type-param-S" title="type parameter in PhysicalReplayHistory">S</a></span>&nbsp;<span class="element-name">before</span><wbr><span class="parameters">(long&nbsp;frame)</span></div>
+<div class="block">Compare new commands with the latest pre-physics state, while retaining the separate rewind baseline.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasHistoricalCommands(java.lang.Object)">
+<h3>hasHistoricalCommands</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasHistoricalCommands</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;group)</span></div>
+<div class="block">Native history command masks bypass comparisons until a replay or history reset.</div>
 </div>
 </section>
 </li>
@@ -288,6 +314,18 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="#type-param-S" title="type parameter in PhysicalReplayHistory">S</a>&gt;&nbsp;applicable,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
  boolean&nbsp;dirty)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="schedule(long,java.util.function.Predicate,java.lang.Runnable,boolean,java.lang.Object)">
+<h3>schedule</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">schedule</span><wbr><span class="parameters">(long&nbsp;frame,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="#type-param-S" title="type parameter in PhysicalReplayHistory">S</a>&gt;&nbsp;applicable,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
+ boolean&nbsp;dirty,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;group)</span></div>
 </div>
 </section>
 </li>

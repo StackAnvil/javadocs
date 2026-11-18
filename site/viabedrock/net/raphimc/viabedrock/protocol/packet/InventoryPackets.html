@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#handleContainerClose(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)" tabindex="0">handleContainerClose(UserConnection, Container)</a></li>
 <li><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" tabindex="0">register(BedrockProtocol)</a></li>
 <li><a href="#handleCreativeSlot(com.viaversion.viaversion.api.connection.UserConnection,int,com.viaversion.viaversion.api.minecraft.item.Item)" tabindex="0">handleCreativeSlot(UserConnection, int, Item)</a></li>
 <li><a href="#handleLegacyOffhandClick(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" tabindex="0">handleLegacyOffhandClick(UserConnection, Container, short, byte, ContainerInput)</a></li>
@@ -93,24 +94,28 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#handleCreativeSlot(com.viaversion.viaversion.api.connection.UserConnection,int,com.viaversion.viaversion.api.minecraft.item.Item)" class="member-name-link">handleCreativeSlot</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- int&nbsp;javaSlot,
- com.viaversion.viaversion.api.minecraft.item.Item&nbsp;javaItem)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#handleContainerClose(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleContainerClose</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#handleLegacyOffhandClick(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">handleLegacyOffhandClick</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#handleCreativeSlot(com.viaversion.viaversion.api.connection.UserConnection,int,com.viaversion.viaversion.api.minecraft.item.Item)" class="member-name-link">handleCreativeSlot</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ int&nbsp;javaSlot,
+ com.viaversion.viaversion.api.minecraft.item.Item&nbsp;javaItem)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#handleLegacyOffhandClick(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">handleLegacyOffhandClick</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
  short&nbsp;slot,
  byte&nbsp;button,
  <a href="../data/enums/java/generated/ContainerInput.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">ContainerInput</a>&nbsp;action)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" class="member-name-link">register</a><wbr>(<a href="../BedrockProtocol.html" title="class in net.raphimc.viabedrock.protocol">BedrockProtocol</a>&nbsp;protocol)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#swapOffhand(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">swapOffhand</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" class="member-name-link">register</a><wbr>(<a href="../BedrockProtocol.html" title="class in net.raphimc.viabedrock.protocol">BedrockProtocol</a>&nbsp;protocol)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#swapOffhand(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">swapOffhand</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -128,6 +133,15 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="handleContainerClose(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)">
+<h3>handleContainerClose</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">handleContainerClose</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</span></div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="register(net.raphimc.viabedrock.protocol.BedrockProtocol)">
 <h3>register</h3>

@@ -64,11 +64,13 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)" tabindex="0">prepare(int, ContainerUi.Kind, ContainerUi.Title, ContainerUi, List)</a></li>
-<li><a href="#prepareActions(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)" tabindex="0">prepareActions(int, ContainerUi.Kind, ContainerUi.Title, ContainerUi, Function)</a></li>
+<li><a href="#prepare(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)" tabindex="0">prepare(int, int, ContainerUi.Kind, ContainerUi.Title, ContainerUi, List)</a></li>
+<li><a href="#prepareActions(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)" tabindex="0">prepareActions(int, int, ContainerUi.Kind, ContainerUi.Title, ContainerUi, Function)</a></li>
+<li><a href="#prepareActions(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)" tabindex="0">prepareActions(int, int, ContainerUi.Kind, int, ContainerUi.Title, ContainerUi, Function)</a></li>
 <li><a href="#handleAction(net.raphimc.viabedrock.api.model.NativeContainerAction)" tabindex="0">handleAction(NativeContainerAction)</a></li>
 <li><a href="#blocksVanillaClicks()" tabindex="0">blocksVanillaClicks()</a></li>
 <li><a href="#updateData(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,java.util.List)" tabindex="0">updateData(int, ContainerUi.Kind, List)</a></li>
+<li><a href="#publishItems(int,net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D,java.util.function.IntFunction)" tabindex="0">publishItems(int, BedrockItem[], IntFunction)</a></li>
 <li><a href="#clearActions()" tabindex="0">clearActions()</a></li>
 </ol>
 </li>
@@ -148,19 +150,39 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleAction(net.raphimc.viabedrock.api.model.NativeContainerAction)" class="member-name-link">handleAction</a><wbr>(<a href="../../api/model/NativeContainerAction.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerAction</a>&nbsp;action)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)" class="member-name-link">prepare</a><wbr>(int&nbsp;menuId,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)" class="member-name-link">prepare</a><wbr>(int&nbsp;context,
+ int&nbsp;menuId,
  <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
  <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
  <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareActions(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)" class="member-name-link">prepareActions</a><wbr>(int&nbsp;menuId,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareActions(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)" class="member-name-link">prepareActions</a><wbr>(int&nbsp;context,
+ int&nbsp;menuId,
+ <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
+ int&nbsp;containerSlots,
+ <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
+ <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a>, <a href="NativeContainerUiState.Actions.html" title="interface in net.raphimc.viabedrock.protocol.storage">NativeContainerUiState.Actions</a>&gt;&nbsp;backend)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">A logical family needs native actions, because its high slots have no Java menu slot for vanilla input.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareActions(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)" class="member-name-link">prepareActions</a><wbr>(int&nbsp;context,
+ int&nbsp;menuId,
  <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
  <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
  <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a>, <a href="NativeContainerUiState.Actions.html" title="interface in net.raphimc.viabedrock.protocol.storage">NativeContainerUiState.Actions</a>&gt;&nbsp;backend)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../api/model/NativeContainerItems.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerItems</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#publishItems(int,net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D,java.util.function.IntFunction)" class="member-name-link">publishItems</a><wbr>(int&nbsp;menuId,
+ <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;items,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;com.viaversion.viaversion.api.minecraft.item.Item&gt;&nbsp;javaItem)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the messages that bring the presented logical container up to date with <code>items</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeContainerData.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerData</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateData(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,java.util.List)" class="member-name-link">updateData</a><wbr>(int&nbsp;menuId,
  <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
@@ -203,10 +225,11 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="prepare(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)">
+<section class="detail" id="prepare(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.List)">
 <h3>prepare</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></span>&nbsp;<span class="element-name">prepare</span><wbr><span class="parameters">(int&nbsp;menuId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></span>&nbsp;<span class="element-name">prepare</span><wbr><span class="parameters">(int&nbsp;context,
+ int&nbsp;menuId,
  <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
  <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
  <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
@@ -215,14 +238,30 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="prepareActions(int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)">
+<section class="detail" id="prepareActions(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)">
 <h3>prepareActions</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></span>&nbsp;<span class="element-name">prepareActions</span><wbr><span class="parameters">(int&nbsp;menuId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></span>&nbsp;<span class="element-name">prepareActions</span><wbr><span class="parameters">(int&nbsp;context,
+ int&nbsp;menuId,
  <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
  <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
  <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a>, <a href="NativeContainerUiState.Actions.html" title="interface in net.raphimc.viabedrock.protocol.storage">NativeContainerUiState.Actions</a>&gt;&nbsp;backend)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="prepareActions(int,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,int,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi,java.util.function.Function)">
+<h3>prepareActions</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a></span>&nbsp;<span class="element-name">prepareActions</span><wbr><span class="parameters">(int&nbsp;context,
+ int&nbsp;menuId,
+ <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
+ int&nbsp;containerSlots,
+ <a href="../../api/resourcepack/ui/ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
+ <a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a>&nbsp;ui,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../api/model/NativeContainerMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerMessage</a>, <a href="NativeContainerUiState.Actions.html" title="interface in net.raphimc.viabedrock.protocol.storage">NativeContainerUiState.Actions</a>&gt;&nbsp;backend)</span></div>
+<div class="block">A logical family needs native actions, because its high slots have no Java menu slot for vanilla input.</div>
 </div>
 </section>
 </li>
@@ -249,6 +288,19 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeContainerData.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerData</a></span>&nbsp;<span class="element-name">updateData</span><wbr><span class="parameters">(int&nbsp;menuId,
  <a href="../../api/resourcepack/ui/ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;data)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="publishItems(int,net.raphimc.viabedrock.protocol.model.BedrockItem[],java.util.function.IntFunction)">
+<h3>publishItems</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/model/NativeContainerItems.html" title="class in net.raphimc.viabedrock.api.model">NativeContainerItems</a>&gt;</span>&nbsp;<span class="element-name">publishItems</span><wbr><span class="parameters">(int&nbsp;menuId,
+ <a href="../model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;items,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/IntFunction.html" title="class or interface in java.util.function" class="external-link">IntFunction</a>&lt;com.viaversion.viaversion.api.minecraft.item.Item&gt;&nbsp;javaItem)</span></div>
+<div class="block">Returns the messages that bring the presented logical container up to date with <code>items</code>. The first call
+after a presentation resets every slot; later calls send only the slots that changed. Returns no messages when
+no logical presentation owns <code>menuId</code>.</div>
 </div>
 </section>
 </li>

@@ -58,13 +58,15 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(int,int,int,float)" tabindex="0">NativeUiViewport(int, int, int, float)</a></li>
+<li><a href="#%3Cinit%3E(int,int,int,float,double,double)" tabindex="0">NativeUiViewport(int, int, int, float, double, double)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#desktop(int,int,int,int)" tabindex="0">desktop(int, int, int, int)</a></li>
 <li><a href="#current()" tabindex="0">current()</a></li>
-<li><a href="#pointer(double)" tabindex="0">pointer(double)</a></li>
+<li><a href="#pointerX(double)" tabindex="0">pointerX(double)</a></li>
+<li><a href="#pointerY(double)" tabindex="0">pointerY(double)</a></li>
 <li><a href="#pixel(float)" tabindex="0">pixel(float)</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
@@ -73,6 +75,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#height()" tabindex="0">height()</a></li>
 <li><a href="#scale()" tabindex="0">scale()</a></li>
 <li><a href="#renderScale()" tabindex="0">renderScale()</a></li>
+<li><a href="#inputScaleX()" tabindex="0">inputScaleX()</a></li>
+<li><a href="#inputScaleY()" tabindex="0">inputScaleY()</a></li>
 </ol>
 </li>
 </ol>
@@ -90,7 +94,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">NativeUiViewport</span>(int&nbsp;width, int&nbsp;height, int&nbsp;scale, float&nbsp;renderScale)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">NativeUiViewport</span>(int&nbsp;width, int&nbsp;height, int&nbsp;scale, float&nbsp;renderScale, double&nbsp;inputScaleX, double&nbsp;inputScaleY)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Desktop GuiData units, independent of Java's HUD scale.</div>
 </div>
@@ -110,6 +114,15 @@ loadScripts(document, 'script');</script>
  int&nbsp;scale,
  float&nbsp;renderScale)</code></div>
 <div class="col-last even-row-color">
+<div class="block">Explicit drawing-only viewports have uniform input units without host-window rounding.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,int,int,float,double,double)" class="member-name-link">NativeUiViewport</a><wbr>(int&nbsp;width,
+ int&nbsp;height,
+ int&nbsp;scale,
+ float&nbsp;renderScale,
+ double&nbsp;inputScaleX,
+ double&nbsp;inputScaleY)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Creates an instance of a <code>NativeUiViewport</code> record class.</div>
 </div>
 </div>
@@ -150,30 +163,43 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>height</code> record component.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputScaleX()" class="member-name-link">inputScaleX</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>inputScaleX</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputScaleY()" class="member-name-link">inputScaleY</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>inputScaleY</code> record component.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pixel(float)" class="member-name-link">pixel</a><wbr>(float&nbsp;nativeCoordinate)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pointer(double)" class="member-name-link">pointer</a><wbr>(double&nbsp;javaCoordinate)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pointerX(double)" class="member-name-link">pointerX</a><wbr>(double&nbsp;javaCoordinate)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderScale()" class="member-name-link">renderScale</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pointerY(double)" class="member-name-link">pointerY</a><wbr>(double&nbsp;javaCoordinate)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderScale()" class="member-name-link">renderScale</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>renderScale</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scale()" class="member-name-link">scale</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scale()" class="member-name-link">scale</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>scale</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#width()" class="member-name-link">width</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#width()" class="member-name-link">width</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>width</code> record component.</div>
 </div>
 </div>
@@ -201,6 +227,20 @@ loadScripts(document, 'script');</script>
  int&nbsp;height,
  int&nbsp;scale,
  float&nbsp;renderScale)</span></div>
+<div class="block">Explicit drawing-only viewports have uniform input units without host-window rounding.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,int,int,float,double,double)">
+<h3>NativeUiViewport</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NativeUiViewport</span><wbr><span class="parameters">(int&nbsp;width,
+ int&nbsp;height,
+ int&nbsp;scale,
+ float&nbsp;renderScale,
+ double&nbsp;inputScaleX,
+ double&nbsp;inputScaleY)</span></div>
 <div class="block">Creates an instance of a <code>NativeUiViewport</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -208,6 +248,8 @@ loadScripts(document, 'script');</script>
 <dd><code>height</code> - the value for the <code>height</code> record component</dd>
 <dd><code>scale</code> - the value for the <code>scale</code> record component</dd>
 <dd><code>renderScale</code> - the value for the <code>renderScale</code> record component</dd>
+<dd><code>inputScaleX</code> - the value for the <code>inputScaleX</code> record component</dd>
+<dd><code>inputScaleY</code> - the value for the <code>inputScaleY</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -240,10 +282,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="pointer(double)">
-<h3>pointer</h3>
+<section class="detail" id="pointerX(double)">
+<h3>pointerX</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">pointer</span><wbr><span class="parameters">(double&nbsp;javaCoordinate)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">pointerX</span><wbr><span class="parameters">(double&nbsp;javaCoordinate)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="pointerY(double)">
+<h3>pointerY</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">pointerY</span><wbr><span class="parameters">(double&nbsp;javaCoordinate)</span></div>
 </div>
 </section>
 </li>
@@ -350,6 +400,32 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>renderScale</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="inputScaleX()">
+<h3>inputScaleX</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">inputScaleX</span>()</div>
+<div class="block">Returns the value of the <code>inputScaleX</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>inputScaleX</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="inputScaleY()">
+<h3>inputScaleY</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">inputScaleY</span>()</div>
+<div class="block">Returns the value of the <code>inputScaleY</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>inputScaleY</code> record component</dd>
 </dl>
 </div>
 </section>

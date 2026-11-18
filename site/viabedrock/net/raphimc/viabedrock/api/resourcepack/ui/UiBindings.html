@@ -65,8 +65,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#window(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" tabindex="0">window(String, String, UiBindings.Scope)</a></li>
 <li><a href="#variables(net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" tabindex="0">variables(UiBindings.Scope)</a></li>
 <li><a href="#bindings(net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" tabindex="0">bindings(UiBindings.Scope)</a></li>
+<li><a href="#controlBindings(java.lang.String)" tabindex="0">controlBindings(String)</a></li>
+<li><a href="#retainedBindings()" tabindex="0">retainedBindings()</a></li>
 <li><a href="#factoryKey()" tabindex="0">factoryKey()</a></li>
 <li><a href="#factoryInstances(java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" tabindex="0">factoryInstances(String, UiBindings.Scope)</a></li>
+<li><a href="#createsFactoryControl(java.lang.String)" tabindex="0">createsFactoryControl(String)</a></li>
 <li><a href="#decorate(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonObject,java.util.Map,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" tabindex="0">decorate(JsonObject, JsonObject, Map, UiBindings.Scope)</a></li>
 </ol>
 </li>
@@ -80,7 +83,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="HudActionbarUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudActionbarUi</a>, <a href="HudFactoryUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudFactoryUi</a>, <a href="HudRootUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudRootUi</a>, <a href="HudTitleUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudTitleUi</a></code></dd>
+<dd><code><a href="HudActionbarUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudActionbarUi</a>, <a href="HudChatUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudChatUi</a>, <a href="HudFactoryUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudFactoryUi</a>, <a href="HudRootUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudRootUi</a>, <a href="HudTitleUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">HudTitleUi</a>, <a href="ScoreboardUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ScoreboardUi</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
@@ -129,6 +132,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#collection(java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" class="member-name-link">collection</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="UiBindings.Scope.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings.Scope</a>&nbsp;parent)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonElement&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#controlBindings(java.lang.String)" class="member-name-link">controlBindings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Local component state belongs to the view, independently of inventory authority.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#createsFactoryControl(java.lang.String)" class="member-name-link">createsFactoryControl</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;definition)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">False leaves a factory creation of this control definition to another presentation.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#decorate(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonObject,java.util.Map,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" class="member-name-link">decorate</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;node,
  com.viaversion.viaversion.libs.gson.JsonObject&nbsp;control,
@@ -155,14 +168,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Distinguishes controller rows from collections generated by a local UI factory.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonElement&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#variables(net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" class="member-name-link">variables</a><wbr>(<a href="UiBindings.Scope.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings.Scope</a>&nbsp;scope)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="UiBindings.Window.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings.Window</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#window(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" class="member-name-link">window</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="UiRetainedBindings.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiRetainedBindings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#retainedBindings()" class="member-name-link">retainedBindings</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Null evaluates visibility_changed bindings on every resolution.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonElement&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#variables(net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" class="member-name-link">variables</a><wbr>(<a href="UiBindings.Scope.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings.Scope</a>&nbsp;scope)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="UiBindings.Window.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings.Window</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#window(java.lang.String,java.lang.String,net.raphimc.viabedrock.api.resourcepack.ui.UiBindings.Scope)" class="member-name-link">window</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;collection,
  <a href="UiBindings.Scope.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings.Scope</a>&nbsp;parent)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Null retains full expansion; a window changes instantiated views, not collection identity or length.</div>
 </div>
 </div>
@@ -241,6 +259,25 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="controlBindings(java.lang.String)">
+<h3>controlBindings</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, com.viaversion.viaversion.libs.gson.JsonElement&gt;</span>&nbsp;<span class="element-name">controlBindings</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="block">Local component state belongs to the view, independently of inventory authority.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="retainedBindings()">
+<h3>retainedBindings</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="UiRetainedBindings.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiRetainedBindings</a></span>&nbsp;<span class="element-name">retainedBindings</span>()</div>
+<div class="block">Null evaluates visibility_changed bindings on every resolution. A controller that re-resolves a long-lived
+view supplies its retained state, so those bindings update only when their control's visibility changes.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="factoryKey()">
 <h3>factoryKey</h3>
 <div class="horizontal-scroll">
@@ -255,6 +292,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;</span>&nbsp;<span class="element-name">factoryInstances</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="UiBindings.Scope.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiBindings.Scope</a>&nbsp;scope)</span></div>
 <div class="block">Null retains declarative expansion; an empty list leaves an event-driven factory dormant.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="createsFactoryControl(java.lang.String)">
+<h3>createsFactoryControl</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">createsFactoryControl</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;definition)</span></div>
+<div class="block">False leaves a factory creation of this control definition to another presentation.</div>
 </div>
 </section>
 </li>

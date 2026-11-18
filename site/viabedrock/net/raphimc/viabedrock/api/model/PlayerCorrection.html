@@ -65,11 +65,13 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
+<li><a href="#%3Cinit%3E(int,java.util.UUID,java.util.UUID,int,long,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position2f,java.lang.Float,float,float,boolean,boolean)" tabindex="0">PlayerCorrection(int, UUID, UUID, int, long, MovementCorrectionTiming, Position3f, Position3f, Position2f, Float, float, float, boolean, boolean)</a></li>
 <li><a href="#%3Cinit%3E(int,java.util.UUID,java.util.UUID,int,long,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position2f,java.lang.Float,float,float,boolean)" tabindex="0">PlayerCorrection(int, UUID, UUID, int, long, MovementCorrectionTiming, Position3f, Position3f, Position2f, Float, float, float, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float)" tabindex="0">teleport(int, UUID, UUID, int, MovementCorrectionTiming, Position3f, float)</a></li>
 <li><a href="#vehicle()" tabindex="0">vehicle()</a></li>
 <li><a href="#javaPosition()" tabindex="0">javaPosition()</a></li>
 <li><a href="#javaYaw()" tabindex="0">javaYaw()</a></li>
@@ -90,6 +92,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#originOffset()" tabindex="0">originOffset()</a></li>
 <li><a href="#yawOffset()" tabindex="0">yawOffset()</a></li>
 <li><a href="#onGround()" tabindex="0">onGround()</a></li>
+<li><a href="#teleport()" tabindex="0">teleport()</a></li>
 </ol>
 </li>
 </ol>
@@ -107,9 +110,10 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PlayerCorrection</span>(int&nbsp;entityId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, int&nbsp;teleportId, long&nbsp;vehicleEpoch, <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing, <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position, <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;motion, <a href="../../protocol/model/Position2f.html" title="class in net.raphimc.viabedrock.protocol.model">Position2f</a>&nbsp;rotation, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;angularVelocity, float&nbsp;originOffset, float&nbsp;yawOffset, boolean&nbsp;onGround)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PlayerCorrection</span>(int&nbsp;entityId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, int&nbsp;teleportId, long&nbsp;vehicleEpoch, <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing, <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position, <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;motion, <a href="../../protocol/model/Position2f.html" title="class in net.raphimc.viabedrock.protocol.model">Position2f</a>&nbsp;rotation, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;angularVelocity, float&nbsp;originOffset, float&nbsp;yawOffset, boolean&nbsp;onGround, boolean&nbsp;teleport)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">Exact native correction, paired with a Java player or controlled-vehicle position packet.</div>
+<div class="block">Exact native correction, paired with a Java player or controlled-vehicle position packet.
+A teleport is an admitted near MovePlayer command. It writes position, clears motion and keeps ground.</div>
 </div>
 </section>
 <section class="summary">
@@ -153,7 +157,22 @@ loadScripts(document, 'script');</script>
  float&nbsp;originOffset,
  float&nbsp;yawOffset,
  boolean&nbsp;onGround)</code></div>
-<div class="col-last even-row-color">
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,java.util.UUID,java.util.UUID,int,long,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position2f,java.lang.Float,float,float,boolean,boolean)" class="member-name-link">PlayerCorrection</a><wbr>(int&nbsp;entityId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ int&nbsp;teleportId,
+ long&nbsp;vehicleEpoch,
+ <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;motion,
+ <a href="../../protocol/model/Position2f.html" title="class in net.raphimc.viabedrock.protocol.model">Position2f</a>&nbsp;rotation,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;angularVelocity,
+ float&nbsp;originOffset,
+ float&nbsp;yawOffset,
+ boolean&nbsp;onGround,
+ boolean&nbsp;teleport)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">Creates an instance of a <code>PlayerCorrection</code> record class.</div>
 </div>
 </div>
@@ -164,7 +183,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -234,6 +253,22 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rotation()" class="member-name-link">rotation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>rotation</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#teleport()" class="member-name-link">teleport</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>teleport</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float)" class="member-name-link">teleport</a><wbr>(int&nbsp;entityId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ int&nbsp;teleportId,
+ <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+ float&nbsp;originOffset)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native MovePlayer command core 0x1410ea600 writes StateVector position, zeroes all motion and leaves ground.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#teleportId()" class="member-name-link">teleportId</a>()</code></div>
@@ -318,7 +353,7 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,java.util.UUID,java.util.UUID,int,long,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position2f,java.lang.Float,float,float,boolean)">
+<section class="detail" id="&lt;init&gt;(int,java.util.UUID,java.util.UUID,int,long,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position2f,java.lang.Float,float,float,boolean,boolean)">
 <h3>PlayerCorrection</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PlayerCorrection</span><wbr><span class="parameters">(int&nbsp;entityId,
@@ -333,7 +368,8 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;angularVelocity,
  float&nbsp;originOffset,
  float&nbsp;yawOffset,
- boolean&nbsp;onGround)</span></div>
+ boolean&nbsp;onGround,
+ boolean&nbsp;teleport)</span></div>
 <div class="block">Creates an instance of a <code>PlayerCorrection</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -350,7 +386,28 @@ loadScripts(document, 'script');</script>
 <dd><code>originOffset</code> - the value for the <code>originOffset</code> record component</dd>
 <dd><code>yawOffset</code> - the value for the <code>yawOffset</code> record component</dd>
 <dd><code>onGround</code> - the value for the <code>onGround</code> record component</dd>
+<dd><code>teleport</code> - the value for the <code>teleport</code> record component</dd>
 </dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,java.util.UUID,java.util.UUID,int,long,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position2f,java.lang.Float,float,float,boolean)">
+<h3>PlayerCorrection</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PlayerCorrection</span><wbr><span class="parameters">(int&nbsp;entityId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ int&nbsp;teleportId,
+ long&nbsp;vehicleEpoch,
+ <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;motion,
+ <a href="../../protocol/model/Position2f.html" title="class in net.raphimc.viabedrock.protocol.model">Position2f</a>&nbsp;rotation,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;angularVelocity,
+ float&nbsp;originOffset,
+ float&nbsp;yawOffset,
+ boolean&nbsp;onGround)</span></div>
 </div>
 </section>
 </li>
@@ -362,6 +419,21 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float)">
+<h3>teleport</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></span>&nbsp;<span class="element-name">teleport</span><wbr><span class="parameters">(int&nbsp;entityId,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
+ int&nbsp;teleportId,
+ <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
+ float&nbsp;originOffset)</span></div>
+<div class="block">Native MovePlayer command core 0x1410ea600 writes StateVector position, zeroes all motion and leaves ground.</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="vehicle()">
 <h3>vehicle</h3>
@@ -611,6 +683,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>onGround</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="teleport()">
+<h3>teleport</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">teleport</span>()</div>
+<div class="block">Returns the value of the <code>teleport</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>teleport</code> record component</dd>
 </dl>
 </div>
 </section>

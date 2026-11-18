@@ -72,6 +72,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#viaFabricPlusBedrock$prepareFlightInput(float,float)" tabindex="0">viaFabricPlusBedrock$prepareFlightInput(float, float)</a></li>
 <li><a href="#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)" tabindex="0">viaFabricPlusBedrock$captureFlightMotion(Vec3, float)</a></li>
+<li><a href="#isStayingOnGroundSurface()" tabindex="0">isStayingOnGroundSurface()</a></li>
 <li><a href="#canPlayerFitWithinBlocksAndEntitiesWhen(net.minecraft.world.entity.Pose)" tabindex="0">canPlayerFitWithinBlocksAndEntitiesWhen(Pose)</a></li>
 <li><a href="#updateIsUnderwater()" tabindex="0">updateIsUnderwater()</a></li>
 <li><a href="#updatePlayerPose()" tabindex="0">updatePlayerPose()</a></li>
@@ -203,26 +204,29 @@ implements <a href="../../../access/IBedrockFlightMotion.html" title="interface 
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#capturePlayerPhysics(com.viaversion.viafabricplus.bedrock.movement.replay.PhysicalState.Builder)" class="member-name-link">capturePlayerPhysics</a><wbr>(<a href="../../../../movement/replay/PhysicalState.Builder.html" title="class in com.viaversion.viafabricplus.bedrock.movement.replay">PhysicalState.Builder</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replayPlayerAiStep()" class="member-name-link">replayPlayerAiStep</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replayPlayerTick()" class="member-name-link">replayPlayerTick</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updateIsUnderwater()" class="member-name-link">updateIsUnderwater</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isStayingOnGroundSurface()" class="member-name-link">isStayingOnGroundSurface</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updatePlayerPose()" class="member-name-link">updatePlayerPose</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)" class="member-name-link">viaFabricPlusBedrock$captureFlightMotion</a><wbr>(net.minecraft.world.phys.Vec3&nbsp;motion,
- float&nbsp;friction)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$prepareFlightInput(float,float)" class="member-name-link">viaFabricPlusBedrock$prepareFlightInput</a><wbr>(float&nbsp;inputX,
- float&nbsp;inputZ)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replayPlayerAiStep()" class="member-name-link">replayPlayerAiStep</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replayPlayerTick()" class="member-name-link">replayPlayerTick</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updateIsUnderwater()" class="member-name-link">updateIsUnderwater</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updatePlayerPose()" class="member-name-link">updatePlayerPose</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)" class="member-name-link">viaFabricPlusBedrock$captureFlightMotion</a><wbr>(net.minecraft.world.phys.Vec3&nbsp;motion,
+ float&nbsp;friction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#viaFabricPlusBedrock$prepareFlightInput(float,float)" class="member-name-link">viaFabricPlusBedrock$prepareFlightInput</a><wbr>(float&nbsp;inputX,
+ float&nbsp;inputZ)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -331,6 +335,14 @@ implements <a href="../../../access/IBedrockFlightMotion.html" title="interface 
 <dt>Specified by:</dt>
 <dd><code><a href="../../../access/IBedrockFlightMotion.html#viaFabricPlusBedrock$captureFlightMotion(net.minecraft.world.phys.Vec3,float)">viaFabricPlusBedrock$captureFlightMotion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../access/IBedrockFlightMotion.html" title="interface in com.viaversion.viafabricplus.bedrock.injection.access">IBedrockFlightMotion</a></code></dd>
 </dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isStayingOnGroundSurface()">
+<h3>isStayingOnGroundSurface</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isStayingOnGroundSurface</span>()</div>
 </div>
 </section>
 </li>

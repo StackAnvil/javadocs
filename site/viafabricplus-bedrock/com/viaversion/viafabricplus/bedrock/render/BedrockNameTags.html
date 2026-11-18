@@ -62,6 +62,13 @@ loadScripts(document, 'script');</script>
 <li><a href="#centerX(float)" tabindex="0">centerX(float)</a></li>
 <li><a href="#rowLift(int)" tabindex="0">rowLift(int)</a></li>
 <li><a href="#layout(net.minecraft.network.chat.Component,int)" tabindex="0">layout(Component, int)</a></li>
+<li><a href="#sharedBackground(java.util.List)" tabindex="0">sharedBackground(List)</a></li>
+<li><a href="#capturing()" tabindex="0">capturing()</a></li>
+<li><a href="#suppressing()" tabindex="0">suppressing()</a></li>
+<li><a href="#capture(com.viaversion.viafabricplus.bedrock.render.BedrockNameTags.Part)" tabindex="0">capture(BedrockNameTags.Part)</a></li>
+<li><a href="#beginCapture()" tabindex="0">beginCapture()</a></li>
+<li><a href="#endCapture()" tabindex="0">endCapture()</a></li>
+<li><a href="#suppress(boolean)" tabindex="0">suppress(boolean)</a></li>
 </ol>
 </li>
 </ol>
@@ -94,8 +101,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="BedrockNameTags.Line.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Line</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-second even-row-color"><code><a href="BedrockNameTags.Box.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Box</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">The background rectangle a pass shares across lines: Java's per-line box, widened to the widest line.</div>
+</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="BedrockNameTags.Line.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Line</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="BedrockNameTags.Part.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Part</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">One line's background-bearing name tag pass: its transformed pose, left edge, baseline and text width.</div>
+</div>
 </div>
 </section>
 </li>
@@ -110,8 +127,22 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#centerX(float)" class="member-name-link">centerX</a><wbr>(float&nbsp;javaCenter)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockNameTags.Part.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Part</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#beginCapture()" class="member-name-link">beginCapture</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#capture(com.viaversion.viafabricplus.bedrock.render.BedrockNameTags.Part)" class="member-name-link">capture</a><wbr>(<a href="BedrockNameTags.Part.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Part</a>&nbsp;part)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#capturing()" class="member-name-link">capturing</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Render-thread state for the two submission passes of one multi-line name.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#centerX(float)" class="member-name-link">centerX</a><wbr>(float&nbsp;javaCenter)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#endCapture()" class="member-name-link">endCapture</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#foregroundColor(boolean,boolean,net.minecraft.client.gui.Font.DisplayMode,int)" class="member-name-link">foregroundColor</a><wbr>(boolean&nbsp;nativeContext,
@@ -129,6 +160,18 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rowLift(int)" class="member-name-link">rowLift</a><wbr>(int&nbsp;rows)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockNameTags.Box.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Box</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sharedBackground(java.util.List)" class="member-name-link">sharedBackground</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockNameTags.Part.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Part</a>&gt;&nbsp;parts)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native draws one background behind every line of a multi-line name, as wide as the widest line, with
+the rows abutting.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#suppress(boolean)" class="member-name-link">suppress</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#suppressing()" class="member-name-link">suppressing</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -187,6 +230,65 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockNameTags.Line.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Line</a>&gt;</span>&nbsp;<span class="element-name">layout</span><wbr><span class="parameters">(net.minecraft.network.chat.Component&nbsp;name,
  int&nbsp;baseline)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sharedBackground(java.util.List)">
+<h3>sharedBackground</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BedrockNameTags.Box.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Box</a></span>&nbsp;<span class="element-name">sharedBackground</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockNameTags.Part.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Part</a>&gt;&nbsp;parts)</span></div>
+<div class="block">Native draws one background behind every line of a multi-line name, as wide as the widest line, with
+the rows abutting. Java sizes each line's box from x - 1 to x + width and y - 1 to y + 9.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="capturing()">
+<h3>capturing</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">capturing</span>()</div>
+<div class="block">Render-thread state for the two submission passes of one multi-line name.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="suppressing()">
+<h3>suppressing</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">suppressing</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="capture(com.viaversion.viafabricplus.bedrock.render.BedrockNameTags.Part)">
+<h3>capture</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">capture</span><wbr><span class="parameters">(<a href="BedrockNameTags.Part.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Part</a>&nbsp;part)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="beginCapture()">
+<h3>beginCapture</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockNameTags.Part.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockNameTags.Part</a>&gt;</span>&nbsp;<span class="element-name">beginCapture</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="endCapture()">
+<h3>endCapture</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">endCapture</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="suppress(boolean)">
+<h3>suppress</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">suppress</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
 </div>
 </section>
 </li>

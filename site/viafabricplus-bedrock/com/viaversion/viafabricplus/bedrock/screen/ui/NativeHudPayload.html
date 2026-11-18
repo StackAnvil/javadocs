@@ -54,21 +54,28 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
 <li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
+<li><a href="#field-summary" tabindex="0">Field Summary</a></li>
 <li><a href="#constructor-summary" tabindex="0">Constructor Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
+<li><a href="#field-detail" tabindex="0">Field Details</a>
+<ol class="toc-list">
+<li><a href="#TYPE" tabindex="0">TYPE</a></li>
+<li><a href="#CODEC" tabindex="0">CODEC</a></li>
+</ol>
+</li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.screen.ui.NativeHudPayload.Kind,net.raphimc.viabedrock.api.model.NativeHudMessage)" tabindex="0">NativeHudPayload(NativeHudPayload.Kind, NativeHudMessage)</a></li>
+<li><a href="#%3Cinit%3E(net.raphimc.viabedrock.api.model.NativeHudInputs)" tabindex="0">NativeHudPayload(NativeHudInputs)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#kind()" tabindex="0">kind()</a></li>
 <li><a href="#type()" tabindex="0">type()</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
-<li><a href="#kind()" tabindex="0">kind()</a></li>
-<li><a href="#message()" tabindex="0">message()</a></li>
+<li><a href="#inputs()" tabindex="0">inputs()</a></li>
 </ol>
 </li>
 </ol>
@@ -90,10 +97,10 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">NativeHudPayload</span>(<a href="NativeHudPayload.Kind.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload.Kind</a>&nbsp;kind, net.raphimc.viabedrock.api.model.NativeHudMessage&nbsp;message)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">NativeHudPayload</span>(net.raphimc.viabedrock.api.model.NativeHudInputs&nbsp;inputs)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements net.minecraft.network.protocol.common.custom.CustomPacketPayload</span></div>
-<div class="block">Separate capabilities retain the existing title wire format for older add-ons.</div>
+<div class="block">HUD scene inputs that the client resolves with its confirmed UI program.</div>
 </div>
 </section>
 <section class="summary">
@@ -116,6 +123,24 @@ implements net.minecraft.network.protocol.common.custom.CustomPacketPayload</spa
 <code>net.minecraft.network.protocol.common.custom.CustomPacketPayload.FallbackProvider&lt;B&gt;, net.minecraft.network.protocol.common.custom.CustomPacketPayload.Type&lt;T&gt;, net.minecraft.network.protocol.common.custom.CustomPacketPayload.TypeAndCodec&lt;B,<wbr>T&gt;</code></div>
 </section>
 </li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li>
+<section class="field-summary" id="field-summary">
+<h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final net.minecraft.network.codec.StreamCodec<wbr>&lt;net.minecraft.network.RegistryFriendlyByteBuf, <a href="NativeHudPayload.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload</a>&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="#CODEC" class="member-name-link">CODEC</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final net.minecraft.network.protocol.common.custom.CustomPacketPayload.Type<wbr>&lt;<a href="NativeHudPayload.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload</a>&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#TYPE" class="member-name-link">TYPE</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -124,8 +149,7 @@ implements net.minecraft.network.protocol.common.custom.CustomPacketPayload</spa
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.viaversion.viafabricplus.bedrock.screen.ui.NativeHudPayload.Kind,net.raphimc.viabedrock.api.model.NativeHudMessage)" class="member-name-link">NativeHudPayload</a><wbr>(<a href="NativeHudPayload.Kind.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload.Kind</a>&nbsp;kind,
- net.raphimc.viabedrock.api.model.NativeHudMessage&nbsp;message)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.raphimc.viabedrock.api.model.NativeHudInputs)" class="member-name-link">NativeHudPayload</a><wbr>(net.raphimc.viabedrock.api.model.NativeHudInputs&nbsp;inputs)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>NativeHudPayload</code> record class.</div>
 </div>
@@ -153,16 +177,14 @@ implements net.minecraft.network.protocol.common.custom.CustomPacketPayload</spa
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeHudPayload.Kind.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload.Kind</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#kind()" class="member-name-link">kind</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.raphimc.viabedrock.api.model.NativeHudInputs</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputs()" class="member-name-link">inputs</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>kind</code> record component.</div>
+<div class="block">Returns the value of the <code>inputs</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.raphimc.viabedrock.api.model.NativeHudMessage</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#message()" class="member-name-link">message</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>message</code> record component.</div>
-</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NativeHudPayload.Kind.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload.Kind</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#kind()" class="member-name-link">kind</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -183,22 +205,44 @@ implements net.minecraft.network.protocol.common.custom.CustomPacketPayload</spa
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ============ FIELD DETAIL =========== -->
+<li>
+<section class="field-details" id="field-detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="TYPE">
+<h3>TYPE</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">net.minecraft.network.protocol.common.custom.CustomPacketPayload.Type&lt;<a href="NativeHudPayload.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload</a>&gt;</span>&nbsp;<span class="element-name">TYPE</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="CODEC">
+<h3>CODEC</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">net.minecraft.network.codec.StreamCodec&lt;net.minecraft.network.RegistryFriendlyByteBuf, <a href="NativeHudPayload.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload</a>&gt;</span>&nbsp;<span class="element-name">CODEC</span></div>
+</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.viaversion.viafabricplus.bedrock.screen.ui.NativeHudPayload.Kind,net.raphimc.viabedrock.api.model.NativeHudMessage)">
+<section class="detail" id="&lt;init&gt;(net.raphimc.viabedrock.api.model.NativeHudInputs)">
 <h3>NativeHudPayload</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NativeHudPayload</span><wbr><span class="parameters">(<a href="NativeHudPayload.Kind.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload.Kind</a>&nbsp;kind,
- net.raphimc.viabedrock.api.model.NativeHudMessage&nbsp;message)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NativeHudPayload</span><wbr><span class="parameters">(net.raphimc.viabedrock.api.model.NativeHudInputs&nbsp;inputs)</span></div>
 <div class="block">Creates an instance of a <code>NativeHudPayload</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>kind</code> - the value for the <code>kind</code> record component</dd>
-<dd><code>message</code> - the value for the <code>message</code> record component</dd>
+<dd><code>inputs</code> - the value for the <code>inputs</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -211,6 +255,14 @@ implements net.minecraft.network.protocol.common.custom.CustomPacketPayload</spa
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="kind()">
+<h3>kind</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeHudPayload.Kind.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload.Kind</a></span>&nbsp;<span class="element-name">kind</span>()</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="type()">
 <h3>type</h3>
@@ -271,27 +323,14 @@ implements net.minecraft.network.protocol.common.custom.CustomPacketPayload</spa
 </section>
 </li>
 <li>
-<section class="detail" id="kind()">
-<h3>kind</h3>
+<section class="detail" id="inputs()">
+<h3>inputs</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NativeHudPayload.Kind.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudPayload.Kind</a></span>&nbsp;<span class="element-name">kind</span>()</div>
-<div class="block">Returns the value of the <code>kind</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.raphimc.viabedrock.api.model.NativeHudInputs</span>&nbsp;<span class="element-name">inputs</span>()</div>
+<div class="block">Returns the value of the <code>inputs</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>kind</code> record component</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="message()">
-<h3>message</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.raphimc.viabedrock.api.model.NativeHudMessage</span>&nbsp;<span class="element-name">message</span>()</div>
-<div class="block">Returns the value of the <code>message</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>message</code> record component</dd>
+<dd>the value of the <code>inputs</code> record component</dd>
 </dl>
 </div>
 </section>

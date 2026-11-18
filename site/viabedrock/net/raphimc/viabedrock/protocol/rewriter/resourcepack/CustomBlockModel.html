@@ -54,6 +54,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#field-summary" tabindex="0">Field Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#field-detail" tabindex="0">Field Details</a>
@@ -65,6 +66,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#compile(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,java.lang.String,int,com.viaversion.nbt.tag.CompoundTag)" tabindex="0">compile(ResourcePackStorage, String, int, CompoundTag)</a></li>
+<li><a href="#compile(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,net.raphimc.viabedrock.protocol.rewriter.resourcepack.CustomBlockTextures,java.lang.String,int,com.viaversion.nbt.tag.CompoundTag)" tabindex="0">compile(ResourcePackStorage, CustomBlockTextures, String, int, CompoundTag)</a></li>
 </ol>
 </li>
 </ol>
@@ -87,6 +89,23 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final class&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="CustomBlockModel.Compiler.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.rewriter.resourcepack">CustomBlockModel.Compiler</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Reuses unbound geometry only within one compilation pass.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- =========== FIELD SUMMARY =========== -->
 <li>
 <section class="field-summary" id="field-summary">
@@ -122,6 +141,13 @@ loadScripts(document, 'script');</script>
  int&nbsp;javaState,
  com.viaversion.nbt.tag.CompoundTag&nbsp;components)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../../../api/model/CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#compile(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,net.raphimc.viabedrock.protocol.rewriter.resourcepack.CustomBlockTextures,java.lang.String,int,com.viaversion.nbt.tag.CompoundTag)" class="member-name-link">compile</a><wbr>(<a href="../../storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage,
+ <a href="CustomBlockTextures.html" title="class in net.raphimc.viabedrock.protocol.rewriter.resourcepack">CustomBlockTextures</a>&nbsp;textures,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state,
+ int&nbsp;javaState,
+ com.viaversion.nbt.tag.CompoundTag&nbsp;components)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -184,6 +210,18 @@ loadScripts(document, 'script');</script>
 <h3>compile</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../api/model/CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a></span>&nbsp;<span class="element-name">compile</span><wbr><span class="parameters">(<a href="../../storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state,
+ int&nbsp;javaState,
+ com.viaversion.nbt.tag.CompoundTag&nbsp;components)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="compile(net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,net.raphimc.viabedrock.protocol.rewriter.resourcepack.CustomBlockTextures,java.lang.String,int,com.viaversion.nbt.tag.CompoundTag)">
+<h3>compile</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../api/model/CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a></span>&nbsp;<span class="element-name">compile</span><wbr><span class="parameters">(<a href="../../storage/ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;storage,
+ <a href="CustomBlockTextures.html" title="class in net.raphimc.viabedrock.protocol.rewriter.resourcepack">CustomBlockTextures</a>&nbsp;textures,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state,
  int&nbsp;javaState,
  com.viaversion.nbt.tag.CompoundTag&nbsp;components)</span></div>

@@ -57,6 +57,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#collide(net.minecraft.world.entity.Entity,net.minecraft.world.phys.Vec3,java.util.function.Function)" tabindex="0">collide(Entity, Vec3, Function)</a></li>
+<li><a href="#sneakSupport(net.minecraft.world.entity.Entity,boolean)" tabindex="0">sneakSupport(Entity, boolean)</a></li>
+<li><a href="#axisOrder(com.google.common.collect.ImmutableList)" tabindex="0">axisOrder(ImmutableList)</a></li>
+<li><a href="#processesZeroRequests()" tabindex="0">processesZeroRequests()</a></li>
+<li><a href="#recover(net.minecraft.world.phys.Vec3,net.minecraft.world.phys.AABB,java.util.List)" tabindex="0">recover(Vec3, AABB, List)</a></li>
 <li><a href="#active(net.minecraft.world.entity.Entity)" tabindex="0">active(Entity)</a></li>
 <li><a href="#collect(net.minecraft.world.level.Level)" tabindex="0">collect(Level)</a></li>
 </ol>
@@ -95,14 +99,35 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#active(net.minecraft.world.entity.Entity)" class="member-name-link">active</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;net.minecraft.world.phys.shapes.VoxelShape&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#collect(net.minecraft.world.level.Level)" class="member-name-link">collect</a><wbr>(net.minecraft.world.level.Level&nbsp;level)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.Vec3</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#collide(net.minecraft.world.entity.Entity,net.minecraft.world.phys.Vec3,java.util.function.Function)" class="member-name-link">collide</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.common.collect.ImmutableList<wbr>&lt;net.minecraft.core.Direction.Axis&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#axisOrder(com.google.common.collect.ImmutableList)" class="member-name-link">axisOrder</a><wbr>(com.google.common.collect.ImmutableList&lt;net.minecraft.core.Direction.Axis&gt;&nbsp;java)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native fixed order applies to the admitted local player's movement and step queries.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;net.minecraft.world.phys.shapes.VoxelShape&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#collect(net.minecraft.world.level.Level)" class="member-name-link">collect</a><wbr>(net.minecraft.world.level.Level&nbsp;level)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.Vec3</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#collide(net.minecraft.world.entity.Entity,net.minecraft.world.phys.Vec3,java.util.function.Function)" class="member-name-link">collide</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
  net.minecraft.world.phys.Vec3&nbsp;requested,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec3&gt;&nbsp;original)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#processesZeroRequests()" class="member-name-link">processesZeroRequests</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.Vec3</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#recover(net.minecraft.world.phys.Vec3,net.minecraft.world.phys.AABB,java.util.List)" class="member-name-link">recover</a><wbr>(net.minecraft.world.phys.Vec3&nbsp;requested,
+ net.minecraft.world.phys.AABB&nbsp;body,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.world.phys.shapes.VoxelShape&gt;&nbsp;shapes)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Includes step candidates belonging to this admitted local-player move.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sneakSupport(net.minecraft.world.entity.Entity,boolean)" class="member-name-link">sneakSupport</a><wbr>(net.minecraft.world.entity.Entity&nbsp;actor,
+ boolean&nbsp;admitted)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Returns whether the native movement request owns edge support for this move.</div>
+</div>
 </div>
 </div>
 </div>
@@ -127,6 +152,45 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.world.phys.Vec3</span>&nbsp;<span class="element-name">collide</span><wbr><span class="parameters">(net.minecraft.world.entity.Entity&nbsp;actor,
  net.minecraft.world.phys.Vec3&nbsp;requested,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec3&gt;&nbsp;original)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sneakSupport(net.minecraft.world.entity.Entity,boolean)">
+<h3>sneakSupport</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">sneakSupport</span><wbr><span class="parameters">(net.minecraft.world.entity.Entity&nbsp;actor,
+ boolean&nbsp;admitted)</span></div>
+<div class="block">Returns whether the native movement request owns edge support for this move. An admitted
+probe then runs on the request's gathered colliders, before collision.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="axisOrder(com.google.common.collect.ImmutableList)">
+<h3>axisOrder</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">com.google.common.collect.ImmutableList&lt;net.minecraft.core.Direction.Axis&gt;</span>&nbsp;<span class="element-name">axisOrder</span><wbr><span class="parameters">(com.google.common.collect.ImmutableList&lt;net.minecraft.core.Direction.Axis&gt;&nbsp;java)</span></div>
+<div class="block">Native fixed order applies to the admitted local player's movement and step queries.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="processesZeroRequests()">
+<h3>processesZeroRequests</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">processesZeroRequests</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="recover(net.minecraft.world.phys.Vec3,net.minecraft.world.phys.AABB,java.util.List)">
+<h3>recover</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.world.phys.Vec3</span>&nbsp;<span class="element-name">recover</span><wbr><span class="parameters">(net.minecraft.world.phys.Vec3&nbsp;requested,
+ net.minecraft.world.phys.AABB&nbsp;body,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.world.phys.shapes.VoxelShape&gt;&nbsp;shapes)</span></div>
+<div class="block">Includes step candidates belonging to this admitted local-player move.</div>
 </div>
 </section>
 </li>

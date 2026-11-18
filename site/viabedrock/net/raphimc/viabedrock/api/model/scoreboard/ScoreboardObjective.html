@@ -63,6 +63,8 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#setNumbersShown(com.viaversion.viaversion.api.connection.UserConnection,boolean)" tabindex="0">setNumbersShown(UserConnection, boolean)</a></li>
+<li><a href="#sidebarRows()" tabindex="0">sidebarRows()</a></li>
 <li><a href="#setFormattingColors(com.viaversion.viaversion.api.connection.UserConnection,java.util.Map)" tabindex="0">setFormattingColors(UserConnection, Map)</a></li>
 <li><a href="#getEntry(long)" tabindex="0">getEntry(long)</a></li>
 <li><a href="#getEntryWithSameTarget(net.raphimc.viabedrock.api.model.scoreboard.ScoreboardEntry)" tabindex="0">getEntryWithSameTarget(ScoreboardEntry)</a></li>
@@ -140,6 +142,15 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Character.html" title="class or interface in java.lang" class="external-link">Character</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;colors)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNumbersShown(com.viaversion.viaversion.api.connection.UserConnection,boolean)" class="member-name-link">setNumbersShown</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ boolean&nbsp;shown)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Shown ascending scores need their real value, because Java sorts by the negated score this objective sends.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../resourcepack/ui/ScoreboardUi.Row.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ScoreboardUi.Row</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sidebarRows()" class="member-name-link">sidebarRows</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateEntry(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.scoreboard.ScoreboardEntry)" class="member-name-link">updateEntry</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
  <a href="ScoreboardEntry.html" title="class in net.raphimc.viabedrock.api.model.scoreboard">ScoreboardEntry</a>&nbsp;entry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -181,6 +192,24 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="setNumbersShown(com.viaversion.viaversion.api.connection.UserConnection,boolean)">
+<h3>setNumbersShown</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setNumbersShown</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ boolean&nbsp;shown)</span></div>
+<div class="block">Shown ascending scores need their real value, because Java sorts by the negated score this objective sends.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sidebarRows()">
+<h3>sidebarRows</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../resourcepack/ui/ScoreboardUi.Row.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ScoreboardUi.Row</a>&gt;</span>&nbsp;<span class="element-name">sidebarRows</span>()</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="setFormattingColors(com.viaversion.viaversion.api.connection.UserConnection,java.util.Map)">
 <h3>setFormattingColors</h3>

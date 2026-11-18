@@ -65,7 +65,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">net.minecraft.client.gui.screens.Screen (implements net.minecraft.client.gui.components.Renderable)
 <ul>
-<li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiSceneScreen.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiSceneScreen</a> (implements com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiScreen.html" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScreen</a>)</li>
+<li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiSceneScreen.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiSceneScreen</a> (implements com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiHudPolicy.html" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiHudPolicy</a>, com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiScreen.html" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScreen</a>)</li>
 </ul>
 </li>
 </ul>
@@ -84,6 +84,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiFocus.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiFocus.History.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.History</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiFont.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFont</a></li>
+<li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiHold.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiHold</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiImageCache.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiImageCache</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiImageRegions.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiImageRegions</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiImages.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiImages</a> (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a>)</li>
@@ -99,6 +100,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiToggle.State.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiToggle.State</a></li>
 <li class="circle">net.minecraft.server.packs.resources.SimplePreparableReloadListener&lt;T&gt; (implements net.minecraft.server.packs.resources.PreparableReloadListener)
 <ul>
+<li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="BedrockUiContext.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">BedrockUiContext</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeHudResources.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeHudResources</a></li>
 </ul>
 </li>
@@ -111,6 +113,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiController.html" class="type-name-link" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiController</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiController.Inputs.html" class="type-name-link" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiController.Inputs</a></li>
+<li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiHudPolicy.html" class="type-name-link" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiHudPolicy</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiLayout.Metrics.html" class="type-name-link" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Metrics</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiScreen.html" class="type-name-link" title="interface in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScreen</a></li>
 </ul>
@@ -147,10 +150,12 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiAnimations.Track.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiAnimations.Track</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiButton.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiButton</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiCollectionWindow.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiCollectionWindow</a></li>
+<li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiContextPayload.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiContextPayload</a> (implements net.minecraft.network.protocol.common.custom.CustomPacketPayload)</li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiCursorPlacement.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiCursorPlacement</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiFocus.Clip.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Clip</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiFocus.Target.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiFont.Origin.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFont.Origin</a></li>
+<li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiHold.Event.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiHold.Event</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiHurtPayload.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiHurtPayload</a> (implements net.minecraft.network.protocol.common.custom.CustomPacketPayload)</li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiImageCache.Data.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiImageCache.Data</a></li>
 <li class="circle">com.viaversion.viafabricplus.bedrock.screen.ui.<a href="NativeUiImageRegions.Region.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiImageRegions.Region</a></li>

@@ -64,11 +64,12 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#fromProgram(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">fromProgram(JsonObject)</a></li>
-<li><a href="#exportProgram(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)" tabindex="0">exportProgram(ContainerUi.Kind, ContainerUi.Title)</a></li>
-<li><a href="#exportProgram(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,boolean)" tabindex="0">exportProgram(ContainerUi.Kind, ContainerUi.Title, boolean)</a></li>
+<li><a href="#forContext(net.raphimc.viabedrock.api.resourcepack.ui.JsonUiProgram,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,boolean)" tabindex="0">forContext(JsonUiProgram, ContainerUi.Title, boolean)</a></li>
+<li><a href="#presents(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind)" tabindex="0">presents(ContainerUi.Kind)</a></li>
 <li><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView)" tabindex="0">resolve(ContainerUi.MenuView)</a></li>
 <li><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView,net.raphimc.viabedrock.api.resourcepack.ui.BundleTooltipUi.View)" tabindex="0">resolve(ContainerUi.MenuView, BundleTooltipUi.View)</a></li>
+<li><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView,java.util.Map)" tabindex="0">resolve(ContainerUi.MenuView, Map)</a></li>
+<li><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView,net.raphimc.viabedrock.api.resourcepack.ui.BundleTooltipUi.View,java.util.Map)" tabindex="0">resolve(ContainerUi.MenuView, BundleTooltipUi.View, Map)</a></li>
 <li><a href="#actionScope(com.viaversion.viaversion.libs.gson.JsonObject,int)" tabindex="0">actionScope(JsonObject, int)</a></li>
 </ol>
 </li>
@@ -109,13 +110,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="ContainerUi.MenuView.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Scene slot indices: container slots first, then 27 inventory and 9 hotbar slots.</div>
+</div>
+<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="ContainerUi.SelectedItem.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.SelectedItem</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">A retained source image uses selected-item bindings without becoming the real cursor.</div>
+</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="ContainerUi.Slot.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Slot</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="ContainerUi.Slot.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Slot</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="ContainerUi.Title.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-second odd-row-color"><code><a href="ContainerUi.Title.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Raw authored title conditions and independent native label localization.</div>
 </div>
 </div>
@@ -151,25 +159,36 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Explicit manual scopes can omit slots, but never inherit generic Java inventory shortcuts.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.gson.JsonObject</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exportProgram(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)" class="member-name-link">exportProgram</a><wbr>(<a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
- <a href="ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.gson.JsonObject</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exportProgram(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,boolean)" class="member-name-link">exportProgram</a><wbr>(<a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#forContext(net.raphimc.viabedrock.api.resourcepack.ui.JsonUiProgram,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,boolean)" class="member-name-link">forContext</a><wbr>(<a href="JsonUiProgram.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram</a>&nbsp;program,
  <a href="ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
  boolean&nbsp;nativeActions)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromProgram(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">fromProgram</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;program)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">A container view over a complete program, with the identity its presentation message carries.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#presents(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind)" class="member-name-link">presents</a><wbr>(<a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Whether the accepted program defines the authored screen for this container kind.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.gson.JsonObject</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView)" class="member-name-link">resolve</a><wbr>(<a href="ContainerUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a>&nbsp;menu)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.gson.JsonObject</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView)" class="member-name-link">resolve</a><wbr>(<a href="ContainerUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a>&nbsp;menu)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView,java.util.Map)" class="member-name-link">resolve</a><wbr>(<a href="ContainerUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a>&nbsp;menu,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;toggles)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Local component values affect presentation, independently of inventory authority.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.gson.JsonObject</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView,net.raphimc.viabedrock.api.resourcepack.ui.BundleTooltipUi.View)" class="member-name-link">resolve</a><wbr>(<a href="ContainerUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a>&nbsp;menu,
  <a href="BundleTooltipUi.View.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.View</a>&nbsp;tooltip)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.gson.JsonObject</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView,net.raphimc.viabedrock.api.resourcepack.ui.BundleTooltipUi.View,java.util.Map)" class="member-name-link">resolve</a><wbr>(<a href="ContainerUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a>&nbsp;menu,
+ <a href="BundleTooltipUi.View.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.View</a>&nbsp;tooltip,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;toggles)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -204,29 +223,22 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="fromProgram(com.viaversion.viaversion.libs.gson.JsonObject)">
-<h3>fromProgram</h3>
+<section class="detail" id="forContext(net.raphimc.viabedrock.api.resourcepack.ui.JsonUiProgram,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,boolean)">
+<h3>forContext</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a></span>&nbsp;<span class="element-name">fromProgram</span><wbr><span class="parameters">(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;program)</span></div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="exportProgram(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title)">
-<h3>exportProgram</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">exportProgram</span><wbr><span class="parameters">(<a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
- <a href="ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title)</span></div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="exportProgram(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind,net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Title,boolean)">
-<h3>exportProgram</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">exportProgram</span><wbr><span class="parameters">(<a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a></span>&nbsp;<span class="element-name">forContext</span><wbr><span class="parameters">(<a href="JsonUiProgram.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram</a>&nbsp;program,
  <a href="ContainerUi.Title.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Title</a>&nbsp;title,
  boolean&nbsp;nativeActions)</span></div>
+<div class="block">A container view over a complete program, with the identity its presentation message carries.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="presents(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.Kind)">
+<h3>presents</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">presents</span><wbr><span class="parameters">(<a href="ContainerUi.Kind.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.Kind</a>&nbsp;kind)</span></div>
+<div class="block">Whether the accepted program defines the authored screen for this container kind.</div>
 </div>
 </section>
 </li>
@@ -244,6 +256,26 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(<a href="ContainerUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a>&nbsp;menu,
  <a href="BundleTooltipUi.View.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.View</a>&nbsp;tooltip)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView,java.util.Map)">
+<h3>resolve</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(<a href="ContainerUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a>&nbsp;menu,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;toggles)</span></div>
+<div class="block">Local component values affect presentation, independently of inventory authority.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="resolve(net.raphimc.viabedrock.api.resourcepack.ui.ContainerUi.MenuView,net.raphimc.viabedrock.api.resourcepack.ui.BundleTooltipUi.View,java.util.Map)">
+<h3>resolve</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(<a href="ContainerUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi.MenuView</a>&nbsp;menu,
+ <a href="BundleTooltipUi.View.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.View</a>&nbsp;tooltip,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;toggles)</span></div>
 </div>
 </section>
 </li>

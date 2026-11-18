@@ -62,6 +62,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(int,int,int,int)" tabindex="0">Reset(int, int, int, int)</a></li>
+<li><a href="#%3Cinit%3E(int,int,int,int,java.lang.String)" tabindex="0">Reset(int, int, int, int, String)</a></li>
+<li><a href="#%3Cinit%3E(int,int,int,int,java.lang.String,int)" tabindex="0">Reset(int, int, int, int, String, int)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -73,6 +75,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#minY()" tabindex="0">minY()</a></li>
 <li><a href="#height()" tabindex="0">height()</a></li>
 <li><a href="#air()" tabindex="0">air()</a></li>
+<li><a href="#baseGameVersion()" tabindex="0">baseGameVersion()</a></li>
+<li><a href="#generator()" tabindex="0">generator()</a></li>
 </ol>
 </li>
 </ol>
@@ -98,7 +102,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeBlockIdentifiers.Reset</span>(int&nbsp;dimension, int&nbsp;minY, int&nbsp;height, int&nbsp;air)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">NativeBlockIdentifiers.Reset</span>(int&nbsp;dimension, int&nbsp;minY, int&nbsp;height, int&nbsp;air, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseGameVersion, int&nbsp;generator)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc.viabedrock.api.model">NativeBlockIdentifiers</a></span></div>
 </div>
@@ -135,6 +139,19 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
  int&nbsp;minY,
  int&nbsp;height,
  int&nbsp;air)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,int,int,int,java.lang.String)" class="member-name-link">Reset</a><wbr>(int&nbsp;dimension,
+ int&nbsp;minY,
+ int&nbsp;height,
+ int&nbsp;air,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseGameVersion)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,int,java.lang.String,int)" class="member-name-link">Reset</a><wbr>(int&nbsp;dimension,
+ int&nbsp;minY,
+ int&nbsp;height,
+ int&nbsp;air,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseGameVersion,
+ int&nbsp;generator)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Reset</code> record class.</div>
 </div>
@@ -157,15 +174,25 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>air</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dimension()" class="member-name-link">dimension</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#baseGameVersion()" class="member-name-link">baseGameVersion</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>baseGameVersion</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dimension()" class="member-name-link">dimension</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>dimension</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#generator()" class="member-name-link">generator</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>generator</code> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
@@ -212,6 +239,31 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
  int&nbsp;minY,
  int&nbsp;height,
  int&nbsp;air)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,int,int,int,java.lang.String)">
+<h3>Reset</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Reset</span><wbr><span class="parameters">(int&nbsp;dimension,
+ int&nbsp;minY,
+ int&nbsp;height,
+ int&nbsp;air,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseGameVersion)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,int,int,int,java.lang.String,int)">
+<h3>Reset</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Reset</span><wbr><span class="parameters">(int&nbsp;dimension,
+ int&nbsp;minY,
+ int&nbsp;height,
+ int&nbsp;air,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseGameVersion,
+ int&nbsp;generator)</span></div>
 <div class="block">Creates an instance of a <code>Reset</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -219,6 +271,8 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <dd><code>minY</code> - the value for the <code>minY</code> record component</dd>
 <dd><code>height</code> - the value for the <code>height</code> record component</dd>
 <dd><code>air</code> - the value for the <code>air</code> record component</dd>
+<dd><code>baseGameVersion</code> - the value for the <code>baseGameVersion</code> record component</dd>
+<dd><code>generator</code> - the value for the <code>generator</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -266,7 +320,7 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <h3>equals</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
-<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with the <code>compare</code> method from their corresponding wrapper classes.</div>
+<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. Reference components are compared with <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>; primitive components are compared with the <code>compare</code> method from their corresponding wrapper classes.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
@@ -328,6 +382,32 @@ implements <a href="NativeBlockIdentifiers.html" title="interface in net.raphimc
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>air</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="baseGameVersion()">
+<h3>baseGameVersion</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">baseGameVersion</span>()</div>
+<div class="block">Returns the value of the <code>baseGameVersion</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>baseGameVersion</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="generator()">
+<h3>generator</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">generator</span>()</div>
+<div class="block">Returns the value of the <code>generator</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>generator</code> record component</dd>
 </dl>
 </div>
 </section>

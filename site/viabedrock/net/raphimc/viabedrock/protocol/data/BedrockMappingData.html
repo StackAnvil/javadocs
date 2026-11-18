@@ -58,6 +58,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#field-summary" tabindex="0">Field Summary</a></li>
 <li><a href="#constructor-summary" tabindex="0">Constructor Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
+<li><a href="#field-detail" tabindex="0">Field Details</a>
+<ol class="toc-list">
+<li><a href="#NATIVE_LIGHT" tabindex="0">NATIVE_LIGHT</a></li>
+</ol>
+</li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E()" tabindex="0">BedrockMappingData()</a></li>
@@ -66,6 +71,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#load()" tabindex="0">load()</a></li>
+<li><a href="#reserveJavaBlockStates(java.util.Map,java.util.Map,java.lang.String)" tabindex="0">reserveJavaBlockStates(Map, Map, String)</a></li>
+<li><a href="#getReservedJavaBlocks()" tabindex="0">getReservedJavaBlocks()</a></li>
+<li><a href="#withNativeLightStates(byte%5B%5D,java.util.function.ToIntFunction)" tabindex="0">withNativeLightStates(byte[], ToIntFunction)</a></li>
 <li><a href="#getBedrockResourcePacks()" tabindex="0">getBedrockResourcePacks()</a></li>
 <li><a href="#getBedrockSkinPacks()" tabindex="0">getBedrockSkinPacks()</a></li>
 <li><a href="#getBedrockVanillaResourcePacks()" tabindex="0">getBedrockVanillaResourcePacks()</a></li>
@@ -89,6 +97,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#getJavaPottedBlockStates()" tabindex="0">getJavaPottedBlockStates()</a></li>
 <li><a href="#getJavaHeightMapBlockStates()" tabindex="0">getJavaHeightMapBlockStates()</a></li>
 <li><a href="#getBedrockDataDrivenBlocks()" tabindex="0">getBedrockDataDrivenBlocks()</a></li>
+<li><a href="#getNativeLightState(java.lang.String)" tabindex="0">getNativeLightState(String)</a></li>
+<li><a href="#isNativeLightState(int)" tabindex="0">isNativeLightState(int)</a></li>
 <li><a href="#getJavaBlockLightEmission()" tabindex="0">getJavaBlockLightEmission()</a></li>
 <li><a href="#getJavaBlockOpacity()" tabindex="0">getJavaBlockOpacity()</a></li>
 <li><a href="#getBedrockBiomeDefinitions()" tabindex="0">getBedrockBiomeDefinitions()</a></li>
@@ -184,6 +194,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="BedrockMappingData.LevelEventMapping.html" class="type-name-link" title="interface in net.raphimc.viabedrock.protocol.data">BedrockMappingData.LevelEventMapping</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="BedrockMappingData.NativeLight.html" class="type-name-link" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.NativeLight</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="nested-classes-inherited-from-class-com.viaversion.viaversion.api.data.MappingData">Nested classes/interfaces inherited from interface&nbsp;com.viaversion.viaversion.api.data.MappingData</h3>
@@ -194,6 +207,17 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockMappingData.NativeLight.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.NativeLight</a>&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="#NATIVE_LIGHT" class="member-name-link">NATIVE_LIGHT</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Measured light of native blocks that differ from their Java carrier.</div>
+</div>
+</div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.viaversion.viaversion.api.data.MappingDataBase">Fields inherited from class&nbsp;com.viaversion.viaversion.api.data.MappingDataBase</h3>
 <code>argumentTypeMappings, attributeMappings, blockEntityMappings, blockMappings, blockStateMappings, changedBlocks, changedEnvironmentAttributes, enchantmentMappings, entityMappings, itemDataSerializerMappings, itemMappings, mappedVersion, menuMappings, paintingMappings, particleMappings, recipeSerializerMappings, slotDisplayMappings, soundMappings, statisticsMappings, tags, unmappedVersion</code></div>
@@ -217,7 +241,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -420,9 +444,39 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLogger()" class="member-name-link">getLogger</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNativeLightState(java.lang.String)" class="member-name-link">getNativeLightState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockIdentifier)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the light-only state for a native block whose light differs from its Java carrier,
+or -1.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/ReservedJavaBlocks.html" title="class in net.raphimc.viabedrock.api.model">ReservedJavaBlocks</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReservedJavaBlocks()" class="member-name-link">getReservedJavaBlocks</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the platform's reserved Java blocks, or null when the client only has vanilla blocks.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isNativeLightState(int)" class="member-name-link">isNativeLightState</a><wbr>(int&nbsp;lightState)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether a light table index is a light-only state without a Java block state.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load()" class="member-name-link">load</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load()" class="member-name-link">load</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#reserveJavaBlockStates(java.util.Map,java.util.Map,java.lang.String)" class="member-name-link">reserveJavaBlockStates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;blocks,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../api/model/BlockState.html" title="class in net.raphimc.viabedrock.api.model">BlockState</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;states,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;emptyModel)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds Java blocks that the client registered after the vanilla blocks so custom Bedrock blocks can use them
+as carriers.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static byte[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withNativeLightStates(byte%5B%5D,java.util.function.ToIntFunction)" class="member-name-link">withNativeLightStates</a><wbr>(byte[]&nbsp;javaValues,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="BedrockMappingData.NativeLight.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.NativeLight</a>&gt;&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Appends one light-only state per <a href="#NATIVE_LIGHT"><code>NATIVE_LIGHT</code></a> entry after the Java states.</div>
+</div>
 </div>
 </div>
 </div>
@@ -441,6 +495,25 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ============ FIELD DETAIL =========== -->
+<li>
+<section class="field-details" id="field-detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="NATIVE_LIGHT">
+<h3>NATIVE_LIGHT</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockMappingData.NativeLight.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.NativeLight</a>&gt;</span>&nbsp;<span class="element-name">NATIVE_LIGHT</span></div>
+<div class="block">Measured light of native blocks that differ from their Java carrier. Another native block,
+or the client request placeholder, shares each carrier, so the carrier's values cannot change.
+These entries apply only to light snapshots; rendering, collision and redstone keep the carrier.</div>
+</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
@@ -473,6 +546,43 @@ loadScripts(document, 'script');</script>
 <dt>Overrides:</dt>
 <dd><code>load</code>&nbsp;in class&nbsp;<code>com.viaversion.viaversion.api.data.MappingDataBase</code></dd>
 </dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="reserveJavaBlockStates(java.util.Map,java.util.Map,java.lang.String)">
+<h3>reserveJavaBlockStates</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">reserveJavaBlockStates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;blocks,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="../../api/model/BlockState.html" title="class in net.raphimc.viabedrock.api.model">BlockState</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;states,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;emptyModel)</span></div>
+<div class="block">Adds Java blocks that the client registered after the vanilla blocks so custom Bedrock blocks can use them
+as carriers. A platform calls this once at startup, before or after the mappings load.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>blocks</code> - the Java block registry ids of the reserved blocks</dd>
+<dd><code>states</code> - the Java block state ids of every state of those blocks</dd>
+<dd><code>emptyModel</code> - the model for reserved states that no custom block uses</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getReservedJavaBlocks()">
+<h3>getReservedJavaBlocks</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/ReservedJavaBlocks.html" title="class in net.raphimc.viabedrock.api.model">ReservedJavaBlocks</a></span>&nbsp;<span class="element-name">getReservedJavaBlocks</span>()</div>
+<div class="block">Returns the platform's reserved Java blocks, or null when the client only has vanilla blocks.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withNativeLightStates(byte[],java.util.function.ToIntFunction)">
+<h3>withNativeLightStates</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">byte[]</span>&nbsp;<span class="element-name">withNativeLightStates</span><wbr><span class="parameters">(byte[]&nbsp;javaValues,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/ToIntFunction.html" title="class or interface in java.util.function" class="external-link">ToIntFunction</a>&lt;<a href="BedrockMappingData.NativeLight.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.NativeLight</a>&gt;&nbsp;value)</span></div>
+<div class="block">Appends one light-only state per <a href="#NATIVE_LIGHT"><code>NATIVE_LIGHT</code></a> entry after the Java states.</div>
 </div>
 </section>
 </li>
@@ -661,11 +771,31 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getNativeLightState(java.lang.String)">
+<h3>getNativeLightState</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNativeLightState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;bedrockIdentifier)</span></div>
+<div class="block">Returns the light-only state for a native block whose light differs from its Java carrier,
+or -1. Index the light tables with it, never Java block state lookups.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isNativeLightState(int)">
+<h3>isNativeLightState</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isNativeLightState</span><wbr><span class="parameters">(int&nbsp;lightState)</span></div>
+<div class="block">Returns whether a light table index is a light-only state without a Java block state.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="getJavaBlockLightEmission()">
 <h3>getJavaBlockLightEmission</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">byte[]</span>&nbsp;<span class="element-name">getJavaBlockLightEmission</span>()</div>
-<div class="block">Light emission (0-15) of every java block state, indexed by java block state id.</div>
+<div class="block">Light emission (0-15) of every java block state, indexed by java block state id.
+Native light-only states follow the Java states.</div>
 </div>
 </section>
 </li>
@@ -675,7 +805,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">byte[]</span>&nbsp;<span class="element-name">getJavaBlockOpacity</span>()</div>
 <div class="block">Light opacity (0-15) of every java block state, indexed by java block state id. Values of 15
-or above fully block light propagation.</div>
+or above fully block light propagation. Native light-only states follow the Java states.</div>
 </div>
 </section>
 </li>

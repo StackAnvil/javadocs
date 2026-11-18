@@ -90,6 +90,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#keepPlayerInventoryOpen()" tabindex="0">keepPlayerInventoryOpen()</a></li>
 <li><a href="#handleInventoryOpen(net.raphimc.viabedrock.api.model.container.Container)" tabindex="0">handleInventoryOpen(Container)</a></li>
 <li><a href="#queueBundleSelection(net.raphimc.viabedrock.api.model.container.Container,short,int)" tabindex="0">queueBundleSelection(Container, short, int)</a></li>
+<li><a href="#deferDragClose(net.raphimc.viabedrock.api.model.container.Container,java.lang.Runnable)" tabindex="0">deferDragClose(Container, Runnable)</a></li>
+<li><a href="#isWaitingForDragClose()" tabindex="0">isWaitingForDragClose()</a></li>
 <li><a href="#queueContainerClose(net.raphimc.viabedrock.api.model.container.InputContainer)" tabindex="0">queueContainerClose(InputContainer)</a></li>
 <li><a href="#queueMerchantResult(net.raphimc.viabedrock.api.model.container.entity.MerchantContainer,int,int)" tabindex="0">queueMerchantResult(MerchantContainer, int, int)</a></li>
 <li><a href="#queueButtonClick(net.raphimc.viabedrock.api.model.container.Container,int)" tabindex="0">queueButtonClick(Container, int)</a></li>
@@ -183,45 +185,54 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearQueuedScreenInteractions()" class="member-name-link">clearQueuedScreenInteractions</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="InventoryRequestStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">InventoryRequestStorage</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRequest(int)" class="member-name-link">getRequest</a><wbr>(int&nbsp;requestId)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleAuthoritativeContent(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleAuthoritativeContent</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deferDragClose(net.raphimc.viabedrock.api.model.container.Container,java.lang.Runnable)" class="member-name-link">deferDragClose</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;close)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Preserve only input received before this close, on the same native drag opening.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="InventoryRequestStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">InventoryRequestStorage</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRequest(int)" class="member-name-link">getRequest</a><wbr>(int&nbsp;requestId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleAuthoritativeSlot(net.raphimc.viabedrock.api.model.container.Container,int)" class="member-name-link">handleAuthoritativeSlot</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleAuthoritativeContent(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleAuthoritativeContent</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleAuthoritativeSlot(net.raphimc.viabedrock.api.model.container.Container,int)" class="member-name-link">handleAuthoritativeSlot</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
  int&nbsp;slot)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleInventoryOpen(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleInventoryOpen</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleLegacyCursorPlacementUpdate(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleLegacyCursorPlacementUpdate</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleLegacyOffhandUpdate(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleLegacyOffhandUpdate</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleResponse(net.raphimc.viabedrock.protocol.model.inventory.ItemStackResponseInfo)" class="member-name-link">handleResponse</a><wbr>(<a href="../model/inventory/ItemStackResponseInfo.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackResponseInfo</a>&nbsp;response)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleInventoryOpen(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleInventoryOpen</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLegacyOffhandCursor()" class="member-name-link">hasLegacyOffhandCursor</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleLegacyCursorPlacementUpdate(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleLegacyCursorPlacementUpdate</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPending()" class="member-name-link">hasPending</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleLegacyOffhandUpdate(net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">handleLegacyOffhandUpdate</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleResponse(net.raphimc.viabedrock.protocol.model.inventory.ItemStackResponseInfo)" class="member-name-link">handleResponse</a><wbr>(<a href="../model/inventory/ItemStackResponseInfo.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackResponseInfo</a>&nbsp;response)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLegacyOffhandCursor()" class="member-name-link">hasLegacyOffhandCursor</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPendingMineBlockRequest()" class="member-name-link">hasPendingMineBlockRequest</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPending()" class="member-name-link">hasPending</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isPredictingClick()" class="member-name-link">isPredictingClick</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPendingMineBlockRequest()" class="member-name-link">hasPendingMineBlockRequest</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isRecovering()" class="member-name-link">isRecovering</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isPredictingClick()" class="member-name-link">isPredictingClick</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isRecoveringLegacyOffhand()" class="member-name-link">isRecoveringLegacyOffhand</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isRecovering()" class="member-name-link">isRecovering</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isRecoveringLegacyOffhand()" class="member-name-link">isRecoveringLegacyOffhand</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isWaitingForDragClose()" class="member-name-link">isWaitingForDragClose</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isWaitingForInventoryOpen()" class="member-name-link">isWaitingForInventoryOpen</a>()</code></div>
@@ -558,6 +569,24 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">queueBundleSelection</span><wbr><span class="parameters">(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;screen,
  short&nbsp;slot,
  int&nbsp;selectedItem)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="deferDragClose(net.raphimc.viabedrock.api.model.container.Container,java.lang.Runnable)">
+<h3>deferDragClose</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">deferDragClose</span><wbr><span class="parameters">(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;close)</span></div>
+<div class="block">Preserve only input received before this close, on the same native drag opening.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isWaitingForDragClose()">
+<h3>isWaitingForDragClose</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isWaitingForDragClose</span>()</div>
 </div>
 </section>
 </li>

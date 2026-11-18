@@ -31,6 +31,7 @@ loadScripts(document, 'script');</script>
 <li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
+<li><a href="deprecated-list.html">Deprecated</a></li>
 <li class="nav-bar-cell1-rev">Index</li>
 <li><a href="help-doc.html#index">Help</a></li>
 </ul>
@@ -84,7 +85,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates an instance of a <code>Array</code> record class.</div>
 </dd>
-<dt><a href="org/cube/converter/util/GsonUtil.html#arrayToList(com.viaversion.viaversion.libs.gson.JsonArray)" class="member-name-link">arrayToList(JsonArray)</a> - Static method in class org.cube.converter.util.<a href="org/cube/converter/util/GsonUtil.html" title="class in org.cube.converter.util">GsonUtil</a></dt>
+<dt><a href="org/cube/converter/util/GsonUtil.html#arrayToList(com.google.gson.JsonArray)" class="member-name-link">arrayToList(JsonArray)</a> - Static method in class org.cube.converter.util.<a href="org/cube/converter/util/GsonUtil.html" title="class in org.cube.converter.util">GsonUtil</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/legacy/ArrayUtil.html" class="type-name-link" title="class in org.cube.converter.util.legacy">ArrayUtil</a> - Class in <a href="org/cube/converter/util/legacy/package-summary.html">org.cube.converter.util.legacy</a></dt>
 <dd>&nbsp;</dd>
@@ -148,6 +149,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.html#%3Cinit%3E(java.lang.String,java.util.List,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.List,boolean,java.lang.String,org.cube.converter.data.bedrock.controller.BedrockRenderController.UvAnimation,java.util.List)" class="member-name-link">BedrockRenderController(String, List&lt;BedrockRenderController.MaterialAssignment&gt;, String, List&lt;String&gt;, List&lt;BedrockRenderController.Array&gt;, List&lt;BedrockRenderController.Array&gt;, List&lt;BedrockRenderController.Array&gt;, boolean, String, BedrockRenderController.UvAnimation, List&lt;BedrockRenderController.BoneVisibility&gt;)</a> - Constructor for record class org.cube.converter.data.bedrock.controller.<a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController</a></dt>
 <dd>
 <div class="block">Creates an instance of a <code>BedrockRenderController</code> record class.</div>
+</dd>
+<dt><a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.html#%3Cinit%3E(java.lang.String,java.util.Map,java.lang.String,java.util.List,java.util.List,java.util.List,java.util.List)" class="member-name-link">BedrockRenderController(String, Map&lt;String, String&gt;, String, List&lt;String&gt;, List&lt;BedrockRenderController.Array&gt;, List&lt;BedrockRenderController.Array&gt;, List&lt;BedrockRenderController.Array&gt;)</a> - Constructor for record class org.cube.converter.data.bedrock.controller.<a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController</a></dt>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use ordered <a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.MaterialAssignment.html" title="class in org.cube.converter.data.bedrock.controller"><code>BedrockRenderController.MaterialAssignment</code></a> declarations to retain repeated patterns.</div>
+</div>
 </dd>
 <dt><a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.Array.html" class="type-name-link" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a> - Record Class in <a href="org/cube/converter/data/bedrock/controller/package-summary.html">org.cube.converter.data.bedrock.controller</a></dt>
 <dd>&nbsp;</dd>
@@ -311,17 +318,17 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/element/UVMap.html#fromBoxUV(org.cube.converter.util.element.Position3V,java.lang.Float%5B%5D,boolean)" class="member-name-link">fromBoxUV(Position3V, Float[], boolean)</a> - Static method in class org.cube.converter.util.element.<a href="org/cube/converter/util/element/UVMap.html" title="class in org.cube.converter.util.element">UVMap</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/model/impl/bedrock/BedrockGeometryModel.html#fromJson(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">fromJson(JsonObject)</a> - Static method in class org.cube.converter.model.impl.bedrock.<a href="org/cube/converter/model/impl/bedrock/BedrockGeometryModel.html" title="class in org.cube.converter.model.impl.bedrock">BedrockGeometryModel</a></dt>
+<dt><a href="org/cube/converter/model/impl/bedrock/BedrockGeometryModel.html#fromJson(com.google.gson.JsonObject)" class="member-name-link">fromJson(JsonObject)</a> - Static method in class org.cube.converter.model.impl.bedrock.<a href="org/cube/converter/model/impl/bedrock/BedrockGeometryModel.html" title="class in org.cube.converter.model.impl.bedrock">BedrockGeometryModel</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/model/impl/java/JavaItemModel.html#fromJson(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">fromJson(JsonObject)</a> - Static method in class org.cube.converter.model.impl.java.<a href="org/cube/converter/model/impl/java/JavaItemModel.html" title="class in org.cube.converter.model.impl.java">JavaItemModel</a></dt>
+<dt><a href="org/cube/converter/model/impl/java/JavaItemModel.html#fromJson(com.google.gson.JsonObject)" class="member-name-link">fromJson(JsonObject)</a> - Static method in class org.cube.converter.model.impl.java.<a href="org/cube/converter/model/impl/java/JavaItemModel.html" title="class in org.cube.converter.model.impl.java">JavaItemModel</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/model/impl/bedrock/BedrockGeometryModel.html#fromJson(java.lang.String)" class="member-name-link">fromJson(String)</a> - Static method in class org.cube.converter.model.impl.bedrock.<a href="org/cube/converter/model/impl/bedrock/BedrockGeometryModel.html" title="class in org.cube.converter.model.impl.bedrock">BedrockGeometryModel</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/math/matrix/MatrixUtil.html#fromMatrix(org.joml.Matrix4f)" class="member-name-link">fromMatrix(Matrix4f)</a> - Static method in class org.cube.converter.util.math.matrix.<a href="org/cube/converter/util/math/matrix/MatrixUtil.html" title="class in org.cube.converter.util.math.matrix">MatrixUtil</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/util/element/Position3V.html#fromOrigin(com.viaversion.viaversion.libs.gson.JsonArray,com.viaversion.viaversion.libs.gson.JsonArray)" class="member-name-link">fromOrigin(JsonArray, JsonArray)</a> - Static method in class org.cube.converter.util.element.<a href="org/cube/converter/util/element/Position3V.html" title="class in org.cube.converter.util.element">Position3V</a></dt>
+<dt><a href="org/cube/converter/util/element/Position3V.html#fromOrigin(com.google.gson.JsonArray,com.google.gson.JsonArray)" class="member-name-link">fromOrigin(JsonArray, JsonArray)</a> - Static method in class org.cube.converter.util.element.<a href="org/cube/converter/util/element/Position3V.html" title="class in org.cube.converter.util.element">Position3V</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/util/element/UVMap.html#fromPerfaceUV(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">fromPerfaceUV(JsonObject)</a> - Static method in class org.cube.converter.util.element.<a href="org/cube/converter/util/element/UVMap.html" title="class in org.cube.converter.util.element">UVMap</a></dt>
+<dt><a href="org/cube/converter/util/element/UVMap.html#fromPerfaceUV(com.google.gson.JsonObject)" class="member-name-link">fromPerfaceUV(JsonObject)</a> - Static method in class org.cube.converter.util.element.<a href="org/cube/converter/util/element/UVMap.html" title="class in org.cube.converter.util.element">UVMap</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:G">G</h2>
@@ -352,7 +359,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/element/Position3V.html#getJavaOverlap()" class="member-name-link">getJavaOverlap()</a> - Method in class org.cube.converter.util.element.<a href="org/cube/converter/util/element/Position3V.html" title="class in org.cube.converter.util.element">Position3V</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/util/GsonUtil.html#getOrDefault(com.viaversion.viaversion.libs.gson.JsonElement,java.lang.String)" class="member-name-link">getOrDefault(JsonElement, String)</a> - Static method in class org.cube.converter.util.<a href="org/cube/converter/util/GsonUtil.html" title="class in org.cube.converter.util">GsonUtil</a></dt>
+<dt><a href="org/cube/converter/util/GsonUtil.html#getOrDefault(com.google.gson.JsonElement,java.lang.String)" class="member-name-link">getOrDefault(JsonElement, String)</a> - Static method in class org.cube.converter.util.<a href="org/cube/converter/util/GsonUtil.html" title="class in org.cube.converter.util">GsonUtil</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/legacy/ArrayUtil.html#getOverlap(float%5B%5D)" class="member-name-link">getOverlap(float[])</a> - Static method in class org.cube.converter.util.legacy.<a href="org/cube/converter/util/legacy/ArrayUtil.html" title="class in org.cube.converter.util.legacy">ArrayUtil</a></dt>
 <dd>&nbsp;</dd>
@@ -521,6 +528,12 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <code>materials</code> record component.</div>
 </dd>
+<dt><a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.html#materialsMap()" class="member-name-link">materialsMap()</a> - Method in record class org.cube.converter.data.bedrock.controller.<a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController</a></dt>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.html#materialAssignments()"><code>BedrockRenderController.materialAssignments()</code></a> to retain repeated patterns and their order.</div>
+</div>
+</dd>
 <dt><a href="org/cube/converter/util/math/MathUtil.html" class="type-name-link" title="class in org.cube.converter.util.math">MathUtil</a> - Class in <a href="org/cube/converter/util/math/package-summary.html">org.cube.converter.util.math</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/math/matrix/MatrixUtil.html" class="type-name-link" title="class in org.cube.converter.util.math.matrix">MatrixUtil</a> - Class in <a href="org/cube/converter/util/math/matrix/package-summary.html">org.cube.converter.util.math.matrix</a></dt>
@@ -553,7 +566,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:O">O</h2>
 <dl class="index">
-<dt><a href="org/cube/converter/util/GsonUtil.html#objectToMap(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">objectToMap(JsonObject)</a> - Static method in class org.cube.converter.util.<a href="org/cube/converter/util/GsonUtil.html" title="class in org.cube.converter.util">GsonUtil</a></dt>
+<dt><a href="org/cube/converter/util/GsonUtil.html#objectToMap(com.google.gson.JsonObject)" class="member-name-link">objectToMap(JsonObject)</a> - Static method in class org.cube.converter.util.<a href="org/cube/converter/util/GsonUtil.html" title="class in org.cube.converter.util">GsonUtil</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.UvAnimation.html#offsetU()" class="member-name-link">offsetU()</a> - Method in record class org.cube.converter.data.bedrock.controller.<a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.UvAnimation.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.UvAnimation</a></dt>
 <dd>
@@ -618,21 +631,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <code>parentSetup</code> record component.</div>
 </dd>
-<dt><a href="org/cube/converter/data/bedrock/BedrockEntityData.AnimationController.html#parse(com.viaversion.viaversion.libs.gson.JsonArray)" class="member-name-link">parse(JsonArray)</a> - Static method in record class org.cube.converter.data.bedrock.<a href="org/cube/converter/data/bedrock/BedrockEntityData.AnimationController.html" title="class in org.cube.converter.data.bedrock">BedrockEntityData.AnimationController</a></dt>
+<dt><a href="org/cube/converter/data/bedrock/BedrockEntityData.AnimationController.html#parse(com.google.gson.JsonArray)" class="member-name-link">parse(JsonArray)</a> - Static method in record class org.cube.converter.data.bedrock.<a href="org/cube/converter/data/bedrock/BedrockEntityData.AnimationController.html" title="class in org.cube.converter.data.bedrock">BedrockEntityData.AnimationController</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/data/bedrock/BedrockEntityData.RenderController.html#parse(com.viaversion.viaversion.libs.gson.JsonArray)" class="member-name-link">parse(JsonArray)</a> - Static method in record class org.cube.converter.data.bedrock.<a href="org/cube/converter/data/bedrock/BedrockEntityData.RenderController.html" title="class in org.cube.converter.data.bedrock">BedrockEntityData.RenderController</a></dt>
+<dt><a href="org/cube/converter/data/bedrock/BedrockEntityData.RenderController.html#parse(com.google.gson.JsonArray)" class="member-name-link">parse(JsonArray)</a> - Static method in record class org.cube.converter.data.bedrock.<a href="org/cube/converter/data/bedrock/BedrockEntityData.RenderController.html" title="class in org.cube.converter.data.bedrock">BedrockEntityData.RenderController</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/data/bedrock/BedrockEntityData.Scripts.html#parse(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in record class org.cube.converter.data.bedrock.<a href="org/cube/converter/data/bedrock/BedrockEntityData.Scripts.html" title="class in org.cube.converter.data.bedrock">BedrockEntityData.Scripts</a></dt>
+<dt><a href="org/cube/converter/data/bedrock/BedrockEntityData.Scripts.html#parse(com.google.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in record class org.cube.converter.data.bedrock.<a href="org/cube/converter/data/bedrock/BedrockEntityData.Scripts.html" title="class in org.cube.converter.data.bedrock">BedrockEntityData.Scripts</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.Array.html#parse(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in record class org.cube.converter.data.bedrock.controller.<a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a></dt>
+<dt><a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.Array.html#parse(com.google.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in record class org.cube.converter.data.bedrock.controller.<a href="org/cube/converter/data/bedrock/controller/BedrockRenderController.Array.html" title="class in org.cube.converter.data.bedrock.controller">BedrockRenderController.Array</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html#parse(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in class org.cube.converter.parser.bedrock.controller.<a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html" title="class in org.cube.converter.parser.bedrock.controller">BedrockControllerParser</a></dt>
+<dt><a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html#parse(com.google.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in class org.cube.converter.parser.bedrock.controller.<a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html" title="class in org.cube.converter.parser.bedrock.controller">BedrockControllerParser</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/parser/bedrock/data/impl/BedrockAttachableParser.html#parse(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in class org.cube.converter.parser.bedrock.data.impl.<a href="org/cube/converter/parser/bedrock/data/impl/BedrockAttachableParser.html" title="class in org.cube.converter.parser.bedrock.data.impl">BedrockAttachableParser</a></dt>
+<dt><a href="org/cube/converter/parser/bedrock/data/impl/BedrockAttachableParser.html#parse(com.google.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in class org.cube.converter.parser.bedrock.data.impl.<a href="org/cube/converter/parser/bedrock/data/impl/BedrockAttachableParser.html" title="class in org.cube.converter.parser.bedrock.data.impl">BedrockAttachableParser</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/parser/bedrock/data/impl/BedrockEntityParser.html#parse(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in class org.cube.converter.parser.bedrock.data.impl.<a href="org/cube/converter/parser/bedrock/data/impl/BedrockEntityParser.html" title="class in org.cube.converter.parser.bedrock.data.impl">BedrockEntityParser</a></dt>
+<dt><a href="org/cube/converter/parser/bedrock/data/impl/BedrockEntityParser.html#parse(com.google.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in class org.cube.converter.parser.bedrock.data.impl.<a href="org/cube/converter/parser/bedrock/data/impl/BedrockEntityParser.html" title="class in org.cube.converter.parser.bedrock.data.impl">BedrockEntityParser</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/parser/bedrock/geometry/BedrockGeometryParser.html#parse(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in class org.cube.converter.parser.bedrock.geometry.<a href="org/cube/converter/parser/bedrock/geometry/BedrockGeometryParser.html" title="class in org.cube.converter.parser.bedrock.geometry">BedrockGeometryParser</a></dt>
+<dt><a href="org/cube/converter/parser/bedrock/geometry/BedrockGeometryParser.html#parse(com.google.gson.JsonObject)" class="member-name-link">parse(JsonObject)</a> - Static method in class org.cube.converter.parser.bedrock.geometry.<a href="org/cube/converter/parser/bedrock/geometry/BedrockGeometryParser.html" title="class in org.cube.converter.parser.bedrock.geometry">BedrockGeometryParser</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html#parse(java.lang.String)" class="member-name-link">parse(String)</a> - Static method in class org.cube.converter.parser.bedrock.controller.<a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html" title="class in org.cube.converter.parser.bedrock.controller">BedrockControllerParser</a></dt>
 <dd>&nbsp;</dd>
@@ -650,7 +663,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <code>partVisibility</code> record component.</div>
 </dd>
-<dt><a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html#partVisibility(com.viaversion.viaversion.libs.gson.JsonElement)" class="member-name-link">partVisibility(JsonElement)</a> - Static method in class org.cube.converter.parser.bedrock.controller.<a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html" title="class in org.cube.converter.parser.bedrock.controller">BedrockControllerParser</a></dt>
+<dt><a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html#partVisibility(com.google.gson.JsonElement)" class="member-name-link">partVisibility(JsonElement)</a> - Static method in class org.cube.converter.parser.bedrock.controller.<a href="org/cube/converter/parser/bedrock/controller/BedrockControllerParser.html" title="class in org.cube.converter.parser.bedrock.controller">BedrockControllerParser</a></dt>
 <dd>
 <div class="block">Parses ordered visibility declarations without selecting a renderer or variable scope.</div>
 </dd>
@@ -672,7 +685,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/element/Position3V.html#%3Cinit%3E(float%5B%5D)" class="member-name-link">Position3V(float[])</a> - Constructor for class org.cube.converter.util.element.<a href="org/cube/converter/util/element/Position3V.html" title="class in org.cube.converter.util.element">Position3V</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/util/element/Position3V.html#%3Cinit%3E(com.viaversion.viaversion.libs.gson.JsonArray)" class="member-name-link">Position3V(JsonArray)</a> - Constructor for class org.cube.converter.util.element.<a href="org/cube/converter/util/element/Position3V.html" title="class in org.cube.converter.util.element">Position3V</a></dt>
+<dt><a href="org/cube/converter/util/element/Position3V.html#%3Cinit%3E(com.google.gson.JsonArray)" class="member-name-link">Position3V(JsonArray)</a> - Constructor for class org.cube.converter.util.element.<a href="org/cube/converter/util/element/Position3V.html" title="class in org.cube.converter.util.element">Position3V</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/converter/enums/RotationType.html#POST_1_21_11" class="member-name-link">POST_1_21_11</a> - Enum constant in enum class org.cube.converter.converter.enums.<a href="org/cube/converter/converter/enums/RotationType.html" title="enum class in org.cube.converter.converter.enums">RotationType</a></dt>
 <dd>&nbsp;</dd>
@@ -815,7 +828,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/element/Position3V.html#toArray()" class="member-name-link">toArray()</a> - Method in class org.cube.converter.util.element.<a href="org/cube/converter/util/element/Position3V.html" title="class in org.cube.converter.util.element">Position3V</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cube/converter/util/legacy/ArrayUtil.html#toArray(com.viaversion.viaversion.libs.gson.JsonArray)" class="member-name-link">toArray(JsonArray)</a> - Static method in class org.cube.converter.util.legacy.<a href="org/cube/converter/util/legacy/ArrayUtil.html" title="class in org.cube.converter.util.legacy">ArrayUtil</a></dt>
+<dt><a href="org/cube/converter/util/legacy/ArrayUtil.html#toArray(com.google.gson.JsonArray)" class="member-name-link">toArray(JsonArray)</a> - Static method in class org.cube.converter.util.legacy.<a href="org/cube/converter/util/legacy/ArrayUtil.html" title="class in org.cube.converter.util.legacy">ArrayUtil</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cube/converter/util/math/MathUtil.html#toHackyAngle(float)" class="member-name-link">toHackyAngle(float)</a> - Static method in class org.cube.converter.util.math.<a href="org/cube/converter/util/math/MathUtil.html" title="class in org.cube.converter.util.math">MathUtil</a></dt>
 <dd>&nbsp;</dd>

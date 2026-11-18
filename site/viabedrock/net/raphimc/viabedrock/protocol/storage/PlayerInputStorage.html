@@ -63,6 +63,9 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#recordItemUsePrediction(net.raphimc.viabedrock.api.model.ItemUsePrediction)" tabindex="0">recordItemUsePrediction(ItemUsePrediction)</a></li>
+<li><a href="#takeItemUsePrediction(int)" tabindex="0">takeItemUsePrediction(int)</a></li>
+<li><a href="#clearItemUsePrediction()" tabindex="0">clearItemUsePrediction()</a></li>
 <li><a href="#permissions()" tabindex="0">permissions()</a></li>
 <li><a href="#setPermissions(net.raphimc.viabedrock.api.model.PlayerInputPermissions)" tabindex="0">setPermissions(PlayerInputPermissions)</a></li>
 <li><a href="#rawInput()" tabindex="0">rawInput()</a></li>
@@ -124,13 +127,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markJoined()" class="member-name-link">markJoined</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearItemUsePrediction()" class="member-name-link">clearItemUsePrediction</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/PlayerInputPermissions.html" title="class in net.raphimc.viabedrock.api.model">PlayerInputPermissions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#permissions()" class="member-name-link">permissions</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markJoined()" class="member-name-link">markJoined</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/PlayerInput.html" title="class in net.raphimc.viabedrock.api.model">PlayerInput</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rawInput()" class="member-name-link">rawInput</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/PlayerInputPermissions.html" title="class in net.raphimc.viabedrock.api.model">PlayerInputPermissions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#permissions()" class="member-name-link">permissions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/PlayerInput.html" title="class in net.raphimc.viabedrock.api.model">PlayerInput</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rawInput()" class="member-name-link">rawInput</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recordItemUsePrediction(net.raphimc.viabedrock.api.model.ItemUsePrediction)" class="member-name-link">recordItemUsePrediction</a><wbr>(<a href="../../api/model/ItemUsePrediction.html" title="class in net.raphimc.viabedrock.api.model">ItemUsePrediction</a>&nbsp;prediction)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recordRawInput(net.raphimc.viabedrock.api.model.PlayerInput)" class="member-name-link">recordRawInput</a><wbr>(<a href="../../api/model/PlayerInput.html" title="class in net.raphimc.viabedrock.api.model">PlayerInput</a>&nbsp;input)</code></div>
@@ -147,9 +156,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="../data/enums/bedrock/generated/PlayerAuthInputData.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">PlayerAuthInputData</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeButtonEvents()" class="member-name-link">takeButtonEvents</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withdrawRawInput()" class="member-name-link">withdrawRawInput</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/ItemUsePrediction.html" title="class in net.raphimc.viabedrock.api.model">ItemUsePrediction</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeItemUsePrediction(int)" class="member-name-link">takeItemUsePrediction</a><wbr>(int&nbsp;sequence)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withdrawRawInput()" class="member-name-link">withdrawRawInput</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -189,6 +201,30 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="recordItemUsePrediction(net.raphimc.viabedrock.api.model.ItemUsePrediction)">
+<h3>recordItemUsePrediction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">recordItemUsePrediction</span><wbr><span class="parameters">(<a href="../../api/model/ItemUsePrediction.html" title="class in net.raphimc.viabedrock.api.model">ItemUsePrediction</a>&nbsp;prediction)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="takeItemUsePrediction(int)">
+<h3>takeItemUsePrediction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/ItemUsePrediction.html" title="class in net.raphimc.viabedrock.api.model">ItemUsePrediction</a></span>&nbsp;<span class="element-name">takeItemUsePrediction</span><wbr><span class="parameters">(int&nbsp;sequence)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearItemUsePrediction()">
+<h3>clearItemUsePrediction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clearItemUsePrediction</span>()</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="permissions()">
 <h3>permissions</h3>

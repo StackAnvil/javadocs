@@ -68,8 +68,10 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#putGeometry(net.raphimc.viabedrock.protocol.rewriter.resourcepack.ItemModelResourceRewriter.CompiledGeometry)" tabindex="0">putGeometry(ItemModelResourceRewriter.CompiledGeometry)</a></li>
 <li><a href="#putModel(java.lang.String,com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">putModel(String, JsonObject)</a></li>
+<li><a href="#modelReference(java.lang.String)" tabindex="0">modelReference(String)</a></li>
 <li><a href="#generateItemDefinition()" tabindex="0">generateItemDefinition()</a></li>
 <li><a href="#generateItemDefinition(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">generateItemDefinition(JsonObject)</a></li>
+<li><a href="#generateItemDefinition(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">generateItemDefinition(JsonObject, JsonObject)</a></li>
 </ol>
 </li>
 </ol>
@@ -150,6 +152,13 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#generateItemDefinition(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">generateItemDefinition</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;inventoryModel)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#generateItemDefinition(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">generateItemDefinition</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;inventoryModel,
+ com.viaversion.viaversion.libs.gson.JsonObject&nbsp;heldModel)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.viaversion.viaversion.libs.gson.JsonObject</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#modelReference(java.lang.String)" class="member-name-link">modelReference</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putGeometry(net.raphimc.viabedrock.protocol.rewriter.resourcepack.ItemModelResourceRewriter.CompiledGeometry)" class="member-name-link">putGeometry</a><wbr>(<a href="ItemModelResourceRewriter.CompiledGeometry.html" title="class in net.raphimc.viabedrock.protocol.rewriter.resourcepack">ItemModelResourceRewriter.CompiledGeometry</a>&nbsp;geometry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
@@ -213,6 +222,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="modelReference(java.lang.String)">
+<h3>modelReference</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">modelReference</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="generateItemDefinition()">
 <h3>generateItemDefinition</h3>
 <div class="horizontal-scroll">
@@ -225,6 +242,15 @@ loadScripts(document, 'script');</script>
 <h3>generateItemDefinition</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">generateItemDefinition</span><wbr><span class="parameters">(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;inventoryModel)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="generateItemDefinition(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonObject)">
+<h3>generateItemDefinition</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">generateItemDefinition</span><wbr><span class="parameters">(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;inventoryModel,
+ com.viaversion.viaversion.libs.gson.JsonObject&nbsp;heldModel)</span></div>
 </div>
 </section>
 </li>

@@ -67,6 +67,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth)" tabindex="0">Material(boolean, boolean, boolean, boolean, boolean, boolean, BedrockActorDepth)</a></li>
 <li><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean)" tabindex="0">Material(boolean, boolean, boolean, boolean, boolean, boolean, BedrockActorDepth, boolean)</a></li>
 <li><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean)" tabindex="0">Material(boolean, boolean, boolean, boolean, boolean, boolean, BedrockActorDepth, boolean, boolean)</a></li>
+<li><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean,boolean)" tabindex="0">Material(boolean, boolean, boolean, boolean, boolean, boolean, BedrockActorDepth, boolean, boolean, boolean)</a></li>
+<li><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean,boolean,boolean)" tabindex="0">Material(boolean, boolean, boolean, boolean, boolean, boolean, BedrockActorDepth, boolean, boolean, boolean, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -85,6 +87,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#depth()" tabindex="0">depth()</a></li>
 <li><a href="#colorMask()" tabindex="0">colorMask()</a></li>
 <li><a href="#alphaWrite()" tabindex="0">alphaWrite()</a></li>
+<li><a href="#pattern()" tabindex="0">pattern()</a></li>
+<li><a href="#additive()" tabindex="0">additive()</a></li>
 </ol>
 </li>
 </ol>
@@ -106,7 +110,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockActorMaterialDefinitions.Material</span>(boolean&nbsp;alphaTest, boolean&nbsp;cull, boolean&nbsp;emissive, boolean&nbsp;uvAnimation, boolean&nbsp;masked, boolean&nbsp;glint, <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth, boolean&nbsp;colorMask, boolean&nbsp;alphaWrite)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BedrockActorMaterialDefinitions.Material</span>(boolean&nbsp;alphaTest, boolean&nbsp;cull, boolean&nbsp;emissive, boolean&nbsp;uvAnimation, boolean&nbsp;masked, boolean&nbsp;glint, <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth, boolean&nbsp;colorMask, boolean&nbsp;alphaWrite, boolean&nbsp;pattern, boolean&nbsp;additive)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </div>
 </section>
@@ -161,6 +165,29 @@ loadScripts(document, 'script');</script>
  <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
  boolean&nbsp;colorMask,
  boolean&nbsp;alphaWrite)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean,boolean)" class="member-name-link">Material</a><wbr>(boolean&nbsp;alphaTest,
+ boolean&nbsp;cull,
+ boolean&nbsp;emissive,
+ boolean&nbsp;uvAnimation,
+ boolean&nbsp;masked,
+ boolean&nbsp;glint,
+ <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
+ boolean&nbsp;colorMask,
+ boolean&nbsp;alphaWrite,
+ boolean&nbsp;pattern)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean,boolean,boolean)" class="member-name-link">Material</a><wbr>(boolean&nbsp;alphaTest,
+ boolean&nbsp;cull,
+ boolean&nbsp;emissive,
+ boolean&nbsp;uvAnimation,
+ boolean&nbsp;masked,
+ boolean&nbsp;glint,
+ <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
+ boolean&nbsp;colorMask,
+ boolean&nbsp;alphaWrite,
+ boolean&nbsp;pattern,
+ boolean&nbsp;additive)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Material</code> record class.</div>
 </div>
@@ -179,54 +206,64 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alphaTest()" class="member-name-link">alphaTest</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#additive()" class="member-name-link">additive</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>additive</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alphaTest()" class="member-name-link">alphaTest</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>alphaTest</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alphaWrite()" class="member-name-link">alphaWrite</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#alphaWrite()" class="member-name-link">alphaWrite</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>alphaWrite</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#colorMask()" class="member-name-link">colorMask</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#colorMask()" class="member-name-link">colorMask</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>colorMask</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cull()" class="member-name-link">cull</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cull()" class="member-name-link">cull</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>cull</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#depth()" class="member-name-link">depth</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#depth()" class="member-name-link">depth</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>depth</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#emissive()" class="member-name-link">emissive</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#emissive()" class="member-name-link">emissive</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>emissive</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#glint()" class="member-name-link">glint</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#glint()" class="member-name-link">glint</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>glint</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#masked()" class="member-name-link">masked</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#masked()" class="member-name-link">masked</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>masked</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pattern()" class="member-name-link">pattern</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>pattern</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#textureCount()" class="member-name-link">textureCount</a>()</code></div>
@@ -319,6 +356,41 @@ loadScripts(document, 'script');</script>
  <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
  boolean&nbsp;colorMask,
  boolean&nbsp;alphaWrite)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean,boolean)">
+<h3>Material</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Material</span><wbr><span class="parameters">(boolean&nbsp;alphaTest,
+ boolean&nbsp;cull,
+ boolean&nbsp;emissive,
+ boolean&nbsp;uvAnimation,
+ boolean&nbsp;masked,
+ boolean&nbsp;glint,
+ <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
+ boolean&nbsp;colorMask,
+ boolean&nbsp;alphaWrite,
+ boolean&nbsp;pattern)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(boolean,boolean,boolean,boolean,boolean,boolean,com.viaversion.viafabricplus.bedrock.render.BedrockActorDepth,boolean,boolean,boolean,boolean)">
+<h3>Material</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Material</span><wbr><span class="parameters">(boolean&nbsp;alphaTest,
+ boolean&nbsp;cull,
+ boolean&nbsp;emissive,
+ boolean&nbsp;uvAnimation,
+ boolean&nbsp;masked,
+ boolean&nbsp;glint,
+ <a href="BedrockActorDepth.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockActorDepth</a>&nbsp;depth,
+ boolean&nbsp;colorMask,
+ boolean&nbsp;alphaWrite,
+ boolean&nbsp;pattern,
+ boolean&nbsp;additive)</span></div>
 <div class="block">Creates an instance of a <code>Material</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -331,6 +403,8 @@ loadScripts(document, 'script');</script>
 <dd><code>depth</code> - the value for the <code>depth</code> record component</dd>
 <dd><code>colorMask</code> - the value for the <code>colorMask</code> record component</dd>
 <dd><code>alphaWrite</code> - the value for the <code>alphaWrite</code> record component</dd>
+<dd><code>pattern</code> - the value for the <code>pattern</code> record component</dd>
+<dd><code>additive</code> - the value for the <code>additive</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -519,6 +593,32 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>alphaWrite</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="pattern()">
+<h3>pattern</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">pattern</span>()</div>
+<div class="block">Returns the value of the <code>pattern</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>pattern</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="additive()">
+<h3>additive</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">additive</span>()</div>
+<div class="block">Returns the value of the <code>additive</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>additive</code> record component</dd>
 </dl>
 </div>
 </section>

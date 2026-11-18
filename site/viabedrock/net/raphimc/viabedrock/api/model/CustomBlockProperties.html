@@ -60,7 +60,6 @@ loadScripts(document, 'script');</script>
 <li><a href="#field-detail" tabindex="0">Field Details</a>
 <ol class="toc-list">
 <li><a href="#RESOURCE_PATH" tabindex="0">RESOURCE_PATH</a></li>
-<li><a href="#MAX_BYTES" tabindex="0">MAX_BYTES</a></li>
 </ol>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
@@ -120,12 +119,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MAX_BYTES" class="member-name-link">MAX_BYTES</a></code></div>
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#RESOURCE_PATH" class="member-name-link">RESOURCE_PATH</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#RESOURCE_PATH" class="member-name-link">RESOURCE_PATH</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -172,7 +168,7 @@ loadScripts(document, 'script');</script>
  int&nbsp;y,
  int&nbsp;z)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Camera collision uses the continuous envelope of the component boxes.</div>
+<div class="block">Native camera bounds combine local boxes before world-float translation can collapse them.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#collisionBoxes()" class="member-name-link">collisionBoxes</a>()</code></div>
@@ -278,22 +274,6 @@ loadScripts(document, 'script');</script>
 </div>
 </section>
 </li>
-<li>
-<section class="detail" id="MAX_BYTES">
-<h3>MAX_BYTES</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MAX_BYTES</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list">
-<li><a href="../../../../../constant-values.html#net.raphimc.viabedrock.api.model.CustomBlockProperties.MAX_BYTES">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</div>
-</section>
-</li>
 </ul>
 </section>
 </li>
@@ -373,7 +353,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomBlockVisual.Box.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual.Box</a>&gt;</span>&nbsp;<span class="element-name">cameraBoxesAt</span><wbr><span class="parameters">(int&nbsp;x,
  int&nbsp;y,
  int&nbsp;z)</span></div>
-<div class="block">Camera collision uses the continuous envelope of the component boxes.</div>
+<div class="block">Native camera bounds combine local boxes before world-float translation can collapse them.</div>
 </div>
 </section>
 </li>

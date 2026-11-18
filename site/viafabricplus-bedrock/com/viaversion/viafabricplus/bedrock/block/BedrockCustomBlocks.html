@@ -60,6 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
 <li><a href="#current(net.minecraft.world.level.block.state.BlockState)" tabindex="0">current(BlockState)</a></li>
 <li><a href="#hasExtendedCollision()" tabindex="0">hasExtendedCollision()</a></li>
+<li><a href="#cameraShape(net.raphimc.viabedrock.api.model.NativeBlockGeometry,net.minecraft.core.BlockPos)" tabindex="0">cameraShape(NativeBlockGeometry, BlockPos)</a></li>
 </ol>
 </li>
 </ol>
@@ -108,15 +109,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.shapes.VoxelShape</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#cameraShape(net.raphimc.viabedrock.api.model.NativeBlockGeometry,net.minecraft.core.BlockPos)" class="member-name-link">cameraShape</a><wbr>(net.raphimc.viabedrock.api.model.NativeBlockGeometry&nbsp;geometry,
+ net.minecraft.core.BlockPos&nbsp;pos)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @Nullable <a href="BedrockCustomBlocks.Visual.html" title="class in com.viaversion.viafabricplus.bedrock.block">BedrockCustomBlocks.Visual</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#current(net.minecraft.world.level.block.state.BlockState)" class="member-name-link">current</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasExtendedCollision()" class="member-name-link">hasExtendedCollision</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @Nullable <a href="BedrockCustomBlocks.Visual.html" title="class in com.viaversion.viafabricplus.bedrock.block">BedrockCustomBlocks.Visual</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#current(net.minecraft.world.level.block.state.BlockState)" class="member-name-link">current</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasExtendedCollision()" class="member-name-link">hasExtendedCollision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -156,6 +161,15 @@ loadScripts(document, 'script');</script>
 <h3>hasExtendedCollision</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasExtendedCollision</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="cameraShape(net.raphimc.viabedrock.api.model.NativeBlockGeometry,net.minecraft.core.BlockPos)">
+<h3>cameraShape</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.world.phys.shapes.VoxelShape</span>&nbsp;<span class="element-name">cameraShape</span><wbr><span class="parameters">(net.raphimc.viabedrock.api.model.NativeBlockGeometry&nbsp;geometry,
+ net.minecraft.core.BlockPos&nbsp;pos)</span></div>
 </div>
 </section>
 </li>

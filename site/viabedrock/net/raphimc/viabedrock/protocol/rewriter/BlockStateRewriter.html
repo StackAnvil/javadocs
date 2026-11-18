@@ -63,7 +63,9 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#blockFriction(int)" tabindex="0">blockFriction(int)</a></li>
 <li><a href="#blockComponents(int)" tabindex="0">blockComponents(int)</a></li>
+<li><a href="#blockGeometry(int)" tabindex="0">blockGeometry(int)</a></li>
 <li><a href="#isRestrictionGroup(java.lang.String)" tabindex="0">isRestrictionGroup(String)</a></li>
 <li><a href="#registeredBlockIdentifier(java.lang.String)" tabindex="0">registeredBlockIdentifier(String)</a></li>
 <li><a href="#registeredBlockItemId(java.lang.String)" tabindex="0">registeredBlockItemId(String)</a></li>
@@ -150,6 +152,16 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return an isolated snapshot for this registered runtime-state owner.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockFriction(int)" class="member-name-link">blockFriction</a><wbr>(int&nbsp;runtimeId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native coefficients are independent of visual compilation and Java carrier assignment.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeBlockGeometry.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockGeometry</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockGeometry(int)" class="member-name-link">blockGeometry</a><wbr>(int&nbsp;runtimeId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Null preserves unresolved native classes; an empty geometry is a verified non-colliding state.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockItemNameKey(java.lang.String,java.lang.Short)" class="member-name-link">blockItemNameKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Short.html" title="class or interface in java.lang" class="external-link">Short</a>&nbsp;metadata)</code></div>
@@ -181,7 +193,7 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fluidJavaId(int)" class="member-name-link">fluidJavaId</a><wbr>(int&nbsp;bedrockBlockStateId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Forward liquid state, preserving its mapped depth/falling properties; -1 for nonliquid or unknown IDs.</div>
+<div class="block">Forward fluid-bearing states, preserving their mapped properties; -1 for nonfluid or unknown IDs.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isRestrictionGroup(java.lang.String)" class="member-name-link">isRestrictionGroup</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;identifier)</code></div>
@@ -251,11 +263,29 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="blockFriction(int)">
+<h3>blockFriction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a></span>&nbsp;<span class="element-name">blockFriction</span><wbr><span class="parameters">(int&nbsp;runtimeId)</span></div>
+<div class="block">Native coefficients are independent of visual compilation and Java carrier assignment.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="blockComponents(int)">
 <h3>blockComponents</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.nbt.tag.CompoundTag</span>&nbsp;<span class="element-name">blockComponents</span><wbr><span class="parameters">(int&nbsp;runtimeId)</span></div>
 <div class="block">Return an isolated snapshot for this registered runtime-state owner.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="blockGeometry(int)">
+<h3>blockGeometry</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeBlockGeometry.html" title="class in net.raphimc.viabedrock.api.model">NativeBlockGeometry</a></span>&nbsp;<span class="element-name">blockGeometry</span><wbr><span class="parameters">(int&nbsp;runtimeId)</span></div>
+<div class="block">Null preserves unresolved native classes; an empty geometry is a verified non-colliding state.</div>
 </div>
 </section>
 </li>
@@ -390,7 +420,7 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h3>fluidJavaId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">fluidJavaId</span><wbr><span class="parameters">(int&nbsp;bedrockBlockStateId)</span></div>
-<div class="block">Forward liquid state, preserving its mapped depth/falling properties; -1 for nonliquid or unknown IDs.</div>
+<div class="block">Forward fluid-bearing states, preserving their mapped properties; -1 for nonfluid or unknown IDs.</div>
 </div>
 </section>
 </li>

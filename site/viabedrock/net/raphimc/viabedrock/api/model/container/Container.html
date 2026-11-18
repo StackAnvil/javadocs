@@ -60,6 +60,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#field-detail" tabindex="0">Field Details</a>
 <ol class="toc-list">
+<li><a href="#INCREMENTAL_DRAG_CHANNEL" tabindex="0">INCREMENTAL_DRAG_CHANNEL</a></li>
 <li><a href="#user" tabindex="0">user</a></li>
 <li><a href="#containerId" tabindex="0">containerId</a></li>
 <li><a href="#type" tabindex="0">type</a></li>
@@ -78,7 +79,16 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#handleClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" tabindex="0">handleClick(int, short, byte, ContainerInput)</a></li>
+<li><a href="#getItemInJavaSlot(short)" tabindex="0">getItemInJavaSlot(short)</a></li>
+<li><a href="#handleNativeQuantityPickup(int,short,int)" tabindex="0">handleNativeQuantityPickup(int, short, int)</a></li>
+<li><a href="#handleNativeCursorReturn(int,short)" tabindex="0">handleNativeCursorReturn(int, short)</a></li>
+<li><a href="#beginClose()" tabindex="0">beginClose()</a></li>
 <li><a href="#cancelQuickCraft()" tabindex="0">cancelQuickCraft()</a></li>
+<li><a href="#hasIncrementalDrag()" tabindex="0">hasIncrementalDrag()</a></li>
+<li><a href="#hasSelectedSourceDrag()" tabindex="0">hasSelectedSourceDrag()</a></li>
+<li><a href="#supportsIncrementalDrag()" tabindex="0">supportsIncrementalDrag()</a></li>
+<li><a href="#handleNativeSourceTap(int,short,short,int)" tabindex="0">handleNativeSourceTap(int, short, short, int)</a></li>
+<li><a href="#beginNativeSourceDrag(short,int)" tabindex="0">beginNativeSourceDrag(short, int)</a></li>
 <li><a href="#dropItem(net.raphimc.viabedrock.api.model.container.Container,int,int)" tabindex="0">dropItem(Container, int, int)</a></li>
 <li><a href="#quickMoveRanges(short,net.raphimc.viabedrock.api.model.container.Container.SlotRef)" tabindex="0">quickMoveRanges(short, Container.SlotRef)</a></li>
 <li><a href="#itemAfterRemovingAmount(net.raphimc.viabedrock.protocol.model.BedrockItem,int)" tabindex="0">itemAfterRemovingAmount(BedrockItem, int)</a></li>
@@ -95,6 +105,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#getItem(int)" tabindex="0">getItem(int)</a></li>
 <li><a href="#itemIndex(int)" tabindex="0">itemIndex(int)</a></li>
 <li><a href="#getItems()" tabindex="0">getItems()</a></li>
+<li><a href="#retainStackIdentity(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">retainStackIdentity(int, BedrockItem)</a></li>
+<li><a href="#retainStackIdentities(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" tabindex="0">retainStackIdentities(BedrockItem[])</a></li>
 <li><a href="#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">setItem(int, BedrockItem)</a></li>
 <li><a href="#setItems(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" tabindex="0">setItems(BedrockItem[])</a></li>
 <li><a href="#getFullContainerName(int)" tabindex="0">getFullContainerName(int)</a></li>
@@ -182,24 +194,29 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>protected final byte</code></div>
 <div class="col-second even-row-color"><code><a href="#containerId" class="member-name-link">containerId</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>protected final <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
-<div class="col-second odd-row-color"><code><a href="#items" class="member-name-link">items</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>protected final com.viaversion.viaversion.api.minecraft.BlockPosition</code></div>
-<div class="col-second even-row-color"><code><a href="#position" class="member-name-link">position</a></code></div>
+<div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#INCREMENTAL_DRAG_CHANNEL" class="member-name-link">INCREMENTAL_DRAG_CHANNEL</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Negotiates incremental ordinary-stack input using the existing quick-craft phases.</div>
+</div>
+<div class="col-first even-row-color"><code>protected final <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
+<div class="col-second even-row-color"><code><a href="#items" class="member-name-link">items</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>protected final com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
-<div class="col-second odd-row-color"><code><a href="#title" class="member-name-link">title</a></code></div>
+<div class="col-first odd-row-color"><code>protected final com.viaversion.viaversion.api.minecraft.BlockPosition</code></div>
+<div class="col-second odd-row-color"><code><a href="#position" class="member-name-link">position</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>protected final <a href="../../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a></code></div>
-<div class="col-second even-row-color"><code><a href="#type" class="member-name-link">type</a></code></div>
+<div class="col-first even-row-color"><code>protected final com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
+<div class="col-second even-row-color"><code><a href="#title" class="member-name-link">title</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>protected final com.viaversion.viaversion.api.connection.UserConnection</code></div>
-<div class="col-second odd-row-color"><code><a href="#user" class="member-name-link">user</a></code></div>
+<div class="col-first odd-row-color"><code>protected final <a href="../../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#type" class="member-name-link">type</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>protected final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#validBlockTags" class="member-name-link">validBlockTags</a></code></div>
+<div class="col-first even-row-color"><code>protected final com.viaversion.viaversion.api.connection.UserConnection</code></div>
+<div class="col-second even-row-color"><code><a href="#user" class="member-name-link">user</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>protected final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#validBlockTags" class="member-name-link">validBlockTags</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -247,6 +264,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#bedrockSlot(int)" class="member-name-link">bedrockSlot</a><wbr>(int&nbsp;javaSlot)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#beginClose()" class="member-name-link">beginClose</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Close after retained input is reconciled.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#beginNativeSourceDrag(short,int)" class="member-name-link">beginNativeSourceDrag</a><wbr>(short&nbsp;javaSlot,
+ int&nbsp;quantity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Start an admitted selected-source gesture without moving its budget onto the cursor.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Container.BlockBinding.html" title="enum class in net.raphimc.viabedrock.api.model.container">Container.BlockBinding</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockBinding()" class="member-name-link">blockBinding</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -294,24 +322,60 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItem(int)" class="member-name-link">getItem</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItem(int)" class="member-name-link">getJavaItem</a><wbr>(int&nbsp;slot)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItemInJavaSlot(short)" class="member-name-link">getItemInJavaSlot</a><wbr>(short&nbsp;javaSlot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copy the native item behind a Java slot without exposing mutable authoritative storage.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItems()" class="member-name-link">getJavaItems</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItem(int)" class="member-name-link">getJavaItem</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleButtonClick(int)" class="member-name-link">handleButtonClick</a><wbr>(int&nbsp;button)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJavaItems()" class="member-name-link">getJavaItems</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">handleClick</a><wbr>(int&nbsp;revision,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleButtonClick(int)" class="member-name-link">handleButtonClick</a><wbr>(int&nbsp;button)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleClick(int,short,byte,net.raphimc.viabedrock.protocol.data.enums.java.generated.ContainerInput)" class="member-name-link">handleClick</a><wbr>(int&nbsp;revision,
  short&nbsp;javaSlot,
  byte&nbsp;button,
  <a href="../../../protocol/data/enums/java/generated/ContainerInput.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">ContainerInput</a>&nbsp;action)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleNativeCursorReturn(int,short)" class="member-name-link">handleNativeCursorReturn</a><wbr>(int&nbsp;revision,
+ short&nbsp;javaSlot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Return the whole cursor to its retained source before native quantity selection starts.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleNativeQuantityPickup(int,short,int)" class="member-name-link">handleNativeQuantityPickup</a><wbr>(int&nbsp;revision,
+ short&nbsp;javaSlot,
+ int&nbsp;amount)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Complete a native held quantity without approximating it with repeated Java clicks.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleNativeSourceTap(int,short,short,int)" class="member-name-link">handleNativeSourceTap</a><wbr>(int&nbsp;revision,
+ short&nbsp;sourceSlot,
+ short&nbsp;destinationSlot,
+ int&nbsp;quantity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Complete an ordinary selected-source tap without manufacturing a cursor pickup.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIncrementalDrag()" class="member-name-link">hasIncrementalDrag</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retain accepted pointer input until its server replies settle before closing this opening.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSelectedSourceDrag()" class="member-name-link">hasSelectedSourceDrag</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">A retired source publication must not cancel a later cursor-origin gesture.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBlockBound()" class="member-name-link">isBlockBound</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -371,6 +435,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveBlockBinding()" class="member-name-link">resolveBlockBinding</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainStackIdentities(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" class="member-name-link">retainStackIdentities</a><wbr>(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;incoming)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainStackIdentity(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" class="member-name-link">retainStackIdentity</a><wbr>(int&nbsp;slot,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;incoming)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Keeps a server-assigned stack identity when an authoritative update repeats the same stack
+without one.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectBundleItem(short,int)" class="member-name-link">selectBundleItem</a><wbr>(short&nbsp;javaSlot,
  int&nbsp;selectedItem)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -397,15 +471,18 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slotFromRequest(int)" class="member-name-link">slotFromRequest</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#title()" class="member-name-link">title</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#supportsIncrementalDrag()" class="member-name-link">supportsIncrementalDrag</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateContainerData(int)" class="member-name-link">translateContainerData</a><wbr>(int&nbsp;containerData)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#title()" class="member-name-link">title</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateContainerData(int)" class="member-name-link">translateContainerData</a><wbr>(int&nbsp;containerData)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -423,6 +500,23 @@ loadScripts(document, 'script');</script>
 <section class="field-details" id="field-detail">
 <h2>Field Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="INCREMENTAL_DRAG_CHANNEL">
+<h3>INCREMENTAL_DRAG_CHANNEL</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">INCREMENTAL_DRAG_CHANNEL</span></div>
+<div class="block">Negotiates incremental ordinary-stack input using the existing quick-craft phases.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../../constant-values.html#net.raphimc.viabedrock.api.model.container.Container.INCREMENTAL_DRAG_CHANNEL">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="user">
 <h3>user</h3>
@@ -535,10 +629,97 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getItemInJavaSlot(short)">
+<h3>getItemInJavaSlot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a></span>&nbsp;<span class="element-name">getItemInJavaSlot</span><wbr><span class="parameters">(short&nbsp;javaSlot)</span></div>
+<div class="block">Copy the native item behind a Java slot without exposing mutable authoritative storage.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="handleNativeQuantityPickup(int,short,int)">
+<h3>handleNativeQuantityPickup</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">handleNativeQuantityPickup</span><wbr><span class="parameters">(int&nbsp;revision,
+ short&nbsp;javaSlot,
+ int&nbsp;amount)</span></div>
+<div class="block">Complete a native held quantity without approximating it with repeated Java clicks.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="handleNativeCursorReturn(int,short)">
+<h3>handleNativeCursorReturn</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">handleNativeCursorReturn</span><wbr><span class="parameters">(int&nbsp;revision,
+ short&nbsp;javaSlot)</span></div>
+<div class="block">Return the whole cursor to its retained source before native quantity selection starts.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="beginClose()">
+<h3>beginClose</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">beginClose</span>()</div>
+<div class="block">Close after retained input is reconciled. Temporary input containers return items first.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="cancelQuickCraft()">
 <h3>cancelQuickCraft</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">cancelQuickCraft</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasIncrementalDrag()">
+<h3>hasIncrementalDrag</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIncrementalDrag</span>()</div>
+<div class="block">Retain accepted pointer input until its server replies settle before closing this opening.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasSelectedSourceDrag()">
+<h3>hasSelectedSourceDrag</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSelectedSourceDrag</span>()</div>
+<div class="block">A retired source publication must not cancel a later cursor-origin gesture.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="supportsIncrementalDrag()">
+<h3>supportsIncrementalDrag</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">supportsIncrementalDrag</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="handleNativeSourceTap(int,short,short,int)">
+<h3>handleNativeSourceTap</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">handleNativeSourceTap</span><wbr><span class="parameters">(int&nbsp;revision,
+ short&nbsp;sourceSlot,
+ short&nbsp;destinationSlot,
+ int&nbsp;quantity)</span></div>
+<div class="block">Complete an ordinary selected-source tap without manufacturing a cursor pickup.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="beginNativeSourceDrag(short,int)">
+<h3>beginNativeSourceDrag</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">beginNativeSourceDrag</span><wbr><span class="parameters">(short&nbsp;javaSlot,
+ int&nbsp;quantity)</span></div>
+<div class="block">Start an admitted selected-source gesture without moving its budget onto the cursor.</div>
 </div>
 </section>
 </li>
@@ -678,6 +859,26 @@ loadScripts(document, 'script');</script>
 <h3>getItems</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</span>&nbsp;<span class="element-name">getItems</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="retainStackIdentity(int,net.raphimc.viabedrock.protocol.model.BedrockItem)">
+<h3>retainStackIdentity</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">retainStackIdentity</span><wbr><span class="parameters">(int&nbsp;slot,
+ <a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>&nbsp;incoming)</span></div>
+<div class="block">Keeps a server-assigned stack identity when an authoritative update repeats the same stack
+without one. Some servers follow a crafting response with a slot update that omits the
+network ID the response just assigned. Any other change takes the update as sent.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="retainStackIdentities(net.raphimc.viabedrock.protocol.model.BedrockItem[])">
+<h3>retainStackIdentities</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">retainStackIdentities</span><wbr><span class="parameters">(<a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]&nbsp;incoming)</span></div>
 </div>
 </section>
 </li>

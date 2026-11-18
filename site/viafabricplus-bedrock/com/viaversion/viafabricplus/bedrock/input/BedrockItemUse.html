@@ -59,8 +59,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#register()" tabindex="0">register()</a></li>
 <li><a href="#begin(boolean)" tabindex="0">begin(boolean)</a></li>
 <li><a href="#beginAirUse(net.minecraft.world.InteractionHand,net.minecraft.world.item.ItemStack)" tabindex="0">beginAirUse(InteractionHand, ItemStack)</a></li>
+<li><a href="#beginItemPrediction(net.minecraft.world.InteractionHand,net.minecraft.world.item.ItemStack)" tabindex="0">beginItemPrediction(InteractionHand, ItemStack)</a></li>
+<li><a href="#sendItemPrediction(int,net.minecraft.world.InteractionHand)" tabindex="0">sendItemPrediction(int, InteractionHand)</a></li>
+<li><a href="#airResult(net.minecraft.world.InteractionHand)" tabindex="0">airResult(InteractionHand)</a></li>
 <li><a href="#hitType(net.minecraft.world.phys.HitResult.Type,net.minecraft.world.InteractionHand)" tabindex="0">hitType(HitResult.Type, InteractionHand)</a></li>
 <li><a href="#release()" tabindex="0">release()</a></li>
+<li><a href="#releaseKey()" tabindex="0">releaseKey()</a></li>
 <li><a href="#blockResult(net.minecraft.world.InteractionResult,net.minecraft.world.InteractionHand)" tabindex="0">blockResult(InteractionResult, InteractionHand)</a></li>
 <li><a href="#attempted()" tabindex="0">attempted()</a></li>
 <li><a href="#repeatsFromFrames()" tabindex="0">repeatsFromFrames()</a></li>
@@ -107,18 +111,25 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#allows(net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState)" class="member-name-link">allows</a><wbr>(net.minecraft.core.BlockPos&nbsp;target,
- net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#attempted()" class="member-name-link">attempted</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#begin(boolean)" class="member-name-link">begin</a><wbr>(boolean&nbsp;freshPress)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#airResult(net.minecraft.world.InteractionHand)" class="member-name-link">airResult</a><wbr>(net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#beginAirUse(net.minecraft.world.InteractionHand,net.minecraft.world.item.ItemStack)" class="member-name-link">beginAirUse</a><wbr>(net.minecraft.world.InteractionHand&nbsp;hand,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#allows(net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState)" class="member-name-link">allows</a><wbr>(net.minecraft.core.BlockPos&nbsp;target,
+ net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#attempted()" class="member-name-link">attempted</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#begin(boolean)" class="member-name-link">begin</a><wbr>(boolean&nbsp;freshPress)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#beginAirUse(net.minecraft.world.InteractionHand,net.minecraft.world.item.ItemStack)" class="member-name-link">beginAirUse</a><wbr>(net.minecraft.world.InteractionHand&nbsp;hand,
+ net.minecraft.world.item.ItemStack&nbsp;item)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#beginItemPrediction(net.minecraft.world.InteractionHand,net.minecraft.world.item.ItemStack)" class="member-name-link">beginItemPrediction</a><wbr>(net.minecraft.world.InteractionHand&nbsp;hand,
  net.minecraft.world.item.ItemStack&nbsp;item)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
@@ -164,8 +175,15 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#release()" class="member-name-link">release</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#repeatsFromFrames()" class="member-name-link">repeatsFromFrames</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#releaseKey()" class="member-name-link">releaseKey</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#repeatsFromFrames()" class="member-name-link">repeatsFromFrames</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendItemPrediction(int,net.minecraft.world.InteractionHand)" class="member-name-link">sendItemPrediction</a><wbr>(int&nbsp;sequence,
+ net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendPrediction(int)" class="member-name-link">sendPrediction</a><wbr>(int&nbsp;sequence)</code></div>
@@ -216,6 +234,32 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="beginItemPrediction(net.minecraft.world.InteractionHand,net.minecraft.world.item.ItemStack)">
+<h3>beginItemPrediction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">beginItemPrediction</span><wbr><span class="parameters">(net.minecraft.world.InteractionHand&nbsp;hand,
+ net.minecraft.world.item.ItemStack&nbsp;item)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendItemPrediction(int,net.minecraft.world.InteractionHand)">
+<h3>sendItemPrediction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendItemPrediction</span><wbr><span class="parameters">(int&nbsp;sequence,
+ net.minecraft.world.InteractionHand&nbsp;hand)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="airResult(net.minecraft.world.InteractionHand)">
+<h3>airResult</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">airResult</span><wbr><span class="parameters">(net.minecraft.world.InteractionHand&nbsp;hand)</span></div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="hitType(net.minecraft.world.phys.HitResult.Type,net.minecraft.world.InteractionHand)">
 <h3>hitType</h3>
 <div class="horizontal-scroll">
@@ -229,6 +273,14 @@ loadScripts(document, 'script');</script>
 <h3>release</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">release</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="releaseKey()">
+<h3>releaseKey</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">releaseKey</span>()</div>
 </div>
 </section>
 </li>

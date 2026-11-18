@@ -59,11 +59,15 @@ loadScripts(document, 'script');</script>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E()" tabindex="0">NativeHudTitleState()</a></li>
+<li><a href="#%3Cinit%3E(java.util.function.LongSupplier)" tabindex="0">NativeHudTitleState(LongSupplier)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#update(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.SetTitlePacket_TitleType,java.lang.String,int,int,int,net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" tabindex="0">update(SetTitlePacket_TitleType, String, int, int, int, ResourcePackStorage)</a></li>
+<li><a href="#title()" tabindex="0">title()</a></li>
+<li><a href="#subtitle()" tabindex="0">subtitle()</a></li>
+<li><a href="#rootBindings()" tabindex="0">rootBindings()</a></li>
+<li><a href="#update(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.SetTitlePacket_TitleType,java.lang.String,int,int,int,net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,int)" tabindex="0">update(SetTitlePacket_TitleType, String, int, int, int, ResourcePackStorage, int)</a></li>
 </ol>
 </li>
 </ol>
@@ -86,7 +90,11 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">NativeHudTitleState</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
-<div class="block">Retains subtitle-before-title ordering without restarting a live title for subtitle updates.</div>
+<div class="block">Native title data: text published to persistent HUD controls, a subtitle staged for the next title, and the
+visible title factory. Bedrock 1.26.60.5 installed-client fixtures distinguish these lifetimes. A title creates
+a factory from the staged subtitle and starts a title period. During that period a subtitle publishes at once,
+also after Clear or Reset. After natural expiry it is only staged for the next title. Clear hides the factory
+and keeps the published text. Reset keeps both and restores the default timing for later titles.</div>
 </div>
 </section>
 <section class="summary">
@@ -101,6 +109,10 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">NativeHudTitleState</a>()</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.function.LongSupplier)" class="member-name-link">NativeHudTitleState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/LongSupplier.html" title="class or interface in java.util.function" class="external-link">LongSupplier</a>&nbsp;clock)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">The clock supplies monotonic nanoseconds for the title period.</div>
+</div>
 </div>
 </section>
 </li>
@@ -115,14 +127,30 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeHudMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeHudMessage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.SetTitlePacket_TitleType,java.lang.String,int,int,int,net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)" class="member-name-link">update</a><wbr>(<a href="../data/enums/bedrock/generated/SetTitlePacket_TitleType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">SetTitlePacket_TitleType</a>&nbsp;type,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/UiRetainedBindings.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiRetainedBindings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rootBindings()" class="member-name-link">rootBindings</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Persistent HUD controls keep visibility_changed and once binding values across the connection's title updates.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#subtitle()" class="member-name-link">subtitle</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#title()" class="member-name-link">title</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The title text published to persistent controls.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/model/NativeHudInputs.html" title="class in net.raphimc.viabedrock.api.model">NativeHudInputs</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.SetTitlePacket_TitleType,java.lang.String,int,int,int,net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,int)" class="member-name-link">update</a><wbr>(<a href="../data/enums/bedrock/generated/SetTitlePacket_TitleType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">SetTitlePacket_TitleType</a>&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
  int&nbsp;in,
  int&nbsp;hold,
  int&nbsp;out,
- <a href="ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;resources)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+ <a href="ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;resources,
+ int&nbsp;context)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the inputs a frontend resolves, or null when the native title does not change.</div>
+</div>
 </div>
 </div>
 </div>
@@ -151,6 +179,15 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 </div>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.util.function.LongSupplier)">
+<h3>NativeHudTitleState</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NativeHudTitleState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/LongSupplier.html" title="class or interface in java.util.function" class="external-link">LongSupplier</a>&nbsp;clock)</span></div>
+<div class="block">The clock supplies monotonic nanoseconds for the title period.</div>
+</div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -160,15 +197,43 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="update(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.SetTitlePacket_TitleType,java.lang.String,int,int,int,net.raphimc.viabedrock.protocol.storage.ResourcePackStorage)">
+<section class="detail" id="title()">
+<h3>title</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">title</span>()</div>
+<div class="block">The title text published to persistent controls. It outlives the factory on Clear, Reset and expiry.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="subtitle()">
+<h3>subtitle</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">subtitle</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="rootBindings()">
+<h3>rootBindings</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/resourcepack/ui/UiRetainedBindings.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiRetainedBindings</a></span>&nbsp;<span class="element-name">rootBindings</span>()</div>
+<div class="block">Persistent HUD controls keep visibility_changed and once binding values across the connection's title updates.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="update(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.SetTitlePacket_TitleType,java.lang.String,int,int,int,net.raphimc.viabedrock.protocol.storage.ResourcePackStorage,int)">
 <h3>update</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeHudMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeHudMessage</a></span>&nbsp;<span class="element-name">update</span><wbr><span class="parameters">(<a href="../data/enums/bedrock/generated/SetTitlePacket_TitleType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">SetTitlePacket_TitleType</a>&nbsp;type,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../api/model/NativeHudInputs.html" title="class in net.raphimc.viabedrock.api.model">NativeHudInputs</a></span>&nbsp;<span class="element-name">update</span><wbr><span class="parameters">(<a href="../data/enums/bedrock/generated/SetTitlePacket_TitleType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">SetTitlePacket_TitleType</a>&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
  int&nbsp;in,
  int&nbsp;hold,
  int&nbsp;out,
- <a href="ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;resources)</span></div>
+ <a href="ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a>&nbsp;resources,
+ int&nbsp;context)</span></div>
+<div class="block">Returns the inputs a frontend resolves, or null when the native title does not change.</div>
 </div>
 </section>
 </li>

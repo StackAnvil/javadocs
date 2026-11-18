@@ -62,7 +62,9 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#prepare()" tabindex="0">prepare()</a></li>
 <li><a href="#load(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.BaseGameVersion)" tabindex="0">load(UserConnection, BaseGameVersion)</a></li>
+<li><a href="#close()" tabindex="0">close()</a></li>
 </ol>
 </li>
 </ol>
@@ -80,12 +82,13 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>com.viaversion.viaversion.api.platform.providers.Provider</code></dd>
+<dd><code>com.viaversion.viaversion.api.platform.providers.Provider, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">ViaFabricPlusBuiltinResourcePackProvider</span>
-<span class="extends-implements">extends net.raphimc.viabedrock.protocol.provider.BuiltinResourcePackProvider</span></div>
+<span class="extends-implements">extends net.raphimc.viabedrock.protocol.provider.BuiltinResourcePackProvider
+implements <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></span></div>
 <div class="block">Supplies bundled native visual and actor resources on ViaBedrock's resource-pack worker.</div>
 </div>
 </section>
@@ -115,10 +118,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;net.raphimc.viabedrock.api.resourcepack.ResourcePack&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.BaseGameVersion)" class="member-name-link">load</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- net.raphimc.viabedrock.api.resourcepack.BaseGameVersion&nbsp;version)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;net.raphimc.viabedrock.api.resourcepack.ResourcePack&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.BaseGameVersion)" class="member-name-link">load</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ net.raphimc.viabedrock.api.resourcepack.BaseGameVersion&nbsp;version)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare()" class="member-name-link">prepare</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Starts the same validated load that joining awaits, without blocking client startup.</div>
+</div>
 </div>
 </div>
 </div>
@@ -153,6 +164,15 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="prepare()">
+<h3>prepare</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">prepare</span>()</div>
+<div class="block">Starts the same validated load that joining awaits, without blocking client startup.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="load(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.resourcepack.BaseGameVersion)">
 <h3>load</h3>
 <div class="horizontal-scroll">
@@ -164,6 +184,18 @@ loadScripts(document, 'script');</script>
 <dd><code>load</code>&nbsp;in class&nbsp;<code>net.raphimc.viabedrock.protocol.provider.BuiltinResourcePackProvider</code></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="close()">
+<h3>close</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">close</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 </div>
 </section>

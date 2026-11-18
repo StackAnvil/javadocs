@@ -57,6 +57,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#presentBossBars(com.viaversion.viaversion.api.connection.UserConnection)" tabindex="0">presentBossBars(UserConnection)</a></li>
 <li><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" tabindex="0">register(BedrockProtocol)</a></li>
 </ol>
 </li>
@@ -91,8 +92,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" class="member-name-link">register</a><wbr>(<a href="../BedrockProtocol.html" title="class in net.raphimc.viabedrock.protocol">BedrockProtocol</a>&nbsp;protocol)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#presentBossBars(com.viaversion.viaversion.api.connection.UserConnection)" class="member-name-link">presentBossBars</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native boss bars are rows of the HUD's boss_bars collection.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(net.raphimc.viabedrock.protocol.BedrockProtocol)" class="member-name-link">register</a><wbr>(<a href="../BedrockProtocol.html" title="class in net.raphimc.viabedrock.protocol">BedrockProtocol</a>&nbsp;protocol)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -110,6 +116,16 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="presentBossBars(com.viaversion.viaversion.api.connection.UserConnection)">
+<h3>presentBossBars</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">presentBossBars</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</span></div>
+<div class="block">Native boss bars are rows of the HUD's boss_bars collection. An accepted HUD can present a row through
+its own controls and hide it from the native boss panel, so the Java bar follows that authored panel.</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="register(net.raphimc.viabedrock.protocol.BedrockProtocol)">
 <h3>register</h3>

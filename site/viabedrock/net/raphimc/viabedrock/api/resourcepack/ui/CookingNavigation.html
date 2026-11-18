@@ -63,6 +63,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#tab(boolean,int,int,int,int,int)" tabindex="0">tab(boolean, int, int, int, int, int)</a></li>
 <li><a href="#moveTab(boolean,int,int,int,int,int,int)" tabindex="0">moveTab(boolean, int, int, int, int, int, int)</a></li>
 <li><a href="#moveLayout(boolean,int,int,int,boolean,net.raphimc.viabedrock.api.resourcepack.ui.CookingNavigation.Direction)" tabindex="0">moveLayout(boolean, int, int, int, boolean, CookingNavigation.Direction)</a></li>
+<li><a href="#layout(boolean,int,net.raphimc.viabedrock.api.resourcepack.ui.CookingNavigation.Direction)" tabindex="0">layout(boolean, int, CookingNavigation.Direction)</a></li>
 </ol>
 </li>
 </ol>
@@ -117,42 +118,47 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CookingNavigation.LayoutTransition.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingNavigation.LayoutTransition</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#moveLayout(boolean,int,int,int,boolean,net.raphimc.viabedrock.api.resourcepack.ui.CookingNavigation.Direction)" class="member-name-link">moveLayout</a><wbr>(boolean&nbsp;forcedRecipeBook,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#layout(boolean,int,net.raphimc.viabedrock.api.resourcepack.ui.CookingNavigation.Direction)" class="member-name-link">layout</a><wbr>(boolean&nbsp;forcedRecipeBook,
+ int&nbsp;current,
+ <a href="CookingNavigation.Direction.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">CookingNavigation.Direction</a>&nbsp;direction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CookingNavigation.LayoutTransition.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingNavigation.LayoutTransition</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#moveLayout(boolean,int,int,int,boolean,net.raphimc.viabedrock.api.resourcepack.ui.CookingNavigation.Direction)" class="member-name-link">moveLayout</a><wbr>(boolean&nbsp;forcedRecipeBook,
  int&nbsp;current,
  int&nbsp;tab,
  int&nbsp;savedTab,
  boolean&nbsp;rememberInventory,
  <a href="CookingNavigation.Direction.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">CookingNavigation.Direction</a>&nbsp;direction)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CookingNavigation.TabTransition.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingNavigation.TabTransition</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#moveTab(boolean,int,int,int,int,int,int)" class="member-name-link">moveTab</a><wbr>(boolean&nbsp;forcedRecipeBook,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CookingNavigation.TabTransition.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingNavigation.TabTransition</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#moveTab(boolean,int,int,int,int,int,int)" class="member-name-link">moveTab</a><wbr>(boolean&nbsp;forcedRecipeBook,
  int&nbsp;layout,
  int&nbsp;food,
  int&nbsp;items,
  int&nbsp;blocks,
  int&nbsp;current,
  int&nbsp;delta)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tab(boolean,int,int,int,int,int)" class="member-name-link">tab</a><wbr>(boolean&nbsp;forcedRecipeBook,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tab(boolean,int,int,int,int,int)" class="member-name-link">tab</a><wbr>(boolean&nbsp;forcedRecipeBook,
  int&nbsp;food,
  int&nbsp;items,
  int&nbsp;blocks,
  int&nbsp;current,
  int&nbsp;delta)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tabLabel(int,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi.Family,boolean)" class="member-name-link">tabLabel</a><wbr>(int&nbsp;tab,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tabLabel(int,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi.Family,boolean)" class="member-name-link">tabLabel</a><wbr>(int&nbsp;tab,
  <a href="CookingUi.Family.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi.Family</a>&nbsp;family,
  boolean&nbsp;filtering)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tabs(boolean,int,int,int)" class="member-name-link">tabs</a><wbr>(boolean&nbsp;forcedRecipeBook,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tabs(boolean,int,int,int)" class="member-name-link">tabs</a><wbr>(boolean&nbsp;forcedRecipeBook,
  int&nbsp;food,
  int&nbsp;items,
  int&nbsp;blocks)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -227,6 +233,16 @@ loadScripts(document, 'script');</script>
  int&nbsp;tab,
  int&nbsp;savedTab,
  boolean&nbsp;rememberInventory,
+ <a href="CookingNavigation.Direction.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">CookingNavigation.Direction</a>&nbsp;direction)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="layout(boolean,int,net.raphimc.viabedrock.api.resourcepack.ui.CookingNavigation.Direction)">
+<h3>layout</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">layout</span><wbr><span class="parameters">(boolean&nbsp;forcedRecipeBook,
+ int&nbsp;current,
  <a href="CookingNavigation.Direction.html" title="enum class in net.raphimc.viabedrock.api.resourcepack.ui">CookingNavigation.Direction</a>&nbsp;direction)</span></div>
 </div>
 </section>

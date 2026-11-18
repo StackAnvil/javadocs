@@ -77,6 +77,10 @@ loadScripts(document, 'script');</script>
 <li><a href="#setCustomBlockVisuals(java.util.Map)" tabindex="0">setCustomBlockVisuals(Map)</a></li>
 <li><a href="#getCustomBlockStateMappings()" tabindex="0">getCustomBlockStateMappings()</a></li>
 <li><a href="#setCustomBlockStateMappings(java.util.Map)" tabindex="0">setCustomBlockStateMappings(Map)</a></li>
+<li><a href="#setUiContextToken(java.lang.String)" tabindex="0">setUiContextToken(String)</a></li>
+<li><a href="#confirmUiContext(net.raphimc.viabedrock.api.resourcepack.ui.NativeUiContext.Confirmation)" tabindex="0">confirmUiContext(NativeUiContext.Confirmation)</a></li>
+<li><a href="#nativeUiContext(com.viaversion.viaversion.api.connection.UserConnection,java.lang.String)" tabindex="0">nativeUiContext(UserConnection, String)</a></li>
+<li><a href="#getUiContextGeneration()" tabindex="0">getUiContextGeneration()</a></li>
 <li><a href="#setLoadedOnJavaClient()" tabindex="0">setLoadedOnJavaClient()</a></li>
 <li><a href="#getConverterData()" tabindex="0">getConverterData()</a></li>
 <li><a href="#getTextFormatting()" tabindex="0">getTextFormatting()</a></li>
@@ -157,84 +161,94 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/AttachableDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">AttachableDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAttachables()" class="member-name-link">getAttachables</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/BaseGameVersion.html" title="class in net.raphimc.viabedrock.api.resourcepack">BaseGameVersion</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBaseGameVersion()" class="member-name-link">getBaseGameVersion</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#confirmUiContext(net.raphimc.viabedrock.api.resourcepack.ui.NativeUiContext.Confirmation)" class="member-name-link">confirmUiContext</a><wbr>(<a href="../../api/resourcepack/ui/NativeUiContext.Confirmation.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">NativeUiContext.Confirmation</a>&nbsp;confirmation)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Accepts a frontend program only for this stack's advertised pack; another token withdraws native UI inputs.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/AttachableDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">AttachableDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAttachables()" class="member-name-link">getAttachables</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/BiomeDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">BiomeDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBiomes()" class="member-name-link">getBiomes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/BaseGameVersion.html" title="class in net.raphimc.viabedrock.api.resourcepack">BaseGameVersion</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBaseGameVersion()" class="member-name-link">getBaseGameVersion</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/BlockCullingDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">BlockCullingDefinitions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlockCulling()" class="member-name-link">getBlockCulling</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/BiomeDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">BiomeDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBiomes()" class="member-name-link">getBiomes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/BlockDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">BlockDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlocks()" class="member-name-link">getBlocks</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/BlockCullingDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">BlockCullingDefinitions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlockCulling()" class="member-name-link">getBlockCulling</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContainerUi()" class="member-name-link">getContainerUi</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/BlockDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">BlockDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlocks()" class="member-name-link">getBlocks</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConverterData()" class="member-name-link">getConverterData</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/ContainerUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ContainerUi</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContainerUi()" class="member-name-link">getContainerUi</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/CookingUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCookingUi()" class="member-name-link">getCookingUi</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConverterData()" class="member-name-link">getConverterData</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomBlockPackId()" class="member-name-link">getCustomBlockPackId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/CookingUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCookingUi()" class="member-name-link">getCookingUi</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomBlockStateMappings()" class="member-name-link">getCustomBlockStateMappings</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomBlockPackId()" class="member-name-link">getCustomBlockPackId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, <a href="../../api/model/CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomBlockVisuals()" class="member-name-link">getCustomBlockVisuals</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomBlockStateMappings()" class="member-name-link">getCustomBlockStateMappings</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/EntityDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">EntityDefinitions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntities()" class="member-name-link">getEntities</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, <a href="../../api/model/CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomBlockVisuals()" class="member-name-link">getCustomBlockVisuals</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/FogDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">FogDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFogs()" class="member-name-link">getFogs</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/EntityDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">EntityDefinitions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntities()" class="member-name-link">getEntities</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/ItemDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">ItemDefinitions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/FogDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">FogDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFogs()" class="member-name-link">getFogs</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/JsonUiProgram.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJsonUiProgram()" class="member-name-link">getJsonUiProgram</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/ItemDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">ItemDefinitions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/ModelDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">ModelDefinitions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModels()" class="member-name-link">getModels</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/JsonUiProgram.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJsonUiProgram()" class="member-name-link">getJsonUiProgram</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a><wbr>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackStackBottomToTop()" class="member-name-link">getPackStackBottomToTop</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/ModelDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">ModelDefinitions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModels()" class="member-name-link">getModels</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a><wbr>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackStackTopToBottom()" class="member-name-link">getPackStackTopToBottom</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackStackBottomToTop()" class="member-name-link">getPackStackBottomToTop</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/ParticleDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">ParticleDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getParticles()" class="member-name-link">getParticles</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a><wbr>&lt;<a href="../../api/resourcepack/ResourcePack.html" title="class in net.raphimc.viabedrock.api.resourcepack">ResourcePack</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackStackTopToBottom()" class="member-name-link">getPackStackTopToBottom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/RenderControllerDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">RenderControllerDefinitions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRenderControllers()" class="member-name-link">getRenderControllers</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/ParticleDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">ParticleDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getParticles()" class="member-name-link">getParticles</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/ScoreboardUiDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">ScoreboardUiDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScoreboardUi()" class="member-name-link">getScoreboardUi</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/RenderControllerDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">RenderControllerDefinitions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRenderControllers()" class="member-name-link">getRenderControllers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/ServerFormUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ServerFormUi</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServerFormUi()" class="member-name-link">getServerFormUi</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/ScoreboardUiDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">ScoreboardUiDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScoreboardUi()" class="member-name-link">getScoreboardUi</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/SoundDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">SoundDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSounds()" class="member-name-link">getSounds</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/ui/ServerFormUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ServerFormUi</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServerFormUi()" class="member-name-link">getServerFormUi</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/TextFormattingDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">TextFormattingDefinitions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTextFormatting()" class="member-name-link">getTextFormatting</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/SoundDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">SoundDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSounds()" class="member-name-link">getSounds</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/TextDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">TextDefinitions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTexts()" class="member-name-link">getTexts</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/TextFormattingDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">TextFormattingDefinitions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTextFormatting()" class="member-name-link">getTextFormatting</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/TextureDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">TextureDefinitions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTextures()" class="member-name-link">getTextures</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/TextDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">TextDefinitions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTexts()" class="member-name-link">getTexts</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/resourcepack/definition/TextureDefinitions.html" title="class in net.raphimc.viabedrock.api.resourcepack.definition">TextureDefinitions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTextures()" class="member-name-link">getTextures</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUiContextGeneration()" class="member-name-link">getUiContextGeneration</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The confirmed frontend generation that resolves native UI inputs for this stack, or 0.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VoxelShapeRegistry.Snapshot.html" title="class in net.raphimc.viabedrock.protocol.storage">VoxelShapeRegistry.Snapshot</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVoxelShapes()" class="member-name-link">getVoxelShapes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -248,20 +262,31 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#nativeActors(java.util.List,net.raphimc.viabedrock.api.resourcepack.BaseGameVersion)" class="member-name-link">nativeActors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/resourcepack/NativeActorLibrary.Layer.html" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Layer</a>&gt;&nbsp;layers,
  <a href="../../api/resourcepack/BaseGameVersion.html" title="class in net.raphimc.viabedrock.api.resourcepack">BaseGameVersion</a>&nbsp;baseGameVersion)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Uses the converter's resolved order and provenance without adding local vanilla definitions again.</div>
+<div class="block">Reconstructs actor dependencies only.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomBlockPackId(java.util.UUID)" class="member-name-link">setCustomBlockPackId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;id)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#nativeUiContext(com.viaversion.viaversion.api.connection.UserConnection,java.lang.String)" class="member-name-link">nativeUiContext</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;channel)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The confirmed frontend generation for native UI inputs on a negotiated channel, or 0.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomBlockStateMappings(java.util.Map)" class="member-name-link">setCustomBlockStateMappings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;states)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomBlockPackId(java.util.UUID)" class="member-name-link">setCustomBlockPackId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;id)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomBlockVisuals(java.util.Map)" class="member-name-link">setCustomBlockVisuals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, <a href="../../api/model/CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a>&gt;&nbsp;visuals)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomBlockStateMappings(java.util.Map)" class="member-name-link">setCustomBlockStateMappings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;states)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoadedOnJavaClient()" class="member-name-link">setLoadedOnJavaClient</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomBlockVisuals(java.util.Map)" class="member-name-link">setCustomBlockVisuals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, <a href="../../api/model/CustomBlockVisual.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockVisual</a>&gt;&nbsp;visuals)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoadedOnJavaClient()" class="member-name-link">setLoadedOnJavaClient</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUiContextToken(java.lang.String)" class="member-name-link">setUiContextToken</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;token)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The frontend program token for the Java pack advertised for this stack.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVoxelShapes(net.raphimc.viabedrock.protocol.storage.VoxelShapeRegistry.Snapshot)" class="member-name-link">setVoxelShapes</a><wbr>(<a href="VoxelShapeRegistry.Snapshot.html" title="class in net.raphimc.viabedrock.protocol.storage">VoxelShapeRegistry.Snapshot</a>&nbsp;shapes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -327,7 +352,7 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ResourcePackStorage.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackStorage</a></span>&nbsp;<span class="element-name">nativeActors</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/resourcepack/NativeActorLibrary.Layer.html" title="class in net.raphimc.viabedrock.api.resourcepack">NativeActorLibrary.Layer</a>&gt;&nbsp;layers,
  <a href="../../api/resourcepack/BaseGameVersion.html" title="class in net.raphimc.viabedrock.api.resourcepack">BaseGameVersion</a>&nbsp;baseGameVersion)</span>
                                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block">Uses the converter's resolved order and provenance without adding local vanilla definitions again.</div>
+<div class="block">Reconstructs actor dependencies only. Complete source context remains available on the archive layers.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
@@ -420,6 +445,44 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
 <h3>setCustomBlockStateMappings</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCustomBlockStateMappings</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;states)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setUiContextToken(java.lang.String)">
+<h3>setUiContextToken</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUiContextToken</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;token)</span></div>
+<div class="block">The frontend program token for the Java pack advertised for this stack.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="confirmUiContext(net.raphimc.viabedrock.api.resourcepack.ui.NativeUiContext.Confirmation)">
+<h3>confirmUiContext</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">confirmUiContext</span><wbr><span class="parameters">(<a href="../../api/resourcepack/ui/NativeUiContext.Confirmation.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">NativeUiContext.Confirmation</a>&nbsp;confirmation)</span></div>
+<div class="block">Accepts a frontend program only for this stack's advertised pack; another token withdraws native UI inputs.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="nativeUiContext(com.viaversion.viaversion.api.connection.UserConnection,java.lang.String)">
+<h3>nativeUiContext</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">nativeUiContext</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;channel)</span></div>
+<div class="block">The confirmed frontend generation for native UI inputs on a negotiated channel, or 0. Without one, the backend
+keeps the vanilla presentation of that UI.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUiContextGeneration()">
+<h3>getUiContextGeneration</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getUiContextGeneration</span>()</div>
+<div class="block">The confirmed frontend generation that resolves native UI inputs for this stack, or 0.</div>
 </div>
 </section>
 </li>

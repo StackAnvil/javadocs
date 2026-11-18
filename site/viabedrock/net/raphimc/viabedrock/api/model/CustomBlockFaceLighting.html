@@ -61,6 +61,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#outerPlane(net.raphimc.viabedrock.api.model.CustomBlockCulling.Direction,float)" tabindex="0">outerPlane(CustomBlockCulling.Direction, float)</a></li>
 <li><a href="#withBlockEmission(int,int)" tabindex="0">withBlockEmission(int, int)</a></li>
 <li><a href="#sample(net.raphimc.viabedrock.api.model.CustomBlockCulling.Direction,boolean,boolean,int,net.raphimc.viabedrock.api.model.CustomBlockLighting,float,net.raphimc.viabedrock.api.model.CustomBlockFaceLighting.Neighborhood)" tabindex="0">sample(CustomBlockCulling.Direction, boolean, boolean, int, CustomBlockLighting, float, CustomBlockFaceLighting.Neighborhood)</a></li>
+<li><a href="#perVertex(net.raphimc.viabedrock.api.model.CustomBlockLighting,float%5B%5D%5B%5D)" tabindex="0">perVertex(CustomBlockLighting, float[][])</a></li>
+<li><a href="#sampleVertices(float%5B%5D%5B%5D,float%5B%5D,net.raphimc.viabedrock.api.model.CustomBlockFaceLighting.Neighborhood)" tabindex="0">sampleVertices(float[][], float[], CustomBlockFaceLighting.Neighborhood)</a></li>
 </ol>
 </li>
 </ol>
@@ -108,6 +110,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Opacity controls the diagonal fallback; ambient brightness is a separate native property.</div>
 </div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="CustomBlockFaceLighting.Vertex.html" class="type-name-link" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Vertex</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">One sampled vertex: Java-packed light and the AO value before the material exponent.</div>
+</div>
 </div>
 </section>
 </li>
@@ -128,15 +135,29 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Native bounds use a half-thousandth tolerance, independently of source block solidity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CustomBlockFaceLighting.Face.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Face</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sample(net.raphimc.viabedrock.api.model.CustomBlockCulling.Direction,boolean,boolean,int,net.raphimc.viabedrock.api.model.CustomBlockLighting,float,net.raphimc.viabedrock.api.model.CustomBlockFaceLighting.Neighborhood)" class="member-name-link">sample</a><wbr>(<a href="CustomBlockCulling.Direction.html" title="enum class in net.raphimc.viabedrock.api.model">CustomBlockCulling.Direction</a>&nbsp;direction,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#perVertex(net.raphimc.viabedrock.api.model.CustomBlockLighting,float%5B%5D%5B%5D)" class="member-name-link">perVertex</a><wbr>(<a href="CustomBlockLighting.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockLighting</a>&nbsp;material,
+ float[][]&nbsp;positions)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native classic terrain uses the per-vertex sampler of callback 0x146acea60 when the material has an AO
+exponent and the first/third vertex diagonal squared is at most 3.515625.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CustomBlockFaceLighting.Face.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Face</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sample(net.raphimc.viabedrock.api.model.CustomBlockCulling.Direction,boolean,boolean,int,net.raphimc.viabedrock.api.model.CustomBlockLighting,float,net.raphimc.viabedrock.api.model.CustomBlockFaceLighting.Neighborhood)" class="member-name-link">sample</a><wbr>(<a href="CustomBlockCulling.Direction.html" title="enum class in net.raphimc.viabedrock.api.model">CustomBlockCulling.Direction</a>&nbsp;direction,
  boolean&nbsp;outer,
  boolean&nbsp;sourceOpaque,
  int&nbsp;sourceLight,
  <a href="CustomBlockLighting.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockLighting</a>&nbsp;material,
  float&nbsp;directional,
  <a href="CustomBlockFaceLighting.Neighborhood.html" title="interface in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Neighborhood</a>&nbsp;neighborhood)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CustomBlockFaceLighting.Vertex.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Vertex</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sampleVertices(float%5B%5D%5B%5D,float%5B%5D,net.raphimc.viabedrock.api.model.CustomBlockFaceLighting.Neighborhood)" class="member-name-link">sampleVertices</a><wbr>(float[][]&nbsp;positions,
+ float[]&nbsp;normal,
+ <a href="CustomBlockFaceLighting.Neighborhood.html" title="interface in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Neighborhood</a>&nbsp;neighborhood)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Sample each actual vertex like the native per-vertex callback.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withBlockEmission(int,int)" class="member-name-link">withBlockEmission</a><wbr>(int&nbsp;light,
  int&nbsp;emission)</code></div>
@@ -191,6 +212,32 @@ loadScripts(document, 'script');</script>
  <a href="CustomBlockLighting.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockLighting</a>&nbsp;material,
  float&nbsp;directional,
  <a href="CustomBlockFaceLighting.Neighborhood.html" title="interface in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Neighborhood</a>&nbsp;neighborhood)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="perVertex(net.raphimc.viabedrock.api.model.CustomBlockLighting,float[][])">
+<h3>perVertex</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">perVertex</span><wbr><span class="parameters">(<a href="CustomBlockLighting.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockLighting</a>&nbsp;material,
+ float[][]&nbsp;positions)</span></div>
+<div class="block">Native classic terrain uses the per-vertex sampler of callback 0x146acea60 when the material has an AO
+exponent and the first/third vertex diagonal squared is at most 3.515625. Other faces use the per-face path.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sampleVertices(float[][],float[],net.raphimc.viabedrock.api.model.CustomBlockFaceLighting.Neighborhood)">
+<h3>sampleVertices</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomBlockFaceLighting.Vertex.html" title="class in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Vertex</a>[]</span>&nbsp;<span class="element-name">sampleVertices</span><wbr><span class="parameters">(float[][]&nbsp;positions,
+ float[]&nbsp;normal,
+ <a href="CustomBlockFaceLighting.Neighborhood.html" title="interface in net.raphimc.viabedrock.api.model">CustomBlockFaceLighting.Neighborhood</a>&nbsp;neighborhood)</span></div>
+<div class="block">Sample each actual vertex like the native per-vertex callback. The cache cell is the floor of the
+centroid biased 0.01 along the normal. Its 3x3x3 neighborhood records AO, light and two masks: cells
+without light (opaque or unreachable) and cells skipped entirely. Each vertex then weights the cache
+center and the reachable neighbors within radius 1.5 on the normal's side of the vertex by
+1 / (distance^2 + 0.001) and keeps the per-channel light maximum.</div>
 </div>
 </section>
 </li>

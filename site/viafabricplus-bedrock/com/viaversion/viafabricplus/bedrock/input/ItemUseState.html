@@ -63,8 +63,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#canAttempt(long)" tabindex="0">canAttempt(long)</a></li>
-<li><a href="#admitAirUse(long,net.minecraft.world.InteractionHand,boolean,boolean,boolean)" tabindex="0">admitAirUse(long, InteractionHand, boolean, boolean, boolean)</a></li>
+<li><a href="#admitAirUse(long,net.minecraft.world.InteractionHand)" tabindex="0">admitAirUse(long, InteractionHand)</a></li>
+<li><a href="#airResult(boolean,boolean,boolean)" tabindex="0">airResult(boolean, boolean, boolean)</a></li>
+<li><a href="#admitLegacyAirUse(long,net.minecraft.world.InteractionHand,boolean,boolean,boolean)" tabindex="0">admitLegacyAirUse(long, InteractionHand, boolean, boolean, boolean)</a></li>
 <li><a href="#placedBlock(long,boolean)" tabindex="0">placedBlock(long, boolean)</a></li>
+<li><a href="#beginAttempt(boolean)" tabindex="0">beginAttempt(boolean)</a></li>
 <li><a href="#hitType(long,net.minecraft.world.phys.HitResult.Type,net.minecraft.world.InteractionHand)" tabindex="0">hitType(long, HitResult.Type, InteractionHand)</a></li>
 <li><a href="#retainBlockUse()" tabindex="0">retainBlockUse()</a></li>
 <li><a href="#attemptedBlock(long,boolean)" tabindex="0">attemptedBlock(long, boolean)</a></li>
@@ -72,6 +75,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#repeatsFromFrames()" tabindex="0">repeatsFromFrames()</a></li>
 <li><a href="#frameReady(long,boolean)" tabindex="0">frameReady(long, boolean)</a></li>
 <li><a href="#cancelPlacement()" tabindex="0">cancelPlacement()</a></li>
+<li><a href="#armRelease(int,java.lang.String)" tabindex="0">armRelease(int, String)</a></li>
+<li><a href="#takeRelease(int,java.lang.String)" tabindex="0">takeRelease(int, String)</a></li>
 <li><a href="#release()" tabindex="0">release()</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
 </ol>
@@ -121,16 +126,38 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#admitAirUse(long,net.minecraft.world.InteractionHand,boolean,boolean,boolean)" class="member-name-link">admitAirUse</a><wbr>(long&nbsp;now,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#admitAirUse(long,net.minecraft.world.InteractionHand)" class="member-name-link">admitAirUse</a><wbr>(long&nbsp;now,
+ net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#admitLegacyAirUse(long,net.minecraft.world.InteractionHand,boolean,boolean,boolean)" class="member-name-link">admitLegacyAirUse</a><wbr>(long&nbsp;now,
  net.minecraft.world.InteractionHand&nbsp;hand,
  boolean&nbsp;food,
  boolean&nbsp;blockItem,
  boolean&nbsp;canConsume)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Older proxy cores do not provide native item predicates.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#airResult(boolean,boolean,boolean)" class="member-name-link">airResult</a><wbr>(boolean&nbsp;activeUse,
+ boolean&nbsp;retainedItem,
+ boolean&nbsp;retainsAirUse)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attemptedBlock(long,boolean)" class="member-name-link">attemptedBlock</a><wbr>(long&nbsp;now,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#armRelease(int,java.lang.String)" class="member-name-link">armRelease</a><wbr>(int&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;definition)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">A native shooter can remain active even when its Java carrier has no use cycle.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attemptedBlock(long,boolean)" class="member-name-link">attemptedBlock</a><wbr>(long&nbsp;now,
  boolean&nbsp;success)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#beginAttempt(boolean)" class="member-name-link">beginAttempt</a><wbr>(boolean&nbsp;freshPress)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native sends one actor interaction per press; a held button never repeats it.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockActive()" class="member-name-link">blockActive</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -165,6 +192,10 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainBlockUse()" class="member-name-link">retainBlockUse</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeRelease(int,java.lang.String)" class="member-name-link">takeRelease</a><wbr>(int&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;definition)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -207,14 +238,34 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="admitAirUse(long,net.minecraft.world.InteractionHand,boolean,boolean,boolean)">
+<section class="detail" id="admitAirUse(long,net.minecraft.world.InteractionHand)">
 <h3>admitAirUse</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">admitAirUse</span><wbr><span class="parameters">(long&nbsp;now,
+ net.minecraft.world.InteractionHand&nbsp;hand)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="airResult(boolean,boolean,boolean)">
+<h3>airResult</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">airResult</span><wbr><span class="parameters">(boolean&nbsp;activeUse,
+ boolean&nbsp;retainedItem,
+ boolean&nbsp;retainsAirUse)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="admitLegacyAirUse(long,net.minecraft.world.InteractionHand,boolean,boolean,boolean)">
+<h3>admitLegacyAirUse</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">admitLegacyAirUse</span><wbr><span class="parameters">(long&nbsp;now,
  net.minecraft.world.InteractionHand&nbsp;hand,
  boolean&nbsp;food,
  boolean&nbsp;blockItem,
  boolean&nbsp;canConsume)</span></div>
+<div class="block">Older proxy cores do not provide native item predicates. Preserve their prior route selection.</div>
 </div>
 </section>
 </li>
@@ -224,6 +275,15 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">placedBlock</span><wbr><span class="parameters">(long&nbsp;now,
  boolean&nbsp;hasRemainder)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="beginAttempt(boolean)">
+<h3>beginAttempt</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">beginAttempt</span><wbr><span class="parameters">(boolean&nbsp;freshPress)</span></div>
+<div class="block">Native sends one actor interaction per press; a held button never repeats it.</div>
 </div>
 </section>
 </li>
@@ -284,6 +344,25 @@ loadScripts(document, 'script');</script>
 <h3>cancelPlacement</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">cancelPlacement</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="armRelease(int,java.lang.String)">
+<h3>armRelease</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">armRelease</span><wbr><span class="parameters">(int&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;definition)</span></div>
+<div class="block">A native shooter can remain active even when its Java carrier has no use cycle.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="takeRelease(int,java.lang.String)">
+<h3>takeRelease</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">takeRelease</span><wbr><span class="parameters">(int&nbsp;slot,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;definition)</span></div>
 </div>
 </section>
 </li>

@@ -59,6 +59,8 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#targets(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.util.function.Predicate)" tabindex="0">targets(NativeUiLayout.Box, Predicate)</a></li>
 <li><a href="#next(java.util.List,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiFocus.Direction,float,float,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiFocus.History)" tabindex="0">next(List, NativeUiScene.Node, NativeUiFocus.Direction, float, float, NativeUiFocus.History)</a></li>
+<li><a href="#initial(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.util.function.Predicate,java.util.function.Predicate,float)" tabindex="0">initial(NativeUiLayout.Box, Predicate, Predicate, float)</a></li>
+<li><a href="#initial(java.util.List,float)" tabindex="0">initial(List, float)</a></li>
 </ol>
 </li>
 </ol>
@@ -117,6 +119,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiFocus.Target.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#initial(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.util.function.Predicate,java.util.function.Predicate,float)" class="member-name-link">initial</a><wbr>(<a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a>&nbsp;root,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;actionable,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;inert,
+ float&nbsp;viewportWidth)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native initial focus also ranks focusable controls that do nothing, such as the zero-size scroll_to_top_fix
+button above BonfireMC's custom form rows.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiFocus.Target.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#initial(java.util.List,float)" class="member-name-link">initial</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeUiFocus.Target.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a>&gt;&nbsp;targets,
+ float&nbsp;viewportWidth)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiFocus.Target.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#next(java.util.List,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiFocus.Direction,float,float,com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiFocus.History)" class="member-name-link">next</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeUiFocus.Target.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a>&gt;&nbsp;targets,
  <a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;selected,
  <a href="NativeUiFocus.Direction.html" title="enum class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Direction</a>&nbsp;direction,
@@ -164,6 +179,28 @@ loadScripts(document, 'script');</script>
  float&nbsp;viewportWidth,
  float&nbsp;viewportHeight,
  <a href="NativeUiFocus.History.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.History</a>&nbsp;history)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="initial(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.util.function.Predicate,java.util.function.Predicate,float)">
+<h3>initial</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeUiFocus.Target.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a></span>&nbsp;<span class="element-name">initial</span><wbr><span class="parameters">(<a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a>&nbsp;root,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;actionable,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;inert,
+ float&nbsp;viewportWidth)</span></div>
+<div class="block">Native initial focus also ranks focusable controls that do nothing, such as the zero-size scroll_to_top_fix
+button above BonfireMC's custom form rows. When one of those wins, no visible control starts focused.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="initial(java.util.List,float)">
+<h3>initial</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeUiFocus.Target.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a></span>&nbsp;<span class="element-name">initial</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeUiFocus.Target.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiFocus.Target</a>&gt;&nbsp;targets,
+ float&nbsp;viewportWidth)</span></div>
 </div>
 </section>
 </li>

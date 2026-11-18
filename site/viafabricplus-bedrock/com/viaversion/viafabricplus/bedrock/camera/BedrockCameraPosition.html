@@ -63,6 +63,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#turn(float,float)" tabindex="0">turn(float, float)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
 <li><a href="#beginFrame(float)" tabindex="0">beginFrame(float)</a></li>
+<li><a href="#tickDeath()" tabindex="0">tickDeath()</a></li>
+<li><a href="#defaultDeathActive()" tabindex="0">defaultDeathActive()</a></li>
+<li><a href="#deathFieldOfView(float,float,float)" tabindex="0">deathFieldOfView(float, float, float)</a></li>
 <li><a href="#playerListener()" tabindex="0">playerListener()</a></li>
 <li><a href="#perspective(net.minecraft.client.CameraType)" tabindex="0">perspective(CameraType)</a></li>
 <li><a href="#frame(net.raphimc.viabedrock.api.model.CameraPose)" tabindex="0">frame(CameraPose)</a></li>
@@ -117,6 +120,14 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#deathFieldOfView(float,float,float)" class="member-name-link">deathFieldOfView</a><wbr>(float&nbsp;partialTick,
+ float&nbsp;normalFov,
+ float&nbsp;effectScale)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#defaultDeathActive()" class="member-name-link">defaultDeathActive</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.CameraPose</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frame(net.raphimc.viabedrock.api.model.CameraPose)" class="member-name-link">frame</a><wbr>(net.raphimc.viabedrock.api.model.CameraPose&nbsp;normal)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -127,9 +138,12 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#playerListener()" class="member-name-link">playerListener</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#turn(float,float)" class="member-name-link">turn</a><wbr>(float&nbsp;pitchDelta,
- float&nbsp;yawDelta)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tickDeath()" class="member-name-link">tickDeath</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#turn(float,float)" class="member-name-link">turn</a><wbr>(float&nbsp;pitchDelta,
+ float&nbsp;yawDelta)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -201,6 +215,32 @@ loadScripts(document, 'script');</script>
 <h3>beginFrame</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">beginFrame</span><wbr><span class="parameters">(float&nbsp;tick)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="tickDeath()">
+<h3>tickDeath</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">tickDeath</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="defaultDeathActive()">
+<h3>defaultDeathActive</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">defaultDeathActive</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="deathFieldOfView(float,float,float)">
+<h3>deathFieldOfView</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">deathFieldOfView</span><wbr><span class="parameters">(float&nbsp;partialTick,
+ float&nbsp;normalFov,
+ float&nbsp;effectScale)</span></div>
 </div>
 </section>
 </li>

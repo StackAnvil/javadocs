@@ -58,6 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#recover(net.raphimc.viabedrock.api.model.CollisionContact.Box,net.raphimc.viabedrock.protocol.model.Position3f,java.util.List,net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">recover(CollisionContact.Box, Position3f, List, Position3f)</a></li>
 <li><a href="#clip(net.raphimc.viabedrock.api.model.CollisionContact.Box,net.raphimc.viabedrock.api.model.CollisionContact.Box,net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">clip(CollisionContact.Box, CollisionContact.Box, Position3f)</a></li>
 </ol>
 </li>
@@ -76,7 +77,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">CollisionContact</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Native 1.26.51 separated-axis contact clipping. Actor overlap recovery is a separate operation.</div>
+<div class="block">Native separated-axis contact clipping and bounded ActorMove overlap recovery.</div>
 </div>
 </section>
 <section class="summary">
@@ -112,6 +113,14 @@ loadScripts(document, 'script');</script>
  <a href="CollisionContact.Box.html" title="class in net.raphimc.viabedrock.api.model">CollisionContact.Box</a>&nbsp;moving,
  <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;requested)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#recover(net.raphimc.viabedrock.api.model.CollisionContact.Box,net.raphimc.viabedrock.protocol.model.Position3f,java.util.List,net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">recover</a><wbr>(<a href="CollisionContact.Box.html" title="class in net.raphimc.viabedrock.api.model">CollisionContact.Box</a>&nbsp;body,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;requested,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CollisionContact.Box.html" title="class in net.raphimc.viabedrock.api.model">CollisionContact.Box</a>&gt;&nbsp;obstacles,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;allowance)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Resolves Y, X, then Z using native float stores when an initial overlap fits the supplied per-axis allowance.</div>
+</div>
 </div>
 </div>
 </div>
@@ -129,6 +138,19 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="recover(net.raphimc.viabedrock.api.model.CollisionContact.Box,net.raphimc.viabedrock.protocol.model.Position3f,java.util.List,net.raphimc.viabedrock.protocol.model.Position3f)">
+<h3>recover</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></span>&nbsp;<span class="element-name">recover</span><wbr><span class="parameters">(<a href="CollisionContact.Box.html" title="class in net.raphimc.viabedrock.api.model">CollisionContact.Box</a>&nbsp;body,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;requested,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CollisionContact.Box.html" title="class in net.raphimc.viabedrock.api.model">CollisionContact.Box</a>&gt;&nbsp;obstacles,
+ <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;allowance)</span></div>
+<div class="block">Resolves Y, X, then Z using native float stores when an initial overlap fits the supplied per-axis allowance.
+Returns null otherwise so a caller can retain its ordinary contact path and its precise face boundaries.</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="clip(net.raphimc.viabedrock.api.model.CollisionContact.Box,net.raphimc.viabedrock.api.model.CollisionContact.Box,net.raphimc.viabedrock.protocol.model.Position3f)">
 <h3>clip</h3>

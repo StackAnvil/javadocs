@@ -73,9 +73,9 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#fromProgram(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">fromProgram(JsonObject)</a></li>
 <li><a href="#resolve(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonArray,java.util.Set)" tabindex="0">resolve(JsonObject, JsonArray, Set)</a></li>
 <li><a href="#resolve(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">resolve(JsonObject)</a></li>
+<li><a href="#actionTextLimits(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">actionTextLimits(JsonObject)</a></li>
 <li><a href="#responseValues(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonArray)" tabindex="0">responseValues(JsonObject, JsonArray)</a></li>
 <li><a href="#presentation(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">presentation(JsonObject)</a></li>
 </ol>
@@ -161,9 +161,11 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ServerFormUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ServerFormUi</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromProgram(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">fromProgram</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;program)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#actionTextLimits(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">actionTextLimits</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;scene)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The length limit of each submitted action-form text value, in response order.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ServerFormUi.Presentation.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ServerFormUi.Presentation</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#presentation(com.viaversion.viaversion.libs.gson.JsonObject)" class="member-name-link">presentation</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;scene)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -262,14 +264,6 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="fromProgram(com.viaversion.viaversion.libs.gson.JsonObject)">
-<h3>fromProgram</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ServerFormUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">ServerFormUi</a></span>&nbsp;<span class="element-name">fromProgram</span><wbr><span class="parameters">(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;program)</span></div>
-</div>
-</section>
-</li>
-<li>
 <section class="detail" id="resolve(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonArray,java.util.Set)">
 <h3>resolve</h3>
 <div class="horizontal-scroll">
@@ -284,6 +278,16 @@ loadScripts(document, 'script');</script>
 <h3>resolve</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;form)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="actionTextLimits(com.viaversion.viaversion.libs.gson.JsonObject)">
+<h3>actionTextLimits</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">actionTextLimits</span><wbr><span class="parameters">(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;scene)</span></div>
+<div class="block">The length limit of each submitted action-form text value, in response order. An empty list means that the
+action form responds only with button ordinals.</div>
 </div>
 </section>
 </li>

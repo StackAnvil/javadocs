@@ -71,6 +71,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#prevContainers()" tabindex="0">prevContainers()</a></li>
 <li><a href="#hasPrediction()" tabindex="0">hasPrediction()</a></li>
 <li><a href="#capturePrediction(net.raphimc.viabedrock.protocol.storage.InventoryTracker)" tabindex="0">capturePrediction(InventoryTracker)</a></li>
+<li><a href="#responseSlot(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.FullContainerName,int)" tabindex="0">responseSlot(Container, FullContainerName, int)</a></li>
 <li><a href="#predictedItem(net.raphimc.viabedrock.api.model.container.Container,int)" tabindex="0">predictedItem(Container, int)</a></li>
 </ol>
 </li>
@@ -163,6 +164,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/inventory/ItemStackRequestInfo.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">ItemStackRequestInfo</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestInfo()" class="member-name-link">requestInfo</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#responseSlot(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.FullContainerName,int)" class="member-name-link">responseSlot</a><wbr>(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+ <a href="../model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a>&nbsp;name,
+ int&nbsp;requestSlot)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Resolves a response slot byte to the container slot it reports, or -1.</div>
+</div>
 </div>
 </div>
 </div>
@@ -256,6 +264,19 @@ loadScripts(document, 'script');</script>
 <h3>capturePrediction</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">capturePrediction</span><wbr><span class="parameters">(<a href="InventoryTracker.html" title="class in net.raphimc.viabedrock.protocol.storage">InventoryTracker</a>&nbsp;tracker)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="responseSlot(net.raphimc.viabedrock.api.model.container.Container,net.raphimc.viabedrock.protocol.model.FullContainerName,int)">
+<h3>responseSlot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">responseSlot</span><wbr><span class="parameters">(<a href="../../api/model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container,
+ <a href="../model/FullContainerName.html" title="class in net.raphimc.viabedrock.protocol.model">FullContainerName</a>&nbsp;name,
+ int&nbsp;requestSlot)</span></div>
+<div class="block">Resolves a response slot byte to the container slot it reports, or -1. A logical container can share one byte
+among several slots. This request's own prediction then selects the one slot it changed under that byte, so
+the response never updates a different slot through a truncated index.</div>
 </div>
 </section>
 </li>

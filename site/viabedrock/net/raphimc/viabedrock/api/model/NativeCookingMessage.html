@@ -67,25 +67,26 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(int,long,long,long,long,long,java.lang.String,java.lang.String,java.util.Map)" tabindex="0">NativeCookingMessage(int, long, long, long, long, long, String, String, Map)</a></li>
+<li><a href="#%3Cinit%3E(int,int,long,long,long,long,long,java.lang.String,java.util.Map)" tabindex="0">NativeCookingMessage(int, int, long, long, long, long, long, String, Map)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#create(net.raphimc.viabedrock.api.resourcepack.ui.CookingUi,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi.MenuView,long,long,long,long,long,java.util.Map)" tabindex="0">create(CookingUi, CookingUi.MenuView, long, long, long, long, long, Map)</a></li>
+<li><a href="#create(int,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi.MenuView,long,long,long,long,long,java.util.Map)" tabindex="0">create(int, CookingUi, CookingUi.MenuView, long, long, long, long, long, Map)</a></li>
+<li><a href="#ui(net.raphimc.viabedrock.api.resourcepack.ui.JsonUiProgram)" tabindex="0">ui(JsonUiProgram)</a></li>
 <li><a href="#recipeItems()" tabindex="0">recipeItems()</a></li>
 <li><a href="#recipeItem(int)" tabindex="0">recipeItem(int)</a></li>
 <li><a href="#view()" tabindex="0">view()</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
+<li><a href="#context()" tabindex="0">context()</a></li>
 <li><a href="#menuId()" tabindex="0">menuId()</a></li>
 <li><a href="#sequence()" tabindex="0">sequence()</a></li>
 <li><a href="#updateSequence()" tabindex="0">updateSequence()</a></li>
 <li><a href="#menuRevision()" tabindex="0">menuRevision()</a></li>
 <li><a href="#inventoryRevision()" tabindex="0">inventoryRevision()</a></li>
 <li><a href="#cursorRevision()" tabindex="0">cursorRevision()</a></li>
-<li><a href="#program()" tabindex="0">program()</a></li>
 <li><a href="#snapshot()" tabindex="0">snapshot()</a></li>
 </ol>
 </li>
@@ -104,7 +105,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">NativeCookingMessage</span>(int&nbsp;menuId, long&nbsp;sequence, long&nbsp;updateSequence, long&nbsp;menuRevision, long&nbsp;inventoryRevision, long&nbsp;cursorRevision, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;program, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;snapshot, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, com.viaversion.viaversion.api.minecraft.item.Item&gt;&nbsp;recipeItems)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">NativeCookingMessage</span>(int&nbsp;context, int&nbsp;menuId, long&nbsp;sequence, long&nbsp;updateSequence, long&nbsp;menuRevision, long&nbsp;inventoryRevision, long&nbsp;cursorRevision, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;snapshot, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, com.viaversion.viaversion.api.minecraft.item.Item&gt;&nbsp;recipeItems)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">A cooking presentation retains Bedrock state independently of Java menu properties.</div>
 </div>
@@ -143,13 +144,13 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,long,long,long,long,long,java.lang.String,java.lang.String,java.util.Map)" class="member-name-link">NativeCookingMessage</a><wbr>(int&nbsp;menuId,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,long,long,long,long,long,java.lang.String,java.util.Map)" class="member-name-link">NativeCookingMessage</a><wbr>(int&nbsp;context,
+ int&nbsp;menuId,
  long&nbsp;sequence,
  long&nbsp;updateSequence,
  long&nbsp;menuRevision,
  long&nbsp;inventoryRevision,
  long&nbsp;cursorRevision,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;program,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;snapshot,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, com.viaversion.viaversion.api.minecraft.item.Item&gt;&nbsp;recipeItems)</code></div>
 <div class="col-last even-row-color">
@@ -169,8 +170,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeCookingMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingMessage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#create(net.raphimc.viabedrock.api.resourcepack.ui.CookingUi,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi.MenuView,long,long,long,long,long,java.util.Map)" class="member-name-link">create</a><wbr>(<a href="../resourcepack/ui/CookingUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi</a>&nbsp;ui,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#context()" class="member-name-link">context</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>context</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeCookingMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingMessage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#create(int,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi.MenuView,long,long,long,long,long,java.util.Map)" class="member-name-link">create</a><wbr>(int&nbsp;context,
+ <a href="../resourcepack/ui/CookingUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi</a>&nbsp;ui,
  <a href="../resourcepack/ui/CookingUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi.MenuView</a>&nbsp;view,
  long&nbsp;sequence,
  long&nbsp;updateSequence,
@@ -178,41 +185,36 @@ loadScripts(document, 'script');</script>
  long&nbsp;inventoryRevision,
  long&nbsp;cursorRevision,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, com.viaversion.viaversion.api.minecraft.item.Item&gt;&nbsp;recipeItems)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursorRevision()" class="member-name-link">cursorRevision</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursorRevision()" class="member-name-link">cursorRevision</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>cursorRevision</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inventoryRevision()" class="member-name-link">inventoryRevision</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inventoryRevision()" class="member-name-link">inventoryRevision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>inventoryRevision</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#menuId()" class="member-name-link">menuId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#menuId()" class="member-name-link">menuId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>menuId</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#menuRevision()" class="member-name-link">menuRevision</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>menuRevision</code> record component.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#program()" class="member-name-link">program</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#menuRevision()" class="member-name-link">menuRevision</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>program</code> record component.</div>
+<div class="block">Returns the value of the <code>menuRevision</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.api.minecraft.item.Item</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recipeItem(int)" class="member-name-link">recipeItem</a><wbr>(int&nbsp;id)</code></div>
@@ -239,14 +241,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateSequence()" class="member-name-link">updateSequence</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../resourcepack/ui/CookingUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ui(net.raphimc.viabedrock.api.resourcepack.ui.JsonUiProgram)" class="member-name-link">ui</a><wbr>(<a href="../resourcepack/ui/JsonUiProgram.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram</a>&nbsp;program)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The cooking view that a confirmed program resolves for this message's family and title.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateSequence()" class="member-name-link">updateSequence</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>updateSequence</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../resourcepack/ui/CookingUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi.MenuView</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#view()" class="member-name-link">view</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../resourcepack/ui/CookingUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi.MenuView</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#view()" class="member-name-link">view</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Decode a fresh view so consumers cannot mutate the retained wire snapshot.</div>
 </div>
 </div>
@@ -331,28 +338,28 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,long,long,long,long,long,java.lang.String,java.lang.String,java.util.Map)">
+<section class="detail" id="&lt;init&gt;(int,int,long,long,long,long,long,java.lang.String,java.util.Map)">
 <h3>NativeCookingMessage</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NativeCookingMessage</span><wbr><span class="parameters">(int&nbsp;menuId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NativeCookingMessage</span><wbr><span class="parameters">(int&nbsp;context,
+ int&nbsp;menuId,
  long&nbsp;sequence,
  long&nbsp;updateSequence,
  long&nbsp;menuRevision,
  long&nbsp;inventoryRevision,
  long&nbsp;cursorRevision,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;program,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;snapshot,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, com.viaversion.viaversion.api.minecraft.item.Item&gt;&nbsp;recipeItems)</span></div>
 <div class="block">Creates an instance of a <code>NativeCookingMessage</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
+<dd><code>context</code> - the value for the <code>context</code> record component</dd>
 <dd><code>menuId</code> - the value for the <code>menuId</code> record component</dd>
 <dd><code>sequence</code> - the value for the <code>sequence</code> record component</dd>
 <dd><code>updateSequence</code> - the value for the <code>updateSequence</code> record component</dd>
 <dd><code>menuRevision</code> - the value for the <code>menuRevision</code> record component</dd>
 <dd><code>inventoryRevision</code> - the value for the <code>inventoryRevision</code> record component</dd>
 <dd><code>cursorRevision</code> - the value for the <code>cursorRevision</code> record component</dd>
-<dd><code>program</code> - the value for the <code>program</code> record component</dd>
 <dd><code>snapshot</code> - the value for the <code>snapshot</code> record component</dd>
 <dd><code>recipeItems</code> - the value for the <code>recipeItems</code> record component</dd>
 </dl>
@@ -368,10 +375,11 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="create(net.raphimc.viabedrock.api.resourcepack.ui.CookingUi,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi.MenuView,long,long,long,long,long,java.util.Map)">
+<section class="detail" id="create(int,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi,net.raphimc.viabedrock.api.resourcepack.ui.CookingUi.MenuView,long,long,long,long,long,java.util.Map)">
 <h3>create</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeCookingMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingMessage</a></span>&nbsp;<span class="element-name">create</span><wbr><span class="parameters">(<a href="../resourcepack/ui/CookingUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi</a>&nbsp;ui,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeCookingMessage.html" title="class in net.raphimc.viabedrock.api.model">NativeCookingMessage</a></span>&nbsp;<span class="element-name">create</span><wbr><span class="parameters">(int&nbsp;context,
+ <a href="../resourcepack/ui/CookingUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi</a>&nbsp;ui,
  <a href="../resourcepack/ui/CookingUi.MenuView.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi.MenuView</a>&nbsp;view,
  long&nbsp;sequence,
  long&nbsp;updateSequence,
@@ -379,6 +387,15 @@ loadScripts(document, 'script');</script>
  long&nbsp;inventoryRevision,
  long&nbsp;cursorRevision,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, com.viaversion.viaversion.api.minecraft.item.Item&gt;&nbsp;recipeItems)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ui(net.raphimc.viabedrock.api.resourcepack.ui.JsonUiProgram)">
+<h3>ui</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../resourcepack/ui/CookingUi.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">CookingUi</a></span>&nbsp;<span class="element-name">ui</span><wbr><span class="parameters">(<a href="../resourcepack/ui/JsonUiProgram.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">JsonUiProgram</a>&nbsp;program)</span></div>
+<div class="block">The cooking view that a confirmed program resolves for this message's family and title.</div>
 </div>
 </section>
 </li>
@@ -461,6 +478,19 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="context()">
+<h3>context</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">context</span>()</div>
+<div class="block">Returns the value of the <code>context</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>context</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="menuId()">
 <h3>menuId</h3>
 <div class="horizontal-scroll">
@@ -534,19 +564,6 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>cursorRevision</code> record component</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="program()">
-<h3>program</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">program</span>()</div>
-<div class="block">Returns the value of the <code>program</code> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <code>program</code> record component</dd>
 </dl>
 </div>
 </section>

@@ -90,6 +90,18 @@ loadScripts(document, 'script');</script>
 <li><a href="#addAuthInputData(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.PlayerAuthInputData...)" tabindex="0">addAuthInputData(PlayerAuthInputData...)</a></li>
 <li><a href="#authInputBlockActions()" tabindex="0">authInputBlockActions()</a></li>
 <li><a href="#addAuthInputBlockAction(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.AuthInputBlockAction)" tabindex="0">addAuthInputBlockAction(ClientPlayerEntity.AuthInputBlockAction)</a></li>
+<li><a href="#addNextAuthInputBlockAction(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.AuthInputBlockAction)" tabindex="0">addNextAuthInputBlockAction(ClientPlayerEntity.AuthInputBlockAction)</a></li>
+<li><a href="#hasNativeMiningInput()" tabindex="0">hasNativeMiningInput()</a></li>
+<li><a href="#retainCompletedBlockBreaking(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)" tabindex="0">retainCompletedBlockBreaking(ClientPlayerEntity.BlockBreakingInfo)</a></li>
+<li><a href="#continueCompletedBlockBreaking(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)" tabindex="0">continueCompletedBlockBreaking(ClientPlayerEntity.BlockBreakingInfo)</a></li>
+<li><a href="#applyMiningInput(net.raphimc.viabedrock.api.model.PlayerMiningInput)" tabindex="0">applyMiningInput(PlayerMiningInput)</a></li>
+<li><a href="#disableNativeMiningInput()" tabindex="0">disableNativeMiningInput()</a></li>
+<li><a href="#cancelCompletedBlockBreaking()" tabindex="0">cancelCompletedBlockBreaking()</a></li>
+<li><a href="#discardCompletedBlockBreaking()" tabindex="0">discardCompletedBlockBreaking()</a></li>
+<li><a href="#isClosingCompletedBlockBreak()" tabindex="0">isClosingCompletedBlockBreak()</a></li>
+<li><a href="#startBlockBreakingAfterClose(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)" tabindex="0">startBlockBreakingAfterClose(ClientPlayerEntity.BlockBreakingInfo)</a></li>
+<li><a href="#updateBlockBreakingAfterClose(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.protocol.data.enums.Direction)" tabindex="0">updateBlockBreakingAfterClose(BlockPosition, Direction)</a></li>
+<li><a href="#completeAuthInputFrame()" tabindex="0">completeAuthInputFrame()</a></li>
 <li><a href="#setPosition(net.raphimc.viabedrock.protocol.model.Position3f)" tabindex="0">setPosition(Position3f)</a></li>
 <li><a href="#setOnGround(boolean)" tabindex="0">setOnGround(boolean)</a></li>
 <li><a href="#name()" tabindex="0">name()</a></li>
@@ -99,6 +111,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#finishEntityDataUpdate(java.util.List)" tabindex="0">finishEntityDataUpdate(List)</a></li>
 <li><a href="#isInitiallySpawned()" tabindex="0">isInitiallySpawned()</a></li>
 <li><a href="#setInitiallySpawned()" tabindex="0">setInitiallySpawned()</a></li>
+<li><a href="#showingCredits()" tabindex="0">showingCredits()</a></li>
+<li><a href="#setShowingCredits(boolean)" tabindex="0">setShowingCredits(boolean)</a></li>
 <li><a href="#dimensionChangeInfo()" tabindex="0">dimensionChangeInfo()</a></li>
 <li><a href="#setDimensionChangeInfo(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.DimensionChangeInfo)" tabindex="0">setDimensionChangeInfo(ClientPlayerEntity.DimensionChangeInfo)</a></li>
 <li><a href="#inputFlags()" tabindex="0">inputFlags()</a></li>
@@ -242,7 +256,13 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAuthInputData(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.PlayerAuthInputData...)" class="member-name-link">addAuthInputData</a><wbr>(<a href="../../../protocol/data/enums/bedrock/generated/PlayerAuthInputData.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">PlayerAuthInputData</a>...&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPaddlingInput()" class="member-name-link">addPaddlingInput</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNextAuthInputBlockAction(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.AuthInputBlockAction)" class="member-name-link">addNextAuthInputBlockAction</a><wbr>(<a href="ClientPlayerEntity.AuthInputBlockAction.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.AuthInputBlockAction</a>&nbsp;blockAction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPaddlingInput()" class="member-name-link">addPaddlingInput</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyMiningInput(net.raphimc.viabedrock.api.model.PlayerMiningInput)" class="member-name-link">applyMiningInput</a><wbr>(<a href="../PlayerMiningInput.html" title="class in net.raphimc.viabedrock.api.model">PlayerMiningInput</a>&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="ClientPlayerEntity.AuthInputBlockAction.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.AuthInputBlockAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#authInputBlockActions()" class="member-name-link">authInputBlockActions</a>()</code></div>
@@ -260,32 +280,50 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blockBreakingInfo()" class="member-name-link">blockBreakingInfo</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cancelNextSwingPacket()" class="member-name-link">cancelNextSwingPacket</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cancelCompletedBlockBreaking()" class="member-name-link">cancelCompletedBlockBreaking</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canReportVehiclePrediction()" class="member-name-link">canReportVehiclePrediction</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cancelNextSwingPacket()" class="member-name-link">cancelNextSwingPacket</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canReportVehiclePrediction()" class="member-name-link">canReportVehiclePrediction</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Completed mount physics cannot release the player's existing position synchronization wait.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#checkCancelSwingPacket()" class="member-name-link">checkCancelSwingPacket</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#checkCancelSwingPacket()" class="member-name-link">checkCancelSwingPacket</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#completeAuthInputFrame()" class="member-name-link">completeAuthInputFrame</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#confirmTeleport(int)" class="member-name-link">confirmTeleport</a><wbr>(int&nbsp;teleportId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ClientPlayerEntity.DimensionChangeInfo.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.DimensionChangeInfo</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dimensionChangeInfo()" class="member-name-link">dimensionChangeInfo</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#continueCompletedBlockBreaking(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)" class="member-name-link">continueCompletedBlockBreaking</a><wbr>(<a href="ClientPlayerEntity.BlockBreakingInfo.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.BlockBreakingInfo</a>&nbsp;next)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ClientPlayerEntity.DimensionChangeInfo.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.DimensionChangeInfo</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dimensionChangeInfo()" class="member-name-link">dimensionChangeInfo</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#disableNativeMiningInput()" class="member-name-link">disableNativeMiningInput</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dismountVehicle(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">dismountVehicle</a><wbr>(<a href="Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;vehicle)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discardCompletedBlockBreaking()" class="member-name-link">discardCompletedBlockBreaking</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#finishEntityDataUpdate(java.util.List)" class="member-name-link">finishEntityDataUpdate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.viaversion.viaversion.api.minecraft.entitydata.EntityData&gt;&nbsp;javaEntityData)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dismountVehicle(net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">dismountVehicle</a><wbr>(<a href="Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;vehicle)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#finishEntityDataUpdate(java.util.List)" class="member-name-link">finishEntityDataUpdate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.viaversion.viaversion.api.minecraft.entitydata.EntityData&gt;&nbsp;javaEntityData)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Append metadata that depends on the final state of a sparse native update.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#gameType()" class="member-name-link">gameType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/bedrock/generated/GameType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">GameType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#gameType()" class="member-name-link">gameType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasNativeMiningInput()" class="member-name-link">hasNativeMiningInput</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#horizontalCollision()" class="member-name-link">horizontalCollision</a>()</code></div>
@@ -297,40 +335,46 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBedrockSneaking()" class="member-name-link">isBedrockSneaking</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isGliding()" class="member-name-link">isGliding</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isClosingCompletedBlockBreak()" class="member-name-link">isClosingCompletedBlockBreak</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInitiallySpawned()" class="member-name-link">isInitiallySpawned</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isGliding()" class="member-name-link">isGliding</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isShieldBlocking()" class="member-name-link">isShieldBlocking</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInitiallySpawned()" class="member-name-link">isInitiallySpawned</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSneaking()" class="member-name-link">isSneaking</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isShieldBlocking()" class="member-name-link">isShieldBlocking</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSprinting()" class="member-name-link">isSprinting</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/java/generated/GameMode.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">GameMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaGameMode()" class="member-name-link">javaGameMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name()" class="member-name-link">name</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Deque.html" title="class or interface in java.util" class="external-link">Deque</a><wbr>&lt;<a href="../../../protocol/model/inventory/BedrockInventoryTransaction.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">BedrockInventoryTransaction</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingFlightItemUses()" class="member-name-link">pendingFlightItemUses</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="../../../protocol/data/enums/java/InputFlag.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java">InputFlag</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prevInputFlags()" class="member-name-link">prevInputFlags</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSneaking()" class="member-name-link">isSneaking</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prevOnGround()" class="member-name-link">prevOnGround</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSprinting()" class="member-name-link">isSprinting</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prevPosition()" class="member-name-link">prevPosition</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/java/generated/GameMode.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">GameMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#javaGameMode()" class="member-name-link">javaGameMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name()" class="member-name-link">name</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Deque.html" title="class or interface in java.util" class="external-link">Deque</a><wbr>&lt;<a href="../../../protocol/model/inventory/BedrockInventoryTransaction.html" title="class in net.raphimc.viabedrock.protocol.model.inventory">BedrockInventoryTransaction</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingFlightItemUses()" class="member-name-link">pendingFlightItemUses</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="../../../protocol/data/enums/java/InputFlag.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java">InputFlag</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prevInputFlags()" class="member-name-link">prevInputFlags</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prevOnGround()" class="member-name-link">prevOnGround</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prevPosition()" class="member-name-link">prevPosition</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetPredictedVehicle()" class="member-name-link">resetPredictedVehicle</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetPredictedVehicle()" class="member-name-link">resetPredictedVehicle</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainCompletedBlockBreaking(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)" class="member-name-link">retainCompletedBlockBreaking</a><wbr>(<a href="ClientPlayerEntity.BlockBreakingInfo.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.BlockBreakingInfo</a>&nbsp;completed)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scheduleDismountPositionCorrection()" class="member-name-link">scheduleDismountPositionCorrection</a>()</code></div>
@@ -418,25 +462,38 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShieldBlockingHand(net.raphimc.viabedrock.protocol.data.enums.java.generated.InteractionHand)" class="member-name-link">setShieldBlockingHand</a><wbr>(<a href="../../../protocol/data/enums/java/generated/InteractionHand.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">InteractionHand</a>&nbsp;hand)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSneaking(boolean)" class="member-name-link">setSneaking</a><wbr>(boolean&nbsp;sneaking)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShowingCredits(boolean)" class="member-name-link">setShowingCredits</a><wbr>(boolean&nbsp;showingCredits)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSprinting(boolean)" class="member-name-link">setSprinting</a><wbr>(boolean&nbsp;sprinting)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSneaking(boolean)" class="member-name-link">setSneaking</a><wbr>(boolean&nbsp;sneaking)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/java/generated/InteractionHand.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">InteractionHand</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shieldBlockingHand()" class="member-name-link">shieldBlockingHand</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSprinting(boolean)" class="member-name-link">setSprinting</a><wbr>(boolean&nbsp;sprinting)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/java/generated/InteractionHand.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.java.generated">InteractionHand</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shieldBlockingHand()" class="member-name-link">shieldBlockingHand</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showingCredits()" class="member-name-link">showingCredits</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startBlockBreakingAfterClose(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)" class="member-name-link">startBlockBreakingAfterClose</a><wbr>(<a href="ClientPlayerEntity.BlockBreakingInfo.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.BlockBreakingInfo</a>&nbsp;breaking)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateAttribute(net.raphimc.viabedrock.protocol.model.EntityAttribute,com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.util.concurrent.atomic.AtomicInteger,java.util.List)" class="member-name-link">translateAttribute</a><wbr>(<a href="../../../protocol/model/EntityAttribute.html" title="class in net.raphimc.viabedrock.protocol.model">EntityAttribute</a>&nbsp;attribute,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateAttribute(net.raphimc.viabedrock.protocol.model.EntityAttribute,com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.util.concurrent.atomic.AtomicInteger,java.util.List)" class="member-name-link">translateAttribute</a><wbr>(<a href="../../../protocol/model/EntityAttribute.html" title="class in net.raphimc.viabedrock.protocol.model">EntityAttribute</a>&nbsp;attribute,
  com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;javaAttributes,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/atomic/AtomicInteger.html" title="class or interface in java.util.concurrent.atomic" class="external-link">AtomicInteger</a>&nbsp;attributeCount,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.viaversion.viaversion.api.minecraft.entitydata.EntityData&gt;&nbsp;javaEntityData)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateBedrockSneakingInput(boolean)" class="member-name-link">updateBedrockSneakingInput</a><wbr>(boolean&nbsp;postureSneaking)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateBedrockSneakingInput(boolean)" class="member-name-link">updateBedrockSneakingInput</a><wbr>(boolean&nbsp;postureSneaking)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateBlockBreakingAfterClose(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.protocol.data.enums.Direction)" class="member-name-link">updateBlockBreakingAfterClose</a><wbr>(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
+ <a href="../../../protocol/data/enums/Direction.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums">Direction</a>&nbsp;direction)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateJavaGameMode()" class="member-name-link">updateJavaGameMode</a>()</code></div>
@@ -500,7 +557,7 @@ loadScripts(document, 'script');</script>
 <code><a href="LivingEntity.html#attributes()" title="attributes()">attributes</a>, <a href="LivingEntity.html#clearEffects()" title="clearEffects()">clearEffects</a>, <a href="LivingEntity.html#effects()" title="effects()">effects</a>, <a href="LivingEntity.html#isDead()" title="isDead()">isDead</a>, <a href="LivingEntity.html#removeEffect(java.lang.String,com.viaversion.viaversion.api.protocol.packet.PacketWrapper)" title="removeEffect(String, PacketWrapper)">removeEffect</a>, <a href="LivingEntity.html#sendAttribute(java.lang.String)" title="sendAttribute(String)">sendAttribute</a>, <a href="LivingEntity.html#sendEffects()" title="sendEffects()">sendEffects</a>, <a href="LivingEntity.html#sendUnderwaterMovementSnapshot()" title="sendUnderwaterMovementSnapshot()">sendUnderwaterMovementSnapshot</a>, <a href="LivingEntity.html#setHealth(float)" title="setHealth(float)">setHealth</a>, <a href="LivingEntity.html#updateAttributes(net.raphimc.viabedrock.protocol.model.EntityAttribute...)" title="updateAttributes(EntityAttribute...)">updateAttributes</a>, <a href="LivingEntity.html#updateAttributes(net.raphimc.viabedrock.protocol.model.EntityAttribute%5B%5D,com.viaversion.viaversion.api.protocol.packet.PacketWrapper)" title="updateAttributes(EntityAttribute[], PacketWrapper)">updateAttributes</a>, <a href="LivingEntity.html#updateEffect(net.raphimc.viabedrock.protocol.model.EntityEffect,com.viaversion.viaversion.api.protocol.packet.PacketWrapper)" title="updateEffect(EntityEffect, PacketWrapper)">updateEffect</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.raphimc.viabedrock.api.model.entity.Entity">Methods inherited from class&nbsp;<a href="Entity.html#method-summary" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a></h3>
-<code><a href="Entity.html#addPassenger(long)" title="addPassenger(long)">addPassenger</a>, <a href="Entity.html#addPrimaryPassenger(long)" title="addPrimaryPassenger(long)">addPrimaryPassenger</a>, <a href="Entity.html#admitSpatialUpdate(net.raphimc.viabedrock.protocol.model.Position3f,short,long)" title="admitSpatialUpdate(Position3f, short, long)">admitSpatialUpdate</a>, <a href="Entity.html#age()" title="age()">age</a>, <a href="Entity.html#boundingBoxDimensions()" title="boundingBoxDimensions()">boundingBoxDimensions</a>, <a href="Entity.html#clearSpatialInterpolation()" title="clearSpatialInterpolation()">clearSpatialInterpolation</a>, <a href="Entity.html#entityData()" title="entityData()">entityData</a>, <a href="Entity.html#entityFlags()" title="entityFlags()">entityFlags</a>, <a href="Entity.html#entityProperties()" title="entityProperties()">entityProperties</a>, <a href="Entity.html#getJavaEntityDataIndex(java.lang.String)" title="getJavaEntityDataIndex(String)">getJavaEntityDataIndex</a>, <a href="Entity.html#hasBossBar()" title="hasBossBar()">hasBossBar</a>, <a href="Entity.html#hasNectar()" title="hasNectar()">hasNectar</a>, <a href="Entity.html#isOffhandShield()" title="isOffhandShield()">isOffhandShield</a>, <a href="Entity.html#isOnGround()" title="isOnGround()">isOnGround</a>, <a href="Entity.html#javaId()" title="javaId()">javaId</a>, <a href="Entity.html#javaPosition()" title="javaPosition()">javaPosition</a>, <a href="Entity.html#javaRotation()" title="javaRotation()">javaRotation</a>, <a href="Entity.html#javaType()" title="javaType()">javaType</a>, <a href="Entity.html#javaUuid()" title="javaUuid()">javaUuid</a>, <a href="Entity.html#lastReceivedInterpolationTicks()" title="lastReceivedInterpolationTicks()">lastReceivedInterpolationTicks</a>, <a href="Entity.html#lastReceivedMovementFlags()" title="lastReceivedMovementFlags()">lastReceivedMovementFlags</a>, <a href="Entity.html#lastReceivedPosition()" title="lastReceivedPosition()">lastReceivedPosition</a>, <a href="Entity.html#lastReceivedRotation()" title="lastReceivedRotation()">lastReceivedRotation</a>, <a href="Entity.html#mountEntityRuntimeId()" title="mountEntityRuntimeId()">mountEntityRuntimeId</a>, <a href="Entity.html#movementEffect(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.MovementEffectType)" title="movementEffect(MovementEffectType)">movementEffect</a>, <a href="Entity.html#nativeActorBounds()" title="nativeActorBounds()">nativeActorBounds</a>, <a href="Entity.html#nativeActorSnapshot()" title="nativeActorSnapshot()">nativeActorSnapshot</a>, <a href="Entity.html#nativeColors()" title="nativeColors()">nativeColors</a>, <a href="Entity.html#nativeIntegerMetadata()" title="nativeIntegerMetadata()">nativeIntegerMetadata</a>, <a href="Entity.html#nativeLifetime()" title="nativeLifetime()">nativeLifetime</a>, <a href="Entity.html#nativeSpatialCommand()" title="nativeSpatialCommand()">nativeSpatialCommand</a>, <a href="Entity.html#nativeTargetId()" title="nativeTargetId()">nativeTargetId</a>, <a href="Entity.html#onEntityDataChanged()" title="onEntityDataChanged()">onEntityDataChanged</a>, <a href="Entity.html#passengers()" title="passengers()">passengers</a>, <a href="Entity.html#pickingHitboxes()" title="pickingHitboxes()">pickingHitboxes</a>, <a href="Entity.html#playSound(java.lang.String)" title="playSound(String)">playSound</a>, <a href="Entity.html#position()" title="position()">position</a>, <a href="Entity.html#refreshVehiclePrediction()" title="refreshVehiclePrediction()">refreshVehiclePrediction</a>, <a href="Entity.html#removePassenger(long)" title="removePassenger(long)">removePassenger</a>, <a href="Entity.html#retainEntityProperties(java.util.Map)" title="retainEntityProperties(Map)">retainEntityProperties</a>, <a href="Entity.html#retainSpatialUpdate(net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,short,long)" title="retainSpatialUpdate(Position3f, Position3f, short, long)">retainSpatialUpdate</a>, <a href="Entity.html#riderSeatPosition()" title="riderSeatPosition()">riderSeatPosition</a>, <a href="Entity.html#rotation()" title="rotation()">rotation</a>, <a href="Entity.html#runtimeId()" title="runtimeId()">runtimeId</a>, <a href="Entity.html#scale()" title="scale()">scale</a>, <a href="Entity.html#sendMovementEffectSnapshot()" title="sendMovementEffectSnapshot()">sendMovementEffectSnapshot</a>, <a href="Entity.html#sendNativeActorSnapshot()" title="sendNativeActorSnapshot()">sendNativeActorSnapshot</a>, <a href="Entity.html#sendNativeActorSnapshot(boolean)" title="sendNativeActorSnapshot(boolean)">sendNativeActorSnapshot</a>, <a href="Entity.html#sendNativeSpatialCommand(boolean)" title="sendNativeSpatialCommand(boolean)">sendNativeSpatialCommand</a>, <a href="Entity.html#sendRemotePlayerMovement(int,boolean,short,long)" title="sendRemotePlayerMovement(int, boolean, short, long)">sendRemotePlayerMovement</a>, <a href="Entity.html#sendRemotePlayerMovement(int,boolean,short,long,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f)" title="sendRemotePlayerMovement(int, boolean, short, long, Position3f, Position3f)">sendRemotePlayerMovement</a>, <a href="Entity.html#setHasBossBar(boolean)" title="setHasBossBar(boolean)">setHasBossBar</a>, <a href="Entity.html#setHasNectar(boolean)" title="setHasNectar(boolean)">setHasNectar</a>, <a href="Entity.html#setJavaPosition(net.raphimc.viabedrock.protocol.model.Position3f)" title="setJavaPosition(Position3f)">setJavaPosition</a>, <a href="Entity.html#setJavaRotation(net.raphimc.viabedrock.protocol.model.Position3f)" title="setJavaRotation(Position3f)">setJavaRotation</a>, <a href="Entity.html#setMovementEffect(net.raphimc.viabedrock.api.model.MovementEffect)" title="setMovementEffect(MovementEffect)">setMovementEffect</a>, <a href="Entity.html#setName(java.lang.String)" title="setName(String)">setName</a>, <a href="Entity.html#setOffhandShield(boolean)" title="setOffhandShield(boolean)">setOffhandShield</a>, <a href="Entity.html#setPredictedJavaPosition(net.raphimc.viabedrock.protocol.model.Position3f)" title="setPredictedJavaPosition(Position3f)">setPredictedJavaPosition</a>, <a href="Entity.html#setRotation(net.raphimc.viabedrock.protocol.model.Position3f)" title="setRotation(Position3f)">setRotation</a>, <a href="Entity.html#translateEntityProperties(net.raphimc.viabedrock.protocol.model.EntityProperties,java.util.List)" title="translateEntityProperties(EntityProperties, List)">translateEntityProperties</a>, <a href="Entity.html#type()" title="type()">type</a>, <a href="Entity.html#uniqueId()" title="uniqueId()">uniqueId</a>, <a href="Entity.html#updateEntityData(com.viaversion.viaversion.api.minecraft.entitydata.EntityData%5B%5D)" title="updateEntityData(EntityData[])">updateEntityData</a>, <a href="Entity.html#updateEntityData(com.viaversion.viaversion.api.minecraft.entitydata.EntityData%5B%5D,java.util.List)" title="updateEntityData(EntityData[], List)">updateEntityData</a>, <a href="Entity.html#updateEntityData(com.viaversion.viaversion.api.minecraft.entitydata.EntityData%5B%5D,net.raphimc.viabedrock.protocol.model.EntityProperties)" title="updateEntityData(EntityData[], EntityProperties)">updateEntityData</a></code></div>
+<code><a href="Entity.html#addPassenger(long)" title="addPassenger(long)">addPassenger</a>, <a href="Entity.html#addPrimaryPassenger(long)" title="addPrimaryPassenger(long)">addPrimaryPassenger</a>, <a href="Entity.html#admitSpatialUpdate(net.raphimc.viabedrock.protocol.model.Position3f,short,long)" title="admitSpatialUpdate(Position3f, short, long)">admitSpatialUpdate</a>, <a href="Entity.html#age()" title="age()">age</a>, <a href="Entity.html#boundingBoxDimensions()" title="boundingBoxDimensions()">boundingBoxDimensions</a>, <a href="Entity.html#clearSpatialInterpolation()" title="clearSpatialInterpolation()">clearSpatialInterpolation</a>, <a href="Entity.html#entityData()" title="entityData()">entityData</a>, <a href="Entity.html#entityFlags()" title="entityFlags()">entityFlags</a>, <a href="Entity.html#entityProperties()" title="entityProperties()">entityProperties</a>, <a href="Entity.html#getJavaEntityDataIndex(java.lang.String)" title="getJavaEntityDataIndex(String)">getJavaEntityDataIndex</a>, <a href="Entity.html#hasBossBar()" title="hasBossBar()">hasBossBar</a>, <a href="Entity.html#hasNectar()" title="hasNectar()">hasNectar</a>, <a href="Entity.html#isOffhandShield()" title="isOffhandShield()">isOffhandShield</a>, <a href="Entity.html#isOnGround()" title="isOnGround()">isOnGround</a>, <a href="Entity.html#javaId()" title="javaId()">javaId</a>, <a href="Entity.html#javaPosition()" title="javaPosition()">javaPosition</a>, <a href="Entity.html#javaRotation()" title="javaRotation()">javaRotation</a>, <a href="Entity.html#javaSaddled()" title="javaSaddled()">javaSaddled</a>, <a href="Entity.html#javaType()" title="javaType()">javaType</a>, <a href="Entity.html#javaUuid()" title="javaUuid()">javaUuid</a>, <a href="Entity.html#lastReceivedInterpolationTicks()" title="lastReceivedInterpolationTicks()">lastReceivedInterpolationTicks</a>, <a href="Entity.html#lastReceivedMovementFlags()" title="lastReceivedMovementFlags()">lastReceivedMovementFlags</a>, <a href="Entity.html#lastReceivedPosition()" title="lastReceivedPosition()">lastReceivedPosition</a>, <a href="Entity.html#lastReceivedRotation()" title="lastReceivedRotation()">lastReceivedRotation</a>, <a href="Entity.html#mountEntityRuntimeId()" title="mountEntityRuntimeId()">mountEntityRuntimeId</a>, <a href="Entity.html#movementEffect(net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.MovementEffectType)" title="movementEffect(MovementEffectType)">movementEffect</a>, <a href="Entity.html#nativeActorBounds()" title="nativeActorBounds()">nativeActorBounds</a>, <a href="Entity.html#nativeActorSnapshot()" title="nativeActorSnapshot()">nativeActorSnapshot</a>, <a href="Entity.html#nativeColors()" title="nativeColors()">nativeColors</a>, <a href="Entity.html#nativeIntegerMetadata()" title="nativeIntegerMetadata()">nativeIntegerMetadata</a>, <a href="Entity.html#nativeLifetime()" title="nativeLifetime()">nativeLifetime</a>, <a href="Entity.html#nativeSpatialCommand()" title="nativeSpatialCommand()">nativeSpatialCommand</a>, <a href="Entity.html#nativeTargetId()" title="nativeTargetId()">nativeTargetId</a>, <a href="Entity.html#onEntityDataChanged()" title="onEntityDataChanged()">onEntityDataChanged</a>, <a href="Entity.html#passengers()" title="passengers()">passengers</a>, <a href="Entity.html#pickingHitboxes()" title="pickingHitboxes()">pickingHitboxes</a>, <a href="Entity.html#playSound(java.lang.String)" title="playSound(String)">playSound</a>, <a href="Entity.html#position()" title="position()">position</a>, <a href="Entity.html#refreshVehiclePrediction()" title="refreshVehiclePrediction()">refreshVehiclePrediction</a>, <a href="Entity.html#removePassenger(long)" title="removePassenger(long)">removePassenger</a>, <a href="Entity.html#retainEntityProperties(java.util.Map)" title="retainEntityProperties(Map)">retainEntityProperties</a>, <a href="Entity.html#retainSpatialUpdate(net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f,short,long)" title="retainSpatialUpdate(Position3f, Position3f, short, long)">retainSpatialUpdate</a>, <a href="Entity.html#riderSeatPosition()" title="riderSeatPosition()">riderSeatPosition</a>, <a href="Entity.html#rotation()" title="rotation()">rotation</a>, <a href="Entity.html#runtimeId()" title="runtimeId()">runtimeId</a>, <a href="Entity.html#scale()" title="scale()">scale</a>, <a href="Entity.html#sendMovementEffectSnapshot()" title="sendMovementEffectSnapshot()">sendMovementEffectSnapshot</a>, <a href="Entity.html#sendNativeActorSnapshot()" title="sendNativeActorSnapshot()">sendNativeActorSnapshot</a>, <a href="Entity.html#sendNativeActorSnapshot(boolean)" title="sendNativeActorSnapshot(boolean)">sendNativeActorSnapshot</a>, <a href="Entity.html#sendNativeSpatialCommand(boolean)" title="sendNativeSpatialCommand(boolean)">sendNativeSpatialCommand</a>, <a href="Entity.html#sendRemotePlayerMovement(int,boolean,short,long)" title="sendRemotePlayerMovement(int, boolean, short, long)">sendRemotePlayerMovement</a>, <a href="Entity.html#sendRemotePlayerMovement(int,boolean,short,long,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.model.Position3f)" title="sendRemotePlayerMovement(int, boolean, short, long, Position3f, Position3f)">sendRemotePlayerMovement</a>, <a href="Entity.html#setHasBossBar(boolean)" title="setHasBossBar(boolean)">setHasBossBar</a>, <a href="Entity.html#setHasNectar(boolean)" title="setHasNectar(boolean)">setHasNectar</a>, <a href="Entity.html#setJavaPosition(net.raphimc.viabedrock.protocol.model.Position3f)" title="setJavaPosition(Position3f)">setJavaPosition</a>, <a href="Entity.html#setJavaRotation(net.raphimc.viabedrock.protocol.model.Position3f)" title="setJavaRotation(Position3f)">setJavaRotation</a>, <a href="Entity.html#setJavaSaddled(java.lang.Boolean)" title="setJavaSaddled(Boolean)">setJavaSaddled</a>, <a href="Entity.html#setMovementEffect(net.raphimc.viabedrock.api.model.MovementEffect)" title="setMovementEffect(MovementEffect)">setMovementEffect</a>, <a href="Entity.html#setName(java.lang.String)" title="setName(String)">setName</a>, <a href="Entity.html#setOffhandShield(boolean)" title="setOffhandShield(boolean)">setOffhandShield</a>, <a href="Entity.html#setPredictedJavaPosition(net.raphimc.viabedrock.protocol.model.Position3f)" title="setPredictedJavaPosition(Position3f)">setPredictedJavaPosition</a>, <a href="Entity.html#setRotation(net.raphimc.viabedrock.protocol.model.Position3f)" title="setRotation(Position3f)">setRotation</a>, <a href="Entity.html#translateEntityProperties(net.raphimc.viabedrock.protocol.model.EntityProperties,java.util.List)" title="translateEntityProperties(EntityProperties, List)">translateEntityProperties</a>, <a href="Entity.html#type()" title="type()">type</a>, <a href="Entity.html#uniqueId()" title="uniqueId()">uniqueId</a>, <a href="Entity.html#updateEntityData(com.viaversion.viaversion.api.minecraft.entitydata.EntityData%5B%5D)" title="updateEntityData(EntityData[])">updateEntityData</a>, <a href="Entity.html#updateEntityData(com.viaversion.viaversion.api.minecraft.entitydata.EntityData%5B%5D,java.util.List)" title="updateEntityData(EntityData[], List)">updateEntityData</a>, <a href="Entity.html#updateEntityData(com.viaversion.viaversion.api.minecraft.entitydata.EntityData%5B%5D,net.raphimc.viabedrock.protocol.model.EntityProperties)" title="updateEntityData(EntityData[], EntityProperties)">updateEntityData</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#method-summary" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -764,6 +821,103 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="addNextAuthInputBlockAction(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.AuthInputBlockAction)">
+<h3>addNextAuthInputBlockAction</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addNextAuthInputBlockAction</span><wbr><span class="parameters">(<a href="ClientPlayerEntity.AuthInputBlockAction.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.AuthInputBlockAction</a>&nbsp;blockAction)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasNativeMiningInput()">
+<h3>hasNativeMiningInput</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasNativeMiningInput</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="retainCompletedBlockBreaking(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)">
+<h3>retainCompletedBlockBreaking</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">retainCompletedBlockBreaking</span><wbr><span class="parameters">(<a href="ClientPlayerEntity.BlockBreakingInfo.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.BlockBreakingInfo</a>&nbsp;completed)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="continueCompletedBlockBreaking(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)">
+<h3>continueCompletedBlockBreaking</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">continueCompletedBlockBreaking</span><wbr><span class="parameters">(<a href="ClientPlayerEntity.BlockBreakingInfo.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.BlockBreakingInfo</a>&nbsp;next)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="applyMiningInput(net.raphimc.viabedrock.api.model.PlayerMiningInput)">
+<h3>applyMiningInput</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyMiningInput</span><wbr><span class="parameters">(<a href="../PlayerMiningInput.html" title="class in net.raphimc.viabedrock.api.model">PlayerMiningInput</a>&nbsp;input)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="disableNativeMiningInput()">
+<h3>disableNativeMiningInput</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">disableNativeMiningInput</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="cancelCompletedBlockBreaking()">
+<h3>cancelCompletedBlockBreaking</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">cancelCompletedBlockBreaking</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="discardCompletedBlockBreaking()">
+<h3>discardCompletedBlockBreaking</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">discardCompletedBlockBreaking</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isClosingCompletedBlockBreak()">
+<h3>isClosingCompletedBlockBreak</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isClosingCompletedBlockBreak</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="startBlockBreakingAfterClose(net.raphimc.viabedrock.api.model.entity.ClientPlayerEntity.BlockBreakingInfo)">
+<h3>startBlockBreakingAfterClose</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">startBlockBreakingAfterClose</span><wbr><span class="parameters">(<a href="ClientPlayerEntity.BlockBreakingInfo.html" title="class in net.raphimc.viabedrock.api.model.entity">ClientPlayerEntity.BlockBreakingInfo</a>&nbsp;breaking)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="updateBlockBreakingAfterClose(com.viaversion.viaversion.api.minecraft.BlockPosition,net.raphimc.viabedrock.protocol.data.enums.Direction)">
+<h3>updateBlockBreakingAfterClose</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateBlockBreakingAfterClose</span><wbr><span class="parameters">(com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;position,
+ <a href="../../../protocol/data/enums/Direction.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums">Direction</a>&nbsp;direction)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="completeAuthInputFrame()">
+<h3>completeAuthInputFrame</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">completeAuthInputFrame</span>()</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="setPosition(net.raphimc.viabedrock.protocol.model.Position3f)">
 <h3>setPosition</h3>
 <div class="horizontal-scroll">
@@ -855,6 +1009,22 @@ loadScripts(document, 'script');</script>
 <h3>setInitiallySpawned</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInitiallySpawned</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="showingCredits()">
+<h3>showingCredits</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">showingCredits</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setShowingCredits(boolean)">
+<h3>setShowingCredits</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setShowingCredits</span><wbr><span class="parameters">(boolean&nbsp;showingCredits)</span></div>
 </div>
 </section>
 </li>

@@ -57,10 +57,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#updateSliderStates(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.util.function.Predicate,java.util.function.Predicate)" tabindex="0">updateSliderStates(NativeUiScene.Node, Predicate, Predicate)</a></li>
+<li><a href="#updateStateControls(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.util.function.Predicate,java.util.function.Predicate)" tabindex="0">updateStateControls(NativeUiScene.Node, Predicate, Predicate)</a></li>
 <li><a href="#draws(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.util.function.Predicate)" tabindex="0">draws(NativeUiLayout.Box, Predicate)</a></li>
 <li><a href="#draws(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.util.function.Predicate,java.util.function.Function)" tabindex="0">draws(NativeUiLayout.Box, Predicate, Function)</a></li>
 <li><a href="#draws(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.util.function.Predicate,java.util.function.Function,java.util.function.Predicate)" tabindex="0">draws(NativeUiLayout.Box, Predicate, Function, Predicate)</a></li>
+<li><a href="#hoverText(java.util.List)" tabindex="0">hoverText(List)</a></li>
+<li><a href="#editBoxControl(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.lang.String)" tabindex="0">editBoxControl(NativeUiLayout.Box, String)</a></li>
 </ol>
 </li>
 </ol>
@@ -129,8 +131,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Retained Button components apply their named setters before layout.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#editBoxControl(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.lang.String)" class="member-name-link">editBoxControl</a><wbr>(<a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a>&nbsp;editBox,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;property)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The first control below an edit box whose name equals the edit box's <code>property</code>, as Bedrock binds it.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hoverText(java.util.List)" class="member-name-link">hoverText</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeUiPresentation.Draw.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiPresentation.Draw</a>&gt;&nbsp;draws)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The hover text renderer that draws this frame, or null.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#updateSliderStates(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.util.function.Predicate,java.util.function.Predicate)" class="member-name-link">updateSliderStates</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;root,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#updateStateControls(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.util.function.Predicate,java.util.function.Predicate)" class="member-name-link">updateStateControls</a><wbr>(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;root,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;hovered,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;selected)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -152,10 +165,10 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="updateSliderStates(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.util.function.Predicate,java.util.function.Predicate)">
-<h3>updateSliderStates</h3>
+<section class="detail" id="updateStateControls(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiScene.Node,java.util.function.Predicate,java.util.function.Predicate)">
+<h3>updateStateControls</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">updateSliderStates</span><wbr><span class="parameters">(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;root,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">updateStateControls</span><wbr><span class="parameters">(<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&nbsp;root,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;hovered,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;selected)</span></div>
 </div>
@@ -189,6 +202,27 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>, <a href="NativeUiPresentation.Opacity.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiPresentation.Opacity</a>&gt;&nbsp;opacity,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a>&gt;&nbsp;retainedButtons)</span></div>
 <div class="block">Retained Button components apply their named setters before layout.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="hoverText(java.util.List)">
+<h3>hoverText</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeUiScene.Node.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiScene.Node</a></span>&nbsp;<span class="element-name">hoverText</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="NativeUiPresentation.Draw.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiPresentation.Draw</a>&gt;&nbsp;draws)</span></div>
+<div class="block">The hover text renderer that draws this frame, or null. Bedrock draws a hover text renderer only while its
+control is shown, so a pack decides the tooltip through its visible state controls and its hover text binding.
+When several are shown, the last in draw order is on top.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="editBoxControl(com.viaversion.viafabricplus.bedrock.screen.ui.NativeUiLayout.Box,java.lang.String)">
+<h3>editBoxControl</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a></span>&nbsp;<span class="element-name">editBoxControl</span><wbr><span class="parameters">(<a href="NativeUiLayout.Box.html" title="class in com.viaversion.viafabricplus.bedrock.screen.ui">NativeUiLayout.Box</a>&nbsp;editBox,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;property)</span></div>
+<div class="block">The first control below an edit box whose name equals the edit box's <code>property</code>, as Bedrock binds it.</div>
 </div>
 </section>
 </li>

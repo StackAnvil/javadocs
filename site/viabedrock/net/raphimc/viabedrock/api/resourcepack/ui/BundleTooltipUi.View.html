@@ -61,12 +61,14 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(int,int,boolean,java.lang.Integer,net.raphimc.viabedrock.api.model.NativeBundleTooltipData,net.raphimc.viabedrock.api.model.NativeItemStorageData,java.util.List)" tabindex="0">View(int, int, boolean, Integer, NativeBundleTooltipData, NativeItemStorageData, List)</a></li>
 <li><a href="#%3Cinit%3E(int,int,boolean,java.lang.Integer,net.raphimc.viabedrock.api.model.NativeBundleTooltipData,net.raphimc.viabedrock.api.model.NativeItemStorageData,java.util.List,java.util.List)" tabindex="0">View(int, int, boolean, Integer, NativeBundleTooltipData, NativeItemStorageData, List, List)</a></li>
+<li><a href="#%3Cinit%3E(int,int,boolean,java.lang.Integer,net.raphimc.viabedrock.api.model.NativeBundleTooltipData,net.raphimc.viabedrock.api.model.NativeItemStorageData,java.util.List,java.util.List,boolean)" tabindex="0">View(int, int, boolean, Integer, NativeBundleTooltipData, NativeItemStorageData, List, List, boolean)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#inactive()" tabindex="0">inactive()</a></li>
 <li><a href="#withDetails(java.util.List)" tabindex="0">withDetails(List)</a></li>
+<li><a href="#withPersistentHoverText(boolean)" tabindex="0">withPersistentHoverText(boolean)</a></li>
 <li><a href="#toString()" tabindex="0">toString()</a></li>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
@@ -78,6 +80,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#storage()" tabindex="0">storage()</a></li>
 <li><a href="#items()" tabindex="0">items()</a></li>
 <li><a href="#details()" tabindex="0">details()</a></li>
+<li><a href="#persistentHoverText()" tabindex="0">persistentHoverText()</a></li>
 </ol>
 </li>
 </ol>
@@ -99,7 +102,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="horizontal-scroll">
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BundleTooltipUi.View</span>(int&nbsp;mode, int&nbsp;inputMode, boolean&nbsp;hidden, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;selectedCell, <a href="../../model/NativeBundleTooltipData.html" title="class in net.raphimc.viabedrock.api.model">NativeBundleTooltipData</a>&nbsp;contents, <a href="../../model/NativeItemStorageData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStorageData</a>&nbsp;storage, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BundleTooltipUi.Item.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.Item</a>&gt;&nbsp;items, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;details)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">BundleTooltipUi.View</span>(int&nbsp;mode, int&nbsp;inputMode, boolean&nbsp;hidden, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;selectedCell, <a href="../../model/NativeBundleTooltipData.html" title="class in net.raphimc.viabedrock.api.model">NativeBundleTooltipData</a>&nbsp;contents, <a href="../../model/NativeItemStorageData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStorageData</a>&nbsp;storage, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BundleTooltipUi.Item.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.Item</a>&gt;&nbsp;items, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;details, boolean&nbsp;persistentHoverText)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Modes 1 and 2 activate the retained tooltip source. Selection is a grid cell.</div>
 </div>
@@ -130,7 +133,17 @@ loadScripts(document, 'script');</script>
  <a href="../../model/NativeItemStorageData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStorageData</a>&nbsp;storage,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BundleTooltipUi.Item.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.Item</a>&gt;&nbsp;items,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;details)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,boolean,java.lang.Integer,net.raphimc.viabedrock.api.model.NativeBundleTooltipData,net.raphimc.viabedrock.api.model.NativeItemStorageData,java.util.List,java.util.List,boolean)" class="member-name-link">View</a><wbr>(int&nbsp;mode,
+ int&nbsp;inputMode,
+ boolean&nbsp;hidden,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;selectedCell,
+ <a href="../../model/NativeBundleTooltipData.html" title="class in net.raphimc.viabedrock.api.model">NativeBundleTooltipData</a>&nbsp;contents,
+ <a href="../../model/NativeItemStorageData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStorageData</a>&nbsp;storage,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BundleTooltipUi.Item.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.Item</a>&gt;&nbsp;items,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;details,
+ boolean&nbsp;persistentHoverText)</code></div>
+<div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>View</code> record class.</div>
 </div>
 </div>
@@ -190,23 +203,31 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>mode</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectedCell()" class="member-name-link">selectedCell</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#persistentHoverText()" class="member-name-link">persistentHoverText</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>persistentHoverText</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectedCell()" class="member-name-link">selectedCell</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>selectedCell</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../model/NativeItemStorageData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStorageData</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#storage()" class="member-name-link">storage</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../model/NativeItemStorageData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStorageData</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#storage()" class="member-name-link">storage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>storage</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BundleTooltipUi.View.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.View</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDetails(java.util.List)" class="member-name-link">withDetails</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;instances)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BundleTooltipUi.View.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.View</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDetails(java.util.List)" class="member-name-link">withDetails</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;instances)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPersistentHoverText(boolean)" class="member-name-link">withPersistentHoverText</a><wbr>(boolean&nbsp;persistentHoverText)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -251,6 +272,22 @@ loadScripts(document, 'script');</script>
  <a href="../../model/NativeItemStorageData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStorageData</a>&nbsp;storage,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BundleTooltipUi.Item.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.Item</a>&gt;&nbsp;items,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;details)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,int,boolean,java.lang.Integer,net.raphimc.viabedrock.api.model.NativeBundleTooltipData,net.raphimc.viabedrock.api.model.NativeItemStorageData,java.util.List,java.util.List,boolean)">
+<h3>View</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">View</span><wbr><span class="parameters">(int&nbsp;mode,
+ int&nbsp;inputMode,
+ boolean&nbsp;hidden,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;selectedCell,
+ <a href="../../model/NativeBundleTooltipData.html" title="class in net.raphimc.viabedrock.api.model">NativeBundleTooltipData</a>&nbsp;contents,
+ <a href="../../model/NativeItemStorageData.html" title="class in net.raphimc.viabedrock.api.model">NativeItemStorageData</a>&nbsp;storage,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BundleTooltipUi.Item.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.Item</a>&gt;&nbsp;items,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;details,
+ boolean&nbsp;persistentHoverText)</span></div>
 <div class="block">Creates an instance of a <code>View</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -262,6 +299,7 @@ loadScripts(document, 'script');</script>
 <dd><code>storage</code> - the value for the <code>storage</code> record component</dd>
 <dd><code>items</code> - the value for the <code>items</code> record component</dd>
 <dd><code>details</code> - the value for the <code>details</code> record component</dd>
+<dd><code>persistentHoverText</code> - the value for the <code>persistentHoverText</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -287,6 +325,14 @@ loadScripts(document, 'script');</script>
 <h3>withDetails</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BundleTooltipUi.View.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.View</a></span>&nbsp;<span class="element-name">withDetails</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="UiFactoryInstances.Instance.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">UiFactoryInstances.Instance</a>&gt;&nbsp;instances)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withPersistentHoverText(boolean)">
+<h3>withPersistentHoverText</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BundleTooltipUi.View.html" title="class in net.raphimc.viabedrock.api.resourcepack.ui">BundleTooltipUi.View</a></span>&nbsp;<span class="element-name">withPersistentHoverText</span><wbr><span class="parameters">(boolean&nbsp;persistentHoverText)</span></div>
 </div>
 </section>
 </li>
@@ -437,6 +483,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>details</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="persistentHoverText()">
+<h3>persistentHoverText</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">persistentHoverText</span>()</div>
+<div class="block">Returns the value of the <code>persistentHoverText</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>persistentHoverText</code> record component</dd>
 </dl>
 </div>
 </section>
