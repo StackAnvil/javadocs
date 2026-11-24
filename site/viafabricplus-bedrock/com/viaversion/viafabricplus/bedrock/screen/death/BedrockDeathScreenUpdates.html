@@ -65,11 +65,16 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#requestRespawn(net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" tabindex="0">requestRespawn(LocalPlayer, DeathScreen)</a></li>
 <li><a href="#respawning(net.minecraft.client.gui.screens.DeathScreen)" tabindex="0">respawning(DeathScreen)</a></li>
+<li><a href="#loading(net.minecraft.client.gui.screens.DeathScreen)" tabindex="0">loading(DeathScreen)</a></li>
+<li><a href="#openGameMenu(net.minecraft.client.gui.screens.DeathScreen)" tabindex="0">openGameMenu(DeathScreen)</a></li>
 <li><a href="#receive(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.Screen,net.minecraft.client.gui.screens.DeathScreen)" tabindex="0">receive(ClientPacketListener, ClientPacketListener, LocalPlayer, Screen, DeathScreen)</a></li>
 <li><a href="#tick(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer)" tabindex="0">tick(ClientPacketListener, LocalPlayer)</a></li>
 <li><a href="#tick(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.Screen)" tabindex="0">tick(ClientPacketListener, LocalPlayer, Screen)</a></li>
 <li><a href="#respawn(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" tabindex="0">respawn(ClientPacketListener, ClientPacketListener, LocalPlayer, DeathScreen)</a></li>
+<li><a href="#gameMenu(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" tabindex="0">gameMenu(ClientPacketListener, LocalPlayer, DeathScreen)</a></li>
 <li><a href="#automaticScreen(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" tabindex="0">automaticScreen(ClientPacketListener, LocalPlayer, DeathScreen)</a></li>
+<li><a href="#deferForm(net.minecraft.client.player.LocalPlayer,java.lang.Runnable)" tabindex="0">deferForm(LocalPlayer, Runnable)</a></li>
+<li><a href="#clearForm()" tabindex="0">clearForm()</a></li>
 </ol>
 </li>
 </ol>
@@ -136,41 +141,69 @@ loadScripts(document, 'script');</script>
  net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.minecraft.client.gui.screens.DeathScreen&nbsp;incoming)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Java's null-screen path must not replace a screen whose respawn is still pending.</div>
+<div class="block">Java's null-screen path must not replace the retained screen, its reason, stage or pending respawn.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearForm()" class="member-name-link">clearForm</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The server's close-form request also closes a form held behind the death screen.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deferForm(net.minecraft.client.player.LocalPlayer,java.lang.Runnable)" class="member-name-link">deferForm</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;open)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native routes a dead player to the death screen before any data-driven form.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#receive(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.Screen,net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">receive</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;source,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#gameMenu(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">gameMenu</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
+ net.minecraft.client.player.LocalPlayer&nbsp;player,
+ net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native keeps the death route behind the game menu and returns to it with its controls enabled.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#loading(net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">loading</a><wbr>(net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">True after the pending request's initial wait, when native shows its progress line.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#openGameMenu(net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">openGameMenu</a><wbr>(net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">True if the screen's game menu action may open the game menu now.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#receive(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.Screen,net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">receive</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;source,
  net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
  net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.minecraft.client.gui.screens.Screen&nbsp;foreground,
  net.minecraft.client.gui.screens.DeathScreen&nbsp;incoming)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">True consumes an update; false admits the supplied screen through the ordinary screen path.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#requestRespawn(net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">requestRespawn</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#requestRespawn(net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">requestRespawn</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">The command and automatic GUI paths share one pending attempt per local death.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#respawn(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">respawn</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;source,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#respawn(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">respawn</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;source,
  net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
  net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#respawning(net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">respawning</a><wbr>(net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer)" class="member-name-link">tick</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
- net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#respawning(net.minecraft.client.gui.screens.DeathScreen)" class="member-name-link">respawning</a><wbr>(net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.Screen)" class="member-name-link">tick</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer)" class="member-name-link">tick</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
+ net.minecraft.client.player.LocalPlayer&nbsp;player)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.Screen)" class="member-name-link">tick</a><wbr>(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
  net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.minecraft.client.gui.screens.Screen&nbsp;foreground)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -223,6 +256,24 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="loading(net.minecraft.client.gui.screens.DeathScreen)">
+<h3>loading</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">loading</span><wbr><span class="parameters">(net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</span></div>
+<div class="block">True after the pending request's initial wait, when native shows its progress line.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="openGameMenu(net.minecraft.client.gui.screens.DeathScreen)">
+<h3>openGameMenu</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">openGameMenu</span><wbr><span class="parameters">(net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</span></div>
+<div class="block">True if the screen's game menu action may open the game menu now.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="receive(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.Screen,net.minecraft.client.gui.screens.DeathScreen)">
 <h3>receive</h3>
 <div class="horizontal-scroll">
@@ -266,13 +317,45 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="gameMenu(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)">
+<h3>gameMenu</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">gameMenu</span><wbr><span class="parameters">(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
+ net.minecraft.client.player.LocalPlayer&nbsp;player,
+ net.minecraft.client.gui.screens.DeathScreen&nbsp;screen)</span></div>
+<div class="block">Native keeps the death route behind the game menu and returns to it with its controls enabled. Retain the
+screen so Java's automatic re-entry restores it with its reason and stage.</div>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="automaticScreen(net.minecraft.client.multiplayer.ClientPacketListener,net.minecraft.client.player.LocalPlayer,net.minecraft.client.gui.screens.DeathScreen)">
 <h3>automaticScreen</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.client.gui.screens.DeathScreen</span>&nbsp;<span class="element-name">automaticScreen</span><wbr><span class="parameters">(net.minecraft.client.multiplayer.ClientPacketListener&nbsp;current,
  net.minecraft.client.player.LocalPlayer&nbsp;player,
  net.minecraft.client.gui.screens.DeathScreen&nbsp;incoming)</span></div>
-<div class="block">Java's null-screen path must not replace a screen whose respawn is still pending.</div>
+<div class="block">Java's null-screen path must not replace the retained screen, its reason, stage or pending respawn.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="deferForm(net.minecraft.client.player.LocalPlayer,java.lang.Runnable)">
+<h3>deferForm</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">deferForm</span><wbr><span class="parameters">(net.minecraft.client.player.LocalPlayer&nbsp;player,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;open)</span></div>
+<div class="block">Native routes a dead player to the death screen before any data-driven form. Hold a form that arrives
+meanwhile and open it once the player is alive. A newer request replaces the held one.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearForm()">
+<h3>clearForm</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clearForm</span>()</div>
+<div class="block">The server's close-form request also closes a form held behind the death screen.</div>
 </div>
 </section>
 </li>

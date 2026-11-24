@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#accept(net.minecraft.network.Connection,net.raphimc.viabedrock.api.model.LocatorBarSnapshot)" tabindex="0">accept(Connection, LocatorBarSnapshot)</a></li>
 <li><a href="#active()" tabindex="0">active()</a></li>
-<li><a href="#hasWaypoints(boolean)" tabindex="0">hasWaypoints(boolean)</a></li>
+<li><a href="#hasWaypoints(boolean,boolean,int,float)" tabindex="0">hasWaypoints(boolean, boolean, int, float)</a></li>
 <li><a href="#background(net.minecraft.client.gui.GuiGraphicsExtractor)" tabindex="0">background(GuiGraphicsExtractor)</a></li>
 <li><a href="#icons(net.minecraft.client.gui.GuiGraphicsExtractor,net.minecraft.client.DeltaTracker)" tabindex="0">icons(GuiGraphicsExtractor, DeltaTracker)</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
@@ -101,7 +101,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#active()" class="member-name-link">active</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native groups replace the Java bar only when their background resolves from accepted or bundled images.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#background(net.minecraft.client.gui.GuiGraphicsExtractor)" class="member-name-link">background</a><wbr>(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -109,8 +111,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasWaypoints(boolean)" class="member-name-link">hasWaypoints</a><wbr>(boolean&nbsp;javaWaypoints)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasWaypoints(boolean,boolean,int,float)" class="member-name-link">hasWaypoints</a><wbr>(boolean&nbsp;javaWaypoints,
+ boolean&nbsp;creative,
+ int&nbsp;level,
+ float&nbsp;progress)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native 1.26.60.5 predicate 0x144b64630 shows groups in Creative and otherwise only after five quiet seconds of
+experience, including in Spectator.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#icons(net.minecraft.client.gui.GuiGraphicsExtractor,net.minecraft.client.DeltaTracker)" class="member-name-link">icons</a><wbr>(net.minecraft.client.gui.GuiGraphicsExtractor&nbsp;graphics,
  net.minecraft.client.DeltaTracker&nbsp;delta)</code></div>
@@ -146,14 +154,20 @@ loadScripts(document, 'script');</script>
 <h3>active</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">active</span>()</div>
+<div class="block">Native groups replace the Java bar only when their background resolves from accepted or bundled images.</div>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="hasWaypoints(boolean)">
+<section class="detail" id="hasWaypoints(boolean,boolean,int,float)">
 <h3>hasWaypoints</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasWaypoints</span><wbr><span class="parameters">(boolean&nbsp;javaWaypoints)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasWaypoints</span><wbr><span class="parameters">(boolean&nbsp;javaWaypoints,
+ boolean&nbsp;creative,
+ int&nbsp;level,
+ float&nbsp;progress)</span></div>
+<div class="block">Native 1.26.60.5 predicate 0x144b64630 shows groups in Creative and otherwise only after five quiet seconds of
+experience, including in Spectator. The experience bar or an empty slot takes its place meanwhile.</div>
 </div>
 </section>
 </li>

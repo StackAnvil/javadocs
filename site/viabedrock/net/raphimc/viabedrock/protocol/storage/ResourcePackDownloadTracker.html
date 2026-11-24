@@ -65,6 +65,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#add(java.lang.String,long,long,byte%5B%5D,boolean,net.raphimc.viabedrock.protocol.data.enums.bedrock.generated.PackType)" tabindex="0">add(String, long, long, byte[], boolean, PackType)</a></li>
+<li><a href="#reserve(long)" tabindex="0">reserve(long)</a></li>
+<li><a href="#release(long)" tabindex="0">release(long)</a></li>
 <li><a href="#get(java.lang.String)" tabindex="0">get(String)</a></li>
 <li><a href="#remove(java.lang.String)" tabindex="0">remove(String)</a></li>
 </ol>
@@ -141,13 +143,23 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
  byte[]&nbsp;hash,
  boolean&nbsp;premium,
  <a href="../data/enums/bedrock/generated/PackType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">PackType</a>&nbsp;type)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Allocates a server-declared pack only while every pack of the connection stays within the download budget.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ResourcePackDownloadTracker.Download.html" title="class in net.raphimc.viabedrock.protocol.storage">ResourcePackDownloadTracker.Download</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(java.lang.String)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remove(java.lang.String)" class="member-name-link">remove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#release(long)" class="member-name-link">release</a><wbr>(long&nbsp;bytes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remove(java.lang.String)" class="member-name-link">remove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#reserve(long)" class="member-name-link">reserve</a><wbr>(long&nbsp;bytes)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Counts pack bytes that this connection keeps, including packs downloaded over HTTP.</div>
+</div>
 </div>
 </div>
 </div>
@@ -194,6 +206,24 @@ implements com.viaversion.viaversion.api.connection.StorableObject</span></div>
  byte[]&nbsp;hash,
  boolean&nbsp;premium,
  <a href="../data/enums/bedrock/generated/PackType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">PackType</a>&nbsp;type)</span></div>
+<div class="block">Allocates a server-declared pack only while every pack of the connection stays within the download budget.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="reserve(long)">
+<h3>reserve</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">reserve</span><wbr><span class="parameters">(long&nbsp;bytes)</span></div>
+<div class="block">Counts pack bytes that this connection keeps, including packs downloaded over HTTP.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="release(long)">
+<h3>release</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">release</span><wbr><span class="parameters">(long&nbsp;bytes)</span></div>
 </div>
 </section>
 </li>

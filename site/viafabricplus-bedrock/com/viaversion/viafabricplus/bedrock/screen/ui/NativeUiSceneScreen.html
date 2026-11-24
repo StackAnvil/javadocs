@@ -73,12 +73,12 @@ loadScripts(document, 'script');</script>
 <li><a href="#mouseClicked(net.minecraft.client.input.MouseButtonEvent,boolean)" tabindex="0">mouseClicked(MouseButtonEvent, boolean)</a></li>
 <li><a href="#mouseDragged(net.minecraft.client.input.MouseButtonEvent,double,double)" tabindex="0">mouseDragged(MouseButtonEvent, double, double)</a></li>
 <li><a href="#mouseReleased(net.minecraft.client.input.MouseButtonEvent)" tabindex="0">mouseReleased(MouseButtonEvent)</a></li>
+<li><a href="#keyPressed(net.minecraft.client.input.KeyEvent)" tabindex="0">keyPressed(KeyEvent)</a></li>
+<li><a href="#charTyped(net.minecraft.client.input.CharacterEvent)" tabindex="0">charTyped(CharacterEvent)</a></li>
 <li><a href="#nextFocusPath(net.minecraft.client.gui.navigation.FocusNavigationEvent)" tabindex="0">nextFocusPath(FocusNavigationEvent)</a></li>
 <li><a href="#setInitialFocus()" tabindex="0">setInitialFocus()</a></li>
 <li><a href="#mouseMoved(double,double)" tabindex="0">mouseMoved(double, double)</a></li>
 <li><a href="#setFocused(net.minecraft.client.gui.components.events.GuiEventListener)" tabindex="0">setFocused(GuiEventListener)</a></li>
-<li><a href="#keyPressed(net.minecraft.client.input.KeyEvent)" tabindex="0">keyPressed(KeyEvent)</a></li>
-<li><a href="#charTyped(net.minecraft.client.input.CharacterEvent)" tabindex="0">charTyped(CharacterEvent)</a></li>
 <li><a href="#onClose()" tabindex="0">onClose()</a></li>
 <li><a href="#clearDialog()" tabindex="0">clearDialog()</a></li>
 <li><a href="#isPauseScreen()" tabindex="0">isPauseScreen()</a></li>
@@ -412,6 +412,36 @@ implements <a href="NativeUiScreen.html" title="interface in com.viaversion.viaf
 </section>
 </li>
 <li>
+<section class="detail" id="keyPressed(net.minecraft.client.input.KeyEvent)">
+<h3>keyPressed</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">keyPressed</span><wbr><span class="parameters">(net.minecraft.client.input.KeyEvent&nbsp;event)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>keyPressed</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.ContainerEventHandler</code></dd>
+<dt>Specified by:</dt>
+<dd><code>keyPressed</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
+<dt>Overrides:</dt>
+<dd><code>keyPressed</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.Screen</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="charTyped(net.minecraft.client.input.CharacterEvent)">
+<h3>charTyped</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">charTyped</span><wbr><span class="parameters">(net.minecraft.client.input.CharacterEvent&nbsp;event)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>charTyped</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.ContainerEventHandler</code></dd>
+<dt>Specified by:</dt>
+<dd><code>charTyped</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="nextFocusPath(net.minecraft.client.gui.navigation.FocusNavigationEvent)">
 <h3>nextFocusPath</h3>
 <div class="horizontal-scroll">
@@ -465,36 +495,6 @@ their focus while text is entered.</div>
 <dd><code>setFocused</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.ContainerEventHandler</code></dd>
 <dt>Overrides:</dt>
 <dd><code>setFocused</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.components.events.AbstractContainerEventHandler</code></dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="keyPressed(net.minecraft.client.input.KeyEvent)">
-<h3>keyPressed</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">keyPressed</span><wbr><span class="parameters">(net.minecraft.client.input.KeyEvent&nbsp;event)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>keyPressed</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.ContainerEventHandler</code></dd>
-<dt>Specified by:</dt>
-<dd><code>keyPressed</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
-<dt>Overrides:</dt>
-<dd><code>keyPressed</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.Screen</code></dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="charTyped(net.minecraft.client.input.CharacterEvent)">
-<h3>charTyped</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">charTyped</span><wbr><span class="parameters">(net.minecraft.client.input.CharacterEvent&nbsp;event)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>charTyped</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.ContainerEventHandler</code></dd>
-<dt>Specified by:</dt>
-<dd><code>charTyped</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.events.GuiEventListener</code></dd>
 </dl>
 </div>
 </section>

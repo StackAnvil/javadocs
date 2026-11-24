@@ -71,7 +71,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
-<li><a href="#teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float)" tabindex="0">teleport(int, UUID, UUID, int, MovementCorrectionTiming, Position3f, float)</a></li>
+<li><a href="#teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float,boolean)" tabindex="0">teleport(int, UUID, UUID, int, MovementCorrectionTiming, Position3f, float, boolean)</a></li>
 <li><a href="#vehicle()" tabindex="0">vehicle()</a></li>
 <li><a href="#javaPosition()" tabindex="0">javaPosition()</a></li>
 <li><a href="#javaYaw()" tabindex="0">javaYaw()</a></li>
@@ -113,7 +113,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PlayerCorrection</span>(int&nbsp;entityId, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime, int&nbsp;teleportId, long&nbsp;vehicleEpoch, <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing, <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position, <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;motion, <a href="../../protocol/model/Position2f.html" title="class in net.raphimc.viabedrock.protocol.model">Position2f</a>&nbsp;rotation, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;angularVelocity, float&nbsp;originOffset, float&nbsp;yawOffset, boolean&nbsp;onGround, boolean&nbsp;teleport)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Exact native correction, paired with a Java player or controlled-vehicle position packet.
-A teleport is an admitted near MovePlayer command. It writes position, clears motion and keeps ground.</div>
+A teleport is an admitted near MovePlayer command. It writes position and the packet's ground state and clears motion.</div>
 </div>
 </section>
 <section class="summary">
@@ -260,15 +260,17 @@ A teleport is an admitted near MovePlayer command. It writes position, clears mo
 <div class="block">Returns the value of the <code>teleport</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float)" class="member-name-link">teleport</a><wbr>(int&nbsp;entityId,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float,boolean)" class="member-name-link">teleport</a><wbr>(int&nbsp;entityId,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;uuid,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;lifetime,
  int&nbsp;teleportId,
  <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing,
  <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
- float&nbsp;originOffset)</code></div>
+ float&nbsp;originOffset,
+ boolean&nbsp;onGround)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Native MovePlayer command core 0x1410ea600 writes StateVector position, zeroes all motion and leaves ground.</div>
+<div class="block">Native MovePlayer command core 0x1410ea600 writes StateVector position, zeroes all motion
+and sets or erases OnGround from the packet (0x1410ea691 -&gt; 0x1410e9680).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#teleportId()" class="member-name-link">teleportId</a>()</code></div>
@@ -420,7 +422,7 @@ A teleport is an admitted near MovePlayer command. It writes position, clears mo
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float)">
+<section class="detail" id="teleport(int,java.util.UUID,java.util.UUID,int,net.raphimc.viabedrock.api.model.MovementCorrectionTiming,net.raphimc.viabedrock.protocol.model.Position3f,float,boolean)">
 <h3>teleport</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PlayerCorrection.html" title="class in net.raphimc.viabedrock.api.model">PlayerCorrection</a></span>&nbsp;<span class="element-name">teleport</span><wbr><span class="parameters">(int&nbsp;entityId,
@@ -429,8 +431,10 @@ A teleport is an admitted near MovePlayer command. It writes position, clears mo
  int&nbsp;teleportId,
  <a href="MovementCorrectionTiming.html" title="class in net.raphimc.viabedrock.api.model">MovementCorrectionTiming</a>&nbsp;timing,
  <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
- float&nbsp;originOffset)</span></div>
-<div class="block">Native MovePlayer command core 0x1410ea600 writes StateVector position, zeroes all motion and leaves ground.</div>
+ float&nbsp;originOffset,
+ boolean&nbsp;onGround)</span></div>
+<div class="block">Native MovePlayer command core 0x1410ea600 writes StateVector position, zeroes all motion
+and sets or erases OnGround from the packet (0x1410ea691 -&gt; 0x1410e9680).</div>
 </div>
 </section>
 </li>

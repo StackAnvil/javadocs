@@ -73,8 +73,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#suppressInteraction()" tabindex="0">suppressInteraction()</a></li>
 <li><a href="#allows(net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState)" tabindex="0">allows(BlockPos, BlockState)</a></li>
 <li><a href="#blockHit(net.minecraft.world.phys.BlockHitResult,boolean)" tabindex="0">blockHit(BlockHitResult, boolean)</a></li>
-<li><a href="#buildAttempt(net.minecraft.core.BlockPos,boolean,boolean)" tabindex="0">buildAttempt(BlockPos, boolean, boolean)</a></li>
-<li><a href="#placed(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.BlockPos,net.minecraft.world.phys.Vec3)" tabindex="0">placed(BlockState, BlockPos, Vec3)</a></li>
+<li><a href="#repeatHit(net.minecraft.world.phys.HitResult)" tabindex="0">repeatHit(HitResult)</a></li>
+<li><a href="#placementAttempt(net.minecraft.world.item.context.BlockPlaceContext,boolean)" tabindex="0">placementAttempt(BlockPlaceContext, boolean)</a></li>
 <li><a href="#beginPrediction(net.minecraft.world.phys.BlockHitResult)" tabindex="0">beginPrediction(BlockHitResult)</a></li>
 <li><a href="#predicted(boolean)" tabindex="0">predicted(boolean)</a></li>
 <li><a href="#sendPrediction(int)" tabindex="0">sendPrediction(int)</a></li>
@@ -143,41 +143,42 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#blockResult(net.minecraft.world.InteractionResult,net.minecraft.world.InteractionHand)" class="member-name-link">blockResult</a><wbr>(net.minecraft.world.InteractionResult&nbsp;result,
  net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#buildAttempt(net.minecraft.core.BlockPos,boolean,boolean)" class="member-name-link">buildAttempt</a><wbr>(net.minecraft.core.BlockPos&nbsp;position,
- boolean&nbsp;success,
- boolean&nbsp;atUpperBuildLimit)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frameReady()" class="member-name-link">frameReady</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frameReady()" class="member-name-link">frameReady</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.HitResult.Type</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hitType(net.minecraft.world.phys.HitResult.Type,net.minecraft.world.InteractionHand)" class="member-name-link">hitType</a><wbr>(net.minecraft.world.phys.HitResult.Type&nbsp;target,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.HitResult.Type</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hitType(net.minecraft.world.phys.HitResult.Type,net.minecraft.world.InteractionHand)" class="member-name-link">hitType</a><wbr>(net.minecraft.world.phys.HitResult.Type&nbsp;target,
  net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#placed(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.BlockPos,net.minecraft.world.phys.Vec3)" class="member-name-link">placed</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
- net.minecraft.core.BlockPos&nbsp;support,
- net.minecraft.world.phys.Vec3&nbsp;hit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.level.block.state.BlockState</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#placement(net.minecraft.world.level.block.state.BlockState)" class="member-name-link">placement</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#predicted(boolean)" class="member-name-link">predicted</a><wbr>(boolean&nbsp;success)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#placementAttempt(net.minecraft.world.item.context.BlockPlaceContext,boolean)" class="member-name-link">placementAttempt</a><wbr>(net.minecraft.world.item.context.BlockPlaceContext&nbsp;context,
+ boolean&nbsp;success)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Records a block item placement by the local player.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#refresh()" class="member-name-link">refresh</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#predicted(boolean)" class="member-name-link">predicted</a><wbr>(boolean&nbsp;success)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#refresh()" class="member-name-link">refresh</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#release()" class="member-name-link">release</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#releaseKey()" class="member-name-link">releaseKey</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#release()" class="member-name-link">release</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#releaseKey()" class="member-name-link">releaseKey</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.HitResult</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#repeatHit(net.minecraft.world.phys.HitResult)" class="member-name-link">repeatHit</a><wbr>(net.minecraft.world.phys.HitResult&nbsp;hit)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">A held repeat with an established line can build while the crosshair shows air or an entity.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#repeatsFromFrames()" class="member-name-link">repeatsFromFrames</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -352,22 +353,22 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="buildAttempt(net.minecraft.core.BlockPos,boolean,boolean)">
-<h3>buildAttempt</h3>
+<section class="detail" id="repeatHit(net.minecraft.world.phys.HitResult)">
+<h3>repeatHit</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">buildAttempt</span><wbr><span class="parameters">(net.minecraft.core.BlockPos&nbsp;position,
- boolean&nbsp;success,
- boolean&nbsp;atUpperBuildLimit)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.world.phys.HitResult</span>&nbsp;<span class="element-name">repeatHit</span><wbr><span class="parameters">(net.minecraft.world.phys.HitResult&nbsp;hit)</span></div>
+<div class="block">A held repeat with an established line can build while the crosshair shows air or an entity.</div>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="placed(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.BlockPos,net.minecraft.world.phys.Vec3)">
-<h3>placed</h3>
+<section class="detail" id="placementAttempt(net.minecraft.world.item.context.BlockPlaceContext,boolean)">
+<h3>placementAttempt</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">placed</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
- net.minecraft.core.BlockPos&nbsp;support,
- net.minecraft.world.phys.Vec3&nbsp;hit)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">placementAttempt</span><wbr><span class="parameters">(net.minecraft.world.item.context.BlockPlaceContext&nbsp;context,
+ boolean&nbsp;success)</span></div>
+<div class="block">Records a block item placement by the local player. Other placers are ignored, including a dispenser on the
+integrated server, which places without a player and can run while the client has no player either.</div>
 </div>
 </section>
 </li>

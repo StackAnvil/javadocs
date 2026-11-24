@@ -105,6 +105,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#getItem(int)" tabindex="0">getItem(int)</a></li>
 <li><a href="#itemIndex(int)" tabindex="0">itemIndex(int)</a></li>
 <li><a href="#getItems()" tabindex="0">getItems()</a></li>
+<li><a href="#storageSlots()" tabindex="0">storageSlots()</a></li>
 <li><a href="#retainStackIdentity(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">retainStackIdentity(int, BedrockItem)</a></li>
 <li><a href="#retainStackIdentities(net.raphimc.viabedrock.protocol.model.BedrockItem%5B%5D)" tabindex="0">retainStackIdentities(BedrockItem[])</a></li>
 <li><a href="#setItem(int,net.raphimc.viabedrock.protocol.model.BedrockItem)" tabindex="0">setItem(int, BedrockItem)</a></li>
@@ -471,18 +472,23 @@ without one.</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slotFromRequest(int)" class="member-name-link">slotFromRequest</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#supportsIncrementalDrag()" class="member-name-link">supportsIncrementalDrag</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#title()" class="member-name-link">title</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#storageSlots()" class="member-name-link">storageSlots</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a Bedrock slot that addresses each stored item, in storage order, or -1 for an unaddressed index.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#supportsIncrementalDrag()" class="member-name-link">supportsIncrementalDrag</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateContainerData(int)" class="member-name-link">translateContainerData</a><wbr>(int&nbsp;containerData)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.mcstructs.text.TextComponent</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#title()" class="member-name-link">title</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#translateContainerData(int)" class="member-name-link">translateContainerData</a><wbr>(int&nbsp;containerData)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../protocol/data/enums/bedrock/generated/ContainerType.html" title="enum class in net.raphimc.viabedrock.protocol.data.enums.bedrock.generated">ContainerType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -859,6 +865,17 @@ without one.</div>
 <h3>getItems</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../protocol/model/BedrockItem.html" title="class in net.raphimc.viabedrock.protocol.model">BedrockItem</a>[]</span>&nbsp;<span class="element-name">getItems</span>()</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="storageSlots()">
+<h3>storageSlots</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int[]</span>&nbsp;<span class="element-name">storageSlots</span>()</div>
+<div class="block">Returns a Bedrock slot that addresses each stored item, in storage order, or -1 for an unaddressed index.
+Menus store named slots such as 16, 17 and 50 at indexes 0 to 2, so a snapshot comparison cannot use the
+storage index as a slot.</div>
 </div>
 </section>
 </li>

@@ -73,7 +73,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#attemptedBlock(long,boolean)" tabindex="0">attemptedBlock(long, boolean)</a></li>
 <li><a href="#blockActive()" tabindex="0">blockActive()</a></li>
 <li><a href="#repeatsFromFrames()" tabindex="0">repeatsFromFrames()</a></li>
-<li><a href="#frameReady(long,boolean)" tabindex="0">frameReady(long, boolean)</a></li>
+<li><a href="#pace(boolean,boolean,float,boolean)" tabindex="0">pace(boolean, boolean, float, boolean)</a></li>
+<li><a href="#frameReady(long)" tabindex="0">frameReady(long)</a></li>
 <li><a href="#cancelPlacement()" tabindex="0">cancelPlacement()</a></li>
 <li><a href="#armRelease(int,java.lang.String)" tabindex="0">armRelease(int, String)</a></li>
 <li><a href="#takeRelease(int,java.lang.String)" tabindex="0">takeRelease(int, String)</a></li>
@@ -151,8 +152,10 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attemptedBlock(long,boolean)" class="member-name-link">attemptedBlock</a><wbr>(long&nbsp;now,
- boolean&nbsp;success)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+ boolean&nbsp;recorded)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">A repeat records its attempt on success or outside the build height; other failures keep the deadline.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#beginAttempt(boolean)" class="member-name-link">beginAttempt</a><wbr>(boolean&nbsp;freshPress)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -171,31 +174,38 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#frameReady(long,boolean)" class="member-name-link">frameReady</a><wbr>(long&nbsp;now,
- boolean&nbsp;placementLine)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#frameReady(long)" class="member-name-link">frameReady</a><wbr>(long&nbsp;now)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.phys.HitResult.Type</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hitType(long,net.minecraft.world.phys.HitResult.Type,net.minecraft.world.InteractionHand)" class="member-name-link">hitType</a><wbr>(long&nbsp;now,
  net.minecraft.world.phys.HitResult.Type&nbsp;target,
  net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#placedBlock(long,boolean)" class="member-name-link">placedBlock</a><wbr>(long&nbsp;now,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pace(boolean,boolean,float,boolean)" class="member-name-link">pace</a><wbr>(boolean&nbsp;placementLine,
+ boolean&nbsp;sneaking,
+ float&nbsp;speedSquared,
+ boolean&nbsp;creative)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Native continueBuildBlock derives each repeat delay from sneaking, the build line and post-tick speed.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#placedBlock(long,boolean)" class="member-name-link">placedBlock</a><wbr>(long&nbsp;now,
  boolean&nbsp;hasRemainder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#release()" class="member-name-link">release</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#repeatsFromFrames()" class="member-name-link">repeatsFromFrames</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#release()" class="member-name-link">release</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainBlockUse()" class="member-name-link">retainBlockUse</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#repeatsFromFrames()" class="member-name-link">repeatsFromFrames</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeRelease(int,java.lang.String)" class="member-name-link">takeRelease</a><wbr>(int&nbsp;slot,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retainBlockUse()" class="member-name-link">retainBlockUse</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeRelease(int,java.lang.String)" class="member-name-link">takeRelease</a><wbr>(int&nbsp;slot,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;definition)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -310,7 +320,8 @@ loadScripts(document, 'script');</script>
 <h3>attemptedBlock</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">attemptedBlock</span><wbr><span class="parameters">(long&nbsp;now,
- boolean&nbsp;success)</span></div>
+ boolean&nbsp;recorded)</span></div>
+<div class="block">A repeat records its attempt on success or outside the build height; other failures keep the deadline.</div>
 </div>
 </section>
 </li>
@@ -331,11 +342,24 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="frameReady(long,boolean)">
+<section class="detail" id="pace(boolean,boolean,float,boolean)">
+<h3>pace</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">pace</span><wbr><span class="parameters">(boolean&nbsp;placementLine,
+ boolean&nbsp;sneaking,
+ float&nbsp;speedSquared,
+ boolean&nbsp;creative)</span></div>
+<div class="block">Native continueBuildBlock derives each repeat delay from sneaking, the build line and post-tick speed.
+Sneaking keeps 300 ms. A moving line waits 900 ms divided by its speed in blocks per second, at most 180 ms.
+Only Creative skips the 100 ms floor.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="frameReady(long)">
 <h3>frameReady</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">frameReady</span><wbr><span class="parameters">(long&nbsp;now,
- boolean&nbsp;placementLine)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">frameReady</span><wbr><span class="parameters">(long&nbsp;now)</span></div>
 </div>
 </section>
 </li>

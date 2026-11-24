@@ -58,6 +58,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#register()" tabindex="0">register()</a></li>
 <li><a href="#capture(net.minecraft.client.player.LocalPlayer,long)" tabindex="0">capture(LocalPlayer, long)</a></li>
+<li><a href="#predicts(net.minecraft.world.entity.Entity)" tabindex="0">predicts(Entity)</a></li>
 </ol>
 </li>
 </ol>
@@ -94,9 +95,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#capture(net.minecraft.client.player.LocalPlayer,long)" class="member-name-link">capture</a><wbr>(net.minecraft.client.player.LocalPlayer&nbsp;player,
  long&nbsp;frame)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#predicts(net.minecraft.world.entity.Entity)" class="member-name-link">predicts</a><wbr>(net.minecraft.world.entity.Entity&nbsp;vehicle)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Whether the local player controls this entity as its client-predicted Bedrock vehicle.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -129,6 +135,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public static</span>&nbsp;<span class="return-type">@Nullable net.raphimc.viabedrock.api.model.VehiclePrediction</span>&nbsp;<span class="element-name">capture</span><wbr><span class="parameters">(net.minecraft.client.player.LocalPlayer&nbsp;player,
  long&nbsp;frame)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="predicts(net.minecraft.world.entity.Entity)">
+<h3>predicts</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">predicts</span><wbr><span class="parameters">(net.minecraft.world.entity.Entity&nbsp;vehicle)</span></div>
+<div class="block">Whether the local player controls this entity as its client-predicted Bedrock vehicle.</div>
 </div>
 </section>
 </li>

@@ -57,6 +57,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#matches(net.minecraft.world.item.ItemStack,net.minecraft.world.item.ItemStack)" tabindex="0">matches(ItemStack, ItemStack)</a></li>
+<li><a href="#continues(net.minecraft.world.item.ItemStack,net.minecraft.world.item.ItemStack,int,int)" tabindex="0">continues(ItemStack, ItemStack, int, int)</a></li>
+<li><a href="#slot(net.minecraft.world.InteractionHand,int)" tabindex="0">slot(InteractionHand, int)</a></li>
 </ol>
 </li>
 </ol>
@@ -91,9 +93,23 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#matches(net.minecraft.world.item.ItemStack,net.minecraft.world.item.ItemStack)" class="member-name-link">matches</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;held,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#continues(net.minecraft.world.item.ItemStack,net.minecraft.world.item.ItemStack,int,int)" class="member-name-link">continues</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;held,
+ net.minecraft.world.item.ItemStack&nbsp;active,
+ int&nbsp;useSlot,
+ int&nbsp;currentSlot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native also ends the cycle when its hand's inventory slot changes, even to an identical stack.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#matches(net.minecraft.world.item.ItemStack,net.minecraft.world.item.ItemStack)" class="member-name-link">matches</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;held,
  net.minecraft.world.item.ItemStack&nbsp;active)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#slot(net.minecraft.world.InteractionHand,int)" class="member-name-link">slot</a><wbr>(net.minecraft.world.InteractionHand&nbsp;hand,
+ int&nbsp;selectedSlot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Returns the inventory slot that owns a hand's use cycle; the offhand ignores hotbar selection.</div>
+</div>
 </div>
 </div>
 </div>
@@ -117,6 +133,28 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">matches</span><wbr><span class="parameters">(net.minecraft.world.item.ItemStack&nbsp;held,
  net.minecraft.world.item.ItemStack&nbsp;active)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="continues(net.minecraft.world.item.ItemStack,net.minecraft.world.item.ItemStack,int,int)">
+<h3>continues</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">continues</span><wbr><span class="parameters">(net.minecraft.world.item.ItemStack&nbsp;held,
+ net.minecraft.world.item.ItemStack&nbsp;active,
+ int&nbsp;useSlot,
+ int&nbsp;currentSlot)</span></div>
+<div class="block">Native also ends the cycle when its hand's inventory slot changes, even to an identical stack.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="slot(net.minecraft.world.InteractionHand,int)">
+<h3>slot</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">slot</span><wbr><span class="parameters">(net.minecraft.world.InteractionHand&nbsp;hand,
+ int&nbsp;selectedSlot)</span></div>
+<div class="block">Returns the inventory slot that owns a hand's use cycle; the offhand ignores hotbar selection.</div>
 </div>
 </section>
 </li>

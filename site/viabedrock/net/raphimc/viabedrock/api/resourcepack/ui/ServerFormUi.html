@@ -75,6 +75,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#resolve(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonArray,java.util.Set)" tabindex="0">resolve(JsonObject, JsonArray, Set)</a></li>
 <li><a href="#resolve(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">resolve(JsonObject)</a></li>
+<li><a href="#resolve(com.viaversion.viaversion.libs.gson.JsonObject,java.util.function.Predicate)" tabindex="0">resolve(JsonObject, Predicate)</a></li>
 <li><a href="#actionTextLimits(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">actionTextLimits(JsonObject)</a></li>
 <li><a href="#responseValues(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonArray)" tabindex="0">responseValues(JsonObject, JsonArray)</a></li>
 <li><a href="#presentation(com.viaversion.viaversion.libs.gson.JsonObject)" tabindex="0">presentation(JsonObject)</a></li>
@@ -177,10 +178,16 @@ loadScripts(document, 'script');</script>
  com.viaversion.viaversion.libs.gson.JsonArray&nbsp;values,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;expanded)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.viaversion.viaversion.libs.gson.JsonArray</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#responseValues(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonArray)" class="member-name-link">responseValues</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;form,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.viaversion.viaversion.libs.gson.JsonObject</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolve(com.viaversion.viaversion.libs.gson.JsonObject,java.util.function.Predicate)" class="member-name-link">resolve</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;form,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;loaded)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Resolves an action form whose URL button images are still loading where <code>loaded</code> rejects them.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.viaversion.viaversion.libs.gson.JsonArray</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#responseValues(com.viaversion.viaversion.libs.gson.JsonObject,com.viaversion.viaversion.libs.gson.JsonArray)" class="member-name-link">responseValues</a><wbr>(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;form,
  com.viaversion.viaversion.libs.gson.JsonArray&nbsp;values)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -278,6 +285,17 @@ loadScripts(document, 'script');</script>
 <h3>resolve</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;form)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="resolve(com.viaversion.viaversion.libs.gson.JsonObject,java.util.function.Predicate)">
+<h3>resolve</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.viaversion.viaversion.libs.gson.JsonObject</span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(com.viaversion.viaversion.libs.gson.JsonObject&nbsp;form,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;loaded)</span></div>
+<div class="block">Resolves an action form whose URL button images are still loading where <code>loaded</code> rejects them. Native
+forms publish <code>'loading'</code> as the button texture until the download succeeds, and keep it after a failure.</div>
 </div>
 </section>
 </li>

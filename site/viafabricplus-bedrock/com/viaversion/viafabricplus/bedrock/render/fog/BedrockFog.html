@@ -57,9 +57,9 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#register()" tabindex="0">register()</a></li>
-<li><a href="#air(net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel)" tabindex="0">air(Camera, ClientLevel)</a></li>
+<li><a href="#frameColor(net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel,int)" tabindex="0">frameColor(Camera, ClientLevel, int)</a></li>
 <li><a href="#endSky()" tabindex="0">endSky()</a></li>
-<li><a href="#color(int,net.raphimc.viabedrock.protocol.data.enums.Dimension,long)" tabindex="0">color(int, Dimension, long)</a></li>
+<li><a href="#color(org.joml.Vector3f,net.raphimc.viabedrock.protocol.data.enums.Dimension,long)" tabindex="0">color(Vector3f, Dimension, long)</a></li>
 <li><a href="#applyDistance(net.minecraft.client.renderer.fog.FogData,net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel,float)" tabindex="0">applyDistance(FogData, Camera, ClientLevel, float)</a></li>
 </ol>
 </li>
@@ -93,24 +93,27 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.FogState.Distance</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#air(net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel)" class="member-name-link">air</a><wbr>(net.minecraft.client.Camera&nbsp;camera,
- net.minecraft.client.multiplayer.ClientLevel&nbsp;level)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#applyDistance(net.minecraft.client.renderer.fog.FogData,net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel,float)" class="member-name-link">applyDistance</a><wbr>(net.minecraft.client.renderer.fog.FogData&nbsp;fog,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#applyDistance(net.minecraft.client.renderer.fog.FogData,net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel,float)" class="member-name-link">applyDistance</a><wbr>(net.minecraft.client.renderer.fog.FogData&nbsp;fog,
  net.minecraft.client.Camera&nbsp;camera,
  net.minecraft.client.multiplayer.ClientLevel&nbsp;level,
  float&nbsp;renderDistance)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static org.joml.Vector3f</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#color(int,net.raphimc.viabedrock.protocol.data.enums.Dimension,long)" class="member-name-link">color</a><wbr>(int&nbsp;color,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static org.joml.Vector3f</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#color(org.joml.Vector3f,net.raphimc.viabedrock.protocol.data.enums.Dimension,long)" class="member-name-link">color</a><wbr>(org.joml.Vector3f&nbsp;rgb,
  net.raphimc.viabedrock.protocol.data.enums.Dimension&nbsp;dimension,
  long&nbsp;time)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#endSky()" class="member-name-link">endSky</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#endSky()" class="member-name-link">endSky</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @Nullable org.joml.Vector3f</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#frameColor(net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel,int)" class="member-name-link">frameColor</a><wbr>(net.minecraft.client.Camera&nbsp;camera,
+ net.minecraft.client.multiplayer.ClientLevel&nbsp;level,
+ int&nbsp;renderChunks)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Advances the dry-air fog once per frame, before vision and camera modifiers, and returns its color.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register()" class="member-name-link">register</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -140,12 +143,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="air(net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel)">
-<h3>air</h3>
+<section class="detail" id="frameColor(net.minecraft.client.Camera,net.minecraft.client.multiplayer.ClientLevel,int)">
+<h3>frameColor</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.raphimc.viabedrock.api.model.FogState.Distance</span>&nbsp;<span class="element-name">air</span><wbr><span class="parameters">(net.minecraft.client.Camera&nbsp;camera,
- net.minecraft.client.multiplayer.ClientLevel&nbsp;level)</span></div>
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type">@Nullable org.joml.Vector3f</span>&nbsp;<span class="element-name">frameColor</span><wbr><span class="parameters">(net.minecraft.client.Camera&nbsp;camera,
+ net.minecraft.client.multiplayer.ClientLevel&nbsp;level,
+ int&nbsp;renderChunks)</span></div>
+<div class="block">Advances the dry-air fog once per frame, before vision and camera modifiers, and returns its color.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the blended color, or null to keep Java's fog for this frame</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -158,10 +167,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="color(int,net.raphimc.viabedrock.protocol.data.enums.Dimension,long)">
+<section class="detail" id="color(org.joml.Vector3f,net.raphimc.viabedrock.protocol.data.enums.Dimension,long)">
 <h3>color</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">org.joml.Vector3f</span>&nbsp;<span class="element-name">color</span><wbr><span class="parameters">(int&nbsp;color,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">org.joml.Vector3f</span>&nbsp;<span class="element-name">color</span><wbr><span class="parameters">(org.joml.Vector3f&nbsp;rgb,
  net.raphimc.viabedrock.protocol.data.enums.Dimension&nbsp;dimension,
  long&nbsp;time)</span></div>
 </div>

@@ -53,17 +53,13 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
-<li><a href="#field-summary" tabindex="0">Field Summary</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
-<li><a href="#field-detail" tabindex="0">Field Details</a>
-<ol class="toc-list">
-<li><a href="#CROUCHING_HEIGHT" tabindex="0">CROUCHING_HEIGHT</a></li>
-</ol>
-</li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#space(net.minecraft.world.entity.player.Player)" tabindex="0">space(Player)</a></li>
 <li><a href="#fits(net.minecraft.world.entity.player.Player,net.minecraft.world.entity.Pose)" tabindex="0">fits(Player, Pose)</a></li>
+<li><a href="#sneakShape()" tabindex="0">sneakShape()</a></li>
 </ol>
 </li>
 </ol>
@@ -86,18 +82,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
-<!-- =========== FIELD SUMMARY =========== -->
+<!-- ======== NESTED CLASS SUMMARY ======== -->
 <li>
-<section class="field-summary" id="field-summary">
-<h2>Field Summary</h2>
-<div class="caption"><span>Fields</span></div>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Field</div>
+<div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final float</code></div>
-<div class="col-second even-row-color"><code><a href="#CROUCHING_HEIGHT" class="member-name-link">CROUCHING_HEIGHT</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="BedrockPlayerPosture.SneakShape.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.movement">BedrockPlayerPosture.SneakShape</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Native Player construction (0x1402b5670) keeps the 1.8 block sneaking body and 0.125 camera drop when the world's
+base game version is a valid version below 1.20.10.</div>
+</div>
 </div>
 </section>
 </li>
@@ -116,9 +115,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fits(net.minecraft.world.entity.player.Player,net.minecraft.world.entity.Pose)" class="member-name-link">fits</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;player,
  net.minecraft.world.entity.Pose&nbsp;pose)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.PlayerPosture.Space</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#space(net.minecraft.world.entity.player.Player)" class="member-name-link">space</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;player)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BedrockPlayerPosture.SneakShape.html" title="class in com.viaversion.viafabricplus.bedrock.movement">BedrockPlayerPosture.SneakShape</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sneakShape()" class="member-name-link">sneakShape</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The sneaking body and camera for the current world, or the current shape before its StartGame version arrives.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.raphimc.viabedrock.api.model.PlayerPosture.Space</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#space(net.minecraft.world.entity.player.Player)" class="member-name-link">space</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;player)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -131,30 +135,6 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="details">
 <ul class="details-list">
-<!-- ============ FIELD DETAIL =========== -->
-<li>
-<section class="field-details" id="field-detail">
-<h2>Field Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="CROUCHING_HEIGHT">
-<h3>CROUCHING_HEIGHT</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">CROUCHING_HEIGHT</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list">
-<li><a href="../../../../../constant-values.html#com.viaversion.viafabricplus.bedrock.movement.BedrockPlayerPosture.CROUCHING_HEIGHT">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</div>
-</section>
-</li>
-</ul>
-</section>
-</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li>
 <section class="method-details" id="method-detail">
@@ -174,6 +154,15 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">fits</span><wbr><span class="parameters">(net.minecraft.world.entity.player.Player&nbsp;player,
  net.minecraft.world.entity.Pose&nbsp;pose)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sneakShape()">
+<h3>sneakShape</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BedrockPlayerPosture.SneakShape.html" title="class in com.viaversion.viafabricplus.bedrock.movement">BedrockPlayerPosture.SneakShape</a></span>&nbsp;<span class="element-name">sneakShape</span>()</div>
+<div class="block">The sneaking body and camera for the current world, or the current shape before its StartGame version arrives.</div>
 </div>
 </section>
 </li>

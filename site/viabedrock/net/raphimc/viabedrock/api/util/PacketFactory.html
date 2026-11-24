@@ -58,6 +58,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#sendJavaDeathMessage(com.viaversion.viaversion.api.connection.UserConnection)" tabindex="0">sendJavaDeathMessage(UserConnection)</a></li>
+<li><a href="#sendJavaLocalDeath(com.viaversion.viaversion.api.connection.UserConnection,boolean)" tabindex="0">sendJavaLocalDeath(UserConnection, boolean)</a></li>
 <li><a href="#sendJavaBlockDestroyProgress(com.viaversion.viaversion.api.connection.UserConnection,int,com.viaversion.viaversion.api.minecraft.BlockPosition,int)" tabindex="0">sendJavaBlockDestroyProgress(UserConnection, int, BlockPosition, int)</a></li>
 <li><a href="#sendJavaSystemChat(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.nbt.tag.Tag)" tabindex="0">sendJavaSystemChat(UserConnection, Tag)</a></li>
 <li><a href="#sendJavaBlockEntityData(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.viaversion.api.minecraft.BlockPosition,com.viaversion.viaversion.api.minecraft.blockentity.BlockEntity)" tabindex="0">sendJavaBlockEntityData(UserConnection, BlockPosition, BlockEntity)</a></li>
@@ -204,32 +205,38 @@ loadScripts(document, 'script');</script>
  <a href="../../protocol/data/BedrockMappingData.JavaParticle.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.JavaParticle</a>&nbsp;particle)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaRotateHead(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">sendJavaRotateHead</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- <a href="../model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaSystemChat(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.nbt.tag.Tag)" class="member-name-link">sendJavaSystemChat</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- com.viaversion.nbt.tag.Tag&nbsp;message)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendNativeContainerItems(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">sendNativeContainerItems</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
- <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaLocalDeath(com.viaversion.viaversion.api.connection.UserConnection,boolean)" class="member-name-link">sendJavaLocalDeath</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ boolean&nbsp;wasAlive)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Sends the changed slots of a presented logical container.</div>
+<div class="block">Opens the death screen when the spawned local player dies, whether or not DeathInfo arrives.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaContainerSetContent(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">writeJavaContainerSetContent</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
- <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaRotateHead(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.entity.Entity)" class="member-name-link">sendJavaRotateHead</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../model/entity/Entity.html" title="class in net.raphimc.viabedrock.api.model.entity">Entity</a>&nbsp;entity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaDisconnect(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.lang.String)" class="member-name-link">writeJavaDisconnect</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reason)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendJavaSystemChat(com.viaversion.viaversion.api.connection.UserConnection,com.viaversion.nbt.tag.Tag)" class="member-name-link">sendJavaSystemChat</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ com.viaversion.nbt.tag.Tag&nbsp;message)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaLevelParticles(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.BedrockMappingData.JavaParticle)" class="member-name-link">writeJavaLevelParticles</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#sendNativeContainerItems(com.viaversion.viaversion.api.connection.UserConnection,net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">sendNativeContainerItems</a><wbr>(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Sends the changed slots of a presented logical container.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaContainerSetContent(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.api.model.container.Container)" class="member-name-link">writeJavaContainerSetContent</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+ <a href="../model/container/Container.html" title="class in net.raphimc.viabedrock.api.model.container">Container</a>&nbsp;container)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaDisconnect(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,java.lang.String)" class="member-name-link">writeJavaDisconnect</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reason)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeJavaLevelParticles(com.viaversion.viaversion.api.protocol.packet.PacketWrapper,net.raphimc.viabedrock.protocol.model.Position3f,net.raphimc.viabedrock.protocol.data.BedrockMappingData.JavaParticle)" class="member-name-link">writeJavaLevelParticles</a><wbr>(com.viaversion.viaversion.api.protocol.packet.PacketWrapper&nbsp;wrapper,
  <a href="../../protocol/model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;position,
  <a href="../../protocol/data/BedrockMappingData.JavaParticle.html" title="class in net.raphimc.viabedrock.protocol.data">BedrockMappingData.JavaParticle</a>&nbsp;particle)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -252,6 +259,20 @@ loadScripts(document, 'script');</script>
 <h3>sendJavaDeathMessage</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendJavaDeathMessage</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sendJavaLocalDeath(com.viaversion.viaversion.api.connection.UserConnection,boolean)">
+<h3>sendJavaLocalDeath</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendJavaLocalDeath</span><wbr><span class="parameters">(com.viaversion.viaversion.api.connection.UserConnection&nbsp;user,
+ boolean&nbsp;wasAlive)</span></div>
+<div class="block">Opens the death screen when the spawned local player dies, whether or not DeathInfo arrives.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>wasAlive</code> - whether the player was alive before the packet that may have killed it</dd>
+</dl>
 </div>
 </section>
 </li>

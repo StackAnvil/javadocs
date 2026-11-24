@@ -53,6 +53,7 @@ loadScripts(document, 'script');</script>
 <div class="toc-header">Contents&nbsp;<input type="text" class="filter-input" disabled placeholder="Filter contents (type .)" aria-label="Filter table of contents" autocomplete="off" spellcheck="false"><input type="reset" class="reset-filter" disabled tabindex="-1" value="Reset"></div>
 <ol class="toc-list" tabindex="-1">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
@@ -65,6 +66,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#canRemainSwimmingAtSurface(net.minecraft.world.phys.Vec3)" tabindex="0">canRemainSwimmingAtSurface(Vec3)</a></li>
 <li><a href="#canStartSwimming(double,boolean,boolean)" tabindex="0">canStartSwimming(double, boolean, boolean)</a></li>
 <li><a href="#isInLava(net.minecraft.world.level.BlockGetter,net.minecraft.world.phys.AABB)" tabindex="0">isInLava(BlockGetter, AABB)</a></li>
+<li><a href="#currentContact(net.minecraft.world.level.BlockGetter,net.minecraft.world.phys.AABB,net.minecraft.world.phys.AABB)" tabindex="0">currentContact(BlockGetter, AABB, AABB)</a></li>
 <li><a href="#lavaInteractionBox(net.minecraft.world.phys.AABB)" tabindex="0">lavaInteractionBox(AABB)</a></li>
 <li><a href="#interactionBox(net.minecraft.world.phys.AABB)" tabindex="0">interactionBox(AABB)</a></li>
 </ol>
@@ -88,6 +90,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="BedrockFluidPhysics.CurrentContact.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.movement">BedrockFluidPhysics.CurrentContact</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
@@ -115,35 +132,42 @@ loadScripts(document, 'script');</script>
  boolean&nbsp;breathingInAir,
  boolean&nbsp;airAboveBodyCenter)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.AABB</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#interactionBox(net.minecraft.world.phys.AABB)" class="member-name-link">interactionBox</a><wbr>(net.minecraft.world.phys.AABB&nbsp;box)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isHeadInWater(net.minecraft.world.level.BlockGetter,net.minecraft.world.phys.Vec3)" class="member-name-link">isHeadInWater</a><wbr>(net.minecraft.world.level.BlockGetter&nbsp;level,
- net.minecraft.world.phys.Vec3&nbsp;breathingPoint)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isInLava(net.minecraft.world.level.BlockGetter,net.minecraft.world.phys.AABB)" class="member-name-link">isInLava</a><wbr>(net.minecraft.world.level.BlockGetter&nbsp;level,
- net.minecraft.world.phys.AABB&nbsp;body)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @Nullable <a href="BedrockFluidPhysics.CurrentContact.html" title="class in com.viaversion.viafabricplus.bedrock.movement">BedrockFluidPhysics.CurrentContact</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#currentContact(net.minecraft.world.level.BlockGetter,net.minecraft.world.phys.AABB,net.minecraft.world.phys.AABB)" class="member-name-link">currentContact</a><wbr>(net.minecraft.world.level.BlockGetter&nbsp;level,
+ net.minecraft.world.phys.AABB&nbsp;body,
+ net.minecraft.world.phys.AABB&nbsp;waterBox)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Native lava travel queries block materials in a float-contracted body, independently of water sensing.</div>
+<div class="block">Returns the cells whose flow pushes the body, or null when native applies no liquid push.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.AABB</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lavaInteractionBox(net.minecraft.world.phys.AABB)" class="member-name-link">lavaInteractionBox</a><wbr>(net.minecraft.world.phys.AABB&nbsp;box)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#interactionBox(net.minecraft.world.phys.AABB)" class="member-name-link">interactionBox</a><wbr>(net.minecraft.world.phys.AABB&nbsp;box)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#shouldCapSwimming(double,boolean)" class="member-name-link">shouldCapSwimming</a><wbr>(double&nbsp;lookY,
- boolean&nbsp;breathingInLiquid)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isHeadInWater(net.minecraft.world.level.BlockGetter,net.minecraft.world.phys.Vec3)" class="member-name-link">isHeadInWater</a><wbr>(net.minecraft.world.level.BlockGetter&nbsp;level,
+ net.minecraft.world.phys.Vec3&nbsp;breathingPoint)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#shouldSuppressLiquidJump(float,boolean,boolean)" class="member-name-link">shouldSuppressLiquidJump</a><wbr>(float&nbsp;swimAmount,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isInLava(net.minecraft.world.level.BlockGetter,net.minecraft.world.phys.AABB)" class="member-name-link">isInLava</a><wbr>(net.minecraft.world.level.BlockGetter&nbsp;level,
+ net.minecraft.world.phys.AABB&nbsp;body)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Native lava travel queries block materials in a float-contracted body, independently of water sensing.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.phys.AABB</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#lavaInteractionBox(net.minecraft.world.phys.AABB)" class="member-name-link">lavaInteractionBox</a><wbr>(net.minecraft.world.phys.AABB&nbsp;box)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#shouldCapSwimming(double,boolean)" class="member-name-link">shouldCapSwimming</a><wbr>(double&nbsp;lookY,
+ boolean&nbsp;breathingInLiquid)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#shouldSuppressLiquidJump(float,boolean,boolean)" class="member-name-link">shouldSuppressLiquidJump</a><wbr>(float&nbsp;swimAmount,
  boolean&nbsp;swimming,
  boolean&nbsp;headInWater)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#waterSurface(int,int)" class="member-name-link">waterSurface</a><wbr>(int&nbsp;blockY,
- int&nbsp;depth)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#waterSurface(int,int)" class="member-name-link">waterSurface</a><wbr>(int&nbsp;blockY,
+ int&nbsp;depth)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -241,6 +265,19 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isInLava</span><wbr><span class="parameters">(net.minecraft.world.level.BlockGetter&nbsp;level,
  net.minecraft.world.phys.AABB&nbsp;body)</span></div>
 <div class="block">Native lava travel queries block materials in a float-contracted body, independently of water sensing.</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="currentContact(net.minecraft.world.level.BlockGetter,net.minecraft.world.phys.AABB,net.minecraft.world.phys.AABB)">
+<h3>currentContact</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type">@Nullable <a href="BedrockFluidPhysics.CurrentContact.html" title="class in com.viaversion.viafabricplus.bedrock.movement">BedrockFluidPhysics.CurrentContact</a></span>&nbsp;<span class="element-name">currentContact</span><wbr><span class="parameters">(net.minecraft.world.level.BlockGetter&nbsp;level,
+ net.minecraft.world.phys.AABB&nbsp;body,
+ net.minecraft.world.phys.AABB&nbsp;waterBox)</span></div>
+<div class="block">Returns the cells whose flow pushes the body, or null when native applies no liquid push.
+Native 1.26.60.5 0x14ad2c200 collects lava in the lava body first and lets water collect only without lava.</div>
 </div>
 </section>
 </li>
