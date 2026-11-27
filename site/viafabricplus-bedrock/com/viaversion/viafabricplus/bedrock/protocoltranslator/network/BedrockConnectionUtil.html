@@ -62,6 +62,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#connectionVersion(net.minecraft.client.multiplayer.ServerData)" tabindex="0">connectionVersion(ServerData)</a></li>
 <li><a href="#connectNetherNet(java.net.SocketAddress)" tabindex="0">connectNetherNet(SocketAddress)</a></li>
 <li><a href="#connectLan(com.viaversion.viafabricplus.bedrock.lan.BedrockLanAddress)" tabindex="0">connectLan(BedrockLanAddress)</a></li>
 </ol>
@@ -109,12 +110,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#connectLan(com.viaversion.viafabricplus.bedrock.lan.BedrockLanAddress)" class="member-name-link">connectLan</a><wbr>(<a href="../../lan/BedrockLanAddress.html" title="class in com.viaversion.viafabricplus.bedrock.lan">BedrockLanAddress</a>&nbsp;address)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.viaversion.viaversion.api.protocol.version.ProtocolVersion</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#connectionVersion(net.minecraft.client.multiplayer.ServerData)" class="member-name-link">connectionVersion</a><wbr>(net.minecraft.client.multiplayer.ServerData&nbsp;data)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">The version a server entry connects with, matching ViaFabricPlus: the entry's forced version, or the
+global target when the entry has none or came from Direct Connect.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#connectNetherNet(java.net.SocketAddress)" class="member-name-link">connectNetherNet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/SocketAddress.html" title="class or interface in java.net" class="external-link">SocketAddress</a>&nbsp;address)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#connectLan(com.viaversion.viafabricplus.bedrock.lan.BedrockLanAddress)" class="member-name-link">connectLan</a><wbr>(<a href="../../lan/BedrockLanAddress.html" title="class in com.viaversion.viafabricplus.bedrock.lan">BedrockLanAddress</a>&nbsp;address)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#connectNetherNet(java.net.SocketAddress)" class="member-name-link">connectNetherNet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/SocketAddress.html" title="class or interface in java.net" class="external-link">SocketAddress</a>&nbsp;address)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -148,6 +155,17 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="connectionVersion(net.minecraft.client.multiplayer.ServerData)">
+<h3>connectionVersion</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">com.viaversion.viaversion.api.protocol.version.ProtocolVersion</span>&nbsp;<span class="element-name">connectionVersion</span><wbr><span class="parameters">(net.minecraft.client.multiplayer.ServerData&nbsp;data)</span></div>
+<div class="block">The version a server entry connects with, matching ViaFabricPlus: the entry's forced version, or the
+global target when the entry has none or came from Direct Connect. Joins and status pings must agree,
+or a saved Bedrock entry pings port 19132 but joins the Java default port 25565.</div>
+</div>
+</section>
+</li>
 <li>
 <section class="detail" id="connectNetherNet(java.net.SocketAddress)">
 <h3>connectNetherNet</h3>

@@ -225,7 +225,8 @@ loadScripts(document, 'script');</script>
  int&nbsp;port)</span>
                                    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
-<div class="block">Blocks for at most a few seconds. Throws when the server does not answer with a valid status.</div>
+<div class="block">Blocks for at most a few seconds. Throws when the server does not answer with a valid status.
+The request tries HTTPS before plaintext like a join, because public servers answer only over TLS.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
