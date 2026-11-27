@@ -66,6 +66,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#colors(net.raphimc.viabedrock.api.model.NativeActorMessage.Colors)" tabindex="0">colors(NativeActorMessage.Colors)</a></li>
 <li><a href="#commands(net.raphimc.viabedrock.api.model.NativeAnimationControllers)" tabindex="0">commands(NativeAnimationControllers)</a></li>
 <li><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame,boolean)" tabindex="0">sample(float, BedrockActorAnimation.Frame, boolean)</a></li>
+<li><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame,boolean,boolean)" tabindex="0">sample(float, BedrockActorAnimation.Frame, boolean, boolean)</a></li>
+<li><a href="#select()" tabindex="0">select()</a></li>
 </ol>
 </li>
 </ol>
@@ -126,6 +128,19 @@ loadScripts(document, 'script');</script>
  <a href="BedrockActorAnimation.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Frame</a>&nbsp;input,
  boolean&nbsp;emit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BedrockWorldActorAppearance.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockWorldActorAppearance.Frame</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame,boolean,boolean)" class="member-name-link">sample</a><wbr>(float&nbsp;seconds,
+ <a href="BedrockActorAnimation.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Frame</a>&nbsp;input,
+ boolean&nbsp;emit,
+ boolean&nbsp;select)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Samples animation state, sounds and particles.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="BedrockWorldActorAppearance.Draw.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockWorldActorAppearance.Draw</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#select()" class="member-name-link">select</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Selects draws from the most recently sampled animation state, or null when a draw is unsupported.</div>
+</div>
 </div>
 </div>
 </div>
@@ -183,6 +198,39 @@ loadScripts(document, 'script');</script>
  <a href="BedrockActorAnimation.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Frame</a>&nbsp;input,
  boolean&nbsp;emit)</span>
                                          throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="sample(float,com.viaversion.viafabricplus.bedrock.appearance.BedrockActorAnimation.Frame,boolean,boolean)">
+<h3>sample</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BedrockWorldActorAppearance.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockWorldActorAppearance.Frame</a></span>&nbsp;<span class="element-name">sample</span><wbr><span class="parameters">(float&nbsp;seconds,
+ <a href="BedrockActorAnimation.Frame.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockActorAnimation.Frame</a>&nbsp;input,
+ boolean&nbsp;emit,
+ boolean&nbsp;select)</span>
+                                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Samples animation state, sounds and particles. Without <code>select</code>, an actor that already has a
+selection keeps its last draws: render controllers only choose what is drawn, and they cost more
+than the animation itself, so an actor outside the view does not need them every frame.</div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="select()">
+<h3>select</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BedrockWorldActorAppearance.Draw.html" title="class in com.viaversion.viafabricplus.bedrock.appearance">BedrockWorldActorAppearance.Draw</a>&gt;</span>&nbsp;<span class="element-name">select</span>()
+                                              throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Selects draws from the most recently sampled animation state, or null when a draw is unsupported.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>

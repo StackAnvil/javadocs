@@ -66,7 +66,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#createRenderState()" tabindex="0">createRenderState()</a></li>
 <li><a href="#clear()" tabindex="0">clear()</a></li>
-<li><a href="#prepare(net.minecraft.world.entity.Entity,net.minecraft.client.renderer.entity.EntityRenderer)" tabindex="0">prepare(Entity, EntityRenderer)</a></li>
+<li><a href="#prepare(net.minecraft.world.entity.Entity,net.minecraft.client.renderer.entity.EntityRenderer,com.viaversion.viafabricplus.bedrock.render.BedrockWorldActorRenderer.Culling)" tabindex="0">prepare(Entity, EntityRenderer, BedrockWorldActorRenderer.Culling)</a></li>
 <li><a href="#extractRenderState(net.minecraft.world.entity.Entity,com.viaversion.viafabricplus.bedrock.render.BedrockWorldActorRenderer.State,float)" tabindex="0">extractRenderState(Entity, BedrockWorldActorRenderer.State, float)</a></li>
 <li><a href="#getShadowRadius(com.viaversion.viafabricplus.bedrock.render.BedrockWorldActorRenderer.State)" tabindex="0">getShadowRadius(BedrockWorldActorRenderer.State)</a></li>
 <li><a href="#submit(com.viaversion.viafabricplus.bedrock.render.BedrockWorldActorRenderer.State,com.mojang.blaze3d.vertex.PoseStack,net.minecraft.client.renderer.SubmitNodeCollector,net.minecraft.client.renderer.state.level.CameraRenderState)" tabindex="0">submit(BedrockWorldActorRenderer.State, PoseStack, SubmitNodeCollector, CameraRenderState)</a></li>
@@ -103,9 +103,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final class&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="BedrockWorldActorRenderer.State.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockWorldActorRenderer.State</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="BedrockWorldActorRenderer.Culling.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockWorldActorRenderer.Culling</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">The view of the vanilla visibility test that asked for this renderer.</div>
+</div>
+<div class="col-first odd-row-color"><code>static final class&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="BedrockWorldActorRenderer.State.html" class="type-name-link" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockWorldActorRenderer.State</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -157,8 +162,9 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShadowRadius(com.viaversion.viafabricplus.bedrock.render.BedrockWorldActorRenderer.State)" class="member-name-link">getShadowRadius</a><wbr>(<a href="BedrockWorldActorRenderer.State.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockWorldActorRenderer.State</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(net.minecraft.world.entity.Entity,net.minecraft.client.renderer.entity.EntityRenderer)" class="member-name-link">prepare</a><wbr>(net.minecraft.world.entity.Entity&nbsp;entity,
- net.minecraft.client.renderer.entity.EntityRenderer&lt;net.minecraft.world.entity.Entity, ?&gt;&nbsp;original)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepare(net.minecraft.world.entity.Entity,net.minecraft.client.renderer.entity.EntityRenderer,com.viaversion.viafabricplus.bedrock.render.BedrockWorldActorRenderer.Culling)" class="member-name-link">prepare</a><wbr>(net.minecraft.world.entity.Entity&nbsp;entity,
+ net.minecraft.client.renderer.entity.EntityRenderer&lt;net.minecraft.world.entity.Entity, ?&gt;&nbsp;original,
+ <a href="BedrockWorldActorRenderer.Culling.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockWorldActorRenderer.Culling</a>&nbsp;culling)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">A native draw never replaces a Java renderer until its graph, material and bindings resolve.</div>
 </div>
@@ -225,12 +231,15 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="prepare(net.minecraft.world.entity.Entity,net.minecraft.client.renderer.entity.EntityRenderer)">
+<section class="detail" id="prepare(net.minecraft.world.entity.Entity,net.minecraft.client.renderer.entity.EntityRenderer,com.viaversion.viafabricplus.bedrock.render.BedrockWorldActorRenderer.Culling)">
 <h3>prepare</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">prepare</span><wbr><span class="parameters">(net.minecraft.world.entity.Entity&nbsp;entity,
- net.minecraft.client.renderer.entity.EntityRenderer&lt;net.minecraft.world.entity.Entity, ?&gt;&nbsp;original)</span></div>
-<div class="block">A native draw never replaces a Java renderer until its graph, material and bindings resolve.</div>
+ net.minecraft.client.renderer.entity.EntityRenderer&lt;net.minecraft.world.entity.Entity, ?&gt;&nbsp;original,
+ <a href="BedrockWorldActorRenderer.Culling.html" title="class in com.viaversion.viafabricplus.bedrock.render">BedrockWorldActorRenderer.Culling</a>&nbsp;culling)</span></div>
+<div class="block">A native draw never replaces a Java renderer until its graph, material and bindings resolve.
+Vanilla asks for the renderer before its frustum test. With a <code>culling</code> context, an actor
+outside that view keeps animating but reuses its last draw selection.</div>
 </div>
 </section>
 </li>
