@@ -65,6 +65,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#setCenter(int,int)" tabindex="0">setCenter(int, int)</a></li>
+<li><a href="#keepChunkAheadOfCenter(int,int,byte%5B%5D)" tabindex="0">keepChunkAheadOfCenter(int, int, byte[])</a></li>
 <li><a href="#setRadius(int)" tabindex="0">setRadius(int)</a></li>
 <li><a href="#createChunk(int,int,int)" tabindex="0">createChunk(int, int, int)</a></li>
 <li><a href="#unloadChunk(com.viaversion.viaversion.api.minecraft.ChunkPosition)" tabindex="0">unloadChunk(ChunkPosition)</a></li>
@@ -253,77 +254,84 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInUnloadedChunkSection(net.raphimc.viabedrock.protocol.model.Position3f)" class="member-name-link">isInUnloadedChunkSection</a><wbr>(<a href="../model/Position3f.html" title="class in net.raphimc.viabedrock.protocol.model">Position3f</a>&nbsp;playerPosition)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeSubChunk(int,int,int,net.raphimc.viabedrock.api.chunk.section.BedrockChunkSection,java.util.List)" class="member-name-link">mergeSubChunk</a><wbr>(int&nbsp;chunkX,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#keepChunkAheadOfCenter(int,int,byte%5B%5D)" class="member-name-link">keepChunkAheadOfCenter</a><wbr>(int&nbsp;chunkX,
+ int&nbsp;chunkZ,
+ byte[]&nbsp;packet)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Keeps a level chunk received outside the load range until the next center update decides whether to load it.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeSubChunk(int,int,int,net.raphimc.viabedrock.api.chunk.section.BedrockChunkSection,java.util.List)" class="member-name-link">mergeSubChunk</a><wbr>(int&nbsp;chunkX,
  int&nbsp;subChunkY,
  int&nbsp;chunkZ,
  <a href="../../api/chunk/section/BedrockChunkSection.html" title="interface in net.raphimc.viabedrock.api.chunk.section">BedrockChunkSection</a>&nbsp;other,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../api/chunk/BedrockBlockEntity.html" title="class in net.raphimc.viabedrock.api.chunk">BedrockBlockEntity</a>&gt;&nbsp;blockEntities)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#observeBlockUpdates(java.util.Collection)" class="member-name-link">observeBlockUpdates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;com.viaversion.viaversion.api.minecraft.BlockPosition&gt;&nbsp;positions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeOutOfLoadDistanceChunks()" class="member-name-link">removeOutOfLoadDistanceChunks</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#observeBlockUpdates(java.util.Collection)" class="member-name-link">observeBlockUpdates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;com.viaversion.viaversion.api.minecraft.BlockPosition&gt;&nbsp;positions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestSubChunk(int,int,int)" class="member-name-link">requestSubChunk</a><wbr>(int&nbsp;chunkX,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeOutOfLoadDistanceChunks()" class="member-name-link">removeOutOfLoadDistanceChunks</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestSubChunk(int,int,int)" class="member-name-link">requestSubChunk</a><wbr>(int&nbsp;chunkX,
  int&nbsp;subChunkY,
  int&nbsp;chunkZ)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestSubChunks(int,int,int,int)" class="member-name-link">requestSubChunks</a><wbr>(int&nbsp;chunkX,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestSubChunks(int,int,int,int)" class="member-name-link">requestSubChunks</a><wbr>(int&nbsp;chunkX,
  int&nbsp;chunkZ,
  int&nbsp;from,
  int&nbsp;to)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retrySubChunk(int,int,int)" class="member-name-link">retrySubChunk</a><wbr>(int&nbsp;chunkX,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retrySubChunk(int,int,int)" class="member-name-link">retrySubChunk</a><wbr>(int&nbsp;chunkX,
  int&nbsp;subChunkY,
  int&nbsp;chunkZ)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendChunk(int,int)" class="member-name-link">sendChunk</a><wbr>(int&nbsp;chunkX,
+ int&nbsp;chunkZ)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendChunk(int,int)" class="member-name-link">sendChunk</a><wbr>(int&nbsp;chunkX,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendChunkInNextTick(int,int)" class="member-name-link">sendChunkInNextTick</a><wbr>(int&nbsp;chunkX,
  int&nbsp;chunkZ)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendChunkInNextTick(int,int)" class="member-name-link">sendChunkInNextTick</a><wbr>(int&nbsp;chunkX,
- int&nbsp;chunkZ)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeBlockSnapshot()" class="member-name-link">sendNativeBlockSnapshot</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNativeBlockSnapshot()" class="member-name-link">sendNativeBlockSnapshot</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Replay the authoritative state when a client advertises native support after chunk loading.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNearbyConnectedUpdates(java.util.Collection)" class="member-name-link">sendNearbyConnectedUpdates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;com.viaversion.viaversion.api.minecraft.BlockPosition&gt;&nbsp;changedPositions)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendUpperDoorUpdates(java.util.Collection)" class="member-name-link">sendUpperDoorUpdates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;com.viaversion.viaversion.api.minecraft.BlockPosition&gt;&nbsp;changedPositions)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendNearbyConnectedUpdates(java.util.Collection)" class="member-name-link">sendNearbyConnectedUpdates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;com.viaversion.viaversion.api.minecraft.BlockPosition&gt;&nbsp;changedPositions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCenter(int,int)" class="member-name-link">setCenter</a><wbr>(int&nbsp;x,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendUpperDoorUpdates(java.util.Collection)" class="member-name-link">sendUpperDoorUpdates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;com.viaversion.viaversion.api.minecraft.BlockPosition&gt;&nbsp;changedPositions)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCenter(int,int)" class="member-name-link">setCenter</a><wbr>(int&nbsp;x,
  int&nbsp;z)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRadius(int)" class="member-name-link">setRadius</a><wbr>(int&nbsp;radius)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChunkTracker.Statistics.html" title="class in net.raphimc.viabedrock.protocol.storage">ChunkTracker.Statistics</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#statistics()" class="member-name-link">statistics</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRadius(int)" class="member-name-link">setRadius</a><wbr>(int&nbsp;radius)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChunkTracker.Statistics.html" title="class in net.raphimc.viabedrock.protocol.storage">ChunkTracker.Statistics</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#statistics()" class="member-name-link">statistics</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Approximate diagnostics without exposing the tracker's collection implementation.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#trackBlockPrediction(int,com.viaversion.viaversion.api.minecraft.BlockPosition,com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">trackBlockPrediction</a><wbr>(int&nbsp;sequence,
- com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;clickedPosition,
- com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;placedPosition)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tick()" class="member-name-link">tick</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unloadChunk(com.viaversion.viaversion.api.minecraft.ChunkPosition)" class="member-name-link">unloadChunk</a><wbr>(com.viaversion.viaversion.api.minecraft.ChunkPosition&nbsp;chunkPos)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#trackBlockPrediction(int,com.viaversion.viaversion.api.minecraft.BlockPosition,com.viaversion.viaversion.api.minecraft.BlockPosition)" class="member-name-link">trackBlockPrediction</a><wbr>(int&nbsp;sequence,
+ com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;clickedPosition,
+ com.viaversion.viaversion.api.minecraft.BlockPosition&nbsp;placedPosition)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unloadChunk(com.viaversion.viaversion.api.minecraft.ChunkPosition)" class="member-name-link">unloadChunk</a><wbr>(com.viaversion.viaversion.api.minecraft.ChunkPosition&nbsp;chunkPos)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -370,6 +378,17 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCenter</span><wbr><span class="parameters">(int&nbsp;x,
  int&nbsp;z)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="keepChunkAheadOfCenter(int,int,byte[])">
+<h3>keepChunkAheadOfCenter</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">keepChunkAheadOfCenter</span><wbr><span class="parameters">(int&nbsp;chunkX,
+ int&nbsp;chunkZ,
+ byte[]&nbsp;packet)</span></div>
+<div class="block">Keeps a level chunk received outside the load range until the next center update decides whether to load it.</div>
 </div>
 </section>
 </li>
