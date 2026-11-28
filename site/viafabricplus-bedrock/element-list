@@ -32,6 +32,7 @@ com.viaversion.viafabricplus.bedrock.injection.mixin.features.sound
 com.viaversion.viafabricplus.bedrock.injection.mixin.jjwt
 com.viaversion.viafabricplus.bedrock.input
 com.viaversion.viafabricplus.bedrock.inventory
+com.viaversion.viafabricplus.bedrock.json
 com.viaversion.viafabricplus.bedrock.lan
 com.viaversion.viafabricplus.bedrock.movement
 com.viaversion.viafabricplus.bedrock.movement.replay
